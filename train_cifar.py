@@ -172,11 +172,12 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
             tot_corr += torch.eq(pred, label).float().sum().item()
             tot_num += x.size(0)
         acc = 100 * tot_corr / tot_num
-        print('Epoch: {}, Loss: {:.6f}, Accuracy: {:.1f}'.format(epoch, loss, acc))
+        print('Epoch: {}, Loss: {:.6f}, Accuracy: {:.2f}%'.format(epoch, loss, acc))
 
 
 def training(param, device, trainset, testset, model, reg_model, attack):
-    optimizer = optim.Adam(model.parameters(), lr=param['lr'])
+    # optimizer = optim.Adam(model.parameters(), lr=param['lr'])
+    optimizer = optim.SGD(model.parameters(), lr=param['lr'])
     if param['defense'] == 'distillation':
         checkpoint = torch.load(f'models/{param["name"]}/{param["teacher"]}', map_location='cpu')
         teacher = densenet121()
