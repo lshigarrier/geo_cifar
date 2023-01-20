@@ -1,28 +1,35 @@
 # https://www.kaggle.com/code/michaelqq/tutorial-cifar10-resnet-pytorch
 
 import torch
+import torch.nn as nn
 import torch.nn.functional as F
 from torch import optim
 from torchvision import transforms, datasets
+from torchvision.models import densenet121, DenseNet121_Weights
 from torch.utils.data import DataLoader
 import os
 import time
+import sys
 from cifar_model import ResNet50
 from mnist_utils import load_yaml
 from mnist_model import IsometryReg, JacobianReg
 from attacks_utils import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
 
-def initialize(param, device):
+def initialize(param):
     trainset = datasets.CIFAR10('./data/cifar',
                                 train=True, download=True,
                                 transform=transforms.Compose([
-                                    transforms.Resize((32, 32)),
+                                    transforms.RandomCrop(size=32, padding=4),
+                                    transforms.RandomHorizontalFlip(p=0.5),
+                                    transforms.Resize((224, 224)),  # original: 32 x 32
+                                    transforms.Normalize(mean=[125.307, 122.961, 113.8575],
+                                                         std=[51.5865, 50.847, 51.255]),
                                     transforms.ToTensor()
                                 ]))
     testset = datasets.CIFAR10('./data/cifar', train=False,
                                transform=transforms.Compose([
-                                   transforms.Resize((32, 32)),
+                                   transforms.Resize((224, 224)),  # original: 32 x 32
                                    transforms.ToTensor()
                                ]))
     trainset = DataLoader(trainset, batch_size=param['batch_size'], shuffle=True)
@@ -30,14 +37,20 @@ def initialize(param, device):
 
     if param['load']:
         checkpoint = torch.load(f'models/{param["name"]}/{param["model"]}', map_location='cpu')
-        model = checkpoint['model'].to(device)
+        model = densenet121()
+        model.classifier = nn.Linear(1024, 10)
         model.load_state_dict(checkpoint['state_dict'])
         for parameter in model.parameters():
             parameter.requires_grad = False
         model.eval()
 
     else:
-        model = ResNet50(img_channels=3, num_classes=10).to(device)
+        # model = ResNet50(img_channels=3, num_classes=10).to(device)
+        # model = densenet121(weights=DenseNet121_Weights.IMAGENET1K_V1)
+        model = densenet121()
+        model.classifier = nn.Linear(1024, 10)
+        # torch.save(model.state_dict(), 'data/cifar/densenet121_imagenet.pt')
+        model.load_state_dict(torch.load('data/cifar/densenet121_imagenet.pt'))
 
     reg_model = None
     if param['defense'] == 'isometry':
@@ -170,8 +183,10 @@ def training(param, device, trainset, testset, model, reg_model, attack):
     tac = time.time()
     for epoch in range(1, param['epoch'] + 1):
         train(param, device, trainset, testset, model, reg_model, optimizer, epoch, attack, teacher)
-        checkpoint = {'model': ResNet50(img_channels=3, num_classes=10),
-                      'state_dict': model.state_dict(),
+        # checkpoint = {'model': ResNet50(img_channels=3, num_classes=10),
+        #              'state_dict': model.state_dict(),
+        #              'optimizer': optimizer.state_dict()}
+        checkpoint = {'state_dict': model.state_dict(),
                       'optimizer': optimizer.state_dict()}
         torch.save(checkpoint, f'models/{param["name"]}/epoch_{epoch:02d}.pt')
     print(f'Training time (s): {time.time() - tac}')
@@ -188,7 +203,7 @@ def one_run(param):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Initialization
-    trainset, testset, model, reg_model, attack = initialize(param, device)
+    trainset, testset, model, reg_model, attack = initialize(param)
 
     # Training
     training(param, device, trainset, testset, model, reg_model, attack)
