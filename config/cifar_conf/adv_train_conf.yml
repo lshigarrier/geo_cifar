@@ -2,7 +2,7 @@ name       : cifar_icassp/adv_train
 model      : epoch_10.pt
 defense    : adv_train
 seed       : 0
-gpu_number : "1"
+gpu_number : "0"
 load       : False
 
 # data

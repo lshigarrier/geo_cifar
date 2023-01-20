@@ -2,7 +2,7 @@ name       : cifar_icassp/baseline
 model      : epoch_10.pt
 defense    : baseline
 seed       : 0
-gpu_number : "1"
+gpu_number : "0"
 load       : False
 
 # data

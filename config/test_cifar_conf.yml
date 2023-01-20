@@ -1,7 +1,7 @@
 name       : cifar_icassp/resnet
 model      : epoch_50.pt
 seed       : 0
-gpu_number : "1"
+gpu_number : "0"
 load       : True
 
 # test

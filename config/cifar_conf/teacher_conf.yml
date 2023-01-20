@@ -2,7 +2,7 @@ name       : cifar_icassp/distillation
 model      : epoch_50.pt
 defense    : teacher
 seed       : 0
-gpu_number : "1"
+gpu_number : "0"
 load       : False
 
 # data
