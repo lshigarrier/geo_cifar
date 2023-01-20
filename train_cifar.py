@@ -16,21 +16,23 @@ from mnist_model import IsometryReg, JacobianReg
 from attacks_utils import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
 
-def initialize(param):
+def initialize(param, device):
     trainset = datasets.CIFAR10('./data/cifar',
                                 train=True, download=True,
                                 transform=transforms.Compose([
                                     transforms.RandomCrop(size=32, padding=4),
                                     transforms.RandomHorizontalFlip(p=0.5),
                                     transforms.Resize((224, 224)),  # original: 32 x 32
-                                    transforms.Normalize(mean=[125.307, 122.961, 113.8575],
-                                                         std=[51.5865, 50.847, 51.255]),
-                                    transforms.ToTensor()
+                                    transforms.ToTensor(),
+                                    transforms.Normalize(mean=(0.4914, 0.4822, 0.4465),
+                                                         std=(0.2470, 0.2435, 0.2616))
                                 ]))
     testset = datasets.CIFAR10('./data/cifar', train=False,
                                transform=transforms.Compose([
                                    transforms.Resize((224, 224)),  # original: 32 x 32
-                                   transforms.ToTensor()
+                                   transforms.ToTensor(),
+                                   transforms.Normalize(mean=(0.4914, 0.4822, 0.4465),
+                                                         std=(0.2470, 0.2435, 0.2616))
                                ]))
     trainset = DataLoader(trainset, batch_size=param['batch_size'], shuffle=True)
     testset = DataLoader(testset, batch_size=param['batch_size'], shuffle=True)
@@ -40,6 +42,7 @@ def initialize(param):
         model = densenet121()
         model.classifier = nn.Linear(1024, 10)
         model.load_state_dict(checkpoint['state_dict'])
+        model.to(device)
         for parameter in model.parameters():
             parameter.requires_grad = False
         model.eval()
@@ -51,6 +54,7 @@ def initialize(param):
         model.classifier = nn.Linear(1024, 10)
         # torch.save(model.state_dict(), 'data/cifar/densenet121_imagenet.pt')
         model.load_state_dict(torch.load('data/cifar/densenet121_imagenet.pt'))
+        model.to(device)
 
     reg_model = None
     if param['defense'] == 'isometry':
@@ -153,6 +157,9 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
         loss.backward()
         optimizer.step()
 
+        if idx % 300 == 0:
+            print('Test: {}/{} ({:.0f}%)'.format(idx * len(x), len(trainset.dataset), 100. * idx / len(trainset)))
+
     model.eval()
     with torch.no_grad():
         tot_corr = 0
@@ -172,8 +179,10 @@ def training(param, device, trainset, testset, model, reg_model, attack):
     optimizer = optim.Adam(model.parameters(), lr=param['lr'])
     if param['defense'] == 'distillation':
         checkpoint = torch.load(f'models/{param["name"]}/{param["teacher"]}', map_location='cpu')
-        teacher = checkpoint['model'].to(device)
+        teacher = densenet121()
+        teacher.classifier = nn.Linear(1024, 10)
         teacher.load_state_dict(checkpoint['state_dict'])
+        teacher.to(device)
         for parameter in teacher.parameters():
             parameter.requires_grad = False
         teacher.eval()
@@ -203,7 +212,7 @@ def one_run(param):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Initialization
-    trainset, testset, model, reg_model, attack = initialize(param)
+    trainset, testset, model, reg_model, attack = initialize(param, device)
 
     # Training
     training(param, device, trainset, testset, model, reg_model, attack)
