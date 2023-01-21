@@ -9,6 +9,7 @@ from torchvision.models import densenet121, DenseNet121_Weights
 from torch.utils.data import DataLoader
 import os
 import time
+import numpy as np
 import sys
 from cifar_model import ResNet50
 from mnist_utils import load_yaml
@@ -103,6 +104,7 @@ def initialize(param, device):
 
 
 def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, attack, teacher):
+    loss_list = []
     for idx, (x, label) in enumerate(trainset):
         x, label = x.to(device), label.to(device)
 
@@ -142,8 +144,9 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
 
         elif param['defense'] == 'fir':
             # Compute regularization term and cross entropy loss
-            c           = label.shape[1]
-            probs  = F.softmax(logits, dim=1) * (1 - c * 1e-6) + 1e-6  # for numerical stability
+            # c           = label.shape[1]
+            c = 10
+            probs       = F.softmax(logits, dim=1) * (1 - c * 1e-6) + 1e-6  # for numerical stability
             max_eig_reg = torch.sum(1/probs, dim=1).mean()
 
             # Loss is only cross entropy
@@ -156,9 +159,10 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
+        loss_list.append(loss)
 
         if idx % 300 == 0:
-            print('Test: {}/{} ({:.0f}%)'.format(idx * len(x), len(trainset.dataset), 100. * idx / len(trainset)))
+            print('Epoch {}: {}/{} ({:.0f}%)'.format(epoch, idx * len(x), len(trainset.dataset), 100. * idx / len(trainset)))
 
     model.eval()
     with torch.no_grad():
@@ -172,7 +176,7 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
             tot_corr += torch.eq(pred, label).float().sum().item()
             tot_num += x.size(0)
         acc = 100 * tot_corr / tot_num
-        print('Epoch: {}, Loss: {:.6f}, Accuracy: {:.2f}%'.format(epoch, loss, acc))
+        print('Epoch: {}, Loss: {:.6f}, Accuracy: {:.2f}%'.format(epoch, np.mean(loss_list), acc))
 
 
 def training(param, device, trainset, testset, model, reg_model, attack):

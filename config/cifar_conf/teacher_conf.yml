@@ -12,7 +12,7 @@ batch_size : 32
 # training
 
 lr    : 0.001
-epoch : 50
+epoch : 3
 
 # isometry
 

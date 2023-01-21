@@ -1,5 +1,6 @@
 name       : cifar_icassp/resnet
 model      : epoch_50.pt
+defense    : None
 seed       : 0
 gpu_number : "0"
 load       : True

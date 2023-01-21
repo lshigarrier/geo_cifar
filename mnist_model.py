@@ -4,7 +4,8 @@ import torch.nn.functional as F
 
 
 def compute_jacobian(data, output, device, num_stab=1e-6):
-    c = output.shape[1]
+    # c = output.shape[1]
+    c = 10
     m = c - 1
 
     output = F.softmax(output, dim=1) * (1 - c * num_stab) + num_stab
@@ -23,7 +24,8 @@ def compute_jacobian(data, output, device, num_stab=1e-6):
 
 
 def get_jacobian_bound(output, epsilon):
-    c = output.shape[1]
+    # c = output.shape[1]
+    c = 10
     m = c - 1
     delta = torch.sqrt(F.softmax(output, dim=1) / c).sum(dim=1)
     delta = 2 * torch.acos(delta)
@@ -42,7 +44,8 @@ class IsometryReg(nn.Module):
         # Input dimension
         n = data.shape[1]*data.shape[2]*data.shape[3]
         # Number of classes
-        c = output.shape[1]
+        # c = output.shape[1]
+        c = 10
         m = c - 1
 
         # Numerical stability
@@ -107,7 +110,8 @@ class JacobianReg(nn.Module):
         # Input dimension
         # n = data.shape[2]*data.shape[3]
         # Number of classes
-        c = output.shape[1]
+        # c = output.shape[1]
+        c = 10
         m = c - 1
 
         # Numerical stability
