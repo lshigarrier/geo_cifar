@@ -243,7 +243,7 @@ def main():
         param = load_yaml(prefix + conf_file + '_conf')
         if conf_file == 'distillation':
             os.system(
-                f'cp ./models/cifar_icassp/distillation/epoch_50.pt ./models/cifar_icassp/distillation/teacher.pt')
+                f'cp ./models/cifar_icassp/distillation/epoch_3.pt ./models/cifar_icassp/distillation/teacher.pt')
         one_run(param)
 
 
