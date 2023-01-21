@@ -1,5 +1,5 @@
 name       : cifar_icassp/iso
-model      : epoch_10.pt
+model      : epoch_3.pt
 defense    : isometry
 seed       : 0
 gpu_number : "0"

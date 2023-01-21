@@ -1,5 +1,5 @@
 name       : resnet
-model      : epoch_50.pt
+model      : epoch_3.pt
 defense    : baseline
 seed       : 0
 gpu_number : "0"

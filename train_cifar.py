@@ -52,9 +52,9 @@ def initialize(param, device):
         # model = ResNet50(img_channels=3, num_classes=10).to(device)
         # model = densenet121(weights=DenseNet121_Weights.IMAGENET1K_V1)
         model = densenet121()
+        # torch.save(model.state_dict(), 'models/densenet121_imagenet.pt')
+        model.load_state_dict(torch.load('models/densenet121_imagenet.pt'))
         model.classifier = nn.Linear(1024, 10)
-        # torch.save(model.state_dict(), 'data/cifar/densenet121_imagenet.pt')
-        model.load_state_dict(torch.load('data/cifar/densenet121_imagenet.pt'))
         model.to(device)
 
     reg_model = None
@@ -135,11 +135,11 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
             loss = torch.sum(-soft_labels * torch.log_softmax(logits / param['dist_temp'], -1), -1).mean()
 
         elif param['defense'] == 'isometry':
-            reg, _ = reg_model(x, label, device)
+            reg, _ = reg_model(x, logits, device)
             loss = (1 - param['eta'])*F.cross_entropy(logits, label) + param['eta']*reg
 
         elif param['defense'] == 'jacobian':
-            _, norm = reg_model(x, label, device)
+            _, norm = reg_model(x, logits, device)
             loss = (1 - param['eta'])*F.cross_entropy(logits, label) + param['eta']*norm
 
         elif param['defense'] == 'fir':

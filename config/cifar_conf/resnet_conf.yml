@@ -1,5 +1,5 @@
 name       : cifar_icassp/resnet
-model      : epoch_10.pt
+model      : epoch_3.pt
 defense    : baseline
 seed       : 0
 gpu_number : "0"
