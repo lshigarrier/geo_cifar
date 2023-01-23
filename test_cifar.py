@@ -42,10 +42,10 @@ def generate_adv(param, device, testset, attack):
             if param['attack'] != 'gn' and min_norm < 0.9 * param['budget']:
                 print('PERTURBATION IS TOO SMALL!!!')
 
-            attack_list.append(adv_x.detach().to_numpy())
-            label_list.append(label.detach().to_numpy())
+            attack_list.append(adv_x.detach().numpy())
+            label_list.append(label.detach().numpy())
 
-            if idx % 100 == 0:
+            if idx % 200 == 0:
                 print('Test: {}/{} ({:.0f}%)'.format(idx * len(x), len(testset.dataset), 100. * idx / len(testset)))
 
     attack_array = np.concatenate(attack_list, axis=0)

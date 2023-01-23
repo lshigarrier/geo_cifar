@@ -7,9 +7,11 @@ from torch import optim
 from torchvision import transforms, datasets
 from torchvision.models import densenet121, DenseNet121_Weights
 from torch.utils.data import DataLoader
+from numba import cuda
 import os
 import time
 import numpy as np
+import gc
 import sys
 from cifar_model import ResNet50
 from mnist_utils import load_yaml
@@ -159,10 +161,18 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        loss_list.append(loss)
+        loss_list.append(loss.item())
 
-        if idx % 300 == 0:
+        if idx % 600 == 0:
             print('Epoch {}: {}/{} ({:.0f}%)'.format(epoch, idx * len(x), len(trainset.dataset), 100. * idx / len(trainset)))
+
+        # Free memory
+        # del x, label, loss, reg, logits
+        # gc.collect()
+        # torch.cuda.empty_cache()
+        # cuda.select_device(device)
+        # cuda.close()
+        # cuda.select_device(device)
 
     model.eval()
     with torch.no_grad():
@@ -187,6 +197,7 @@ def training(param, device, trainset, testset, model, reg_model, attack):
         teacher = densenet121()
         teacher.classifier = nn.Linear(1024, 10)
         teacher.load_state_dict(checkpoint['state_dict'])
+        teacher.model()
         teacher.to(device)
         for parameter in teacher.parameters():
             parameter.requires_grad = False
@@ -229,14 +240,14 @@ def main():
 
     prefix = 'cifar_conf/'
     conf_files = [
-            'resnet',
-            'baseline',
             'iso',
             'jac',
             'fir',
             'teacher',
             'dist',
-            'adv_train'
+            'adv_train',
+            'resnet',
+            'baseline'
     ]
     for conf_file in conf_files:
         print('=' * 101)

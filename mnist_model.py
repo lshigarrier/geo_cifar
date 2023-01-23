@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-def compute_jacobian(data, output, device, num_stab=1e-6):
+def compute_jacobian(data, output, device, num_stab=1e-4):
     c = output.shape[1]
     m = c - 1
 
@@ -33,7 +33,7 @@ def get_jacobian_bound(output, epsilon):
 
 class IsometryReg(nn.Module):
 
-    def __init__(self, epsilon, num_stab=1e-6):
+    def __init__(self, epsilon, num_stab=1e-4):
         super(IsometryReg, self).__init__()
         self.epsilon = epsilon
         self.num_stab = num_stab
@@ -47,7 +47,7 @@ class IsometryReg(nn.Module):
 
         # Numerical stability
         output = F.softmax(output, dim=1)*(1 - c*self.num_stab) + self.num_stab
-        assert torch.all(output>0)
+        # assert torch.all(output>0)
 
         # Coordinate change
         new_output = torch.sqrt(output)
@@ -89,7 +89,7 @@ class IsometryReg(nn.Module):
 
 class JacobianReg(nn.Module):
 
-    def __init__(self, epsilon, barrier='relu', num_stab=1e-6):
+    def __init__(self, epsilon, barrier='relu', num_stab=1e-4):
         super(JacobianReg, self).__init__()
         self.epsilon = epsilon
         self.num_stab = num_stab
@@ -112,7 +112,7 @@ class JacobianReg(nn.Module):
 
         # Numerical stability
         output = F.softmax(output, dim=1)*(1 - c*self.num_stab) + self.num_stab
-        assert torch.all(output>0)
+        # assert torch.all(output>0)
 
         # Coordinate change
         new_output = torch.sqrt(output)

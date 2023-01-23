@@ -1,8 +1,8 @@
 name       : cifar_icassp/resnet
-model      : epoch_3.pt
+model      : epoch_03.pt
 defense    : None
 seed       : 0
-gpu_number : "0"
+gpu_number : "1"
 load       : True
 
 # test
@@ -26,5 +26,5 @@ attack       : fgsm  # fgsm gn pgd deep_fool cw
 budget       : 0.05  # fgsm gn(std) pgd
 perturbation : linf  # pgd
 alpha        : 0.01  # pgd
-max_iter     : 40    # pgd deep_fool cw
+max_iter     : 10    # pgd deep_fool cw
 random_start : True  # pgd

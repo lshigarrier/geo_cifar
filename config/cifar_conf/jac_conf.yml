@@ -1,5 +1,5 @@
 name       : cifar_icassp/jac
-model      : epoch_3.pt
+model      : epoch_03.pt
 defense    : jacobian
 seed       : 0
 gpu_number : "0"

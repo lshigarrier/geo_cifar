@@ -1,5 +1,5 @@
 name       : cifar_icassp/iso
-model      : epoch_3.pt
+model      : epoch_03.pt
 defense    : isometry
 seed       : 0
 gpu_number : "0"
@@ -19,7 +19,7 @@ epoch : 3
 # d = 3*32*32 = 3072
 # eps_inf = 0.15 => eps_2 = eps_inf * sqrt(d) = 8.3
 epsilon : 8.3
-eta     : 0.00001
+eta     : 0.000001
 
 # distillation
 
