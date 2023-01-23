@@ -8,14 +8,14 @@ from torch.utils.data import Dataset
 class AttackDataset(Dataset):
     def __init__(self, param):
         if param['attack'] == 'fgsm':
-            self.attack_array = np.save(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}.npy')
-            self.label_array = np.save(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}_label.npy')
+            self.attack_array = np.load(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}.npy')
+            self.label_array = np.load(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}_label.npy')
         elif param['attack'] == 'pgd':
-            self.attack_array = np.save(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy')
-            self.label_array = np.save(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label.npy')
+            self.attack_array = np.load(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy')
+            self.label_array = np.load(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label.npy')
         elif param['attack'] == 'deep_fool':
-            self.attack_array = np.save(f'data/cifar/attacks/{param["attack"]}.npy')
-            self.label_array = np.save(f'data/cifar/attacks/{param["attack"]}_label.npy')
+            self.attack_array = np.load(f'data/cifar/attacks/{param["attack"]}.npy')
+            self.label_array = np.load(f'data/cifar/attacks/{param["attack"]}_label.npy')
 
     def __len__(self):
         return len(self.label_array)

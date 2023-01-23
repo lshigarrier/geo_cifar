@@ -45,7 +45,7 @@ def generate_adv(param, device, testset, attack):
             attack_list.append(adv_x.cpu().numpy())
             label_list.append(label.cpu().numpy())
 
-            if idx % 200 == 0:
+            if idx % 100 == 0:
                 print('Test: {}/{} ({:.0f}%)'.format(idx * len(x), len(testset.dataset), 100. * idx / len(testset)))
 
     attack_array = np.concatenate(attack_list, axis=0)
@@ -100,6 +100,7 @@ def main():
         'adv_train'
     ]
     budgets = [.025, .05, .075, .1, .125, .15]
+    budgets_l2 = [.3, .4, .5, .6, .7, .8]
     attacks = [
         'fgsm',
         'pgd',
@@ -111,20 +112,24 @@ def main():
     for attack in attacks:
         param['attack'] = attack
         if attack != 'deep_fool':
-            for budget in budgets:
-                param['budget'] = budget
+            for idx in range(len(budgets)):
+                param['budget'] = budgets[idx]
                 if attack == 'pgd':
-                    for perturb in ('linf', 'l2'):
+                    for perturb in ('l2', 'linf'):
                         param['perturbation'] = perturb
+                        if perturb == 'l2':
+                            param['budget'] = budgets_l2[idx]
+                        else:
+                            param['budget'] = budgets[idx]
                         print('-' * 101)
                         one_run(param)
+                        break
                 else:
                     print('-' * 101)
                     one_run(param)
         else:
             print('-' * 101)
             one_run(param)
-        break
 
     print('=' * 101)
     print(f'Test defenses')
