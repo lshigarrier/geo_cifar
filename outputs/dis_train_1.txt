@@ -1,0 +1,177 @@
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_icassp/iso
+model: epoch_03.pt
+defense: isometry
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epsilon: 8.3
+eta: 5e-06
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 40
+random_start: True
+Start training
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.972656, Accuracy: 89.63%
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.274236, Accuracy: 93.01%
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 0.177347, Accuracy: 93.82%
+Training time (s): 5509.363123893738
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_icassp/jac
+model: epoch_03.pt
+defense: jacobian
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epsilon: 8.3
+eta: 0.05
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 40
+random_start: True
+Start training
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 3.704901, Accuracy: 89.61%
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 5.851230, Accuracy: 93.66%
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 5.659458, Accuracy: 93.59%
+Training time (s): 5491.235914230347
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: fir
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epsilon: 8.3
+eta: 1
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 40
+random_start: True
+Start training
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 9588545.933155, Accuracy: 10.43%
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: nan, Accuracy: 10.00%
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: nan, Accuracy: 10.00%
+Training time (s): 1204.717389345169
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: teacher
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epsilon: 8.3
+eta: 1e-05
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 40
+random_start: True
+Start training
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 2.296647, Accuracy: 19.20%
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 1.087979, Accuracy: 90.13%
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 0.263375, Accuracy: 87.38%
+Training time (s): 1275.3029673099518
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: distillation
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epsilon: 8.3
+eta: 1e-05
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 40
+random_start: True
+Traceback (most recent call last):
+  File "/home/loic/geo_cifar/train_cifar.py", line 262, in <module>
+    main()
+  File "/home/loic/geo_cifar/train_cifar.py", line 258, in main
+    one_run(param)
+  File "/home/loic/geo_cifar/train_cifar.py", line 234, in one_run
+    training(param, device, trainset, testset, model, reg_model, attack)
+  File "/home/loic/geo_cifar/train_cifar.py", line 196, in training
+    checkpoint = torch.load(f'models/{param["name"]}/{param["teacher"]}', map_location='cpu')
+  File "/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'models/cifar_icassp/distillation/teacher.pt'

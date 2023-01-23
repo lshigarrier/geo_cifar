@@ -59,7 +59,7 @@ class IsometryReg(nn.Module):
         for i in range(m):
             grad_output.zero_()
             grad_output[:, i] = 1
-            jac[i] = torch.autograd.grad(new_output, data, grad_outputs=grad_output, retain_graph=True)[0]
+            jac[i] = torch.nan_to_num(torch.autograd.grad(new_output, data, grad_outputs=grad_output, retain_graph=True)[0])
         jac = torch.transpose(jac, dim0=0, dim1=1)
         jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
 

@@ -91,11 +91,11 @@ def initialize(param, device):
             print("Invalid perturbation_type in config file, please use 'linf' or 'l2'")
             exit()
 
-    elif param['attack_type'] == 'deep_fool':
+    elif param['attack'] == 'deep_fool':
         attack = TorchAttackDeepFool(model=model,
                                      max_iters=param['max_iter'])
 
-    elif param['attack_type'] == 'cw':
+    elif param['attack'] == 'cw':
         attack = TorchAttackCWL2(model=model,
                                  max_iters=param['max_iter'])
 
@@ -197,7 +197,6 @@ def training(param, device, trainset, testset, model, reg_model, attack):
         teacher = densenet121()
         teacher.classifier = nn.Linear(1024, 10)
         teacher.load_state_dict(checkpoint['state_dict'])
-        teacher.model()
         teacher.to(device)
         for parameter in teacher.parameters():
             parameter.requires_grad = False
@@ -236,25 +235,25 @@ def one_run(param):
 
 def main():
     # Detect anomaly in autograd
-    torch.autograd.set_detect_anomaly(True)
+    # torch.autograd.set_detect_anomaly(True)
 
     prefix = 'cifar_conf/'
     conf_files = [
+            'resnet',
+            'baseline',
+            'fir',
             'iso',
             'jac',
-            'fir',
             'teacher',
             'dist',
-            'adv_train',
-            'resnet',
-            'baseline'
+            'adv_train'
     ]
     for conf_file in conf_files:
         print('=' * 101)
         param = load_yaml(prefix + conf_file + '_conf')
-        if conf_file == 'distillation':
+        if conf_file == 'dist':
             os.system(
-                f'cp ./models/cifar_icassp/distillation/epoch_3.pt ./models/cifar_icassp/distillation/teacher.pt')
+                f'cp ./models/cifar_icassp/distillation/epoch_03.pt ./models/cifar_icassp/distillation/teacher.pt')
         one_run(param)
 
 
