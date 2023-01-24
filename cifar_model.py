@@ -1,5 +1,6 @@
 # https://www.kaggle.com/code/michaelqq/tutorial-cifar10-resnet-pytorch
 
+import torch
 import torch.nn as nn
 import numpy as np
 from torch.utils.data import Dataset
@@ -16,6 +17,8 @@ class AttackDataset(Dataset):
         elif param['attack'] == 'deep_fool':
             self.attack_array = np.load(f'data/cifar/attacks/{param["attack"]}.npy')
             self.label_array = np.load(f'data/cifar/attacks/{param["attack"]}_label.npy')
+        self.attack_array = torch.from_numpy(self.attack_array)
+        self.label_array = torch.from_numpy(self.label_array)
 
     def __len__(self):
         return len(self.label_array)

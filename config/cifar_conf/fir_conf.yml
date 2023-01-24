@@ -19,7 +19,7 @@ epoch : 3
 # d = 3*32*32 = 3072
 # eps_inf = 0.15 => eps_2 = eps_inf * sqrt(d) = 8.3
 epsilon : 8.3
-eta     : 0.5
+eta     : 0.1
 
 # distillation
 

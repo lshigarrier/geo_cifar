@@ -1,6 +1,7 @@
 import torch
 import os
 import numpy as np
+from torch.utils.data import DataLoader
 from train_cifar import initialize
 from cifar_model import AttackDataset
 from mnist_utils import load_yaml
@@ -83,6 +84,7 @@ def one_run(param):
             test(device, testset, model)
         else:
             attackset = AttackDataset(param)
+            attackset = DataLoader(attackset, batch_size=param['batch_size'], shuffle=True)
             test(device, attackset, model)
 
 
@@ -143,11 +145,14 @@ def main():
         for attack in attacks:
             param['attack'] = attack
             if attack != 'deep_fool':
-                for budget in budgets:
-                    param['budget'] = budget
+                for idx in range(len(budgets)):
+                    param['budget'] = budgets[idx]
                     if attack == 'pgd':
                         for perturb in ('linf', 'l2'):
-                            param['perturbation'] = perturb
+                            if perturb == 'l2':
+                                param['budget'] = budgets_l2[idx]
+                            else:
+                                param['budget'] = budgets[idx]
                             print('-' * 101)
                             one_run(param)
                     else:
