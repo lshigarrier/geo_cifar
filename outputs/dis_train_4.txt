@@ -1,0 +1,105 @@
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: fir
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epsilon: 8.3
+eta: 0.1
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 40
+random_start: True
+Start training
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 12.377646, Accuracy: 64.30%
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 12.194917, Accuracy: 87.52%
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 12.161534, Accuracy: 89.98%
+Training time (s): 3459.7654831409454
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_icassp/iso
+model: epoch_03.pt
+defense: isometry
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epsilon: 8.3
+eta: 1e-05
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 40
+random_start: True
+Start training
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 1.042334, Accuracy: 89.12%
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.656824, Accuracy: 32.37%
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: nan, Accuracy: 10.00%
+Training time (s): 7658.348058462143
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_icassp/jac
+model: epoch_03.pt
+defense: jacobian
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epsilon: 8.3
+eta: 0.1
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 40
+random_start: True
+Start training
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 7.176348, Accuracy: 89.32%
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 14.100139, Accuracy: 92.58%
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 12.872244, Accuracy: 92.39%
+Training time (s): 10444.80879330635

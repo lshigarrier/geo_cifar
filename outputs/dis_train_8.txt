@@ -1,0 +1,35 @@
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_icassp/jac
+model: epoch_03.pt
+defense: jacobian
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epsilon: 8.3
+eta: 0.9
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 40
+random_start: True
+Start training
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 33.226055, Accuracy: 46.45%
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 201.333046, Accuracy: 87.02%
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 279.944605, Accuracy: 90.38%
+Training time (s): 8850.541223287582

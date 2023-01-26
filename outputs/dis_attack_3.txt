@@ -1,0 +1,738 @@
+=====================================================================================================
+Test defenses
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: True
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 9293.0/10000 (92.9%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3406.0/10000 (34.1%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3136.0/10000 (31.4%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 47.0/10000 (0.5%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.3
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 4522.0/10000 (45.2%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 12.0/10000 (0.1%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 4522.0/10000 (45.2%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: deep_fool
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 4014.0/10000 (40.1%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: True
+batch_size: 32
+epsilon: 8.3
+attack: deep_fool
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 8998.0/10000 (90.0%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 2612.0/10000 (26.1%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.06274509803921569
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 2505.0/10000 (25.1%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 405.0/10000 (4.0%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.3
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3142.0/10000 (31.4%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 175.0/10000 (1.8%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3142.0/10000 (31.4%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/fir
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: deep_fool
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 2902.0/10000 (29.0%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: True
+batch_size: 32
+epsilon: 8.3
+attack: deep_fool
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 8496.0/10000 (85.0%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 2097.0/10000 (21.0%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.06274509803921569
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 1867.0/10000 (18.7%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 335.0/10000 (3.4%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.3
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 2834.0/10000 (28.3%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 181.0/10000 (1.8%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 2834.0/10000 (28.3%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/distillation
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: deep_fool
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 2354.0/10000 (23.5%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/adv_train
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: True
+batch_size: 32
+epsilon: 8.3
+attack: deep_fool
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 8078.0/10000 (80.8%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/adv_train
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 7496.0/10000 (75.0%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/adv_train
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.06274509803921569
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 7579.0/10000 (75.8%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/adv_train
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 6661.0/10000 (66.6%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/adv_train
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.3
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 7376.0/10000 (73.8%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/adv_train
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 6637.0/10000 (66.4%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/adv_train
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: pgd
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 7376.0/10000 (73.8%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/adv_train
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: deep_fool
+budget: 0.7
+perturbation: l2
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 7355.0/10000 (73.5%)

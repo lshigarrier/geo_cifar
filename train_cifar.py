@@ -37,8 +37,8 @@ def initialize(param, device):
                                    transforms.Normalize(mean=(0.4914, 0.4822, 0.4465),
                                                          std=(0.2470, 0.2435, 0.2616))
                                ]))
-    trainset = DataLoader(trainset, batch_size=param['batch_size'], shuffle=True)
-    testset = DataLoader(testset, batch_size=param['batch_size'], shuffle=True)
+    trainset = DataLoader(trainset, batch_size=param['batch_size'], shuffle=True, pin_memory=True, num_workers=1)
+    testset = DataLoader(testset, batch_size=param['batch_size'], shuffle=True, pin_memory=True, num_workers=1)
 
     if param['load']:
         checkpoint = torch.load(f'models/{param["name"]}/{param["model"]}', map_location='cpu')

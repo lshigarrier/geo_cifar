@@ -84,7 +84,7 @@ def one_run(param):
             test(device, testset, model)
         else:
             attackset = AttackDataset(param)
-            attackset = DataLoader(attackset, batch_size=param['batch_size'], shuffle=True)
+            attackset = DataLoader(attackset, batch_size=param['batch_size'], shuffle=True, pin_memory=True, num_workers=1)
             test(device, attackset, model)
 
 
@@ -98,11 +98,11 @@ def main():
         'iso',
         'jac',
         'fir',
-        'dist',
+        'distillation',
         'adv_train'
     ]
-    budgets = [.025, .05, .075, .1, .125, .15]
-    budgets_l2 = [.3, .4, .5, .6, .7, .8]
+    budgets = [4/255, 8/255, 16/255]
+    budgets_l2 = [1., 2., 3.]
     attacks = [
         'fgsm',
         'pgd',
@@ -149,6 +149,7 @@ def main():
                     param['budget'] = budgets[idx]
                     if attack == 'pgd':
                         for perturb in ('linf', 'l2'):
+                            param['perturbation'] = perturb
                             if perturb == 'l2':
                                 param['budget'] = budgets_l2[idx]
                             else:

@@ -1,0 +1,53 @@
+=====================================================================================================
+Test defenses
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 3
+load: True
+generate: False
+clean: True
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.05
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 9293.0/10000 (92.9%)
+-----------------------------------------------------------------------------------------------------
+Files already downloaded and verified
+name: cifar_icassp/baseline
+model: epoch_03.pt
+defense: None
+seed: 0
+gpu_number: 3
+load: True
+generate: False
+clean: False
+batch_size: 32
+epsilon: 8.3
+attack: fgsm
+budget: 0.025
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Traceback (most recent call last):
+  File "/home/loic/geo_cifar/test_cifar_3.py", line 162, in <module>
+    main()
+  File "/home/loic/geo_cifar/test_cifar_3.py", line 155, in main
+    one_run(param)
+  File "/home/loic/geo_cifar/test_cifar_3.py", line 85, in one_run
+    attackset = AttackDataset(param)
+  File "/home/loic/geo_cifar/cifar_model.py", line 19, in __init__
+    self.attack_array = torch.from_numpy(self.attack_array)
+NameError: name 'torch' is not defined
