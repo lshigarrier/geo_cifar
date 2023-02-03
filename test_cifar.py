@@ -63,7 +63,7 @@ def generate_adv(param, device, testset, attack):
         np.save(f'data/cifar/attacks/{param["attack"]}_label.npy', label_array)
 
 
-def one_run(param):
+def one_test_run(param):
     # Set random seed
     torch.manual_seed(param['seed'])
 
@@ -88,6 +88,63 @@ def one_run(param):
             test(device, attackset, model)
 
 
+def generate_loop(param, attacks, budgets, budgets_l2):
+    print(f'Generate adversarial examples')
+    for attack in attacks:
+        param['attack'] = attack
+        if attack != 'deep_fool':
+            for idx in range(len(budgets)):
+                param['budget'] = budgets[idx]
+                if attack == 'pgd':
+                    for perturb in ('l2', 'linf'):
+                        param['perturbation'] = perturb
+                        if perturb == 'l2':
+                            param['budget'] = budgets_l2[idx]
+                        else:
+                            param['budget'] = budgets[idx]
+                        print('-' * 101)
+                        one_test_run(param)
+                        break
+                else:
+                    print('-' * 101)
+                    one_test_run(param)
+        else:
+            print('-' * 101)
+            one_test_run(param)
+
+
+def test_loop(param, models, attacks, budgets, budgets_l2):
+    print('=' * 101)
+    print(f'Test defenses')
+    param['generate'] = False
+    for name in models:
+        param['name'] = 'cifar_icassp/' + name
+        param['clean'] = True
+        print('-' * 101)
+        one_test_run(param)
+        param['clean'] = False
+        for attack in attacks:
+            param['attack'] = attack
+            if attack != 'deep_fool':
+                for idx in range(len(budgets)):
+                    param['budget'] = budgets[idx]
+                    if attack == 'pgd':
+                        for perturb in ('linf', 'l2'):
+                            param['perturbation'] = perturb
+                            if perturb == 'l2':
+                                param['budget'] = budgets_l2[idx]
+                            else:
+                                param['budget'] = budgets[idx]
+                            print('-' * 101)
+                            one_test_run(param)
+                    else:
+                        print('-' * 101)
+                        one_test_run(param)
+            else:
+                print('-' * 101)
+                one_test_run(param)
+
+
 def main():
     # Detect anomaly in autograd
     torch.autograd.set_detect_anomaly(True)
@@ -109,60 +166,16 @@ def main():
         'deep_fool'
     ]
 
-    print(f'Generate adversarial examples')
-    param['generate'] = True
-    for attack in attacks:
-        param['attack'] = attack
-        if attack != 'deep_fool':
-            for idx in range(len(budgets)):
-                param['budget'] = budgets[idx]
-                if attack == 'pgd':
-                    for perturb in ('l2', 'linf'):
-                        param['perturbation'] = perturb
-                        if perturb == 'l2':
-                            param['budget'] = budgets_l2[idx]
-                        else:
-                            param['budget'] = budgets[idx]
-                        print('-' * 101)
-                        one_run(param)
-                        break
-                else:
-                    print('-' * 101)
-                    one_run(param)
-        else:
-            print('-' * 101)
-            one_run(param)
+    # if param['generate']:
+    #    generate_loop(param, attacks, budgets, budgets_l2)
+    # else:
+    #    test_loop(param, models, attacks, budgets, budgets_l2)
 
-    print('=' * 101)
-    print(f'Test defenses')
-    param['generate'] = False
-    for name in models:
-        param['name'] = 'cifar_icassp/' + name
-        param['clean'] = True
+    etas = np.linspace(5e-6, 6e-6, 11)
+    for idx in range(len(etas)):
         print('-' * 101)
-        one_run(param)
-        param['clean'] = False
-        for attack in attacks:
-            param['attack'] = attack
-            if attack != 'deep_fool':
-                for idx in range(len(budgets)):
-                    param['budget'] = budgets[idx]
-                    if attack == 'pgd':
-                        for perturb in ('linf', 'l2'):
-                            param['perturbation'] = perturb
-                            if perturb == 'l2':
-                                param['budget'] = budgets_l2[idx]
-                            else:
-                                param['budget'] = budgets[idx]
-                            print('-' * 101)
-                            one_run(param)
-                    else:
-                        print('-' * 101)
-                        one_run(param)
-            else:
-                print('-' * 101)
-                one_run(param)
-
+        param['name'] = f'iso_trace/eta_{idx}'
+        one_test_run(param)
 
 if __name__ == '__main__':
     main()

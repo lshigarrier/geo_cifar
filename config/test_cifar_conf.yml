@@ -1,4 +1,4 @@
-name       : cifar_icassp/resnet
+name       : iso_trace
 model      : epoch_03.pt
 defense    : None
 seed       : 0
@@ -7,7 +7,7 @@ load       : True
 
 # test
 
-generate   : True
+generate   : False
 clean      : False
 
 # data
@@ -22,9 +22,9 @@ epsilon : 3.5
 
 # attack
 
-attack       : fgsm  # fgsm gn pgd deep_fool cw
-budget       : 0.05  # fgsm gn(std) pgd
-perturbation : linf  # pgd
-alpha        : 0.1  # pgd
-max_iter     : 10    # pgd deep_fool cw
-random_start : True  # pgd
+attack       : pgd                  # fgsm gn pgd deep_fool cw
+budget       : 0.03137254901960784  # fgsm gn(std) pgd
+perturbation : linf                 # pgd
+alpha        : 0.1                  # pgd
+max_iter     : 10                   # pgd deep_fool cw
+random_start : True                 # pgd

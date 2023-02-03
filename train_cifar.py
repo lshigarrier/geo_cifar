@@ -7,13 +7,13 @@ from torch import optim
 from torchvision import transforms, datasets
 from torchvision.models import densenet121, DenseNet121_Weights
 from torch.utils.data import DataLoader
-from numba import cuda
+# from numba import cuda
+# import gc
+# import sys
 import os
 import time
 import numpy as np
-import gc
-import sys
-from cifar_model import ResNet50
+# from cifar_model import ResNet50
 from mnist_utils import load_yaml
 from mnist_model import IsometryReg, JacobianReg
 from attacks_utils import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
@@ -122,7 +122,7 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
         x.requires_grad = True
 
         # Forward pass
-        logits = model(x)  # [b, 10]
+        logits = model(x)
 
         # Train teacher model for distillation
         if param['defense'] == 'teacher':
@@ -155,7 +155,7 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
             loss = F.cross_entropy(logits, label) + param['eta']*max_eig_reg
 
         else:
-            loss = F.cross_entropy(logits, label)  # label: [b]
+            loss = F.cross_entropy(logits, label)
 
         # backprop
         optimizer.zero_grad()
@@ -233,10 +233,7 @@ def one_run(param):
     training(param, device, trainset, testset, model, reg_model, attack)
 
 
-def main():
-    # Detect anomaly in autograd
-    # torch.autograd.set_detect_anomaly(True)
-
+def train_loop():
     prefix = 'cifar_conf/'
     conf_files = [
             'resnet',
@@ -255,6 +252,28 @@ def main():
             os.system(
                 f'cp ./models/cifar_icassp/distillation/epoch_03.pt ./models/cifar_icassp/distillation/teacher.pt')
         one_run(param)
+
+
+def main():
+    # Detect anomaly in autograd
+    # torch.autograd.set_detect_anomaly(True)
+
+    # train_loop()
+
+    from test_cifar import one_test_run
+    param = load_yaml('train_cifar_conf')
+    etas = np.linspace(5e-6, 6e-6, 11)
+
+    for idx in range(len(etas)):
+        print('=' * 101)
+        param['eta'] = etas[idx]
+        param['name'] = f'iso_trace/eta_{idx+11}'
+        param['load'] = False
+        one_run(param)
+        print('-' * 101)
+        print('Test')
+        param['load'] = True
+        one_test_run(param)
 
 
 if __name__ == '__main__':
