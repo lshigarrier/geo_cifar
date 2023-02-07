@@ -1,5 +1,5 @@
-name       : iso_trace
-model      : epoch_03.pt
+name       : iso_annealing
+model      : epoch_05.pt
 defense    : isometry
 seed       : 0
 gpu_number : "0"
@@ -12,7 +12,11 @@ batch_size : 32
 # training
 
 lr    : 0.001
-epoch : 3
+epoch : 5
+
+# annealing
+
+epoch_thr : 3
 
 # test
 
@@ -33,7 +37,7 @@ teacher   : teacher.pt
 
 # attack
 
-attack       : pgd                  # fgsm gn pgd deep_fool cw
+attack       : fgsm                 # fgsm gn pgd deep_fool cw
 budget       : 0.03137254901960784  # fgsm gn(std) pgd
 perturbation : linf                 # pgd
 alpha        : 0.1                  # pgd

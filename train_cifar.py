@@ -9,7 +9,7 @@ from torchvision.models import densenet121, DenseNet121_Weights
 from torch.utils.data import DataLoader
 # from numba import cuda
 # import gc
-# import sys
+import sys
 import os
 import time
 import numpy as np
@@ -17,6 +17,7 @@ import numpy as np
 from mnist_utils import load_yaml
 from mnist_model import IsometryReg, JacobianReg
 from attacks_utils import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
+from iso_defense import parseval_orthonormal_constraint
 
 
 def initialize(param, device):
@@ -58,6 +59,8 @@ def initialize(param, device):
         model.load_state_dict(torch.load('models/densenet121_imagenet.pt'))
         model.classifier = nn.Linear(1024, 10)
         model.to(device)
+    batch = next(iter(trainset))
+    # torch.onnx.export(model, batch[0], 'densenet.onnx', input_names=['Image'], output_names=['Logits'])
 
     reg_model = None
     if param['defense'] == 'isometry':
@@ -161,6 +164,12 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
+
+        if param['defense'] == 'parseval' or param['defense'] == 'isolayer':
+            c = 10
+            probs = F.softmax(logits, dim=1) * (1 - c * 1e-6) + 1e-6  # for numerical stability
+            model = parseval_orthonormal_constraint(model, probs, param['defense'])
+
         loss_list.append(loss.item())
 
         if idx % 600 == 0:
@@ -205,8 +214,15 @@ def training(param, device, trainset, testset, model, reg_model, attack):
         teacher = None
     print(f'Start training')
     tac = time.time()
+    defense = param['defense']
+    param['defense'] = None
     for epoch in range(1, param['epoch'] + 1):
+        if epoch == param['epoch_thr']:
+            param['defense'] = defense
+        print(f'Defense: {param["defense"]}')
+        tic = time.time()
         train(param, device, trainset, testset, model, reg_model, optimizer, epoch, attack, teacher)
+        print(f'Epoch training time (s): {time.time() - tic}')
         # checkpoint = {'model': ResNet50(img_channels=3, num_classes=10),
         #              'state_dict': model.state_dict(),
         #              'optimizer': optimizer.state_dict()}
@@ -254,12 +270,7 @@ def train_loop():
         one_run(param)
 
 
-def main():
-    # Detect anomaly in autograd
-    # torch.autograd.set_detect_anomaly(True)
-
-    # train_loop()
-
+def trace_plot_loop():
     from test_cifar import one_test_run
     param = load_yaml('train_cifar_conf')
     etas = np.linspace(5e-6, 6e-6, 11)
@@ -267,7 +278,27 @@ def main():
     for idx in range(len(etas)):
         print('=' * 101)
         param['eta'] = etas[idx]
-        param['name'] = f'iso_trace/eta_{idx+11}'
+        param['name'] = f'iso_trace/eta_{idx + 11}'
+        param['load'] = False
+        one_run(param)
+        print('-' * 101)
+        print('Test')
+        param['load'] = True
+        one_test_run(param)
+
+
+def main():
+    # Detect anomaly in autograd
+    torch.autograd.set_detect_anomaly(True)
+
+    from test_cifar import one_test_run
+
+    param = load_yaml('train_cifar_conf')
+
+    for seed in range(5):
+        print('=' * 101)
+        param['seed'] = seed
+        param['name'] = f'iso_annealing/seed_{seed}'
         param['load'] = False
         one_run(param)
         print('-' * 101)
