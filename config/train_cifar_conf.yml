@@ -1,6 +1,6 @@
-name       : iso_annealing
-model      : epoch_05.pt
-defense    : isometry
+name       : iso_parseval
+model      : epoch_03.pt
+defense    : isolayer  # parseval
 seed       : 0
 gpu_number : "0"
 load       : False
@@ -11,24 +11,28 @@ batch_size : 32
 
 # training
 
-lr    : 0.001
-epoch : 5
+lr    : 0.0001
+epoch : 3
 
 # annealing
 
-epoch_thr : 3
+epoch_thr : 1
 
 # test
 
 generate : False
 clean    : False
 
+# parseval
+
+beta : 0.00001  # try beta=0.
+
 # isometry
 
 # d = 3*32*32 = 3072
 # eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
 epsilon : 3.5
-eta     : 0.0000055
+eta     : 0.00001
 
 # distillation
 

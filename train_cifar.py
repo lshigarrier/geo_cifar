@@ -167,8 +167,8 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
 
         if param['defense'] == 'parseval' or param['defense'] == 'isolayer':
             c = 10
-            probs = F.softmax(logits, dim=1) * (1 - c * 1e-6) + 1e-6  # for numerical stability
-            model = parseval_orthonormal_constraint(model, probs, param['defense'])
+            probs = F.softmax(logits, dim=1) * (1 - c * 1e-4) + 1e-4  # for numerical stability
+            model = parseval_orthonormal_constraint(model, probs, device, defense=param['defense'], beta=param['beta'])
 
         loss_list.append(loss.item())
 
@@ -298,7 +298,7 @@ def main():
     for seed in range(5):
         print('=' * 101)
         param['seed'] = seed
-        param['name'] = f'iso_annealing/seed_{seed}'
+        param['name'] = f'iso_parseval/seed_{seed}'
         param['load'] = False
         one_run(param)
         print('-' * 101)
