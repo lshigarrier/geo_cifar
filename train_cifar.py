@@ -5,19 +5,19 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch import optim
 from torchvision import transforms, datasets
-from torchvision.models import densenet121, DenseNet121_Weights
+from torchvision.models import densenet121  # DenseNet121_Weights
 from torch.utils.data import DataLoader
 # from numba import cuda
 # import gc
-import sys
+# import sys
 import os
 import time
 import numpy as np
 # from cifar_model import ResNet50
 from mnist_utils import load_yaml
-from mnist_model import IsometryReg, JacobianReg
+from mnist_model import JacobianReg
 from attacks_utils import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
-from iso_defense import parseval_orthonormal_constraint
+from iso_defense import JacSoftmax, JacCoordChange, Isometry, parseval_orthonormal_constraint, simple_iso_reg
 
 
 def initialize(param, device):
@@ -59,14 +59,15 @@ def initialize(param, device):
         model.load_state_dict(torch.load('models/densenet121_imagenet.pt'))
         model.classifier = nn.Linear(1024, 10)
         model.to(device)
-    batch = next(iter(trainset))
     # torch.onnx.export(model, batch[0], 'densenet.onnx', input_names=['Image'], output_names=['Logits'])
 
     reg_model = None
     if param['defense'] == 'isometry':
-        reg_model = IsometryReg(param['epsilon'])
+        reg_model = Isometry(param['epsilon'])
     elif param['defense'] == 'jacobian':
         reg_model = JacobianReg(param['epsilon'])
+    elif param['defense'] == 'isolayer':
+        reg_model = [JacSoftmax(), JacCoordChange()]
 
     attack = None
     if param['attack'] == 'fgsm':
@@ -157,6 +158,9 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
             # Loss is only cross entropy
             loss = F.cross_entropy(logits, label) + param['eta']*max_eig_reg
 
+        elif param['defense'] == 'isoortho':
+            loss = F.cross_entropy(logits, label) + param['eta']*simple_iso_reg(model, device, x.shape[1:])
+
         else:
             loss = F.cross_entropy(logits, label)
 
@@ -166,9 +170,7 @@ def train(param, device, trainset, testset, model, reg_model, optimizer, epoch, 
         optimizer.step()
 
         if param['defense'] == 'parseval' or param['defense'] == 'isolayer':
-            c = 10
-            probs = F.softmax(logits, dim=1) * (1 - c * 1e-4) + 1e-4  # for numerical stability
-            model = parseval_orthonormal_constraint(model, probs, device, defense=param['defense'], beta=param['beta'])
+            model = parseval_orthonormal_constraint(model, logits, device, reg_model, defense=param['defense'], beta=param['beta'])
 
         loss_list.append(loss.item())
 
@@ -298,7 +300,7 @@ def main():
     for seed in range(5):
         print('=' * 101)
         param['seed'] = seed
-        param['name'] = f'iso_parseval/seed_{seed}'
+        param['name'] = f'iso_annealing/seed_{seed}'
         param['load'] = False
         one_run(param)
         print('-' * 101)

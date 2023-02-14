@@ -1,6 +1,6 @@
-name       : iso_parseval
+name       : iso_annealing
 model      : epoch_03.pt
-defense    : isolayer  # parseval
+defense    : isometry  # parseval isolayer
 seed       : 0
 gpu_number : "0"
 load       : False
