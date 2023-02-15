@@ -15,9 +15,9 @@ import time
 import numpy as np
 # from cifar_model import ResNet50
 from mnist_utils import load_yaml
-from mnist_model import JacobianReg
+from mnist_model import JacobianReg, IsometryRegV2
 from attacks_utils import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
-from iso_defense import JacSoftmax, JacCoordChange, Isometry, parseval_orthonormal_constraint, simple_iso_reg
+from iso_defense import JacSoftmax, JacCoordChange, parseval_orthonormal_constraint, simple_iso_reg
 
 
 def initialize(param, device):
@@ -63,7 +63,7 @@ def initialize(param, device):
 
     reg_model = None
     if param['defense'] == 'isometry':
-        reg_model = Isometry(param['epsilon'])
+        reg_model = IsometryRegV2(param['epsilon'])
     elif param['defense'] == 'jacobian':
         reg_model = JacobianReg(param['epsilon'])
     elif param['defense'] == 'isolayer':

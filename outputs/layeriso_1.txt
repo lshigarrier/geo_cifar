@@ -1,0 +1,65 @@
+=====================================================================================================
+Files already downloaded and verified
+name: iso_parseval/seed_0
+model: epoch_03.pt
+defense: isolayer
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 3
+epoch_thr: 1
+generate: False
+clean: False
+beta: 1e-05
+epsilon: 3.5
+eta: 1e-05
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.1
+max_iter: 10
+random_start: True
+Start training
+Defense: isolayer
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 2.267814, Accuracy: 15.74%
+Epoch training time (s): 624.4228410720825
+Defense: isolayer
+Epoch 2: 0/50000 (0%)
+/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/autograd/__init__.py:173: UserWarning: Error detected in LogSoftmaxBackward0. Traceback of forward call that caused the error:
+  File "/home/loic/geo_cifar/train_cifar.py", line 311, in <module>
+    main()
+  File "/home/loic/geo_cifar/train_cifar.py", line 303, in main
+    one_run(param)
+  File "/home/loic/geo_cifar/train_cifar.py", line 249, in one_run
+    training(param, device, trainset, testset, model, reg_model, attack)
+  File "/home/loic/geo_cifar/train_cifar.py", line 224, in training
+    train(param, device, trainset, testset, model, reg_model, optimizer, epoch, attack, teacher)
+  File "/home/loic/geo_cifar/train_cifar.py", line 161, in train
+    loss = F.cross_entropy(logits, label)
+  File "/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/nn/functional.py", line 3014, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+ (Triggered internally at  /opt/conda/conda-bld/pytorch_1659484806139/work/torch/csrc/autograd/python_anomaly_mode.cpp:102.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Traceback (most recent call last):
+  File "/home/loic/geo_cifar/train_cifar.py", line 311, in <module>
+    main()
+  File "/home/loic/geo_cifar/train_cifar.py", line 303, in main
+    one_run(param)
+  File "/home/loic/geo_cifar/train_cifar.py", line 249, in one_run
+    training(param, device, trainset, testset, model, reg_model, attack)
+  File "/home/loic/geo_cifar/train_cifar.py", line 224, in training
+    train(param, device, trainset, testset, model, reg_model, optimizer, epoch, attack, teacher)
+  File "/home/loic/geo_cifar/train_cifar.py", line 165, in train
+    loss.backward()
+  File "/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/autograd/__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: Function 'LogSoftmaxBackward0' returned nan values in its 0th output.

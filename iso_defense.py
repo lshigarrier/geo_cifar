@@ -53,10 +53,10 @@ class JacCoordChange(nn.Module):
             return jac
 
 
-class Isometry(nn.Module):
+class IsometryRegNoBackprop(nn.Module):
 
     def __init__(self, epsilon, num_stab=1e-4):
-        super(Isometry, self).__init__()
+        super(IsometryRegNoBackprop, self).__init__()
         self.epsilon = epsilon
         self.num_stab = num_stab
         self.jac_soft = JacSoftmax()
@@ -70,7 +70,7 @@ class Isometry(nn.Module):
         m = c - 1
 
         # Numerical stability
-        prob = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
+        probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
         # assert torch.all(output>0)
 
         # Compute Jacobian matrix
@@ -84,16 +84,16 @@ class Isometry(nn.Module):
         jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
 
         # Multiply by the Jacobian matrix of coordinate change
-        jac = torch.bmm(self.jac_coord_change(prob, device), torch.bmm(self.jac_soft(prob, device), jac))
+        jac = torch.bmm(self.jac_coord_change(probs, device), torch.bmm(self.jac_soft(probs, device), jac))
 
         # Gram matrix of Jacobian
         jac = torch.bmm(jac, torch.transpose(jac, 1, 2))
 
         # Compute the FIM coefficient in stereographic projection
-        coeff = 4*(1 - torch.sqrt(prob[:, m]))**2
+        coeff = 4*(1 - torch.sqrt(probs[:, m]))**2
 
         # Distance from center of simplex
-        delta = torch.sqrt(prob / c).sum(dim=1)
+        delta = torch.sqrt(probs / c).sum(dim=1)
         delta = 2*torch.acos(delta)
 
         # Rescaled identity matrix
@@ -105,7 +105,6 @@ class Isometry(nn.Module):
 
         # Return
         return reg.mean(), torch.tensor(0)
-        # return reg.mean(), torch.tensor(0), torch.tensor(0), torch.tensor(0), torch.tensor(0)
 
 
 def parseval_orthonormal_constraint(model, logits, device, reg_model, defense=None, beta = 1e-4, num_stab=1e-4):

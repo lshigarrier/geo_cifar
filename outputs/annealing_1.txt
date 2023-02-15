@@ -1,0 +1,234 @@
+=====================================================================================================
+Files already downloaded and verified
+name: iso_annealing/seed_0
+model: epoch_05.pt
+defense: isometry
+seed: 0
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 5
+epoch_thr: 3
+generate: False
+clean: False
+epsilon: 3.5
+eta: 5.5e-06
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.1
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.971215, Accuracy: 89.50%
+Defense: None
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.257831, Accuracy: 92.09%
+Defense: isometry
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 0.175366, Accuracy: 93.96%
+Defense: isometry
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 0.142224, Accuracy: 95.52%
+Defense: isometry
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 0.122170, Accuracy: 93.66%
+Training time (s): 17026.97212791443
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: iso_annealing/seed_0
+model: epoch_05.pt
+defense: isometry
+seed: 0
+gpu_number: 0
+load: True
+batch_size: 32
+lr: 0.001
+epoch: 5
+epoch_thr: 3
+generate: False
+clean: False
+epsilon: 3.5
+eta: 5.5e-06
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.1
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3140.0/10000 (31.4%)
+=====================================================================================================
+Files already downloaded and verified
+name: iso_annealing/seed_1
+model: epoch_05.pt
+defense: isometry
+seed: 1
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 5
+epoch_thr: 3
+generate: False
+clean: False
+epsilon: 3.5
+eta: 5.5e-06
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.1
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.969387, Accuracy: 90.02%
+Defense: None
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.253668, Accuracy: 93.09%
+Defense: isometry
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 0.174035, Accuracy: 94.50%
+Defense: isometry
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 0.141884, Accuracy: 95.22%
+Defense: isometry
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 0.120134, Accuracy: 95.66%
+Training time (s): 16711.140501260757
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: iso_annealing/seed_1
+model: epoch_05.pt
+defense: isometry
+seed: 1
+gpu_number: 0
+load: True
+batch_size: 32
+lr: 0.001
+epoch: 5
+epoch_thr: 3
+generate: False
+clean: False
+epsilon: 3.5
+eta: 5.5e-06
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.1
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3873.0/10000 (38.7%)
+=====================================================================================================
+Files already downloaded and verified
+name: iso_annealing/seed_2
+model: epoch_05.pt
+defense: isometry
+seed: 2
+gpu_number: 0
+load: False
+batch_size: 32
+lr: 0.001
+epoch: 5
+epoch_thr: 3
+generate: False
+clean: False
+epsilon: 3.5
+eta: 5.5e-06
+dist_temp: 20
+teacher: teacher.pt
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.1
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.956591, Accuracy: 90.05%
+Defense: None
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.260093, Accuracy: 93.26%
+Defense: isometry
+Epoch 3: 0/50000 (0%)
+/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/autograd/__init__.py:276: UserWarning: Error detected in DivBackward0. Traceback of forward call that caused the error:
+  File "/home/loic/geo_cifar/train_cifar.py", line 300, in <module>
+    main()
+  File "/home/loic/geo_cifar/train_cifar.py", line 292, in main
+    one_run(param)
+  File "/home/loic/geo_cifar/train_cifar.py", line 238, in one_run
+    training(param, device, trainset, testset, model, reg_model, attack)
+  File "/home/loic/geo_cifar/train_cifar.py", line 214, in training
+    train(param, device, trainset, testset, model, reg_model, optimizer, epoch, attack, teacher)
+  File "/home/loic/geo_cifar/train_cifar.py", line 140, in train
+    reg, _ = reg_model(x, logits, device)
+  File "/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/loic/geo_cifar/mnist_model.py", line 54, in forward
+    new_output = 2 * new_output[:, :m] / (1 - new_output[:, m].unsqueeze(1).repeat(1, m))
+ (Triggered internally at  /opt/conda/conda-bld/pytorch_1659484806139/work/torch/csrc/autograd/python_anomaly_mode.cpp:102.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Traceback (most recent call last):
+  File "/home/loic/geo_cifar/train_cifar.py", line 300, in <module>
+    main()
+  File "/home/loic/geo_cifar/train_cifar.py", line 292, in main
+    one_run(param)
+  File "/home/loic/geo_cifar/train_cifar.py", line 238, in one_run
+    training(param, device, trainset, testset, model, reg_model, attack)
+  File "/home/loic/geo_cifar/train_cifar.py", line 214, in training
+    train(param, device, trainset, testset, model, reg_model, optimizer, epoch, attack, teacher)
+  File "/home/loic/geo_cifar/train_cifar.py", line 140, in train
+    reg, _ = reg_model(x, logits, device)
+  File "/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/loic/geo_cifar/mnist_model.py", line 62, in forward
+    jac[i] = torch.nan_to_num(torch.autograd.grad(new_output, data, grad_outputs=grad_output, retain_graph=True)[0])
+  File "/home/loic/anaconda3/envs/robust/lib/python3.9/site-packages/torch/autograd/__init__.py", line 276, in grad
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: Function 'DivBackward0' returned nan values in its 0th output.

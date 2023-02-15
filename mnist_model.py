@@ -31,6 +31,48 @@ def get_jacobian_bound(output, epsilon):
     return delta / (rho * epsilon)
 
 
+class IsometryRegV2(nn.Module):
+
+    def __init__(self, epsilon, num_stab=1e-4):
+        super(IsometryRegV2, self).__init__()
+        self.epsilon = epsilon
+        self.num_stab = num_stab
+
+    def forward(self, data, logits, device):
+        # Input dimension
+        n = data.shape[1]*data.shape[2]*data.shape[3]
+        # Number of classes
+        c = logits.shape[1]
+        m = c - 1
+
+        # Numerical stability
+        probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
+        # assert torch.all(output>0)
+
+        # Coordinate change
+        new_coord = torch.sqrt(probs)
+        new_coord = 2 * new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
+
+        # Compute Jacobian matrix
+        grad_output = torch.randn(*new_coord.shape).to(device)
+        grad_output /= torch.norm(grad_output, dim=1).unsqueeze(-1)
+        jac = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, create_graph=True)[0]
+        jac = jac.contiguous().view(jac.shape[0], -1)
+
+        # Estimation of the trace of JJ^T
+        jac = torch.norm(jac, dim=1)
+
+        # Distance from center of simplex
+        delta = torch.sqrt(probs / c).sum(dim=1)
+        delta = 2 * torch.acos(delta)
+
+        # Compute regularization term
+        reg = torch.norm(torch.add(jac,-delta/self.epsilon))
+
+        # Return
+        return reg.mean(), torch.tensor(0)
+
+
 class IsometryReg(nn.Module):
 
     def __init__(self, epsilon, num_stab=1e-4):
@@ -38,7 +80,51 @@ class IsometryReg(nn.Module):
         self.epsilon = epsilon
         self.num_stab = num_stab
 
-    def forward(self, data, output, device):
+    def forward(self, data, logits, device):
+        # Input dimension
+        n = data.shape[1]*data.shape[2]*data.shape[3]
+        # Number of classes
+        c = logits.shape[1]
+        m = c - 1
+
+        # Numerical stability
+        probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
+        # assert torch.all(output>0)
+
+        # Coordinate change
+        new_coord = torch.sqrt(probs)
+        new_coord = 2 * new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
+
+        # Compute Jacobian matrix
+        jac = torch.zeros(m, *data.shape).to(device)
+        grad_output = torch.zeros(*new_coord.shape).to(device)
+        for i in range(m):
+            grad_output.zero_()
+            grad_output[:, i] = 1
+            jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
+        jac = torch.transpose(jac, dim0=0, dim1=1)
+        jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
+
+        # Gram matrix of Jacobian
+        jac = torch.bmm(jac, torch.transpose(jac, 1, 2))
+
+        # Compute the FIM coefficient in stereographic projection
+        coeff = 4 * (1 - torch.sqrt(probs[:, m])) ** 2
+
+        # Distance from center of simplex
+        delta = torch.sqrt(probs / c).sum(dim=1)
+        delta = 2 * torch.acos(delta)
+
+        # Rescaled identity matrix
+        factor = (delta ** 2 / coeff / self.epsilon ** 2).view(-1, 1, 1)
+        identity = factor * torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
+
+        # Compute regularization term (alpha in docs)
+        reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1) / n
+
+        # Return
+        return reg.mean(), torch.tensor(0)
+'''
         # Input dimension
         n = data.shape[1]*data.shape[2]*data.shape[3]
         # Number of classes
@@ -85,6 +171,7 @@ class IsometryReg(nn.Module):
         # Return
         return reg.mean(), torch.tensor(0)
         # return reg.mean(), torch.tensor(0), torch.tensor(0), torch.tensor(0), torch.tensor(0)
+'''
 
 
 class JacobianReg(nn.Module):
