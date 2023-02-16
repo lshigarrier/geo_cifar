@@ -1,6 +1,7 @@
-name       : iso_annealing
+name       : baseline/seed_0
 model      : epoch_03.pt
-defense    : isometry  # parseval isolayer
+dataset    : cifar
+defense    : None
 seed       : 0
 gpu_number : "0"
 load       : False
@@ -11,8 +12,8 @@ batch_size : 32
 
 # training
 
-lr    : 0.0001
-epoch : 3
+learning_rate    : 0.001
+epochs           : 3
 
 # annealing
 
@@ -25,14 +26,14 @@ clean    : False
 
 # parseval
 
-beta : 0.00001  # try beta=0.
+beta : 0.00001
 
 # isometry
 
 # d = 3*32*32 = 3072
 # eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
 epsilon : 3.5
-eta     : 0.00001
+lambda  : 0.00001
 
 # distillation
 
@@ -44,6 +45,6 @@ teacher   : teacher.pt
 attack       : fgsm                 # fgsm gn pgd deep_fool cw
 budget       : 0.03137254901960784  # fgsm gn(std) pgd
 perturbation : linf                 # pgd
-alpha        : 0.1                  # pgd
+alpha        : 0.01                 # pgd
 max_iter     : 10                   # pgd deep_fool cw
 random_start : True                 # pgd

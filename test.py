@@ -2,9 +2,9 @@ import torch
 import os
 import numpy as np
 from torch.utils.data import DataLoader
-from train_cifar import initialize
-from cifar_model import AttackDataset
-from mnist_utils import load_yaml
+from cifar.cifar_utils import initialize_cifar
+from cifar.cifar_model import AttackDataset
+from mnist.mnist_utils import load_yaml, initialize_mnist
 
 
 def test(device, testset, model):
@@ -53,14 +53,14 @@ def generate_adv(param, device, testset, attack):
     label_array = np.concatenate(label_list, axis=0)
     print('Saving')
     if param['attack'] == 'fgsm':
-        np.save(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}.npy', attack_array)
-        np.save(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}_label.npy', label_array)
+        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}.npy', attack_array)
+        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_label.npy', label_array)
     elif param['attack'] == 'pgd':
-        np.save(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy', attack_array)
-        np.save(f'data/cifar/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label.npy', label_array)
+        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy', attack_array)
+        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label.npy', label_array)
     elif param['attack'] == 'deep_fool':
-        np.save(f'data/cifar/attacks/{param["attack"]}.npy', attack_array)
-        np.save(f'data/cifar/attacks/{param["attack"]}_label.npy', label_array)
+        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}.npy', attack_array)
+        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_label.npy', label_array)
 
 
 def one_test_run(param):
@@ -74,7 +74,12 @@ def one_test_run(param):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Initialization
-    trainset, testset, model, reg_model, attack = initialize(param, device)
+    if param['dataset'] == 'cifar':
+        trainset, testset, model, reg_model, teacher, attack, optimizer = initialize_cifar(param, device)
+    elif param['dataset'] == 'mnist':
+        trainset, lightset, testset, model, reg_model, teacher, attack, optimizer = initialize_mnist(param, device)
+    else:
+        raise NotImplementedError
 
     # Test
     if param['generate']:
@@ -149,7 +154,7 @@ def main():
     # Detect anomaly in autograd
     torch.autograd.set_detect_anomaly(True)
 
-    param = load_yaml('test_cifar_conf')
+    param = load_yaml('train_conf')
     models = [
         'baseline',
         'iso',
@@ -171,10 +176,10 @@ def main():
     # else:
     #    test_loop(param, models, attacks, budgets, budgets_l2)
 
-    etas = np.linspace(5e-6, 6e-6, 11)
-    for idx in range(len(etas)):
+    lambdas = np.linspace(5e-6, 6e-6, 11)
+    for idx in range(len(lambdas)):
         print('-' * 101)
-        param['name'] = f'iso_trace/eta_{idx}'
+        param['name'] = f'iso_trace/lbd_{idx}'
         one_test_run(param)
 
 if __name__ == '__main__':

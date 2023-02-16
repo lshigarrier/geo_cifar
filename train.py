@@ -1,0 +1,204 @@
+# https://www.kaggle.com/code/michaelqq/tutorial-cifar10-resnet-pytorch
+
+import torch
+import torch.nn.functional as F
+# from numba import cuda
+# import gc
+# import sys
+import os
+import time
+import numpy as np
+from cifar.cifar_utils import initialize_cifar
+from mnist.mnist_utils import load_yaml, initialize_mnist
+from attack_defense.parseval import parseval_orthonormal_constraint
+# from regularizations import isometry_reg_approx
+
+
+def train(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer, epoch):
+    loss_list = []
+    for idx, (x, label) in enumerate(trainset):
+        x, label = x.to(device), label.to(device)
+
+        if param['defense'] == 'adv_train':
+            # Update attacker
+            attack.model = model
+            attack.set_attacker()
+
+            # Generate attacks
+            x = attack.perturb(x, label)
+
+        # Ensure grad is on
+        x.requires_grad = True
+
+        # Forward pass
+        logits = model(x)
+
+        # Train teacher model for distillation
+        if param['defense'] == 'teacher':
+            loss = F.cross_entropy(logits / param['dist_temp'], label)
+
+        # Train distilled model
+        elif param['defense'] == 'distillation':
+            soft_labels = F.softmax(teacher(x) / param['dist_temp'], -1)
+            loss = torch.sum(-soft_labels * torch.log_softmax(logits / param['dist_temp'], -1), -1).mean()
+
+        elif param['defense'] == 'isometry' or param['defense'] == 'isorandom' or param['defense'] == 'isonoback' or param['defense'] == 'isolayer':
+            reg = reg_model(x, logits, device)
+            loss = F.cross_entropy(logits, label) + param['lambda']*reg
+
+        elif param['defense'] == 'jacobian':
+           raise NotImplementedError
+
+        elif param['defense'] == 'fir':
+            # Compute regularization term and cross entropy loss
+            c           = logits.shape[1]
+            probs       = F.softmax(logits, dim=1) * (1 - c * 1e-6) + 1e-6  # for numerical stability
+            max_eig_reg = torch.sum(1/probs, dim=1).mean()
+            loss = F.cross_entropy(logits, label) + param['lambda']*max_eig_reg
+
+        elif param['defense'] == 'isoapprox':
+            # loss = F.cross_entropy(logits, label) + param['lambda']*isometry_reg_approx(model, device, x.shape[1:])
+            raise NotImplementedError
+
+        else:
+            loss = F.cross_entropy(logits, label)
+
+        # backprop
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        if param['defense'] == 'parseval' or param['defense'] == 'isolayer':
+            model = parseval_orthonormal_constraint(model, logits, device, reg_model, defense=param['defense'], beta=param['beta'])
+
+        loss_list.append(loss.item())
+
+        if idx % 600 == 0:
+            print('Epoch {}: {}/{} ({:.0f}%)'.format(epoch, idx * len(x), len(trainset.dataset), 100. * idx / len(trainset)))
+
+        # Free memory
+        # del x, label, loss, reg, logits
+        # gc.collect()
+        # torch.cuda.empty_cache()
+        # cuda.select_device(device)
+        # cuda.close()
+        # cuda.select_device(device)
+
+    model.eval()
+    with torch.no_grad():
+        tot_corr = 0
+        tot_num = 0
+        for x, label in testset:
+            x, label = x.to(device), label.to(device)
+            logits = model(x)
+            pred = logits.argmax(dim=1)
+
+            tot_corr += torch.eq(pred, label).float().sum().item()
+            tot_num += x.size(0)
+        acc = 100 * tot_corr / tot_num
+        print('Epoch: {}, Loss: {:.6f}, Accuracy: {:.2f}%'.format(epoch, np.mean(loss_list), acc))
+
+
+def training(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer):
+    print(f'Start training')
+    tac = time.time()
+    defense = param['defense']
+    param['defense'] = None
+    for epoch in range(1, param['epochs'] + 1):
+        if epoch == param['epoch_thr']:
+            param['defense'] = defense
+        print(f'Defense: {param["defense"]}')
+        tic = time.time()
+        train(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer, epoch)
+        print(f'Epoch training time (s): {time.time() - tic}')
+        # checkpoint = {'model': ResNet50(img_channels=3, num_classes=10),
+        #              'state_dict': model.state_dict(),
+        #              'optimizer': optimizer.state_dict()}
+        checkpoint = {'state_dict': model.state_dict(),
+                      'optimizer': optimizer.state_dict()}
+        torch.save(checkpoint, f'models/{param["name"]}/epoch_{epoch:02d}.pt')
+    print(f'Training time (s): {time.time() - tac}')
+
+
+def one_run(param):
+    # Set random seed
+    torch.manual_seed(param['seed'])
+
+    # Declare CPU/GPU usage
+    if param['gpu_number'] is not None:
+        os.environ["CUDA_DEVICE_ORDER"]    = "PCI_BUS_ID"
+        os.environ["CUDA_VISIBLE_DEVICES"] = param['gpu_number']
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # Initialization
+    if param['dataset'] == 'cifar':
+        trainset, testset, model, reg_model, teacher, attack, optimizer = initialize_cifar(param, device)
+    elif param['dataset'] == 'mnist':
+        trainset, lightset, testset, model, reg_model, teacher, attack, optimizer = initialize_mnist(param, device)
+    else:
+        raise NotImplementedError
+
+    # Training
+    training(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer)
+
+
+def cifar_train_loop():
+    prefix = 'cifar_conf/'
+    conf_files = [
+            'attack_base',
+            'baseline',
+            'fir',
+            'iso',
+            'jac',
+            'teacher',
+            'dist',
+            'adv_train'
+    ]
+    for conf_file in conf_files:
+        print('=' * 101)
+        param = load_yaml(prefix + conf_file + '_conf')
+        if conf_file == 'dist':
+            os.system(
+                f'cp ./models/cifar_icassp/distillation/epoch_03.pt ./models/cifar_icassp/distillation/teacher.pt')
+        one_run(param)
+
+
+def cifar_trace_plot_loop():
+    from test import one_test_run
+    param = load_yaml('train_conf')
+    lambdas = np.linspace(5e-6, 6e-6, 11)
+
+    for idx in range(len(lambdas)):
+        print('=' * 101)
+        param['eta'] = lambdas[idx]
+        param['name'] = param['name'][:-1] + str(idx + 11)
+        param['load'] = False
+        one_run(param)
+        print('-' * 101)
+        print('Test')
+        param['load'] = True
+        one_test_run(param)
+
+
+def main():
+    # Detect anomaly in autograd
+    torch.autograd.set_detect_anomaly(True)
+
+    from test import one_test_run
+
+    param = load_yaml('train_conf')
+
+    for seed in range(5):
+        print('=' * 101)
+        param['seed'] = seed
+        param['name'] = param['name'][:-1] + str(seed)
+        param['load'] = False
+        one_run(param)
+        print('-' * 101)
+        print('Test')
+        param['load'] = True
+        one_test_run(param)
+
+
+if __name__ == '__main__':
+    main()

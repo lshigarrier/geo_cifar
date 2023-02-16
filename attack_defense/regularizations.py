@@ -1,56 +1,150 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-# import numpy as np
 import timeit
+from attack_defense.parseval import JacSoftmax, JacCoordChange
 
 
-class JacSoftmax(nn.Module):
+class IsometryReg(nn.Module):
 
-    def __init__(self):
-        super(JacSoftmax, self).__init__()
+    def __init__(self, epsilon, num_stab=1e-4):
+        super(IsometryReg, self).__init__()
+        self.epsilon = epsilon
+        self.num_stab = num_stab
 
-    def forward(self, prob, device, mean=False):
-        b = prob.shape[0]
-        c = prob.shape[1]
-        prob = prob.unsqueeze(-1)
-        rows = torch.transpose(prob, 1, 2) * torch.ones(b, c, c).to(device)
-        columns = torch.ones(b, c, c).to(device) * prob
-        batch_eye = torch.eye(c).unsqueeze(0).repeat(b, 1, 1).to(device)
-        jac = columns * (batch_eye - rows)
-        if mean:
-            return jac[:, :-1, :].mean(dim=0)
-        else:
-            return jac[:, :-1, :]
+    def forward(self, data, logits, device):
+        # Input dimension
+        n = data.shape[1]*data.shape[2]*data.shape[3]
+        # Number of classes
+        c = logits.shape[1]
+        m = c - 1
+
+        # Numerical stability
+        probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
+        # assert torch.all(output>0)
+
+        # Coordinate change
+        new_coord = torch.sqrt(probs)
+        new_coord = 2 * new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
+
+        # Compute Jacobian matrix
+        jac = torch.zeros(m, *data.shape).to(device)
+        grad_output = torch.zeros(*new_coord.shape).to(device)
+        for i in range(m):
+            grad_output.zero_()
+            grad_output[:, i] = 1
+            jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
+        jac = torch.transpose(jac, dim0=0, dim1=1)
+        jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
+
+        # Gram matrix of Jacobian
+        jac = torch.bmm(jac, torch.transpose(jac, 1, 2))
+
+        # Compute the FIM coefficient in stereographic projection
+        coeff = 4 * (1 - torch.sqrt(probs[:, m])) ** 2
+
+        # Distance from center of simplex
+        delta = torch.sqrt(probs / c).sum(dim=1)
+        delta = 2 * torch.acos(delta)
+
+        # Rescaled identity matrix
+        factor = (delta ** 2 / coeff / self.epsilon ** 2).view(-1, 1, 1)
+        identity = factor * torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
+
+        # Compute regularization term (alpha in docs)
+        reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1) / n
+
+        # Return
+        return reg.mean()
+'''
+        # Input dimension
+        n = data.shape[1]*data.shape[2]*data.shape[3]
+        # Number of classes
+        c = output.shape[1]
+        m = c - 1
+
+        # Numerical stability
+        output = F.softmax(output, dim=1)*(1 - c*self.num_stab) + self.num_stab
+        # assert torch.all(output>0)
+
+        # Coordinate change
+        new_output = torch.sqrt(output)
+        new_output = 2 * new_output[:, :m] / (1 - new_output[:, m].unsqueeze(1).repeat(1, m))
+
+        # Compute Jacobian matrix
+        jac = torch.zeros(m, *data.shape).to(device)
+        grad_output = torch.zeros(*new_output.shape).to(device)
+        for i in range(m):
+            grad_output.zero_()
+            grad_output[:, i] = 1
+            jac[i] = torch.nan_to_num(torch.autograd.grad(new_output, data, grad_outputs=grad_output, retain_graph=True)[0])
+        jac = torch.transpose(jac, dim0=0, dim1=1)
+        jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
+
+        # Gram matrix of Jacobian
+        jac = torch.bmm(jac, torch.transpose(jac, 1, 2))
+
+        # Compute the change of basis matrix
+        change = output[:, m] / torch.square(
+            2 * torch.sqrt(output[:, m]) - torch.norm(output[:, :c-1], p=1, dim=1))
+
+        # Distance from center of simplex
+        delta = torch.sqrt(output / c).sum(dim=1)
+        delta = 2 * torch.acos(delta)
+
+        # Diagonal embedding
+        change = torch.diag_embed(change.unsqueeze(1).repeat(1, m))
+        change = change * (delta ** 2)[:, None, None]
+        change = change / self.epsilon ** 2
+
+        # Compute regularization term (alpha in docs)
+        reg = self.epsilon**2/n*torch.linalg.norm((jac - change).contiguous().view(len(data), -1), dim=1)
+
+        # Return
+        return reg.mean(), torch.tensor(0)
+        # return reg.mean(), torch.tensor(0), torch.tensor(0), torch.tensor(0), torch.tensor(0)
+'''
 
 
-class CoordChange(nn.Module):
+class IsometryRegRandom(nn.Module):
 
-    def __init__(self):
-        super(CoordChange, self).__init__()
+    def __init__(self, epsilon, num_stab=1e-4):
+        super(IsometryRegRandom, self).__init__()
+        self.epsilon = epsilon
+        self.num_stab = num_stab
 
-    def forward(self, prob):
-        c = prob.shape[1]
-        return 2 * torch.sqrt(prob[:, :-1]) / (1 - torch.sqrt(prob[:, -1].unsqueeze(1).repeat(1, c - 1)))
+    def forward(self, data, logits, device):
+        # Input dimension
+        n = data.shape[1]*data.shape[2]*data.shape[3]
+        # Number of classes
+        c = logits.shape[1]
+        m = c - 1
 
+        # Numerical stability
+        probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
 
-class JacCoordChange(nn.Module):
+        # Coordinate change
+        new_coord = torch.sqrt(probs)
+        new_coord = 2 * new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
 
-    def __init__(self):
-        super(JacCoordChange, self).__init__()
-        self.coord_change = CoordChange()
+        # Compute Jacobian matrix
+        grad_output = torch.randn(*new_coord.shape).to(device)
+        grad_output /= torch.norm(grad_output, dim=1).unsqueeze(-1)
+        jac = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, create_graph=True)[0]
+        jac = jac.contiguous().view(jac.shape[0], -1)
 
-    def forward(self, prob, device, mean=False):
-        b = prob.shape[0]
-        c = prob.shape[1]
-        change = torch.ones(b, c-1, c-1).to(device)*self.coord_change(prob).unsqueeze(-1)
-        columns = torch.ones(b, c-1, c-1).to(device)*prob[:, :-1].unsqueeze(-1)
-        batch_eye = torch.eye(c-1).unsqueeze(0).repeat(b, 1, 1).to(device)
-        jac = change/2*(batch_eye*torch.div(1, columns) - change*torch.div(1, torch.sqrt(columns))/2/torch.sqrt(prob[:,-1].reshape(b, 1, 1)))
-        if mean:
-            return jac.mean(dim=0)
-        else:
-            return jac
+        # Estimation of the trace of JJ^T
+        jac = torch.norm(jac, dim=1)
+
+        # Distance from center of simplex
+        delta = torch.sqrt(probs / c).sum(dim=1)
+        delta = 2 * torch.acos(delta)
+
+        # Compute regularization term
+        reg = torch.norm(torch.add(jac,-delta/self.epsilon))
+
+        # Return
+        return reg.mean()/n
 
 
 class IsometryRegNoBackprop(nn.Module):
@@ -71,7 +165,6 @@ class IsometryRegNoBackprop(nn.Module):
 
         # Numerical stability
         probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
-        # assert torch.all(output>0)
 
         # Compute Jacobian matrix
         jac = torch.zeros(c, *data.shape).to(device)
@@ -104,81 +197,7 @@ class IsometryRegNoBackprop(nn.Module):
         reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1)/n
 
         # Return
-        return reg.mean(), torch.tensor(0)
-
-
-def parseval_orthonormal_constraint(model, logits, device, reg_model, defense=None, beta = 1e-4, num_stab=1e-4):
-    """
-    TBD
-    - How to handle the batch?
-    - Add a factor for batch normalizations and residual connections?
-    - What if dim(output) > dim(input)?
-    """
-    # From paper: https://arxiv.org/pdf/1704.08847.pdf
-    c = logits.shape[1]
-    prob = F.softmax(logits, dim=1) * (1 - c * num_stab) + num_stab  # for numerical stability
-    with torch.no_grad():
-        state_dict = model.state_dict()
-        for name, param in model.named_parameters():
-            module = getattr(model, name.split('.')[0])
-            flag = True
-            i = 1
-            while flag:
-                submodule = getattr(module, name.split('.')[i])
-                i += 1
-                if isinstance(submodule, nn.Module):
-                    module = submodule
-                else:
-                    flag = False
-            # print(module.__class__.__name__)
-
-            # Scaling factor for 2D convs in https://www.duo.uio.no/bitstream/handle/10852/69487/master_mathialo.pdf?sequence=1
-            if isinstance(module, nn.Conv2d):
-                rescale_factor = float(module.kernel_size[0])
-            else:
-                rescale_factor = 1.0
-
-            # Constraint
-            if name.split('.')[-1] == 'weight' and 'norm' not in name:
-                # Flatten
-                w = param.view(param.shape[0], -1) if 'conv' in name else param
-
-                # Test
-                max_w = torch.max(torch.abs(w))
-                if max_w > 10:
-                    print('Before')
-                    print(name)
-                    print(max_w)
-
-                # Sample rows
-                # S = torch.from_numpy(np.random.binomial(1, percent_of_rows, (w.size(0)))).bool()
-
-                # Update
-                if name.split('.')[0] == 'classifier' and defense=='isolayer':
-                    J = torch.mm(reg_model[0](prob, device, mean=True), reg_model[1](prob, device, mean=True))
-                    kappa = (4*(1 - torch.sqrt(prob[:,-1]))**2).mean()
-                    JW = torch.mm(J, w)
-                    JWWJ_I = torch.mm(JW, JW.T) - torch.eye(w.shape[0]-1).to(device)/kappa
-                    # w[S,:] = w[S,:] - 4*beta*torch.mm(J[S,:].T, torch.mm(JWWJ_I[S,:], JW[S,:]))
-                    w[:, :] = w - 4 * beta * torch.mm(J.T, torch.mm(JWWJ_I, JW))
-                else:
-                    # w[S,:] = ((1 + 4*beta)*w[S,:] - 4*beta*torch.mm(w[S,:], torch.mm(w[S,:].T, w[S,:])))/rescale_factor
-                    w[:, :] = ((1 + 4 * beta) * w - 4 * beta * torch.mm(w, torch.mm(w.T, w))) / rescale_factor
-
-                # Test
-                max_w_bis = torch.max(torch.abs(w))
-                if max_w_bis > 10 or max_w > 10:
-                    print('After')
-                    print(name)
-                    print(max_w)
-                    print(max_w_bis)
-
-                # Set parameters
-                state_dict[name] = w.view_as(param)
-
-        model.load_state_dict(state_dict)
-
-    return model
+        return reg.mean()
 
 
 '''
@@ -237,10 +256,6 @@ def convmatrix2d(kernel, image_shape, padding: int=0, stride: int=1, device=None
     padding: assumes the image is padded with ZEROS of the given amount
     in every 2D dimension equally. The actual image is given with unpadded dimension.
     """
-    # assert image_shape[0] == kernel.shape[1]
-    # assert len(image_shape[1:]) == len(kernel.shape[2:])
-    # kernel = kernel.to('cpu')
-
     padded_shape = torch.tensor(image_shape).to(device)
     padded_shape[1:] += 2*padding
     result_dims = torch.div(padded_shape[1:] - torch.tensor(kernel.shape[2:]).to(device), stride, rounding_mode='floor') + 1
@@ -254,7 +269,8 @@ def convmatrix2d(kernel, image_shape, padding: int=0, stride: int=1, device=None
     mat = mat.flatten(0, len(kernel.shape[2:])).flatten(1)
     return mat
 
-def simple_iso_reg(model, device, input_shape):
+
+def isometry_reg_approx(model, device, input_shape):
     jacobian = torch.eye(input_shape[0]*input_shape[1]*input_shape[2])
     input_shape = torch.tensor(input_shape)
     for name, param in model.named_parameters():
