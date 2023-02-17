@@ -2,9 +2,9 @@ import torch
 import os
 import numpy as np
 from torch.utils.data import DataLoader
-from cifar.cifar_utils import initialize_cifar
-from cifar.cifar_model import AttackDataset
-from mnist.mnist_utils import load_yaml, initialize_mnist
+from utils.cifar_utils import initialize_cifar
+from utils.cifar_model import AttackDataset
+from utils.mnist_utils import load_yaml, initialize_mnist
 
 
 def test(device, testset, model):
@@ -64,8 +64,10 @@ def generate_adv(param, device, testset, attack):
 
 
 def one_test_run(param):
-    # Set random seed
+    # Deterministic
     torch.manual_seed(param['seed'])
+    torch.backends.cudnn.benchmark = False
+    torch.use_deterministic_algorithms(False)
 
     # Declare CPU/GPU usage
     if param['gpu_number'] is not None:
@@ -109,7 +111,6 @@ def generate_loop(param, attacks, budgets, budgets_l2):
                             param['budget'] = budgets[idx]
                         print('-' * 101)
                         one_test_run(param)
-                        break
                 else:
                     print('-' * 101)
                     one_test_run(param)
@@ -154,7 +155,7 @@ def main():
     # Detect anomaly in autograd
     torch.autograd.set_detect_anomaly(True)
 
-    param = load_yaml('train_conf')
+    param = load_yaml('test_conf')
     models = [
         'baseline',
         'iso',
@@ -163,24 +164,24 @@ def main():
         'distillation',
         'adv_train'
     ]
-    budgets = [4/255, 8/255, 16/255]
-    budgets_l2 = [1., 2., 3.]
+    budgets = [8/255, 16/255, 32/255]
+    budgets_l2 = [2., 3., 4.]
     attacks = [
         'fgsm',
         'pgd',
-        'deep_fool'
     ]
+    # 'deep_fool'
 
-    # if param['generate']:
-    #    generate_loop(param, attacks, budgets, budgets_l2)
-    # else:
-    #    test_loop(param, models, attacks, budgets, budgets_l2)
+    if param['generate']:
+        generate_loop(param, attacks, budgets, budgets_l2)
+    else:
+        test_loop(param, models, attacks, budgets, budgets_l2)
 
-    lambdas = np.linspace(5e-6, 6e-6, 11)
-    for idx in range(len(lambdas)):
-        print('-' * 101)
-        param['name'] = f'iso_trace/lbd_{idx}'
-        one_test_run(param)
+    # lambdas = np.linspace(5e-6, 6e-6, 11)
+    # for idx in range(len(lambdas)):
+    #    print('-' * 101)
+    #    param['name'] = f'iso_trace/lbd_{idx}'
+    #    one_test_run(param)
 
 if __name__ == '__main__':
     main()

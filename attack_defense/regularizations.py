@@ -33,7 +33,10 @@ class IsometryReg(nn.Module):
         for i in range(m):
             grad_output.zero_()
             grad_output[:, i] = 1
-            jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
+            try:
+                jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
+            except:
+                abc = 123
         jac = torch.transpose(jac, dim0=0, dim1=1)
         jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
 
@@ -130,7 +133,7 @@ class IsometryRegRandom(nn.Module):
         # Compute Jacobian matrix
         grad_output = torch.randn(*new_coord.shape).to(device)
         grad_output /= torch.norm(grad_output, dim=1).unsqueeze(-1)
-        jac = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, create_graph=True)[0]
+        jac = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
         jac = jac.contiguous().view(jac.shape[0], -1)
 
         # Estimation of the trace of JJ^T

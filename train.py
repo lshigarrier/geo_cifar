@@ -8,8 +8,8 @@ import torch.nn.functional as F
 import os
 import time
 import numpy as np
-from cifar.cifar_utils import initialize_cifar
-from mnist.mnist_utils import load_yaml, initialize_mnist
+from utils.cifar_utils import initialize_cifar
+from utils.mnist_utils import load_yaml, initialize_mnist
 from attack_defense.parseval import parseval_orthonormal_constraint
 # from regularizations import isometry_reg_approx
 
@@ -121,8 +121,10 @@ def training(param, device, trainset, testset, model, reg_model, teacher, attack
 
 
 def one_run(param):
-    # Set random seed
+    # Deterministic
     torch.manual_seed(param['seed'])
+    torch.backends.cudnn.benchmark = False
+    torch.use_deterministic_algorithms(True)
 
     # Declare CPU/GPU usage
     if param['gpu_number'] is not None:

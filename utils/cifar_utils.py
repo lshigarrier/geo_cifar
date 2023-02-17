@@ -7,7 +7,7 @@ from torch.utils.data import DataLoader
 # from cifar_model import ResNet50
 from attack_defense.parseval import JacSoftmax, JacCoordChange
 from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop
-from attack_defense.attacks_utils import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
+from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
 
 def initialize_cifar(param, device):
@@ -28,8 +28,8 @@ def initialize_cifar(param, device):
                                    transforms.Normalize(mean=(0.4914, 0.4822, 0.4465),
                                                          std=(0.2470, 0.2435, 0.2616))
                                ]))
-    trainset = DataLoader(trainset, batch_size=param['batch_size'], shuffle=True, pin_memory=True, num_workers=1)
-    testset = DataLoader(testset, batch_size=param['batch_size'], shuffle=True, pin_memory=True, num_workers=1)
+    trainset = DataLoader(trainset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
+    testset = DataLoader(testset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
 
     # model = ResNet50(img_channels=3, num_classes=10).to(device)
     # model = densenet121(weights=DenseNet121_Weights.IMAGENET1K_V1)
