@@ -53,7 +53,7 @@ def initialize_cifar(param, device):
     reg_model = None
     if param['defense'] == 'isometry':
         reg_model = IsometryReg(param['epsilon'])
-    elif param['defense'] == 'isorandom':
+    elif param['defense'] == 'isorandom' or param['defense'] == 'isogn':
         reg_model = IsometryRegRandom(param['epsilon'])
     elif param['defense'] == 'isonoback':
         reg_model = IsometryRegNoBackprop(param['epsilon'])

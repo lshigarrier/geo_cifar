@@ -19,7 +19,7 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
     for idx, (x, label) in enumerate(trainset):
         x, label = x.to(device), label.to(device)
 
-        if param['defense'] == 'adv_train':
+        if param['defense'] == 'adv_train' or param['defense'] == 'isogn':
             # Update attacker
             attack.model = model
             attack.set_attacker()
@@ -42,7 +42,11 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             soft_labels = F.softmax(teacher(x) / param['dist_temp'], -1)
             loss = torch.sum(-soft_labels * torch.log_softmax(logits / param['dist_temp'], -1), -1).mean()
 
-        elif param['defense'] == 'isometry' or param['defense'] == 'isorandom' or param['defense'] == 'isonoback' or param['defense'] == 'isolayer':
+        elif param['defense'] == 'isometry'\
+                or param['defense'] == 'isorandom'\
+                or param['defense'] == 'isonoback'\
+                or param['defense'] == 'isolayer'\
+                or param['defense'] == 'isogn':
             reg = reg_model(x, logits, device)
             loss = F.cross_entropy(logits, label) + param['lambda']*reg
 
@@ -124,7 +128,8 @@ def one_run(param):
     # Deterministic
     torch.manual_seed(param['seed'])
     torch.backends.cudnn.benchmark = False
-    torch.use_deterministic_algorithms(True)
+    torch.backends.cudnn.deterministic = True
+    # torch.use_deterministic_algorithms(True)
 
     # Declare CPU/GPU usage
     if param['gpu_number'] is not None:
@@ -187,17 +192,19 @@ def main():
     torch.autograd.set_detect_anomaly(True)
 
     from test import one_test_run
-
     param = load_yaml('train_conf')
+    attack_type = param['attack']
 
     for seed in range(5):
         print('=' * 101)
         param['seed'] = seed
         param['name'] = param['name'][:-1] + str(seed)
+        param['attack'] = 'gn'
         param['load'] = False
         one_run(param)
         print('-' * 101)
         print('Test')
+        param['attack'] = attack_type
         param['load'] = True
         one_test_run(param)
 

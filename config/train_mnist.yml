@@ -1,9 +1,9 @@
-name       : cifar_isorand/seed_0
+name       : mnist_baseline/seed_0
 model      : epoch_03.pt
-dataset    : cifar
-defense    : isorandom
+dataset    : mnist
+defense    : None
 seed       : 0
-gpu_number : "0"
+gpu_number : "1"
 load       : False
 
 # model
@@ -23,7 +23,7 @@ epochs           : 3
 
 # annealing
 
-epoch_thr : 2
+epoch_thr : 1
 
 # test
 
@@ -39,7 +39,7 @@ beta : 0.0001
 # d = 3*32*32 = 3072
 # eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
 epsilon : 3.5
-lambda  : 10
+lambda  : 0.001
 
 # distillation
 
@@ -48,8 +48,8 @@ teacher   : teacher.pt
 
 # attack
 
-attack       : fgsm                 # fgsm gn pgd deep_fool cw
-budget       : 0.03137254901960784  # fgsm gn(std) pgd
+attack       : pgd                  # fgsm gn pgd deep_fool cw
+budget       : 0.2                  # fgsm gn(std) pgd
 perturbation : linf                 # pgd
 alpha        : 0.01                 # pgd
 max_iter     : 10                   # pgd deep_fool cw

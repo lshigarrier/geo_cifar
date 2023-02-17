@@ -23,12 +23,14 @@ def moving_average(array, window_size):
 
 def load_yaml(file_name=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='train_cifar')
+    parser.add_argument('--config', type=str)
     args = parser.parse_args()
-    if file_name:
+    if args.config:
+        yaml_file = f'config/{args.config}.yml'
+    elif file_name:
         yaml_file = f'config/{file_name}.yml'
     else:
-        yaml_file = f'config/{args.yaml}_conf.yml'
+        raise RuntimeError
     with open(yaml_file) as file:
         param = yaml.load(file, Loader=yaml.FullLoader)
     return param

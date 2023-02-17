@@ -14,7 +14,7 @@ class IsometryReg(nn.Module):
 
     def forward(self, data, logits, device):
         # Input dimension
-        n = data.shape[1]*data.shape[2]*data.shape[3]
+        # n = data.shape[1]*data.shape[2]*data.shape[3]
         # Number of classes
         c = logits.shape[1]
         m = c - 1
@@ -36,7 +36,7 @@ class IsometryReg(nn.Module):
             try:
                 jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
             except:
-                abc = 123
+                _ = 0
         jac = torch.transpose(jac, dim0=0, dim1=1)
         jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
 
@@ -55,9 +55,10 @@ class IsometryReg(nn.Module):
         identity = factor * torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
 
         # Compute regularization term (alpha in docs)
-        reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1) / n
+        reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1)
 
         # Return
+        # return reg.mean()/n
         return reg.mean()
 '''
         # Input dimension
@@ -118,7 +119,7 @@ class IsometryRegRandom(nn.Module):
 
     def forward(self, data, logits, device):
         # Input dimension
-        n = data.shape[1]*data.shape[2]*data.shape[3]
+        # n = data.shape[1]*data.shape[2]*data.shape[3]
         # Number of classes
         c = logits.shape[1]
         m = c - 1
@@ -133,7 +134,10 @@ class IsometryRegRandom(nn.Module):
         # Compute Jacobian matrix
         grad_output = torch.randn(*new_coord.shape).to(device)
         grad_output /= torch.norm(grad_output, dim=1).unsqueeze(-1)
-        jac = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
+        try:
+            jac = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
+        except:
+            _ = 0
         jac = jac.contiguous().view(jac.shape[0], -1)
 
         # Estimation of the trace of JJ^T
@@ -147,7 +151,8 @@ class IsometryRegRandom(nn.Module):
         reg = torch.norm(torch.add(jac,-delta/self.epsilon))
 
         # Return
-        return reg.mean()/n
+        # return reg.mean()/n
+        return reg.mean()
 
 
 class IsometryRegNoBackprop(nn.Module):
@@ -161,7 +166,7 @@ class IsometryRegNoBackprop(nn.Module):
 
     def forward(self, data, logits, device):
         # Input dimension
-        n = data.shape[1]*data.shape[2]*data.shape[3]
+        # n = data.shape[1]*data.shape[2]*data.shape[3]
         # Number of classes
         c = logits.shape[1]
         m = c - 1
@@ -197,9 +202,10 @@ class IsometryRegNoBackprop(nn.Module):
         identity = factor*torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
 
         # Compute regularization term (alpha in docs)
-        reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1)/n
+        reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1)
 
         # Return
+        # return reg.mean()/n
         return reg.mean()
 
 

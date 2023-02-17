@@ -67,7 +67,8 @@ def one_test_run(param):
     # Deterministic
     torch.manual_seed(param['seed'])
     torch.backends.cudnn.benchmark = False
-    torch.use_deterministic_algorithms(False)
+    torch.backends.cudnn.deterministic = True
+    # torch.use_deterministic_algorithms(True)
 
     # Declare CPU/GPU usage
     if param['gpu_number'] is not None:
@@ -91,7 +92,7 @@ def one_test_run(param):
             test(device, testset, model)
         else:
             attackset = AttackDataset(param)
-            attackset = DataLoader(attackset, batch_size=param['batch_size'], shuffle=True, pin_memory=True, num_workers=1)
+            attackset = DataLoader(attackset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
             test(device, attackset, model)
 
 

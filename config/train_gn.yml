@@ -1,9 +1,9 @@
-name       : cifar_isorand/seed_0
+name       : cifar_isogn/seed_0
 model      : epoch_03.pt
 dataset    : cifar
-defense    : isorandom
+defense    : isogn
 seed       : 0
-gpu_number : "0"
+gpu_number : "2"
 load       : False
 
 # model
@@ -48,7 +48,7 @@ teacher   : teacher.pt
 
 # attack
 
-attack       : fgsm                 # fgsm gn pgd deep_fool cw
+attack       : gn                   # fgsm gn pgd deep_fool cw
 budget       : 0.03137254901960784  # fgsm gn(std) pgd
 perturbation : linf                 # pgd
 alpha        : 0.01                 # pgd
