@@ -7,7 +7,7 @@ from attack_defense.parseval import JacSoftmax, JacCoordChange
 
 class IsometryReg(nn.Module):
 
-    def __init__(self, epsilon, num_stab=1e-4):
+    def __init__(self, epsilon, num_stab=1e-7):
         super(IsometryReg, self).__init__()
         self.epsilon = epsilon
         self.num_stab = num_stab
@@ -59,7 +59,7 @@ class IsometryReg(nn.Module):
 
         # Return
         # return reg.mean()/n
-        return reg.mean()
+        return reg.mean()/m**2
 '''
         # Input dimension
         n = data.shape[1]*data.shape[2]*data.shape[3]
@@ -112,7 +112,7 @@ class IsometryReg(nn.Module):
 
 class IsometryRegRandom(nn.Module):
 
-    def __init__(self, epsilon, num_stab=1e-4):
+    def __init__(self, epsilon, num_stab=1e-7):
         super(IsometryRegRandom, self).__init__()
         self.epsilon = epsilon
         self.num_stab = num_stab
@@ -157,7 +157,7 @@ class IsometryRegRandom(nn.Module):
 
 class IsometryRegNoBackprop(nn.Module):
 
-    def __init__(self, epsilon, num_stab=1e-4):
+    def __init__(self, epsilon, num_stab=1e-7):
         super(IsometryRegNoBackprop, self).__init__()
         self.epsilon = epsilon
         self.num_stab = num_stab
@@ -206,7 +206,7 @@ class IsometryRegNoBackprop(nn.Module):
 
         # Return
         # return reg.mean()/n
-        return reg.mean()
+        return reg.mean()/m**2
 
 
 '''

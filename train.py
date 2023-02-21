@@ -11,12 +11,16 @@ import numpy as np
 from utils.cifar_utils import initialize_cifar
 from utils.mnist_utils import load_yaml, initialize_mnist
 from attack_defense.parseval import parseval_orthonormal_constraint
+from utils.visualization import plot_curves
 # from regularizations import isometry_reg_approx
 
 
 def train(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer, epoch):
     loss_list = []
+    entropy_val = []
+    reg_val = []
     for idx, (x, label) in enumerate(trainset):
+        optimizer.zero_grad()
         x, label = x.to(device), label.to(device)
 
         if param['defense'] == 'adv_train' or param['defense'] == 'isogn':
@@ -48,7 +52,10 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
                 or param['defense'] == 'isolayer'\
                 or param['defense'] == 'isogn':
             reg = reg_model(x, logits, device)
-            loss = F.cross_entropy(logits, label) + param['lambda']*reg
+            entropy = F.cross_entropy(logits, label)
+            reg_val.append(reg)
+            entropy_val.append(entropy)
+            loss = entropy + param['lambda']*reg
 
         elif param['defense'] == 'jacobian':
            raise NotImplementedError
@@ -68,8 +75,8 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             loss = F.cross_entropy(logits, label)
 
         # backprop
-        optimizer.zero_grad()
         loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 10)
         optimizer.step()
 
         if param['defense'] == 'parseval' or param['defense'] == 'isolayer':
@@ -101,6 +108,7 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             tot_num += x.size(0)
         acc = 100 * tot_corr / tot_num
         print('Epoch: {}, Loss: {:.6f}, Accuracy: {:.2f}%'.format(epoch, np.mean(loss_list), acc))
+    return entropy_val, reg_val
 
 
 def training(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer):
@@ -108,12 +116,16 @@ def training(param, device, trainset, testset, model, reg_model, teacher, attack
     tac = time.time()
     defense = param['defense']
     param['defense'] = None
+    entropy_list = []
+    reg_list = []
     for epoch in range(1, param['epochs'] + 1):
         if epoch == param['epoch_thr']:
             param['defense'] = defense
         print(f'Defense: {param["defense"]}')
         tic = time.time()
-        train(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer, epoch)
+        entropy_val, reg_val = train(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer, epoch)
+        entropy_list += entropy_val
+        reg_list += reg_val
         print(f'Epoch training time (s): {time.time() - tic}')
         # checkpoint = {'model': ResNet50(img_channels=3, num_classes=10),
         #              'state_dict': model.state_dict(),
@@ -122,6 +134,7 @@ def training(param, device, trainset, testset, model, reg_model, teacher, attack
                       'optimizer': optimizer.state_dict()}
         torch.save(checkpoint, f'models/{param["name"]}/epoch_{epoch:02d}.pt')
     print(f'Training time (s): {time.time() - tac}')
+    return entropy_list, reg_list
 
 
 def one_run(param):
@@ -146,7 +159,15 @@ def one_run(param):
         raise NotImplementedError
 
     # Training
-    training(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer)
+    entropy_list, reg_list = training(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer)
+
+    # Figures
+    fig1 = plot_curves([entropy_list], [None], "Cross-entropy during training", "Batch", "Cross-entropy")
+    fig2 = plot_curves([reg_list], [None], "Regularization during training", "Batch", "Regularization")
+    fig1.savefig(f'seed_{param["seed"]}_crossentropy.png')
+    fig2.savefig(f'seed_{param["seed"]}_regularization.png')
+    fig1.close()
+    fig2.close()
 
 
 def cifar_train_loop():
