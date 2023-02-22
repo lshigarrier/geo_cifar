@@ -2,21 +2,22 @@ import torch
 import torch.optim as optim
 import yaml
 import argparse
+import numpy as np
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 from utils.mnist_model import Lenet
 from attack_defense.parseval import JacSoftmax, JacCoordChange
-from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop
+from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop, JacobianReg
 from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
 
 def moving_average(array, window_size):
     i = 0
     moving_averages = []
+    array = np.array(array)
     while i < len(array) - window_size + 1:
-        this_window = array[i: i + window_size]
-        window_average = sum(this_window) / window_size
-        moving_averages.append(window_average)
+        geo_mean = np.exp(np.log(array[i: i + window_size]).mean())
+        moving_averages.append(geo_mean)
         i += 1
     return moving_averages
 
@@ -55,7 +56,7 @@ def initialize_mnist(param, device):
 
     ## Load model
     # -------------------------------------------------------------- #
-    model = Lenet(param).to(device)
+    model = Lenet(param)
     if param['load']:
         checkpoint = torch.load(f'models/{param["name"]}/{param["model"]}', map_location='cpu')
         model.load_state_dict(checkpoint['state_dict'])
@@ -68,13 +69,15 @@ def initialize_mnist(param, device):
     # -------------------------------------------------------------- #
     reg_model = None
     if param['defense'] == 'isometry':
-        reg_model = IsometryReg(param['epsilon'])
+        reg_model = IsometryReg(param['epsilon'], norm=param['norm'])
     elif param['defense'] == 'isorandom':
         reg_model = IsometryRegRandom(param['epsilon'])
     elif param['defense'] == 'isonoback':
         reg_model = IsometryRegNoBackprop(param['epsilon'])
     elif param['defense'] == 'isolayer':
         reg_model = [JacSoftmax(), JacCoordChange()]
+    elif param['defense'] == 'jacreg' or param['defense'] == 'jacsimple':
+        reg_model = JacobianReg(param['epsilon'])
 
     attack = None
     if param['attack'] == 'fgsm':

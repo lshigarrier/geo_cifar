@@ -1,13 +1,14 @@
-name       : cifar_baseline/seed_0
-model      : epoch_03.pt
+name       : cifar_isoreg/seed_0
+model      : epoch_21.pt
 dataset    : cifar
-defense    : None
+defense    : isometry
 seed       : 0
-gpu_number : "1"
+gpu_number : "2"
 load       : True
 
 # model
 
+archi     : resnet  # only lenet for MNIST
 channels1 : 32
 channels2 : 64
 hidden    : 128
@@ -23,13 +24,14 @@ clean      : False
 
 # data
 
-batch_size : 32
+batch_size : 64
 
 # isometry
 
 # d = 3*32*32 = 3072
 # eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
 epsilon : 3.5
+norm    : frobenius
 
 # attack
 

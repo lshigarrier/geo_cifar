@@ -2,17 +2,15 @@
 
 import torch
 import torch.nn.functional as F
-# from numba import cuda
-# import gc
-# import sys
-import os
 import time
+import os
 import numpy as np
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 22})
 from utils.cifar_utils import initialize_cifar
-from utils.mnist_utils import load_yaml, initialize_mnist
+from utils.mnist_utils import load_yaml, initialize_mnist, moving_average
 from attack_defense.parseval import parseval_orthonormal_constraint
 from utils.visualization import plot_curves
-# from regularizations import isometry_reg_approx
 
 
 def train(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer, epoch):
@@ -53,12 +51,17 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
                 or param['defense'] == 'isogn':
             reg = reg_model(x, logits, device)
             entropy = F.cross_entropy(logits, label)
-            reg_val.append(reg)
-            entropy_val.append(entropy)
+            reg_val.append(reg.item())
+            entropy_val.append(entropy.item())
             loss = entropy + param['lambda']*reg
 
-        elif param['defense'] == 'jacobian':
-           raise NotImplementedError
+        elif param['defense'] == 'jacreg':
+            reg, _ = reg_model(x, logits, device)
+            loss = F.cross_entropy(logits, label) + param['lambda']*reg
+
+        elif param['defense'] == 'jacsimple':
+            _, reg = reg_model(x, logits, device)
+            loss = F.cross_entropy(logits, label) + param['lambda']*reg
 
         elif param['defense'] == 'fir':
             # Compute regularization term and cross entropy loss
@@ -86,14 +89,6 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
 
         if idx % 600 == 0:
             print('Epoch {}: {}/{} ({:.0f}%)'.format(epoch, idx * len(x), len(trainset.dataset), 100. * idx / len(trainset)))
-
-        # Free memory
-        # del x, label, loss, reg, logits
-        # gc.collect()
-        # torch.cuda.empty_cache()
-        # cuda.select_device(device)
-        # cuda.close()
-        # cuda.select_device(device)
 
     model.eval()
     with torch.no_grad():
@@ -127,9 +122,6 @@ def training(param, device, trainset, testset, model, reg_model, teacher, attack
         entropy_list += entropy_val
         reg_list += reg_val
         print(f'Epoch training time (s): {time.time() - tic}')
-        # checkpoint = {'model': ResNet50(img_channels=3, num_classes=10),
-        #              'state_dict': model.state_dict(),
-        #              'optimizer': optimizer.state_dict()}
         checkpoint = {'state_dict': model.state_dict(),
                       'optimizer': optimizer.state_dict()}
         torch.save(checkpoint, f'models/{param["name"]}/epoch_{epoch:02d}.pt')
@@ -162,12 +154,15 @@ def one_run(param):
     entropy_list, reg_list = training(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer)
 
     # Figures
+    entropy_list = moving_average(entropy_list, 100)
+    reg_list = moving_average(reg_list, 100)
     fig1 = plot_curves([entropy_list], [None], "Cross-entropy during training", "Batch", "Cross-entropy")
     fig2 = plot_curves([reg_list], [None], "Regularization during training", "Batch", "Regularization")
-    fig1.savefig(f'seed_{param["seed"]}_crossentropy.png')
-    fig2.savefig(f'seed_{param["seed"]}_regularization.png')
-    fig1.close()
-    fig2.close()
+    if param['save_plot']:
+        fig1.savefig(f'seed_{param["seed"]}_crossentropy.png')
+        fig2.savefig(f'seed_{param["seed"]}_regularization.png')
+    plt.close(fig1)
+    plt.close(fig2)
 
 
 def cifar_train_loop():

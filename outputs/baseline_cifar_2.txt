@@ -1,0 +1,670 @@
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_baseline/seed_0
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 0
+gpu_number: 2
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.995170, Accuracy: 89.42%
+Epoch training time (s): 452.7139708995819
+Defense: None
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.258461, Accuracy: 92.89%
+Epoch training time (s): 429.91370010375977
+Defense: None
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 0.191088, Accuracy: 94.21%
+Epoch training time (s): 408.9667272567749
+Defense: None
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 0.159457, Accuracy: 94.63%
+Epoch training time (s): 414.6276783943176
+Defense: None
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 0.140508, Accuracy: 94.88%
+Epoch training time (s): 416.65628123283386
+Defense: None
+Epoch 6: 0/50000 (0%)
+Epoch 6: 19200/50000 (38%)
+Epoch 6: 38400/50000 (77%)
+Epoch: 6, Loss: 0.124560, Accuracy: 95.31%
+Epoch training time (s): 420.70194959640503
+Defense: None
+Epoch 7: 0/50000 (0%)
+Epoch 7: 19200/50000 (38%)
+Epoch 7: 38400/50000 (77%)
+Epoch: 7, Loss: 0.111007, Accuracy: 95.52%
+Epoch training time (s): 416.30344414711
+Defense: None
+Epoch 8: 0/50000 (0%)
+Epoch 8: 19200/50000 (38%)
+Epoch 8: 38400/50000 (77%)
+Epoch: 8, Loss: 0.099876, Accuracy: 95.64%
+Epoch training time (s): 414.43259739875793
+Defense: None
+Epoch 9: 0/50000 (0%)
+Epoch 9: 19200/50000 (38%)
+Epoch 9: 38400/50000 (77%)
+Epoch: 9, Loss: 0.090781, Accuracy: 95.76%
+Epoch training time (s): 412.04171419143677
+Defense: None
+Epoch 10: 0/50000 (0%)
+Epoch 10: 19200/50000 (38%)
+Epoch 10: 38400/50000 (77%)
+Epoch: 10, Loss: 0.084191, Accuracy: 95.75%
+Epoch training time (s): 411.84360218048096
+Defense: None
+Epoch 11: 0/50000 (0%)
+Epoch 11: 19200/50000 (38%)
+Epoch 11: 38400/50000 (77%)
+Epoch: 11, Loss: 0.076168, Accuracy: 95.81%
+Epoch training time (s): 412.35320925712585
+Training time (s): 4611.524807214737
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_baseline/seed_0
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 0
+gpu_number: 2
+load: True
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3699.0/10000 (37.0%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_baseline/seed_1
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 1
+gpu_number: 2
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.985484, Accuracy: 89.65%
+Epoch training time (s): 424.34311985969543
+Defense: None
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.260719, Accuracy: 92.87%
+Epoch training time (s): 411.86568331718445
+Defense: None
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 0.192428, Accuracy: 94.23%
+Epoch training time (s): 414.52584958076477
+Defense: None
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 0.159941, Accuracy: 94.80%
+Epoch training time (s): 413.96062088012695
+Defense: None
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 0.139946, Accuracy: 94.81%
+Epoch training time (s): 412.50960755348206
+Defense: None
+Epoch 6: 0/50000 (0%)
+Epoch 6: 19200/50000 (38%)
+Epoch 6: 38400/50000 (77%)
+Epoch: 6, Loss: 0.124006, Accuracy: 94.90%
+Epoch training time (s): 422.53291058540344
+Defense: None
+Epoch 7: 0/50000 (0%)
+Epoch 7: 19200/50000 (38%)
+Epoch 7: 38400/50000 (77%)
+Epoch: 7, Loss: 0.111850, Accuracy: 95.30%
+Epoch training time (s): 415.85988545417786
+Defense: None
+Epoch 8: 0/50000 (0%)
+Epoch 8: 19200/50000 (38%)
+Epoch 8: 38400/50000 (77%)
+Epoch: 8, Loss: 0.101629, Accuracy: 95.45%
+Epoch training time (s): 415.1835536956787
+Defense: None
+Epoch 9: 0/50000 (0%)
+Epoch 9: 19200/50000 (38%)
+Epoch 9: 38400/50000 (77%)
+Epoch: 9, Loss: 0.091588, Accuracy: 95.35%
+Epoch training time (s): 411.5562334060669
+Defense: None
+Epoch 10: 0/50000 (0%)
+Epoch 10: 19200/50000 (38%)
+Epoch 10: 38400/50000 (77%)
+Epoch: 10, Loss: 0.083862, Accuracy: 95.54%
+Epoch training time (s): 411.5100860595703
+Defense: None
+Epoch 11: 0/50000 (0%)
+Epoch 11: 19200/50000 (38%)
+Epoch 11: 38400/50000 (77%)
+Epoch: 11, Loss: 0.077957, Accuracy: 95.84%
+Epoch training time (s): 411.730272769928
+Training time (s): 4566.640159606934
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_baseline/seed_1
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 1
+gpu_number: 2
+load: True
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3527.0/10000 (35.3%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_baseline/seed_2
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 2
+gpu_number: 2
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.981508, Accuracy: 89.39%
+Epoch training time (s): 423.50193548202515
+Defense: None
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.259323, Accuracy: 92.53%
+Epoch training time (s): 412.86878538131714
+Defense: None
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 0.192735, Accuracy: 93.78%
+Epoch training time (s): 412.76014947891235
+Defense: None
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 0.161206, Accuracy: 94.62%
+Epoch training time (s): 413.0797953605652
+Defense: None
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 0.141244, Accuracy: 94.85%
+Epoch training time (s): 412.55803775787354
+Defense: None
+Epoch 6: 0/50000 (0%)
+Epoch 6: 19200/50000 (38%)
+Epoch 6: 38400/50000 (77%)
+Epoch: 6, Loss: 0.123143, Accuracy: 95.20%
+Epoch training time (s): 413.8859031200409
+Defense: None
+Epoch 7: 0/50000 (0%)
+Epoch 7: 19200/50000 (38%)
+Epoch 7: 38400/50000 (77%)
+Epoch: 7, Loss: 0.112770, Accuracy: 95.10%
+Epoch training time (s): 414.7763912677765
+Defense: None
+Epoch 8: 0/50000 (0%)
+Epoch 8: 19200/50000 (38%)
+Epoch 8: 38400/50000 (77%)
+Epoch: 8, Loss: 0.101283, Accuracy: 95.07%
+Epoch training time (s): 413.29385256767273
+Defense: None
+Epoch 9: 0/50000 (0%)
+Epoch 9: 19200/50000 (38%)
+Epoch 9: 38400/50000 (77%)
+Epoch: 9, Loss: 0.092331, Accuracy: 95.17%
+Epoch training time (s): 414.1739854812622
+Defense: None
+Epoch 10: 0/50000 (0%)
+Epoch 10: 19200/50000 (38%)
+Epoch 10: 38400/50000 (77%)
+Epoch: 10, Loss: 0.083672, Accuracy: 95.84%
+Epoch training time (s): 413.6890535354614
+Defense: None
+Epoch 11: 0/50000 (0%)
+Epoch 11: 19200/50000 (38%)
+Epoch 11: 38400/50000 (77%)
+Epoch: 11, Loss: 0.076572, Accuracy: 95.31%
+Epoch training time (s): 409.37732768058777
+Training time (s): 4554.961370229721
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_baseline/seed_2
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 2
+gpu_number: 2
+load: True
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3671.0/10000 (36.7%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_baseline/seed_3
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 3
+gpu_number: 2
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 1.002644, Accuracy: 89.85%
+Epoch training time (s): 424.6932966709137
+Defense: None
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.258714, Accuracy: 92.76%
+Epoch training time (s): 412.85327792167664
+Defense: None
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 0.188275, Accuracy: 93.77%
+Epoch training time (s): 412.08020186424255
+Defense: None
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 0.158843, Accuracy: 94.41%
+Epoch training time (s): 414.12694692611694
+Defense: None
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 0.137744, Accuracy: 94.37%
+Epoch training time (s): 414.46060156822205
+Defense: None
+Epoch 6: 0/50000 (0%)
+Epoch 6: 19200/50000 (38%)
+Epoch 6: 38400/50000 (77%)
+Epoch: 6, Loss: 0.121571, Accuracy: 94.77%
+Epoch training time (s): 414.73039841651917
+Defense: None
+Epoch 7: 0/50000 (0%)
+Epoch 7: 19200/50000 (38%)
+Epoch 7: 38400/50000 (77%)
+Epoch: 7, Loss: 0.110138, Accuracy: 95.47%
+Epoch training time (s): 413.39667534828186
+Defense: None
+Epoch 8: 0/50000 (0%)
+Epoch 8: 19200/50000 (38%)
+Epoch 8: 38400/50000 (77%)
+Epoch: 8, Loss: 0.101202, Accuracy: 95.41%
+Epoch training time (s): 415.4784321784973
+Defense: None
+Epoch 9: 0/50000 (0%)
+Epoch 9: 19200/50000 (38%)
+Epoch 9: 38400/50000 (77%)
+Epoch: 9, Loss: 0.089887, Accuracy: 95.39%
+Epoch training time (s): 413.7669036388397
+Defense: None
+Epoch 10: 0/50000 (0%)
+Epoch 10: 19200/50000 (38%)
+Epoch 10: 38400/50000 (77%)
+Epoch: 10, Loss: 0.083358, Accuracy: 95.65%
+Epoch training time (s): 416.1134943962097
+Defense: None
+Epoch 11: 0/50000 (0%)
+Epoch 11: 19200/50000 (38%)
+Epoch 11: 38400/50000 (77%)
+Epoch: 11, Loss: 0.075366, Accuracy: 95.89%
+Epoch training time (s): 413.47524857521057
+Training time (s): 4566.057230472565
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_baseline/seed_3
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 3
+gpu_number: 2
+load: True
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3684.0/10000 (36.8%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_baseline/seed_4
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 4
+gpu_number: 2
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.960544, Accuracy: 89.70%
+Epoch training time (s): 425.9892027378082
+Defense: None
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 0.256329, Accuracy: 92.69%
+Epoch training time (s): 415.43399453163147
+Defense: None
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 0.191692, Accuracy: 93.75%
+Epoch training time (s): 417.22457098960876
+Defense: None
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 0.159862, Accuracy: 94.26%
+Epoch training time (s): 416.0978457927704
+Defense: None
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 0.137792, Accuracy: 94.66%
+Epoch training time (s): 417.31211709976196
+Defense: None
+Epoch 6: 0/50000 (0%)
+Epoch 6: 19200/50000 (38%)
+Epoch 6: 38400/50000 (77%)
+Epoch: 6, Loss: 0.123941, Accuracy: 94.99%
+Epoch training time (s): 418.2780854701996
+Defense: None
+Epoch 7: 0/50000 (0%)
+Epoch 7: 19200/50000 (38%)
+Epoch 7: 38400/50000 (77%)
+Epoch: 7, Loss: 0.109353, Accuracy: 95.17%
+Epoch training time (s): 412.2620244026184
+Defense: None
+Epoch 8: 0/50000 (0%)
+Epoch 8: 19200/50000 (38%)
+Epoch 8: 38400/50000 (77%)
+Epoch: 8, Loss: 0.101196, Accuracy: 95.48%
+Epoch training time (s): 416.1226496696472
+Defense: None
+Epoch 9: 0/50000 (0%)
+Epoch 9: 19200/50000 (38%)
+Epoch 9: 38400/50000 (77%)
+Epoch: 9, Loss: 0.091033, Accuracy: 95.39%
+Epoch training time (s): 414.05274629592896
+Defense: None
+Epoch 10: 0/50000 (0%)
+Epoch 10: 19200/50000 (38%)
+Epoch 10: 38400/50000 (77%)
+Epoch: 10, Loss: 0.083761, Accuracy: 95.67%
+Epoch training time (s): 414.7818372249603
+Defense: None
+Epoch 11: 0/50000 (0%)
+Epoch 11: 19200/50000 (38%)
+Epoch 11: 38400/50000 (77%)
+Epoch: 11, Loss: 0.075822, Accuracy: 95.93%
+Epoch training time (s): 415.5708348751068
+Training time (s): 4583.990295171738
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_baseline/seed_4
+model: epoch_11.pt
+dataset: cifar
+defense: None
+seed: 4
+gpu_number: 2
+load: True
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3615.0/10000 (36.1%)

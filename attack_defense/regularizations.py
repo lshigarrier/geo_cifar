@@ -5,12 +5,16 @@ import timeit
 from attack_defense.parseval import JacSoftmax, JacCoordChange
 
 
+###################################### Isometry Regularization & variants ##############################################
+
+
 class IsometryReg(nn.Module):
 
-    def __init__(self, epsilon, num_stab=1e-7):
+    def __init__(self, epsilon, norm='frobenius', num_stab=1e-7):
         super(IsometryReg, self).__init__()
         self.epsilon = epsilon
         self.num_stab = num_stab
+        self.norm = norm
 
     def forward(self, data, logits, device):
         # Input dimension
@@ -21,7 +25,6 @@ class IsometryReg(nn.Module):
 
         # Numerical stability
         probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
-        # assert torch.all(output>0)
 
         # Coordinate change
         new_coord = torch.sqrt(probs)
@@ -33,10 +36,7 @@ class IsometryReg(nn.Module):
         for i in range(m):
             grad_output.zero_()
             grad_output[:, i] = 1
-            try:
-                jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
-            except:
-                _ = 0
+            jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
         jac = torch.transpose(jac, dim0=0, dim1=1)
         jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
 
@@ -55,59 +55,19 @@ class IsometryReg(nn.Module):
         identity = factor * torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
 
         # Compute regularization term (alpha in docs)
-        reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1)
+        if self.norm == 'frobenius':
+            reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1)
+        elif self.norm == 'holder':
+            # Holder inequality
+            abs_jac_id = torch.abs(jac - identity)
+            norm_1 = torch.max(abs_jac_id.sum(dim=1, keepdim=True), dim=2)[0]
+            norm_inf = torch.max(abs_jac_id.sum(dim=2, keepdim=True), dim=1)[0]
+            reg = torch.sqrt(norm_1 * norm_inf)
+        else:
+            raise NotImplementedError
 
         # Return
-        # return reg.mean()/n
         return reg.mean()/m**2
-'''
-        # Input dimension
-        n = data.shape[1]*data.shape[2]*data.shape[3]
-        # Number of classes
-        c = output.shape[1]
-        m = c - 1
-
-        # Numerical stability
-        output = F.softmax(output, dim=1)*(1 - c*self.num_stab) + self.num_stab
-        # assert torch.all(output>0)
-
-        # Coordinate change
-        new_output = torch.sqrt(output)
-        new_output = 2 * new_output[:, :m] / (1 - new_output[:, m].unsqueeze(1).repeat(1, m))
-
-        # Compute Jacobian matrix
-        jac = torch.zeros(m, *data.shape).to(device)
-        grad_output = torch.zeros(*new_output.shape).to(device)
-        for i in range(m):
-            grad_output.zero_()
-            grad_output[:, i] = 1
-            jac[i] = torch.nan_to_num(torch.autograd.grad(new_output, data, grad_outputs=grad_output, retain_graph=True)[0])
-        jac = torch.transpose(jac, dim0=0, dim1=1)
-        jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
-
-        # Gram matrix of Jacobian
-        jac = torch.bmm(jac, torch.transpose(jac, 1, 2))
-
-        # Compute the change of basis matrix
-        change = output[:, m] / torch.square(
-            2 * torch.sqrt(output[:, m]) - torch.norm(output[:, :c-1], p=1, dim=1))
-
-        # Distance from center of simplex
-        delta = torch.sqrt(output / c).sum(dim=1)
-        delta = 2 * torch.acos(delta)
-
-        # Diagonal embedding
-        change = torch.diag_embed(change.unsqueeze(1).repeat(1, m))
-        change = change * (delta ** 2)[:, None, None]
-        change = change / self.epsilon ** 2
-
-        # Compute regularization term (alpha in docs)
-        reg = self.epsilon**2/n*torch.linalg.norm((jac - change).contiguous().view(len(data), -1), dim=1)
-
-        # Return
-        return reg.mean(), torch.tensor(0)
-        # return reg.mean(), torch.tensor(0), torch.tensor(0), torch.tensor(0), torch.tensor(0)
-'''
 
 
 class IsometryRegRandom(nn.Module):
@@ -134,10 +94,7 @@ class IsometryRegRandom(nn.Module):
         # Compute Jacobian matrix
         grad_output = torch.randn(*new_coord.shape).to(device)
         grad_output /= torch.norm(grad_output, dim=1).unsqueeze(-1)
-        try:
-            jac = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
-        except:
-            _ = 0
+        jac = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
         jac = jac.contiguous().view(jac.shape[0], -1)
 
         # Estimation of the trace of JJ^T
@@ -151,8 +108,7 @@ class IsometryRegRandom(nn.Module):
         reg = torch.norm(torch.add(jac,-delta/self.epsilon))
 
         # Return
-        # return reg.mean()/n
-        return reg.mean()
+        return reg.mean()/m**2
 
 
 class IsometryRegNoBackprop(nn.Module):
@@ -205,57 +161,70 @@ class IsometryRegNoBackprop(nn.Module):
         reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1)
 
         # Return
-        # return reg.mean()/n
         return reg.mean()/m**2
 
 
-'''
-def convmatrix2d(kernel, image_shape, padding: int=0, stride: int=1):
-    """
-    kernel: (out_channels, in_channels, kernel_height, kernel_width, ...)
-    image: (in_channels, image_height, image_width, ...)
-    padding: assumes the image is padded with ZEROS of the given amount
-    in every 2D dimension equally. The actual image is given with unpadded dimension.
-    """
+###################################### Jacobian Regularization & variants ##############################################
 
-    # If we want to pad, request a bigger matrix as the kernel will convolve over a bigger image.
-    if padding:
-        old_shape = image_shape
-        pads = (padding, padding, padding, padding)
-        image_shape = (image_shape[0], image_shape[1] + padding*2, image_shape[2]
-                       + padding*2)
-    else:
-        image_shape = tuple(image_shape)
-    assert image_shape[0] == kernel.shape[1]
-    assert len(image_shape[1:]) == len(kernel.shape[2:])
-    # assert stride == 1
 
-    kernel = kernel.to('cpu') # always perform the below work on cpu
+class JacobianReg(nn.Module):
 
-    result_dims = torch.div(torch.tensor(image_shape[1:]) -
-                   torch.tensor(kernel.shape[2:]), stride, rounding_mode='floor') + 1
-    mat = torch.zeros((kernel.shape[0], *result_dims, *image_shape))
-    for i in range(mat.shape[1]):
-        for j in range(mat.shape[2]):
-            mat[:,i,j,:,i:i+kernel.shape[2],j:j+kernel.shape[3]] = kernel
-    mat = mat.flatten(0, len(kernel.shape[2:])).flatten(1)
+    def __init__(self, epsilon, barrier='relu', num_stab=1e-7):
+        super(JacobianReg, self).__init__()
+        self.epsilon = epsilon
+        self.num_stab = num_stab
+        # Barrier function
+        if barrier == 'relu':
+            self.barrier = F.relu
+        elif barrier == 'elu':
+            self.barrier = F.elu
+        elif barrier == 'exp':
+            self.barrier = torch.exp
+        else:
+            raise NotImplementedError
 
-    # Handle zero padding. Effectively, the zeros from padding do not
-    # contribute to convolution output as the product at those elements is zero.
-    # Hence the columns of the conv mat that are at the indices where the
-    # padded flattened image would have zeros can be ignored. The number of
-    # rows on the other hand must not be altered (with padding the output must
-    # be larger than without). So..
+    def forward(self, data, logits, device):
+        # Input dimension
+        # n = data.shape[1]*data.shape[2]*data.shape[3]
+        # Number of classes
+        c = logits.shape[1]
+        m = c - 1
 
-    # We'll handle this the easy way and create a mask that accomplishes the
-    # indexing
-    if padding:
-        mask = torch.nn.functional.pad(torch.ones(old_shape), pads).flatten()
-        mask = mask.bool()
-        mat = mat[:, mask]
+        # Numerical stability
+        probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
 
-    return mat
-'''
+        # Coordinate change
+        new_coord = torch.sqrt(probs)
+        new_coord = 2 * new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
+
+        # Compute Jacobian matrix
+        jac = torch.zeros(m, *data.shape).to(device)
+        grad_output = torch.zeros(*new_coord.shape).to(device)
+        for i in range(m):
+            grad_output.zero_()
+            grad_output[:, i] = 1
+            jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
+        jac = torch.transpose(jac, dim0=0, dim1=1)
+        jac = jac.contiguous().view(jac.shape[0], m, -1)
+
+        # Compute delta and rho
+        delta = torch.sqrt(probs/c).sum(dim=1)
+        delta = 2*torch.acos(delta)
+        rho = 1 - torch.sqrt(probs[:, m])
+        bound = delta/(rho*self.epsilon)
+
+        # Holder inequality
+        abs_jac = torch.abs(jac)
+        norm_1 = torch.max(abs_jac.sum(dim=1, keepdim=True), dim=2)[0]
+        norm_inf = torch.max(abs_jac.sum(dim=2, keepdim=True), dim=1)[0]
+        jac_norm_holder = torch.sqrt(norm_1 * norm_inf)
+
+        # Compute regularization
+        reg = self.barrier(jac_norm_holder - bound)
+        return reg.mean()/m**2, jac_norm_holder.mean()/m**2
+
+
+################################ Product of weights matrices (not maintained) ##########################################
 
 
 def convmatrix2d(kernel, image_shape, padding: int=0, stride: int=1, device=None):
@@ -304,6 +273,9 @@ def isometry_reg_approx(model, device, input_shape):
                 jacobian = torch.mm(param, jacobian)
 
     return jacobian
+
+
+###################################################### Main ############################################################
 
 
 def main():

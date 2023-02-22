@@ -1,0 +1,62 @@
+name       : cifar_baseline/seed_0
+model      : epoch_21.pt
+dataset    : cifar
+defense    : None
+seed       : 0
+gpu_number : "2"
+load       : False
+
+# model
+
+archi     : resnet  # only lenet for MNIST
+channels1 : 32
+channels2 : 64
+hidden    : 128
+
+# data
+
+batch_size : 64
+
+# training
+
+learning_rate    : 0.001
+epochs           : 21
+
+# annealing
+
+epoch_thr : 2
+
+# test
+
+generate : False
+clean    : False
+
+# parseval
+
+beta : 0.0001
+
+# isometry
+
+# d = 3*32*32 = 3072
+# eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
+epsilon : 3.5
+lambda  : 0.05
+norm    : frobenius
+
+# distillation
+
+dist_temp : 20
+teacher   : teacher.pt
+
+# plot
+
+save_plot : False
+
+# attack
+
+attack       : fgsm                 # fgsm gn pgd deep_fool cw
+budget       : 0.03137254901960784  # fgsm gn(std) pgd
+perturbation : linf                 # pgd
+alpha        : 0.01                 # pgd
+max_iter     : 10                   # pgd deep_fool cw
+random_start : True                 # pgd
