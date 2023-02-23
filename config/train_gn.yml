@@ -1,4 +1,4 @@
-name       : cifar_isogn/seed_0
+name       : cifar_resnet_isogn/seed_0
 model      : epoch_21.pt
 dataset    : cifar
 defense    : isogn
@@ -15,7 +15,7 @@ hidden    : 128
 
 # data
 
-batch_size : 64
+batch_size : 32
 
 # training
 

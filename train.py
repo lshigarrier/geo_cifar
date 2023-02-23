@@ -87,7 +87,7 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
 
         loss_list.append(loss.item())
 
-        if idx % 600 == 0:
+        if idx % int(len(trainset)/4) == 0:
             print('Epoch {}: {}/{} ({:.0f}%)'.format(epoch, idx * len(x), len(trainset.dataset), 100. * idx / len(trainset)))
 
     model.eval()
@@ -159,8 +159,8 @@ def one_run(param):
     fig1 = plot_curves([entropy_list], [None], "Cross-entropy during training", "Batch", "Cross-entropy")
     fig2 = plot_curves([reg_list], [None], "Regularization during training", "Batch", "Regularization")
     if param['save_plot']:
-        fig1.savefig(f'seed_{param["seed"]}_crossentropy.png')
-        fig2.savefig(f'seed_{param["seed"]}_regularization.png')
+        fig1.savefig(f'{param["dataset"]}_{param["archi"]}_{param["defense"]}_{param["norm"]}_{param["seed"]}_crossentropy.png')
+        fig2.savefig(f'{param["dataset"]}_{param["archi"]}_{param["defense"]}_{param["norm"]}_{param["seed"]}_regularization.png')
     plt.close(fig1)
     plt.close(fig2)
 

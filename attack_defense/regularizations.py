@@ -54,7 +54,7 @@ class IsometryReg(nn.Module):
         factor = (delta ** 2 / coeff / self.epsilon ** 2).view(-1, 1, 1)
         identity = factor * torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
 
-        # Compute regularization term (alpha in docs)
+        # Compute regularization term
         if self.norm == 'frobenius':
             reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1)
         elif self.norm == 'holder':
@@ -157,7 +157,7 @@ class IsometryRegNoBackprop(nn.Module):
         factor = (delta**2/coeff/self.epsilon**2).view(-1, 1, 1)
         identity = factor*torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
 
-        # Compute regularization term (alpha in docs)
+        # Compute regularization term
         reg = torch.linalg.norm((jac - identity).contiguous().view(len(data), -1), dim=1)
 
         # Return

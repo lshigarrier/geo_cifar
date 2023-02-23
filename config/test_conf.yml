@@ -1,4 +1,4 @@
-name       : cifar_isoreg/seed_0
+name       : cifar_resnet_isoreg/seed_0
 model      : epoch_21.pt
 dataset    : cifar
 defense    : isometry
@@ -24,7 +24,7 @@ clean      : False
 
 # data
 
-batch_size : 64
+batch_size : 32
 
 # isometry
 

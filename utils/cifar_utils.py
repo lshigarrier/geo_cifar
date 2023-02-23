@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torchvision import transforms, datasets
-from torchvision.models import densenet121, resnet50
+from torchvision.models import densenet121, resnet18
 from torch.utils.data import DataLoader
 from attack_defense.parseval import JacSoftmax, JacCoordChange
 from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop, JacobianReg
@@ -34,17 +34,18 @@ def initialize_cifar(param, device):
     # Create model
     if param['archi'] == 'densenet':
         model = densenet121(weights='DEFAULT')
+        model.classifier = nn.Linear(1024, 10)
     elif param['archi'] == 'resnet':
-        model = resnet50(weights='DEFAULT')
+        model = resnet18(weights='DEFAULT')
+        model.fc = nn.Linear(512, 10)
     else:
         raise NotImplementedError
 
     # Save model architecture for visualization on Netron
-    batch = next(iter(trainset))
-    torch.onnx.export(model, batch[0], f'{param["archi"]}.onnx', input_names=['Image'], output_names=['Logits'])
+    # batch = next(iter(trainset))
+    # torch.onnx.export(model, batch[0], f'{param["archi"]}.onnx', input_names=['Image'], output_names=['Logits'])
 
-    # Adapt classifier dimension and load weights
-    model.classifier = nn.Linear(1024, 10)
+    # Load weights
     if param['load']:
         checkpoint = torch.load(f'models/{param["name"]}/{param["model"]}', map_location='cpu')
         model.load_state_dict(checkpoint['state_dict'])
@@ -102,11 +103,12 @@ def initialize_cifar(param, device):
         checkpoint = torch.load(f'models/{param["name"]}/{param["teacher"]}', map_location='cpu')
         if param['archi'] == 'densenet':
             teacher = densenet121()
+            teacher.classifier = nn.Linear(1024, 10)
         elif param['archi'] == 'resnet':
-            teacher = resnet50()
+            teacher = resnet18()
+            teacher.fc = nn.Linear(512, 10)
         else:
             raise NotImplementedError
-        teacher.classifier = nn.Linear(1024, 10)
         teacher.load_state_dict(checkpoint['state_dict'])
         teacher.to(device)
         for parameter in teacher.parameters():

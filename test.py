@@ -18,10 +18,10 @@ def test(device, testset, model):
             pred = logits.argmax(dim=1)
             tot_corr += torch.eq(pred, label).float().sum().item()
             tot_num += x.size(0)
-            if idx % 100 == 0:
+            if idx % int(len(testset)/4) == 0:
                 print('Test: {}/{} ({:.0f}%)'.format(idx * len(x), len(testset.dataset), 100. * idx / len(testset)))
         acc = 100 * tot_corr / tot_num
-        print(f'Accuracy: {tot_corr}/{tot_num} ({acc:.1f}%)')
+        print(f'Accuracy: {tot_corr}/{tot_num} ({acc:.2f}%)')
 
 
 def generate_adv(param, device, testset, attack):
@@ -46,7 +46,7 @@ def generate_adv(param, device, testset, attack):
             attack_list.append(adv_x.cpu().numpy())
             label_list.append(label.cpu().numpy())
 
-            if idx % 100 == 0:
+            if idx % int(len(testset)/4) == 0:
                 print('Test: {}/{} ({:.0f}%)'.format(idx * len(x), len(testset.dataset), 100. * idx / len(testset)))
 
     attack_array = np.concatenate(attack_list, axis=0)

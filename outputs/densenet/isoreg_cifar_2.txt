@@ -1,0 +1,643 @@
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_isoreg/seed_0
+model: epoch_11.pt
+dataset: cifar
+defense: isometry
+seed: 0
+gpu_number: 1
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.995170, Accuracy: 89.42%
+Epoch training time (s): 453.9588725566864
+Defense: isometry
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 13.904986, Accuracy: 91.05%
+Epoch training time (s): 2033.2296152114868
+Defense: isometry
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 11.060015, Accuracy: 92.51%
+Epoch training time (s): 2030.9305806159973
+Defense: isometry
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 11.470899, Accuracy: 93.14%
+Epoch training time (s): 2037.6861441135406
+Defense: isometry
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 8.978228, Accuracy: 93.74%
+Epoch training time (s): 2029.6858041286469
+Defense: isometry
+Epoch 6: 0/50000 (0%)
+Epoch 6: 19200/50000 (38%)
+Epoch 6: 38400/50000 (77%)
+Epoch: 6, Loss: 17.826328, Accuracy: 93.87%
+Epoch training time (s): 2044.123173713684
+Defense: isometry
+Epoch 7: 0/50000 (0%)
+Epoch 7: 19200/50000 (38%)
+Epoch 7: 38400/50000 (77%)
+Epoch: 7, Loss: 6.255802, Accuracy: 94.59%
+Epoch training time (s): 2046.6721379756927
+Defense: isometry
+Epoch 8: 0/50000 (0%)
+Epoch 8: 19200/50000 (38%)
+Epoch 8: 38400/50000 (77%)
+Epoch: 8, Loss: 4.830138, Accuracy: 94.33%
+Epoch training time (s): 2047.0677576065063
+Defense: isometry
+Epoch 9: 0/50000 (0%)
+Epoch 9: 19200/50000 (38%)
+Epoch 9: 38400/50000 (77%)
+Epoch: 9, Loss: 5.653338, Accuracy: 94.68%
+Epoch training time (s): 2037.9410998821259
+Defense: isometry
+Epoch 10: 0/50000 (0%)
+Epoch 10: 19200/50000 (38%)
+Epoch 10: 38400/50000 (77%)
+Epoch: 10, Loss: 5.688939, Accuracy: 95.11%
+Epoch training time (s): 2042.4650101661682
+Defense: isometry
+Epoch 11: 0/50000 (0%)
+Epoch 11: 19200/50000 (38%)
+Epoch 11: 38400/50000 (77%)
+Epoch: 11, Loss: 4.889792, Accuracy: 95.43%
+Epoch training time (s): 2044.435153722763
+Training time (s): 20849.312981128693
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_isoreg/seed_0
+model: epoch_11.pt
+dataset: cifar
+defense: isometry
+seed: 0
+gpu_number: 1
+load: True
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3695.0/10000 (37.0%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_isoreg/seed_1
+model: epoch_11.pt
+dataset: cifar
+defense: isometry
+seed: 1
+gpu_number: 1
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.985484, Accuracy: 89.65%
+Epoch training time (s): 452.12696743011475
+Defense: isometry
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 7.668344, Accuracy: 90.93%
+Epoch training time (s): 2051.6651678085327
+Defense: isometry
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 4.180772, Accuracy: 93.21%
+Epoch training time (s): 2041.6637666225433
+Defense: isometry
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 3.869534, Accuracy: 93.79%
+Epoch training time (s): 1955.680827140808
+Defense: isometry
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 2.548346, Accuracy: 93.45%
+Epoch training time (s): 1921.8962647914886
+Defense: isometry
+Epoch 6: 0/50000 (0%)
+Epoch 6: 19200/50000 (38%)
+Epoch 6: 38400/50000 (77%)
+Epoch: 6, Loss: 18.874693, Accuracy: 94.50%
+Epoch training time (s): 1885.9060716629028
+Defense: isometry
+Epoch 7: 0/50000 (0%)
+Epoch 7: 19200/50000 (38%)
+Epoch 7: 38400/50000 (77%)
+Epoch: 7, Loss: 10.689041, Accuracy: 94.85%
+Epoch training time (s): 1949.048529624939
+Defense: isometry
+Epoch 8: 0/50000 (0%)
+Epoch 8: 19200/50000 (38%)
+Epoch 8: 38400/50000 (77%)
+Epoch: 8, Loss: 3.287552, Accuracy: 95.04%
+Epoch training time (s): 1942.0451867580414
+Defense: isometry
+Epoch 9: 0/50000 (0%)
+Epoch 9: 19200/50000 (38%)
+Epoch 9: 38400/50000 (77%)
+Epoch: 9, Loss: 1.883416, Accuracy: 94.94%
+Epoch training time (s): 1949.8409106731415
+Defense: isometry
+Epoch 10: 0/50000 (0%)
+Epoch 10: 19200/50000 (38%)
+Epoch 10: 38400/50000 (77%)
+Epoch: 10, Loss: 2.912894, Accuracy: 95.58%
+Epoch training time (s): 1945.811853170395
+Defense: isometry
+Epoch 11: 0/50000 (0%)
+Epoch 11: 19200/50000 (38%)
+Epoch 11: 38400/50000 (77%)
+Epoch: 11, Loss: 10.232714, Accuracy: 95.78%
+Epoch training time (s): 1944.1156451702118
+Training time (s): 20040.82051038742
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_isoreg/seed_1
+model: epoch_11.pt
+dataset: cifar
+defense: isometry
+seed: 1
+gpu_number: 1
+load: True
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3472.0/10000 (34.7%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_isoreg/seed_2
+model: epoch_11.pt
+dataset: cifar
+defense: isometry
+seed: 2
+gpu_number: 1
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.981508, Accuracy: 89.39%
+Epoch training time (s): 420.96635603904724
+Defense: isometry
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 7.904452, Accuracy: 90.72%
+Epoch training time (s): 1959.6765882968903
+Defense: isometry
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 9.564227, Accuracy: 92.76%
+Epoch training time (s): 1950.005196094513
+Defense: isometry
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 7.380691, Accuracy: 93.05%
+Epoch training time (s): 1938.4537715911865
+Defense: isometry
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 7.601740, Accuracy: 93.70%
+Epoch training time (s): 1985.8212685585022
+Defense: isometry
+Epoch 6: 0/50000 (0%)
+Epoch 6: 19200/50000 (38%)
+Epoch 6: 38400/50000 (77%)
+Epoch: 6, Loss: 10.030428, Accuracy: 94.10%
+Epoch training time (s): 2029.0687155723572
+Defense: isometry
+Epoch 7: 0/50000 (0%)
+Epoch 7: 19200/50000 (38%)
+Epoch 7: 38400/50000 (77%)
+Epoch: 7, Loss: 4.362753, Accuracy: 94.42%
+Epoch training time (s): 2023.797004699707
+Defense: isometry
+Epoch 8: 0/50000 (0%)
+Epoch 8: 19200/50000 (38%)
+Epoch 8: 38400/50000 (77%)
+Epoch: 8, Loss: 11.161775, Accuracy: 94.52%
+Epoch training time (s): 2004.2175574302673
+Defense: isometry
+Epoch 9: 0/50000 (0%)
+Epoch 9: 19200/50000 (38%)
+Epoch 9: 38400/50000 (77%)
+Epoch: 9, Loss: 12.446246, Accuracy: 94.59%
+Epoch training time (s): 1946.7616658210754
+Defense: isometry
+Epoch 10: 0/50000 (0%)
+Epoch 10: 19200/50000 (38%)
+Epoch 10: 38400/50000 (77%)
+Epoch: 10, Loss: 6.346349, Accuracy: 94.93%
+Epoch training time (s): 1947.4550986289978
+Defense: isometry
+Epoch 11: 0/50000 (0%)
+Epoch 11: 19200/50000 (38%)
+Epoch 11: 38400/50000 (77%)
+Epoch: 11, Loss: 9.046491, Accuracy: 95.29%
+Epoch training time (s): 1940.6826179027557
+Training time (s): 20147.85445523262
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_isoreg/seed_2
+model: epoch_11.pt
+dataset: cifar
+defense: isometry
+seed: 2
+gpu_number: 1
+load: True
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3813.0/10000 (38.1%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_isoreg/seed_3
+model: epoch_11.pt
+dataset: cifar
+defense: isometry
+seed: 3
+gpu_number: 1
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 1.002644, Accuracy: 89.85%
+Epoch training time (s): 419.40567326545715
+Defense: isometry
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 12.494100, Accuracy: 90.74%
+Epoch training time (s): 1953.7036437988281
+Defense: isometry
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 8.045362, Accuracy: 92.57%
+Epoch training time (s): 1973.5774166584015
+Defense: isometry
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 7.370056, Accuracy: 93.18%
+Epoch training time (s): 2042.9498522281647
+Defense: isometry
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 9.332186, Accuracy: 93.76%
+Epoch training time (s): 1942.143984079361
+Defense: isometry
+Epoch 6: 0/50000 (0%)
+Epoch 6: 19200/50000 (38%)
+Epoch 6: 38400/50000 (77%)
+Epoch: 6, Loss: 4.953875, Accuracy: 93.90%
+Epoch training time (s): 1942.0484869480133
+Defense: isometry
+Epoch 7: 0/50000 (0%)
+Epoch 7: 19200/50000 (38%)
+Epoch 7: 38400/50000 (77%)
+Epoch: 7, Loss: 10.971054, Accuracy: 94.29%
+Epoch training time (s): 1940.58811378479
+Defense: isometry
+Epoch 8: 0/50000 (0%)
+Epoch 8: 19200/50000 (38%)
+Epoch 8: 38400/50000 (77%)
+Epoch: 8, Loss: 8.496372, Accuracy: 92.98%
+Epoch training time (s): 1943.6136450767517
+Defense: isometry
+Epoch 9: 0/50000 (0%)
+Epoch 9: 19200/50000 (38%)
+Epoch 9: 38400/50000 (77%)
+Epoch: 9, Loss: 8.435534, Accuracy: 94.65%
+Epoch training time (s): 1943.7723486423492
+Defense: isometry
+Epoch 10: 0/50000 (0%)
+Epoch 10: 19200/50000 (38%)
+Epoch 10: 38400/50000 (77%)
+Epoch: 10, Loss: 4.979936, Accuracy: 94.88%
+Epoch training time (s): 1948.9281816482544
+Defense: isometry
+Epoch 11: 0/50000 (0%)
+Epoch 11: 19200/50000 (38%)
+Epoch 11: 38400/50000 (77%)
+Epoch: 11, Loss: 8.354909, Accuracy: 94.74%
+Epoch training time (s): 1944.5192067623138
+Training time (s): 19996.124982118607
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_isoreg/seed_3
+model: epoch_11.pt
+dataset: cifar
+defense: isometry
+seed: 3
+gpu_number: 1
+load: True
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 3200/10000 (32%)
+Test: 6400/10000 (64%)
+Test: 9600/10000 (96%)
+Accuracy: 3717.0/10000 (37.2%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_isoreg/seed_4
+model: epoch_11.pt
+dataset: cifar
+defense: isometry
+seed: 4
+gpu_number: 1
+load: False
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 11
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.05
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 19200/50000 (38%)
+Epoch 1: 38400/50000 (77%)
+Epoch: 1, Loss: 0.960544, Accuracy: 89.70%
+Epoch training time (s): 420.26925444602966
+Defense: isometry
+Epoch 2: 0/50000 (0%)
+Epoch 2: 19200/50000 (38%)
+Epoch 2: 38400/50000 (77%)
+Epoch: 2, Loss: 6.113797, Accuracy: 89.49%
+Epoch training time (s): 1948.3592839241028
+Defense: isometry
+Epoch 3: 0/50000 (0%)
+Epoch 3: 19200/50000 (38%)
+Epoch 3: 38400/50000 (77%)
+Epoch: 3, Loss: 4.059393, Accuracy: 93.05%
+Epoch training time (s): 2033.8510057926178
+Defense: isometry
+Epoch 4: 0/50000 (0%)
+Epoch 4: 19200/50000 (38%)
+Epoch 4: 38400/50000 (77%)
+Epoch: 4, Loss: 4.707545, Accuracy: 92.83%
+Epoch training time (s): 2035.6521718502045
+Defense: isometry
+Epoch 5: 0/50000 (0%)
+Epoch 5: 19200/50000 (38%)
+Epoch 5: 38400/50000 (77%)
+Epoch: 5, Loss: 8.026653, Accuracy: 93.51%
+Epoch training time (s): 2038.5565135478973
+Defense: isometry
+Epoch 6: 0/50000 (0%)
+Traceback (most recent call last):
+  File "/home/loic/iso_defense/train.py", line 239, in <module>
+  File "/home/loic/iso_defense/train.py", line 230, in main
+  File "/home/loic/iso_defense/train.py", line 164, in one_run
+    plt.close(fig1)
+  File "/home/loic/iso_defense/train.py", line 128, in training
+    print(f'Training time (s): {time.time() - tac}')
+  File "/home/loic/iso_defense/train.py", line 40, in train
+    loss = F.cross_entropy(logits / param['dist_temp'], label)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torchvision/models/densenet.py", line 214, in forward
+    features = self.features(x)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torchvision/models/densenet.py", line 123, in forward
+    new_features = layer(features)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torchvision/models/densenet.py", line 91, in forward
+    new_features = self.conv2(self.relu2(self.norm2(bottleneck_output)))
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 102, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/nn/functional.py", line 1455, in relu
+    result = torch.relu_(input)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/fx/traceback.py", line 57, in format_stack
+    return traceback.format_stack()
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/traceback.py", line 213, in format_stack
+    return format_list(extract_stack(f, limit=limit))
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/traceback.py", line 227, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/traceback.py", line 383, in extract
+    f.line
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/traceback.py", line 307, in line
+    return self._line.strip()
+  File "/home/loic/miniconda3/envs/iso/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 1626602) is killed by signal: Terminated. 

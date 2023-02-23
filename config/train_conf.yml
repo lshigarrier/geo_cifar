@@ -1,4 +1,4 @@
-name       : cifar_isoreg/seed_0
+name       : cifar_resnet_isoreg/seed_0
 model      : epoch_21.pt
 dataset    : cifar
 defense    : isometry
@@ -15,7 +15,7 @@ hidden    : 128
 
 # data
 
-batch_size : 64
+batch_size : 32
 
 # training
 
@@ -40,8 +40,8 @@ beta : 0.0001
 # d = 3*32*32 = 3072
 # eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
 epsilon : 3.5
-lambda  : 0.001
-norm    : frobenius
+lambda  : 0.1
+norm    : holder
 
 # distillation
 
