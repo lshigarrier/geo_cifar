@@ -44,7 +44,8 @@ class JacCoordChange(nn.Module):
         change = torch.ones(b, c-1, c-1).to(device)*self.coord_change(prob).unsqueeze(-1)
         columns = torch.ones(b, c-1, c-1).to(device)*prob[:, :-1].unsqueeze(-1)
         batch_eye = torch.eye(c-1).unsqueeze(0).repeat(b, 1, 1).to(device)
-        jac = change/2*(batch_eye*torch.div(1, columns) - change*torch.div(1, torch.sqrt(columns))/2/torch.sqrt(prob[:,-1].reshape(b, 1, 1)))
+        jac = change/2*(batch_eye*torch.div(1, columns)
+                        - change*torch.div(1, torch.sqrt(columns))/2/torch.sqrt(prob[:,-1].reshape(b, 1, 1)))
         if mean:
             return jac.mean(dim=0)
         else:
@@ -76,7 +77,8 @@ def parseval_orthonormal_constraint(model, logits, device, reg_model, defense=No
                     flag = False
             # print(module.__class__.__name__)
 
-            # Scaling factor for 2D convs in https://www.duo.uio.no/bitstream/handle/10852/69487/master_mathialo.pdf?sequence=1
+            # Scaling factor for 2D convs
+            # in https://www.duo.uio.no/bitstream/handle/10852/69487/master_mathialo.pdf?sequence=1
             if isinstance(module, nn.Conv2d):
                 rescale_factor = float(module.kernel_size[0])
             else:
@@ -106,7 +108,8 @@ def parseval_orthonormal_constraint(model, logits, device, reg_model, defense=No
                     # w[S,:] = w[S,:] - 4*beta*torch.mm(J[S,:].T, torch.mm(JWWJ_I[S,:], JW[S,:]))
                     w[:, :] = w - 4 * beta * torch.mm(J.T, torch.mm(JWWJ_I, JW))
                 else:
-                    # w[S,:] = ((1 + 4*beta)*w[S,:] - 4*beta*torch.mm(w[S,:], torch.mm(w[S,:].T, w[S,:])))/rescale_factor
+                    # w[S,:] = ((1 + 4*beta)*w[S,:]
+                    # - 4*beta*torch.mm(w[S,:], torch.mm(w[S,:].T, w[S,:])))/rescale_factor
                     w[:, :] = ((1 + 4 * beta) * w - 4 * beta * torch.mm(w, torch.mm(w.T, w))) / rescale_factor
 
                 # Test

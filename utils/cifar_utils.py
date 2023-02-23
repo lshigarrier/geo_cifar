@@ -6,7 +6,8 @@ from torchvision.models import densenet121, resnet18
 from torch.utils.data import DataLoader
 from attack_defense.parseval import JacSoftmax, JacCoordChange
 from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop, JacobianReg
-from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
+from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM
+from attack_defense.attacks import TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
 
 def initialize_cifar(param, device):

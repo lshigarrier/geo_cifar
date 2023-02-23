@@ -12,8 +12,11 @@ class AttackDataset(Dataset):
             self.attack_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}.npy')
             self.label_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_label.npy')
         elif param['attack'] == 'pgd':
-            self.attack_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy')
-            self.label_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label.npy')
+            self.attack_array = np.load(
+                f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy')
+            self.label_array = np.load(
+                f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label'
+                f'.npy')
         elif param['attack'] == 'deep_fool':
             self.attack_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}.npy')
             self.label_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_label.npy')
@@ -72,8 +75,8 @@ class Block(nn.Module):
 
 class ResNet(nn.Module):
     def __init__(self, num_layers, block, image_channels, num_classes):
-        assert num_layers in [18, 34, 50, 101, 152], f'ResNet{num_layers}: Unknown architecture! Number of layers has ' \
-                                                     f'to be 18, 34, 50, 101, or 152 '
+        assert num_layers in [18, 34, 50, 101, 152],\
+            f'ResNet{num_layers}: Unknown architecture! Number of layers has to be 18, 34, 50, 101, or 152 '
         super(ResNet, self).__init__()
         if num_layers < 50:
             self.expansion = 1
@@ -121,7 +124,8 @@ class ResNet(nn.Module):
     def make_layers(self, num_layers, block, num_residual_blocks, intermediate_channels, stride):
         layers = []
 
-        identity_downsample = nn.Sequential(nn.Conv2d(self.in_channels, intermediate_channels*self.expansion, kernel_size=1, stride=stride),
+        identity_downsample = nn.Sequential(nn.Conv2d(self.in_channels, intermediate_channels*self.expansion,
+                                                      kernel_size=1, stride=stride),
                                             nn.BatchNorm2d(intermediate_channels*self.expansion))
         layers.append(block(num_layers, self.in_channels, intermediate_channels, identity_downsample, stride))
         self.in_channels = intermediate_channels * self.expansion # 256

@@ -56,8 +56,11 @@ def generate_adv(param, device, testset, attack):
         np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}.npy', attack_array)
         np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_label.npy', label_array)
     elif param['attack'] == 'pgd':
-        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy', attack_array)
-        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label.npy', label_array)
+        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy',
+                attack_array)
+        np.save(
+            f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label.npy',
+            label_array)
     elif param['attack'] == 'deep_fool':
         np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}.npy', attack_array)
         np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_label.npy', label_array)
@@ -92,7 +95,8 @@ def one_test_run(param):
             test(device, testset, model)
         else:
             attackset = AttackDataset(param)
-            attackset = DataLoader(attackset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
+            attackset = DataLoader(attackset, batch_size=param['batch_size'],
+                                   shuffle=False, pin_memory=True, num_workers=1)
             test(device, attackset, model)
 
 

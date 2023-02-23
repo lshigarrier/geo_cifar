@@ -83,12 +83,14 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
         optimizer.step()
 
         if param['defense'] == 'parseval' or param['defense'] == 'isolayer':
-            model = parseval_orthonormal_constraint(model, logits, device, reg_model, defense=param['defense'], beta=param['beta'])
+            model = parseval_orthonormal_constraint(model, logits, device, reg_model,
+                                                    defense=param['defense'], beta=param['beta'])
 
         loss_list.append(loss.item())
 
         if idx % int(len(trainset)/4) == 0:
-            print('Epoch {}: {}/{} ({:.0f}%)'.format(epoch, idx * len(x), len(trainset.dataset), 100. * idx / len(trainset)))
+            print('Epoch {}: {}/{} ({:.0f}%)'.format(epoch, idx * len(x),
+                                                     len(trainset.dataset), 100. * idx / len(trainset)))
 
     model.eval()
     with torch.no_grad():
@@ -118,7 +120,8 @@ def training(param, device, trainset, testset, model, reg_model, teacher, attack
             param['defense'] = defense
         print(f'Defense: {param["defense"]}')
         tic = time.time()
-        entropy_val, reg_val = train(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer, epoch)
+        entropy_val, reg_val = train(param, device, trainset, testset,
+                                     model, reg_model, teacher, attack, optimizer, epoch)
         entropy_list += entropy_val
         reg_list += reg_val
         print(f'Epoch training time (s): {time.time() - tic}')
@@ -154,15 +157,17 @@ def one_run(param):
     entropy_list, reg_list = training(param, device, trainset, testset, model, reg_model, teacher, attack, optimizer)
 
     # Figures
-    entropy_list = moving_average(entropy_list, 100)
-    reg_list = moving_average(reg_list, 100)
-    fig1 = plot_curves([entropy_list], [None], "Cross-entropy during training", "Batch", "Cross-entropy")
-    fig2 = plot_curves([reg_list], [None], "Regularization during training", "Batch", "Regularization")
+    entropy_list = moving_average(entropy_list, 1000)
+    reg_list = moving_average(reg_list, 1000)
+    fig = plot_curves([entropy_list, reg_list],
+                      ["Cross entropy", "Regularization"],
+                      "Cross-entropy and regularization during training",
+                      "Batch",
+                      "Value",
+                      ylim=(0, 10))
     if param['save_plot']:
-        fig1.savefig(f'{param["dataset"]}_{param["archi"]}_{param["defense"]}_{param["norm"]}_{param["seed"]}_crossentropy.png')
-        fig2.savefig(f'{param["dataset"]}_{param["archi"]}_{param["defense"]}_{param["norm"]}_{param["seed"]}_regularization.png')
-    plt.close(fig1)
-    plt.close(fig2)
+        fig.savefig(f'{param["dataset"]}_{param["archi"]}_{param["defense"]}_{param["norm"]}_{param["seed"]}.png')
+    plt.close(fig)
 
 
 def cifar_train_loop():

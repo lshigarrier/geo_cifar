@@ -114,7 +114,8 @@ class FastGradientSignUntargeted:
                 # print(torch.max(torch.abs(diff_tensor), dim=1)[0].mean())
                 # print(torch.linalg.norm(grads.data).mean())
 
-                # Project -- the adversaries' pixel value should within max_x and min_x due to the l_infinity / l2 restriction
+                # Project -- the adversaries' pixel value
+                # should be within max_x and min_x due to the l_infinity / l2 restriction
                 x = project(x, original_images, self.epsilon, self._type)
 
                 # Clamp -- the adversaries' value should be valid pixel value
@@ -129,7 +130,8 @@ class TorchAttackGaussianNoise:
         model (nn.Module): model to attack.
         std (float): standard deviation (Default: 0.1)
     Shape:
-        - images: :math:`(N, C, H, W)` where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`. MUST HAVE RANGE [0, 1]
+        - images: :math:`(N, C, H, W)`
+        where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`. MUST HAVE RANGE [0, 1]
         - labels: :math:`(N)` where each value :math:`y_i` is :math:`0 \leq y_i \leq` `number of labels`.
         - output: :math:`(N, C, H, W)`.
     """
@@ -173,7 +175,9 @@ class TorchAttackFGSM:
         eps (float): maximum perturbation. (Default: 8/255)
 
     Shape:
-        - images: :math:`(N, C, H, W)` where `N = number of batches`, `C = number of channels`,        `H = height` and `W = width`. It must have a range [0, 1].
+        - images: :math:`(N, C, H, W)`
+        where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`.
+        It must have a range [0, 1].
         - labels: :math:`(N)` where each value :math:`y_i` is :math:`0 \leq y_i \leq` `number of labels`.
         - output: :math:`(N, C, H, W)`.
     """
@@ -223,7 +227,8 @@ class TorchAttackPGD:
         random_start (bool): using random initialization (Default: False)
         return_type (str): 'float' for [0,1] or 'int' for [0-255] (Default: 'float')
     Shape:
-        - images: :math:`(N, C, H, W)` where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`. MUST HAVE RANGE [0, 1]
+        - images: :math:`(N, C, H, W)`
+        where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`. MUST HAVE RANGE [0, 1]
         - labels: :math:`(N)` where each value :math:`y_i` is :math:`0 \leq y_i \leq` `number of labels`.
         - output: :math:`(N, C, H, W)`.
     """
@@ -280,7 +285,8 @@ class TorchAttackPGDL2:
         random_start (bool): using random initialization (Default: False)
         return_type (str): 'float' for [0,1] or 'int' for [0-255] (Default: 'float')
     Shape:
-        - images: :math:`(N, C, H, W)` where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`. MUST HAVE RANGE [0, 1]
+        - images: :math:`(N, C, H, W)`
+        where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`. MUST HAVE RANGE [0, 1]
         - labels: :math:`(N)` where each value :math:`y_i` is :math:`0 \leq y_i \leq` `number of labels`.
         - output: :math:`(N, C, H, W)`.
     """
@@ -333,7 +339,8 @@ class TorchAttackDeepFool:
         overshoot (float): parameter for enhancing the noise. (Default: 0.02)
         return_type (str): 'float' for [0,1] or 'int' for [0-255] (Default: 'float')
     Shape:
-        - images: :math:`(N, C, H, W)` where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`. MUST HAVE RANGE [0, 1]
+        - images: :math:`(N, C, H, W)`
+        where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`. MUST HAVE RANGE [0, 1]
         - labels: :math:`(N)` where each value :math:`y_i` is :math:`0 \leq y_i \leq` `number of labels`.
         - output: :math:`(N, C, H, W)`.
     """
@@ -387,7 +394,9 @@ class TorchAttackCWL2:
         lr (float): learning rate of the Adam optimizer. (Default: 0.01)
     .. warning:: With default c, you can't easily get adversarial images. Set higher c like 1.
     Shape:
-        - images: :math:`(N, C, H, W)` where `N = number of batches`, `C = number of channels`,        `H = height` and `W = width`. It must have a range [0, 1].
+        - images: :math:`(N, C, H, W)`
+        where `N = number of batches`, `C = number of channels`, `H = height` and `W = width`.
+        It must have a range [0, 1].
         - labels: :math:`(N)` where each value :math:`y_i` is :math:`0 \leq y_i \leq` `number of labels`.
         - output: :math:`(N, C, H, W)`.
     Examples::

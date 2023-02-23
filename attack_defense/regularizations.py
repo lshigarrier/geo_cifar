@@ -236,7 +236,9 @@ def convmatrix2d(kernel, image_shape, padding: int=0, stride: int=1, device=None
     """
     padded_shape = torch.tensor(image_shape).to(device)
     padded_shape[1:] += 2*padding
-    result_dims = torch.div(padded_shape[1:] - torch.tensor(kernel.shape[2:]).to(device), stride, rounding_mode='floor') + 1
+    result_dims = torch.div(padded_shape[1:] - torch.tensor(kernel.shape[2:]).to(device),
+                            stride,
+                            rounding_mode='floor') + 1
     mat = torch.zeros((kernel.shape[0], *result_dims, *padded_shape)).to(device)
 
     for i in range(mat.shape[1]):
@@ -267,8 +269,11 @@ def isometry_reg_approx(model, device, input_shape):
             print(name)
             print(jacobian.shape)
             if 'conv' in name:
-                jacobian = torch.mm(convmatrix2d(param, input_shape.tolist(), module.padding[0], module.stride[0], device), jacobian)
-                input_shape[1:] = 1 + ((input_shape[1:] + 2 * module.padding[0] - torch.tensor(param.shape[2:])) / module.stride[0]).floor()
+                jacobian = torch.mm(
+                    convmatrix2d(param, input_shape.tolist(), module.padding[0], module.stride[0], device), jacobian)
+                input_shape[1:] = 1\
+                                  + ((input_shape[1:] + 2 * module.padding[0] - torch.tensor(param.shape[2:]))
+                                   /module.stride[0]).floor()
             else:
                 jacobian = torch.mm(param, jacobian)
 
@@ -308,9 +313,11 @@ def main():
     t = timeit.Timer(lambda: inp.flatten(start_dim=1).mm(matrix.T) + conv_layer.bias.flatten().repeat_interleave(d1**2))
     print(t.timeit(100))
     print('Sparse multiplication execution time')
-    t = timeit.Timer(lambda: torch.sparse.mm(matrix.to_sparse(), inp.flatten(start_dim=1).T).T + conv_layer.bias.flatten().repeat_interleave(d1**2))
+    t = timeit.Timer(lambda: torch.sparse.mm(matrix.to_sparse(), inp.flatten(start_dim=1).T).T
+                             + conv_layer.bias.flatten().repeat_interleave(d1**2))
     print(t.timeit(100))
-    out_mat_sparse = torch.sparse.mm(matrix.to_sparse(), inp.flatten(start_dim=1).T).T + conv_layer.bias.flatten().repeat_interleave(d1**2)
+    out_mat_sparse = torch.sparse.mm(matrix.to_sparse(), inp.flatten(start_dim=1).T).T\
+                     + conv_layer.bias.flatten().repeat_interleave(d1**2)
     out_mat = inp.flatten(start_dim=1).mm(matrix.T) + conv_layer.bias.flatten().repeat_interleave(d1 ** 2)
     print(f'out mat shape: {out_mat.shape}')
     print(f'out mat sparse shape: {out_mat_sparse.shape}')

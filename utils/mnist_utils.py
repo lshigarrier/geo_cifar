@@ -8,7 +8,8 @@ from torchvision import datasets, transforms
 from utils.mnist_model import Lenet
 from attack_defense.parseval import JacSoftmax, JacCoordChange
 from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop, JacobianReg
-from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM, TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
+from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM
+from attack_defense.attacks import TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
 
 def moving_average(array, window_size):
@@ -50,9 +51,12 @@ def initialize_mnist(param, device):
     testset = datasets.MNIST('./data/mnist', train=False, transform=transforms.ToTensor())
 
     # Create data loaders
-    train_loader       = DataLoader(trainset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
-    light_train_loader = DataLoader(subset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
-    test_loader        = DataLoader(testset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
+    train_loader       = DataLoader(trainset, batch_size=param['batch_size'],
+                                    shuffle=False, pin_memory=True, num_workers=1)
+    light_train_loader = DataLoader(subset, batch_size=param['batch_size'],
+                                    shuffle=False, pin_memory=True, num_workers=1)
+    test_loader        = DataLoader(testset, batch_size=param['batch_size'],
+                                    shuffle=False, pin_memory=True, num_workers=1)
 
     ## Load model
     # -------------------------------------------------------------- #

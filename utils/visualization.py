@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def plot_curves(data, legend, title, xlabel, ylabel):
+def plot_curves(data, legend, title, xlabel, ylabel, xlim=(None, None), ylim=(None, None)):
     fig, ax = plt.subplots(figsize=(24, 18))
     add_legend = False
     for i in range(len(data)):
@@ -14,6 +14,8 @@ def plot_curves(data, legend, title, xlabel, ylabel):
     ax.set_title(title)
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
+    ax.set_xlim(*xlim)
+    ax.set_ylim(*ylim)
     if add_legend:
         ax.legend()
     return fig
