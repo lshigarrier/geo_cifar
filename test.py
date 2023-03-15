@@ -43,27 +43,26 @@ def generate_adv(param, device, testset, attack):
             if param['attack'] != 'gn' and min_norm < 0.9 * param['budget']:
                 print('PERTURBATION IS TOO SMALL!!!')
 
-            attack_list.append(adv_x.cpu().numpy())
-            label_list.append(label.cpu().numpy())
+            attack_list.append(adv_x.detach())
+            label_list.append(label.detach())
 
             if idx % int(len(testset)/4) == 0:
                 print('Test: {}/{} ({:.0f}%)'.format(idx * len(x), len(testset.dataset), 100. * idx / len(testset)))
 
-    attack_array = np.concatenate(attack_list, axis=0)
-    label_array = np.concatenate(label_list, axis=0)
+    attack_tensor = torch.cat(attack_list, dim=0)
+    label_tensor = torch.cat(label_list, dim=0)
     print('Saving')
     if param['attack'] == 'fgsm':
-        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}.npy', attack_array)
-        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_label.npy', label_array)
+        torch.save(attack_tensor, f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}.pt')
+        torch.save(label_tensor, f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_label.pt')
     elif param['attack'] == 'pgd':
-        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy',
-                attack_array)
-        np.save(
-            f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label.npy',
-            label_array)
+        torch.save(attack_tensor,
+                   f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.pt')
+        torch.save(label_tensor,
+                f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label.pt')
     elif param['attack'] == 'deep_fool':
-        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}.npy', attack_array)
-        np.save(f'data/{param["dataset"]}/attacks/{param["attack"]}_label.npy', label_array)
+        torch.save(attack_tensor, f'data/{param["dataset"]}/attacks/{param["attack"]}.pt')
+        torch.save(label_tensor, f'data/{param["dataset"]}/attacks/{param["attack"]}_label.pt')
 
 
 def one_test_run(param):
@@ -160,7 +159,7 @@ def main():
     # Detect anomaly in autograd
     torch.autograd.set_detect_anomaly(True)
 
-    param = load_yaml('test_conf')
+    param = load_yaml('generate_cifar')
     models = [
         'baseline',
         'iso',
@@ -169,12 +168,12 @@ def main():
         'distillation',
         'adv_train'
     ]
-    budgets = [8/255, 16/255, 32/255]
+    budgets = [8/255]
     budgets_l2 = [2., 3., 4.]
     attacks = [
-        'fgsm',
-        'pgd',
+        'fgsm'
     ]
+    # 'pgd'
     # 'deep_fool'
 
     if param['generate']:

@@ -2,32 +2,31 @@
 
 import torch
 import torch.nn as nn
-import numpy as np
 from torch.utils.data import Dataset
 
 
 class AttackDataset(Dataset):
     def __init__(self, param):
         if param['attack'] == 'fgsm':
-            self.attack_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}.npy')
-            self.label_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_label.npy')
+            self.attack_tensor = torch.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}.pt')
+            self.label_tensor = torch.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_label.pt')
         elif param['attack'] == 'pgd':
-            self.attack_array = np.load(
-                f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.npy')
-            self.label_array = np.load(
+            self.attack_tensor = torch.load(
+                f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}.pt')
+            self.label_tensor = torch.load(
                 f'data/{param["dataset"]}/attacks/{param["attack"]}_{param["budget"]}_{param["perturbation"]}_label'
-                f'.npy')
+                f'.pt')
         elif param['attack'] == 'deep_fool':
-            self.attack_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}.npy')
-            self.label_array = np.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_label.npy')
-        self.attack_array = torch.from_numpy(self.attack_array)
-        self.label_array = torch.from_numpy(self.label_array)
+            self.attack_tensor = torch.load(f'data/{param["dataset"]}/attacks/{param["attack"]}.pt')
+            self.label_tensor = torch.load(f'data/{param["dataset"]}/attacks/{param["attack"]}_label.pt')
+        else:
+            raise NotImplementedError
 
     def __len__(self):
-        return len(self.label_array)
+        return len(self.label_tensor)
 
     def __getitem__(self, idx):
-        return self.attack_array[idx], self.label_array[idx]
+        return self.attack_tensor[idx], self.label_tensor[idx]
 
 
 class Block(nn.Module):

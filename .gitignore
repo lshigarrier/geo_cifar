@@ -11,3 +11,4 @@ data/mnist/attacks/*.npy
 models/**/*.pt
 test_cifar_*.py
 *.onnx
+old*

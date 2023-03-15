@@ -12,22 +12,19 @@ from attack_defense.attacks import TorchAttackPGD, TorchAttackPGDL2, TorchAttack
 
 def initialize_cifar(param, device):
     # Load datasets and preprocessing
+    # After ToTensor(): transforms.Normalize(mean=(0.4914, 0.4822, 0.4465), std = (0.2470, 0.2435, 0.2616))
     trainset = datasets.CIFAR10('./data/cifar',
                                 train=True, download=True,
                                 transform=transforms.Compose([
                                     transforms.RandomCrop(size=32, padding=4),
                                     transforms.RandomHorizontalFlip(p=0.5),
                                     transforms.Resize((224, 224)),  # original: 32 x 32
-                                    transforms.ToTensor(),
-                                    transforms.Normalize(mean=(0.4914, 0.4822, 0.4465),
-                                                         std=(0.2470, 0.2435, 0.2616))
+                                    transforms.ToTensor()
                                 ]))
     testset = datasets.CIFAR10('./data/cifar', train=False,
                                transform=transforms.Compose([
                                    transforms.Resize((224, 224)),  # original: 32 x 32
-                                   transforms.ToTensor(),
-                                   transforms.Normalize(mean=(0.4914, 0.4822, 0.4465),
-                                                         std=(0.2470, 0.2435, 0.2616))
+                                   transforms.ToTensor()
                                ]))
     trainset = DataLoader(trainset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
     testset = DataLoader(testset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
@@ -57,15 +54,15 @@ def initialize_cifar(param, device):
 
     # Initialize regularization
     reg_model = None
-    if param['defense'] == 'isometry':
+    if param['defense'] == 'isometry' or param['defense'] == 'isogn':
         reg_model = IsometryReg(param['epsilon'], norm=param['norm'])
-    elif param['defense'] == 'isorandom' or param['defense'] == 'isogn':
+    elif param['defense'] == 'isorandom':
         reg_model = IsometryRegRandom(param['epsilon'])
     elif param['defense'] == 'isonoback':
         reg_model = IsometryRegNoBackprop(param['epsilon'])
     elif param['defense'] == 'isolayer':
         reg_model = [JacSoftmax(), JacCoordChange()]
-    elif param['defense'] == 'jacreg' or param['defense'] == 'jacsimple':
+    elif param['defense'] == 'jacbound' or param['defense'] == 'jacreg':
         reg_model = JacobianReg(param['epsilon'])
 
     # Initialize attack

@@ -80,7 +80,7 @@ def initialize_mnist(param, device):
         reg_model = IsometryRegNoBackprop(param['epsilon'])
     elif param['defense'] == 'isolayer':
         reg_model = [JacSoftmax(), JacCoordChange()]
-    elif param['defense'] == 'jacreg' or param['defense'] == 'jacsimple':
+    elif param['defense'] == 'jacbound' or param['defense'] == 'jacreg':
         reg_model = JacobianReg(param['epsilon'])
 
     attack = None

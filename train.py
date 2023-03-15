@@ -35,6 +35,10 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
         # Forward pass
         logits = model(x)
 
+        # Cross entropy and regularization
+        entropy = F.cross_entropy(logits, label)
+        reg = torch.tensor(0)
+
         # Train teacher model for distillation
         if param['defense'] == 'teacher':
             loss = F.cross_entropy(logits / param['dist_temp'], label)
@@ -50,32 +54,33 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
                 or param['defense'] == 'isolayer'\
                 or param['defense'] == 'isogn':
             reg = reg_model(x, logits, device)
-            entropy = F.cross_entropy(logits, label)
-            reg_val.append(reg.item())
-            entropy_val.append(entropy.item())
+            loss = entropy + param['lambda']*reg
+
+        elif param['defense'] == 'jacbound':
+            reg, _ = reg_model(x, logits, device)
             loss = entropy + param['lambda']*reg
 
         elif param['defense'] == 'jacreg':
-            reg, _ = reg_model(x, logits, device)
-            loss = F.cross_entropy(logits, label) + param['lambda']*reg
-
-        elif param['defense'] == 'jacsimple':
             _, reg = reg_model(x, logits, device)
-            loss = F.cross_entropy(logits, label) + param['lambda']*reg
+            loss = entropy + param['lambda']*reg
 
         elif param['defense'] == 'fir':
             # Compute regularization term and cross entropy loss
             c           = logits.shape[1]
             probs       = F.softmax(logits, dim=1) * (1 - c * 1e-6) + 1e-6  # for numerical stability
-            max_eig_reg = torch.sum(1/probs, dim=1).mean()
-            loss = F.cross_entropy(logits, label) + param['lambda']*max_eig_reg
+            reg = torch.sum(1/probs, dim=1).mean()
+            loss = entropy + param['lambda']*reg
 
         elif param['defense'] == 'isoapprox':
-            # loss = F.cross_entropy(logits, label) + param['lambda']*isometry_reg_approx(model, device, x.shape[1:])
+            # loss = entropy + param['lambda']*isometry_reg_approx(model, device, x.shape[1:])
             raise NotImplementedError
 
         else:
-            loss = F.cross_entropy(logits, label)
+            loss = entropy
+
+        # Store cross entropy and regularization values
+        entropy_val.append(entropy.item())
+        reg_val.append(reg.item())
 
         # backprop
         loss.backward()
@@ -213,19 +218,27 @@ def main():
     torch.autograd.set_detect_anomaly(True)
 
     from test import one_test_run
-    param = load_yaml('train_conf')
+    param = load_yaml('baseline_cifar')
     attack_type = param['attack']
+    attack_budget = param['budget']
+    name = param['name']
+
+    # one_run(param)
+    # import sys
+    # sys.exit(0)
 
     for seed in range(5):
         print('=' * 101)
         param['seed'] = seed
-        param['name'] = param['name'][:-1] + str(seed)
+        param['name'] = name + '/seed_' + str(seed)
         param['attack'] = 'gn'
+        param['budget'] = 8/255
         param['load'] = False
         one_run(param)
         print('-' * 101)
         print('Test')
         param['attack'] = attack_type
+        param['budget'] = attack_budget
         param['load'] = True
         one_test_run(param)
 

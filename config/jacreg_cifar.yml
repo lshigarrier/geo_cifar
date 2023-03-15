@@ -1,14 +1,14 @@
-name       : mnist_baseline/seed_0
-model      : epoch_03.pt
-dataset    : mnist
-defense    : None
+name       : cifar_resnet_jacreg/seed_0
+model      : epoch_51.pt
+dataset    : cifar
+defense    : jacreg
 seed       : 0
-gpu_number : "0"
+gpu_number : "6"
 load       : False
 
 # model
 
-archi     : lenet  # only lenet for MNIST
+archi     : resnet  # only lenet for MNIST
 channels1 : 32
 channels2 : 64
 hidden    : 128
@@ -20,7 +20,7 @@ batch_size : 32
 # training
 
 learning_rate    : 0.001
-epochs           : 3
+epochs           : 51
 
 # annealing
 
@@ -40,7 +40,7 @@ beta : 0.0001
 # d = 3*32*32 = 3072
 # eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
 epsilon : 3.5
-lambda  : 0.2
+lambda  : 1000
 norm    : holder
 
 # distillation
@@ -54,8 +54,8 @@ save_plot : False
 
 # attack
 
-attack       : pgd                  # fgsm gn pgd deep_fool cw
-budget       : 0.2                  # fgsm gn(std) pgd
+attack       : fgsm                 # fgsm gn pgd deep_fool cw
+budget       : 0.03137254901960784  # fgsm gn(std) pgd
 perturbation : linf                 # pgd
 alpha        : 0.01                 # pgd
 max_iter     : 10                   # pgd deep_fool cw

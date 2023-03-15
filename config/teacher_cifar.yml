@@ -1,9 +1,9 @@
-name       : cifar_resnet_isogn/seed_0
-model      : epoch_21.pt
+name       : cifar_resnet_teacher/seed_0
+model      : epoch_51.pt
 dataset    : cifar
-defense    : isogn
+defense    : teacher
 seed       : 0
-gpu_number : "2"
+gpu_number : "1"
 load       : False
 
 # model
@@ -20,11 +20,11 @@ batch_size : 32
 # training
 
 learning_rate    : 0.001
-epochs           : 21
+epochs           : 51
 
 # annealing
 
-epoch_thr : 2
+epoch_thr : 1
 
 # test
 
@@ -40,8 +40,8 @@ beta : 0.0001
 # d = 3*32*32 = 3072
 # eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
 epsilon : 3.5
-lambda  : 0.05
-norm    : frobenius
+lambda  : 0.2
+norm    : holder
 
 # distillation
 
@@ -50,11 +50,11 @@ teacher   : teacher.pt
 
 # plot
 
-save_plot : True
+save_plot : False
 
 # attack
 
-attack       : gn                   # fgsm gn pgd deep_fool cw
+attack       : fgsm                 # fgsm gn pgd deep_fool cw
 budget       : 0.03137254901960784  # fgsm gn(std) pgd
 perturbation : linf                 # pgd
 alpha        : 0.01                 # pgd
