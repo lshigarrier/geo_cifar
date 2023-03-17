@@ -37,7 +37,7 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
 
         # Cross entropy and regularization
         entropy = F.cross_entropy(logits, label)
-        reg = torch.tensor(0)
+        reg     = torch.tensor(0)
 
         # Train teacher model for distillation
         if param['defense'] == 'teacher':
@@ -46,30 +46,34 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
         # Train distilled model
         elif param['defense'] == 'distillation':
             soft_labels = F.softmax(teacher(x) / param['dist_temp'], -1)
-            loss = torch.sum(-soft_labels * torch.log_softmax(logits / param['dist_temp'], -1), -1).mean()
+            loss        = torch.sum(-soft_labels * torch.log_softmax(logits / param['dist_temp'], -1), -1).mean()
 
         elif param['defense'] == 'isometry'\
                 or param['defense'] == 'isorandom'\
                 or param['defense'] == 'isonoback'\
                 or param['defense'] == 'isolayer'\
                 or param['defense'] == 'isogn':
-            reg = reg_model(x, logits, device)
+            reg  = reg_model(x, logits, device)
             loss = entropy + param['lambda']*reg
 
         elif param['defense'] == 'jacbound':
             reg, _ = reg_model(x, logits, device)
-            loss = entropy + param['lambda']*reg
+            loss   = entropy + param['lambda']*reg
 
         elif param['defense'] == 'jacreg':
             _, reg = reg_model(x, logits, device)
-            loss = entropy + param['lambda']*reg
+            loss   = entropy + param['lambda']*reg
+
+        elif param['defense'] == 'temperature':
+            temp = reg_model(x, logits, device)
+            loss = F.cross_entropy(temp*logits, label)
 
         elif param['defense'] == 'fir':
             # Compute regularization term and cross entropy loss
-            c           = logits.shape[1]
-            probs       = F.softmax(logits, dim=1) * (1 - c * 1e-6) + 1e-6  # for numerical stability
-            reg = torch.sum(1/probs, dim=1).mean()
-            loss = entropy + param['lambda']*reg
+            c     = logits.shape[1]
+            probs = F.softmax(logits, dim=1) * (1 - c * 1e-6) + 1e-6  # for numerical stability
+            reg   = torch.sum(1/probs, dim=1).mean()
+            loss  = entropy + param['lambda']*reg
 
         elif param['defense'] == 'isoapprox':
             # loss = entropy + param['lambda']*isometry_reg_approx(model, device, x.shape[1:])
@@ -171,7 +175,7 @@ def one_run(param):
                       "Value",
                       ylim=(0, 10))
     if param['save_plot']:
-        fig.savefig(f'{param["dataset"]}_{param["archi"]}_{param["defense"]}_{param["norm"]}_{param["seed"]}.png')
+        fig.savefig(f'{param["dataset"]}_{param["archi"]}_{param["defense"]}_{param["norm"]}_{param["lambda"]}_{param["seed"]}.png')
     plt.close(fig)
 
 

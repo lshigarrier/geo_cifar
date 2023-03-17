@@ -224,6 +224,53 @@ class JacobianReg(nn.Module):
         return reg.mean()/m**2, jac_norm_holder.mean()/m**2
 
 
+class AdaptiveTemp(nn.Module):
+
+    def __init__(self, epsilon, num_stab=1e-7):
+        super(AdaptiveTemp, self).__init__()
+        self.epsilon = epsilon
+        self.num_stab = num_stab
+
+    def forward(self, data, logits, device):
+        # Number of classes
+        c = logits.shape[1]
+        m = c - 1
+
+        # Numerical stability
+        probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
+
+        # Coordinate change
+        new_coord = torch.sqrt(probs)
+        new_coord = 2 * new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
+
+        # Compute Jacobian matrix
+        jac = torch.zeros(m, *data.shape).to(device)
+        grad_output = torch.zeros(*new_coord.shape).to(device)
+        for i in range(m):
+            grad_output.zero_()
+            grad_output[:, i] = 1
+            jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
+        jac = torch.transpose(jac, dim0=0, dim1=1)
+        jac = jac.contiguous().view(jac.shape[0], m, -1)
+        jac = torch.bmm(jac, torch.transpose(jac, dim0=1, dim1=2))
+
+        # Compute delta and rho
+        delta = torch.sqrt(probs/c).sum(dim=1)
+        delta = 2*torch.acos(delta)
+        rho = 1 - torch.sqrt(probs[:, m])
+        jac = (rho**2).unsqueeze(-1).unsqueeze(-1)*jac
+
+        # Holder inequality
+        abs_jac = torch.abs(jac)
+        norm_1 = torch.max(abs_jac.sum(dim=1, keepdim=True), dim=2)[0]
+        norm_inf = torch.max(abs_jac.sum(dim=2, keepdim=True), dim=1)[0]
+        jac_norm_holder = torch.sqrt(norm_1 * norm_inf)
+
+        # Compute temperature
+        temp = delta.unsqueeze(-1)/(self.epsilon*jac_norm_holder)
+        return temp
+
+
 ################################ Product of weights matrices (not maintained) ##########################################
 
 

@@ -1,0 +1,43 @@
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_isoreg/seed_0
+model: epoch_51.pt
+dataset: cifar
+defense: isometry
+seed: 0
+gpu_number: 6
+load: False
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.075
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 12480/50000 (25%)
+Epoch 1: 24960/50000 (50%)
+Epoch 1: 37440/50000 (75%)
+Epoch 1: 49920/50000 (100%)
+Epoch: 1, Loss: 1.058359, Accuracy: 85.17%
+Epoch training time (s): 103.22022032737732
+Defense: isometry
+Epoch 2: 0/50000 (0%)

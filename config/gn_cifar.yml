@@ -1,4 +1,4 @@
-name       : cifar_resnet_gn/seed_0
+name       : cifar_resnet_gn
 model      : epoch_51.pt
 dataset    : cifar
 defense    : adv_train

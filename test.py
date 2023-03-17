@@ -43,8 +43,8 @@ def generate_adv(param, device, testset, attack):
             if param['attack'] != 'gn' and min_norm < 0.9 * param['budget']:
                 print('PERTURBATION IS TOO SMALL!!!')
 
-            attack_list.append(adv_x.detach())
-            label_list.append(label.detach())
+            attack_list.append(adv_x.detach().cpu())
+            label_list.append(label.detach().cpu())
 
             if idx % int(len(testset)/4) == 0:
                 print('Test: {}/{} ({:.0f}%)'.format(idx * len(x), len(testset.dataset), 100. * idx / len(testset)))
@@ -179,7 +179,8 @@ def main():
     if param['generate']:
         generate_loop(param, attacks, budgets, budgets_l2)
     else:
-        test_loop(param, models, attacks, budgets, budgets_l2)
+        # test_loop(param, models, attacks, budgets, budgets_l2)
+        one_test_run(param)
 
     # lambdas = np.linspace(5e-6, 6e-6, 11)
     # for idx in range(len(lambdas)):

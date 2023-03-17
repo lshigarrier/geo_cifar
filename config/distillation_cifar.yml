@@ -1,4 +1,4 @@
-name       : cifar_resnet_distillation/seed_0
+name       : cifar_resnet_distillation
 model      : epoch_51.pt
 dataset    : cifar
 defense    : distillation

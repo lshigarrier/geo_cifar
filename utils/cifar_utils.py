@@ -5,7 +5,8 @@ from torchvision import transforms, datasets
 from torchvision.models import densenet121, resnet18
 from torch.utils.data import DataLoader
 from attack_defense.parseval import JacSoftmax, JacCoordChange
-from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop, JacobianReg
+from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop
+from attack_defense.regularizations import JacobianReg, AdaptiveTemp
 from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM
 from attack_defense.attacks import TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
@@ -64,6 +65,8 @@ def initialize_cifar(param, device):
         reg_model = [JacSoftmax(), JacCoordChange()]
     elif param['defense'] == 'jacbound' or param['defense'] == 'jacreg':
         reg_model = JacobianReg(param['epsilon'])
+    elif param['defense'] == 'temperature':
+        reg_model = AdaptiveTemp(param['epsilon'])
 
     # Initialize attack
     attack = None

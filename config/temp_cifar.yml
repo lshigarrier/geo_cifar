@@ -1,9 +1,9 @@
-name       : cifar_resnet_jacreg
+name       : cifar_resnet_temperature
 model      : epoch_51.pt
 dataset    : cifar
-defense    : jacreg
+defense    : temperature
 seed       : 0
-gpu_number : "6"
+gpu_number : "4"
 load       : False
 
 # model
@@ -24,7 +24,7 @@ epochs           : 51
 
 # annealing
 
-epoch_thr : 1
+epoch_thr : 2
 
 # test
 
@@ -38,9 +38,9 @@ beta : 0.0001
 # isometry
 
 # d = 3*32*32 = 3072
-# eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
-epsilon : 3.5
-lambda  : 1000
+# eps_inf = 8/255 => eps_2 = eps_inf * sqrt(d) = 1.74
+epsilon : 1.74
+lambda  : 0.2
 norm    : holder
 
 # distillation
@@ -50,7 +50,7 @@ teacher   : teacher.pt
 
 # plot
 
-save_plot : True
+save_plot : False
 
 # attack
 

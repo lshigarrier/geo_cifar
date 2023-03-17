@@ -1,4 +1,4 @@
-name       : mnist_baseline/seed_0
+name       : mnist_baseline
 model      : epoch_03.pt
 dataset    : mnist
 defense    : None

@@ -1,10 +1,10 @@
-name       : cifar_resnet_jacreg
+name       : cifar_resnet_baseline/seed_0
 model      : epoch_51.pt
 dataset    : cifar
-defense    : jacreg
+defense    : None
 seed       : 0
-gpu_number : "6"
-load       : False
+gpu_number : "0"
+load       : True
 
 # model
 
@@ -13,44 +13,25 @@ channels1 : 32
 channels2 : 64
 hidden    : 128
 
-# data
-
-batch_size : 32
-
 # training
 
 learning_rate    : 0.001
-epochs           : 51
-
-# annealing
-
-epoch_thr : 1
 
 # test
 
-generate : False
-clean    : False
+generate   : False
+clean      : False
 
-# parseval
+# data
 
-beta : 0.0001
+batch_size : 32
 
 # isometry
 
 # d = 3*32*32 = 3072
 # eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
 epsilon : 3.5
-lambda  : 1000
 norm    : holder
-
-# distillation
-
-dist_temp : 20
-teacher   : teacher.pt
-
-# plot
-
-save_plot : True
 
 # attack
 

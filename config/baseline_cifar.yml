@@ -1,8 +1,8 @@
-name       : cifar_resnet_baseline/seed_42
+name       : cifar_resnet_baseline
 model      : epoch_51.pt
 dataset    : cifar
 defense    : None
-seed       : 42
+seed       : 0
 gpu_number : "0"
 load       : False
 

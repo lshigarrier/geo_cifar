@@ -1,4 +1,4 @@
-name       : cifar_resnet_teacher/seed_0
+name       : cifar_resnet_teacher
 model      : epoch_51.pt
 dataset    : cifar
 defense    : teacher

@@ -1,4 +1,4 @@
-name       : cifar_resnet_isogn/seed_0
+name       : cifar_resnet_isogn
 model      : epoch_51.pt
 dataset    : cifar
 defense    : isogn
@@ -50,7 +50,7 @@ teacher   : teacher.pt
 
 # plot
 
-save_plot : False
+save_plot : True
 
 # attack
 
