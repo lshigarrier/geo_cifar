@@ -12,3 +12,4 @@ models/**/*.pt
 test_cifar_*.py
 *.onnx
 old*
+outputs/images/

@@ -65,7 +65,7 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             loss   = entropy + param['lambda']*reg
 
         elif param['defense'] == 'temperature':
-            temp = reg_model(x, logits, device)
+            temp = reg_model(x, logits, device).detach()  # or not detach()
             loss = F.cross_entropy(temp*logits, label)
 
         elif param['defense'] == 'fir':
@@ -157,7 +157,7 @@ def one_run(param):
     # Initialization
     if param['dataset'] == 'cifar':
         trainset, testset, model, reg_model, teacher, attack, optimizer = initialize_cifar(param, device)
-    elif param['dataset'] == 'mnist':
+    elif param['dataset'] == 'mnist' or param['dataset'] == 'fashion':
         trainset, lightset, testset, model, reg_model, teacher, attack, optimizer = initialize_mnist(param, device)
     else:
         raise NotImplementedError

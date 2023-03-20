@@ -91,27 +91,35 @@ class IsometryRegRandom(nn.Module):
         new_coord = torch.sqrt(probs)
         new_coord = 2 * new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
 
-        # Compute Jacobian matrix
-        grad_output = torch.randn(*new_coord.shape).to(device)
-        grad_output /= torch.norm(grad_output, dim=1).unsqueeze(-1)
-        jac = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
-        jac = jac.contiguous().view(jac.shape[0], -1)
-
-        # Estimation of the trace of JJ^T
-        jac = torch.norm(jac, dim=1)
+        # Compute gradient in two random directions
+        vector1  = torch.randn(*new_coord.shape).to(device)
+        vector2  = torch.randn(*new_coord.shape).to(device)
+        vector1 /= torch.norm(vector1, dim=1).unsqueeze(-1)
+        vector2 /= torch.norm(vector2, dim=1).unsqueeze(-1)
+        grad1    = torch.autograd.grad(new_coord, data, grad_outputs=vector1, retain_graph=True)[0]
+        grad2    = torch.autograd.grad(new_coord, data, grad_outputs=vector2, retain_graph=True)[0]
+        grad1    = grad1.contiguous().view(grad1.shape[0], -1)
+        grad2    = grad2.contiguous().view(grad2.shape[0], -1)
 
         # Distance from center of simplex
         delta = torch.sqrt(probs / c).sum(dim=1)
-        delta = 2 * torch.acos(delta)
+        delta = 2*torch.acos(delta).unsqueeze(-1)
 
         # Compute regularization term
-        reg = torch.norm(torch.add(jac,-delta/self.epsilon))
+        rho = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1)
+        f_11 = rho*((grad1*grad1).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector1).sum(-1).unsqueeze(-1))
+        f_22 = rho*((grad2*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector2*vector2).sum(-1).unsqueeze(-1))
+        f_12 = rho*((grad1*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector2).sum(-1).unsqueeze(-1))
+        reg = F.relu(f_11 + f_22 + 2*f_12)
 
         # Return
-        return reg.mean()/m**2
+        return reg.mean()/4
 
 
 class IsometryRegNoBackprop(nn.Module):
+    """
+    Not updated
+    """
 
     def __init__(self, epsilon, num_stab=1e-7):
         super(IsometryRegNoBackprop, self).__init__()
@@ -255,8 +263,8 @@ class AdaptiveTemp(nn.Module):
         jac = torch.bmm(jac, torch.transpose(jac, dim0=1, dim1=2))
 
         # Compute delta and rho
-        delta = torch.sqrt(probs/c).sum(dim=1)
-        delta = 2*torch.acos(delta)
+        delta = torch.sqrt(probs/c + self.num_stab).sum(dim=1)
+        delta = 2*torch.acos(delta).unsqueeze(-1)
         rho = 1 - torch.sqrt(probs[:, m])
         jac = (rho**2).unsqueeze(-1).unsqueeze(-1)*jac
 
@@ -267,7 +275,7 @@ class AdaptiveTemp(nn.Module):
         jac_norm_holder = torch.sqrt(norm_1 * norm_inf)
 
         # Compute temperature
-        temp = delta.unsqueeze(-1)/(self.epsilon*jac_norm_holder)
+        temp = delta.unsqueeze(-1)/(self.epsilon*jac_norm_holder + self.num_stab)
         return temp
 
 

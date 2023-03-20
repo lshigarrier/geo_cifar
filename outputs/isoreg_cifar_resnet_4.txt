@@ -1,11 +1,11 @@
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_0
+name: cifar_resnet_isoreg/seed_5
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 0
-gpu_number: 6
+seed: 5
+gpu_number: 1
 load: False
 archi: resnet
 channels1: 32
@@ -19,7 +19,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -37,420 +37,420 @@ Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.058359, Accuracy: 85.17%
-Epoch training time (s): 102.42867064476013
+Epoch: 1, Loss: 1.027202, Accuracy: 85.53%
+Epoch training time (s): 111.59989309310913
 Defense: isometry
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 5703.884562, Accuracy: 10.00%
-Epoch training time (s): 468.4379482269287
+Epoch: 2, Loss: 864.126092, Accuracy: 10.83%
+Epoch training time (s): 487.7696850299835
 Defense: isometry
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 180.195458, Accuracy: 10.00%
-Epoch training time (s): 476.90674901008606
+Epoch: 3, Loss: 39.418253, Accuracy: 10.71%
+Epoch training time (s): 477.21155738830566
 Defense: isometry
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 22.841086, Accuracy: 10.01%
-Epoch training time (s): 476.45031094551086
+Epoch: 4, Loss: 41.273869, Accuracy: 83.04%
+Epoch training time (s): 473.603474855423
 Defense: isometry
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 20.942812, Accuracy: 10.03%
-Epoch training time (s): 475.74677205085754
+Epoch: 5, Loss: 26.997387, Accuracy: 87.05%
+Epoch training time (s): 487.2492346763611
 Defense: isometry
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 19.084595, Accuracy: 10.01%
-Epoch training time (s): 475.7811040878296
+Epoch: 6, Loss: 10.712452, Accuracy: 87.25%
+Epoch training time (s): 498.313960313797
 Defense: isometry
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 17.524906, Accuracy: 10.00%
-Epoch training time (s): 475.5849792957306
+Epoch: 7, Loss: 6.781250, Accuracy: 88.80%
+Epoch training time (s): 497.09054708480835
 Defense: isometry
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 16.404072, Accuracy: 10.00%
-Epoch training time (s): 478.6451714038849
+Epoch: 8, Loss: 5.949691, Accuracy: 88.70%
+Epoch training time (s): 495.0480935573578
 Defense: isometry
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 16.032674, Accuracy: 10.00%
-Epoch training time (s): 475.4065239429474
+Epoch: 9, Loss: 5.620642, Accuracy: 89.20%
+Epoch training time (s): 493.38489389419556
 Defense: isometry
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 14.476164, Accuracy: 10.00%
-Epoch training time (s): 474.85710549354553
+Epoch: 10, Loss: 6.862679, Accuracy: 85.22%
+Epoch training time (s): 490.0490655899048
 Defense: isometry
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 13.748680, Accuracy: 10.00%
-Epoch training time (s): 480.52822732925415
+Epoch: 11, Loss: 5.130880, Accuracy: 89.94%
+Epoch training time (s): 497.35908102989197
 Defense: isometry
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 13.760518, Accuracy: 10.00%
-Epoch training time (s): 478.2129819393158
+Epoch: 12, Loss: 4.109825, Accuracy: 91.33%
+Epoch training time (s): 488.2367477416992
 Defense: isometry
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 13.370226, Accuracy: 10.00%
-Epoch training time (s): 478.2161536216736
+Epoch: 13, Loss: 5.321319, Accuracy: 90.60%
+Epoch training time (s): 487.80984258651733
 Defense: isometry
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 14.954324, Accuracy: 10.00%
-Epoch training time (s): 477.99882340431213
+Epoch: 14, Loss: 3.599439, Accuracy: 91.97%
+Epoch training time (s): 487.78832745552063
 Defense: isometry
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 15.243478, Accuracy: 10.00%
-Epoch training time (s): 482.9340522289276
+Epoch: 15, Loss: 3.596591, Accuracy: 89.92%
+Epoch training time (s): 485.77984642982483
 Defense: isometry
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 16.362383, Accuracy: 10.00%
-Epoch training time (s): 705.0377504825592
+Epoch: 16, Loss: 5.080581, Accuracy: 92.13%
+Epoch training time (s): 493.14236974716187
 Defense: isometry
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 16.789384, Accuracy: 10.00%
-Epoch training time (s): 1203.8694925308228
+Epoch: 17, Loss: 3.129119, Accuracy: 92.33%
+Epoch training time (s): 514.0646388530731
 Defense: isometry
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 17.619468, Accuracy: 10.00%
-Epoch training time (s): 643.5786135196686
+Epoch: 18, Loss: 3.128020, Accuracy: 92.54%
+Epoch training time (s): 517.6701123714447
 Defense: isometry
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 17.344088, Accuracy: 10.00%
-Epoch training time (s): 489.8955702781677
+Epoch: 19, Loss: 3.149927, Accuracy: 91.85%
+Epoch training time (s): 521.249137878418
 Defense: isometry
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 15.891810, Accuracy: 10.00%
-Epoch training time (s): 492.7394268512726
+Epoch: 20, Loss: 3.381334, Accuracy: 92.44%
+Epoch training time (s): 520.0313966274261
 Defense: isometry
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 16.730526, Accuracy: 10.05%
-Epoch training time (s): 485.19889187812805
+Epoch: 21, Loss: 4.169587, Accuracy: 92.41%
+Epoch training time (s): 517.9691913127899
 Defense: isometry
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 15.519092, Accuracy: 10.08%
-Epoch training time (s): 489.5056040287018
+Epoch: 22, Loss: 4.186914, Accuracy: 92.78%
+Epoch training time (s): 515.2854096889496
 Defense: isometry
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 15.002744, Accuracy: 10.27%
-Epoch training time (s): 491.74358558654785
+Epoch: 23, Loss: 3.756097, Accuracy: 92.57%
+Epoch training time (s): 516.6593835353851
 Defense: isometry
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 15.002506, Accuracy: 10.43%
-Epoch training time (s): 486.4718701839447
+Epoch: 24, Loss: 4.379106, Accuracy: 91.77%
+Epoch training time (s): 517.6747477054596
 Defense: isometry
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 15.727664, Accuracy: 12.55%
-Epoch training time (s): 472.9002089500427
+Epoch: 25, Loss: 7.671968, Accuracy: 92.67%
+Epoch training time (s): 519.284017086029
 Defense: isometry
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 15.225169, Accuracy: 10.38%
-Epoch training time (s): 475.5484426021576
+Epoch: 26, Loss: 4.802349, Accuracy: 92.06%
+Epoch training time (s): 520.3006048202515
 Defense: isometry
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 14.537259, Accuracy: 12.37%
-Epoch training time (s): 479.49461126327515
+Epoch: 27, Loss: 7.672203, Accuracy: 91.93%
+Epoch training time (s): 504.0076630115509
 Defense: isometry
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 14.176165, Accuracy: 11.65%
-Epoch training time (s): 486.1724510192871
+Epoch: 28, Loss: 6.049739, Accuracy: 93.39%
+Epoch training time (s): 518.1594591140747
 Defense: isometry
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 14.809912, Accuracy: 10.03%
-Epoch training time (s): 488.8454358577728
+Epoch: 29, Loss: 5.925554, Accuracy: 81.95%
+Epoch training time (s): 516.5678441524506
 Defense: isometry
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 13.684651, Accuracy: 10.35%
-Epoch training time (s): 488.41395831108093
+Epoch: 30, Loss: 6.966827, Accuracy: 91.50%
+Epoch training time (s): 491.5213849544525
 Defense: isometry
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 14.012741, Accuracy: 12.08%
-Epoch training time (s): 485.73509550094604
+Epoch: 31, Loss: 6.380476, Accuracy: 92.76%
+Epoch training time (s): 486.0967586040497
 Defense: isometry
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 15.511437, Accuracy: 15.47%
-Epoch training time (s): 486.07706594467163
+Epoch: 32, Loss: 8.218797, Accuracy: 92.93%
+Epoch training time (s): 489.4890682697296
 Defense: isometry
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 13.353385, Accuracy: 10.59%
-Epoch training time (s): 483.88352513313293
+Epoch: 33, Loss: 6.344639, Accuracy: 93.29%
+Epoch training time (s): 486.0270299911499
 Defense: isometry
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 14.373983, Accuracy: 11.01%
-Epoch training time (s): 482.5189416408539
+Epoch: 34, Loss: 6.958022, Accuracy: 83.47%
+Epoch training time (s): 491.03083419799805
 Defense: isometry
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 16.592740, Accuracy: 11.62%
-Epoch training time (s): 501.5524742603302
+Epoch: 35, Loss: 7.140275, Accuracy: 92.76%
+Epoch training time (s): 490.30699706077576
 Defense: isometry
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 17.207225, Accuracy: 15.60%
-Epoch training time (s): 509.2485420703888
+Epoch: 36, Loss: 6.958028, Accuracy: 93.55%
+Epoch training time (s): 514.9433927536011
 Defense: isometry
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 14.835333, Accuracy: 14.38%
-Epoch training time (s): 506.84637427330017
+Epoch: 37, Loss: 7.453531, Accuracy: 92.40%
+Epoch training time (s): 511.8472089767456
 Defense: isometry
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 13.833434, Accuracy: 13.71%
-Epoch training time (s): 508.2617177963257
+Epoch: 38, Loss: 11.775726, Accuracy: 92.77%
+Epoch training time (s): 514.7356286048889
 Defense: isometry
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 13.836950, Accuracy: 17.00%
-Epoch training time (s): 509.04007172584534
+Epoch: 39, Loss: 6.899502, Accuracy: 92.87%
+Epoch training time (s): 494.2566421031952
 Defense: isometry
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 12.985545, Accuracy: 21.01%
-Epoch training time (s): 509.5026595592499
+Epoch: 40, Loss: 10.630985, Accuracy: 92.68%
+Epoch training time (s): 507.2023458480835
 Defense: isometry
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 16.927488, Accuracy: 13.52%
-Epoch training time (s): 508.9274957180023
+Epoch: 41, Loss: 11.073441, Accuracy: 93.14%
+Epoch training time (s): 501.4523766040802
 Defense: isometry
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 15.229582, Accuracy: 22.08%
-Epoch training time (s): 507.9870810508728
+Epoch: 42, Loss: 9.839261, Accuracy: 92.73%
+Epoch training time (s): 490.31050515174866
 Defense: isometry
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 14.505042, Accuracy: 22.30%
-Epoch training time (s): 506.8225586414337
+Epoch: 43, Loss: 6.675394, Accuracy: 92.56%
+Epoch training time (s): 489.8063509464264
 Defense: isometry
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 16.443192, Accuracy: 17.32%
-Epoch training time (s): 508.374552488327
+Epoch: 44, Loss: 12.364268, Accuracy: 82.02%
+Epoch training time (s): 490.30629444122314
 Defense: isometry
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 15.395744, Accuracy: 18.87%
-Epoch training time (s): 500.44422578811646
+Epoch: 45, Loss: 18.208359, Accuracy: 57.15%
+Epoch training time (s): 484.4736933708191
 Defense: isometry
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 15.458385, Accuracy: 17.43%
-Epoch training time (s): 500.4669885635376
+Epoch: 46, Loss: 23.535919, Accuracy: 92.13%
+Epoch training time (s): 489.68344807624817
 Defense: isometry
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 17.026890, Accuracy: 12.00%
-Epoch training time (s): 501.3422272205353
+Epoch: 47, Loss: 21.760497, Accuracy: 93.80%
+Epoch training time (s): 484.3377420902252
 Defense: isometry
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 15.755649, Accuracy: 23.22%
-Epoch training time (s): 498.3623774051666
+Epoch: 48, Loss: 16.497469, Accuracy: 84.19%
+Epoch training time (s): 484.90491223335266
 Defense: isometry
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 15.506425, Accuracy: 20.24%
-Epoch training time (s): 502.72361421585083
+Epoch: 49, Loss: 13.454656, Accuracy: 78.55%
+Epoch training time (s): 485.71216583251953
 Defense: isometry
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 15.823360, Accuracy: 28.95%
-Epoch training time (s): 500.24734330177307
+Epoch: 50, Loss: 17.804103, Accuracy: 83.33%
+Epoch training time (s): 497.829185962677
 Defense: isometry
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 15.350807, Accuracy: 21.14%
-Epoch training time (s): 504.70366048812866
-Training time (s): 25686.470213890076
+Epoch: 51, Loss: 8.213277, Accuracy: 93.09%
+Epoch training time (s): 512.697879076004
+Training time (s): 25063.983489751816
 /home/loic/iso_defense/utils/mnist_utils.py:20: RuntimeWarning: divide by zero encountered in log
   geo_mean = np.exp(np.log(array[i: i + window_size]).mean())
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_0
+name: cifar_resnet_isoreg/seed_5
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 0
-gpu_number: 6
+seed: 5
+gpu_number: 1
 load: True
 archi: resnet
 channels1: 32
@@ -464,7 +464,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -480,15 +480,15 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 2068.0/10000 (20.68%)
+Accuracy: 2827.0/10000 (28.27%)
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_1
+name: cifar_resnet_isoreg/seed_6
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 1
-gpu_number: 6
+seed: 6
+gpu_number: 1
 load: False
 archi: resnet
 channels1: 32
@@ -502,7 +502,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -520,418 +520,418 @@ Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.068451, Accuracy: 84.64%
-Epoch training time (s): 106.55183386802673
+Epoch: 1, Loss: 1.039622, Accuracy: 86.15%
+Epoch training time (s): 109.03432703018188
 Defense: isometry
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 2293.004639, Accuracy: 10.00%
-Epoch training time (s): 504.45761036872864
+Epoch: 2, Loss: 566.282088, Accuracy: 10.00%
+Epoch training time (s): 515.8477954864502
 Defense: isometry
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 67.834871, Accuracy: 10.00%
-Epoch training time (s): 503.24445843696594
+Epoch: 3, Loss: 104.704213, Accuracy: 10.01%
+Epoch training time (s): 512.1307687759399
 Defense: isometry
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 21.518720, Accuracy: 10.00%
-Epoch training time (s): 500.0332922935486
+Epoch: 4, Loss: 45.248865, Accuracy: 10.00%
+Epoch training time (s): 513.1234061717987
 Defense: isometry
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 23.466880, Accuracy: 10.00%
-Epoch training time (s): 500.5993912220001
+Epoch: 5, Loss: 21.021030, Accuracy: 85.93%
+Epoch training time (s): 505.24845242500305
 Defense: isometry
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 30.088397, Accuracy: 10.00%
-Epoch training time (s): 497.16905426979065
+Epoch: 6, Loss: 25.725875, Accuracy: 10.10%
+Epoch training time (s): 485.7829706668854
 Defense: isometry
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 18.526582, Accuracy: 10.06%
-Epoch training time (s): 500.09954833984375
+Epoch: 7, Loss: 13.433417, Accuracy: 10.38%
+Epoch training time (s): 490.0023980140686
 Defense: isometry
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 17.517671, Accuracy: 10.01%
-Epoch training time (s): 496.6427068710327
+Epoch: 8, Loss: 10.222267, Accuracy: 88.72%
+Epoch training time (s): 512.9626612663269
 Defense: isometry
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 15.893720, Accuracy: 10.11%
-Epoch training time (s): 497.4748251438141
+Epoch: 9, Loss: 7.396832, Accuracy: 87.95%
+Epoch training time (s): 496.9857828617096
 Defense: isometry
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 16.849619, Accuracy: 10.11%
-Epoch training time (s): 497.8202474117279
+Epoch: 10, Loss: 10.703831, Accuracy: 10.01%
+Epoch training time (s): 489.11186504364014
 Defense: isometry
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 28.602596, Accuracy: 10.00%
-Epoch training time (s): 492.22369503974915
+Epoch: 11, Loss: 5.246072, Accuracy: 89.85%
+Epoch training time (s): 503.9287540912628
 Defense: isometry
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 27.226687, Accuracy: 10.00%
-Epoch training time (s): 496.7053039073944
+Epoch: 12, Loss: 3.909354, Accuracy: 89.74%
+Epoch training time (s): 488.06468653678894
 Defense: isometry
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 24.504738, Accuracy: 10.06%
-Epoch training time (s): 494.5903182029724
+Epoch: 13, Loss: 4.603138, Accuracy: 91.02%
+Epoch training time (s): 490.29413318634033
 Defense: isometry
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 21.132340, Accuracy: 11.45%
-Epoch training time (s): 500.48368287086487
+Epoch: 14, Loss: 3.617991, Accuracy: 89.75%
+Epoch training time (s): 485.84023666381836
 Defense: isometry
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 23.676620, Accuracy: 10.25%
-Epoch training time (s): 499.5236098766327
+Epoch: 15, Loss: 3.107168, Accuracy: 91.28%
+Epoch training time (s): 515.9236290454865
 Defense: isometry
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 23.923685, Accuracy: 10.40%
-Epoch training time (s): 500.91674637794495
+Epoch: 16, Loss: 4.109393, Accuracy: 88.72%
+Epoch training time (s): 491.4439311027527
 Defense: isometry
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 22.410042, Accuracy: 10.11%
-Epoch training time (s): 498.02006220817566
+Epoch: 17, Loss: 4.842376, Accuracy: 91.90%
+Epoch training time (s): 484.3612468242645
 Defense: isometry
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 22.343443, Accuracy: 10.30%
-Epoch training time (s): 497.80848383903503
+Epoch: 18, Loss: 2.980795, Accuracy: 92.06%
+Epoch training time (s): 484.2781844139099
 Defense: isometry
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 26.280235, Accuracy: 10.06%
-Epoch training time (s): 499.75711488723755
+Epoch: 19, Loss: 3.825951, Accuracy: 91.75%
+Epoch training time (s): 485.5287013053894
 Defense: isometry
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 27.376727, Accuracy: 10.01%
-Epoch training time (s): 501.8821818828583
+Epoch: 20, Loss: 3.705509, Accuracy: 91.48%
+Epoch training time (s): 487.21256828308105
 Defense: isometry
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 27.594008, Accuracy: 10.03%
-Epoch training time (s): 499.02707862854004
+Epoch: 21, Loss: 3.130549, Accuracy: 92.39%
+Epoch training time (s): 488.82928371429443
 Defense: isometry
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 21.435032, Accuracy: 10.03%
-Epoch training time (s): 498.78184032440186
+Epoch: 22, Loss: 2.640477, Accuracy: 91.80%
+Epoch training time (s): 492.10997581481934
 Defense: isometry
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 17.823555, Accuracy: 10.04%
-Epoch training time (s): 499.52498960494995
+Epoch: 23, Loss: 3.367282, Accuracy: 92.58%
+Epoch training time (s): 482.1496317386627
 Defense: isometry
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 15.782942, Accuracy: 10.19%
-Epoch training time (s): 497.1117355823517
+Epoch: 24, Loss: 2.632715, Accuracy: 93.06%
+Epoch training time (s): 478.26127195358276
 Defense: isometry
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 14.641437, Accuracy: 10.03%
-Epoch training time (s): 498.4019043445587
+Epoch: 25, Loss: 2.700015, Accuracy: 92.42%
+Epoch training time (s): 479.39373993873596
 Defense: isometry
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 14.099216, Accuracy: 10.00%
-Epoch training time (s): 499.8804030418396
+Epoch: 26, Loss: 2.135450, Accuracy: 92.40%
+Epoch training time (s): 479.9991419315338
 Defense: isometry
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 17.856581, Accuracy: 10.00%
-Epoch training time (s): 490.40827536582947
+Epoch: 27, Loss: 2.749575, Accuracy: 93.29%
+Epoch training time (s): 477.1026499271393
 Defense: isometry
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 15.853672, Accuracy: 10.00%
-Epoch training time (s): 485.62856698036194
+Epoch: 28, Loss: 3.157651, Accuracy: 93.11%
+Epoch training time (s): 476.4193196296692
 Defense: isometry
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 19.735282, Accuracy: 10.00%
-Epoch training time (s): 482.2235953807831
+Epoch: 29, Loss: 2.170980, Accuracy: 93.04%
+Epoch training time (s): 479.71112155914307
 Defense: isometry
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 20.666726, Accuracy: 10.00%
-Epoch training time (s): 490.2864775657654
+Epoch: 30, Loss: 2.633340, Accuracy: 92.54%
+Epoch training time (s): 477.69474601745605
 Defense: isometry
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 19.438496, Accuracy: 10.00%
-Epoch training time (s): 499.9241497516632
+Epoch: 31, Loss: 2.197339, Accuracy: 93.54%
+Epoch training time (s): 475.3964943885803
 Defense: isometry
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 15.468345, Accuracy: 10.00%
-Epoch training time (s): 499.23327374458313
+Epoch: 32, Loss: 2.255778, Accuracy: 93.64%
+Epoch training time (s): 476.53638648986816
 Defense: isometry
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 15.786211, Accuracy: 10.00%
-Epoch training time (s): 497.19578194618225
+Epoch: 33, Loss: 2.225616, Accuracy: 93.62%
+Epoch training time (s): 478.2032117843628
 Defense: isometry
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 16.561608, Accuracy: 10.00%
-Epoch training time (s): 496.0836269855499
+Epoch: 34, Loss: 2.127888, Accuracy: 93.67%
+Epoch training time (s): 476.0734040737152
 Defense: isometry
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 18.627851, Accuracy: 10.00%
-Epoch training time (s): 496.3010890483856
+Epoch: 35, Loss: 2.612739, Accuracy: 93.84%
+Epoch training time (s): 475.7435486316681
 Defense: isometry
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 23.385164, Accuracy: 10.00%
-Epoch training time (s): 498.28911304473877
+Epoch: 36, Loss: 2.398503, Accuracy: 92.97%
+Epoch training time (s): 475.66511273384094
 Defense: isometry
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 23.297408, Accuracy: 10.02%
-Epoch training time (s): 495.19093346595764
+Epoch: 37, Loss: 2.543866, Accuracy: 92.54%
+Epoch training time (s): 480.7922034263611
 Defense: isometry
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 20.100447, Accuracy: 10.07%
-Epoch training time (s): 497.1068024635315
+Epoch: 38, Loss: 2.603659, Accuracy: 94.12%
+Epoch training time (s): 480.5352973937988
 Defense: isometry
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 16.387868, Accuracy: 10.04%
-Epoch training time (s): 495.7618293762207
+Epoch: 39, Loss: 2.269722, Accuracy: 94.03%
+Epoch training time (s): 478.55273365974426
 Defense: isometry
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 16.285573, Accuracy: 10.25%
-Epoch training time (s): 498.23765993118286
+Epoch: 40, Loss: 2.408968, Accuracy: 94.06%
+Epoch training time (s): 485.8145549297333
 Defense: isometry
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 14.257840, Accuracy: 10.69%
-Epoch training time (s): 488.9809322357178
+Epoch: 41, Loss: 2.345064, Accuracy: 93.81%
+Epoch training time (s): 487.74758315086365
 Defense: isometry
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 15.172278, Accuracy: 10.17%
-Epoch training time (s): 486.50995564460754
+Epoch: 42, Loss: 2.306402, Accuracy: 93.71%
+Epoch training time (s): 505.2798068523407
 Defense: isometry
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 15.959929, Accuracy: 10.07%
-Epoch training time (s): 487.5754656791687
+Epoch: 43, Loss: 1.938868, Accuracy: 94.11%
+Epoch training time (s): 502.9074242115021
 Defense: isometry
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 14.693889, Accuracy: 10.17%
-Epoch training time (s): 487.1940767765045
+Epoch: 44, Loss: 1.807259, Accuracy: 94.05%
+Epoch training time (s): 496.85470509529114
 Defense: isometry
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 15.442979, Accuracy: 10.09%
-Epoch training time (s): 486.30745577812195
+Epoch: 45, Loss: 1.880146, Accuracy: 94.26%
+Epoch training time (s): 496.8944435119629
 Defense: isometry
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 14.948838, Accuracy: 10.19%
-Epoch training time (s): 489.294766664505
+Epoch: 46, Loss: 2.162329, Accuracy: 94.17%
+Epoch training time (s): 496.81502771377563
 Defense: isometry
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 13.978529, Accuracy: 10.99%
-Epoch training time (s): 489.3797883987427
+Epoch: 47, Loss: 1.972219, Accuracy: 93.30%
+Epoch training time (s): 494.0176594257355
 Defense: isometry
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 15.427053, Accuracy: 11.41%
-Epoch training time (s): 486.89920449256897
+Epoch: 48, Loss: 1.842539, Accuracy: 94.11%
+Epoch training time (s): 474.394686460495
 Defense: isometry
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 15.751313, Accuracy: 10.53%
-Epoch training time (s): 487.2686195373535
+Epoch: 49, Loss: 2.196967, Accuracy: 94.25%
+Epoch training time (s): 467.1811673641205
 Defense: isometry
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 14.760169, Accuracy: 10.13%
-Epoch training time (s): 487.44080996513367
+Epoch: 50, Loss: 1.742850, Accuracy: 94.12%
+Epoch training time (s): 462.115181684494
 Defense: isometry
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 14.429970, Accuracy: 10.47%
-Epoch training time (s): 487.30557560920715
-Training time (s): 24871.046657562256
+Epoch: 51, Loss: 2.143024, Accuracy: 94.51%
+Epoch training time (s): 461.7516522407532
+Training time (s): 24492.88224196434
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_1
+name: cifar_resnet_isoreg/seed_6
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 1
-gpu_number: 6
+seed: 6
+gpu_number: 1
 load: True
 archi: resnet
 channels1: 32
@@ -945,7 +945,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -961,15 +961,15 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 1116.0/10000 (11.16%)
+Accuracy: 2559.0/10000 (25.59%)
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_2
+name: cifar_resnet_isoreg/seed_7
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 2
-gpu_number: 6
+seed: 7
+gpu_number: 1
 load: False
 archi: resnet
 channels1: 32
@@ -983,7 +983,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -1001,418 +1001,418 @@ Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.104953, Accuracy: 84.58%
-Epoch training time (s): 103.26612114906311
+Epoch: 1, Loss: 1.013253, Accuracy: 85.95%
+Epoch training time (s): 103.37646484375
 Defense: isometry
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 5098.127720, Accuracy: 10.00%
-Epoch training time (s): 486.982896566391
+Epoch: 2, Loss: 662.887335, Accuracy: 10.00%
+Epoch training time (s): 463.4455690383911
 Defense: isometry
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 56.063517, Accuracy: 10.00%
-Epoch training time (s): 486.2506470680237
+Epoch: 3, Loss: 32.055714, Accuracy: 82.22%
+Epoch training time (s): 456.59664368629456
 Defense: isometry
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 19.297848, Accuracy: 10.00%
-Epoch training time (s): 487.8377628326416
+Epoch: 4, Loss: 37.131806, Accuracy: 10.45%
+Epoch training time (s): 451.75662064552307
 Defense: isometry
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 21.434047, Accuracy: 10.00%
-Epoch training time (s): 486.30555391311646
+Epoch: 5, Loss: 21.975665, Accuracy: 88.02%
+Epoch training time (s): 451.0235667228699
 Defense: isometry
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 16.631088, Accuracy: 10.00%
-Epoch training time (s): 485.8598473072052
+Epoch: 6, Loss: 27.175188, Accuracy: 10.00%
+Epoch training time (s): 452.3656826019287
 Defense: isometry
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 16.663679, Accuracy: 10.00%
-Epoch training time (s): 485.23803091049194
+Epoch: 7, Loss: 14.217576, Accuracy: 89.20%
+Epoch training time (s): 454.75541973114014
 Defense: isometry
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 15.110999, Accuracy: 10.00%
-Epoch training time (s): 487.5811457633972
+Epoch: 8, Loss: 12.422502, Accuracy: 86.58%
+Epoch training time (s): 451.5449914932251
 Defense: isometry
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 15.771284, Accuracy: 10.00%
-Epoch training time (s): 488.09838604927063
+Epoch: 9, Loss: 12.071887, Accuracy: 87.32%
+Epoch training time (s): 441.01886200904846
 Defense: isometry
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 15.646749, Accuracy: 10.01%
-Epoch training time (s): 486.19251704216003
+Epoch: 10, Loss: 7.606516, Accuracy: 87.55%
+Epoch training time (s): 444.93251180648804
 Defense: isometry
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 13.893726, Accuracy: 10.06%
-Epoch training time (s): 488.3313698768616
+Epoch: 11, Loss: 12.300492, Accuracy: 85.48%
+Epoch training time (s): 446.7186789512634
 Defense: isometry
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 13.546118, Accuracy: 10.31%
-Epoch training time (s): 491.40142726898193
+Epoch: 12, Loss: 12.152489, Accuracy: 79.02%
+Epoch training time (s): 445.5883820056915
 Defense: isometry
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 14.558039, Accuracy: 10.20%
-Epoch training time (s): 491.23558950424194
+Epoch: 13, Loss: 14.819926, Accuracy: 12.63%
+Epoch training time (s): 446.139390707016
 Defense: isometry
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 14.154213, Accuracy: 10.44%
-Epoch training time (s): 488.3055057525635
+Epoch: 14, Loss: 15.199209, Accuracy: 89.77%
+Epoch training time (s): 447.4797124862671
 Defense: isometry
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 15.347315, Accuracy: 10.55%
-Epoch training time (s): 485.2457754611969
+Epoch: 15, Loss: 10.669133, Accuracy: 90.12%
+Epoch training time (s): 445.6561830043793
 Defense: isometry
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 16.676075, Accuracy: 10.63%
-Epoch training time (s): 486.31003308296204
+Epoch: 16, Loss: 7.559828, Accuracy: 90.91%
+Epoch training time (s): 481.43252515792847
 Defense: isometry
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 15.154548, Accuracy: 10.62%
-Epoch training time (s): 483.99701499938965
+Epoch: 17, Loss: 4.408261, Accuracy: 90.83%
+Epoch training time (s): 488.9092206954956
 Defense: isometry
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 15.113547, Accuracy: 10.02%
-Epoch training time (s): 482.13668608665466
+Epoch: 18, Loss: 5.847927, Accuracy: 90.07%
+Epoch training time (s): 490.32999777793884
 Defense: isometry
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 19.600135, Accuracy: 10.00%
-Epoch training time (s): 485.02289175987244
+Epoch: 19, Loss: 6.576779, Accuracy: 78.47%
+Epoch training time (s): 492.1127552986145
 Defense: isometry
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 15.054008, Accuracy: 10.00%
-Epoch training time (s): 485.3107542991638
+Epoch: 20, Loss: 7.467033, Accuracy: 82.51%
+Epoch training time (s): 491.68546319007874
 Defense: isometry
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 17.234084, Accuracy: 10.02%
-Epoch training time (s): 486.0852267742157
+Epoch: 21, Loss: 11.426789, Accuracy: 79.92%
+Epoch training time (s): 486.1418426036835
 Defense: isometry
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 16.669786, Accuracy: 10.02%
-Epoch training time (s): 484.1563310623169
+Epoch: 22, Loss: 7.116718, Accuracy: 80.96%
+Epoch training time (s): 494.2567346096039
 Defense: isometry
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 14.518467, Accuracy: 10.16%
-Epoch training time (s): 484.704274892807
+Epoch: 23, Loss: 7.730011, Accuracy: 82.13%
+Epoch training time (s): 490.26844668388367
 Defense: isometry
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 14.566409, Accuracy: 10.11%
-Epoch training time (s): 473.7196581363678
+Epoch: 24, Loss: 10.076952, Accuracy: 89.27%
+Epoch training time (s): 488.0142340660095
 Defense: isometry
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 15.767589, Accuracy: 10.11%
-Epoch training time (s): 474.0178635120392
+Epoch: 25, Loss: 13.698533, Accuracy: 92.41%
+Epoch training time (s): 487.33005118370056
 Defense: isometry
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 21.404262, Accuracy: 10.05%
-Epoch training time (s): 477.554087638855
+Epoch: 26, Loss: 9.268838, Accuracy: 82.32%
+Epoch training time (s): 487.0732617378235
 Defense: isometry
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 17.022730, Accuracy: 10.13%
-Epoch training time (s): 483.2282905578613
+Epoch: 27, Loss: 5.606873, Accuracy: 81.52%
+Epoch training time (s): 484.819358587265
 Defense: isometry
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 18.736179, Accuracy: 10.03%
-Epoch training time (s): 483.9415485858917
+Epoch: 28, Loss: 5.638079, Accuracy: 89.81%
+Epoch training time (s): 467.4859058856964
 Defense: isometry
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 17.470478, Accuracy: 10.06%
-Epoch training time (s): 483.4105396270752
+Epoch: 29, Loss: 6.277704, Accuracy: 89.93%
+Epoch training time (s): 449.09858989715576
 Defense: isometry
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 17.900717, Accuracy: 10.00%
-Epoch training time (s): 487.8598783016205
+Epoch: 30, Loss: 9.335191, Accuracy: 91.76%
+Epoch training time (s): 472.7155439853668
 Defense: isometry
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 23.602529, Accuracy: 10.31%
-Epoch training time (s): 491.8636598587036
+Epoch: 31, Loss: 7.200902, Accuracy: 79.28%
+Epoch training time (s): 450.52115654945374
 Defense: isometry
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 18.174825, Accuracy: 10.07%
-Epoch training time (s): 484.2541992664337
+Epoch: 32, Loss: 4.545776, Accuracy: 91.66%
+Epoch training time (s): 451.0766706466675
 Defense: isometry
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 21.423666, Accuracy: 10.56%
-Epoch training time (s): 476.2743728160858
+Epoch: 33, Loss: 5.750142, Accuracy: 92.29%
+Epoch training time (s): 484.76828622817993
 Defense: isometry
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 26.746778, Accuracy: 10.03%
-Epoch training time (s): 474.3414115905762
+Epoch: 34, Loss: 6.804863, Accuracy: 83.09%
+Epoch training time (s): 488.81607484817505
 Defense: isometry
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 19.681585, Accuracy: 10.15%
-Epoch training time (s): 466.173220872879
+Epoch: 35, Loss: 5.755138, Accuracy: 92.37%
+Epoch training time (s): 492.85819935798645
 Defense: isometry
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 18.186551, Accuracy: 10.26%
-Epoch training time (s): 470.9415581226349
+Epoch: 36, Loss: 7.955703, Accuracy: 81.44%
+Epoch training time (s): 488.41443729400635
 Defense: isometry
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 22.866358, Accuracy: 10.62%
-Epoch training time (s): 482.3547508716583
+Epoch: 37, Loss: 4.664019, Accuracy: 93.25%
+Epoch training time (s): 489.77172327041626
 Defense: isometry
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 24.617019, Accuracy: 10.01%
-Epoch training time (s): 483.4923310279846
+Epoch: 38, Loss: 5.722008, Accuracy: 92.26%
+Epoch training time (s): 491.6737368106842
 Defense: isometry
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 30.811290, Accuracy: 10.18%
-Epoch training time (s): 482.35399317741394
+Epoch: 39, Loss: 6.372693, Accuracy: 92.95%
+Epoch training time (s): 491.77739787101746
 Defense: isometry
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 19.891059, Accuracy: 10.07%
-Epoch training time (s): 481.1719808578491
+Epoch: 40, Loss: 5.174531, Accuracy: 93.08%
+Epoch training time (s): 491.5688042640686
 Defense: isometry
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 21.062905, Accuracy: 10.09%
-Epoch training time (s): 478.5118088722229
+Epoch: 41, Loss: 4.753417, Accuracy: 92.83%
+Epoch training time (s): 490.37879514694214
 Defense: isometry
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 17.524167, Accuracy: 10.68%
-Epoch training time (s): 481.55603671073914
+Epoch: 42, Loss: 5.057169, Accuracy: 92.84%
+Epoch training time (s): 492.7761480808258
 Defense: isometry
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 18.886192, Accuracy: 10.13%
-Epoch training time (s): 484.0025112628937
+Epoch: 43, Loss: 5.058876, Accuracy: 93.34%
+Epoch training time (s): 491.6596381664276
 Defense: isometry
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 18.495599, Accuracy: 11.71%
-Epoch training time (s): 488.7710897922516
+Epoch: 44, Loss: 10.376381, Accuracy: 93.01%
+Epoch training time (s): 491.7059717178345
 Defense: isometry
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 18.173849, Accuracy: 10.16%
-Epoch training time (s): 490.38287138938904
+Epoch: 45, Loss: 7.649246, Accuracy: 94.02%
+Epoch training time (s): 490.4551899433136
 Defense: isometry
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 16.241210, Accuracy: 12.28%
-Epoch training time (s): 481.85067486763
+Epoch: 46, Loss: 7.556242, Accuracy: 93.67%
+Epoch training time (s): 488.8748824596405
 Defense: isometry
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 20.435810, Accuracy: 10.57%
-Epoch training time (s): 483.38326597213745
+Epoch: 47, Loss: 10.111181, Accuracy: 93.48%
+Epoch training time (s): 489.58085775375366
 Defense: isometry
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 15.741417, Accuracy: 12.35%
-Epoch training time (s): 484.10130643844604
+Epoch: 48, Loss: 4.947965, Accuracy: 93.69%
+Epoch training time (s): 489.1950612068176
 Defense: isometry
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 19.420792, Accuracy: 11.38%
-Epoch training time (s): 486.4397053718567
+Epoch: 49, Loss: 6.050367, Accuracy: 93.55%
+Epoch training time (s): 482.0465853214264
 Defense: isometry
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 21.382744, Accuracy: 12.16%
-Epoch training time (s): 487.61428904533386
+Epoch: 50, Loss: 7.873274, Accuracy: 92.99%
+Epoch training time (s): 485.001220703125
 Defense: isometry
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 18.752503, Accuracy: 12.33%
-Epoch training time (s): 483.7683458328247
-Training time (s): 24298.76109313965
+Epoch: 51, Loss: 5.200639, Accuracy: 93.68%
+Epoch training time (s): 490.58698296546936
+Training time (s): 23862.27734208107
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_2
+name: cifar_resnet_isoreg/seed_7
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 2
-gpu_number: 6
+seed: 7
+gpu_number: 1
 load: True
 archi: resnet
 channels1: 32
@@ -1426,7 +1426,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -1442,15 +1442,15 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 1058.0/10000 (10.58%)
+Accuracy: 2778.0/10000 (27.78%)
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_3
+name: cifar_resnet_isoreg/seed_8
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 3
-gpu_number: 6
+seed: 8
+gpu_number: 1
 load: False
 archi: resnet
 channels1: 32
@@ -1464,7 +1464,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -1482,418 +1482,418 @@ Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.098353, Accuracy: 83.39%
-Epoch training time (s): 107.4193103313446
+Epoch: 1, Loss: 1.114427, Accuracy: 82.84%
+Epoch training time (s): 106.71000337600708
 Defense: isometry
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 1799.359627, Accuracy: 10.03%
-Epoch training time (s): 487.5587067604065
+Epoch: 2, Loss: 1223.810261, Accuracy: 10.00%
+Epoch training time (s): 491.57548785209656
 Defense: isometry
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 80.829051, Accuracy: 10.00%
-Epoch training time (s): 488.5552976131439
+Epoch: 3, Loss: 49.320013, Accuracy: 70.65%
+Epoch training time (s): 489.549427986145
 Defense: isometry
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 18.720568, Accuracy: 10.00%
-Epoch training time (s): 482.0522971153259
+Epoch: 4, Loss: 44.620531, Accuracy: 10.91%
+Epoch training time (s): 490.8188796043396
 Defense: isometry
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 17.306199, Accuracy: 10.03%
-Epoch training time (s): 485.2337095737457
+Epoch: 5, Loss: 36.960876, Accuracy: 86.20%
+Epoch training time (s): 491.6796452999115
 Defense: isometry
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 19.856073, Accuracy: 10.00%
-Epoch training time (s): 482.6840567588806
+Epoch: 6, Loss: 27.710784, Accuracy: 10.00%
+Epoch training time (s): 490.20914030075073
 Defense: isometry
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 17.805337, Accuracy: 10.00%
-Epoch training time (s): 481.4401443004608
+Epoch: 7, Loss: 9.190716, Accuracy: 87.94%
+Epoch training time (s): 492.3619546890259
 Defense: isometry
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 15.311987, Accuracy: 10.00%
-Epoch training time (s): 482.9557228088379
+Epoch: 8, Loss: 6.229163, Accuracy: 89.19%
+Epoch training time (s): 490.1037220954895
 Defense: isometry
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 16.128220, Accuracy: 10.00%
-Epoch training time (s): 473.8973853588104
+Epoch: 9, Loss: 6.868584, Accuracy: 89.13%
+Epoch training time (s): 487.277268409729
 Defense: isometry
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 15.452099, Accuracy: 10.00%
-Epoch training time (s): 474.2470054626465
+Epoch: 10, Loss: 5.941020, Accuracy: 89.68%
+Epoch training time (s): 490.4360291957855
 Defense: isometry
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 16.839573, Accuracy: 10.00%
-Epoch training time (s): 483.3223865032196
+Epoch: 11, Loss: 4.968594, Accuracy: 89.28%
+Epoch training time (s): 490.5273606777191
 Defense: isometry
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 18.055335, Accuracy: 10.00%
-Epoch training time (s): 482.41772866249084
+Epoch: 12, Loss: 4.680385, Accuracy: 90.89%
+Epoch training time (s): 488.5920286178589
 Defense: isometry
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 18.956363, Accuracy: 10.00%
-Epoch training time (s): 483.0176408290863
+Epoch: 13, Loss: 4.376511, Accuracy: 90.11%
+Epoch training time (s): 490.3966701030731
 Defense: isometry
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 18.615156, Accuracy: 10.03%
-Epoch training time (s): 479.39047861099243
+Epoch: 14, Loss: 4.451831, Accuracy: 89.89%
+Epoch training time (s): 490.66312766075134
 Defense: isometry
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 16.971527, Accuracy: 10.24%
-Epoch training time (s): 479.50289726257324
+Epoch: 15, Loss: 5.570689, Accuracy: 90.64%
+Epoch training time (s): 490.96852684020996
 Defense: isometry
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 20.738335, Accuracy: 10.11%
-Epoch training time (s): 485.7976233959198
+Epoch: 16, Loss: 5.269231, Accuracy: 91.24%
+Epoch training time (s): 491.649827003479
 Defense: isometry
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 17.603806, Accuracy: 10.00%
-Epoch training time (s): 485.2118172645569
+Epoch: 17, Loss: 3.843803, Accuracy: 91.41%
+Epoch training time (s): 487.28576397895813
 Defense: isometry
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 15.242655, Accuracy: 10.01%
-Epoch training time (s): 483.3748471736908
+Epoch: 18, Loss: 4.074762, Accuracy: 91.37%
+Epoch training time (s): 491.466534614563
 Defense: isometry
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 14.285203, Accuracy: 10.27%
-Epoch training time (s): 486.62287974357605
+Epoch: 19, Loss: 3.972296, Accuracy: 91.75%
+Epoch training time (s): 489.24538564682007
 Defense: isometry
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 22.191111, Accuracy: 10.02%
-Epoch training time (s): 491.3717665672302
+Epoch: 20, Loss: 3.807858, Accuracy: 91.88%
+Epoch training time (s): 486.9747705459595
 Defense: isometry
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 15.840607, Accuracy: 10.07%
-Epoch training time (s): 484.6701514720917
+Epoch: 21, Loss: 4.867949, Accuracy: 92.21%
+Epoch training time (s): 489.17145562171936
 Defense: isometry
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 20.042961, Accuracy: 10.04%
-Epoch training time (s): 491.81545305252075
+Epoch: 22, Loss: 3.060162, Accuracy: 92.11%
+Epoch training time (s): 489.9871666431427
 Defense: isometry
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 15.685143, Accuracy: 10.00%
-Epoch training time (s): 486.52100133895874
+Epoch: 23, Loss: 6.054256, Accuracy: 92.17%
+Epoch training time (s): 488.561639547348
 Defense: isometry
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 16.287630, Accuracy: 10.11%
-Epoch training time (s): 483.4577121734619
+Epoch: 24, Loss: 3.707190, Accuracy: 92.35%
+Epoch training time (s): 449.415625333786
 Defense: isometry
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 19.588241, Accuracy: 10.00%
-Epoch training time (s): 486.4982147216797
+Epoch: 25, Loss: 4.889367, Accuracy: 92.55%
+Epoch training time (s): 440.5054931640625
 Defense: isometry
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 17.017139, Accuracy: 10.01%
-Epoch training time (s): 481.0701470375061
+Epoch: 26, Loss: 2.844448, Accuracy: 92.58%
+Epoch training time (s): 440.100168466568
 Defense: isometry
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 16.395829, Accuracy: 10.19%
-Epoch training time (s): 484.0144877433777
+Epoch: 27, Loss: 3.754362, Accuracy: 93.00%
+Epoch training time (s): 436.95313239097595
 Defense: isometry
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 15.082568, Accuracy: 10.05%
-Epoch training time (s): 482.0331301689148
+Epoch: 28, Loss: 3.530876, Accuracy: 92.67%
+Epoch training time (s): 441.3459749221802
 Defense: isometry
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 14.737940, Accuracy: 10.09%
-Epoch training time (s): 480.9684054851532
+Epoch: 29, Loss: 4.229207, Accuracy: 92.60%
+Epoch training time (s): 439.5915584564209
 Defense: isometry
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 14.789593, Accuracy: 10.17%
-Epoch training time (s): 489.96594285964966
+Epoch: 30, Loss: 3.669706, Accuracy: 93.00%
+Epoch training time (s): 437.05292534828186
 Defense: isometry
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 15.868664, Accuracy: 12.24%
-Epoch training time (s): 490.07815194129944
+Epoch: 31, Loss: 3.998220, Accuracy: 93.44%
+Epoch training time (s): 439.10440587997437
 Defense: isometry
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 15.462636, Accuracy: 12.02%
-Epoch training time (s): 491.85096073150635
+Epoch: 32, Loss: 3.638277, Accuracy: 92.70%
+Epoch training time (s): 437.21248388290405
 Defense: isometry
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 16.613609, Accuracy: 10.00%
-Epoch training time (s): 503.90615010261536
+Epoch: 33, Loss: 4.441468, Accuracy: 93.44%
+Epoch training time (s): 440.7371389865875
 Defense: isometry
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 15.414539, Accuracy: 14.41%
-Epoch training time (s): 494.1711094379425
+Epoch: 34, Loss: 4.731787, Accuracy: 93.28%
+Epoch training time (s): 440.20138001441956
 Defense: isometry
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 14.334683, Accuracy: 10.98%
-Epoch training time (s): 491.3085677623749
+Epoch: 35, Loss: 4.739928, Accuracy: 93.50%
+Epoch training time (s): 441.5356001853943
 Defense: isometry
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 13.211660, Accuracy: 13.10%
-Epoch training time (s): 495.9476282596588
+Epoch: 36, Loss: 4.375721, Accuracy: 92.76%
+Epoch training time (s): 439.22714018821716
 Defense: isometry
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 13.631409, Accuracy: 12.60%
-Epoch training time (s): 504.20799803733826
+Epoch: 37, Loss: 4.378143, Accuracy: 93.75%
+Epoch training time (s): 440.3179008960724
 Defense: isometry
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 13.470411, Accuracy: 13.61%
-Epoch training time (s): 500.7732787132263
+Epoch: 38, Loss: 3.344286, Accuracy: 93.21%
+Epoch training time (s): 436.3172197341919
 Defense: isometry
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 13.798958, Accuracy: 10.67%
-Epoch training time (s): 500.25802755355835
+Epoch: 39, Loss: 3.717581, Accuracy: 93.51%
+Epoch training time (s): 440.41509652137756
 Defense: isometry
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 13.341898, Accuracy: 16.65%
-Epoch training time (s): 499.99808263778687
+Epoch: 40, Loss: 3.997698, Accuracy: 93.81%
+Epoch training time (s): 437.4300045967102
 Defense: isometry
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 13.563734, Accuracy: 11.49%
-Epoch training time (s): 503.5860812664032
+Epoch: 41, Loss: 3.693115, Accuracy: 93.05%
+Epoch training time (s): 438.4038050174713
 Defense: isometry
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 14.116228, Accuracy: 13.07%
-Epoch training time (s): 501.4529814720154
+Epoch: 42, Loss: 3.136522, Accuracy: 93.92%
+Epoch training time (s): 436.2293140888214
 Defense: isometry
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 14.363080, Accuracy: 12.53%
-Epoch training time (s): 506.4370222091675
+Epoch: 43, Loss: 4.052779, Accuracy: 92.81%
+Epoch training time (s): 439.0009078979492
 Defense: isometry
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 14.421039, Accuracy: 16.62%
-Epoch training time (s): 507.8238446712494
+Epoch: 44, Loss: 3.470734, Accuracy: 93.81%
+Epoch training time (s): 436.57836508750916
 Defense: isometry
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 14.609866, Accuracy: 14.46%
-Epoch training time (s): 507.9585838317871
+Epoch: 45, Loss: 4.318124, Accuracy: 93.90%
+Epoch training time (s): 437.4649908542633
 Defense: isometry
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 14.481873, Accuracy: 16.76%
-Epoch training time (s): 506.23945140838623
+Epoch: 46, Loss: 4.409378, Accuracy: 94.02%
+Epoch training time (s): 439.05335879325867
 Defense: isometry
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 15.445753, Accuracy: 13.05%
-Epoch training time (s): 501.5848217010498
+Epoch: 47, Loss: 3.863901, Accuracy: 93.16%
+Epoch training time (s): 438.74122190475464
 Defense: isometry
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 16.236021, Accuracy: 13.25%
-Epoch training time (s): 506.330685377121
+Epoch: 48, Loss: 3.582740, Accuracy: 93.93%
+Epoch training time (s): 433.86636447906494
 Defense: isometry
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 15.464541, Accuracy: 16.37%
-Epoch training time (s): 509.3280577659607
+Epoch: 49, Loss: 3.703105, Accuracy: 93.96%
+Epoch training time (s): 439.77634167671204
 Defense: isometry
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 16.933102, Accuracy: 13.78%
-Epoch training time (s): 507.39714312553406
+Epoch: 50, Loss: 4.374652, Accuracy: 93.45%
+Epoch training time (s): 443.91069078445435
 Defense: isometry
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 16.910827, Accuracy: 17.42%
-Epoch training time (s): 506.32995343208313
-Training time (s): 24678.837296009064
+Epoch: 51, Loss: 3.005911, Accuracy: 94.11%
+Epoch training time (s): 436.60021591186523
+Training time (s): 23187.913033246994
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_3
+name: cifar_resnet_isoreg/seed_8
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 3
-gpu_number: 6
+seed: 8
+gpu_number: 1
 load: True
 archi: resnet
 channels1: 32
@@ -1907,7 +1907,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -1923,15 +1923,15 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 1232.0/10000 (12.32%)
+Accuracy: 2765.0/10000 (27.65%)
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_4
+name: cifar_resnet_isoreg/seed_9
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 4
-gpu_number: 6
+seed: 9
+gpu_number: 1
 load: False
 archi: resnet
 channels1: 32
@@ -1945,7 +1945,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -1963,418 +1963,418 @@ Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.083862, Accuracy: 84.10%
-Epoch training time (s): 110.89665126800537
+Epoch: 1, Loss: 1.086922, Accuracy: 84.45%
+Epoch training time (s): 98.00659084320068
 Defense: isometry
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 1589.645744, Accuracy: 10.00%
-Epoch training time (s): 504.61246609687805
+Epoch: 2, Loss: 642.342129, Accuracy: 10.26%
+Epoch training time (s): 437.2889177799225
 Defense: isometry
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 18.681704, Accuracy: 80.42%
-Epoch training time (s): 502.04801058769226
+Epoch: 3, Loss: 84.884382, Accuracy: 53.46%
+Epoch training time (s): 439.1506984233856
 Defense: isometry
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 75.788104, Accuracy: 18.82%
-Epoch training time (s): 506.80264115333557
+Epoch: 4, Loss: 30.954180, Accuracy: 83.85%
+Epoch training time (s): 437.57060384750366
 Defense: isometry
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 20.609700, Accuracy: 18.13%
-Epoch training time (s): 500.8303253650665
+Epoch: 5, Loss: 20.057670, Accuracy: 11.20%
+Epoch training time (s): 435.9527292251587
 Defense: isometry
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 40.990012, Accuracy: 10.00%
-Epoch training time (s): 503.485604763031
+Epoch: 6, Loss: 11.080971, Accuracy: 85.96%
+Epoch training time (s): 435.61877703666687
 Defense: isometry
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 43.254022, Accuracy: 10.00%
-Epoch training time (s): 504.3516776561737
+Epoch: 7, Loss: 25.604592, Accuracy: 10.35%
+Epoch training time (s): 436.5639476776123
 Defense: isometry
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 24.944888, Accuracy: 10.00%
-Epoch training time (s): 497.3247127532959
+Epoch: 8, Loss: 9.636618, Accuracy: 87.71%
+Epoch training time (s): 434.67304372787476
 Defense: isometry
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 23.308962, Accuracy: 10.00%
-Epoch training time (s): 502.6068468093872
+Epoch: 9, Loss: 9.213934, Accuracy: 87.04%
+Epoch training time (s): 438.5608215332031
 Defense: isometry
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 31.056444, Accuracy: 10.00%
-Epoch training time (s): 500.98899602890015
+Epoch: 10, Loss: 5.614637, Accuracy: 88.54%
+Epoch training time (s): 437.50044322013855
 Defense: isometry
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 31.810111, Accuracy: 10.00%
-Epoch training time (s): 501.40641617774963
+Epoch: 11, Loss: 7.347238, Accuracy: 75.67%
+Epoch training time (s): 436.3414623737335
 Defense: isometry
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 25.131997, Accuracy: 10.00%
-Epoch training time (s): 498.2901129722595
+Epoch: 12, Loss: 12.045454, Accuracy: 88.76%
+Epoch training time (s): 437.1969528198242
 Defense: isometry
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 23.106624, Accuracy: 10.00%
-Epoch training time (s): 507.32074999809265
+Epoch: 13, Loss: 8.827815, Accuracy: 80.60%
+Epoch training time (s): 437.63266611099243
 Defense: isometry
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 20.437059, Accuracy: 10.00%
-Epoch training time (s): 499.4025926589966
+Epoch: 14, Loss: 13.196996, Accuracy: 79.58%
+Epoch training time (s): 438.14271545410156
 Defense: isometry
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 19.617847, Accuracy: 10.00%
-Epoch training time (s): 504.8207411766052
+Epoch: 15, Loss: 7.897588, Accuracy: 91.23%
+Epoch training time (s): 436.86443424224854
 Defense: isometry
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 17.619057, Accuracy: 10.02%
-Epoch training time (s): 506.49242210388184
+Epoch: 16, Loss: 14.740791, Accuracy: 75.84%
+Epoch training time (s): 436.56701922416687
 Defense: isometry
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 19.196624, Accuracy: 10.00%
-Epoch training time (s): 505.9174382686615
+Epoch: 17, Loss: 6.449079, Accuracy: 90.75%
+Epoch training time (s): 437.26061034202576
 Defense: isometry
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 21.777442, Accuracy: 10.00%
-Epoch training time (s): 505.94842052459717
+Epoch: 18, Loss: 4.695667, Accuracy: 78.99%
+Epoch training time (s): 436.5023956298828
 Defense: isometry
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 19.560966, Accuracy: 10.01%
-Epoch training time (s): 504.09592032432556
+Epoch: 19, Loss: 6.079655, Accuracy: 91.48%
+Epoch training time (s): 436.1513879299164
 Defense: isometry
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 21.847659, Accuracy: 10.00%
-Epoch training time (s): 506.6051061153412
+Epoch: 20, Loss: 8.083427, Accuracy: 90.70%
+Epoch training time (s): 435.3579008579254
 Defense: isometry
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 20.450566, Accuracy: 10.00%
-Epoch training time (s): 507.40170216560364
+Epoch: 21, Loss: 6.751871, Accuracy: 91.09%
+Epoch training time (s): 436.29291439056396
 Defense: isometry
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 21.921991, Accuracy: 10.00%
-Epoch training time (s): 504.1684114933014
+Epoch: 22, Loss: 11.673919, Accuracy: 54.35%
+Epoch training time (s): 437.34266805648804
 Defense: isometry
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 23.616296, Accuracy: 10.00%
-Epoch training time (s): 507.2465181350708
+Epoch: 23, Loss: 8.126439, Accuracy: 80.64%
+Epoch training time (s): 434.54177808761597
 Defense: isometry
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 23.345429, Accuracy: 10.00%
-Epoch training time (s): 510.14192390441895
+Epoch: 24, Loss: 16.224523, Accuracy: 81.08%
+Epoch training time (s): 437.720627784729
 Defense: isometry
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 33.045546, Accuracy: 10.00%
-Epoch training time (s): 506.7789490222931
+Epoch: 25, Loss: 10.568347, Accuracy: 91.52%
+Epoch training time (s): 438.89998054504395
 Defense: isometry
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 29.020749, Accuracy: 10.00%
-Epoch training time (s): 505.438679933548
+Epoch: 26, Loss: 8.561316, Accuracy: 80.16%
+Epoch training time (s): 440.0607542991638
 Defense: isometry
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 31.813146, Accuracy: 10.00%
-Epoch training time (s): 505.1343970298767
+Epoch: 27, Loss: 16.023166, Accuracy: 91.06%
+Epoch training time (s): 433.60769033432007
 Defense: isometry
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 25.953827, Accuracy: 10.00%
-Epoch training time (s): 505.5951294898987
+Epoch: 28, Loss: 6.643066, Accuracy: 92.04%
+Epoch training time (s): 436.25840044021606
 Defense: isometry
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 26.040578, Accuracy: 10.00%
-Epoch training time (s): 506.99331426620483
+Epoch: 29, Loss: 6.911349, Accuracy: 89.88%
+Epoch training time (s): 437.86913442611694
 Defense: isometry
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 24.341421, Accuracy: 10.00%
-Epoch training time (s): 503.8327341079712
+Epoch: 30, Loss: 6.753825, Accuracy: 83.38%
+Epoch training time (s): 437.5488336086273
 Defense: isometry
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 21.468756, Accuracy: 10.00%
-Epoch training time (s): 507.89259004592896
+Epoch: 31, Loss: 4.604606, Accuracy: 91.51%
+Epoch training time (s): 439.009370803833
 Defense: isometry
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 23.574590, Accuracy: 10.00%
-Epoch training time (s): 507.1221477985382
+Epoch: 32, Loss: 5.915654, Accuracy: 82.87%
+Epoch training time (s): 435.9627501964569
 Defense: isometry
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 19.506646, Accuracy: 10.00%
-Epoch training time (s): 508.07054352760315
+Epoch: 33, Loss: 6.658856, Accuracy: 91.82%
+Epoch training time (s): 437.30445861816406
 Defense: isometry
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 18.199657, Accuracy: 10.00%
-Epoch training time (s): 501.38693618774414
+Epoch: 34, Loss: 4.503754, Accuracy: 91.67%
+Epoch training time (s): 434.77939081192017
 Defense: isometry
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 26.380841, Accuracy: 10.00%
-Epoch training time (s): 506.693053483963
+Epoch: 35, Loss: 5.223788, Accuracy: 92.72%
+Epoch training time (s): 436.23236203193665
 Defense: isometry
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 22.042823, Accuracy: 10.00%
-Epoch training time (s): 505.73779344558716
+Epoch: 36, Loss: 9.268227, Accuracy: 89.06%
+Epoch training time (s): 437.064795255661
 Defense: isometry
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 21.704546, Accuracy: 10.00%
-Epoch training time (s): 505.3832242488861
+Epoch: 37, Loss: 8.044328, Accuracy: 83.11%
+Epoch training time (s): 436.85874915122986
 Defense: isometry
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 17.877663, Accuracy: 10.07%
-Epoch training time (s): 508.93651819229126
+Epoch: 38, Loss: 7.061043, Accuracy: 83.04%
+Epoch training time (s): 435.3948669433594
 Defense: isometry
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 15.885576, Accuracy: 12.46%
-Epoch training time (s): 505.46445989608765
+Epoch: 39, Loss: 19.705817, Accuracy: 67.32%
+Epoch training time (s): 444.1344850063324
 Defense: isometry
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 13.419989, Accuracy: 10.16%
-Epoch training time (s): 507.8663945198059
+Epoch: 40, Loss: 12.472055, Accuracy: 82.64%
+Epoch training time (s): 450.0508761405945
 Defense: isometry
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 13.361412, Accuracy: 10.01%
-Epoch training time (s): 505.912638425827
+Epoch: 41, Loss: 7.128302, Accuracy: 92.27%
+Epoch training time (s): 451.76749062538147
 Defense: isometry
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 12.930055, Accuracy: 11.13%
-Epoch training time (s): 507.2529253959656
+Epoch: 42, Loss: 7.458103, Accuracy: 91.83%
+Epoch training time (s): 446.7704267501831
 Defense: isometry
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 13.018026, Accuracy: 13.86%
-Epoch training time (s): 505.3884789943695
+Epoch: 43, Loss: 7.775690, Accuracy: 84.26%
+Epoch training time (s): 450.73946142196655
 Defense: isometry
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 13.177468, Accuracy: 10.84%
-Epoch training time (s): 506.6132290363312
+Epoch: 44, Loss: 6.600361, Accuracy: 91.98%
+Epoch training time (s): 445.4803762435913
 Defense: isometry
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 10.807655, Accuracy: 80.05%
-Epoch training time (s): 504.96351408958435
+Epoch: 45, Loss: 6.999414, Accuracy: 83.99%
+Epoch training time (s): 475.1142210960388
 Defense: isometry
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 3.870680, Accuracy: 84.94%
-Epoch training time (s): 505.32659459114075
+Epoch: 46, Loss: 6.327051, Accuracy: 92.22%
+Epoch training time (s): 485.96900272369385
 Defense: isometry
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 5.927892, Accuracy: 85.34%
-Epoch training time (s): 502.0118646621704
+Epoch: 47, Loss: 5.379991, Accuracy: 92.49%
+Epoch training time (s): 472.56056451797485
 Defense: isometry
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 4.748279, Accuracy: 86.04%
-Epoch training time (s): 498.4100716114044
+Epoch: 48, Loss: 6.866276, Accuracy: 83.65%
+Epoch training time (s): 449.7137610912323
 Defense: isometry
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 4.885816, Accuracy: 80.00%
-Epoch training time (s): 493.44124841690063
+Epoch: 49, Loss: 6.279580, Accuracy: 91.47%
+Epoch training time (s): 444.8799102306366
 Defense: isometry
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 4.137720, Accuracy: 81.67%
-Epoch training time (s): 496.28933691978455
+Epoch: 50, Loss: 7.640291, Accuracy: 92.54%
+Epoch training time (s): 449.0811002254486
 Defense: isometry
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 10.467070, Accuracy: 69.43%
-Epoch training time (s): 496.8381927013397
-Training time (s): 25328.85610628128
+Epoch: 51, Loss: 5.243258, Accuracy: 93.40%
+Epoch training time (s): 436.5668671131134
+Training time (s): 22168.96183538437
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_4
+name: cifar_resnet_isoreg/seed_9
 model: epoch_51.pt
 dataset: cifar
 defense: isometry
-seed: 4
-gpu_number: 6
+seed: 9
+gpu_number: 1
 load: True
 archi: resnet
 channels1: 32
@@ -2388,7 +2388,7 @@ generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 0.002
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -2404,4 +2404,4 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 3315.0/10000 (33.15%)
+Accuracy: 2938.0/10000 (29.38%)

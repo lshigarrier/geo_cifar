@@ -1,0 +1,62 @@
+name       : cifar_resnet_temperature
+model      : epoch_51.pt
+dataset    : cifar
+defense    : temperature
+seed       : 0
+gpu_number : "4"
+load       : False
+
+# model
+
+archi     : resnet  # only lenet for MNIST
+channels1 : 32
+channels2 : 64
+hidden    : 128
+
+# data
+
+batch_size : 32
+
+# training
+
+learning_rate    : 0.001
+epochs           : 51
+
+# annealing
+
+epoch_thr : 3
+
+# test
+
+generate : False
+clean    : False
+
+# parseval
+
+beta : 0.0001
+
+# isometry
+
+# d = 3*32*32 = 3072
+# eps_inf = 8/255 => eps_2 = eps_inf * sqrt(d) = 1.74
+epsilon : 1.74
+lambda  : 0.2
+norm    : holder
+
+# distillation
+
+dist_temp : 20
+teacher   : teacher.pt
+
+# plot
+
+save_plot : False
+
+# attack
+
+attack       : fgsm                 # fgsm gn pgd deep_fool cw
+budget       : 0.03137254901960784  # fgsm gn(std) pgd
+perturbation : linf                 # pgd
+alpha        : 0.01                 # pgd
+max_iter     : 10                   # pgd deep_fool cw
+random_start : True                 # pgd

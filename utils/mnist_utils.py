@@ -41,14 +41,17 @@ def load_yaml(file_name=None):
 def initialize_mnist(param, device):
     ## Load dataset from torchvision
     # -------------------------------------------------------------- #
-    # Train set
-    trainset = datasets.MNIST('./data/mnist', train=True, download=True, transform=transforms.ToTensor())
+    if param['dataset'] == 'mnist':
+        trainset = datasets.MNIST('./data/mnist', train=True, download=True, transform=transforms.ToTensor())
+        testset  = datasets.MNIST('./data/mnist', train=False, transform=transforms.ToTensor())
+    elif param['dataset'] == 'fashion':
+        trainset = datasets.FashionMNIST('./data/fashion', train=True, download=True, transform=transforms.ToTensor())
+        testset = datasets.FashionMNIST('./data/fashion', train=False, transform=transforms.ToTensor())
+    else:
+        raise NotImplementedError
 
     # Small train set
     subset = torch.utils.data.Subset(trainset, range(1000))
-
-    # Test set
-    testset = datasets.MNIST('./data/mnist', train=False, transform=transforms.ToTensor())
 
     # Create data loaders
     train_loader       = DataLoader(trainset, batch_size=param['batch_size'],

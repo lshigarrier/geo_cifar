@@ -1,14 +1,14 @@
-name       : cifar_resnet_temperature
-model      : epoch_51.pt
-dataset    : cifar
+name       : fashion_lenet_temperature
+model      : epoch_3.pt
+dataset    : fashion
 defense    : temperature
 seed       : 0
-gpu_number : "4"
+gpu_number : "0"
 load       : False
 
 # model
 
-archi     : resnet  # only lenet for MNIST
+archi     : lenet  # only lenet for MNIST
 channels1 : 32
 channels2 : 64
 hidden    : 128
@@ -20,11 +20,11 @@ batch_size : 32
 # training
 
 learning_rate    : 0.001
-epochs           : 51
+epochs           : 3
 
 # annealing
 
-epoch_thr : 2
+epoch_thr : 3
 
 # test
 

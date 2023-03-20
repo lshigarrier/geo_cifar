@@ -1,11 +1,11 @@
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_0
+name: cifar_resnet_jacreg/seed_0
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 0
-gpu_number: 6
+gpu_number: 3
 load: False
 archi: resnet
 channels1: 32
@@ -14,12 +14,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -31,426 +31,424 @@ alpha: 0.01
 max_iter: 10
 random_start: True
 Start training
-Defense: None
+Defense: jacreg
 Epoch 1: 0/50000 (0%)
 Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.058359, Accuracy: 85.17%
-Epoch training time (s): 102.42867064476013
-Defense: isometry
+Epoch: 1, Loss: 2390.767170, Accuracy: 85.17%
+Epoch training time (s): 524.2111842632294
+Defense: jacreg
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 5703.884562, Accuracy: 10.00%
-Epoch training time (s): 468.4379482269287
-Defense: isometry
+Epoch: 2, Loss: 17896.370482, Accuracy: 89.75%
+Epoch training time (s): 480.50216817855835
+Defense: jacreg
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 180.195458, Accuracy: 10.00%
-Epoch training time (s): 476.90674901008606
-Defense: isometry
+Epoch: 3, Loss: 31818.865699, Accuracy: 91.07%
+Epoch training time (s): 464.6112220287323
+Defense: jacreg
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 22.841086, Accuracy: 10.01%
-Epoch training time (s): 476.45031094551086
-Defense: isometry
+Epoch: 4, Loss: 39851.192179, Accuracy: 92.04%
+Epoch training time (s): 465.3725850582123
+Defense: jacreg
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 20.942812, Accuracy: 10.03%
-Epoch training time (s): 475.74677205085754
-Defense: isometry
+Epoch: 5, Loss: 42979.023714, Accuracy: 92.18%
+Epoch training time (s): 466.05990958213806
+Defense: jacreg
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 19.084595, Accuracy: 10.01%
-Epoch training time (s): 475.7811040878296
-Defense: isometry
+Epoch: 6, Loss: 51637.163552, Accuracy: 92.81%
+Epoch training time (s): 465.321213722229
+Defense: jacreg
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 17.524906, Accuracy: 10.00%
-Epoch training time (s): 475.5849792957306
-Defense: isometry
+Epoch: 7, Loss: 58481.045860, Accuracy: 93.24%
+Epoch training time (s): 462.9717938899994
+Defense: jacreg
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 16.404072, Accuracy: 10.00%
-Epoch training time (s): 478.6451714038849
-Defense: isometry
+Epoch: 8, Loss: 59965.949475, Accuracy: 93.54%
+Epoch training time (s): 463.1577389240265
+Defense: jacreg
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 16.032674, Accuracy: 10.00%
-Epoch training time (s): 475.4065239429474
-Defense: isometry
+Epoch: 9, Loss: 62934.478966, Accuracy: 93.46%
+Epoch training time (s): 464.7582311630249
+Defense: jacreg
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 14.476164, Accuracy: 10.00%
-Epoch training time (s): 474.85710549354553
-Defense: isometry
+Epoch: 10, Loss: 70084.189566, Accuracy: 93.73%
+Epoch training time (s): 488.5658357143402
+Defense: jacreg
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 13.748680, Accuracy: 10.00%
-Epoch training time (s): 480.52822732925415
-Defense: isometry
+Epoch: 11, Loss: 76588.476386, Accuracy: 93.75%
+Epoch training time (s): 487.5713770389557
+Defense: jacreg
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 13.760518, Accuracy: 10.00%
-Epoch training time (s): 478.2129819393158
-Defense: isometry
+Epoch: 12, Loss: 80653.754387, Accuracy: 94.13%
+Epoch training time (s): 485.53017830848694
+Defense: jacreg
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 13.370226, Accuracy: 10.00%
-Epoch training time (s): 478.2161536216736
-Defense: isometry
+Epoch: 13, Loss: 80521.505728, Accuracy: 94.47%
+Epoch training time (s): 486.8446397781372
+Defense: jacreg
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 14.954324, Accuracy: 10.00%
-Epoch training time (s): 477.99882340431213
-Defense: isometry
+Epoch: 14, Loss: 80924.172035, Accuracy: 94.42%
+Epoch training time (s): 490.16871452331543
+Defense: jacreg
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 15.243478, Accuracy: 10.00%
-Epoch training time (s): 482.9340522289276
-Defense: isometry
+Epoch: 15, Loss: 85471.572386, Accuracy: 94.19%
+Epoch training time (s): 489.1147229671478
+Defense: jacreg
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 16.362383, Accuracy: 10.00%
-Epoch training time (s): 705.0377504825592
-Defense: isometry
+Epoch: 16, Loss: 85119.870417, Accuracy: 94.41%
+Epoch training time (s): 491.27853298187256
+Defense: jacreg
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 16.789384, Accuracy: 10.00%
-Epoch training time (s): 1203.8694925308228
-Defense: isometry
+Epoch: 17, Loss: 85144.193138, Accuracy: 94.39%
+Epoch training time (s): 488.9779725074768
+Defense: jacreg
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 17.619468, Accuracy: 10.00%
-Epoch training time (s): 643.5786135196686
-Defense: isometry
+Epoch: 18, Loss: 90780.852942, Accuracy: 94.46%
+Epoch training time (s): 489.162805557251
+Defense: jacreg
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 17.344088, Accuracy: 10.00%
-Epoch training time (s): 489.8955702781677
-Defense: isometry
+Epoch: 19, Loss: 92034.180000, Accuracy: 94.72%
+Epoch training time (s): 488.05240774154663
+Defense: jacreg
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 15.891810, Accuracy: 10.00%
-Epoch training time (s): 492.7394268512726
-Defense: isometry
+Epoch: 20, Loss: 92470.622608, Accuracy: 94.72%
+Epoch training time (s): 478.7542974948883
+Defense: jacreg
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 16.730526, Accuracy: 10.05%
-Epoch training time (s): 485.19889187812805
-Defense: isometry
+Epoch: 21, Loss: 97595.240873, Accuracy: 94.87%
+Epoch training time (s): 481.382511138916
+Defense: jacreg
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 15.519092, Accuracy: 10.08%
-Epoch training time (s): 489.5056040287018
-Defense: isometry
+Epoch: 22, Loss: 95915.905253, Accuracy: 94.59%
+Epoch training time (s): 480.0276644229889
+Defense: jacreg
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 15.002744, Accuracy: 10.27%
-Epoch training time (s): 491.74358558654785
-Defense: isometry
+Epoch: 23, Loss: 94646.828084, Accuracy: 94.79%
+Epoch training time (s): 474.0005807876587
+Defense: jacreg
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 15.002506, Accuracy: 10.43%
-Epoch training time (s): 486.4718701839447
-Defense: isometry
+Epoch: 24, Loss: 94657.442127, Accuracy: 94.67%
+Epoch training time (s): 478.78399634361267
+Defense: jacreg
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 15.727664, Accuracy: 12.55%
-Epoch training time (s): 472.9002089500427
-Defense: isometry
+Epoch: 25, Loss: 96197.134008, Accuracy: 94.92%
+Epoch training time (s): 481.01046800613403
+Defense: jacreg
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 15.225169, Accuracy: 10.38%
-Epoch training time (s): 475.5484426021576
-Defense: isometry
+Epoch: 26, Loss: 99218.668835, Accuracy: 94.89%
+Epoch training time (s): 480.50923347473145
+Defense: jacreg
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 14.537259, Accuracy: 12.37%
-Epoch training time (s): 479.49461126327515
-Defense: isometry
+Epoch: 27, Loss: 98888.647280, Accuracy: 94.95%
+Epoch training time (s): 476.87813544273376
+Defense: jacreg
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 14.176165, Accuracy: 11.65%
-Epoch training time (s): 486.1724510192871
-Defense: isometry
+Epoch: 28, Loss: 98787.155133, Accuracy: 94.92%
+Epoch training time (s): 477.1922125816345
+Defense: jacreg
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 14.809912, Accuracy: 10.03%
-Epoch training time (s): 488.8454358577728
-Defense: isometry
+Epoch: 29, Loss: 96752.307653, Accuracy: 94.96%
+Epoch training time (s): 481.96518898010254
+Defense: jacreg
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 13.684651, Accuracy: 10.35%
-Epoch training time (s): 488.41395831108093
-Defense: isometry
+Epoch: 30, Loss: 97972.161618, Accuracy: 95.05%
+Epoch training time (s): 478.8804602622986
+Defense: jacreg
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 14.012741, Accuracy: 12.08%
-Epoch training time (s): 485.73509550094604
-Defense: isometry
+Epoch: 31, Loss: 95671.615485, Accuracy: 94.80%
+Epoch training time (s): 476.19998931884766
+Defense: jacreg
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 15.511437, Accuracy: 15.47%
-Epoch training time (s): 486.07706594467163
-Defense: isometry
+Epoch: 32, Loss: 94823.122255, Accuracy: 94.90%
+Epoch training time (s): 474.0345995426178
+Defense: jacreg
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 13.353385, Accuracy: 10.59%
-Epoch training time (s): 483.88352513313293
-Defense: isometry
+Epoch: 33, Loss: 96371.842486, Accuracy: 94.83%
+Epoch training time (s): 479.27980852127075
+Defense: jacreg
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 14.373983, Accuracy: 11.01%
-Epoch training time (s): 482.5189416408539
-Defense: isometry
+Epoch: 34, Loss: 96853.994769, Accuracy: 95.20%
+Epoch training time (s): 470.9432897567749
+Defense: jacreg
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 16.592740, Accuracy: 11.62%
-Epoch training time (s): 501.5524742603302
-Defense: isometry
+Epoch: 35, Loss: 98724.418846, Accuracy: 94.98%
+Epoch training time (s): 487.71196818351746
+Defense: jacreg
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 17.207225, Accuracy: 15.60%
-Epoch training time (s): 509.2485420703888
-Defense: isometry
+Epoch: 36, Loss: 94829.868696, Accuracy: 94.75%
+Epoch training time (s): 498.7880139350891
+Defense: jacreg
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 14.835333, Accuracy: 14.38%
-Epoch training time (s): 506.84637427330017
-Defense: isometry
+Epoch: 37, Loss: 93968.840774, Accuracy: 94.97%
+Epoch training time (s): 476.4092535972595
+Defense: jacreg
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 13.833434, Accuracy: 13.71%
-Epoch training time (s): 508.2617177963257
-Defense: isometry
+Epoch: 38, Loss: 94830.749209, Accuracy: 94.96%
+Epoch training time (s): 474.68893456459045
+Defense: jacreg
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 13.836950, Accuracy: 17.00%
-Epoch training time (s): 509.04007172584534
-Defense: isometry
+Epoch: 39, Loss: 94758.140653, Accuracy: 95.31%
+Epoch training time (s): 477.5147738456726
+Defense: jacreg
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 12.985545, Accuracy: 21.01%
-Epoch training time (s): 509.5026595592499
-Defense: isometry
+Epoch: 40, Loss: 92600.712603, Accuracy: 95.17%
+Epoch training time (s): 479.1393196582794
+Defense: jacreg
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 16.927488, Accuracy: 13.52%
-Epoch training time (s): 508.9274957180023
-Defense: isometry
+Epoch: 41, Loss: 92885.918545, Accuracy: 95.08%
+Epoch training time (s): 480.3735992908478
+Defense: jacreg
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 15.229582, Accuracy: 22.08%
-Epoch training time (s): 507.9870810508728
-Defense: isometry
+Epoch: 42, Loss: 90920.640816, Accuracy: 95.09%
+Epoch training time (s): 483.1545834541321
+Defense: jacreg
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 14.505042, Accuracy: 22.30%
-Epoch training time (s): 506.8225586414337
-Defense: isometry
+Epoch: 43, Loss: 90439.039902, Accuracy: 94.87%
+Epoch training time (s): 476.3808114528656
+Defense: jacreg
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 16.443192, Accuracy: 17.32%
-Epoch training time (s): 508.374552488327
-Defense: isometry
+Epoch: 44, Loss: 91262.350321, Accuracy: 95.07%
+Epoch training time (s): 477.9540343284607
+Defense: jacreg
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 15.395744, Accuracy: 18.87%
-Epoch training time (s): 500.44422578811646
-Defense: isometry
+Epoch: 45, Loss: 88241.967574, Accuracy: 95.12%
+Epoch training time (s): 476.2840530872345
+Defense: jacreg
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 15.458385, Accuracy: 17.43%
-Epoch training time (s): 500.4669885635376
-Defense: isometry
+Epoch: 46, Loss: 89555.996988, Accuracy: 95.09%
+Epoch training time (s): 474.4912874698639
+Defense: jacreg
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 17.026890, Accuracy: 12.00%
-Epoch training time (s): 501.3422272205353
-Defense: isometry
+Epoch: 47, Loss: 86770.848481, Accuracy: 95.20%
+Epoch training time (s): 479.030748128891
+Defense: jacreg
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 15.755649, Accuracy: 23.22%
-Epoch training time (s): 498.3623774051666
-Defense: isometry
+Epoch: 48, Loss: 86008.776127, Accuracy: 95.05%
+Epoch training time (s): 471.9251446723938
+Defense: jacreg
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 15.506425, Accuracy: 20.24%
-Epoch training time (s): 502.72361421585083
-Defense: isometry
+Epoch: 49, Loss: 87509.381073, Accuracy: 94.77%
+Epoch training time (s): 473.07622838020325
+Defense: jacreg
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 15.823360, Accuracy: 28.95%
-Epoch training time (s): 500.24734330177307
-Defense: isometry
+Epoch: 50, Loss: 81390.307250, Accuracy: 94.97%
+Epoch training time (s): 473.9855406284332
+Defense: jacreg
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 15.350807, Accuracy: 21.14%
-Epoch training time (s): 504.70366048812866
-Training time (s): 25686.470213890076
-/home/loic/iso_defense/utils/mnist_utils.py:20: RuntimeWarning: divide by zero encountered in log
-  geo_mean = np.exp(np.log(array[i: i + window_size]).mean())
+Epoch: 51, Loss: 86285.239426, Accuracy: 95.11%
+Epoch training time (s): 471.30951619148254
+Training time (s): 24448.97162795067
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_0
+name: cifar_resnet_jacreg/seed_0
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 0
-gpu_number: 6
+gpu_number: 3
 load: True
 archi: resnet
 channels1: 32
@@ -459,12 +457,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -480,15 +478,15 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 2068.0/10000 (20.68%)
+Accuracy: 2335.0/10000 (23.35%)
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_1
+name: cifar_resnet_jacreg/seed_1
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 1
-gpu_number: 6
+gpu_number: 3
 load: False
 archi: resnet
 channels1: 32
@@ -497,12 +495,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -514,424 +512,424 @@ alpha: 0.01
 max_iter: 10
 random_start: True
 Start training
-Defense: None
+Defense: jacreg
 Epoch 1: 0/50000 (0%)
 Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.068451, Accuracy: 84.64%
-Epoch training time (s): 106.55183386802673
-Defense: isometry
+Epoch: 1, Loss: 1877.135880, Accuracy: 84.64%
+Epoch training time (s): 499.9864022731781
+Defense: jacreg
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 2293.004639, Accuracy: 10.00%
-Epoch training time (s): 504.45761036872864
-Defense: isometry
+Epoch: 2, Loss: 11049.432773, Accuracy: 89.37%
+Epoch training time (s): 474.85669112205505
+Defense: jacreg
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 67.834871, Accuracy: 10.00%
-Epoch training time (s): 503.24445843696594
-Defense: isometry
+Epoch: 3, Loss: 21927.540324, Accuracy: 91.30%
+Epoch training time (s): 474.13281178474426
+Defense: jacreg
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 21.518720, Accuracy: 10.00%
-Epoch training time (s): 500.0332922935486
-Defense: isometry
+Epoch: 4, Loss: 30016.203050, Accuracy: 91.77%
+Epoch training time (s): 475.1629800796509
+Defense: jacreg
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 23.466880, Accuracy: 10.00%
-Epoch training time (s): 500.5993912220001
-Defense: isometry
+Epoch: 5, Loss: 37122.998543, Accuracy: 92.10%
+Epoch training time (s): 476.12788677215576
+Defense: jacreg
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 30.088397, Accuracy: 10.00%
-Epoch training time (s): 497.16905426979065
-Defense: isometry
+Epoch: 6, Loss: 42416.839366, Accuracy: 92.51%
+Epoch training time (s): 474.0076310634613
+Defense: jacreg
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 18.526582, Accuracy: 10.06%
-Epoch training time (s): 500.09954833984375
-Defense: isometry
+Epoch: 7, Loss: 44522.836268, Accuracy: 93.02%
+Epoch training time (s): 477.171502828598
+Defense: jacreg
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 17.517671, Accuracy: 10.01%
-Epoch training time (s): 496.6427068710327
-Defense: isometry
+Epoch: 8, Loss: 49342.560719, Accuracy: 93.42%
+Epoch training time (s): 473.90659070014954
+Defense: jacreg
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 15.893720, Accuracy: 10.11%
-Epoch training time (s): 497.4748251438141
-Defense: isometry
+Epoch: 9, Loss: 53801.369551, Accuracy: 93.45%
+Epoch training time (s): 474.4633014202118
+Defense: jacreg
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 16.849619, Accuracy: 10.11%
-Epoch training time (s): 497.8202474117279
-Defense: isometry
+Epoch: 10, Loss: 61228.829850, Accuracy: 93.72%
+Epoch training time (s): 468.9633572101593
+Defense: jacreg
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 28.602596, Accuracy: 10.00%
-Epoch training time (s): 492.22369503974915
-Defense: isometry
+Epoch: 11, Loss: 62744.632789, Accuracy: 94.11%
+Epoch training time (s): 470.7644305229187
+Defense: jacreg
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 27.226687, Accuracy: 10.00%
-Epoch training time (s): 496.7053039073944
-Defense: isometry
+Epoch: 12, Loss: 64954.309797, Accuracy: 94.07%
+Epoch training time (s): 474.516410112381
+Defense: jacreg
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 24.504738, Accuracy: 10.06%
-Epoch training time (s): 494.5903182029724
-Defense: isometry
+Epoch: 13, Loss: 70377.836073, Accuracy: 94.28%
+Epoch training time (s): 473.5299606323242
+Defense: jacreg
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 21.132340, Accuracy: 11.45%
-Epoch training time (s): 500.48368287086487
-Defense: isometry
+Epoch: 14, Loss: 74778.039515, Accuracy: 93.89%
+Epoch training time (s): 471.0432436466217
+Defense: jacreg
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 23.676620, Accuracy: 10.25%
-Epoch training time (s): 499.5236098766327
-Defense: isometry
+Epoch: 15, Loss: 76811.993685, Accuracy: 94.25%
+Epoch training time (s): 471.1304647922516
+Defense: jacreg
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 23.923685, Accuracy: 10.40%
-Epoch training time (s): 500.91674637794495
-Defense: isometry
+Epoch: 16, Loss: 76792.789559, Accuracy: 94.27%
+Epoch training time (s): 473.44086170196533
+Defense: jacreg
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 22.410042, Accuracy: 10.11%
-Epoch training time (s): 498.02006220817566
-Defense: isometry
+Epoch: 17, Loss: 82609.068797, Accuracy: 94.70%
+Epoch training time (s): 462.6867163181305
+Defense: jacreg
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 22.343443, Accuracy: 10.30%
-Epoch training time (s): 497.80848383903503
-Defense: isometry
+Epoch: 18, Loss: 83141.132204, Accuracy: 94.69%
+Epoch training time (s): 458.92451786994934
+Defense: jacreg
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 26.280235, Accuracy: 10.06%
-Epoch training time (s): 499.75711488723755
-Defense: isometry
+Epoch: 19, Loss: 84350.916128, Accuracy: 94.58%
+Epoch training time (s): 461.43476247787476
+Defense: jacreg
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 27.376727, Accuracy: 10.01%
-Epoch training time (s): 501.8821818828583
-Defense: isometry
+Epoch: 20, Loss: 86932.360870, Accuracy: 94.59%
+Epoch training time (s): 462.84350752830505
+Defense: jacreg
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 27.594008, Accuracy: 10.03%
-Epoch training time (s): 499.02707862854004
-Defense: isometry
+Epoch: 21, Loss: 90394.589601, Accuracy: 94.66%
+Epoch training time (s): 462.530556678772
+Defense: jacreg
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 21.435032, Accuracy: 10.03%
-Epoch training time (s): 498.78184032440186
-Defense: isometry
+Epoch: 22, Loss: 88610.316551, Accuracy: 94.41%
+Epoch training time (s): 460.0435016155243
+Defense: jacreg
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 17.823555, Accuracy: 10.04%
-Epoch training time (s): 499.52498960494995
-Defense: isometry
+Epoch: 23, Loss: 95842.252251, Accuracy: 94.81%
+Epoch training time (s): 462.5716001987457
+Defense: jacreg
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 15.782942, Accuracy: 10.19%
-Epoch training time (s): 497.1117355823517
-Defense: isometry
+Epoch: 24, Loss: 94721.447176, Accuracy: 94.90%
+Epoch training time (s): 463.9689037799835
+Defense: jacreg
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 14.641437, Accuracy: 10.03%
-Epoch training time (s): 498.4019043445587
-Defense: isometry
+Epoch: 25, Loss: 92653.197326, Accuracy: 94.92%
+Epoch training time (s): 460.8344020843506
+Defense: jacreg
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 14.099216, Accuracy: 10.00%
-Epoch training time (s): 499.8804030418396
-Defense: isometry
+Epoch: 26, Loss: 97234.549687, Accuracy: 94.60%
+Epoch training time (s): 459.5383505821228
+Defense: jacreg
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 17.856581, Accuracy: 10.00%
-Epoch training time (s): 490.40827536582947
-Defense: isometry
+Epoch: 27, Loss: 96457.395176, Accuracy: 94.58%
+Epoch training time (s): 462.42753624916077
+Defense: jacreg
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 15.853672, Accuracy: 10.00%
-Epoch training time (s): 485.62856698036194
-Defense: isometry
+Epoch: 28, Loss: 94765.149885, Accuracy: 94.58%
+Epoch training time (s): 458.1832525730133
+Defense: jacreg
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 19.735282, Accuracy: 10.00%
-Epoch training time (s): 482.2235953807831
-Defense: isometry
+Epoch: 29, Loss: 93616.302205, Accuracy: 95.03%
+Epoch training time (s): 461.1281054019928
+Defense: jacreg
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 20.666726, Accuracy: 10.00%
-Epoch training time (s): 490.2864775657654
-Defense: isometry
+Epoch: 30, Loss: 96040.127508, Accuracy: 94.77%
+Epoch training time (s): 458.6195294857025
+Defense: jacreg
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 19.438496, Accuracy: 10.00%
-Epoch training time (s): 499.9241497516632
-Defense: isometry
+Epoch: 31, Loss: 96148.531061, Accuracy: 94.56%
+Epoch training time (s): 461.6851317882538
+Defense: jacreg
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 15.468345, Accuracy: 10.00%
-Epoch training time (s): 499.23327374458313
-Defense: isometry
+Epoch: 32, Loss: 96784.146987, Accuracy: 94.53%
+Epoch training time (s): 459.85112977027893
+Defense: jacreg
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 15.786211, Accuracy: 10.00%
-Epoch training time (s): 497.19578194618225
-Defense: isometry
+Epoch: 33, Loss: 95976.251894, Accuracy: 94.95%
+Epoch training time (s): 458.0590829849243
+Defense: jacreg
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 16.561608, Accuracy: 10.00%
-Epoch training time (s): 496.0836269855499
-Defense: isometry
+Epoch: 34, Loss: 97135.199835, Accuracy: 95.10%
+Epoch training time (s): 459.58030891418457
+Defense: jacreg
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 18.627851, Accuracy: 10.00%
-Epoch training time (s): 496.3010890483856
-Defense: isometry
+Epoch: 35, Loss: 95520.600634, Accuracy: 94.75%
+Epoch training time (s): 460.42127776145935
+Defense: jacreg
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 23.385164, Accuracy: 10.00%
-Epoch training time (s): 498.28911304473877
-Defense: isometry
+Epoch: 36, Loss: 95303.307029, Accuracy: 94.86%
+Epoch training time (s): 459.8805820941925
+Defense: jacreg
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 23.297408, Accuracy: 10.02%
-Epoch training time (s): 495.19093346595764
-Defense: isometry
+Epoch: 37, Loss: 96476.624102, Accuracy: 94.87%
+Epoch training time (s): 460.2495024204254
+Defense: jacreg
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 20.100447, Accuracy: 10.07%
-Epoch training time (s): 497.1068024635315
-Defense: isometry
+Epoch: 38, Loss: 96062.197553, Accuracy: 95.07%
+Epoch training time (s): 459.7528507709503
+Defense: jacreg
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 16.387868, Accuracy: 10.04%
-Epoch training time (s): 495.7618293762207
-Defense: isometry
+Epoch: 39, Loss: 96236.015025, Accuracy: 94.95%
+Epoch training time (s): 464.4981610774994
+Defense: jacreg
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 16.285573, Accuracy: 10.25%
-Epoch training time (s): 498.23765993118286
-Defense: isometry
+Epoch: 40, Loss: 96132.059447, Accuracy: 94.97%
+Epoch training time (s): 468.82024335861206
+Defense: jacreg
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 14.257840, Accuracy: 10.69%
-Epoch training time (s): 488.9809322357178
-Defense: isometry
+Epoch: 41, Loss: 92570.604492, Accuracy: 94.82%
+Epoch training time (s): 470.1565594673157
+Defense: jacreg
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 15.172278, Accuracy: 10.17%
-Epoch training time (s): 486.50995564460754
-Defense: isometry
+Epoch: 42, Loss: 94869.597603, Accuracy: 95.06%
+Epoch training time (s): 469.20780181884766
+Defense: jacreg
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 15.959929, Accuracy: 10.07%
-Epoch training time (s): 487.5754656791687
-Defense: isometry
+Epoch: 43, Loss: 91285.855009, Accuracy: 94.98%
+Epoch training time (s): 460.10944986343384
+Defense: jacreg
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 14.693889, Accuracy: 10.17%
-Epoch training time (s): 487.1940767765045
-Defense: isometry
+Epoch: 44, Loss: 91466.695609, Accuracy: 95.06%
+Epoch training time (s): 461.78937888145447
+Defense: jacreg
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 15.442979, Accuracy: 10.09%
-Epoch training time (s): 486.30745577812195
-Defense: isometry
+Epoch: 45, Loss: 89060.709923, Accuracy: 94.83%
+Epoch training time (s): 456.56722831726074
+Defense: jacreg
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 14.948838, Accuracy: 10.19%
-Epoch training time (s): 489.294766664505
-Defense: isometry
+Epoch: 46, Loss: 87487.017727, Accuracy: 95.23%
+Epoch training time (s): 459.21165776252747
+Defense: jacreg
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 13.978529, Accuracy: 10.99%
-Epoch training time (s): 489.3797883987427
-Defense: isometry
+Epoch: 47, Loss: 87805.499568, Accuracy: 95.22%
+Epoch training time (s): 458.83130526542664
+Defense: jacreg
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 15.427053, Accuracy: 11.41%
-Epoch training time (s): 486.89920449256897
-Defense: isometry
+Epoch: 48, Loss: 88607.972619, Accuracy: 94.85%
+Epoch training time (s): 458.5185797214508
+Defense: jacreg
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 15.751313, Accuracy: 10.53%
-Epoch training time (s): 487.2686195373535
-Defense: isometry
+Epoch: 49, Loss: 88177.831821, Accuracy: 95.04%
+Epoch training time (s): 459.2836756706238
+Defense: jacreg
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 14.760169, Accuracy: 10.13%
-Epoch training time (s): 487.44080996513367
-Defense: isometry
+Epoch: 50, Loss: 87725.684919, Accuracy: 95.20%
+Epoch training time (s): 460.69377636909485
+Defense: jacreg
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 14.429970, Accuracy: 10.47%
-Epoch training time (s): 487.30557560920715
-Training time (s): 24871.046657562256
+Epoch: 51, Loss: 88287.943975, Accuracy: 95.13%
+Epoch training time (s): 464.9843611717224
+Training time (s): 23755.960653305054
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_1
+name: cifar_resnet_jacreg/seed_1
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 1
-gpu_number: 6
+gpu_number: 3
 load: True
 archi: resnet
 channels1: 32
@@ -940,12 +938,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -961,15 +959,15 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 1116.0/10000 (11.16%)
+Accuracy: 2218.0/10000 (22.18%)
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_2
+name: cifar_resnet_jacreg/seed_2
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 2
-gpu_number: 6
+gpu_number: 3
 load: False
 archi: resnet
 channels1: 32
@@ -978,12 +976,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -995,424 +993,424 @@ alpha: 0.01
 max_iter: 10
 random_start: True
 Start training
-Defense: None
+Defense: jacreg
 Epoch 1: 0/50000 (0%)
 Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.104953, Accuracy: 84.58%
-Epoch training time (s): 103.26612114906311
-Defense: isometry
+Epoch: 1, Loss: 2370.000283, Accuracy: 84.58%
+Epoch training time (s): 1324.0663211345673
+Defense: jacreg
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 5098.127720, Accuracy: 10.00%
-Epoch training time (s): 486.982896566391
-Defense: isometry
+Epoch: 2, Loss: 18652.926193, Accuracy: 89.61%
+Epoch training time (s): 457.69088649749756
+Defense: jacreg
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 56.063517, Accuracy: 10.00%
-Epoch training time (s): 486.2506470680237
-Defense: isometry
+Epoch: 3, Loss: 32942.402085, Accuracy: 90.97%
+Epoch training time (s): 455.90284609794617
+Defense: jacreg
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 19.297848, Accuracy: 10.00%
-Epoch training time (s): 487.8377628326416
-Defense: isometry
+Epoch: 4, Loss: 40937.290475, Accuracy: 91.68%
+Epoch training time (s): 453.82939529418945
+Defense: jacreg
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 21.434047, Accuracy: 10.00%
-Epoch training time (s): 486.30555391311646
-Defense: isometry
+Epoch: 5, Loss: 46451.441422, Accuracy: 92.39%
+Epoch training time (s): 464.37687945365906
+Defense: jacreg
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 16.631088, Accuracy: 10.00%
-Epoch training time (s): 485.8598473072052
-Defense: isometry
+Epoch: 6, Loss: 52748.105677, Accuracy: 92.38%
+Epoch training time (s): 461.66197657585144
+Defense: jacreg
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 16.663679, Accuracy: 10.00%
-Epoch training time (s): 485.23803091049194
-Defense: isometry
+Epoch: 7, Loss: 56853.358799, Accuracy: 92.95%
+Epoch training time (s): 448.77566409111023
+Defense: jacreg
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 15.110999, Accuracy: 10.00%
-Epoch training time (s): 487.5811457633972
-Defense: isometry
+Epoch: 8, Loss: 59826.357639, Accuracy: 93.13%
+Epoch training time (s): 453.99391317367554
+Defense: jacreg
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 15.771284, Accuracy: 10.00%
-Epoch training time (s): 488.09838604927063
-Defense: isometry
+Epoch: 9, Loss: 59266.482881, Accuracy: 93.27%
+Epoch training time (s): 453.5710783004761
+Defense: jacreg
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 15.646749, Accuracy: 10.01%
-Epoch training time (s): 486.19251704216003
-Defense: isometry
+Epoch: 10, Loss: 65308.894883, Accuracy: 93.46%
+Epoch training time (s): 455.8895676136017
+Defense: jacreg
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 13.893726, Accuracy: 10.06%
-Epoch training time (s): 488.3313698768616
-Defense: isometry
+Epoch: 11, Loss: 72801.455496, Accuracy: 93.59%
+Epoch training time (s): 451.974449634552
+Defense: jacreg
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 13.546118, Accuracy: 10.31%
-Epoch training time (s): 491.40142726898193
-Defense: isometry
+Epoch: 12, Loss: 73729.424187, Accuracy: 93.87%
+Epoch training time (s): 457.3355357646942
+Defense: jacreg
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 14.558039, Accuracy: 10.20%
-Epoch training time (s): 491.23558950424194
-Defense: isometry
+Epoch: 13, Loss: 82228.227422, Accuracy: 94.06%
+Epoch training time (s): 479.0255308151245
+Defense: jacreg
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 14.154213, Accuracy: 10.44%
-Epoch training time (s): 488.3055057525635
-Defense: isometry
+Epoch: 14, Loss: 83828.921561, Accuracy: 94.09%
+Epoch training time (s): 493.0139126777649
+Defense: jacreg
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 15.347315, Accuracy: 10.55%
-Epoch training time (s): 485.2457754611969
-Defense: isometry
+Epoch: 15, Loss: 87934.436264, Accuracy: 94.19%
+Epoch training time (s): 492.79984974861145
+Defense: jacreg
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 16.676075, Accuracy: 10.63%
-Epoch training time (s): 486.31003308296204
-Defense: isometry
+Epoch: 16, Loss: 86487.248932, Accuracy: 94.25%
+Epoch training time (s): 494.56657695770264
+Defense: jacreg
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 15.154548, Accuracy: 10.62%
-Epoch training time (s): 483.99701499938965
-Defense: isometry
+Epoch: 17, Loss: 89172.779003, Accuracy: 94.33%
+Epoch training time (s): 492.73861598968506
+Defense: jacreg
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 15.113547, Accuracy: 10.02%
-Epoch training time (s): 482.13668608665466
-Defense: isometry
+Epoch: 18, Loss: 90117.298691, Accuracy: 94.36%
+Epoch training time (s): 491.39973163604736
+Defense: jacreg
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 19.600135, Accuracy: 10.00%
-Epoch training time (s): 485.02289175987244
-Defense: isometry
+Epoch: 19, Loss: 92371.945310, Accuracy: 94.39%
+Epoch training time (s): 490.3942446708679
+Defense: jacreg
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 15.054008, Accuracy: 10.00%
-Epoch training time (s): 485.3107542991638
-Defense: isometry
+Epoch: 20, Loss: 91803.593373, Accuracy: 94.61%
+Epoch training time (s): 491.8493552207947
+Defense: jacreg
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 17.234084, Accuracy: 10.02%
-Epoch training time (s): 486.0852267742157
-Defense: isometry
+Epoch: 21, Loss: 95554.623719, Accuracy: 94.68%
+Epoch training time (s): 472.49262404441833
+Defense: jacreg
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 16.669786, Accuracy: 10.02%
-Epoch training time (s): 484.1563310623169
-Defense: isometry
+Epoch: 22, Loss: 91754.546049, Accuracy: 94.65%
+Epoch training time (s): 455.2916383743286
+Defense: jacreg
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 14.518467, Accuracy: 10.16%
-Epoch training time (s): 484.704274892807
-Defense: isometry
+Epoch: 23, Loss: 94389.429603, Accuracy: 94.72%
+Epoch training time (s): 458.19134974479675
+Defense: jacreg
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 14.566409, Accuracy: 10.11%
-Epoch training time (s): 473.7196581363678
-Defense: isometry
+Epoch: 24, Loss: 97136.256670, Accuracy: 94.49%
+Epoch training time (s): 461.3961055278778
+Defense: jacreg
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 15.767589, Accuracy: 10.11%
-Epoch training time (s): 474.0178635120392
-Defense: isometry
+Epoch: 25, Loss: 98354.713430, Accuracy: 94.69%
+Epoch training time (s): 458.0323324203491
+Defense: jacreg
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 21.404262, Accuracy: 10.05%
-Epoch training time (s): 477.554087638855
-Defense: isometry
+Epoch: 26, Loss: 97276.890134, Accuracy: 94.53%
+Epoch training time (s): 449.5751745700836
+Defense: jacreg
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 17.022730, Accuracy: 10.13%
-Epoch training time (s): 483.2282905578613
-Defense: isometry
+Epoch: 27, Loss: 100272.340583, Accuracy: 94.57%
+Epoch training time (s): 444.31385684013367
+Defense: jacreg
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 18.736179, Accuracy: 10.03%
-Epoch training time (s): 483.9415485858917
-Defense: isometry
+Epoch: 28, Loss: 98737.595892, Accuracy: 94.89%
+Epoch training time (s): 447.1687214374542
+Defense: jacreg
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 17.470478, Accuracy: 10.06%
-Epoch training time (s): 483.4105396270752
-Defense: isometry
+Epoch: 29, Loss: 97585.209451, Accuracy: 94.78%
+Epoch training time (s): 450.2075619697571
+Defense: jacreg
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 17.900717, Accuracy: 10.00%
-Epoch training time (s): 487.8598783016205
-Defense: isometry
+Epoch: 30, Loss: 97259.936245, Accuracy: 94.83%
+Epoch training time (s): 453.90141773223877
+Defense: jacreg
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 23.602529, Accuracy: 10.31%
-Epoch training time (s): 491.8636598587036
-Defense: isometry
+Epoch: 31, Loss: 97328.537825, Accuracy: 94.98%
+Epoch training time (s): 448.34720396995544
+Defense: jacreg
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 18.174825, Accuracy: 10.07%
-Epoch training time (s): 484.2541992664337
-Defense: isometry
+Epoch: 32, Loss: 100003.454167, Accuracy: 94.94%
+Epoch training time (s): 448.9917502403259
+Defense: jacreg
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 21.423666, Accuracy: 10.56%
-Epoch training time (s): 476.2743728160858
-Defense: isometry
+Epoch: 33, Loss: 97353.602714, Accuracy: 94.99%
+Epoch training time (s): 443.79857993125916
+Defense: jacreg
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 26.746778, Accuracy: 10.03%
-Epoch training time (s): 474.3414115905762
-Defense: isometry
+Epoch: 34, Loss: 95178.405743, Accuracy: 95.04%
+Epoch training time (s): 442.95808601379395
+Defense: jacreg
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 19.681585, Accuracy: 10.15%
-Epoch training time (s): 466.173220872879
-Defense: isometry
+Epoch: 35, Loss: 97040.015638, Accuracy: 94.75%
+Epoch training time (s): 454.2586579322815
+Defense: jacreg
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 18.186551, Accuracy: 10.26%
-Epoch training time (s): 470.9415581226349
-Defense: isometry
+Epoch: 36, Loss: 96150.180670, Accuracy: 95.11%
+Epoch training time (s): 463.05957889556885
+Defense: jacreg
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 22.866358, Accuracy: 10.62%
-Epoch training time (s): 482.3547508716583
-Defense: isometry
+Epoch: 37, Loss: 92955.449561, Accuracy: 94.79%
+Epoch training time (s): 456.84225368499756
+Defense: jacreg
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 24.617019, Accuracy: 10.01%
-Epoch training time (s): 483.4923310279846
-Defense: isometry
+Epoch: 38, Loss: 93991.443418, Accuracy: 94.90%
+Epoch training time (s): 488.9575004577637
+Defense: jacreg
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 30.811290, Accuracy: 10.18%
-Epoch training time (s): 482.35399317741394
-Defense: isometry
+Epoch: 39, Loss: 94351.446592, Accuracy: 94.95%
+Epoch training time (s): 490.5461280345917
+Defense: jacreg
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 19.891059, Accuracy: 10.07%
-Epoch training time (s): 481.1719808578491
-Defense: isometry
+Epoch: 40, Loss: 91144.582021, Accuracy: 94.92%
+Epoch training time (s): 490.79598021507263
+Defense: jacreg
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 21.062905, Accuracy: 10.09%
-Epoch training time (s): 478.5118088722229
-Defense: isometry
+Epoch: 41, Loss: 89404.519241, Accuracy: 94.94%
+Epoch training time (s): 487.8402967453003
+Defense: jacreg
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 17.524167, Accuracy: 10.68%
-Epoch training time (s): 481.55603671073914
-Defense: isometry
+Epoch: 42, Loss: 85300.275003, Accuracy: 94.85%
+Epoch training time (s): 488.7811107635498
+Defense: jacreg
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 18.886192, Accuracy: 10.13%
-Epoch training time (s): 484.0025112628937
-Defense: isometry
+Epoch: 43, Loss: 82619.100428, Accuracy: 95.12%
+Epoch training time (s): 493.38385581970215
+Defense: jacreg
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 18.495599, Accuracy: 11.71%
-Epoch training time (s): 488.7710897922516
-Defense: isometry
+Epoch: 44, Loss: 88487.751624, Accuracy: 95.08%
+Epoch training time (s): 499.3169279098511
+Defense: jacreg
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 18.173849, Accuracy: 10.16%
-Epoch training time (s): 490.38287138938904
-Defense: isometry
+Epoch: 45, Loss: 88974.964478, Accuracy: 94.80%
+Epoch training time (s): 495.73699140548706
+Defense: jacreg
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 16.241210, Accuracy: 12.28%
-Epoch training time (s): 481.85067486763
-Defense: isometry
+Epoch: 46, Loss: 86356.746519, Accuracy: 95.01%
+Epoch training time (s): 475.6431837081909
+Defense: jacreg
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 20.435810, Accuracy: 10.57%
-Epoch training time (s): 483.38326597213745
-Defense: isometry
+Epoch: 47, Loss: 86856.522266, Accuracy: 95.12%
+Epoch training time (s): 452.45232605934143
+Defense: jacreg
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 15.741417, Accuracy: 12.35%
-Epoch training time (s): 484.10130643844604
-Defense: isometry
+Epoch: 48, Loss: 86812.934524, Accuracy: 94.99%
+Epoch training time (s): 454.69933009147644
+Defense: jacreg
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 19.420792, Accuracy: 11.38%
-Epoch training time (s): 486.4397053718567
-Defense: isometry
+Epoch: 49, Loss: 84086.754294, Accuracy: 95.21%
+Epoch training time (s): 467.2831108570099
+Defense: jacreg
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 21.382744, Accuracy: 12.16%
-Epoch training time (s): 487.61428904533386
-Defense: isometry
+Epoch: 50, Loss: 82417.194999, Accuracy: 95.10%
+Epoch training time (s): 465.1833772659302
+Defense: jacreg
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 18.752503, Accuracy: 12.33%
-Epoch training time (s): 483.7683458328247
-Training time (s): 24298.76109313965
+Epoch: 51, Loss: 81500.945265, Accuracy: 95.15%
+Epoch training time (s): 457.3976833820343
+Training time (s): 24686.552766561508
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_2
+name: cifar_resnet_jacreg/seed_2
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 2
-gpu_number: 6
+gpu_number: 3
 load: True
 archi: resnet
 channels1: 32
@@ -1421,12 +1419,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -1442,15 +1440,15 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 1058.0/10000 (10.58%)
+Accuracy: 2369.0/10000 (23.69%)
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_3
+name: cifar_resnet_jacreg/seed_3
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 3
-gpu_number: 6
+gpu_number: 3
 load: False
 archi: resnet
 channels1: 32
@@ -1459,12 +1457,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -1476,424 +1474,424 @@ alpha: 0.01
 max_iter: 10
 random_start: True
 Start training
-Defense: None
+Defense: jacreg
 Epoch 1: 0/50000 (0%)
 Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.098353, Accuracy: 83.39%
-Epoch training time (s): 107.4193103313446
-Defense: isometry
+Epoch: 1, Loss: 2463.827071, Accuracy: 83.39%
+Epoch training time (s): 483.4878511428833
+Defense: jacreg
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 1799.359627, Accuracy: 10.03%
-Epoch training time (s): 487.5587067604065
-Defense: isometry
+Epoch: 2, Loss: 18013.763733, Accuracy: 89.48%
+Epoch training time (s): 456.01255989074707
+Defense: jacreg
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 80.829051, Accuracy: 10.00%
-Epoch training time (s): 488.5552976131439
-Defense: isometry
+Epoch: 3, Loss: 35838.207629, Accuracy: 91.10%
+Epoch training time (s): 454.8586344718933
+Defense: jacreg
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 18.720568, Accuracy: 10.00%
-Epoch training time (s): 482.0522971153259
-Defense: isometry
+Epoch: 4, Loss: 43869.461818, Accuracy: 91.69%
+Epoch training time (s): 456.84140133857727
+Defense: jacreg
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 17.306199, Accuracy: 10.03%
-Epoch training time (s): 485.2337095737457
-Defense: isometry
+Epoch: 5, Loss: 49195.397044, Accuracy: 92.31%
+Epoch training time (s): 454.18089032173157
+Defense: jacreg
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 19.856073, Accuracy: 10.00%
-Epoch training time (s): 482.6840567588806
-Defense: isometry
+Epoch: 6, Loss: 54869.239189, Accuracy: 92.83%
+Epoch training time (s): 456.4019660949707
+Defense: jacreg
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 17.805337, Accuracy: 10.00%
-Epoch training time (s): 481.4401443004608
-Defense: isometry
+Epoch: 7, Loss: 60008.443723, Accuracy: 92.84%
+Epoch training time (s): 463.5219306945801
+Defense: jacreg
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 15.311987, Accuracy: 10.00%
-Epoch training time (s): 482.9557228088379
-Defense: isometry
+Epoch: 8, Loss: 66248.384370, Accuracy: 93.13%
+Epoch training time (s): 465.803733587265
+Defense: jacreg
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 16.128220, Accuracy: 10.00%
-Epoch training time (s): 473.8973853588104
-Defense: isometry
+Epoch: 9, Loss: 66165.340902, Accuracy: 93.34%
+Epoch training time (s): 473.22240471839905
+Defense: jacreg
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 15.452099, Accuracy: 10.00%
-Epoch training time (s): 474.2470054626465
-Defense: isometry
+Epoch: 10, Loss: 69192.279772, Accuracy: 93.74%
+Epoch training time (s): 486.166140794754
+Defense: jacreg
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 16.839573, Accuracy: 10.00%
-Epoch training time (s): 483.3223865032196
-Defense: isometry
+Epoch: 11, Loss: 73962.797336, Accuracy: 93.84%
+Epoch training time (s): 473.05558705329895
+Defense: jacreg
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 18.055335, Accuracy: 10.00%
-Epoch training time (s): 482.41772866249084
-Defense: isometry
+Epoch: 12, Loss: 76680.355883, Accuracy: 93.98%
+Epoch training time (s): 471.8836290836334
+Defense: jacreg
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 18.956363, Accuracy: 10.00%
-Epoch training time (s): 483.0176408290863
-Defense: isometry
+Epoch: 13, Loss: 78215.918638, Accuracy: 93.88%
+Epoch training time (s): 474.44813227653503
+Defense: jacreg
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 18.615156, Accuracy: 10.03%
-Epoch training time (s): 479.39047861099243
-Defense: isometry
+Epoch: 14, Loss: 79202.623562, Accuracy: 94.21%
+Epoch training time (s): 493.0639805793762
+Defense: jacreg
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 16.971527, Accuracy: 10.24%
-Epoch training time (s): 479.50289726257324
-Defense: isometry
+Epoch: 15, Loss: 82392.079165, Accuracy: 94.17%
+Epoch training time (s): 492.47608494758606
+Defense: jacreg
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 20.738335, Accuracy: 10.11%
-Epoch training time (s): 485.7976233959198
-Defense: isometry
+Epoch: 16, Loss: 83643.447364, Accuracy: 94.07%
+Epoch training time (s): 491.2129170894623
+Defense: jacreg
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 17.603806, Accuracy: 10.00%
-Epoch training time (s): 485.2118172645569
-Defense: isometry
+Epoch: 17, Loss: 89371.755485, Accuracy: 94.07%
+Epoch training time (s): 487.4452164173126
+Defense: jacreg
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 15.242655, Accuracy: 10.01%
-Epoch training time (s): 483.3748471736908
-Defense: isometry
+Epoch: 18, Loss: 89815.706660, Accuracy: 94.19%
+Epoch training time (s): 486.26964831352234
+Defense: jacreg
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 14.285203, Accuracy: 10.27%
-Epoch training time (s): 486.62287974357605
-Defense: isometry
+Epoch: 19, Loss: 92592.166366, Accuracy: 94.25%
+Epoch training time (s): 485.7388870716095
+Defense: jacreg
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 22.191111, Accuracy: 10.02%
-Epoch training time (s): 491.3717665672302
-Defense: isometry
+Epoch: 20, Loss: 90040.684781, Accuracy: 94.35%
+Epoch training time (s): 484.87849974632263
+Defense: jacreg
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 15.840607, Accuracy: 10.07%
-Epoch training time (s): 484.6701514720917
-Defense: isometry
+Epoch: 21, Loss: 90240.063218, Accuracy: 94.56%
+Epoch training time (s): 487.72014355659485
+Defense: jacreg
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 20.042961, Accuracy: 10.04%
-Epoch training time (s): 491.81545305252075
-Defense: isometry
+Epoch: 22, Loss: 92805.737803, Accuracy: 94.50%
+Epoch training time (s): 513.2894148826599
+Defense: jacreg
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 15.685143, Accuracy: 10.00%
-Epoch training time (s): 486.52100133895874
-Defense: isometry
+Epoch: 23, Loss: 95423.168071, Accuracy: 94.54%
+Epoch training time (s): 513.6742835044861
+Defense: jacreg
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 16.287630, Accuracy: 10.11%
-Epoch training time (s): 483.4577121734619
-Defense: isometry
+Epoch: 24, Loss: 95583.137336, Accuracy: 94.59%
+Epoch training time (s): 497.5313811302185
+Defense: jacreg
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 19.588241, Accuracy: 10.00%
-Epoch training time (s): 486.4982147216797
-Defense: isometry
+Epoch: 25, Loss: 99743.979140, Accuracy: 94.69%
+Epoch training time (s): 483.1190869808197
+Defense: jacreg
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 17.017139, Accuracy: 10.01%
-Epoch training time (s): 481.0701470375061
-Defense: isometry
+Epoch: 26, Loss: 97808.217269, Accuracy: 94.53%
+Epoch training time (s): 487.4418878555298
+Defense: jacreg
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 16.395829, Accuracy: 10.19%
-Epoch training time (s): 484.0144877433777
-Defense: isometry
+Epoch: 27, Loss: 96766.503702, Accuracy: 94.44%
+Epoch training time (s): 484.56393098831177
+Defense: jacreg
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 15.082568, Accuracy: 10.05%
-Epoch training time (s): 482.0331301689148
-Defense: isometry
+Epoch: 28, Loss: 100300.282283, Accuracy: 94.68%
+Epoch training time (s): 481.4701120853424
+Defense: jacreg
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 14.737940, Accuracy: 10.09%
-Epoch training time (s): 480.9684054851532
-Defense: isometry
+Epoch: 29, Loss: 100263.975805, Accuracy: 94.68%
+Epoch training time (s): 476.82583951950073
+Defense: jacreg
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 14.789593, Accuracy: 10.17%
-Epoch training time (s): 489.96594285964966
-Defense: isometry
+Epoch: 30, Loss: 99668.291972, Accuracy: 94.62%
+Epoch training time (s): 482.59853863716125
+Defense: jacreg
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 15.868664, Accuracy: 12.24%
-Epoch training time (s): 490.07815194129944
-Defense: isometry
+Epoch: 31, Loss: 100049.994947, Accuracy: 94.74%
+Epoch training time (s): 481.1030330657959
+Defense: jacreg
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 15.462636, Accuracy: 12.02%
-Epoch training time (s): 491.85096073150635
-Defense: isometry
+Epoch: 32, Loss: 98181.292197, Accuracy: 94.87%
+Epoch training time (s): 482.4528317451477
+Defense: jacreg
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 16.613609, Accuracy: 10.00%
-Epoch training time (s): 503.90615010261536
-Defense: isometry
+Epoch: 33, Loss: 95873.369658, Accuracy: 94.86%
+Epoch training time (s): 481.55004477500916
+Defense: jacreg
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 15.414539, Accuracy: 14.41%
-Epoch training time (s): 494.1711094379425
-Defense: isometry
+Epoch: 34, Loss: 96372.692906, Accuracy: 94.92%
+Epoch training time (s): 480.0458619594574
+Defense: jacreg
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 14.334683, Accuracy: 10.98%
-Epoch training time (s): 491.3085677623749
-Defense: isometry
+Epoch: 35, Loss: 94621.077463, Accuracy: 94.71%
+Epoch training time (s): 510.5558886528015
+Defense: jacreg
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 13.211660, Accuracy: 13.10%
-Epoch training time (s): 495.9476282596588
-Defense: isometry
+Epoch: 36, Loss: 95433.271845, Accuracy: 95.02%
+Epoch training time (s): 486.1585750579834
+Defense: jacreg
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 13.631409, Accuracy: 12.60%
-Epoch training time (s): 504.20799803733826
-Defense: isometry
+Epoch: 37, Loss: 93767.010935, Accuracy: 94.71%
+Epoch training time (s): 483.20361280441284
+Defense: jacreg
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 13.470411, Accuracy: 13.61%
-Epoch training time (s): 500.7732787132263
-Defense: isometry
+Epoch: 38, Loss: 91627.430128, Accuracy: 94.91%
+Epoch training time (s): 487.7721483707428
+Defense: jacreg
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 13.798958, Accuracy: 10.67%
-Epoch training time (s): 500.25802755355835
-Defense: isometry
+Epoch: 39, Loss: 92383.897125, Accuracy: 94.95%
+Epoch training time (s): 509.4611077308655
+Defense: jacreg
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 13.341898, Accuracy: 16.65%
-Epoch training time (s): 499.99808263778687
-Defense: isometry
+Epoch: 40, Loss: 89838.578011, Accuracy: 94.74%
+Epoch training time (s): 505.81187677383423
+Defense: jacreg
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 13.563734, Accuracy: 11.49%
-Epoch training time (s): 503.5860812664032
-Defense: isometry
+Epoch: 41, Loss: 90059.573313, Accuracy: 94.84%
+Epoch training time (s): 502.8244061470032
+Defense: jacreg
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 14.116228, Accuracy: 13.07%
-Epoch training time (s): 501.4529814720154
-Defense: isometry
+Epoch: 42, Loss: 90403.570437, Accuracy: 95.05%
+Epoch training time (s): 506.1415591239929
+Defense: jacreg
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 14.363080, Accuracy: 12.53%
-Epoch training time (s): 506.4370222091675
-Defense: isometry
+Epoch: 43, Loss: 91029.892127, Accuracy: 95.01%
+Epoch training time (s): 504.6135461330414
+Defense: jacreg
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 14.421039, Accuracy: 16.62%
-Epoch training time (s): 507.8238446712494
-Defense: isometry
+Epoch: 44, Loss: 88933.816770, Accuracy: 95.16%
+Epoch training time (s): 506.0733745098114
+Defense: jacreg
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 14.609866, Accuracy: 14.46%
-Epoch training time (s): 507.9585838317871
-Defense: isometry
+Epoch: 45, Loss: 89899.734581, Accuracy: 94.92%
+Epoch training time (s): 507.9062352180481
+Defense: jacreg
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 14.481873, Accuracy: 16.76%
-Epoch training time (s): 506.23945140838623
-Defense: isometry
+Epoch: 46, Loss: 87619.213249, Accuracy: 95.30%
+Epoch training time (s): 509.0916004180908
+Defense: jacreg
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 15.445753, Accuracy: 13.05%
-Epoch training time (s): 501.5848217010498
-Defense: isometry
+Epoch: 47, Loss: 84028.152574, Accuracy: 94.99%
+Epoch training time (s): 509.8618052005768
+Defense: jacreg
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 16.236021, Accuracy: 13.25%
-Epoch training time (s): 506.330685377121
-Defense: isometry
+Epoch: 48, Loss: 85860.808458, Accuracy: 95.06%
+Epoch training time (s): 505.52537178993225
+Defense: jacreg
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 15.464541, Accuracy: 16.37%
-Epoch training time (s): 509.3280577659607
-Defense: isometry
+Epoch: 49, Loss: 84317.528156, Accuracy: 95.04%
+Epoch training time (s): 507.9260776042938
+Defense: jacreg
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 16.933102, Accuracy: 13.78%
-Epoch training time (s): 507.39714312553406
-Defense: isometry
+Epoch: 50, Loss: 85129.497041, Accuracy: 94.98%
+Epoch training time (s): 508.0864565372467
+Defense: jacreg
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 16.910827, Accuracy: 17.42%
-Epoch training time (s): 506.32995343208313
-Training time (s): 24678.837296009064
+Epoch: 51, Loss: 83006.428612, Accuracy: 95.10%
+Epoch training time (s): 506.322074174881
+Training time (s): 24886.554226398468
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_3
+name: cifar_resnet_jacreg/seed_3
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 3
-gpu_number: 6
+gpu_number: 3
 load: True
 archi: resnet
 channels1: 32
@@ -1902,12 +1900,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -1923,15 +1921,15 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 1232.0/10000 (12.32%)
+Accuracy: 2246.0/10000 (22.46%)
 =====================================================================================================
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_4
+name: cifar_resnet_jacreg/seed_4
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 4
-gpu_number: 6
+gpu_number: 3
 load: False
 archi: resnet
 channels1: 32
@@ -1940,12 +1938,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -1957,424 +1955,424 @@ alpha: 0.01
 max_iter: 10
 random_start: True
 Start training
-Defense: None
+Defense: jacreg
 Epoch 1: 0/50000 (0%)
 Epoch 1: 12480/50000 (25%)
 Epoch 1: 24960/50000 (50%)
 Epoch 1: 37440/50000 (75%)
 Epoch 1: 49920/50000 (100%)
-Epoch: 1, Loss: 1.083862, Accuracy: 84.10%
-Epoch training time (s): 110.89665126800537
-Defense: isometry
+Epoch: 1, Loss: 1992.570750, Accuracy: 84.10%
+Epoch training time (s): 529.8840253353119
+Defense: jacreg
 Epoch 2: 0/50000 (0%)
 Epoch 2: 12480/50000 (25%)
 Epoch 2: 24960/50000 (50%)
 Epoch 2: 37440/50000 (75%)
 Epoch 2: 49920/50000 (100%)
-Epoch: 2, Loss: 1589.645744, Accuracy: 10.00%
-Epoch training time (s): 504.61246609687805
-Defense: isometry
+Epoch: 2, Loss: 16992.456300, Accuracy: 89.36%
+Epoch training time (s): 509.0816807746887
+Defense: jacreg
 Epoch 3: 0/50000 (0%)
 Epoch 3: 12480/50000 (25%)
 Epoch 3: 24960/50000 (50%)
 Epoch 3: 37440/50000 (75%)
 Epoch 3: 49920/50000 (100%)
-Epoch: 3, Loss: 18.681704, Accuracy: 80.42%
-Epoch training time (s): 502.04801058769226
-Defense: isometry
+Epoch: 3, Loss: 29969.140911, Accuracy: 90.82%
+Epoch training time (s): 507.5009949207306
+Defense: jacreg
 Epoch 4: 0/50000 (0%)
 Epoch 4: 12480/50000 (25%)
 Epoch 4: 24960/50000 (50%)
 Epoch 4: 37440/50000 (75%)
 Epoch 4: 49920/50000 (100%)
-Epoch: 4, Loss: 75.788104, Accuracy: 18.82%
-Epoch training time (s): 506.80264115333557
-Defense: isometry
+Epoch: 4, Loss: 38660.151414, Accuracy: 91.70%
+Epoch training time (s): 509.455060005188
+Defense: jacreg
 Epoch 5: 0/50000 (0%)
 Epoch 5: 12480/50000 (25%)
 Epoch 5: 24960/50000 (50%)
 Epoch 5: 37440/50000 (75%)
 Epoch 5: 49920/50000 (100%)
-Epoch: 5, Loss: 20.609700, Accuracy: 18.13%
-Epoch training time (s): 500.8303253650665
-Defense: isometry
+Epoch: 5, Loss: 44080.168790, Accuracy: 92.03%
+Epoch training time (s): 504.8670971393585
+Defense: jacreg
 Epoch 6: 0/50000 (0%)
 Epoch 6: 12480/50000 (25%)
 Epoch 6: 24960/50000 (50%)
 Epoch 6: 37440/50000 (75%)
 Epoch 6: 49920/50000 (100%)
-Epoch: 6, Loss: 40.990012, Accuracy: 10.00%
-Epoch training time (s): 503.485604763031
-Defense: isometry
+Epoch: 6, Loss: 47867.269250, Accuracy: 92.41%
+Epoch training time (s): 483.7248754501343
+Defense: jacreg
 Epoch 7: 0/50000 (0%)
 Epoch 7: 12480/50000 (25%)
 Epoch 7: 24960/50000 (50%)
 Epoch 7: 37440/50000 (75%)
 Epoch 7: 49920/50000 (100%)
-Epoch: 7, Loss: 43.254022, Accuracy: 10.00%
-Epoch training time (s): 504.3516776561737
-Defense: isometry
+Epoch: 7, Loss: 55080.203650, Accuracy: 92.57%
+Epoch training time (s): 487.97722458839417
+Defense: jacreg
 Epoch 8: 0/50000 (0%)
 Epoch 8: 12480/50000 (25%)
 Epoch 8: 24960/50000 (50%)
 Epoch 8: 37440/50000 (75%)
 Epoch 8: 49920/50000 (100%)
-Epoch: 8, Loss: 24.944888, Accuracy: 10.00%
-Epoch training time (s): 497.3247127532959
-Defense: isometry
+Epoch: 8, Loss: 60213.919483, Accuracy: 93.44%
+Epoch training time (s): 485.06665444374084
+Defense: jacreg
 Epoch 9: 0/50000 (0%)
 Epoch 9: 12480/50000 (25%)
 Epoch 9: 24960/50000 (50%)
 Epoch 9: 37440/50000 (75%)
 Epoch 9: 49920/50000 (100%)
-Epoch: 9, Loss: 23.308962, Accuracy: 10.00%
-Epoch training time (s): 502.6068468093872
-Defense: isometry
+Epoch: 9, Loss: 62046.057700, Accuracy: 93.66%
+Epoch training time (s): 487.89430046081543
+Defense: jacreg
 Epoch 10: 0/50000 (0%)
 Epoch 10: 12480/50000 (25%)
 Epoch 10: 24960/50000 (50%)
 Epoch 10: 37440/50000 (75%)
 Epoch 10: 49920/50000 (100%)
-Epoch: 10, Loss: 31.056444, Accuracy: 10.00%
-Epoch training time (s): 500.98899602890015
-Defense: isometry
+Epoch: 10, Loss: 65044.111487, Accuracy: 93.60%
+Epoch training time (s): 480.81509709358215
+Defense: jacreg
 Epoch 11: 0/50000 (0%)
 Epoch 11: 12480/50000 (25%)
 Epoch 11: 24960/50000 (50%)
 Epoch 11: 37440/50000 (75%)
 Epoch 11: 49920/50000 (100%)
-Epoch: 11, Loss: 31.810111, Accuracy: 10.00%
-Epoch training time (s): 501.40641617774963
-Defense: isometry
+Epoch: 11, Loss: 66753.130945, Accuracy: 94.09%
+Epoch training time (s): 476.69504594802856
+Defense: jacreg
 Epoch 12: 0/50000 (0%)
 Epoch 12: 12480/50000 (25%)
 Epoch 12: 24960/50000 (50%)
 Epoch 12: 37440/50000 (75%)
 Epoch 12: 49920/50000 (100%)
-Epoch: 12, Loss: 25.131997, Accuracy: 10.00%
-Epoch training time (s): 498.2901129722595
-Defense: isometry
+Epoch: 12, Loss: 73420.421289, Accuracy: 94.11%
+Epoch training time (s): 483.6108090877533
+Defense: jacreg
 Epoch 13: 0/50000 (0%)
 Epoch 13: 12480/50000 (25%)
 Epoch 13: 24960/50000 (50%)
 Epoch 13: 37440/50000 (75%)
 Epoch 13: 49920/50000 (100%)
-Epoch: 13, Loss: 23.106624, Accuracy: 10.00%
-Epoch training time (s): 507.32074999809265
-Defense: isometry
+Epoch: 13, Loss: 72609.171566, Accuracy: 93.77%
+Epoch training time (s): 482.98366045951843
+Defense: jacreg
 Epoch 14: 0/50000 (0%)
 Epoch 14: 12480/50000 (25%)
 Epoch 14: 24960/50000 (50%)
 Epoch 14: 37440/50000 (75%)
 Epoch 14: 49920/50000 (100%)
-Epoch: 14, Loss: 20.437059, Accuracy: 10.00%
-Epoch training time (s): 499.4025926589966
-Defense: isometry
+Epoch: 14, Loss: 72171.021773, Accuracy: 94.09%
+Epoch training time (s): 483.0767800807953
+Defense: jacreg
 Epoch 15: 0/50000 (0%)
 Epoch 15: 12480/50000 (25%)
 Epoch 15: 24960/50000 (50%)
 Epoch 15: 37440/50000 (75%)
 Epoch 15: 49920/50000 (100%)
-Epoch: 15, Loss: 19.617847, Accuracy: 10.00%
-Epoch training time (s): 504.8207411766052
-Defense: isometry
+Epoch: 15, Loss: 75846.511939, Accuracy: 94.18%
+Epoch training time (s): 485.48813939094543
+Defense: jacreg
 Epoch 16: 0/50000 (0%)
 Epoch 16: 12480/50000 (25%)
 Epoch 16: 24960/50000 (50%)
 Epoch 16: 37440/50000 (75%)
 Epoch 16: 49920/50000 (100%)
-Epoch: 16, Loss: 17.619057, Accuracy: 10.02%
-Epoch training time (s): 506.49242210388184
-Defense: isometry
+Epoch: 16, Loss: 81513.227289, Accuracy: 94.10%
+Epoch training time (s): 482.37623143196106
+Defense: jacreg
 Epoch 17: 0/50000 (0%)
 Epoch 17: 12480/50000 (25%)
 Epoch 17: 24960/50000 (50%)
 Epoch 17: 37440/50000 (75%)
 Epoch 17: 49920/50000 (100%)
-Epoch: 17, Loss: 19.196624, Accuracy: 10.00%
-Epoch training time (s): 505.9174382686615
-Defense: isometry
+Epoch: 17, Loss: 82197.747508, Accuracy: 94.35%
+Epoch training time (s): 488.7139778137207
+Defense: jacreg
 Epoch 18: 0/50000 (0%)
 Epoch 18: 12480/50000 (25%)
 Epoch 18: 24960/50000 (50%)
 Epoch 18: 37440/50000 (75%)
 Epoch 18: 49920/50000 (100%)
-Epoch: 18, Loss: 21.777442, Accuracy: 10.00%
-Epoch training time (s): 505.94842052459717
-Defense: isometry
+Epoch: 18, Loss: 85226.743643, Accuracy: 94.35%
+Epoch training time (s): 484.94551181793213
+Defense: jacreg
 Epoch 19: 0/50000 (0%)
 Epoch 19: 12480/50000 (25%)
 Epoch 19: 24960/50000 (50%)
 Epoch 19: 37440/50000 (75%)
 Epoch 19: 49920/50000 (100%)
-Epoch: 19, Loss: 19.560966, Accuracy: 10.01%
-Epoch training time (s): 504.09592032432556
-Defense: isometry
+Epoch: 19, Loss: 84667.972305, Accuracy: 94.43%
+Epoch training time (s): 485.7175133228302
+Defense: jacreg
 Epoch 20: 0/50000 (0%)
 Epoch 20: 12480/50000 (25%)
 Epoch 20: 24960/50000 (50%)
 Epoch 20: 37440/50000 (75%)
 Epoch 20: 49920/50000 (100%)
-Epoch: 20, Loss: 21.847659, Accuracy: 10.00%
-Epoch training time (s): 506.6051061153412
-Defense: isometry
+Epoch: 20, Loss: 87468.764673, Accuracy: 94.52%
+Epoch training time (s): 483.85720324516296
+Defense: jacreg
 Epoch 21: 0/50000 (0%)
 Epoch 21: 12480/50000 (25%)
 Epoch 21: 24960/50000 (50%)
 Epoch 21: 37440/50000 (75%)
 Epoch 21: 49920/50000 (100%)
-Epoch: 21, Loss: 20.450566, Accuracy: 10.00%
-Epoch training time (s): 507.40170216560364
-Defense: isometry
+Epoch: 21, Loss: 94615.378209, Accuracy: 94.65%
+Epoch training time (s): 486.1107084751129
+Defense: jacreg
 Epoch 22: 0/50000 (0%)
 Epoch 22: 12480/50000 (25%)
 Epoch 22: 24960/50000 (50%)
 Epoch 22: 37440/50000 (75%)
 Epoch 22: 49920/50000 (100%)
-Epoch: 22, Loss: 21.921991, Accuracy: 10.00%
-Epoch training time (s): 504.1684114933014
-Defense: isometry
+Epoch: 22, Loss: 91781.367039, Accuracy: 94.57%
+Epoch training time (s): 487.81536960601807
+Defense: jacreg
 Epoch 23: 0/50000 (0%)
 Epoch 23: 12480/50000 (25%)
 Epoch 23: 24960/50000 (50%)
 Epoch 23: 37440/50000 (75%)
 Epoch 23: 49920/50000 (100%)
-Epoch: 23, Loss: 23.616296, Accuracy: 10.00%
-Epoch training time (s): 507.2465181350708
-Defense: isometry
+Epoch: 23, Loss: 92736.352918, Accuracy: 94.67%
+Epoch training time (s): 478.19328784942627
+Defense: jacreg
 Epoch 24: 0/50000 (0%)
 Epoch 24: 12480/50000 (25%)
 Epoch 24: 24960/50000 (50%)
 Epoch 24: 37440/50000 (75%)
 Epoch 24: 49920/50000 (100%)
-Epoch: 24, Loss: 23.345429, Accuracy: 10.00%
-Epoch training time (s): 510.14192390441895
-Defense: isometry
+Epoch: 24, Loss: 94031.465600, Accuracy: 94.63%
+Epoch training time (s): 481.2458074092865
+Defense: jacreg
 Epoch 25: 0/50000 (0%)
 Epoch 25: 12480/50000 (25%)
 Epoch 25: 24960/50000 (50%)
 Epoch 25: 37440/50000 (75%)
 Epoch 25: 49920/50000 (100%)
-Epoch: 25, Loss: 33.045546, Accuracy: 10.00%
-Epoch training time (s): 506.7789490222931
-Defense: isometry
+Epoch: 25, Loss: 93605.167724, Accuracy: 94.68%
+Epoch training time (s): 480.9867732524872
+Defense: jacreg
 Epoch 26: 0/50000 (0%)
 Epoch 26: 12480/50000 (25%)
 Epoch 26: 24960/50000 (50%)
 Epoch 26: 37440/50000 (75%)
 Epoch 26: 49920/50000 (100%)
-Epoch: 26, Loss: 29.020749, Accuracy: 10.00%
-Epoch training time (s): 505.438679933548
-Defense: isometry
+Epoch: 26, Loss: 91338.693866, Accuracy: 94.36%
+Epoch training time (s): 480.50952410697937
+Defense: jacreg
 Epoch 27: 0/50000 (0%)
 Epoch 27: 12480/50000 (25%)
 Epoch 27: 24960/50000 (50%)
 Epoch 27: 37440/50000 (75%)
 Epoch 27: 49920/50000 (100%)
-Epoch: 27, Loss: 31.813146, Accuracy: 10.00%
-Epoch training time (s): 505.1343970298767
-Defense: isometry
+Epoch: 27, Loss: 94429.095835, Accuracy: 94.46%
+Epoch training time (s): 482.8134665489197
+Defense: jacreg
 Epoch 28: 0/50000 (0%)
 Epoch 28: 12480/50000 (25%)
 Epoch 28: 24960/50000 (50%)
 Epoch 28: 37440/50000 (75%)
 Epoch 28: 49920/50000 (100%)
-Epoch: 28, Loss: 25.953827, Accuracy: 10.00%
-Epoch training time (s): 505.5951294898987
-Defense: isometry
+Epoch: 28, Loss: 94743.117047, Accuracy: 94.83%
+Epoch training time (s): 483.60483741760254
+Defense: jacreg
 Epoch 29: 0/50000 (0%)
 Epoch 29: 12480/50000 (25%)
 Epoch 29: 24960/50000 (50%)
 Epoch 29: 37440/50000 (75%)
 Epoch 29: 49920/50000 (100%)
-Epoch: 29, Loss: 26.040578, Accuracy: 10.00%
-Epoch training time (s): 506.99331426620483
-Defense: isometry
+Epoch: 29, Loss: 96790.794263, Accuracy: 94.70%
+Epoch training time (s): 478.3825695514679
+Defense: jacreg
 Epoch 30: 0/50000 (0%)
 Epoch 30: 12480/50000 (25%)
 Epoch 30: 24960/50000 (50%)
 Epoch 30: 37440/50000 (75%)
 Epoch 30: 49920/50000 (100%)
-Epoch: 30, Loss: 24.341421, Accuracy: 10.00%
-Epoch training time (s): 503.8327341079712
-Defense: isometry
+Epoch: 30, Loss: 96549.914131, Accuracy: 94.86%
+Epoch training time (s): 477.3074326515198
+Defense: jacreg
 Epoch 31: 0/50000 (0%)
 Epoch 31: 12480/50000 (25%)
 Epoch 31: 24960/50000 (50%)
 Epoch 31: 37440/50000 (75%)
 Epoch 31: 49920/50000 (100%)
-Epoch: 31, Loss: 21.468756, Accuracy: 10.00%
-Epoch training time (s): 507.89259004592896
-Defense: isometry
+Epoch: 31, Loss: 95654.466764, Accuracy: 94.92%
+Epoch training time (s): 476.94470024108887
+Defense: jacreg
 Epoch 32: 0/50000 (0%)
 Epoch 32: 12480/50000 (25%)
 Epoch 32: 24960/50000 (50%)
 Epoch 32: 37440/50000 (75%)
 Epoch 32: 49920/50000 (100%)
-Epoch: 32, Loss: 23.574590, Accuracy: 10.00%
-Epoch training time (s): 507.1221477985382
-Defense: isometry
+Epoch: 32, Loss: 93538.368230, Accuracy: 94.71%
+Epoch training time (s): 479.54821515083313
+Defense: jacreg
 Epoch 33: 0/50000 (0%)
 Epoch 33: 12480/50000 (25%)
 Epoch 33: 24960/50000 (50%)
 Epoch 33: 37440/50000 (75%)
 Epoch 33: 49920/50000 (100%)
-Epoch: 33, Loss: 19.506646, Accuracy: 10.00%
-Epoch training time (s): 508.07054352760315
-Defense: isometry
+Epoch: 33, Loss: 94239.035337, Accuracy: 94.79%
+Epoch training time (s): 476.95598101615906
+Defense: jacreg
 Epoch 34: 0/50000 (0%)
 Epoch 34: 12480/50000 (25%)
 Epoch 34: 24960/50000 (50%)
 Epoch 34: 37440/50000 (75%)
 Epoch 34: 49920/50000 (100%)
-Epoch: 34, Loss: 18.199657, Accuracy: 10.00%
-Epoch training time (s): 501.38693618774414
-Defense: isometry
+Epoch: 34, Loss: 93003.481364, Accuracy: 94.72%
+Epoch training time (s): 477.49349880218506
+Defense: jacreg
 Epoch 35: 0/50000 (0%)
 Epoch 35: 12480/50000 (25%)
 Epoch 35: 24960/50000 (50%)
 Epoch 35: 37440/50000 (75%)
 Epoch 35: 49920/50000 (100%)
-Epoch: 35, Loss: 26.380841, Accuracy: 10.00%
-Epoch training time (s): 506.693053483963
-Defense: isometry
+Epoch: 35, Loss: 91015.299317, Accuracy: 94.69%
+Epoch training time (s): 476.38230562210083
+Defense: jacreg
 Epoch 36: 0/50000 (0%)
 Epoch 36: 12480/50000 (25%)
 Epoch 36: 24960/50000 (50%)
 Epoch 36: 37440/50000 (75%)
 Epoch 36: 49920/50000 (100%)
-Epoch: 36, Loss: 22.042823, Accuracy: 10.00%
-Epoch training time (s): 505.73779344558716
-Defense: isometry
+Epoch: 36, Loss: 96962.879000, Accuracy: 94.80%
+Epoch training time (s): 475.5215802192688
+Defense: jacreg
 Epoch 37: 0/50000 (0%)
 Epoch 37: 12480/50000 (25%)
 Epoch 37: 24960/50000 (50%)
 Epoch 37: 37440/50000 (75%)
 Epoch 37: 49920/50000 (100%)
-Epoch: 37, Loss: 21.704546, Accuracy: 10.00%
-Epoch training time (s): 505.3832242488861
-Defense: isometry
+Epoch: 37, Loss: 93101.437564, Accuracy: 94.75%
+Epoch training time (s): 477.35237073898315
+Defense: jacreg
 Epoch 38: 0/50000 (0%)
 Epoch 38: 12480/50000 (25%)
 Epoch 38: 24960/50000 (50%)
 Epoch 38: 37440/50000 (75%)
 Epoch 38: 49920/50000 (100%)
-Epoch: 38, Loss: 17.877663, Accuracy: 10.07%
-Epoch training time (s): 508.93651819229126
-Defense: isometry
+Epoch: 38, Loss: 88530.480445, Accuracy: 94.90%
+Epoch training time (s): 473.5313274860382
+Defense: jacreg
 Epoch 39: 0/50000 (0%)
 Epoch 39: 12480/50000 (25%)
 Epoch 39: 24960/50000 (50%)
 Epoch 39: 37440/50000 (75%)
 Epoch 39: 49920/50000 (100%)
-Epoch: 39, Loss: 15.885576, Accuracy: 12.46%
-Epoch training time (s): 505.46445989608765
-Defense: isometry
+Epoch: 39, Loss: 91328.401798, Accuracy: 94.91%
+Epoch training time (s): 473.560400724411
+Defense: jacreg
 Epoch 40: 0/50000 (0%)
 Epoch 40: 12480/50000 (25%)
 Epoch 40: 24960/50000 (50%)
 Epoch 40: 37440/50000 (75%)
 Epoch 40: 49920/50000 (100%)
-Epoch: 40, Loss: 13.419989, Accuracy: 10.16%
-Epoch training time (s): 507.8663945198059
-Defense: isometry
+Epoch: 40, Loss: 90008.665515, Accuracy: 94.80%
+Epoch training time (s): 472.10771918296814
+Defense: jacreg
 Epoch 41: 0/50000 (0%)
 Epoch 41: 12480/50000 (25%)
 Epoch 41: 24960/50000 (50%)
 Epoch 41: 37440/50000 (75%)
 Epoch 41: 49920/50000 (100%)
-Epoch: 41, Loss: 13.361412, Accuracy: 10.01%
-Epoch training time (s): 505.912638425827
-Defense: isometry
+Epoch: 41, Loss: 89727.803404, Accuracy: 94.88%
+Epoch training time (s): 473.1842896938324
+Defense: jacreg
 Epoch 42: 0/50000 (0%)
 Epoch 42: 12480/50000 (25%)
 Epoch 42: 24960/50000 (50%)
 Epoch 42: 37440/50000 (75%)
 Epoch 42: 49920/50000 (100%)
-Epoch: 42, Loss: 12.930055, Accuracy: 11.13%
-Epoch training time (s): 507.2529253959656
-Defense: isometry
+Epoch: 42, Loss: 87702.718672, Accuracy: 94.65%
+Epoch training time (s): 472.6194272041321
+Defense: jacreg
 Epoch 43: 0/50000 (0%)
 Epoch 43: 12480/50000 (25%)
 Epoch 43: 24960/50000 (50%)
 Epoch 43: 37440/50000 (75%)
 Epoch 43: 49920/50000 (100%)
-Epoch: 43, Loss: 13.018026, Accuracy: 13.86%
-Epoch training time (s): 505.3884789943695
-Defense: isometry
+Epoch: 43, Loss: 90210.920396, Accuracy: 95.17%
+Epoch training time (s): 471.28636932373047
+Defense: jacreg
 Epoch 44: 0/50000 (0%)
 Epoch 44: 12480/50000 (25%)
 Epoch 44: 24960/50000 (50%)
 Epoch 44: 37440/50000 (75%)
 Epoch 44: 49920/50000 (100%)
-Epoch: 44, Loss: 13.177468, Accuracy: 10.84%
-Epoch training time (s): 506.6132290363312
-Defense: isometry
+Epoch: 44, Loss: 89289.167987, Accuracy: 94.84%
+Epoch training time (s): 471.9262888431549
+Defense: jacreg
 Epoch 45: 0/50000 (0%)
 Epoch 45: 12480/50000 (25%)
 Epoch 45: 24960/50000 (50%)
 Epoch 45: 37440/50000 (75%)
 Epoch 45: 49920/50000 (100%)
-Epoch: 45, Loss: 10.807655, Accuracy: 80.05%
-Epoch training time (s): 504.96351408958435
-Defense: isometry
+Epoch: 45, Loss: 87260.869616, Accuracy: 94.90%
+Epoch training time (s): 472.8542425632477
+Defense: jacreg
 Epoch 46: 0/50000 (0%)
 Epoch 46: 12480/50000 (25%)
 Epoch 46: 24960/50000 (50%)
 Epoch 46: 37440/50000 (75%)
 Epoch 46: 49920/50000 (100%)
-Epoch: 46, Loss: 3.870680, Accuracy: 84.94%
-Epoch training time (s): 505.32659459114075
-Defense: isometry
+Epoch: 46, Loss: 86568.682860, Accuracy: 94.86%
+Epoch training time (s): 474.41232895851135
+Defense: jacreg
 Epoch 47: 0/50000 (0%)
 Epoch 47: 12480/50000 (25%)
 Epoch 47: 24960/50000 (50%)
 Epoch 47: 37440/50000 (75%)
 Epoch 47: 49920/50000 (100%)
-Epoch: 47, Loss: 5.927892, Accuracy: 85.34%
-Epoch training time (s): 502.0118646621704
-Defense: isometry
+Epoch: 47, Loss: 86728.426351, Accuracy: 94.91%
+Epoch training time (s): 473.89805340766907
+Defense: jacreg
 Epoch 48: 0/50000 (0%)
 Epoch 48: 12480/50000 (25%)
 Epoch 48: 24960/50000 (50%)
 Epoch 48: 37440/50000 (75%)
 Epoch 48: 49920/50000 (100%)
-Epoch: 48, Loss: 4.748279, Accuracy: 86.04%
-Epoch training time (s): 498.4100716114044
-Defense: isometry
+Epoch: 48, Loss: 85058.707077, Accuracy: 94.92%
+Epoch training time (s): 481.57671999931335
+Defense: jacreg
 Epoch 49: 0/50000 (0%)
 Epoch 49: 12480/50000 (25%)
 Epoch 49: 24960/50000 (50%)
 Epoch 49: 37440/50000 (75%)
 Epoch 49: 49920/50000 (100%)
-Epoch: 49, Loss: 4.885816, Accuracy: 80.00%
-Epoch training time (s): 493.44124841690063
-Defense: isometry
+Epoch: 49, Loss: 84430.073593, Accuracy: 94.94%
+Epoch training time (s): 484.54843497276306
+Defense: jacreg
 Epoch 50: 0/50000 (0%)
 Epoch 50: 12480/50000 (25%)
 Epoch 50: 24960/50000 (50%)
 Epoch 50: 37440/50000 (75%)
 Epoch 50: 49920/50000 (100%)
-Epoch: 50, Loss: 4.137720, Accuracy: 81.67%
-Epoch training time (s): 496.28933691978455
-Defense: isometry
+Epoch: 50, Loss: 86150.752381, Accuracy: 94.84%
+Epoch training time (s): 477.13533425331116
+Defense: jacreg
 Epoch 51: 0/50000 (0%)
 Epoch 51: 12480/50000 (25%)
 Epoch 51: 24960/50000 (50%)
 Epoch 51: 37440/50000 (75%)
 Epoch 51: 49920/50000 (100%)
-Epoch: 51, Loss: 10.467070, Accuracy: 69.43%
-Epoch training time (s): 496.8381927013397
-Training time (s): 25328.85610628128
+Epoch: 51, Loss: 84553.565503, Accuracy: 95.01%
+Epoch training time (s): 474.6563193798065
+Training time (s): 24632.819236516953
 -----------------------------------------------------------------------------------------------------
 Test
 Files already downloaded and verified
-name: cifar_resnet_isoreg/seed_4
+name: cifar_resnet_jacreg/seed_4
 model: epoch_51.pt
 dataset: cifar
-defense: isometry
+defense: jacreg
 seed: 4
-gpu_number: 6
+gpu_number: 3
 load: True
 archi: resnet
 channels1: 32
@@ -2383,12 +2381,12 @@ hidden: 128
 batch_size: 32
 learning_rate: 0.001
 epochs: 51
-epoch_thr: 2
+epoch_thr: 1
 generate: False
 clean: False
 beta: 0.0001
 epsilon: 3.5
-lambda: 0.01
+lambda: 1000
 norm: holder
 dist_temp: 20
 teacher: teacher.pt
@@ -2404,4 +2402,4 @@ Test: 2496/10000 (25%)
 Test: 4992/10000 (50%)
 Test: 7488/10000 (75%)
 Test: 4992/10000 (100%)
-Accuracy: 3315.0/10000 (33.15%)
+Accuracy: 2376.0/10000 (23.76%)
