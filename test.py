@@ -4,6 +4,7 @@ from torch.utils.data import DataLoader
 from utils.cifar_utils import initialize_cifar
 from utils.cifar_model import AttackDataset
 from utils.mnist_utils import load_yaml, initialize_mnist
+from autoattack import AutoAttack
 
 
 def test(device, testset, model):
@@ -98,6 +99,49 @@ def one_test_run(param):
             test(device, attackset, model)
 
 
+def one_auto_attack(param):
+    # Deterministic
+    torch.manual_seed(param['seed'])
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
+    # torch.use_deterministic_algorithms(True)
+
+    # Declare CPU/GPU usage
+    if param['gpu_number'] is not None:
+        os.environ["CUDA_DEVICE_ORDER"]    = "PCI_BUS_ID"
+        os.environ["CUDA_VISIBLE_DEVICES"] = param['gpu_number']
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # Load data and model
+    if param['dataset'] == 'cifar':
+        trainset, testset, model, reg_model, teacher, attack, optimizer = initialize_cifar(param, device)
+    elif param['dataset'] == 'mnist' or param['dataset'] == 'fashion':
+        trainset, lightset, testset, model, reg_model, teacher, attack, optimizer = initialize_mnist(param, device)
+    else:
+        raise NotImplementedError
+
+    # Create adversary
+    # log_path=param['save_dir']+'log_'+param['model'][:-2]+'txt',
+    adversary = AutoAttack(model,
+                           norm    =param['attack_norm'],
+                           eps     =param['eps'],
+                           log_path=param['log_path'],
+                           version =param['version'])
+
+    # Create images and labels
+    lx = []
+    ly = []
+    for (x, y) in testset:
+        lx.append(x)
+        ly.append(y)
+    x_test = torch.cat(lx, 0)
+    y_test = torch.cat(ly, 0)
+
+    # Run attack and save images
+    with torch.no_grad():
+        _ = adversary.run_standard_evaluation(x_test, y_test, bs=param['batch_size'])
+
+
 def generate_loop(param, attacks, budgets, budgets_l2):
     print(f'Generate adversarial examples')
     for attack in attacks:
@@ -154,6 +198,15 @@ def test_loop(param, models, attacks, budgets, budgets_l2):
                 one_test_run(param)
 
 
+def auto_attack_loop(param):
+    name = param['name']
+    for seed in range(5):
+        print('=' * 101)
+        param['seed'] = -seed
+        param['name'] = name + '/seed_' + str(seed)
+        one_auto_attack(param)
+
+
 def main():
     # Detect anomaly in autograd
     torch.autograd.set_detect_anomaly(True)
@@ -177,15 +230,11 @@ def main():
 
     if param['generate']:
         generate_loop(param, attacks, budgets, budgets_l2)
+    elif param['autoattack']:
+        auto_attack_loop(param)
     else:
         # test_loop(param, models, attacks, budgets, budgets_l2)
         one_test_run(param)
-
-    # lambdas = np.linspace(5e-6, 6e-6, 11)
-    # for idx in range(len(lambdas)):
-    #    print('-' * 101)
-    #    param['name'] = f'iso_trace/lbd_{idx}'
-    #    one_test_run(param)
 
 if __name__ == '__main__':
     main()

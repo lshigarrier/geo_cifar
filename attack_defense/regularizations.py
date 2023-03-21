@@ -110,7 +110,7 @@ class IsometryRegRandom(nn.Module):
         f_11 = rho*((grad1*grad1).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector1).sum(-1).unsqueeze(-1))
         f_22 = rho*((grad2*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector2*vector2).sum(-1).unsqueeze(-1))
         f_12 = rho*((grad1*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector2).sum(-1).unsqueeze(-1))
-        reg = F.relu(f_11) + F.relu(f_22) + 2*F.relu(f_12)
+        reg = torch.abs(f_11) + torch.abs(f_22) + 2*torch.abs(f_12)
 
         # Return
         return reg.mean()/4
@@ -230,6 +230,52 @@ class JacobianReg(nn.Module):
         # Compute regularization
         reg = self.barrier(jac_norm_holder - bound)
         return reg.mean()/m**2, jac_norm_holder.mean()/m**2
+
+
+class RandomBound(nn.Module):
+
+    def __init__(self, epsilon, num_stab=1e-7):
+        super(RandomBound, self).__init__()
+        self.epsilon = epsilon
+        self.num_stab = num_stab
+
+    def forward(self, data, logits, device):
+        # Input dimension
+        # n = data.shape[1]*data.shape[2]*data.shape[3]
+        # Number of classes
+        c = logits.shape[1]
+        m = c - 1
+
+        # Numerical stability
+        probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
+
+        # Coordinate change
+        new_coord = torch.sqrt(probs)
+        new_coord = 2 * new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
+
+        # Compute gradient in two random directions
+        vector1  = torch.randn(*new_coord.shape).to(device)
+        vector2  = torch.randn(*new_coord.shape).to(device)
+        vector1 /= torch.norm(vector1, dim=1).unsqueeze(-1)
+        vector2 /= torch.norm(vector2, dim=1).unsqueeze(-1)
+        grad1    = torch.autograd.grad(new_coord, data, grad_outputs=vector1, retain_graph=True)[0]
+        grad2    = torch.autograd.grad(new_coord, data, grad_outputs=vector2, retain_graph=True)[0]
+        grad1    = grad1.contiguous().view(grad1.shape[0], -1)
+        grad2    = grad2.contiguous().view(grad2.shape[0], -1)
+
+        # Distance from center of simplex
+        delta = torch.sqrt(probs / c).sum(dim=1)
+        delta = 2*torch.acos(delta).unsqueeze(-1)
+
+        # Compute regularization term
+        rho = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1)
+        f_11 = rho*((grad1*grad1).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector1).sum(-1).unsqueeze(-1))
+        f_22 = rho*((grad2*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector2*vector2).sum(-1).unsqueeze(-1))
+        f_12 = rho*((grad1*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector2).sum(-1).unsqueeze(-1))
+        reg = F.relu(f_11) + F.relu(f_22) + 2*F.relu(f_12)
+
+        # Return
+        return reg.mean()/4
 
 
 class AdaptiveTemp(nn.Module):

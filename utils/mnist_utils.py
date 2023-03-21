@@ -7,7 +7,8 @@ from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 from utils.mnist_model import Lenet
 from attack_defense.parseval import JacSoftmax, JacCoordChange
-from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop, JacobianReg
+from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop
+from attack_defense.regularizations import JacobianReg, RandomBound, AdaptiveTemp
 from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM
 from attack_defense.attacks import TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
@@ -77,7 +78,7 @@ def initialize_mnist(param, device):
     reg_model = None
     if param['defense'] == 'isometry':
         reg_model = IsometryReg(param['epsilon'], norm=param['norm'])
-    elif param['defense'] == 'isorandom':
+    elif param['defense'] == 'isorandom' or param['defense'] == 'isogn':
         reg_model = IsometryRegRandom(param['epsilon'])
     elif param['defense'] == 'isonoback':
         reg_model = IsometryRegNoBackprop(param['epsilon'])
@@ -85,6 +86,10 @@ def initialize_mnist(param, device):
         reg_model = [JacSoftmax(), JacCoordChange()]
     elif param['defense'] == 'jacbound' or param['defense'] == 'jacreg':
         reg_model = JacobianReg(param['epsilon'])
+    elif param['defense'] == 'randombound':
+        reg_model = RandomBound(param['epsilon'])
+    elif param['defense'] == 'temperature':
+        reg_model = AdaptiveTemp(param['epsilon'])
 
     attack = None
     if param['attack'] == 'fgsm':
