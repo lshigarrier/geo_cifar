@@ -1,6 +1,5 @@
 import torch
 import os
-import numpy as np
 from torch.utils.data import DataLoader
 from utils.cifar_utils import initialize_cifar
 from utils.cifar_model import AttackDataset
@@ -81,7 +80,7 @@ def one_test_run(param):
     # Initialization
     if param['dataset'] == 'cifar':
         trainset, testset, model, reg_model, teacher, attack, optimizer = initialize_cifar(param, device)
-    elif param['dataset'] == 'mnist':
+    elif param['dataset'] == 'mnist' or param['dataset'] == 'fashion':
         trainset, lightset, testset, model, reg_model, teacher, attack, optimizer = initialize_mnist(param, device)
     else:
         raise NotImplementedError

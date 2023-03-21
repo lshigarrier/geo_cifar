@@ -62,11 +62,12 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
 
         elif param['defense'] == 'jacreg':
             _, reg = reg_model(x, logits, device)
-            loss   = entropy + param['lambda']*reg
+            loss   = (1 - param['lambda'])*entropy + param['lambda']*reg
 
         elif param['defense'] == 'temperature':
             temp = reg_model(x, logits, device).detach()  # or not detach()
-            loss = F.cross_entropy(temp*logits, label)
+            new_logits = temp*F.softmax(logits)
+            loss = F.cross_entropy(new_logits, label)
 
         elif param['defense'] == 'fir':
             # Compute regularization term and cross entropy loss
@@ -109,7 +110,6 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             x, label = x.to(device), label.to(device)
             logits = model(x)
             pred = logits.argmax(dim=1)
-
             tot_corr += torch.eq(pred, label).float().sum().item()
             tot_num += x.size(0)
         acc = 100 * tot_corr / tot_num
@@ -236,7 +236,7 @@ def main():
         param['seed'] = seed
         param['name'] = name + '/seed_' + str(seed)
         param['attack'] = 'gn'
-        param['budget'] = 8/255
+        param['budget'] = 16/255
         param['load'] = False
         one_run(param)
         print('-' * 101)

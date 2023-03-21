@@ -1,9 +1,9 @@
-name       : cifar_resnet_jacreg
+name       : cifar_resnet_isorand
 model      : epoch_51.pt
 dataset    : cifar
-defense    : jacreg
+defense    : isorandom
 seed       : 0
-gpu_number : "6"
+gpu_number : "4"
 load       : False
 
 # model
@@ -24,7 +24,7 @@ epochs           : 51
 
 # annealing
 
-epoch_thr : 1
+epoch_thr : 2
 
 # test
 
@@ -40,7 +40,7 @@ beta : 0.0001
 # d = 3*32*32 = 3072
 # eps_inf = 16/255 => eps_2 = eps_inf * sqrt(d) = 3.5
 epsilon : 3.5
-lambda  : 0.99
+lambda  : 0.002
 norm    : holder
 
 # distillation

@@ -110,7 +110,7 @@ class IsometryRegRandom(nn.Module):
         f_11 = rho*((grad1*grad1).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector1).sum(-1).unsqueeze(-1))
         f_22 = rho*((grad2*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector2*vector2).sum(-1).unsqueeze(-1))
         f_12 = rho*((grad1*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector2).sum(-1).unsqueeze(-1))
-        reg = F.relu(f_11 + f_22 + 2*f_12)
+        reg = F.relu(f_11) + F.relu(f_22) + 2*F.relu(f_12)
 
         # Return
         return reg.mean()/4
