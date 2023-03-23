@@ -150,7 +150,7 @@ def generate_loop(param, attacks, budgets, budgets_l2):
             for idx in range(len(budgets)):
                 param['budget'] = budgets[idx]
                 if attack == 'pgd':
-                    for perturb in ('l2', 'linf'):
+                    for perturb in ('linf',):  # 'l2'
                         param['perturbation'] = perturb
                         if perturb == 'l2':
                             param['budget'] = budgets_l2[idx]
@@ -220,12 +220,12 @@ def main():
         'distillation',
         'adv_train'
     ]
-    budgets = [8/255]
+    budgets = [4/255, 8/255, 16/255, 32/255]
     budgets_l2 = [2., 3., 4.]
     attacks = [
-        'fgsm'
+        'pgd'
     ]
-    # 'pgd'
+    # 'fgsm'
     # 'deep_fool'
 
     if param['generate']:

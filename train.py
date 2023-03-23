@@ -85,7 +85,7 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
 
         # Store cross entropy and regularization values
         entropy_val.append(entropy.item())
-        reg_val.append(reg.item())
+        reg_val.append(param['lambda']*reg.item())
 
         # backprop
         loss.backward()
@@ -99,8 +99,9 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
         loss_list.append(loss.item())
 
         if idx % int(len(trainset)/4) == 0:
-            print('Epoch {}: {}/{} ({:.0f}%)'.format(epoch, idx * len(x),
-                                                     len(trainset.dataset), 100. * idx / len(trainset)))
+            print('Epoch {}: {}/{} ({:.0f}%), Loss: {:.4f}, Entropy: {:.4f}, Reg: {:.4f}'.format(
+                epoch, idx * len(x), len(trainset.dataset), 100. * idx / len(trainset),
+                np.mean(loss_list), np.mean(entropy_val), np.mean(reg_val)))
 
     model.eval()
     with torch.no_grad():

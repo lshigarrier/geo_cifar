@@ -121,8 +121,8 @@ def initialize_cifar(param, device):
         teacher = None
 
     # Set optimizer
-    optimizer = optim.SGD(model.parameters(), lr=param['learning_rate'])
-    # optimizer = optim.Adam(model.parameters(), lr=param['learning_rate'])
+    # optimizer = optim.SGD(model.parameters(), lr=param['learning_rate'])
+    optimizer = optim.Adam(model.parameters(), lr=param['learning_rate'])
 
     # Print hyperparameters
     for key in param:
