@@ -8,7 +8,7 @@ from torchvision import datasets, transforms
 from utils.mnist_model import Lenet
 from attack_defense.parseval import JacSoftmax, JacCoordChange
 from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop
-from attack_defense.regularizations import JacobianReg, RandomBound, AdaptiveTemp
+from attack_defense.regularizations import JacobianReg, EigenBound, RandomBound, AdaptiveTemp
 from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM
 from attack_defense.attacks import TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
@@ -84,8 +84,10 @@ def initialize_mnist(param, device):
         reg_model = IsometryRegNoBackprop(param['epsilon'])
     elif param['defense'] == 'isolayer':
         reg_model = [JacSoftmax(), JacCoordChange()]
-    elif param['defense'] == 'jacbound' or param['defense'] == 'jacreg':
-        reg_model = JacobianReg(param['epsilon'])
+    elif param['defense'] == 'jacreg':
+        reg_model = JacobianReg()
+    elif param['defense'] == 'eigenbound':
+        reg_model = EigenBound(param['epsilon'])
     elif param['defense'] == 'randombound':
         reg_model = RandomBound(param['epsilon'])
     elif param['defense'] == 'temperature':
@@ -138,8 +140,8 @@ def initialize_mnist(param, device):
         teacher_model = None
 
     # Set optimizer
-    # optimizer = optim.SGD(model.parameters(), lr=param['learning_rate'])
-    optimizer = optim.Adam(model.parameters(), lr=param['learning_rate'])
+    optimizer = optim.SGD(model.parameters(), lr=param['learning_rate'])
+    # optimizer = optim.Adam(model.parameters(), lr=param['learning_rate'])
 
     for key in param:
         print(f'{key}: {param[key]}')

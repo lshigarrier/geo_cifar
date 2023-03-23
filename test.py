@@ -213,13 +213,13 @@ def main():
 
     param = load_yaml('generate_cifar')
     models = [
-        'baseline',
-        'iso',
-        'jac',
-        'fir',
-        'distillation',
-        'adv_train'
+        'baseline'
     ]
+    # 'iso'
+    # 'jac'
+    # 'fir'
+    # 'distillation'
+    # 'adv_train'
     budgets = [4/255, 8/255, 16/255, 32/255]
     budgets_l2 = [2., 3., 4.]
     attacks = [

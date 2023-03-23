@@ -1,0 +1,59 @@
+Files already downloaded and verified
+name: cifar_resnet_baseline/seed_42
+model: epoch_51.pt
+dataset: cifar
+defense: None
+seed: 42
+gpu_number: 3
+load: False
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%), Loss: 2.6484, Entropy: 2.6484, Reg: 0.0000
+Epoch 1: 12480/50000 (25%), Loss: 1.8169, Entropy: 1.8169, Reg: 0.0000
+Epoch 1: 24960/50000 (50%), Loss: 1.4678, Entropy: 1.4678, Reg: 0.0000
+Epoch 1: 37440/50000 (75%), Loss: 1.2474, Entropy: 1.2474, Reg: 0.0000
+Epoch 1: 49920/50000 (100%), Loss: 1.1002, Entropy: 1.1002, Reg: 0.0000
+Epoch: 1, Loss: 1.099677, Accuracy: 84.08%
+Epoch training time (s): 111.72880673408508
+Defense: None
+Epoch 2: 0/50000 (0%), Loss: 0.5394, Entropy: 0.5394, Reg: 0.0000
+Epoch 2: 12480/50000 (25%), Loss: 0.4667, Entropy: 0.4667, Reg: 0.0000
+Epoch 2: 24960/50000 (50%), Loss: 0.4305, Entropy: 0.4305, Reg: 0.0000
+Epoch 2: 37440/50000 (75%), Loss: 0.4053, Entropy: 0.4053, Reg: 0.0000
+Epoch 2: 49920/50000 (100%), Loss: 0.3863, Entropy: 0.3863, Reg: 0.0000
+Epoch: 2, Loss: 0.386232, Accuracy: 89.65%
+Epoch training time (s): 106.55245018005371
+Defense: None
+Epoch 3: 0/50000 (0%), Loss: 0.0779, Entropy: 0.0779, Reg: 0.0000
+Epoch 3: 12480/50000 (25%), Loss: 0.3058, Entropy: 0.3058, Reg: 0.0000
+Epoch 3: 24960/50000 (50%), Loss: 0.3009, Entropy: 0.3009, Reg: 0.0000
+Epoch 3: 37440/50000 (75%), Loss: 0.2932, Entropy: 0.2932, Reg: 0.0000
+Epoch 3: 49920/50000 (100%), Loss: 0.2877, Entropy: 0.2877, Reg: 0.0000
+Epoch: 3, Loss: 0.287677, Accuracy: 90.94%
+Epoch training time (s): 106.94579410552979
+Defense: None
+Epoch 4: 0/50000 (0%), Loss: 0.0773, Entropy: 0.0773, Reg: 0.0000
+Epoch 4: 12480/50000 (25%), Loss: 0.2588, Entropy: 0.2588, Reg: 0.0000

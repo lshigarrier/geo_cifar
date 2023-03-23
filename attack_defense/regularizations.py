@@ -40,18 +40,18 @@ class IsometryReg(nn.Module):
         jac = torch.transpose(jac, dim0=0, dim1=1)
         jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
 
-        # Gram matrix of Jacobian
-        jac = torch.bmm(jac, torch.transpose(jac, 1, 2))
-
         # Compute the FIM coefficient in stereographic projection
-        coeff = 4 * (1 - torch.sqrt(probs[:, m])) ** 2
+        coeff = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1).unsqueeze(-1)
+
+        # Gram matrix of Jacobian
+        jac = coeff*torch.bmm(jac, torch.transpose(jac, 1, 2))
 
         # Distance from center of simplex
         delta = torch.sqrt(probs / c).sum(dim=1)
         delta = 2 * torch.acos(delta)
 
         # Rescaled identity matrix
-        factor = (delta ** 2 / coeff / self.epsilon ** 2).view(-1, 1, 1)
+        factor = (delta ** 2 / self.epsilon ** 2).view(-1, 1, 1)
         identity = factor * torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
 
         # Compute regularization term
@@ -106,10 +106,10 @@ class IsometryRegRandom(nn.Module):
         delta = 2*torch.acos(delta).unsqueeze(-1)
 
         # Compute regularization term
-        rho = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1)
-        f_11 = rho*((grad1*grad1).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector1).sum(-1).unsqueeze(-1))
-        f_22 = rho*((grad2*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector2*vector2).sum(-1).unsqueeze(-1))
-        f_12 = rho*((grad1*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector2).sum(-1).unsqueeze(-1))
+        coeff = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1)
+        f_11 = coeff*((grad1*grad1).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector1).sum(-1).unsqueeze(-1))
+        f_22 = coeff*((grad2*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector2*vector2).sum(-1).unsqueeze(-1))
+        f_12 = coeff*((grad1*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector2).sum(-1).unsqueeze(-1))
         reg = torch.abs(f_11) + torch.abs(f_22) + 2*torch.abs(f_12)
 
         # Return
@@ -151,18 +151,18 @@ class IsometryRegNoBackprop(nn.Module):
         # Multiply by the Jacobian matrix of coordinate change
         jac = torch.bmm(self.jac_coord_change(probs, device), torch.bmm(self.jac_soft(probs, device), jac))
 
-        # Gram matrix of Jacobian
-        jac = torch.bmm(jac, torch.transpose(jac, 1, 2))
-
         # Compute the FIM coefficient in stereographic projection
-        coeff = 4*(1 - torch.sqrt(probs[:, m]))**2
+        coeff = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1).unsqueeze(-1)
+
+        # Gram matrix of Jacobian
+        jac = coeff*torch.bmm(jac, torch.transpose(jac, 1, 2))
 
         # Distance from center of simplex
         delta = torch.sqrt(probs / c).sum(dim=1)
         delta = 2*torch.acos(delta)
 
         # Rescaled identity matrix
-        factor = (delta**2/coeff/self.epsilon**2).view(-1, 1, 1)
+        factor = (delta**2/self.epsilon**2).view(-1, 1, 1)
         identity = factor*torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
 
         # Compute regularization term
@@ -172,28 +172,35 @@ class IsometryRegNoBackprop(nn.Module):
         return reg.mean()/m**2
 
 
-###################################### Jacobian Regularization & variants ##############################################
+############################################ Eigen Bound & variants ####################################################
 
 
 class JacobianReg(nn.Module):
+    """
+    Paper: Hoffman et al.
+    """
 
-    def __init__(self, epsilon, barrier='relu', num_stab=1e-7):
+    def __init__(self):
         super(JacobianReg, self).__init__()
-        self.epsilon = epsilon
-        self.num_stab = num_stab
-        # Barrier function
-        if barrier == 'relu':
-            self.barrier = F.relu
-        elif barrier == 'elu':
-            self.barrier = F.elu
-        elif barrier == 'exp':
-            self.barrier = torch.exp
-        else:
-            raise NotImplementedError
 
     def forward(self, data, logits, device):
-        # Input dimension
-        # n = data.shape[1]*data.shape[2]*data.shape[3]
+        # Compute gradient in a random direction
+        vector  = torch.randn(*logits.shape).to(device)
+        vector /= torch.norm(vector, dim=1).unsqueeze(-1)
+        grad   = torch.autograd.grad(logits, data, grad_outputs=vector, retain_graph=True)[0]
+        grad   = grad.contiguous().view(grad.shape[0], -1)
+
+        return torch.norm(grad, dim=1).mean()
+
+
+class EigenBound(nn.Module):
+
+    def __init__(self, epsilon, num_stab=1e-7):
+        super(EigenBound, self).__init__()
+        self.epsilon = epsilon
+        self.num_stab = num_stab
+
+    def forward(self, data, logits, device):
         # Number of classes
         c = logits.shape[1]
         m = c - 1
@@ -213,23 +220,28 @@ class JacobianReg(nn.Module):
             grad_output[:, i] = 1
             jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
         jac = torch.transpose(jac, dim0=0, dim1=1)
-        jac = jac.contiguous().view(jac.shape[0], m, -1)
+        jac = jac.contiguous().view(jac.shape[0], jac.shape[1], -1)
 
-        # Compute delta and rho
-        delta = torch.sqrt(probs/c).sum(dim=1)
-        delta = 2*torch.acos(delta)
-        rho = 1 - torch.sqrt(probs[:, m])
-        bound = delta/(rho*self.epsilon)
+        # Compute the FIM coefficient in stereographic projection
+        coeff = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1).unsqueeze(-1)
 
-        # Holder inequality
-        abs_jac = torch.abs(jac)
-        norm_1 = torch.max(abs_jac.sum(dim=1, keepdim=True), dim=2)[0]
-        norm_inf = torch.max(abs_jac.sum(dim=2, keepdim=True), dim=1)[0]
-        jac_norm_holder = torch.sqrt(norm_1 * norm_inf)
+        # Gram matrix of Jacobian
+        jac = coeff*torch.bmm(jac, torch.transpose(jac, 1, 2))
 
-        # Compute regularization
-        reg = self.barrier(jac_norm_holder - bound)
-        return reg.mean()/m**2, jac_norm_holder.mean()/m**2
+        # Distance from center of simplex
+        delta = torch.sqrt(probs / c).sum(dim=1)
+        delta = 2 * torch.acos(delta)
+
+        # Rescaled identity matrix
+        factor = (delta ** 2 / self.epsilon ** 2).view(-1, 1, 1)
+        identity = factor * torch.eye(m).unsqueeze(0).repeat(logits.shape[0], 1, 1).to(device)
+
+        # Compute regularization term
+        jac_id = jac - identity
+        reg = jac_id.diagonal(dim1=-1, dim2=-2).sum(-1)
+
+        # Return
+        return reg.mean()/m
 
 
 class RandomBound(nn.Module):
@@ -268,10 +280,10 @@ class RandomBound(nn.Module):
         delta = 2*torch.acos(delta).unsqueeze(-1)
 
         # Compute regularization term
-        rho = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1)
-        f_11 = rho*((grad1*grad1).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector1).sum(-1).unsqueeze(-1))
-        f_22 = rho*((grad2*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector2*vector2).sum(-1).unsqueeze(-1))
-        f_12 = rho*((grad1*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector2).sum(-1).unsqueeze(-1))
+        coeff = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1)
+        f_11 = coeff*((grad1*grad1).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector1).sum(-1).unsqueeze(-1))
+        f_22 = coeff*((grad2*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector2*vector2).sum(-1).unsqueeze(-1))
+        f_12 = coeff*((grad1*grad2).sum(-1).unsqueeze(-1)) - delta**2/self.epsilon**2*((vector1*vector2).sum(-1).unsqueeze(-1))
         reg = F.relu(f_11) + F.relu(f_22) + 2*F.relu(f_12)
 
         # Return
@@ -308,11 +320,11 @@ class AdaptiveTemp(nn.Module):
         jac = jac.contiguous().view(jac.shape[0], m, -1)
         jac = torch.bmm(jac, torch.transpose(jac, dim0=1, dim1=2))
 
-        # Compute delta and rho
+        # Compute delta and coeff
         delta = torch.sqrt(probs/c + self.num_stab).sum(dim=1)
         delta = 2*torch.acos(delta).unsqueeze(-1)
-        rho = 1 - torch.sqrt(probs[:, m])
-        jac = (rho**2).unsqueeze(-1).unsqueeze(-1)*jac
+        coeff = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1).unsqueeze(-1)
+        jac = coeff*jac
 
         # Holder inequality
         abs_jac = torch.abs(jac)

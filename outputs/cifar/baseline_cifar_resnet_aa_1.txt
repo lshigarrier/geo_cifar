@@ -1,0 +1,1669 @@
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_baseline/seed_0
+model: epoch_51.pt
+dataset: cifar
+defense: None
+seed: 0
+gpu_number: 1
+load: True
+autoattack: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+learning_rate: 0.001
+generate: False
+clean: False
+batch_size: 32
+epsilon: 3.5
+norm: holder
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+attack_norm: Linf
+eps: 0.01568627450980392
+log_path: ./outputs/log.txt
+version: standard
+setting parameters for standard version
+using standard version including apgd-ce, apgd-t, fab-t, square.
+initial accuracy: 95.11%
+apgd-ce - 1/298 - 32 out of 32 successfully perturbed
+apgd-ce - 2/298 - 32 out of 32 successfully perturbed
+apgd-ce - 3/298 - 32 out of 32 successfully perturbed
+apgd-ce - 4/298 - 32 out of 32 successfully perturbed
+apgd-ce - 5/298 - 32 out of 32 successfully perturbed
+apgd-ce - 6/298 - 32 out of 32 successfully perturbed
+apgd-ce - 7/298 - 32 out of 32 successfully perturbed
+apgd-ce - 8/298 - 32 out of 32 successfully perturbed
+apgd-ce - 9/298 - 32 out of 32 successfully perturbed
+apgd-ce - 10/298 - 32 out of 32 successfully perturbed
+apgd-ce - 11/298 - 32 out of 32 successfully perturbed
+apgd-ce - 12/298 - 32 out of 32 successfully perturbed
+apgd-ce - 13/298 - 32 out of 32 successfully perturbed
+apgd-ce - 14/298 - 32 out of 32 successfully perturbed
+apgd-ce - 15/298 - 32 out of 32 successfully perturbed
+apgd-ce - 16/298 - 32 out of 32 successfully perturbed
+apgd-ce - 17/298 - 32 out of 32 successfully perturbed
+apgd-ce - 18/298 - 32 out of 32 successfully perturbed
+apgd-ce - 19/298 - 32 out of 32 successfully perturbed
+apgd-ce - 20/298 - 32 out of 32 successfully perturbed
+apgd-ce - 21/298 - 32 out of 32 successfully perturbed
+apgd-ce - 22/298 - 32 out of 32 successfully perturbed
+apgd-ce - 23/298 - 32 out of 32 successfully perturbed
+apgd-ce - 24/298 - 32 out of 32 successfully perturbed
+apgd-ce - 25/298 - 32 out of 32 successfully perturbed
+apgd-ce - 26/298 - 32 out of 32 successfully perturbed
+apgd-ce - 27/298 - 32 out of 32 successfully perturbed
+apgd-ce - 28/298 - 32 out of 32 successfully perturbed
+apgd-ce - 29/298 - 32 out of 32 successfully perturbed
+apgd-ce - 30/298 - 32 out of 32 successfully perturbed
+apgd-ce - 31/298 - 32 out of 32 successfully perturbed
+apgd-ce - 32/298 - 32 out of 32 successfully perturbed
+apgd-ce - 33/298 - 32 out of 32 successfully perturbed
+apgd-ce - 34/298 - 32 out of 32 successfully perturbed
+apgd-ce - 35/298 - 32 out of 32 successfully perturbed
+apgd-ce - 36/298 - 32 out of 32 successfully perturbed
+apgd-ce - 37/298 - 32 out of 32 successfully perturbed
+apgd-ce - 38/298 - 32 out of 32 successfully perturbed
+apgd-ce - 39/298 - 32 out of 32 successfully perturbed
+apgd-ce - 40/298 - 32 out of 32 successfully perturbed
+apgd-ce - 41/298 - 32 out of 32 successfully perturbed
+apgd-ce - 42/298 - 32 out of 32 successfully perturbed
+apgd-ce - 43/298 - 32 out of 32 successfully perturbed
+apgd-ce - 44/298 - 32 out of 32 successfully perturbed
+apgd-ce - 45/298 - 32 out of 32 successfully perturbed
+apgd-ce - 46/298 - 32 out of 32 successfully perturbed
+apgd-ce - 47/298 - 32 out of 32 successfully perturbed
+apgd-ce - 48/298 - 32 out of 32 successfully perturbed
+apgd-ce - 49/298 - 32 out of 32 successfully perturbed
+apgd-ce - 50/298 - 32 out of 32 successfully perturbed
+apgd-ce - 51/298 - 32 out of 32 successfully perturbed
+apgd-ce - 52/298 - 32 out of 32 successfully perturbed
+apgd-ce - 53/298 - 32 out of 32 successfully perturbed
+apgd-ce - 54/298 - 32 out of 32 successfully perturbed
+apgd-ce - 55/298 - 32 out of 32 successfully perturbed
+apgd-ce - 56/298 - 32 out of 32 successfully perturbed
+apgd-ce - 57/298 - 32 out of 32 successfully perturbed
+apgd-ce - 58/298 - 32 out of 32 successfully perturbed
+apgd-ce - 59/298 - 32 out of 32 successfully perturbed
+apgd-ce - 60/298 - 32 out of 32 successfully perturbed
+apgd-ce - 61/298 - 32 out of 32 successfully perturbed
+apgd-ce - 62/298 - 32 out of 32 successfully perturbed
+apgd-ce - 63/298 - 32 out of 32 successfully perturbed
+apgd-ce - 64/298 - 32 out of 32 successfully perturbed
+apgd-ce - 65/298 - 32 out of 32 successfully perturbed
+apgd-ce - 66/298 - 32 out of 32 successfully perturbed
+apgd-ce - 67/298 - 32 out of 32 successfully perturbed
+apgd-ce - 68/298 - 32 out of 32 successfully perturbed
+apgd-ce - 69/298 - 32 out of 32 successfully perturbed
+apgd-ce - 70/298 - 32 out of 32 successfully perturbed
+apgd-ce - 71/298 - 32 out of 32 successfully perturbed
+apgd-ce - 72/298 - 32 out of 32 successfully perturbed
+apgd-ce - 73/298 - 32 out of 32 successfully perturbed
+apgd-ce - 74/298 - 32 out of 32 successfully perturbed
+apgd-ce - 75/298 - 32 out of 32 successfully perturbed
+apgd-ce - 76/298 - 32 out of 32 successfully perturbed
+apgd-ce - 77/298 - 32 out of 32 successfully perturbed
+apgd-ce - 78/298 - 32 out of 32 successfully perturbed
+apgd-ce - 79/298 - 32 out of 32 successfully perturbed
+apgd-ce - 80/298 - 32 out of 32 successfully perturbed
+apgd-ce - 81/298 - 32 out of 32 successfully perturbed
+apgd-ce - 82/298 - 32 out of 32 successfully perturbed
+apgd-ce - 83/298 - 32 out of 32 successfully perturbed
+apgd-ce - 84/298 - 32 out of 32 successfully perturbed
+apgd-ce - 85/298 - 32 out of 32 successfully perturbed
+apgd-ce - 86/298 - 32 out of 32 successfully perturbed
+apgd-ce - 87/298 - 32 out of 32 successfully perturbed
+apgd-ce - 88/298 - 32 out of 32 successfully perturbed
+apgd-ce - 89/298 - 32 out of 32 successfully perturbed
+apgd-ce - 90/298 - 32 out of 32 successfully perturbed
+apgd-ce - 91/298 - 32 out of 32 successfully perturbed
+apgd-ce - 92/298 - 32 out of 32 successfully perturbed
+apgd-ce - 93/298 - 32 out of 32 successfully perturbed
+apgd-ce - 94/298 - 32 out of 32 successfully perturbed
+apgd-ce - 95/298 - 32 out of 32 successfully perturbed
+apgd-ce - 96/298 - 32 out of 32 successfully perturbed
+apgd-ce - 97/298 - 32 out of 32 successfully perturbed
+apgd-ce - 98/298 - 32 out of 32 successfully perturbed
+apgd-ce - 99/298 - 32 out of 32 successfully perturbed
+apgd-ce - 100/298 - 32 out of 32 successfully perturbed
+apgd-ce - 101/298 - 32 out of 32 successfully perturbed
+apgd-ce - 102/298 - 32 out of 32 successfully perturbed
+apgd-ce - 103/298 - 32 out of 32 successfully perturbed
+apgd-ce - 104/298 - 32 out of 32 successfully perturbed
+apgd-ce - 105/298 - 32 out of 32 successfully perturbed
+apgd-ce - 106/298 - 32 out of 32 successfully perturbed
+apgd-ce - 107/298 - 32 out of 32 successfully perturbed
+apgd-ce - 108/298 - 32 out of 32 successfully perturbed
+apgd-ce - 109/298 - 32 out of 32 successfully perturbed
+apgd-ce - 110/298 - 32 out of 32 successfully perturbed
+apgd-ce - 111/298 - 32 out of 32 successfully perturbed
+apgd-ce - 112/298 - 32 out of 32 successfully perturbed
+apgd-ce - 113/298 - 32 out of 32 successfully perturbed
+apgd-ce - 114/298 - 32 out of 32 successfully perturbed
+apgd-ce - 115/298 - 32 out of 32 successfully perturbed
+apgd-ce - 116/298 - 32 out of 32 successfully perturbed
+apgd-ce - 117/298 - 32 out of 32 successfully perturbed
+apgd-ce - 118/298 - 32 out of 32 successfully perturbed
+apgd-ce - 119/298 - 32 out of 32 successfully perturbed
+apgd-ce - 120/298 - 32 out of 32 successfully perturbed
+apgd-ce - 121/298 - 32 out of 32 successfully perturbed
+apgd-ce - 122/298 - 32 out of 32 successfully perturbed
+apgd-ce - 123/298 - 32 out of 32 successfully perturbed
+apgd-ce - 124/298 - 32 out of 32 successfully perturbed
+apgd-ce - 125/298 - 32 out of 32 successfully perturbed
+apgd-ce - 126/298 - 32 out of 32 successfully perturbed
+apgd-ce - 127/298 - 32 out of 32 successfully perturbed
+apgd-ce - 128/298 - 32 out of 32 successfully perturbed
+apgd-ce - 129/298 - 32 out of 32 successfully perturbed
+apgd-ce - 130/298 - 32 out of 32 successfully perturbed
+apgd-ce - 131/298 - 32 out of 32 successfully perturbed
+apgd-ce - 132/298 - 32 out of 32 successfully perturbed
+apgd-ce - 133/298 - 32 out of 32 successfully perturbed
+apgd-ce - 134/298 - 32 out of 32 successfully perturbed
+apgd-ce - 135/298 - 32 out of 32 successfully perturbed
+apgd-ce - 136/298 - 32 out of 32 successfully perturbed
+apgd-ce - 137/298 - 32 out of 32 successfully perturbed
+apgd-ce - 138/298 - 32 out of 32 successfully perturbed
+apgd-ce - 139/298 - 32 out of 32 successfully perturbed
+apgd-ce - 140/298 - 32 out of 32 successfully perturbed
+apgd-ce - 141/298 - 32 out of 32 successfully perturbed
+apgd-ce - 142/298 - 32 out of 32 successfully perturbed
+apgd-ce - 143/298 - 32 out of 32 successfully perturbed
+apgd-ce - 144/298 - 32 out of 32 successfully perturbed
+apgd-ce - 145/298 - 32 out of 32 successfully perturbed
+apgd-ce - 146/298 - 32 out of 32 successfully perturbed
+apgd-ce - 147/298 - 32 out of 32 successfully perturbed
+apgd-ce - 148/298 - 32 out of 32 successfully perturbed
+apgd-ce - 149/298 - 32 out of 32 successfully perturbed
+apgd-ce - 150/298 - 32 out of 32 successfully perturbed
+apgd-ce - 151/298 - 32 out of 32 successfully perturbed
+apgd-ce - 152/298 - 32 out of 32 successfully perturbed
+apgd-ce - 153/298 - 32 out of 32 successfully perturbed
+apgd-ce - 154/298 - 32 out of 32 successfully perturbed
+apgd-ce - 155/298 - 32 out of 32 successfully perturbed
+apgd-ce - 156/298 - 32 out of 32 successfully perturbed
+apgd-ce - 157/298 - 32 out of 32 successfully perturbed
+apgd-ce - 158/298 - 32 out of 32 successfully perturbed
+apgd-ce - 159/298 - 32 out of 32 successfully perturbed
+apgd-ce - 160/298 - 32 out of 32 successfully perturbed
+apgd-ce - 161/298 - 32 out of 32 successfully perturbed
+apgd-ce - 162/298 - 32 out of 32 successfully perturbed
+apgd-ce - 163/298 - 32 out of 32 successfully perturbed
+apgd-ce - 164/298 - 32 out of 32 successfully perturbed
+apgd-ce - 165/298 - 32 out of 32 successfully perturbed
+apgd-ce - 166/298 - 32 out of 32 successfully perturbed
+apgd-ce - 167/298 - 32 out of 32 successfully perturbed
+apgd-ce - 168/298 - 32 out of 32 successfully perturbed
+apgd-ce - 169/298 - 32 out of 32 successfully perturbed
+apgd-ce - 170/298 - 32 out of 32 successfully perturbed
+apgd-ce - 171/298 - 32 out of 32 successfully perturbed
+apgd-ce - 172/298 - 32 out of 32 successfully perturbed
+apgd-ce - 173/298 - 32 out of 32 successfully perturbed
+apgd-ce - 174/298 - 32 out of 32 successfully perturbed
+apgd-ce - 175/298 - 32 out of 32 successfully perturbed
+apgd-ce - 176/298 - 32 out of 32 successfully perturbed
+apgd-ce - 177/298 - 32 out of 32 successfully perturbed
+apgd-ce - 178/298 - 32 out of 32 successfully perturbed
+apgd-ce - 179/298 - 32 out of 32 successfully perturbed
+apgd-ce - 180/298 - 32 out of 32 successfully perturbed
+apgd-ce - 181/298 - 32 out of 32 successfully perturbed
+apgd-ce - 182/298 - 32 out of 32 successfully perturbed
+apgd-ce - 183/298 - 32 out of 32 successfully perturbed
+apgd-ce - 184/298 - 32 out of 32 successfully perturbed
+apgd-ce - 185/298 - 32 out of 32 successfully perturbed
+apgd-ce - 186/298 - 32 out of 32 successfully perturbed
+apgd-ce - 187/298 - 32 out of 32 successfully perturbed
+apgd-ce - 188/298 - 32 out of 32 successfully perturbed
+apgd-ce - 189/298 - 32 out of 32 successfully perturbed
+apgd-ce - 190/298 - 32 out of 32 successfully perturbed
+apgd-ce - 191/298 - 32 out of 32 successfully perturbed
+apgd-ce - 192/298 - 32 out of 32 successfully perturbed
+apgd-ce - 193/298 - 32 out of 32 successfully perturbed
+apgd-ce - 194/298 - 32 out of 32 successfully perturbed
+apgd-ce - 195/298 - 32 out of 32 successfully perturbed
+apgd-ce - 196/298 - 32 out of 32 successfully perturbed
+apgd-ce - 197/298 - 32 out of 32 successfully perturbed
+apgd-ce - 198/298 - 32 out of 32 successfully perturbed
+apgd-ce - 199/298 - 32 out of 32 successfully perturbed
+apgd-ce - 200/298 - 32 out of 32 successfully perturbed
+apgd-ce - 201/298 - 32 out of 32 successfully perturbed
+apgd-ce - 202/298 - 32 out of 32 successfully perturbed
+apgd-ce - 203/298 - 32 out of 32 successfully perturbed
+apgd-ce - 204/298 - 32 out of 32 successfully perturbed
+apgd-ce - 205/298 - 32 out of 32 successfully perturbed
+apgd-ce - 206/298 - 32 out of 32 successfully perturbed
+apgd-ce - 207/298 - 32 out of 32 successfully perturbed
+apgd-ce - 208/298 - 32 out of 32 successfully perturbed
+apgd-ce - 209/298 - 32 out of 32 successfully perturbed
+apgd-ce - 210/298 - 32 out of 32 successfully perturbed
+apgd-ce - 211/298 - 32 out of 32 successfully perturbed
+apgd-ce - 212/298 - 32 out of 32 successfully perturbed
+apgd-ce - 213/298 - 32 out of 32 successfully perturbed
+apgd-ce - 214/298 - 32 out of 32 successfully perturbed
+apgd-ce - 215/298 - 32 out of 32 successfully perturbed
+apgd-ce - 216/298 - 32 out of 32 successfully perturbed
+apgd-ce - 217/298 - 32 out of 32 successfully perturbed
+apgd-ce - 218/298 - 32 out of 32 successfully perturbed
+apgd-ce - 219/298 - 32 out of 32 successfully perturbed
+apgd-ce - 220/298 - 32 out of 32 successfully perturbed
+apgd-ce - 221/298 - 32 out of 32 successfully perturbed
+apgd-ce - 222/298 - 32 out of 32 successfully perturbed
+apgd-ce - 223/298 - 32 out of 32 successfully perturbed
+apgd-ce - 224/298 - 32 out of 32 successfully perturbed
+apgd-ce - 225/298 - 32 out of 32 successfully perturbed
+apgd-ce - 226/298 - 32 out of 32 successfully perturbed
+apgd-ce - 227/298 - 32 out of 32 successfully perturbed
+apgd-ce - 228/298 - 32 out of 32 successfully perturbed
+apgd-ce - 229/298 - 32 out of 32 successfully perturbed
+apgd-ce - 230/298 - 32 out of 32 successfully perturbed
+apgd-ce - 231/298 - 32 out of 32 successfully perturbed
+apgd-ce - 232/298 - 32 out of 32 successfully perturbed
+apgd-ce - 233/298 - 32 out of 32 successfully perturbed
+apgd-ce - 234/298 - 32 out of 32 successfully perturbed
+apgd-ce - 235/298 - 32 out of 32 successfully perturbed
+apgd-ce - 236/298 - 32 out of 32 successfully perturbed
+apgd-ce - 237/298 - 32 out of 32 successfully perturbed
+apgd-ce - 238/298 - 32 out of 32 successfully perturbed
+apgd-ce - 239/298 - 32 out of 32 successfully perturbed
+apgd-ce - 240/298 - 32 out of 32 successfully perturbed
+apgd-ce - 241/298 - 32 out of 32 successfully perturbed
+apgd-ce - 242/298 - 32 out of 32 successfully perturbed
+apgd-ce - 243/298 - 32 out of 32 successfully perturbed
+apgd-ce - 244/298 - 32 out of 32 successfully perturbed
+apgd-ce - 245/298 - 32 out of 32 successfully perturbed
+apgd-ce - 246/298 - 32 out of 32 successfully perturbed
+apgd-ce - 247/298 - 32 out of 32 successfully perturbed
+apgd-ce - 248/298 - 32 out of 32 successfully perturbed
+apgd-ce - 249/298 - 32 out of 32 successfully perturbed
+apgd-ce - 250/298 - 32 out of 32 successfully perturbed
+apgd-ce - 251/298 - 32 out of 32 successfully perturbed
+apgd-ce - 252/298 - 32 out of 32 successfully perturbed
+apgd-ce - 253/298 - 32 out of 32 successfully perturbed
+apgd-ce - 254/298 - 32 out of 32 successfully perturbed
+apgd-ce - 255/298 - 32 out of 32 successfully perturbed
+apgd-ce - 256/298 - 32 out of 32 successfully perturbed
+apgd-ce - 257/298 - 32 out of 32 successfully perturbed
+apgd-ce - 258/298 - 32 out of 32 successfully perturbed
+apgd-ce - 259/298 - 32 out of 32 successfully perturbed
+apgd-ce - 260/298 - 32 out of 32 successfully perturbed
+apgd-ce - 261/298 - 32 out of 32 successfully perturbed
+apgd-ce - 262/298 - 32 out of 32 successfully perturbed
+apgd-ce - 263/298 - 32 out of 32 successfully perturbed
+apgd-ce - 264/298 - 32 out of 32 successfully perturbed
+apgd-ce - 265/298 - 32 out of 32 successfully perturbed
+apgd-ce - 266/298 - 32 out of 32 successfully perturbed
+apgd-ce - 267/298 - 32 out of 32 successfully perturbed
+apgd-ce - 268/298 - 32 out of 32 successfully perturbed
+apgd-ce - 269/298 - 32 out of 32 successfully perturbed
+apgd-ce - 270/298 - 32 out of 32 successfully perturbed
+apgd-ce - 271/298 - 32 out of 32 successfully perturbed
+apgd-ce - 272/298 - 32 out of 32 successfully perturbed
+apgd-ce - 273/298 - 32 out of 32 successfully perturbed
+apgd-ce - 274/298 - 32 out of 32 successfully perturbed
+apgd-ce - 275/298 - 32 out of 32 successfully perturbed
+apgd-ce - 276/298 - 32 out of 32 successfully perturbed
+apgd-ce - 277/298 - 32 out of 32 successfully perturbed
+apgd-ce - 278/298 - 32 out of 32 successfully perturbed
+apgd-ce - 279/298 - 32 out of 32 successfully perturbed
+apgd-ce - 280/298 - 32 out of 32 successfully perturbed
+apgd-ce - 281/298 - 32 out of 32 successfully perturbed
+apgd-ce - 282/298 - 32 out of 32 successfully perturbed
+apgd-ce - 283/298 - 32 out of 32 successfully perturbed
+apgd-ce - 284/298 - 32 out of 32 successfully perturbed
+apgd-ce - 285/298 - 32 out of 32 successfully perturbed
+apgd-ce - 286/298 - 32 out of 32 successfully perturbed
+apgd-ce - 287/298 - 32 out of 32 successfully perturbed
+apgd-ce - 288/298 - 32 out of 32 successfully perturbed
+apgd-ce - 289/298 - 32 out of 32 successfully perturbed
+apgd-ce - 290/298 - 32 out of 32 successfully perturbed
+apgd-ce - 291/298 - 32 out of 32 successfully perturbed
+apgd-ce - 292/298 - 32 out of 32 successfully perturbed
+apgd-ce - 293/298 - 32 out of 32 successfully perturbed
+apgd-ce - 294/298 - 32 out of 32 successfully perturbed
+apgd-ce - 295/298 - 32 out of 32 successfully perturbed
+apgd-ce - 296/298 - 32 out of 32 successfully perturbed
+apgd-ce - 297/298 - 32 out of 32 successfully perturbed
+apgd-ce - 298/298 - 7 out of 7 successfully perturbed
+robust accuracy after APGD-CE: 0.00% (total time 1308.2 s)
+max Linf perturbation: 0.01569, nan in tensor: 0, max: 1.00000, min: 0.00000
+robust accuracy: 0.00%
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_baseline/seed_1
+model: epoch_51.pt
+dataset: cifar
+defense: None
+seed: -1
+gpu_number: 1
+load: True
+autoattack: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+learning_rate: 0.001
+generate: False
+clean: False
+batch_size: 32
+epsilon: 3.5
+norm: holder
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+attack_norm: Linf
+eps: 0.01568627450980392
+log_path: ./outputs/log.txt
+version: standard
+setting parameters for standard version
+using standard version including apgd-ce, apgd-t, fab-t, square.
+initial accuracy: 95.13%
+apgd-ce - 1/298 - 32 out of 32 successfully perturbed
+apgd-ce - 2/298 - 32 out of 32 successfully perturbed
+apgd-ce - 3/298 - 32 out of 32 successfully perturbed
+apgd-ce - 4/298 - 32 out of 32 successfully perturbed
+apgd-ce - 5/298 - 32 out of 32 successfully perturbed
+apgd-ce - 6/298 - 32 out of 32 successfully perturbed
+apgd-ce - 7/298 - 32 out of 32 successfully perturbed
+apgd-ce - 8/298 - 32 out of 32 successfully perturbed
+apgd-ce - 9/298 - 32 out of 32 successfully perturbed
+apgd-ce - 10/298 - 32 out of 32 successfully perturbed
+apgd-ce - 11/298 - 32 out of 32 successfully perturbed
+apgd-ce - 12/298 - 32 out of 32 successfully perturbed
+apgd-ce - 13/298 - 32 out of 32 successfully perturbed
+apgd-ce - 14/298 - 32 out of 32 successfully perturbed
+apgd-ce - 15/298 - 32 out of 32 successfully perturbed
+apgd-ce - 16/298 - 32 out of 32 successfully perturbed
+apgd-ce - 17/298 - 32 out of 32 successfully perturbed
+apgd-ce - 18/298 - 32 out of 32 successfully perturbed
+apgd-ce - 19/298 - 32 out of 32 successfully perturbed
+apgd-ce - 20/298 - 32 out of 32 successfully perturbed
+apgd-ce - 21/298 - 32 out of 32 successfully perturbed
+apgd-ce - 22/298 - 32 out of 32 successfully perturbed
+apgd-ce - 23/298 - 32 out of 32 successfully perturbed
+apgd-ce - 24/298 - 32 out of 32 successfully perturbed
+apgd-ce - 25/298 - 32 out of 32 successfully perturbed
+apgd-ce - 26/298 - 32 out of 32 successfully perturbed
+apgd-ce - 27/298 - 32 out of 32 successfully perturbed
+apgd-ce - 28/298 - 32 out of 32 successfully perturbed
+apgd-ce - 29/298 - 32 out of 32 successfully perturbed
+apgd-ce - 30/298 - 32 out of 32 successfully perturbed
+apgd-ce - 31/298 - 32 out of 32 successfully perturbed
+apgd-ce - 32/298 - 32 out of 32 successfully perturbed
+apgd-ce - 33/298 - 32 out of 32 successfully perturbed
+apgd-ce - 34/298 - 32 out of 32 successfully perturbed
+apgd-ce - 35/298 - 32 out of 32 successfully perturbed
+apgd-ce - 36/298 - 32 out of 32 successfully perturbed
+apgd-ce - 37/298 - 32 out of 32 successfully perturbed
+apgd-ce - 38/298 - 32 out of 32 successfully perturbed
+apgd-ce - 39/298 - 32 out of 32 successfully perturbed
+apgd-ce - 40/298 - 32 out of 32 successfully perturbed
+apgd-ce - 41/298 - 32 out of 32 successfully perturbed
+apgd-ce - 42/298 - 32 out of 32 successfully perturbed
+apgd-ce - 43/298 - 32 out of 32 successfully perturbed
+apgd-ce - 44/298 - 32 out of 32 successfully perturbed
+apgd-ce - 45/298 - 32 out of 32 successfully perturbed
+apgd-ce - 46/298 - 32 out of 32 successfully perturbed
+apgd-ce - 47/298 - 32 out of 32 successfully perturbed
+apgd-ce - 48/298 - 32 out of 32 successfully perturbed
+apgd-ce - 49/298 - 32 out of 32 successfully perturbed
+apgd-ce - 50/298 - 32 out of 32 successfully perturbed
+apgd-ce - 51/298 - 32 out of 32 successfully perturbed
+apgd-ce - 52/298 - 32 out of 32 successfully perturbed
+apgd-ce - 53/298 - 32 out of 32 successfully perturbed
+apgd-ce - 54/298 - 32 out of 32 successfully perturbed
+apgd-ce - 55/298 - 32 out of 32 successfully perturbed
+apgd-ce - 56/298 - 32 out of 32 successfully perturbed
+apgd-ce - 57/298 - 32 out of 32 successfully perturbed
+apgd-ce - 58/298 - 32 out of 32 successfully perturbed
+apgd-ce - 59/298 - 32 out of 32 successfully perturbed
+apgd-ce - 60/298 - 32 out of 32 successfully perturbed
+apgd-ce - 61/298 - 32 out of 32 successfully perturbed
+apgd-ce - 62/298 - 32 out of 32 successfully perturbed
+apgd-ce - 63/298 - 32 out of 32 successfully perturbed
+apgd-ce - 64/298 - 32 out of 32 successfully perturbed
+apgd-ce - 65/298 - 32 out of 32 successfully perturbed
+apgd-ce - 66/298 - 32 out of 32 successfully perturbed
+apgd-ce - 67/298 - 32 out of 32 successfully perturbed
+apgd-ce - 68/298 - 32 out of 32 successfully perturbed
+apgd-ce - 69/298 - 32 out of 32 successfully perturbed
+apgd-ce - 70/298 - 32 out of 32 successfully perturbed
+apgd-ce - 71/298 - 32 out of 32 successfully perturbed
+apgd-ce - 72/298 - 32 out of 32 successfully perturbed
+apgd-ce - 73/298 - 32 out of 32 successfully perturbed
+apgd-ce - 74/298 - 32 out of 32 successfully perturbed
+apgd-ce - 75/298 - 32 out of 32 successfully perturbed
+apgd-ce - 76/298 - 32 out of 32 successfully perturbed
+apgd-ce - 77/298 - 32 out of 32 successfully perturbed
+apgd-ce - 78/298 - 32 out of 32 successfully perturbed
+apgd-ce - 79/298 - 32 out of 32 successfully perturbed
+apgd-ce - 80/298 - 32 out of 32 successfully perturbed
+apgd-ce - 81/298 - 32 out of 32 successfully perturbed
+apgd-ce - 82/298 - 32 out of 32 successfully perturbed
+apgd-ce - 83/298 - 32 out of 32 successfully perturbed
+apgd-ce - 84/298 - 32 out of 32 successfully perturbed
+apgd-ce - 85/298 - 32 out of 32 successfully perturbed
+apgd-ce - 86/298 - 32 out of 32 successfully perturbed
+apgd-ce - 87/298 - 32 out of 32 successfully perturbed
+apgd-ce - 88/298 - 32 out of 32 successfully perturbed
+apgd-ce - 89/298 - 32 out of 32 successfully perturbed
+apgd-ce - 90/298 - 32 out of 32 successfully perturbed
+apgd-ce - 91/298 - 32 out of 32 successfully perturbed
+apgd-ce - 92/298 - 32 out of 32 successfully perturbed
+apgd-ce - 93/298 - 32 out of 32 successfully perturbed
+apgd-ce - 94/298 - 32 out of 32 successfully perturbed
+apgd-ce - 95/298 - 32 out of 32 successfully perturbed
+apgd-ce - 96/298 - 32 out of 32 successfully perturbed
+apgd-ce - 97/298 - 32 out of 32 successfully perturbed
+apgd-ce - 98/298 - 32 out of 32 successfully perturbed
+apgd-ce - 99/298 - 32 out of 32 successfully perturbed
+apgd-ce - 100/298 - 32 out of 32 successfully perturbed
+apgd-ce - 101/298 - 32 out of 32 successfully perturbed
+apgd-ce - 102/298 - 32 out of 32 successfully perturbed
+apgd-ce - 103/298 - 32 out of 32 successfully perturbed
+apgd-ce - 104/298 - 32 out of 32 successfully perturbed
+apgd-ce - 105/298 - 32 out of 32 successfully perturbed
+apgd-ce - 106/298 - 32 out of 32 successfully perturbed
+apgd-ce - 107/298 - 32 out of 32 successfully perturbed
+apgd-ce - 108/298 - 32 out of 32 successfully perturbed
+apgd-ce - 109/298 - 32 out of 32 successfully perturbed
+apgd-ce - 110/298 - 32 out of 32 successfully perturbed
+apgd-ce - 111/298 - 32 out of 32 successfully perturbed
+apgd-ce - 112/298 - 32 out of 32 successfully perturbed
+apgd-ce - 113/298 - 32 out of 32 successfully perturbed
+apgd-ce - 114/298 - 32 out of 32 successfully perturbed
+apgd-ce - 115/298 - 32 out of 32 successfully perturbed
+apgd-ce - 116/298 - 32 out of 32 successfully perturbed
+apgd-ce - 117/298 - 32 out of 32 successfully perturbed
+apgd-ce - 118/298 - 32 out of 32 successfully perturbed
+apgd-ce - 119/298 - 32 out of 32 successfully perturbed
+apgd-ce - 120/298 - 32 out of 32 successfully perturbed
+apgd-ce - 121/298 - 32 out of 32 successfully perturbed
+apgd-ce - 122/298 - 32 out of 32 successfully perturbed
+apgd-ce - 123/298 - 32 out of 32 successfully perturbed
+apgd-ce - 124/298 - 32 out of 32 successfully perturbed
+apgd-ce - 125/298 - 32 out of 32 successfully perturbed
+apgd-ce - 126/298 - 32 out of 32 successfully perturbed
+apgd-ce - 127/298 - 32 out of 32 successfully perturbed
+apgd-ce - 128/298 - 32 out of 32 successfully perturbed
+apgd-ce - 129/298 - 32 out of 32 successfully perturbed
+apgd-ce - 130/298 - 32 out of 32 successfully perturbed
+apgd-ce - 131/298 - 32 out of 32 successfully perturbed
+apgd-ce - 132/298 - 32 out of 32 successfully perturbed
+apgd-ce - 133/298 - 32 out of 32 successfully perturbed
+apgd-ce - 134/298 - 32 out of 32 successfully perturbed
+apgd-ce - 135/298 - 32 out of 32 successfully perturbed
+apgd-ce - 136/298 - 32 out of 32 successfully perturbed
+apgd-ce - 137/298 - 32 out of 32 successfully perturbed
+apgd-ce - 138/298 - 32 out of 32 successfully perturbed
+apgd-ce - 139/298 - 32 out of 32 successfully perturbed
+apgd-ce - 140/298 - 32 out of 32 successfully perturbed
+apgd-ce - 141/298 - 32 out of 32 successfully perturbed
+apgd-ce - 142/298 - 32 out of 32 successfully perturbed
+apgd-ce - 143/298 - 32 out of 32 successfully perturbed
+apgd-ce - 144/298 - 32 out of 32 successfully perturbed
+apgd-ce - 145/298 - 32 out of 32 successfully perturbed
+apgd-ce - 146/298 - 32 out of 32 successfully perturbed
+apgd-ce - 147/298 - 32 out of 32 successfully perturbed
+apgd-ce - 148/298 - 32 out of 32 successfully perturbed
+apgd-ce - 149/298 - 32 out of 32 successfully perturbed
+apgd-ce - 150/298 - 32 out of 32 successfully perturbed
+apgd-ce - 151/298 - 32 out of 32 successfully perturbed
+apgd-ce - 152/298 - 32 out of 32 successfully perturbed
+apgd-ce - 153/298 - 32 out of 32 successfully perturbed
+apgd-ce - 154/298 - 32 out of 32 successfully perturbed
+apgd-ce - 155/298 - 32 out of 32 successfully perturbed
+apgd-ce - 156/298 - 32 out of 32 successfully perturbed
+apgd-ce - 157/298 - 32 out of 32 successfully perturbed
+apgd-ce - 158/298 - 32 out of 32 successfully perturbed
+apgd-ce - 159/298 - 32 out of 32 successfully perturbed
+apgd-ce - 160/298 - 32 out of 32 successfully perturbed
+apgd-ce - 161/298 - 32 out of 32 successfully perturbed
+apgd-ce - 162/298 - 32 out of 32 successfully perturbed
+apgd-ce - 163/298 - 32 out of 32 successfully perturbed
+apgd-ce - 164/298 - 32 out of 32 successfully perturbed
+apgd-ce - 165/298 - 32 out of 32 successfully perturbed
+apgd-ce - 166/298 - 32 out of 32 successfully perturbed
+apgd-ce - 167/298 - 32 out of 32 successfully perturbed
+apgd-ce - 168/298 - 32 out of 32 successfully perturbed
+apgd-ce - 169/298 - 32 out of 32 successfully perturbed
+apgd-ce - 170/298 - 32 out of 32 successfully perturbed
+apgd-ce - 171/298 - 32 out of 32 successfully perturbed
+apgd-ce - 172/298 - 32 out of 32 successfully perturbed
+apgd-ce - 173/298 - 32 out of 32 successfully perturbed
+apgd-ce - 174/298 - 32 out of 32 successfully perturbed
+apgd-ce - 175/298 - 32 out of 32 successfully perturbed
+apgd-ce - 176/298 - 32 out of 32 successfully perturbed
+apgd-ce - 177/298 - 32 out of 32 successfully perturbed
+apgd-ce - 178/298 - 32 out of 32 successfully perturbed
+apgd-ce - 179/298 - 32 out of 32 successfully perturbed
+apgd-ce - 180/298 - 32 out of 32 successfully perturbed
+apgd-ce - 181/298 - 32 out of 32 successfully perturbed
+apgd-ce - 182/298 - 32 out of 32 successfully perturbed
+apgd-ce - 183/298 - 32 out of 32 successfully perturbed
+apgd-ce - 184/298 - 32 out of 32 successfully perturbed
+apgd-ce - 185/298 - 32 out of 32 successfully perturbed
+apgd-ce - 186/298 - 32 out of 32 successfully perturbed
+apgd-ce - 187/298 - 32 out of 32 successfully perturbed
+apgd-ce - 188/298 - 32 out of 32 successfully perturbed
+apgd-ce - 189/298 - 32 out of 32 successfully perturbed
+apgd-ce - 190/298 - 32 out of 32 successfully perturbed
+apgd-ce - 191/298 - 32 out of 32 successfully perturbed
+apgd-ce - 192/298 - 32 out of 32 successfully perturbed
+apgd-ce - 193/298 - 32 out of 32 successfully perturbed
+apgd-ce - 194/298 - 32 out of 32 successfully perturbed
+apgd-ce - 195/298 - 32 out of 32 successfully perturbed
+apgd-ce - 196/298 - 32 out of 32 successfully perturbed
+apgd-ce - 197/298 - 32 out of 32 successfully perturbed
+apgd-ce - 198/298 - 32 out of 32 successfully perturbed
+apgd-ce - 199/298 - 32 out of 32 successfully perturbed
+apgd-ce - 200/298 - 32 out of 32 successfully perturbed
+apgd-ce - 201/298 - 32 out of 32 successfully perturbed
+apgd-ce - 202/298 - 32 out of 32 successfully perturbed
+apgd-ce - 203/298 - 32 out of 32 successfully perturbed
+apgd-ce - 204/298 - 32 out of 32 successfully perturbed
+apgd-ce - 205/298 - 32 out of 32 successfully perturbed
+apgd-ce - 206/298 - 32 out of 32 successfully perturbed
+apgd-ce - 207/298 - 32 out of 32 successfully perturbed
+apgd-ce - 208/298 - 32 out of 32 successfully perturbed
+apgd-ce - 209/298 - 32 out of 32 successfully perturbed
+apgd-ce - 210/298 - 32 out of 32 successfully perturbed
+apgd-ce - 211/298 - 32 out of 32 successfully perturbed
+apgd-ce - 212/298 - 32 out of 32 successfully perturbed
+apgd-ce - 213/298 - 32 out of 32 successfully perturbed
+apgd-ce - 214/298 - 32 out of 32 successfully perturbed
+apgd-ce - 215/298 - 32 out of 32 successfully perturbed
+apgd-ce - 216/298 - 32 out of 32 successfully perturbed
+apgd-ce - 217/298 - 32 out of 32 successfully perturbed
+apgd-ce - 218/298 - 32 out of 32 successfully perturbed
+apgd-ce - 219/298 - 32 out of 32 successfully perturbed
+apgd-ce - 220/298 - 32 out of 32 successfully perturbed
+apgd-ce - 221/298 - 32 out of 32 successfully perturbed
+apgd-ce - 222/298 - 32 out of 32 successfully perturbed
+apgd-ce - 223/298 - 32 out of 32 successfully perturbed
+apgd-ce - 224/298 - 32 out of 32 successfully perturbed
+apgd-ce - 225/298 - 32 out of 32 successfully perturbed
+apgd-ce - 226/298 - 32 out of 32 successfully perturbed
+apgd-ce - 227/298 - 32 out of 32 successfully perturbed
+apgd-ce - 228/298 - 32 out of 32 successfully perturbed
+apgd-ce - 229/298 - 32 out of 32 successfully perturbed
+apgd-ce - 230/298 - 32 out of 32 successfully perturbed
+apgd-ce - 231/298 - 32 out of 32 successfully perturbed
+apgd-ce - 232/298 - 32 out of 32 successfully perturbed
+apgd-ce - 233/298 - 32 out of 32 successfully perturbed
+apgd-ce - 234/298 - 32 out of 32 successfully perturbed
+apgd-ce - 235/298 - 32 out of 32 successfully perturbed
+apgd-ce - 236/298 - 32 out of 32 successfully perturbed
+apgd-ce - 237/298 - 32 out of 32 successfully perturbed
+apgd-ce - 238/298 - 32 out of 32 successfully perturbed
+apgd-ce - 239/298 - 32 out of 32 successfully perturbed
+apgd-ce - 240/298 - 32 out of 32 successfully perturbed
+apgd-ce - 241/298 - 32 out of 32 successfully perturbed
+apgd-ce - 242/298 - 32 out of 32 successfully perturbed
+apgd-ce - 243/298 - 32 out of 32 successfully perturbed
+apgd-ce - 244/298 - 32 out of 32 successfully perturbed
+apgd-ce - 245/298 - 32 out of 32 successfully perturbed
+apgd-ce - 246/298 - 32 out of 32 successfully perturbed
+apgd-ce - 247/298 - 32 out of 32 successfully perturbed
+apgd-ce - 248/298 - 32 out of 32 successfully perturbed
+apgd-ce - 249/298 - 32 out of 32 successfully perturbed
+apgd-ce - 250/298 - 32 out of 32 successfully perturbed
+apgd-ce - 251/298 - 32 out of 32 successfully perturbed
+apgd-ce - 252/298 - 32 out of 32 successfully perturbed
+apgd-ce - 253/298 - 32 out of 32 successfully perturbed
+apgd-ce - 254/298 - 32 out of 32 successfully perturbed
+apgd-ce - 255/298 - 32 out of 32 successfully perturbed
+apgd-ce - 256/298 - 32 out of 32 successfully perturbed
+apgd-ce - 257/298 - 32 out of 32 successfully perturbed
+apgd-ce - 258/298 - 32 out of 32 successfully perturbed
+apgd-ce - 259/298 - 32 out of 32 successfully perturbed
+apgd-ce - 260/298 - 32 out of 32 successfully perturbed
+apgd-ce - 261/298 - 32 out of 32 successfully perturbed
+apgd-ce - 262/298 - 32 out of 32 successfully perturbed
+apgd-ce - 263/298 - 32 out of 32 successfully perturbed
+apgd-ce - 264/298 - 32 out of 32 successfully perturbed
+apgd-ce - 265/298 - 32 out of 32 successfully perturbed
+apgd-ce - 266/298 - 32 out of 32 successfully perturbed
+apgd-ce - 267/298 - 32 out of 32 successfully perturbed
+apgd-ce - 268/298 - 32 out of 32 successfully perturbed
+apgd-ce - 269/298 - 32 out of 32 successfully perturbed
+apgd-ce - 270/298 - 32 out of 32 successfully perturbed
+apgd-ce - 271/298 - 32 out of 32 successfully perturbed
+apgd-ce - 272/298 - 32 out of 32 successfully perturbed
+apgd-ce - 273/298 - 32 out of 32 successfully perturbed
+apgd-ce - 274/298 - 32 out of 32 successfully perturbed
+apgd-ce - 275/298 - 32 out of 32 successfully perturbed
+apgd-ce - 276/298 - 32 out of 32 successfully perturbed
+apgd-ce - 277/298 - 32 out of 32 successfully perturbed
+apgd-ce - 278/298 - 32 out of 32 successfully perturbed
+apgd-ce - 279/298 - 32 out of 32 successfully perturbed
+apgd-ce - 280/298 - 32 out of 32 successfully perturbed
+apgd-ce - 281/298 - 32 out of 32 successfully perturbed
+apgd-ce - 282/298 - 32 out of 32 successfully perturbed
+apgd-ce - 283/298 - 32 out of 32 successfully perturbed
+apgd-ce - 284/298 - 32 out of 32 successfully perturbed
+apgd-ce - 285/298 - 32 out of 32 successfully perturbed
+apgd-ce - 286/298 - 32 out of 32 successfully perturbed
+apgd-ce - 287/298 - 32 out of 32 successfully perturbed
+apgd-ce - 288/298 - 32 out of 32 successfully perturbed
+apgd-ce - 289/298 - 32 out of 32 successfully perturbed
+apgd-ce - 290/298 - 32 out of 32 successfully perturbed
+apgd-ce - 291/298 - 32 out of 32 successfully perturbed
+apgd-ce - 292/298 - 32 out of 32 successfully perturbed
+apgd-ce - 293/298 - 32 out of 32 successfully perturbed
+apgd-ce - 294/298 - 32 out of 32 successfully perturbed
+apgd-ce - 295/298 - 32 out of 32 successfully perturbed
+apgd-ce - 296/298 - 32 out of 32 successfully perturbed
+apgd-ce - 297/298 - 32 out of 32 successfully perturbed
+apgd-ce - 298/298 - 9 out of 9 successfully perturbed
+robust accuracy after APGD-CE: 0.00% (total time 1323.7 s)
+max Linf perturbation: 0.01569, nan in tensor: 0, max: 1.00000, min: 0.00000
+robust accuracy: 0.00%
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_baseline/seed_2
+model: epoch_51.pt
+dataset: cifar
+defense: None
+seed: -2
+gpu_number: 1
+load: True
+autoattack: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+learning_rate: 0.001
+generate: False
+clean: False
+batch_size: 32
+epsilon: 3.5
+norm: holder
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+attack_norm: Linf
+eps: 0.01568627450980392
+log_path: ./outputs/log.txt
+version: standard
+setting parameters for standard version
+using standard version including apgd-ce, apgd-t, fab-t, square.
+initial accuracy: 95.15%
+apgd-ce - 1/298 - 32 out of 32 successfully perturbed
+apgd-ce - 2/298 - 32 out of 32 successfully perturbed
+apgd-ce - 3/298 - 32 out of 32 successfully perturbed
+apgd-ce - 4/298 - 32 out of 32 successfully perturbed
+apgd-ce - 5/298 - 32 out of 32 successfully perturbed
+apgd-ce - 6/298 - 32 out of 32 successfully perturbed
+apgd-ce - 7/298 - 32 out of 32 successfully perturbed
+apgd-ce - 8/298 - 32 out of 32 successfully perturbed
+apgd-ce - 9/298 - 32 out of 32 successfully perturbed
+apgd-ce - 10/298 - 32 out of 32 successfully perturbed
+apgd-ce - 11/298 - 32 out of 32 successfully perturbed
+apgd-ce - 12/298 - 32 out of 32 successfully perturbed
+apgd-ce - 13/298 - 32 out of 32 successfully perturbed
+apgd-ce - 14/298 - 32 out of 32 successfully perturbed
+apgd-ce - 15/298 - 32 out of 32 successfully perturbed
+apgd-ce - 16/298 - 32 out of 32 successfully perturbed
+apgd-ce - 17/298 - 32 out of 32 successfully perturbed
+apgd-ce - 18/298 - 32 out of 32 successfully perturbed
+apgd-ce - 19/298 - 32 out of 32 successfully perturbed
+apgd-ce - 20/298 - 32 out of 32 successfully perturbed
+apgd-ce - 21/298 - 32 out of 32 successfully perturbed
+apgd-ce - 22/298 - 32 out of 32 successfully perturbed
+apgd-ce - 23/298 - 32 out of 32 successfully perturbed
+apgd-ce - 24/298 - 32 out of 32 successfully perturbed
+apgd-ce - 25/298 - 32 out of 32 successfully perturbed
+apgd-ce - 26/298 - 32 out of 32 successfully perturbed
+apgd-ce - 27/298 - 32 out of 32 successfully perturbed
+apgd-ce - 28/298 - 32 out of 32 successfully perturbed
+apgd-ce - 29/298 - 32 out of 32 successfully perturbed
+apgd-ce - 30/298 - 32 out of 32 successfully perturbed
+apgd-ce - 31/298 - 32 out of 32 successfully perturbed
+apgd-ce - 32/298 - 32 out of 32 successfully perturbed
+apgd-ce - 33/298 - 32 out of 32 successfully perturbed
+apgd-ce - 34/298 - 32 out of 32 successfully perturbed
+apgd-ce - 35/298 - 32 out of 32 successfully perturbed
+apgd-ce - 36/298 - 32 out of 32 successfully perturbed
+apgd-ce - 37/298 - 32 out of 32 successfully perturbed
+apgd-ce - 38/298 - 32 out of 32 successfully perturbed
+apgd-ce - 39/298 - 32 out of 32 successfully perturbed
+apgd-ce - 40/298 - 32 out of 32 successfully perturbed
+apgd-ce - 41/298 - 32 out of 32 successfully perturbed
+apgd-ce - 42/298 - 32 out of 32 successfully perturbed
+apgd-ce - 43/298 - 32 out of 32 successfully perturbed
+apgd-ce - 44/298 - 32 out of 32 successfully perturbed
+apgd-ce - 45/298 - 32 out of 32 successfully perturbed
+apgd-ce - 46/298 - 32 out of 32 successfully perturbed
+apgd-ce - 47/298 - 32 out of 32 successfully perturbed
+apgd-ce - 48/298 - 32 out of 32 successfully perturbed
+apgd-ce - 49/298 - 32 out of 32 successfully perturbed
+apgd-ce - 50/298 - 32 out of 32 successfully perturbed
+apgd-ce - 51/298 - 32 out of 32 successfully perturbed
+apgd-ce - 52/298 - 32 out of 32 successfully perturbed
+apgd-ce - 53/298 - 32 out of 32 successfully perturbed
+apgd-ce - 54/298 - 32 out of 32 successfully perturbed
+apgd-ce - 55/298 - 32 out of 32 successfully perturbed
+apgd-ce - 56/298 - 32 out of 32 successfully perturbed
+apgd-ce - 57/298 - 32 out of 32 successfully perturbed
+apgd-ce - 58/298 - 32 out of 32 successfully perturbed
+apgd-ce - 59/298 - 32 out of 32 successfully perturbed
+apgd-ce - 60/298 - 32 out of 32 successfully perturbed
+apgd-ce - 61/298 - 32 out of 32 successfully perturbed
+apgd-ce - 62/298 - 32 out of 32 successfully perturbed
+apgd-ce - 63/298 - 32 out of 32 successfully perturbed
+apgd-ce - 64/298 - 32 out of 32 successfully perturbed
+apgd-ce - 65/298 - 32 out of 32 successfully perturbed
+apgd-ce - 66/298 - 32 out of 32 successfully perturbed
+apgd-ce - 67/298 - 32 out of 32 successfully perturbed
+apgd-ce - 68/298 - 32 out of 32 successfully perturbed
+apgd-ce - 69/298 - 32 out of 32 successfully perturbed
+apgd-ce - 70/298 - 32 out of 32 successfully perturbed
+apgd-ce - 71/298 - 32 out of 32 successfully perturbed
+apgd-ce - 72/298 - 32 out of 32 successfully perturbed
+apgd-ce - 73/298 - 32 out of 32 successfully perturbed
+apgd-ce - 74/298 - 32 out of 32 successfully perturbed
+apgd-ce - 75/298 - 32 out of 32 successfully perturbed
+apgd-ce - 76/298 - 32 out of 32 successfully perturbed
+apgd-ce - 77/298 - 32 out of 32 successfully perturbed
+apgd-ce - 78/298 - 32 out of 32 successfully perturbed
+apgd-ce - 79/298 - 32 out of 32 successfully perturbed
+apgd-ce - 80/298 - 32 out of 32 successfully perturbed
+apgd-ce - 81/298 - 32 out of 32 successfully perturbed
+apgd-ce - 82/298 - 32 out of 32 successfully perturbed
+apgd-ce - 83/298 - 32 out of 32 successfully perturbed
+apgd-ce - 84/298 - 32 out of 32 successfully perturbed
+apgd-ce - 85/298 - 32 out of 32 successfully perturbed
+apgd-ce - 86/298 - 32 out of 32 successfully perturbed
+apgd-ce - 87/298 - 32 out of 32 successfully perturbed
+apgd-ce - 88/298 - 32 out of 32 successfully perturbed
+apgd-ce - 89/298 - 32 out of 32 successfully perturbed
+apgd-ce - 90/298 - 32 out of 32 successfully perturbed
+apgd-ce - 91/298 - 32 out of 32 successfully perturbed
+apgd-ce - 92/298 - 32 out of 32 successfully perturbed
+apgd-ce - 93/298 - 32 out of 32 successfully perturbed
+apgd-ce - 94/298 - 32 out of 32 successfully perturbed
+apgd-ce - 95/298 - 32 out of 32 successfully perturbed
+apgd-ce - 96/298 - 32 out of 32 successfully perturbed
+apgd-ce - 97/298 - 32 out of 32 successfully perturbed
+apgd-ce - 98/298 - 32 out of 32 successfully perturbed
+apgd-ce - 99/298 - 32 out of 32 successfully perturbed
+apgd-ce - 100/298 - 32 out of 32 successfully perturbed
+apgd-ce - 101/298 - 32 out of 32 successfully perturbed
+apgd-ce - 102/298 - 32 out of 32 successfully perturbed
+apgd-ce - 103/298 - 32 out of 32 successfully perturbed
+apgd-ce - 104/298 - 32 out of 32 successfully perturbed
+apgd-ce - 105/298 - 32 out of 32 successfully perturbed
+apgd-ce - 106/298 - 32 out of 32 successfully perturbed
+apgd-ce - 107/298 - 32 out of 32 successfully perturbed
+apgd-ce - 108/298 - 32 out of 32 successfully perturbed
+apgd-ce - 109/298 - 32 out of 32 successfully perturbed
+apgd-ce - 110/298 - 32 out of 32 successfully perturbed
+apgd-ce - 111/298 - 32 out of 32 successfully perturbed
+apgd-ce - 112/298 - 32 out of 32 successfully perturbed
+apgd-ce - 113/298 - 32 out of 32 successfully perturbed
+apgd-ce - 114/298 - 32 out of 32 successfully perturbed
+apgd-ce - 115/298 - 32 out of 32 successfully perturbed
+apgd-ce - 116/298 - 32 out of 32 successfully perturbed
+apgd-ce - 117/298 - 32 out of 32 successfully perturbed
+apgd-ce - 118/298 - 32 out of 32 successfully perturbed
+apgd-ce - 119/298 - 32 out of 32 successfully perturbed
+apgd-ce - 120/298 - 32 out of 32 successfully perturbed
+apgd-ce - 121/298 - 32 out of 32 successfully perturbed
+apgd-ce - 122/298 - 32 out of 32 successfully perturbed
+apgd-ce - 123/298 - 32 out of 32 successfully perturbed
+apgd-ce - 124/298 - 32 out of 32 successfully perturbed
+apgd-ce - 125/298 - 32 out of 32 successfully perturbed
+apgd-ce - 126/298 - 32 out of 32 successfully perturbed
+apgd-ce - 127/298 - 32 out of 32 successfully perturbed
+apgd-ce - 128/298 - 32 out of 32 successfully perturbed
+apgd-ce - 129/298 - 32 out of 32 successfully perturbed
+apgd-ce - 130/298 - 32 out of 32 successfully perturbed
+apgd-ce - 131/298 - 32 out of 32 successfully perturbed
+apgd-ce - 132/298 - 32 out of 32 successfully perturbed
+apgd-ce - 133/298 - 32 out of 32 successfully perturbed
+apgd-ce - 134/298 - 32 out of 32 successfully perturbed
+apgd-ce - 135/298 - 32 out of 32 successfully perturbed
+apgd-ce - 136/298 - 32 out of 32 successfully perturbed
+apgd-ce - 137/298 - 32 out of 32 successfully perturbed
+apgd-ce - 138/298 - 32 out of 32 successfully perturbed
+apgd-ce - 139/298 - 32 out of 32 successfully perturbed
+apgd-ce - 140/298 - 32 out of 32 successfully perturbed
+apgd-ce - 141/298 - 32 out of 32 successfully perturbed
+apgd-ce - 142/298 - 32 out of 32 successfully perturbed
+apgd-ce - 143/298 - 32 out of 32 successfully perturbed
+apgd-ce - 144/298 - 32 out of 32 successfully perturbed
+apgd-ce - 145/298 - 32 out of 32 successfully perturbed
+apgd-ce - 146/298 - 32 out of 32 successfully perturbed
+apgd-ce - 147/298 - 32 out of 32 successfully perturbed
+apgd-ce - 148/298 - 32 out of 32 successfully perturbed
+apgd-ce - 149/298 - 32 out of 32 successfully perturbed
+apgd-ce - 150/298 - 32 out of 32 successfully perturbed
+apgd-ce - 151/298 - 32 out of 32 successfully perturbed
+apgd-ce - 152/298 - 32 out of 32 successfully perturbed
+apgd-ce - 153/298 - 32 out of 32 successfully perturbed
+apgd-ce - 154/298 - 32 out of 32 successfully perturbed
+apgd-ce - 155/298 - 32 out of 32 successfully perturbed
+apgd-ce - 156/298 - 32 out of 32 successfully perturbed
+apgd-ce - 157/298 - 32 out of 32 successfully perturbed
+apgd-ce - 158/298 - 32 out of 32 successfully perturbed
+apgd-ce - 159/298 - 32 out of 32 successfully perturbed
+apgd-ce - 160/298 - 32 out of 32 successfully perturbed
+apgd-ce - 161/298 - 32 out of 32 successfully perturbed
+apgd-ce - 162/298 - 32 out of 32 successfully perturbed
+apgd-ce - 163/298 - 32 out of 32 successfully perturbed
+apgd-ce - 164/298 - 32 out of 32 successfully perturbed
+apgd-ce - 165/298 - 32 out of 32 successfully perturbed
+apgd-ce - 166/298 - 32 out of 32 successfully perturbed
+apgd-ce - 167/298 - 32 out of 32 successfully perturbed
+apgd-ce - 168/298 - 32 out of 32 successfully perturbed
+apgd-ce - 169/298 - 32 out of 32 successfully perturbed
+apgd-ce - 170/298 - 32 out of 32 successfully perturbed
+apgd-ce - 171/298 - 32 out of 32 successfully perturbed
+apgd-ce - 172/298 - 32 out of 32 successfully perturbed
+apgd-ce - 173/298 - 32 out of 32 successfully perturbed
+apgd-ce - 174/298 - 32 out of 32 successfully perturbed
+apgd-ce - 175/298 - 32 out of 32 successfully perturbed
+apgd-ce - 176/298 - 32 out of 32 successfully perturbed
+apgd-ce - 177/298 - 32 out of 32 successfully perturbed
+apgd-ce - 178/298 - 32 out of 32 successfully perturbed
+apgd-ce - 179/298 - 32 out of 32 successfully perturbed
+apgd-ce - 180/298 - 32 out of 32 successfully perturbed
+apgd-ce - 181/298 - 32 out of 32 successfully perturbed
+apgd-ce - 182/298 - 32 out of 32 successfully perturbed
+apgd-ce - 183/298 - 32 out of 32 successfully perturbed
+apgd-ce - 184/298 - 32 out of 32 successfully perturbed
+apgd-ce - 185/298 - 32 out of 32 successfully perturbed
+apgd-ce - 186/298 - 32 out of 32 successfully perturbed
+apgd-ce - 187/298 - 32 out of 32 successfully perturbed
+apgd-ce - 188/298 - 32 out of 32 successfully perturbed
+apgd-ce - 189/298 - 32 out of 32 successfully perturbed
+apgd-ce - 190/298 - 32 out of 32 successfully perturbed
+apgd-ce - 191/298 - 32 out of 32 successfully perturbed
+apgd-ce - 192/298 - 32 out of 32 successfully perturbed
+apgd-ce - 193/298 - 32 out of 32 successfully perturbed
+apgd-ce - 194/298 - 32 out of 32 successfully perturbed
+apgd-ce - 195/298 - 32 out of 32 successfully perturbed
+apgd-ce - 196/298 - 32 out of 32 successfully perturbed
+apgd-ce - 197/298 - 32 out of 32 successfully perturbed
+apgd-ce - 198/298 - 32 out of 32 successfully perturbed
+apgd-ce - 199/298 - 32 out of 32 successfully perturbed
+apgd-ce - 200/298 - 32 out of 32 successfully perturbed
+apgd-ce - 201/298 - 32 out of 32 successfully perturbed
+apgd-ce - 202/298 - 32 out of 32 successfully perturbed
+apgd-ce - 203/298 - 32 out of 32 successfully perturbed
+apgd-ce - 204/298 - 32 out of 32 successfully perturbed
+apgd-ce - 205/298 - 32 out of 32 successfully perturbed
+apgd-ce - 206/298 - 32 out of 32 successfully perturbed
+apgd-ce - 207/298 - 32 out of 32 successfully perturbed
+apgd-ce - 208/298 - 32 out of 32 successfully perturbed
+apgd-ce - 209/298 - 32 out of 32 successfully perturbed
+apgd-ce - 210/298 - 32 out of 32 successfully perturbed
+apgd-ce - 211/298 - 32 out of 32 successfully perturbed
+apgd-ce - 212/298 - 32 out of 32 successfully perturbed
+apgd-ce - 213/298 - 32 out of 32 successfully perturbed
+apgd-ce - 214/298 - 32 out of 32 successfully perturbed
+apgd-ce - 215/298 - 32 out of 32 successfully perturbed
+apgd-ce - 216/298 - 32 out of 32 successfully perturbed
+apgd-ce - 217/298 - 32 out of 32 successfully perturbed
+apgd-ce - 218/298 - 32 out of 32 successfully perturbed
+apgd-ce - 219/298 - 32 out of 32 successfully perturbed
+apgd-ce - 220/298 - 32 out of 32 successfully perturbed
+apgd-ce - 221/298 - 32 out of 32 successfully perturbed
+apgd-ce - 222/298 - 32 out of 32 successfully perturbed
+apgd-ce - 223/298 - 32 out of 32 successfully perturbed
+apgd-ce - 224/298 - 32 out of 32 successfully perturbed
+apgd-ce - 225/298 - 32 out of 32 successfully perturbed
+apgd-ce - 226/298 - 32 out of 32 successfully perturbed
+apgd-ce - 227/298 - 32 out of 32 successfully perturbed
+apgd-ce - 228/298 - 32 out of 32 successfully perturbed
+apgd-ce - 229/298 - 32 out of 32 successfully perturbed
+apgd-ce - 230/298 - 32 out of 32 successfully perturbed
+apgd-ce - 231/298 - 32 out of 32 successfully perturbed
+apgd-ce - 232/298 - 32 out of 32 successfully perturbed
+apgd-ce - 233/298 - 32 out of 32 successfully perturbed
+apgd-ce - 234/298 - 32 out of 32 successfully perturbed
+apgd-ce - 235/298 - 32 out of 32 successfully perturbed
+apgd-ce - 236/298 - 32 out of 32 successfully perturbed
+apgd-ce - 237/298 - 32 out of 32 successfully perturbed
+apgd-ce - 238/298 - 32 out of 32 successfully perturbed
+apgd-ce - 239/298 - 32 out of 32 successfully perturbed
+apgd-ce - 240/298 - 32 out of 32 successfully perturbed
+apgd-ce - 241/298 - 32 out of 32 successfully perturbed
+apgd-ce - 242/298 - 32 out of 32 successfully perturbed
+apgd-ce - 243/298 - 32 out of 32 successfully perturbed
+apgd-ce - 244/298 - 32 out of 32 successfully perturbed
+apgd-ce - 245/298 - 32 out of 32 successfully perturbed
+apgd-ce - 246/298 - 32 out of 32 successfully perturbed
+apgd-ce - 247/298 - 32 out of 32 successfully perturbed
+apgd-ce - 248/298 - 32 out of 32 successfully perturbed
+apgd-ce - 249/298 - 32 out of 32 successfully perturbed
+apgd-ce - 250/298 - 32 out of 32 successfully perturbed
+apgd-ce - 251/298 - 32 out of 32 successfully perturbed
+apgd-ce - 252/298 - 32 out of 32 successfully perturbed
+apgd-ce - 253/298 - 32 out of 32 successfully perturbed
+apgd-ce - 254/298 - 32 out of 32 successfully perturbed
+apgd-ce - 255/298 - 32 out of 32 successfully perturbed
+apgd-ce - 256/298 - 32 out of 32 successfully perturbed
+apgd-ce - 257/298 - 32 out of 32 successfully perturbed
+apgd-ce - 258/298 - 32 out of 32 successfully perturbed
+apgd-ce - 259/298 - 32 out of 32 successfully perturbed
+apgd-ce - 260/298 - 32 out of 32 successfully perturbed
+apgd-ce - 261/298 - 32 out of 32 successfully perturbed
+apgd-ce - 262/298 - 32 out of 32 successfully perturbed
+apgd-ce - 263/298 - 32 out of 32 successfully perturbed
+apgd-ce - 264/298 - 32 out of 32 successfully perturbed
+apgd-ce - 265/298 - 32 out of 32 successfully perturbed
+apgd-ce - 266/298 - 32 out of 32 successfully perturbed
+apgd-ce - 267/298 - 32 out of 32 successfully perturbed
+apgd-ce - 268/298 - 32 out of 32 successfully perturbed
+apgd-ce - 269/298 - 32 out of 32 successfully perturbed
+apgd-ce - 270/298 - 32 out of 32 successfully perturbed
+apgd-ce - 271/298 - 32 out of 32 successfully perturbed
+apgd-ce - 272/298 - 32 out of 32 successfully perturbed
+apgd-ce - 273/298 - 32 out of 32 successfully perturbed
+apgd-ce - 274/298 - 32 out of 32 successfully perturbed
+apgd-ce - 275/298 - 32 out of 32 successfully perturbed
+apgd-ce - 276/298 - 32 out of 32 successfully perturbed
+apgd-ce - 277/298 - 32 out of 32 successfully perturbed
+apgd-ce - 278/298 - 32 out of 32 successfully perturbed
+apgd-ce - 279/298 - 32 out of 32 successfully perturbed
+apgd-ce - 280/298 - 32 out of 32 successfully perturbed
+apgd-ce - 281/298 - 32 out of 32 successfully perturbed
+apgd-ce - 282/298 - 32 out of 32 successfully perturbed
+apgd-ce - 283/298 - 32 out of 32 successfully perturbed
+apgd-ce - 284/298 - 32 out of 32 successfully perturbed
+apgd-ce - 285/298 - 32 out of 32 successfully perturbed
+apgd-ce - 286/298 - 32 out of 32 successfully perturbed
+apgd-ce - 287/298 - 32 out of 32 successfully perturbed
+apgd-ce - 288/298 - 32 out of 32 successfully perturbed
+apgd-ce - 289/298 - 32 out of 32 successfully perturbed
+apgd-ce - 290/298 - 32 out of 32 successfully perturbed
+apgd-ce - 291/298 - 32 out of 32 successfully perturbed
+apgd-ce - 292/298 - 32 out of 32 successfully perturbed
+apgd-ce - 293/298 - 32 out of 32 successfully perturbed
+apgd-ce - 294/298 - 32 out of 32 successfully perturbed
+apgd-ce - 295/298 - 32 out of 32 successfully perturbed
+apgd-ce - 296/298 - 32 out of 32 successfully perturbed
+apgd-ce - 297/298 - 32 out of 32 successfully perturbed
+apgd-ce - 298/298 - 11 out of 11 successfully perturbed
+robust accuracy after APGD-CE: 0.00% (total time 1310.4 s)
+max Linf perturbation: 0.01569, nan in tensor: 0, max: 1.00000, min: 0.00000
+robust accuracy: 0.00%
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_baseline/seed_3
+model: epoch_51.pt
+dataset: cifar
+defense: None
+seed: -3
+gpu_number: 1
+load: True
+autoattack: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+learning_rate: 0.001
+generate: False
+clean: False
+batch_size: 32
+epsilon: 3.5
+norm: holder
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+attack_norm: Linf
+eps: 0.01568627450980392
+log_path: ./outputs/log.txt
+version: standard
+setting parameters for standard version
+using standard version including apgd-ce, apgd-t, fab-t, square.
+initial accuracy: 95.10%
+apgd-ce - 1/298 - 32 out of 32 successfully perturbed
+apgd-ce - 2/298 - 32 out of 32 successfully perturbed
+apgd-ce - 3/298 - 32 out of 32 successfully perturbed
+apgd-ce - 4/298 - 32 out of 32 successfully perturbed
+apgd-ce - 5/298 - 32 out of 32 successfully perturbed
+apgd-ce - 6/298 - 32 out of 32 successfully perturbed
+apgd-ce - 7/298 - 32 out of 32 successfully perturbed
+apgd-ce - 8/298 - 32 out of 32 successfully perturbed
+apgd-ce - 9/298 - 32 out of 32 successfully perturbed
+apgd-ce - 10/298 - 32 out of 32 successfully perturbed
+apgd-ce - 11/298 - 32 out of 32 successfully perturbed
+apgd-ce - 12/298 - 32 out of 32 successfully perturbed
+apgd-ce - 13/298 - 32 out of 32 successfully perturbed
+apgd-ce - 14/298 - 32 out of 32 successfully perturbed
+apgd-ce - 15/298 - 32 out of 32 successfully perturbed
+apgd-ce - 16/298 - 32 out of 32 successfully perturbed
+apgd-ce - 17/298 - 32 out of 32 successfully perturbed
+apgd-ce - 18/298 - 32 out of 32 successfully perturbed
+apgd-ce - 19/298 - 32 out of 32 successfully perturbed
+apgd-ce - 20/298 - 32 out of 32 successfully perturbed
+apgd-ce - 21/298 - 32 out of 32 successfully perturbed
+apgd-ce - 22/298 - 32 out of 32 successfully perturbed
+apgd-ce - 23/298 - 32 out of 32 successfully perturbed
+apgd-ce - 24/298 - 32 out of 32 successfully perturbed
+apgd-ce - 25/298 - 32 out of 32 successfully perturbed
+apgd-ce - 26/298 - 32 out of 32 successfully perturbed
+apgd-ce - 27/298 - 32 out of 32 successfully perturbed
+apgd-ce - 28/298 - 32 out of 32 successfully perturbed
+apgd-ce - 29/298 - 32 out of 32 successfully perturbed
+apgd-ce - 30/298 - 32 out of 32 successfully perturbed
+apgd-ce - 31/298 - 32 out of 32 successfully perturbed
+apgd-ce - 32/298 - 32 out of 32 successfully perturbed
+apgd-ce - 33/298 - 32 out of 32 successfully perturbed
+apgd-ce - 34/298 - 32 out of 32 successfully perturbed
+apgd-ce - 35/298 - 32 out of 32 successfully perturbed
+apgd-ce - 36/298 - 32 out of 32 successfully perturbed
+apgd-ce - 37/298 - 32 out of 32 successfully perturbed
+apgd-ce - 38/298 - 32 out of 32 successfully perturbed
+apgd-ce - 39/298 - 32 out of 32 successfully perturbed
+apgd-ce - 40/298 - 32 out of 32 successfully perturbed
+apgd-ce - 41/298 - 32 out of 32 successfully perturbed
+apgd-ce - 42/298 - 32 out of 32 successfully perturbed
+apgd-ce - 43/298 - 32 out of 32 successfully perturbed
+apgd-ce - 44/298 - 32 out of 32 successfully perturbed
+apgd-ce - 45/298 - 32 out of 32 successfully perturbed
+apgd-ce - 46/298 - 32 out of 32 successfully perturbed
+apgd-ce - 47/298 - 32 out of 32 successfully perturbed
+apgd-ce - 48/298 - 32 out of 32 successfully perturbed
+apgd-ce - 49/298 - 32 out of 32 successfully perturbed
+apgd-ce - 50/298 - 32 out of 32 successfully perturbed
+apgd-ce - 51/298 - 32 out of 32 successfully perturbed
+apgd-ce - 52/298 - 32 out of 32 successfully perturbed
+apgd-ce - 53/298 - 32 out of 32 successfully perturbed
+apgd-ce - 54/298 - 32 out of 32 successfully perturbed
+apgd-ce - 55/298 - 32 out of 32 successfully perturbed
+apgd-ce - 56/298 - 32 out of 32 successfully perturbed
+apgd-ce - 57/298 - 32 out of 32 successfully perturbed
+apgd-ce - 58/298 - 32 out of 32 successfully perturbed
+apgd-ce - 59/298 - 32 out of 32 successfully perturbed
+apgd-ce - 60/298 - 32 out of 32 successfully perturbed
+apgd-ce - 61/298 - 32 out of 32 successfully perturbed
+apgd-ce - 62/298 - 32 out of 32 successfully perturbed
+apgd-ce - 63/298 - 32 out of 32 successfully perturbed
+apgd-ce - 64/298 - 32 out of 32 successfully perturbed
+apgd-ce - 65/298 - 32 out of 32 successfully perturbed
+apgd-ce - 66/298 - 32 out of 32 successfully perturbed
+apgd-ce - 67/298 - 32 out of 32 successfully perturbed
+apgd-ce - 68/298 - 32 out of 32 successfully perturbed
+apgd-ce - 69/298 - 32 out of 32 successfully perturbed
+apgd-ce - 70/298 - 32 out of 32 successfully perturbed
+apgd-ce - 71/298 - 32 out of 32 successfully perturbed
+apgd-ce - 72/298 - 32 out of 32 successfully perturbed
+apgd-ce - 73/298 - 32 out of 32 successfully perturbed
+apgd-ce - 74/298 - 32 out of 32 successfully perturbed
+apgd-ce - 75/298 - 32 out of 32 successfully perturbed
+apgd-ce - 76/298 - 32 out of 32 successfully perturbed
+apgd-ce - 77/298 - 32 out of 32 successfully perturbed
+apgd-ce - 78/298 - 32 out of 32 successfully perturbed
+apgd-ce - 79/298 - 32 out of 32 successfully perturbed
+apgd-ce - 80/298 - 32 out of 32 successfully perturbed
+apgd-ce - 81/298 - 32 out of 32 successfully perturbed
+apgd-ce - 82/298 - 32 out of 32 successfully perturbed
+apgd-ce - 83/298 - 32 out of 32 successfully perturbed
+apgd-ce - 84/298 - 32 out of 32 successfully perturbed
+apgd-ce - 85/298 - 32 out of 32 successfully perturbed
+apgd-ce - 86/298 - 32 out of 32 successfully perturbed
+apgd-ce - 87/298 - 32 out of 32 successfully perturbed
+apgd-ce - 88/298 - 32 out of 32 successfully perturbed
+apgd-ce - 89/298 - 32 out of 32 successfully perturbed
+apgd-ce - 90/298 - 32 out of 32 successfully perturbed
+apgd-ce - 91/298 - 32 out of 32 successfully perturbed
+apgd-ce - 92/298 - 32 out of 32 successfully perturbed
+apgd-ce - 93/298 - 32 out of 32 successfully perturbed
+apgd-ce - 94/298 - 32 out of 32 successfully perturbed
+apgd-ce - 95/298 - 32 out of 32 successfully perturbed
+apgd-ce - 96/298 - 32 out of 32 successfully perturbed
+apgd-ce - 97/298 - 32 out of 32 successfully perturbed
+apgd-ce - 98/298 - 32 out of 32 successfully perturbed
+apgd-ce - 99/298 - 32 out of 32 successfully perturbed
+apgd-ce - 100/298 - 32 out of 32 successfully perturbed
+apgd-ce - 101/298 - 32 out of 32 successfully perturbed
+apgd-ce - 102/298 - 32 out of 32 successfully perturbed
+apgd-ce - 103/298 - 32 out of 32 successfully perturbed
+apgd-ce - 104/298 - 32 out of 32 successfully perturbed
+apgd-ce - 105/298 - 32 out of 32 successfully perturbed
+apgd-ce - 106/298 - 32 out of 32 successfully perturbed
+apgd-ce - 107/298 - 32 out of 32 successfully perturbed
+apgd-ce - 108/298 - 32 out of 32 successfully perturbed
+apgd-ce - 109/298 - 32 out of 32 successfully perturbed
+apgd-ce - 110/298 - 32 out of 32 successfully perturbed
+apgd-ce - 111/298 - 32 out of 32 successfully perturbed
+apgd-ce - 112/298 - 32 out of 32 successfully perturbed
+apgd-ce - 113/298 - 32 out of 32 successfully perturbed
+apgd-ce - 114/298 - 32 out of 32 successfully perturbed
+apgd-ce - 115/298 - 32 out of 32 successfully perturbed
+apgd-ce - 116/298 - 32 out of 32 successfully perturbed
+apgd-ce - 117/298 - 32 out of 32 successfully perturbed
+apgd-ce - 118/298 - 32 out of 32 successfully perturbed
+apgd-ce - 119/298 - 32 out of 32 successfully perturbed
+apgd-ce - 120/298 - 32 out of 32 successfully perturbed
+apgd-ce - 121/298 - 32 out of 32 successfully perturbed
+apgd-ce - 122/298 - 32 out of 32 successfully perturbed
+apgd-ce - 123/298 - 32 out of 32 successfully perturbed
+apgd-ce - 124/298 - 32 out of 32 successfully perturbed
+apgd-ce - 125/298 - 32 out of 32 successfully perturbed
+apgd-ce - 126/298 - 32 out of 32 successfully perturbed
+apgd-ce - 127/298 - 32 out of 32 successfully perturbed
+apgd-ce - 128/298 - 32 out of 32 successfully perturbed
+apgd-ce - 129/298 - 32 out of 32 successfully perturbed
+apgd-ce - 130/298 - 32 out of 32 successfully perturbed
+apgd-ce - 131/298 - 32 out of 32 successfully perturbed
+apgd-ce - 132/298 - 32 out of 32 successfully perturbed
+apgd-ce - 133/298 - 32 out of 32 successfully perturbed
+apgd-ce - 134/298 - 32 out of 32 successfully perturbed
+apgd-ce - 135/298 - 32 out of 32 successfully perturbed
+apgd-ce - 136/298 - 32 out of 32 successfully perturbed
+apgd-ce - 137/298 - 32 out of 32 successfully perturbed
+apgd-ce - 138/298 - 32 out of 32 successfully perturbed
+apgd-ce - 139/298 - 32 out of 32 successfully perturbed
+apgd-ce - 140/298 - 32 out of 32 successfully perturbed
+apgd-ce - 141/298 - 32 out of 32 successfully perturbed
+apgd-ce - 142/298 - 32 out of 32 successfully perturbed
+apgd-ce - 143/298 - 32 out of 32 successfully perturbed
+apgd-ce - 144/298 - 32 out of 32 successfully perturbed
+apgd-ce - 145/298 - 32 out of 32 successfully perturbed
+apgd-ce - 146/298 - 32 out of 32 successfully perturbed
+apgd-ce - 147/298 - 32 out of 32 successfully perturbed
+apgd-ce - 148/298 - 32 out of 32 successfully perturbed
+apgd-ce - 149/298 - 32 out of 32 successfully perturbed
+apgd-ce - 150/298 - 32 out of 32 successfully perturbed
+apgd-ce - 151/298 - 32 out of 32 successfully perturbed
+apgd-ce - 152/298 - 32 out of 32 successfully perturbed
+apgd-ce - 153/298 - 32 out of 32 successfully perturbed
+apgd-ce - 154/298 - 32 out of 32 successfully perturbed
+apgd-ce - 155/298 - 32 out of 32 successfully perturbed
+apgd-ce - 156/298 - 32 out of 32 successfully perturbed
+apgd-ce - 157/298 - 32 out of 32 successfully perturbed
+apgd-ce - 158/298 - 32 out of 32 successfully perturbed
+apgd-ce - 159/298 - 32 out of 32 successfully perturbed
+apgd-ce - 160/298 - 32 out of 32 successfully perturbed
+apgd-ce - 161/298 - 32 out of 32 successfully perturbed
+apgd-ce - 162/298 - 32 out of 32 successfully perturbed
+apgd-ce - 163/298 - 32 out of 32 successfully perturbed
+apgd-ce - 164/298 - 32 out of 32 successfully perturbed
+apgd-ce - 165/298 - 32 out of 32 successfully perturbed
+apgd-ce - 166/298 - 32 out of 32 successfully perturbed
+apgd-ce - 167/298 - 32 out of 32 successfully perturbed
+apgd-ce - 168/298 - 32 out of 32 successfully perturbed
+apgd-ce - 169/298 - 32 out of 32 successfully perturbed
+apgd-ce - 170/298 - 32 out of 32 successfully perturbed
+apgd-ce - 171/298 - 32 out of 32 successfully perturbed
+apgd-ce - 172/298 - 32 out of 32 successfully perturbed
+apgd-ce - 173/298 - 32 out of 32 successfully perturbed
+apgd-ce - 174/298 - 32 out of 32 successfully perturbed
+apgd-ce - 175/298 - 32 out of 32 successfully perturbed
+apgd-ce - 176/298 - 32 out of 32 successfully perturbed
+apgd-ce - 177/298 - 32 out of 32 successfully perturbed
+apgd-ce - 178/298 - 32 out of 32 successfully perturbed
+apgd-ce - 179/298 - 32 out of 32 successfully perturbed
+apgd-ce - 180/298 - 32 out of 32 successfully perturbed
+apgd-ce - 181/298 - 32 out of 32 successfully perturbed
+apgd-ce - 182/298 - 32 out of 32 successfully perturbed
+apgd-ce - 183/298 - 32 out of 32 successfully perturbed
+apgd-ce - 184/298 - 32 out of 32 successfully perturbed
+apgd-ce - 185/298 - 32 out of 32 successfully perturbed
+apgd-ce - 186/298 - 32 out of 32 successfully perturbed
+apgd-ce - 187/298 - 32 out of 32 successfully perturbed
+apgd-ce - 188/298 - 32 out of 32 successfully perturbed
+apgd-ce - 189/298 - 32 out of 32 successfully perturbed
+apgd-ce - 190/298 - 32 out of 32 successfully perturbed
+apgd-ce - 191/298 - 32 out of 32 successfully perturbed
+apgd-ce - 192/298 - 32 out of 32 successfully perturbed
+apgd-ce - 193/298 - 32 out of 32 successfully perturbed
+apgd-ce - 194/298 - 32 out of 32 successfully perturbed
+apgd-ce - 195/298 - 32 out of 32 successfully perturbed
+apgd-ce - 196/298 - 32 out of 32 successfully perturbed
+apgd-ce - 197/298 - 32 out of 32 successfully perturbed
+apgd-ce - 198/298 - 32 out of 32 successfully perturbed
+apgd-ce - 199/298 - 32 out of 32 successfully perturbed
+apgd-ce - 200/298 - 32 out of 32 successfully perturbed
+apgd-ce - 201/298 - 32 out of 32 successfully perturbed
+apgd-ce - 202/298 - 32 out of 32 successfully perturbed
+apgd-ce - 203/298 - 32 out of 32 successfully perturbed
+apgd-ce - 204/298 - 32 out of 32 successfully perturbed
+apgd-ce - 205/298 - 32 out of 32 successfully perturbed
+apgd-ce - 206/298 - 32 out of 32 successfully perturbed
+apgd-ce - 207/298 - 32 out of 32 successfully perturbed
+apgd-ce - 208/298 - 32 out of 32 successfully perturbed
+apgd-ce - 209/298 - 32 out of 32 successfully perturbed
+apgd-ce - 210/298 - 32 out of 32 successfully perturbed
+apgd-ce - 211/298 - 32 out of 32 successfully perturbed
+apgd-ce - 212/298 - 32 out of 32 successfully perturbed
+apgd-ce - 213/298 - 32 out of 32 successfully perturbed
+apgd-ce - 214/298 - 32 out of 32 successfully perturbed
+apgd-ce - 215/298 - 32 out of 32 successfully perturbed
+apgd-ce - 216/298 - 32 out of 32 successfully perturbed
+apgd-ce - 217/298 - 32 out of 32 successfully perturbed
+apgd-ce - 218/298 - 32 out of 32 successfully perturbed
+apgd-ce - 219/298 - 32 out of 32 successfully perturbed
+apgd-ce - 220/298 - 32 out of 32 successfully perturbed
+apgd-ce - 221/298 - 32 out of 32 successfully perturbed
+apgd-ce - 222/298 - 32 out of 32 successfully perturbed
+apgd-ce - 223/298 - 32 out of 32 successfully perturbed
+apgd-ce - 224/298 - 32 out of 32 successfully perturbed
+apgd-ce - 225/298 - 32 out of 32 successfully perturbed
+apgd-ce - 226/298 - 32 out of 32 successfully perturbed
+apgd-ce - 227/298 - 32 out of 32 successfully perturbed
+apgd-ce - 228/298 - 32 out of 32 successfully perturbed
+apgd-ce - 229/298 - 32 out of 32 successfully perturbed
+apgd-ce - 230/298 - 32 out of 32 successfully perturbed
+apgd-ce - 231/298 - 32 out of 32 successfully perturbed
+apgd-ce - 232/298 - 32 out of 32 successfully perturbed
+apgd-ce - 233/298 - 32 out of 32 successfully perturbed
+apgd-ce - 234/298 - 32 out of 32 successfully perturbed
+apgd-ce - 235/298 - 32 out of 32 successfully perturbed
+apgd-ce - 236/298 - 32 out of 32 successfully perturbed
+apgd-ce - 237/298 - 32 out of 32 successfully perturbed
+apgd-ce - 238/298 - 32 out of 32 successfully perturbed
+apgd-ce - 239/298 - 32 out of 32 successfully perturbed
+apgd-ce - 240/298 - 32 out of 32 successfully perturbed
+apgd-ce - 241/298 - 32 out of 32 successfully perturbed
+apgd-ce - 242/298 - 32 out of 32 successfully perturbed
+apgd-ce - 243/298 - 32 out of 32 successfully perturbed
+apgd-ce - 244/298 - 32 out of 32 successfully perturbed
+apgd-ce - 245/298 - 32 out of 32 successfully perturbed
+apgd-ce - 246/298 - 32 out of 32 successfully perturbed
+apgd-ce - 247/298 - 32 out of 32 successfully perturbed
+apgd-ce - 248/298 - 32 out of 32 successfully perturbed
+apgd-ce - 249/298 - 32 out of 32 successfully perturbed
+apgd-ce - 250/298 - 32 out of 32 successfully perturbed
+apgd-ce - 251/298 - 32 out of 32 successfully perturbed
+apgd-ce - 252/298 - 32 out of 32 successfully perturbed
+apgd-ce - 253/298 - 32 out of 32 successfully perturbed
+apgd-ce - 254/298 - 32 out of 32 successfully perturbed
+apgd-ce - 255/298 - 32 out of 32 successfully perturbed
+apgd-ce - 256/298 - 32 out of 32 successfully perturbed
+apgd-ce - 257/298 - 32 out of 32 successfully perturbed
+apgd-ce - 258/298 - 32 out of 32 successfully perturbed
+apgd-ce - 259/298 - 32 out of 32 successfully perturbed
+apgd-ce - 260/298 - 32 out of 32 successfully perturbed
+apgd-ce - 261/298 - 32 out of 32 successfully perturbed
+apgd-ce - 262/298 - 32 out of 32 successfully perturbed
+apgd-ce - 263/298 - 32 out of 32 successfully perturbed
+apgd-ce - 264/298 - 32 out of 32 successfully perturbed
+apgd-ce - 265/298 - 32 out of 32 successfully perturbed
+apgd-ce - 266/298 - 32 out of 32 successfully perturbed
+apgd-ce - 267/298 - 32 out of 32 successfully perturbed
+apgd-ce - 268/298 - 32 out of 32 successfully perturbed
+apgd-ce - 269/298 - 32 out of 32 successfully perturbed
+apgd-ce - 270/298 - 32 out of 32 successfully perturbed
+apgd-ce - 271/298 - 32 out of 32 successfully perturbed
+apgd-ce - 272/298 - 32 out of 32 successfully perturbed
+apgd-ce - 273/298 - 32 out of 32 successfully perturbed
+apgd-ce - 274/298 - 32 out of 32 successfully perturbed
+apgd-ce - 275/298 - 32 out of 32 successfully perturbed
+apgd-ce - 276/298 - 32 out of 32 successfully perturbed
+apgd-ce - 277/298 - 32 out of 32 successfully perturbed
+apgd-ce - 278/298 - 32 out of 32 successfully perturbed
+apgd-ce - 279/298 - 32 out of 32 successfully perturbed
+apgd-ce - 280/298 - 32 out of 32 successfully perturbed
+apgd-ce - 281/298 - 32 out of 32 successfully perturbed
+apgd-ce - 282/298 - 32 out of 32 successfully perturbed
+apgd-ce - 283/298 - 32 out of 32 successfully perturbed
+apgd-ce - 284/298 - 32 out of 32 successfully perturbed
+apgd-ce - 285/298 - 32 out of 32 successfully perturbed
+apgd-ce - 286/298 - 32 out of 32 successfully perturbed
+apgd-ce - 287/298 - 32 out of 32 successfully perturbed
+apgd-ce - 288/298 - 32 out of 32 successfully perturbed
+apgd-ce - 289/298 - 32 out of 32 successfully perturbed
+apgd-ce - 290/298 - 32 out of 32 successfully perturbed
+apgd-ce - 291/298 - 32 out of 32 successfully perturbed
+apgd-ce - 292/298 - 32 out of 32 successfully perturbed
+apgd-ce - 293/298 - 32 out of 32 successfully perturbed
+apgd-ce - 294/298 - 32 out of 32 successfully perturbed
+apgd-ce - 295/298 - 32 out of 32 successfully perturbed
+apgd-ce - 296/298 - 32 out of 32 successfully perturbed
+apgd-ce - 297/298 - 32 out of 32 successfully perturbed
+apgd-ce - 298/298 - 6 out of 6 successfully perturbed
+robust accuracy after APGD-CE: 0.00% (total time 1305.5 s)
+max Linf perturbation: 0.01569, nan in tensor: 0, max: 1.00000, min: 0.00000
+robust accuracy: 0.00%
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_baseline/seed_4
+model: epoch_51.pt
+dataset: cifar
+defense: None
+seed: -4
+gpu_number: 1
+load: True
+autoattack: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+learning_rate: 0.001
+generate: False
+clean: False
+batch_size: 32
+epsilon: 3.5
+norm: holder
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+attack_norm: Linf
+eps: 0.01568627450980392
+log_path: ./outputs/log.txt
+version: standard
+setting parameters for standard version
+using standard version including apgd-ce, apgd-t, fab-t, square.
+initial accuracy: 95.01%
+apgd-ce - 1/297 - 32 out of 32 successfully perturbed
+apgd-ce - 2/297 - 32 out of 32 successfully perturbed
+apgd-ce - 3/297 - 32 out of 32 successfully perturbed
+apgd-ce - 4/297 - 32 out of 32 successfully perturbed
+apgd-ce - 5/297 - 32 out of 32 successfully perturbed
+apgd-ce - 6/297 - 32 out of 32 successfully perturbed
+apgd-ce - 7/297 - 32 out of 32 successfully perturbed
+apgd-ce - 8/297 - 32 out of 32 successfully perturbed
+apgd-ce - 9/297 - 32 out of 32 successfully perturbed
+apgd-ce - 10/297 - 32 out of 32 successfully perturbed
+apgd-ce - 11/297 - 32 out of 32 successfully perturbed
+apgd-ce - 12/297 - 32 out of 32 successfully perturbed
+apgd-ce - 13/297 - 32 out of 32 successfully perturbed
+apgd-ce - 14/297 - 32 out of 32 successfully perturbed
+apgd-ce - 15/297 - 32 out of 32 successfully perturbed
+apgd-ce - 16/297 - 32 out of 32 successfully perturbed
+apgd-ce - 17/297 - 32 out of 32 successfully perturbed
+apgd-ce - 18/297 - 32 out of 32 successfully perturbed
+apgd-ce - 19/297 - 32 out of 32 successfully perturbed
+apgd-ce - 20/297 - 32 out of 32 successfully perturbed
+apgd-ce - 21/297 - 32 out of 32 successfully perturbed
+apgd-ce - 22/297 - 32 out of 32 successfully perturbed
+apgd-ce - 23/297 - 32 out of 32 successfully perturbed
+apgd-ce - 24/297 - 32 out of 32 successfully perturbed
+apgd-ce - 25/297 - 32 out of 32 successfully perturbed
+apgd-ce - 26/297 - 32 out of 32 successfully perturbed
+apgd-ce - 27/297 - 32 out of 32 successfully perturbed
+apgd-ce - 28/297 - 32 out of 32 successfully perturbed
+apgd-ce - 29/297 - 32 out of 32 successfully perturbed
+apgd-ce - 30/297 - 32 out of 32 successfully perturbed
+apgd-ce - 31/297 - 32 out of 32 successfully perturbed
+apgd-ce - 32/297 - 32 out of 32 successfully perturbed
+apgd-ce - 33/297 - 32 out of 32 successfully perturbed
+apgd-ce - 34/297 - 32 out of 32 successfully perturbed
+apgd-ce - 35/297 - 32 out of 32 successfully perturbed
+apgd-ce - 36/297 - 32 out of 32 successfully perturbed
+apgd-ce - 37/297 - 32 out of 32 successfully perturbed
+apgd-ce - 38/297 - 32 out of 32 successfully perturbed
+apgd-ce - 39/297 - 32 out of 32 successfully perturbed
+apgd-ce - 40/297 - 32 out of 32 successfully perturbed
+apgd-ce - 41/297 - 32 out of 32 successfully perturbed
+apgd-ce - 42/297 - 32 out of 32 successfully perturbed
+apgd-ce - 43/297 - 32 out of 32 successfully perturbed
+apgd-ce - 44/297 - 32 out of 32 successfully perturbed
+apgd-ce - 45/297 - 32 out of 32 successfully perturbed
+apgd-ce - 46/297 - 32 out of 32 successfully perturbed
+apgd-ce - 47/297 - 32 out of 32 successfully perturbed
+apgd-ce - 48/297 - 32 out of 32 successfully perturbed
+apgd-ce - 49/297 - 32 out of 32 successfully perturbed
+apgd-ce - 50/297 - 32 out of 32 successfully perturbed
+apgd-ce - 51/297 - 32 out of 32 successfully perturbed
+apgd-ce - 52/297 - 32 out of 32 successfully perturbed
+apgd-ce - 53/297 - 32 out of 32 successfully perturbed
+apgd-ce - 54/297 - 32 out of 32 successfully perturbed
+apgd-ce - 55/297 - 32 out of 32 successfully perturbed
+apgd-ce - 56/297 - 32 out of 32 successfully perturbed
+apgd-ce - 57/297 - 32 out of 32 successfully perturbed
+apgd-ce - 58/297 - 32 out of 32 successfully perturbed
+apgd-ce - 59/297 - 32 out of 32 successfully perturbed
+apgd-ce - 60/297 - 32 out of 32 successfully perturbed
+apgd-ce - 61/297 - 32 out of 32 successfully perturbed
+apgd-ce - 62/297 - 32 out of 32 successfully perturbed
+apgd-ce - 63/297 - 32 out of 32 successfully perturbed
+apgd-ce - 64/297 - 32 out of 32 successfully perturbed
+apgd-ce - 65/297 - 32 out of 32 successfully perturbed
+apgd-ce - 66/297 - 32 out of 32 successfully perturbed
+apgd-ce - 67/297 - 32 out of 32 successfully perturbed
+apgd-ce - 68/297 - 32 out of 32 successfully perturbed
+apgd-ce - 69/297 - 32 out of 32 successfully perturbed
+apgd-ce - 70/297 - 32 out of 32 successfully perturbed
+apgd-ce - 71/297 - 32 out of 32 successfully perturbed
+apgd-ce - 72/297 - 32 out of 32 successfully perturbed
+apgd-ce - 73/297 - 32 out of 32 successfully perturbed
+apgd-ce - 74/297 - 32 out of 32 successfully perturbed
+apgd-ce - 75/297 - 32 out of 32 successfully perturbed
+apgd-ce - 76/297 - 32 out of 32 successfully perturbed
+apgd-ce - 77/297 - 32 out of 32 successfully perturbed
+apgd-ce - 78/297 - 32 out of 32 successfully perturbed
+apgd-ce - 79/297 - 32 out of 32 successfully perturbed
+apgd-ce - 80/297 - 32 out of 32 successfully perturbed
+apgd-ce - 81/297 - 32 out of 32 successfully perturbed
+apgd-ce - 82/297 - 32 out of 32 successfully perturbed
+apgd-ce - 83/297 - 32 out of 32 successfully perturbed
+apgd-ce - 84/297 - 32 out of 32 successfully perturbed
+apgd-ce - 85/297 - 32 out of 32 successfully perturbed
+apgd-ce - 86/297 - 32 out of 32 successfully perturbed
+apgd-ce - 87/297 - 32 out of 32 successfully perturbed
+apgd-ce - 88/297 - 32 out of 32 successfully perturbed
+apgd-ce - 89/297 - 32 out of 32 successfully perturbed
+apgd-ce - 90/297 - 32 out of 32 successfully perturbed
+apgd-ce - 91/297 - 32 out of 32 successfully perturbed
+apgd-ce - 92/297 - 32 out of 32 successfully perturbed
+apgd-ce - 93/297 - 32 out of 32 successfully perturbed
+apgd-ce - 94/297 - 32 out of 32 successfully perturbed
+apgd-ce - 95/297 - 32 out of 32 successfully perturbed
+apgd-ce - 96/297 - 32 out of 32 successfully perturbed
+apgd-ce - 97/297 - 32 out of 32 successfully perturbed
+apgd-ce - 98/297 - 32 out of 32 successfully perturbed
+apgd-ce - 99/297 - 32 out of 32 successfully perturbed
+apgd-ce - 100/297 - 32 out of 32 successfully perturbed
+apgd-ce - 101/297 - 32 out of 32 successfully perturbed
+apgd-ce - 102/297 - 32 out of 32 successfully perturbed
+apgd-ce - 103/297 - 32 out of 32 successfully perturbed
+apgd-ce - 104/297 - 32 out of 32 successfully perturbed
+apgd-ce - 105/297 - 32 out of 32 successfully perturbed
+apgd-ce - 106/297 - 32 out of 32 successfully perturbed
+apgd-ce - 107/297 - 32 out of 32 successfully perturbed
+apgd-ce - 108/297 - 32 out of 32 successfully perturbed
+apgd-ce - 109/297 - 32 out of 32 successfully perturbed
+apgd-ce - 110/297 - 32 out of 32 successfully perturbed
+apgd-ce - 111/297 - 32 out of 32 successfully perturbed
+apgd-ce - 112/297 - 32 out of 32 successfully perturbed
+apgd-ce - 113/297 - 32 out of 32 successfully perturbed
+apgd-ce - 114/297 - 32 out of 32 successfully perturbed
+apgd-ce - 115/297 - 32 out of 32 successfully perturbed
+apgd-ce - 116/297 - 32 out of 32 successfully perturbed
+apgd-ce - 117/297 - 32 out of 32 successfully perturbed
+apgd-ce - 118/297 - 32 out of 32 successfully perturbed
+apgd-ce - 119/297 - 32 out of 32 successfully perturbed
+apgd-ce - 120/297 - 32 out of 32 successfully perturbed
+apgd-ce - 121/297 - 32 out of 32 successfully perturbed
+apgd-ce - 122/297 - 32 out of 32 successfully perturbed
+apgd-ce - 123/297 - 32 out of 32 successfully perturbed
+apgd-ce - 124/297 - 32 out of 32 successfully perturbed
+apgd-ce - 125/297 - 32 out of 32 successfully perturbed
+apgd-ce - 126/297 - 32 out of 32 successfully perturbed
+apgd-ce - 127/297 - 32 out of 32 successfully perturbed
+apgd-ce - 128/297 - 32 out of 32 successfully perturbed
+apgd-ce - 129/297 - 32 out of 32 successfully perturbed
+apgd-ce - 130/297 - 32 out of 32 successfully perturbed
+apgd-ce - 131/297 - 32 out of 32 successfully perturbed
+apgd-ce - 132/297 - 32 out of 32 successfully perturbed
+apgd-ce - 133/297 - 32 out of 32 successfully perturbed
+apgd-ce - 134/297 - 32 out of 32 successfully perturbed
+apgd-ce - 135/297 - 32 out of 32 successfully perturbed
+apgd-ce - 136/297 - 32 out of 32 successfully perturbed
+apgd-ce - 137/297 - 32 out of 32 successfully perturbed
+apgd-ce - 138/297 - 32 out of 32 successfully perturbed
+apgd-ce - 139/297 - 32 out of 32 successfully perturbed
+apgd-ce - 140/297 - 32 out of 32 successfully perturbed
+apgd-ce - 141/297 - 32 out of 32 successfully perturbed
+apgd-ce - 142/297 - 32 out of 32 successfully perturbed
+apgd-ce - 143/297 - 32 out of 32 successfully perturbed
+apgd-ce - 144/297 - 32 out of 32 successfully perturbed
+apgd-ce - 145/297 - 32 out of 32 successfully perturbed
+apgd-ce - 146/297 - 32 out of 32 successfully perturbed
+apgd-ce - 147/297 - 32 out of 32 successfully perturbed
+apgd-ce - 148/297 - 32 out of 32 successfully perturbed
+apgd-ce - 149/297 - 32 out of 32 successfully perturbed
+apgd-ce - 150/297 - 32 out of 32 successfully perturbed
+apgd-ce - 151/297 - 32 out of 32 successfully perturbed
+apgd-ce - 152/297 - 32 out of 32 successfully perturbed
+apgd-ce - 153/297 - 32 out of 32 successfully perturbed
+apgd-ce - 154/297 - 32 out of 32 successfully perturbed
+apgd-ce - 155/297 - 32 out of 32 successfully perturbed
+apgd-ce - 156/297 - 32 out of 32 successfully perturbed
+apgd-ce - 157/297 - 32 out of 32 successfully perturbed
+apgd-ce - 158/297 - 32 out of 32 successfully perturbed
+apgd-ce - 159/297 - 32 out of 32 successfully perturbed
+apgd-ce - 160/297 - 32 out of 32 successfully perturbed
+apgd-ce - 161/297 - 32 out of 32 successfully perturbed
+apgd-ce - 162/297 - 32 out of 32 successfully perturbed
+apgd-ce - 163/297 - 32 out of 32 successfully perturbed
+apgd-ce - 164/297 - 32 out of 32 successfully perturbed
+apgd-ce - 165/297 - 32 out of 32 successfully perturbed
+apgd-ce - 166/297 - 32 out of 32 successfully perturbed
+apgd-ce - 167/297 - 32 out of 32 successfully perturbed
+apgd-ce - 168/297 - 32 out of 32 successfully perturbed
+apgd-ce - 169/297 - 32 out of 32 successfully perturbed
+apgd-ce - 170/297 - 32 out of 32 successfully perturbed
+apgd-ce - 171/297 - 32 out of 32 successfully perturbed
+apgd-ce - 172/297 - 32 out of 32 successfully perturbed
+apgd-ce - 173/297 - 32 out of 32 successfully perturbed
+apgd-ce - 174/297 - 32 out of 32 successfully perturbed
+apgd-ce - 175/297 - 32 out of 32 successfully perturbed
+apgd-ce - 176/297 - 32 out of 32 successfully perturbed
+apgd-ce - 177/297 - 32 out of 32 successfully perturbed
+apgd-ce - 178/297 - 32 out of 32 successfully perturbed
+apgd-ce - 179/297 - 32 out of 32 successfully perturbed
+apgd-ce - 180/297 - 32 out of 32 successfully perturbed
+apgd-ce - 181/297 - 32 out of 32 successfully perturbed
+apgd-ce - 182/297 - 32 out of 32 successfully perturbed
+apgd-ce - 183/297 - 32 out of 32 successfully perturbed
+apgd-ce - 184/297 - 32 out of 32 successfully perturbed
+apgd-ce - 185/297 - 32 out of 32 successfully perturbed
+apgd-ce - 186/297 - 32 out of 32 successfully perturbed
+apgd-ce - 187/297 - 32 out of 32 successfully perturbed
+apgd-ce - 188/297 - 32 out of 32 successfully perturbed
+apgd-ce - 189/297 - 32 out of 32 successfully perturbed
+apgd-ce - 190/297 - 32 out of 32 successfully perturbed
+apgd-ce - 191/297 - 32 out of 32 successfully perturbed
+apgd-ce - 192/297 - 32 out of 32 successfully perturbed
+apgd-ce - 193/297 - 32 out of 32 successfully perturbed
+apgd-ce - 194/297 - 32 out of 32 successfully perturbed
+apgd-ce - 195/297 - 32 out of 32 successfully perturbed
+apgd-ce - 196/297 - 32 out of 32 successfully perturbed
+apgd-ce - 197/297 - 32 out of 32 successfully perturbed
+apgd-ce - 198/297 - 32 out of 32 successfully perturbed
+apgd-ce - 199/297 - 32 out of 32 successfully perturbed
+apgd-ce - 200/297 - 32 out of 32 successfully perturbed
+apgd-ce - 201/297 - 32 out of 32 successfully perturbed
+apgd-ce - 202/297 - 32 out of 32 successfully perturbed
+apgd-ce - 203/297 - 32 out of 32 successfully perturbed
+apgd-ce - 204/297 - 32 out of 32 successfully perturbed
+apgd-ce - 205/297 - 32 out of 32 successfully perturbed
+apgd-ce - 206/297 - 32 out of 32 successfully perturbed
+apgd-ce - 207/297 - 32 out of 32 successfully perturbed
+apgd-ce - 208/297 - 32 out of 32 successfully perturbed
+apgd-ce - 209/297 - 32 out of 32 successfully perturbed
+apgd-ce - 210/297 - 32 out of 32 successfully perturbed
+apgd-ce - 211/297 - 32 out of 32 successfully perturbed
+apgd-ce - 212/297 - 32 out of 32 successfully perturbed
+apgd-ce - 213/297 - 32 out of 32 successfully perturbed
+apgd-ce - 214/297 - 32 out of 32 successfully perturbed
+apgd-ce - 215/297 - 32 out of 32 successfully perturbed
+apgd-ce - 216/297 - 32 out of 32 successfully perturbed
+apgd-ce - 217/297 - 32 out of 32 successfully perturbed
+apgd-ce - 218/297 - 32 out of 32 successfully perturbed
+apgd-ce - 219/297 - 32 out of 32 successfully perturbed
+apgd-ce - 220/297 - 32 out of 32 successfully perturbed
+apgd-ce - 221/297 - 32 out of 32 successfully perturbed
+apgd-ce - 222/297 - 32 out of 32 successfully perturbed
+apgd-ce - 223/297 - 32 out of 32 successfully perturbed
+apgd-ce - 224/297 - 32 out of 32 successfully perturbed
+apgd-ce - 225/297 - 32 out of 32 successfully perturbed
+apgd-ce - 226/297 - 32 out of 32 successfully perturbed
+apgd-ce - 227/297 - 32 out of 32 successfully perturbed
+apgd-ce - 228/297 - 32 out of 32 successfully perturbed
+apgd-ce - 229/297 - 32 out of 32 successfully perturbed
+apgd-ce - 230/297 - 32 out of 32 successfully perturbed
+apgd-ce - 231/297 - 32 out of 32 successfully perturbed
+apgd-ce - 232/297 - 32 out of 32 successfully perturbed
+apgd-ce - 233/297 - 32 out of 32 successfully perturbed
+apgd-ce - 234/297 - 32 out of 32 successfully perturbed
+apgd-ce - 235/297 - 32 out of 32 successfully perturbed
+apgd-ce - 236/297 - 32 out of 32 successfully perturbed
+apgd-ce - 237/297 - 32 out of 32 successfully perturbed
+apgd-ce - 238/297 - 32 out of 32 successfully perturbed
+apgd-ce - 239/297 - 32 out of 32 successfully perturbed
+apgd-ce - 240/297 - 32 out of 32 successfully perturbed
+apgd-ce - 241/297 - 32 out of 32 successfully perturbed
+apgd-ce - 242/297 - 32 out of 32 successfully perturbed
+apgd-ce - 243/297 - 32 out of 32 successfully perturbed
+apgd-ce - 244/297 - 32 out of 32 successfully perturbed
+apgd-ce - 245/297 - 32 out of 32 successfully perturbed
+apgd-ce - 246/297 - 32 out of 32 successfully perturbed
+apgd-ce - 247/297 - 32 out of 32 successfully perturbed
+apgd-ce - 248/297 - 32 out of 32 successfully perturbed
+apgd-ce - 249/297 - 32 out of 32 successfully perturbed
+apgd-ce - 250/297 - 32 out of 32 successfully perturbed
+apgd-ce - 251/297 - 32 out of 32 successfully perturbed
+apgd-ce - 252/297 - 32 out of 32 successfully perturbed
+apgd-ce - 253/297 - 32 out of 32 successfully perturbed
+apgd-ce - 254/297 - 32 out of 32 successfully perturbed
+apgd-ce - 255/297 - 32 out of 32 successfully perturbed
+apgd-ce - 256/297 - 32 out of 32 successfully perturbed
+apgd-ce - 257/297 - 32 out of 32 successfully perturbed
+apgd-ce - 258/297 - 32 out of 32 successfully perturbed
+apgd-ce - 259/297 - 32 out of 32 successfully perturbed
+apgd-ce - 260/297 - 32 out of 32 successfully perturbed
+apgd-ce - 261/297 - 32 out of 32 successfully perturbed
+apgd-ce - 262/297 - 32 out of 32 successfully perturbed
+apgd-ce - 263/297 - 32 out of 32 successfully perturbed
+apgd-ce - 264/297 - 32 out of 32 successfully perturbed
+apgd-ce - 265/297 - 32 out of 32 successfully perturbed
+apgd-ce - 266/297 - 32 out of 32 successfully perturbed
+apgd-ce - 267/297 - 32 out of 32 successfully perturbed
+apgd-ce - 268/297 - 32 out of 32 successfully perturbed
+apgd-ce - 269/297 - 32 out of 32 successfully perturbed
+apgd-ce - 270/297 - 32 out of 32 successfully perturbed
+apgd-ce - 271/297 - 32 out of 32 successfully perturbed
+apgd-ce - 272/297 - 32 out of 32 successfully perturbed
+apgd-ce - 273/297 - 32 out of 32 successfully perturbed
+apgd-ce - 274/297 - 32 out of 32 successfully perturbed
+apgd-ce - 275/297 - 32 out of 32 successfully perturbed
+apgd-ce - 276/297 - 32 out of 32 successfully perturbed
+apgd-ce - 277/297 - 32 out of 32 successfully perturbed
+apgd-ce - 278/297 - 32 out of 32 successfully perturbed
+apgd-ce - 279/297 - 32 out of 32 successfully perturbed
+apgd-ce - 280/297 - 32 out of 32 successfully perturbed
+apgd-ce - 281/297 - 32 out of 32 successfully perturbed
+apgd-ce - 282/297 - 32 out of 32 successfully perturbed
+apgd-ce - 283/297 - 32 out of 32 successfully perturbed
+apgd-ce - 284/297 - 32 out of 32 successfully perturbed
+apgd-ce - 285/297 - 32 out of 32 successfully perturbed
+apgd-ce - 286/297 - 32 out of 32 successfully perturbed
+apgd-ce - 287/297 - 32 out of 32 successfully perturbed
+apgd-ce - 288/297 - 32 out of 32 successfully perturbed
+apgd-ce - 289/297 - 32 out of 32 successfully perturbed
+apgd-ce - 290/297 - 32 out of 32 successfully perturbed
+apgd-ce - 291/297 - 32 out of 32 successfully perturbed
+apgd-ce - 292/297 - 32 out of 32 successfully perturbed
+apgd-ce - 293/297 - 32 out of 32 successfully perturbed
+apgd-ce - 294/297 - 32 out of 32 successfully perturbed
+apgd-ce - 295/297 - 32 out of 32 successfully perturbed
+apgd-ce - 296/297 - 32 out of 32 successfully perturbed
+apgd-ce - 297/297 - 29 out of 29 successfully perturbed
+robust accuracy after APGD-CE: 0.00% (total time 1299.0 s)
+max Linf perturbation: 0.01569, nan in tensor: 0, max: 1.00000, min: 0.00000
+robust accuracy: 0.00%

@@ -56,18 +56,18 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             reg  = reg_model(x, logits, device)
             loss = entropy + param['lambda']*reg
 
-        elif param['defense'] == 'jacbound':
-            reg, _ = reg_model(x, logits, device)
-            loss   = entropy + param['lambda']*reg
+        elif param['defense'] == 'eigenbound':
+            reg  = reg_model(x, logits, device)
+            loss = entropy + param['lambda']*reg
 
         elif param['defense'] == 'jacreg':
-            _, reg = reg_model(x, logits, device)
-            loss   = (1 - param['lambda'])*entropy + param['lambda']*reg
+            reg  = reg_model(x, logits, device)
+            loss = entropy + param['lambda']*reg
 
         elif param['defense'] == 'temperature':
-            temp = reg_model(x, logits, device).detach()  # or not detach()
+            temp       = reg_model(x, logits, device).detach()  # or not detach()
             new_logits = temp*F.softmax(logits)
-            loss = F.cross_entropy(new_logits, label)
+            loss       = F.cross_entropy(new_logits, label)
 
         elif param['defense'] == 'fir':
             # Compute regularization term and cross entropy loss
@@ -225,12 +225,14 @@ def main():
     from test import one_test_run
     param = load_yaml('baseline_cifar')
     attack_type = param['attack']
-    attack_budget = param['budget']
+    # attack_budget = param['budget']
     name = param['name']
 
     # one_run(param)
     # import sys
     # sys.exit(0)
+
+    budgets = [4/255, 8/255, 16/255, 32/255]
 
     for seed in range(5):
         print('=' * 101)
@@ -243,9 +245,10 @@ def main():
         print('-' * 101)
         print('Test')
         param['attack'] = attack_type
-        param['budget'] = attack_budget
         param['load'] = True
-        one_test_run(param)
+        for budget in budgets:
+            param['budget'] = budget
+            one_test_run(param)
 
 
 if __name__ == '__main__':

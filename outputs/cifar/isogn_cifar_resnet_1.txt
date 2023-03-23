@@ -1,0 +1,2407 @@
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_0
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 0
+gpu_number: 2
+load: False
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 12480/50000 (25%)
+Epoch 1: 24960/50000 (50%)
+Epoch 1: 37440/50000 (75%)
+Epoch 1: 49920/50000 (100%)
+Epoch: 1, Loss: 1.058359, Accuracy: 85.17%
+Epoch training time (s): 107.57016587257385
+Defense: isogn
+Epoch 2: 0/50000 (0%)
+Epoch 2: 12480/50000 (25%)
+Epoch 2: 24960/50000 (50%)
+Epoch 2: 37440/50000 (75%)
+Epoch 2: 49920/50000 (100%)
+Epoch: 2, Loss: 0.518540, Accuracy: 80.79%
+Epoch training time (s): 184.4729781150818
+Defense: isogn
+Epoch 3: 0/50000 (0%)
+Epoch 3: 12480/50000 (25%)
+Epoch 3: 24960/50000 (50%)
+Epoch 3: 37440/50000 (75%)
+Epoch 3: 49920/50000 (100%)
+Epoch: 3, Loss: 0.367588, Accuracy: 85.96%
+Epoch training time (s): 183.25521874427795
+Defense: isogn
+Epoch 4: 0/50000 (0%)
+Epoch 4: 12480/50000 (25%)
+Epoch 4: 24960/50000 (50%)
+Epoch 4: 37440/50000 (75%)
+Epoch 4: 49920/50000 (100%)
+Epoch: 4, Loss: 0.311893, Accuracy: 86.80%
+Epoch training time (s): 184.3695628643036
+Defense: isogn
+Epoch 5: 0/50000 (0%)
+Epoch 5: 12480/50000 (25%)
+Epoch 5: 24960/50000 (50%)
+Epoch 5: 37440/50000 (75%)
+Epoch 5: 49920/50000 (100%)
+Epoch: 5, Loss: 0.279804, Accuracy: 87.31%
+Epoch training time (s): 182.36121273040771
+Defense: isogn
+Epoch 6: 0/50000 (0%)
+Epoch 6: 12480/50000 (25%)
+Epoch 6: 24960/50000 (50%)
+Epoch 6: 37440/50000 (75%)
+Epoch 6: 49920/50000 (100%)
+Epoch: 6, Loss: 0.257267, Accuracy: 81.73%
+Epoch training time (s): 187.89203310012817
+Defense: isogn
+Epoch 7: 0/50000 (0%)
+Epoch 7: 12480/50000 (25%)
+Epoch 7: 24960/50000 (50%)
+Epoch 7: 37440/50000 (75%)
+Epoch 7: 49920/50000 (100%)
+Epoch: 7, Loss: 0.237906, Accuracy: 88.28%
+Epoch training time (s): 184.29547429084778
+Defense: isogn
+Epoch 8: 0/50000 (0%)
+Epoch 8: 12480/50000 (25%)
+Epoch 8: 24960/50000 (50%)
+Epoch 8: 37440/50000 (75%)
+Epoch 8: 49920/50000 (100%)
+Epoch: 8, Loss: 0.219835, Accuracy: 88.91%
+Epoch training time (s): 184.99333143234253
+Defense: isogn
+Epoch 9: 0/50000 (0%)
+Epoch 9: 12480/50000 (25%)
+Epoch 9: 24960/50000 (50%)
+Epoch 9: 37440/50000 (75%)
+Epoch 9: 49920/50000 (100%)
+Epoch: 9, Loss: 0.207043, Accuracy: 88.81%
+Epoch training time (s): 184.10801148414612
+Defense: isogn
+Epoch 10: 0/50000 (0%)
+Epoch 10: 12480/50000 (25%)
+Epoch 10: 24960/50000 (50%)
+Epoch 10: 37440/50000 (75%)
+Epoch 10: 49920/50000 (100%)
+Epoch: 10, Loss: 0.195239, Accuracy: 87.55%
+Epoch training time (s): 185.73798155784607
+Defense: isogn
+Epoch 11: 0/50000 (0%)
+Epoch 11: 12480/50000 (25%)
+Epoch 11: 24960/50000 (50%)
+Epoch 11: 37440/50000 (75%)
+Epoch 11: 49920/50000 (100%)
+Epoch: 11, Loss: 0.185620, Accuracy: 88.82%
+Epoch training time (s): 183.11267280578613
+Defense: isogn
+Epoch 12: 0/50000 (0%)
+Epoch 12: 12480/50000 (25%)
+Epoch 12: 24960/50000 (50%)
+Epoch 12: 37440/50000 (75%)
+Epoch 12: 49920/50000 (100%)
+Epoch: 12, Loss: 0.176355, Accuracy: 90.17%
+Epoch training time (s): 184.59452199935913
+Defense: isogn
+Epoch 13: 0/50000 (0%)
+Epoch 13: 12480/50000 (25%)
+Epoch 13: 24960/50000 (50%)
+Epoch 13: 37440/50000 (75%)
+Epoch 13: 49920/50000 (100%)
+Epoch: 13, Loss: 0.171037, Accuracy: 89.44%
+Epoch training time (s): 185.6215739250183
+Defense: isogn
+Epoch 14: 0/50000 (0%)
+Epoch 14: 12480/50000 (25%)
+Epoch 14: 24960/50000 (50%)
+Epoch 14: 37440/50000 (75%)
+Epoch 14: 49920/50000 (100%)
+Epoch: 14, Loss: 0.158379, Accuracy: 89.24%
+Epoch training time (s): 184.495103597641
+Defense: isogn
+Epoch 15: 0/50000 (0%)
+Epoch 15: 12480/50000 (25%)
+Epoch 15: 24960/50000 (50%)
+Epoch 15: 37440/50000 (75%)
+Epoch 15: 49920/50000 (100%)
+Epoch: 15, Loss: 0.155951, Accuracy: 91.00%
+Epoch training time (s): 184.61505889892578
+Defense: isogn
+Epoch 16: 0/50000 (0%)
+Epoch 16: 12480/50000 (25%)
+Epoch 16: 24960/50000 (50%)
+Epoch 16: 37440/50000 (75%)
+Epoch 16: 49920/50000 (100%)
+Epoch: 16, Loss: 0.146836, Accuracy: 92.02%
+Epoch training time (s): 185.88265323638916
+Defense: isogn
+Epoch 17: 0/50000 (0%)
+Epoch 17: 12480/50000 (25%)
+Epoch 17: 24960/50000 (50%)
+Epoch 17: 37440/50000 (75%)
+Epoch 17: 49920/50000 (100%)
+Epoch: 17, Loss: 0.141943, Accuracy: 91.54%
+Epoch training time (s): 184.17695260047913
+Defense: isogn
+Epoch 18: 0/50000 (0%)
+Epoch 18: 12480/50000 (25%)
+Epoch 18: 24960/50000 (50%)
+Epoch 18: 37440/50000 (75%)
+Epoch 18: 49920/50000 (100%)
+Epoch: 18, Loss: 0.135999, Accuracy: 91.69%
+Epoch training time (s): 185.45863938331604
+Defense: isogn
+Epoch 19: 0/50000 (0%)
+Epoch 19: 12480/50000 (25%)
+Epoch 19: 24960/50000 (50%)
+Epoch 19: 37440/50000 (75%)
+Epoch 19: 49920/50000 (100%)
+Epoch: 19, Loss: 0.129987, Accuracy: 91.61%
+Epoch training time (s): 184.49737191200256
+Defense: isogn
+Epoch 20: 0/50000 (0%)
+Epoch 20: 12480/50000 (25%)
+Epoch 20: 24960/50000 (50%)
+Epoch 20: 37440/50000 (75%)
+Epoch 20: 49920/50000 (100%)
+Epoch: 20, Loss: 0.125815, Accuracy: 92.12%
+Epoch training time (s): 185.05370903015137
+Defense: isogn
+Epoch 21: 0/50000 (0%)
+Epoch 21: 12480/50000 (25%)
+Epoch 21: 24960/50000 (50%)
+Epoch 21: 37440/50000 (75%)
+Epoch 21: 49920/50000 (100%)
+Epoch: 21, Loss: 0.119925, Accuracy: 92.47%
+Epoch training time (s): 186.52260994911194
+Defense: isogn
+Epoch 22: 0/50000 (0%)
+Epoch 22: 12480/50000 (25%)
+Epoch 22: 24960/50000 (50%)
+Epoch 22: 37440/50000 (75%)
+Epoch 22: 49920/50000 (100%)
+Epoch: 22, Loss: 0.115973, Accuracy: 92.99%
+Epoch training time (s): 185.8523941040039
+Defense: isogn
+Epoch 23: 0/50000 (0%)
+Epoch 23: 12480/50000 (25%)
+Epoch 23: 24960/50000 (50%)
+Epoch 23: 37440/50000 (75%)
+Epoch 23: 49920/50000 (100%)
+Epoch: 23, Loss: 0.110589, Accuracy: 92.48%
+Epoch training time (s): 186.8145067691803
+Defense: isogn
+Epoch 24: 0/50000 (0%)
+Epoch 24: 12480/50000 (25%)
+Epoch 24: 24960/50000 (50%)
+Epoch 24: 37440/50000 (75%)
+Epoch 24: 49920/50000 (100%)
+Epoch: 24, Loss: 0.108064, Accuracy: 92.77%
+Epoch training time (s): 188.00943636894226
+Defense: isogn
+Epoch 25: 0/50000 (0%)
+Epoch 25: 12480/50000 (25%)
+Epoch 25: 24960/50000 (50%)
+Epoch 25: 37440/50000 (75%)
+Epoch 25: 49920/50000 (100%)
+Epoch: 25, Loss: 0.104095, Accuracy: 92.52%
+Epoch training time (s): 185.88501048088074
+Defense: isogn
+Epoch 26: 0/50000 (0%)
+Epoch 26: 12480/50000 (25%)
+Epoch 26: 24960/50000 (50%)
+Epoch 26: 37440/50000 (75%)
+Epoch 26: 49920/50000 (100%)
+Epoch: 26, Loss: 0.099852, Accuracy: 92.67%
+Epoch training time (s): 185.95031094551086
+Defense: isogn
+Epoch 27: 0/50000 (0%)
+Epoch 27: 12480/50000 (25%)
+Epoch 27: 24960/50000 (50%)
+Epoch 27: 37440/50000 (75%)
+Epoch 27: 49920/50000 (100%)
+Epoch: 27, Loss: 0.095980, Accuracy: 92.87%
+Epoch training time (s): 184.76535081863403
+Defense: isogn
+Epoch 28: 0/50000 (0%)
+Epoch 28: 12480/50000 (25%)
+Epoch 28: 24960/50000 (50%)
+Epoch 28: 37440/50000 (75%)
+Epoch 28: 49920/50000 (100%)
+Epoch: 28, Loss: 0.093134, Accuracy: 93.23%
+Epoch training time (s): 184.76884412765503
+Defense: isogn
+Epoch 29: 0/50000 (0%)
+Epoch 29: 12480/50000 (25%)
+Epoch 29: 24960/50000 (50%)
+Epoch 29: 37440/50000 (75%)
+Epoch 29: 49920/50000 (100%)
+Epoch: 29, Loss: 0.089271, Accuracy: 92.92%
+Epoch training time (s): 186.2379550933838
+Defense: isogn
+Epoch 30: 0/50000 (0%)
+Epoch 30: 12480/50000 (25%)
+Epoch 30: 24960/50000 (50%)
+Epoch 30: 37440/50000 (75%)
+Epoch 30: 49920/50000 (100%)
+Epoch: 30, Loss: 0.085302, Accuracy: 92.78%
+Epoch training time (s): 186.6580674648285
+Defense: isogn
+Epoch 31: 0/50000 (0%)
+Epoch 31: 12480/50000 (25%)
+Epoch 31: 24960/50000 (50%)
+Epoch 31: 37440/50000 (75%)
+Epoch 31: 49920/50000 (100%)
+Epoch: 31, Loss: 0.083782, Accuracy: 93.32%
+Epoch training time (s): 185.69097304344177
+Defense: isogn
+Epoch 32: 0/50000 (0%)
+Epoch 32: 12480/50000 (25%)
+Epoch 32: 24960/50000 (50%)
+Epoch 32: 37440/50000 (75%)
+Epoch 32: 49920/50000 (100%)
+Epoch: 32, Loss: 0.079143, Accuracy: 92.94%
+Epoch training time (s): 184.8670756816864
+Defense: isogn
+Epoch 33: 0/50000 (0%)
+Epoch 33: 12480/50000 (25%)
+Epoch 33: 24960/50000 (50%)
+Epoch 33: 37440/50000 (75%)
+Epoch 33: 49920/50000 (100%)
+Epoch: 33, Loss: 0.079284, Accuracy: 93.25%
+Epoch training time (s): 185.73149943351746
+Defense: isogn
+Epoch 34: 0/50000 (0%)
+Epoch 34: 12480/50000 (25%)
+Epoch 34: 24960/50000 (50%)
+Epoch 34: 37440/50000 (75%)
+Epoch 34: 49920/50000 (100%)
+Epoch: 34, Loss: 0.074349, Accuracy: 93.61%
+Epoch training time (s): 185.59294939041138
+Defense: isogn
+Epoch 35: 0/50000 (0%)
+Epoch 35: 12480/50000 (25%)
+Epoch 35: 24960/50000 (50%)
+Epoch 35: 37440/50000 (75%)
+Epoch 35: 49920/50000 (100%)
+Epoch: 35, Loss: 0.070562, Accuracy: 92.86%
+Epoch training time (s): 185.66085076332092
+Defense: isogn
+Epoch 36: 0/50000 (0%)
+Epoch 36: 12480/50000 (25%)
+Epoch 36: 24960/50000 (50%)
+Epoch 36: 37440/50000 (75%)
+Epoch 36: 49920/50000 (100%)
+Epoch: 36, Loss: 0.068593, Accuracy: 93.54%
+Epoch training time (s): 185.84403729438782
+Defense: isogn
+Epoch 37: 0/50000 (0%)
+Epoch 37: 12480/50000 (25%)
+Epoch 37: 24960/50000 (50%)
+Epoch 37: 37440/50000 (75%)
+Epoch 37: 49920/50000 (100%)
+Epoch: 37, Loss: 0.065357, Accuracy: 93.34%
+Epoch training time (s): 186.91555285453796
+Defense: isogn
+Epoch 38: 0/50000 (0%)
+Epoch 38: 12480/50000 (25%)
+Epoch 38: 24960/50000 (50%)
+Epoch 38: 37440/50000 (75%)
+Epoch 38: 49920/50000 (100%)
+Epoch: 38, Loss: 0.066107, Accuracy: 93.59%
+Epoch training time (s): 186.74558067321777
+Defense: isogn
+Epoch 39: 0/50000 (0%)
+Epoch 39: 12480/50000 (25%)
+Epoch 39: 24960/50000 (50%)
+Epoch 39: 37440/50000 (75%)
+Epoch 39: 49920/50000 (100%)
+Epoch: 39, Loss: 0.064564, Accuracy: 93.78%
+Epoch training time (s): 185.4506516456604
+Defense: isogn
+Epoch 40: 0/50000 (0%)
+Epoch 40: 12480/50000 (25%)
+Epoch 40: 24960/50000 (50%)
+Epoch 40: 37440/50000 (75%)
+Epoch 40: 49920/50000 (100%)
+Epoch: 40, Loss: 0.061880, Accuracy: 93.40%
+Epoch training time (s): 184.84951090812683
+Defense: isogn
+Epoch 41: 0/50000 (0%)
+Epoch 41: 12480/50000 (25%)
+Epoch 41: 24960/50000 (50%)
+Epoch 41: 37440/50000 (75%)
+Epoch 41: 49920/50000 (100%)
+Epoch: 41, Loss: 0.057398, Accuracy: 93.38%
+Epoch training time (s): 185.90382957458496
+Defense: isogn
+Epoch 42: 0/50000 (0%)
+Epoch 42: 12480/50000 (25%)
+Epoch 42: 24960/50000 (50%)
+Epoch 42: 37440/50000 (75%)
+Epoch 42: 49920/50000 (100%)
+Epoch: 42, Loss: 0.055909, Accuracy: 93.66%
+Epoch training time (s): 187.95451021194458
+Defense: isogn
+Epoch 43: 0/50000 (0%)
+Epoch 43: 12480/50000 (25%)
+Epoch 43: 24960/50000 (50%)
+Epoch 43: 37440/50000 (75%)
+Epoch 43: 49920/50000 (100%)
+Epoch: 43, Loss: 0.055907, Accuracy: 93.74%
+Epoch training time (s): 189.83722233772278
+Defense: isogn
+Epoch 44: 0/50000 (0%)
+Epoch 44: 12480/50000 (25%)
+Epoch 44: 24960/50000 (50%)
+Epoch 44: 37440/50000 (75%)
+Epoch 44: 49920/50000 (100%)
+Epoch: 44, Loss: 0.053206, Accuracy: 94.08%
+Epoch training time (s): 190.7507665157318
+Defense: isogn
+Epoch 45: 0/50000 (0%)
+Epoch 45: 12480/50000 (25%)
+Epoch 45: 24960/50000 (50%)
+Epoch 45: 37440/50000 (75%)
+Epoch 45: 49920/50000 (100%)
+Epoch: 45, Loss: 0.051673, Accuracy: 93.95%
+Epoch training time (s): 189.67079877853394
+Defense: isogn
+Epoch 46: 0/50000 (0%)
+Epoch 46: 12480/50000 (25%)
+Epoch 46: 24960/50000 (50%)
+Epoch 46: 37440/50000 (75%)
+Epoch 46: 49920/50000 (100%)
+Epoch: 46, Loss: 0.048837, Accuracy: 93.97%
+Epoch training time (s): 190.13756799697876
+Defense: isogn
+Epoch 47: 0/50000 (0%)
+Epoch 47: 12480/50000 (25%)
+Epoch 47: 24960/50000 (50%)
+Epoch 47: 37440/50000 (75%)
+Epoch 47: 49920/50000 (100%)
+Epoch: 47, Loss: 0.050491, Accuracy: 93.70%
+Epoch training time (s): 187.32107782363892
+Defense: isogn
+Epoch 48: 0/50000 (0%)
+Epoch 48: 12480/50000 (25%)
+Epoch 48: 24960/50000 (50%)
+Epoch 48: 37440/50000 (75%)
+Epoch 48: 49920/50000 (100%)
+Epoch: 48, Loss: 0.047737, Accuracy: 94.16%
+Epoch training time (s): 189.9271285533905
+Defense: isogn
+Epoch 49: 0/50000 (0%)
+Epoch 49: 12480/50000 (25%)
+Epoch 49: 24960/50000 (50%)
+Epoch 49: 37440/50000 (75%)
+Epoch 49: 49920/50000 (100%)
+Epoch: 49, Loss: 0.045752, Accuracy: 93.88%
+Epoch training time (s): 188.9363420009613
+Defense: isogn
+Epoch 50: 0/50000 (0%)
+Epoch 50: 12480/50000 (25%)
+Epoch 50: 24960/50000 (50%)
+Epoch 50: 37440/50000 (75%)
+Epoch 50: 49920/50000 (100%)
+Epoch: 50, Loss: 0.043830, Accuracy: 94.03%
+Epoch training time (s): 187.5952742099762
+Defense: isogn
+Epoch 51: 0/50000 (0%)
+Epoch 51: 12480/50000 (25%)
+Epoch 51: 24960/50000 (50%)
+Epoch 51: 37440/50000 (75%)
+Epoch 51: 49920/50000 (100%)
+Epoch: 51, Loss: 0.042555, Accuracy: 93.61%
+Epoch training time (s): 190.39736342430115
+Training time (s): 9418.396394252777
+/home/loic/iso_defense/utils/mnist_utils.py:20: RuntimeWarning: divide by zero encountered in log
+  geo_mean = np.exp(np.log(array[i: i + window_size]).mean())
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_0
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 0
+gpu_number: 2
+load: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 2757.0/10000 (27.57%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_1
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 1
+gpu_number: 2
+load: False
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 12480/50000 (25%)
+Epoch 1: 24960/50000 (50%)
+Epoch 1: 37440/50000 (75%)
+Epoch 1: 49920/50000 (100%)
+Epoch: 1, Loss: 1.068451, Accuracy: 84.64%
+Epoch training time (s): 109.55163550376892
+Defense: isogn
+Epoch 2: 0/50000 (0%)
+Epoch 2: 12480/50000 (25%)
+Epoch 2: 24960/50000 (50%)
+Epoch 2: 37440/50000 (75%)
+Epoch 2: 49920/50000 (100%)
+Epoch: 2, Loss: 0.527473, Accuracy: 81.86%
+Epoch training time (s): 189.15576171875
+Defense: isogn
+Epoch 3: 0/50000 (0%)
+Epoch 3: 12480/50000 (25%)
+Epoch 3: 24960/50000 (50%)
+Epoch 3: 37440/50000 (75%)
+Epoch 3: 49920/50000 (100%)
+Epoch: 3, Loss: 0.376815, Accuracy: 85.44%
+Epoch training time (s): 190.14559674263
+Defense: isogn
+Epoch 4: 0/50000 (0%)
+Epoch 4: 12480/50000 (25%)
+Epoch 4: 24960/50000 (50%)
+Epoch 4: 37440/50000 (75%)
+Epoch 4: 49920/50000 (100%)
+Epoch: 4, Loss: 0.322601, Accuracy: 88.14%
+Epoch training time (s): 192.70398688316345
+Defense: isogn
+Epoch 5: 0/50000 (0%)
+Epoch 5: 12480/50000 (25%)
+Epoch 5: 24960/50000 (50%)
+Epoch 5: 37440/50000 (75%)
+Epoch 5: 49920/50000 (100%)
+Epoch: 5, Loss: 0.286492, Accuracy: 88.38%
+Epoch training time (s): 193.6269862651825
+Defense: isogn
+Epoch 6: 0/50000 (0%)
+Epoch 6: 12480/50000 (25%)
+Epoch 6: 24960/50000 (50%)
+Epoch 6: 37440/50000 (75%)
+Epoch 6: 49920/50000 (100%)
+Epoch: 6, Loss: 0.260997, Accuracy: 88.53%
+Epoch training time (s): 193.62273526191711
+Defense: isogn
+Epoch 7: 0/50000 (0%)
+Epoch 7: 12480/50000 (25%)
+Epoch 7: 24960/50000 (50%)
+Epoch 7: 37440/50000 (75%)
+Epoch 7: 49920/50000 (100%)
+Epoch: 7, Loss: 0.242851, Accuracy: 85.77%
+Epoch training time (s): 194.16610288619995
+Defense: isogn
+Epoch 8: 0/50000 (0%)
+Epoch 8: 12480/50000 (25%)
+Epoch 8: 24960/50000 (50%)
+Epoch 8: 37440/50000 (75%)
+Epoch 8: 49920/50000 (100%)
+Epoch: 8, Loss: 0.226925, Accuracy: 89.57%
+Epoch training time (s): 191.9391279220581
+Defense: isogn
+Epoch 9: 0/50000 (0%)
+Epoch 9: 12480/50000 (25%)
+Epoch 9: 24960/50000 (50%)
+Epoch 9: 37440/50000 (75%)
+Epoch 9: 49920/50000 (100%)
+Epoch: 9, Loss: 0.212523, Accuracy: 90.04%
+Epoch training time (s): 192.77014565467834
+Defense: isogn
+Epoch 10: 0/50000 (0%)
+Epoch 10: 12480/50000 (25%)
+Epoch 10: 24960/50000 (50%)
+Epoch 10: 37440/50000 (75%)
+Epoch 10: 49920/50000 (100%)
+Epoch: 10, Loss: 0.198419, Accuracy: 90.76%
+Epoch training time (s): 194.86647582054138
+Defense: isogn
+Epoch 11: 0/50000 (0%)
+Epoch 11: 12480/50000 (25%)
+Epoch 11: 24960/50000 (50%)
+Epoch 11: 37440/50000 (75%)
+Epoch 11: 49920/50000 (100%)
+Epoch: 11, Loss: 0.189611, Accuracy: 91.48%
+Epoch training time (s): 191.69044995307922
+Defense: isogn
+Epoch 12: 0/50000 (0%)
+Epoch 12: 12480/50000 (25%)
+Epoch 12: 24960/50000 (50%)
+Epoch 12: 37440/50000 (75%)
+Epoch 12: 49920/50000 (100%)
+Epoch: 12, Loss: 0.180997, Accuracy: 90.84%
+Epoch training time (s): 189.7909026145935
+Defense: isogn
+Epoch 13: 0/50000 (0%)
+Epoch 13: 12480/50000 (25%)
+Epoch 13: 24960/50000 (50%)
+Epoch 13: 37440/50000 (75%)
+Epoch 13: 49920/50000 (100%)
+Epoch: 13, Loss: 0.171601, Accuracy: 91.09%
+Epoch training time (s): 191.08021807670593
+Defense: isogn
+Epoch 14: 0/50000 (0%)
+Epoch 14: 12480/50000 (25%)
+Epoch 14: 24960/50000 (50%)
+Epoch 14: 37440/50000 (75%)
+Epoch 14: 49920/50000 (100%)
+Epoch: 14, Loss: 0.163737, Accuracy: 91.18%
+Epoch training time (s): 194.98873043060303
+Defense: isogn
+Epoch 15: 0/50000 (0%)
+Epoch 15: 12480/50000 (25%)
+Epoch 15: 24960/50000 (50%)
+Epoch 15: 37440/50000 (75%)
+Epoch 15: 49920/50000 (100%)
+Epoch: 15, Loss: 0.154871, Accuracy: 91.77%
+Epoch training time (s): 194.5976812839508
+Defense: isogn
+Epoch 16: 0/50000 (0%)
+Epoch 16: 12480/50000 (25%)
+Epoch 16: 24960/50000 (50%)
+Epoch 16: 37440/50000 (75%)
+Epoch 16: 49920/50000 (100%)
+Epoch: 16, Loss: 0.152145, Accuracy: 91.96%
+Epoch training time (s): 194.24827671051025
+Defense: isogn
+Epoch 17: 0/50000 (0%)
+Epoch 17: 12480/50000 (25%)
+Epoch 17: 24960/50000 (50%)
+Epoch 17: 37440/50000 (75%)
+Epoch 17: 49920/50000 (100%)
+Epoch: 17, Loss: 0.143871, Accuracy: 91.68%
+Epoch training time (s): 192.461350440979
+Defense: isogn
+Epoch 18: 0/50000 (0%)
+Epoch 18: 12480/50000 (25%)
+Epoch 18: 24960/50000 (50%)
+Epoch 18: 37440/50000 (75%)
+Epoch 18: 49920/50000 (100%)
+Epoch: 18, Loss: 0.140255, Accuracy: 91.25%
+Epoch training time (s): 194.18220782279968
+Defense: isogn
+Epoch 19: 0/50000 (0%)
+Epoch 19: 12480/50000 (25%)
+Epoch 19: 24960/50000 (50%)
+Epoch 19: 37440/50000 (75%)
+Epoch 19: 49920/50000 (100%)
+Epoch: 19, Loss: 0.130574, Accuracy: 92.06%
+Epoch training time (s): 190.9607503414154
+Defense: isogn
+Epoch 20: 0/50000 (0%)
+Epoch 20: 12480/50000 (25%)
+Epoch 20: 24960/50000 (50%)
+Epoch 20: 37440/50000 (75%)
+Epoch 20: 49920/50000 (100%)
+Epoch: 20, Loss: 0.127820, Accuracy: 91.72%
+Epoch training time (s): 192.29504919052124
+Defense: isogn
+Epoch 21: 0/50000 (0%)
+Epoch 21: 12480/50000 (25%)
+Epoch 21: 24960/50000 (50%)
+Epoch 21: 37440/50000 (75%)
+Epoch 21: 49920/50000 (100%)
+Epoch: 21, Loss: 0.121045, Accuracy: 92.08%
+Epoch training time (s): 193.11688256263733
+Defense: isogn
+Epoch 22: 0/50000 (0%)
+Epoch 22: 12480/50000 (25%)
+Epoch 22: 24960/50000 (50%)
+Epoch 22: 37440/50000 (75%)
+Epoch 22: 49920/50000 (100%)
+Epoch: 22, Loss: 0.115979, Accuracy: 92.39%
+Epoch training time (s): 192.82809686660767
+Defense: isogn
+Epoch 23: 0/50000 (0%)
+Epoch 23: 12480/50000 (25%)
+Epoch 23: 24960/50000 (50%)
+Epoch 23: 37440/50000 (75%)
+Epoch 23: 49920/50000 (100%)
+Epoch: 23, Loss: 0.114238, Accuracy: 92.56%
+Epoch training time (s): 192.95423316955566
+Defense: isogn
+Epoch 24: 0/50000 (0%)
+Epoch 24: 12480/50000 (25%)
+Epoch 24: 24960/50000 (50%)
+Epoch 24: 37440/50000 (75%)
+Epoch 24: 49920/50000 (100%)
+Epoch: 24, Loss: 0.109216, Accuracy: 93.08%
+Epoch training time (s): 192.8028209209442
+Defense: isogn
+Epoch 25: 0/50000 (0%)
+Epoch 25: 12480/50000 (25%)
+Epoch 25: 24960/50000 (50%)
+Epoch 25: 37440/50000 (75%)
+Epoch 25: 49920/50000 (100%)
+Epoch: 25, Loss: 0.103785, Accuracy: 92.40%
+Epoch training time (s): 192.12503337860107
+Defense: isogn
+Epoch 26: 0/50000 (0%)
+Epoch 26: 12480/50000 (25%)
+Epoch 26: 24960/50000 (50%)
+Epoch 26: 37440/50000 (75%)
+Epoch 26: 49920/50000 (100%)
+Epoch: 26, Loss: 0.100925, Accuracy: 92.36%
+Epoch training time (s): 190.36293506622314
+Defense: isogn
+Epoch 27: 0/50000 (0%)
+Epoch 27: 12480/50000 (25%)
+Epoch 27: 24960/50000 (50%)
+Epoch 27: 37440/50000 (75%)
+Epoch 27: 49920/50000 (100%)
+Epoch: 27, Loss: 0.096779, Accuracy: 92.36%
+Epoch training time (s): 189.99509525299072
+Defense: isogn
+Epoch 28: 0/50000 (0%)
+Epoch 28: 12480/50000 (25%)
+Epoch 28: 24960/50000 (50%)
+Epoch 28: 37440/50000 (75%)
+Epoch 28: 49920/50000 (100%)
+Epoch: 28, Loss: 0.094125, Accuracy: 93.17%
+Epoch training time (s): 189.263121843338
+Defense: isogn
+Epoch 29: 0/50000 (0%)
+Epoch 29: 12480/50000 (25%)
+Epoch 29: 24960/50000 (50%)
+Epoch 29: 37440/50000 (75%)
+Epoch 29: 49920/50000 (100%)
+Epoch: 29, Loss: 0.094358, Accuracy: 92.78%
+Epoch training time (s): 190.8773558139801
+Defense: isogn
+Epoch 30: 0/50000 (0%)
+Epoch 30: 12480/50000 (25%)
+Epoch 30: 24960/50000 (50%)
+Epoch 30: 37440/50000 (75%)
+Epoch 30: 49920/50000 (100%)
+Epoch: 30, Loss: 0.085772, Accuracy: 92.74%
+Epoch training time (s): 190.46376538276672
+Defense: isogn
+Epoch 31: 0/50000 (0%)
+Epoch 31: 12480/50000 (25%)
+Epoch 31: 24960/50000 (50%)
+Epoch 31: 37440/50000 (75%)
+Epoch 31: 49920/50000 (100%)
+Epoch: 31, Loss: 0.084553, Accuracy: 92.99%
+Epoch training time (s): 189.06897068023682
+Defense: isogn
+Epoch 32: 0/50000 (0%)
+Epoch 32: 12480/50000 (25%)
+Epoch 32: 24960/50000 (50%)
+Epoch 32: 37440/50000 (75%)
+Epoch 32: 49920/50000 (100%)
+Epoch: 32, Loss: 0.081620, Accuracy: 93.69%
+Epoch training time (s): 190.02008247375488
+Defense: isogn
+Epoch 33: 0/50000 (0%)
+Epoch 33: 12480/50000 (25%)
+Epoch 33: 24960/50000 (50%)
+Epoch 33: 37440/50000 (75%)
+Epoch 33: 49920/50000 (100%)
+Epoch: 33, Loss: 0.079405, Accuracy: 93.57%
+Epoch training time (s): 189.56738758087158
+Defense: isogn
+Epoch 34: 0/50000 (0%)
+Epoch 34: 12480/50000 (25%)
+Epoch 34: 24960/50000 (50%)
+Epoch 34: 37440/50000 (75%)
+Epoch 34: 49920/50000 (100%)
+Epoch: 34, Loss: 0.076650, Accuracy: 93.45%
+Epoch training time (s): 190.6882975101471
+Defense: isogn
+Epoch 35: 0/50000 (0%)
+Epoch 35: 12480/50000 (25%)
+Epoch 35: 24960/50000 (50%)
+Epoch 35: 37440/50000 (75%)
+Epoch 35: 49920/50000 (100%)
+Epoch: 35, Loss: 0.074994, Accuracy: 93.83%
+Epoch training time (s): 188.55056738853455
+Defense: isogn
+Epoch 36: 0/50000 (0%)
+Epoch 36: 12480/50000 (25%)
+Epoch 36: 24960/50000 (50%)
+Epoch 36: 37440/50000 (75%)
+Epoch 36: 49920/50000 (100%)
+Epoch: 36, Loss: 0.071580, Accuracy: 92.44%
+Epoch training time (s): 189.59624004364014
+Defense: isogn
+Epoch 37: 0/50000 (0%)
+Epoch 37: 12480/50000 (25%)
+Epoch 37: 24960/50000 (50%)
+Epoch 37: 37440/50000 (75%)
+Epoch 37: 49920/50000 (100%)
+Epoch: 37, Loss: 0.067613, Accuracy: 93.46%
+Epoch training time (s): 189.14863109588623
+Defense: isogn
+Epoch 38: 0/50000 (0%)
+Epoch 38: 12480/50000 (25%)
+Epoch 38: 24960/50000 (50%)
+Epoch 38: 37440/50000 (75%)
+Epoch 38: 49920/50000 (100%)
+Epoch: 38, Loss: 0.067739, Accuracy: 93.44%
+Epoch training time (s): 187.65475392341614
+Defense: isogn
+Epoch 39: 0/50000 (0%)
+Epoch 39: 12480/50000 (25%)
+Epoch 39: 24960/50000 (50%)
+Epoch 39: 37440/50000 (75%)
+Epoch 39: 49920/50000 (100%)
+Epoch: 39, Loss: 0.065668, Accuracy: 93.37%
+Epoch training time (s): 187.26387643814087
+Defense: isogn
+Epoch 40: 0/50000 (0%)
+Epoch 40: 12480/50000 (25%)
+Epoch 40: 24960/50000 (50%)
+Epoch 40: 37440/50000 (75%)
+Epoch 40: 49920/50000 (100%)
+Epoch: 40, Loss: 0.062034, Accuracy: 93.68%
+Epoch training time (s): 187.94896864891052
+Defense: isogn
+Epoch 41: 0/50000 (0%)
+Epoch 41: 12480/50000 (25%)
+Epoch 41: 24960/50000 (50%)
+Epoch 41: 37440/50000 (75%)
+Epoch 41: 49920/50000 (100%)
+Epoch: 41, Loss: 0.061440, Accuracy: 93.60%
+Epoch training time (s): 187.87214493751526
+Defense: isogn
+Epoch 42: 0/50000 (0%)
+Epoch 42: 12480/50000 (25%)
+Epoch 42: 24960/50000 (50%)
+Epoch 42: 37440/50000 (75%)
+Epoch 42: 49920/50000 (100%)
+Epoch: 42, Loss: 0.058669, Accuracy: 93.79%
+Epoch training time (s): 188.2680299282074
+Defense: isogn
+Epoch 43: 0/50000 (0%)
+Epoch 43: 12480/50000 (25%)
+Epoch 43: 24960/50000 (50%)
+Epoch 43: 37440/50000 (75%)
+Epoch 43: 49920/50000 (100%)
+Epoch: 43, Loss: 0.056117, Accuracy: 93.88%
+Epoch training time (s): 188.88612151145935
+Defense: isogn
+Epoch 44: 0/50000 (0%)
+Epoch 44: 12480/50000 (25%)
+Epoch 44: 24960/50000 (50%)
+Epoch 44: 37440/50000 (75%)
+Epoch 44: 49920/50000 (100%)
+Epoch: 44, Loss: 0.056420, Accuracy: 93.38%
+Epoch training time (s): 190.4665231704712
+Defense: isogn
+Epoch 45: 0/50000 (0%)
+Epoch 45: 12480/50000 (25%)
+Epoch 45: 24960/50000 (50%)
+Epoch 45: 37440/50000 (75%)
+Epoch 45: 49920/50000 (100%)
+Epoch: 45, Loss: 0.052892, Accuracy: 93.58%
+Epoch training time (s): 182.83734583854675
+Defense: isogn
+Epoch 46: 0/50000 (0%)
+Epoch 46: 12480/50000 (25%)
+Epoch 46: 24960/50000 (50%)
+Epoch 46: 37440/50000 (75%)
+Epoch 46: 49920/50000 (100%)
+Epoch: 46, Loss: 0.051133, Accuracy: 94.11%
+Epoch training time (s): 184.30257892608643
+Defense: isogn
+Epoch 47: 0/50000 (0%)
+Epoch 47: 12480/50000 (25%)
+Epoch 47: 24960/50000 (50%)
+Epoch 47: 37440/50000 (75%)
+Epoch 47: 49920/50000 (100%)
+Epoch: 47, Loss: 0.048838, Accuracy: 94.00%
+Epoch training time (s): 187.32841658592224
+Defense: isogn
+Epoch 48: 0/50000 (0%)
+Epoch 48: 12480/50000 (25%)
+Epoch 48: 24960/50000 (50%)
+Epoch 48: 37440/50000 (75%)
+Epoch 48: 49920/50000 (100%)
+Epoch: 48, Loss: 0.048958, Accuracy: 93.78%
+Epoch training time (s): 188.06351518630981
+Defense: isogn
+Epoch 49: 0/50000 (0%)
+Epoch 49: 12480/50000 (25%)
+Epoch 49: 24960/50000 (50%)
+Epoch 49: 37440/50000 (75%)
+Epoch 49: 49920/50000 (100%)
+Epoch: 49, Loss: 0.048116, Accuracy: 93.57%
+Epoch training time (s): 186.309250831604
+Defense: isogn
+Epoch 50: 0/50000 (0%)
+Epoch 50: 12480/50000 (25%)
+Epoch 50: 24960/50000 (50%)
+Epoch 50: 37440/50000 (75%)
+Epoch 50: 49920/50000 (100%)
+Epoch: 50, Loss: 0.046375, Accuracy: 93.88%
+Epoch training time (s): 187.09723353385925
+Defense: isogn
+Epoch 51: 0/50000 (0%)
+Epoch 51: 12480/50000 (25%)
+Epoch 51: 24960/50000 (50%)
+Epoch 51: 37440/50000 (75%)
+Epoch 51: 49920/50000 (100%)
+Epoch: 51, Loss: 0.045665, Accuracy: 93.66%
+Epoch training time (s): 187.02720665931702
+Training time (s): 9636.627630710602
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_1
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 1
+gpu_number: 2
+load: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 2777.0/10000 (27.77%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_2
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 2
+gpu_number: 2
+load: False
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 12480/50000 (25%)
+Epoch 1: 24960/50000 (50%)
+Epoch 1: 37440/50000 (75%)
+Epoch 1: 49920/50000 (100%)
+Epoch: 1, Loss: 1.104953, Accuracy: 84.58%
+Epoch training time (s): 106.97543740272522
+Defense: isogn
+Epoch 2: 0/50000 (0%)
+Epoch 2: 12480/50000 (25%)
+Epoch 2: 24960/50000 (50%)
+Epoch 2: 37440/50000 (75%)
+Epoch 2: 49920/50000 (100%)
+Epoch: 2, Loss: 0.553784, Accuracy: 75.35%
+Epoch training time (s): 187.26509547233582
+Defense: isogn
+Epoch 3: 0/50000 (0%)
+Epoch 3: 12480/50000 (25%)
+Epoch 3: 24960/50000 (50%)
+Epoch 3: 37440/50000 (75%)
+Epoch 3: 49920/50000 (100%)
+Epoch: 3, Loss: 0.384256, Accuracy: 80.00%
+Epoch training time (s): 186.93826913833618
+Defense: isogn
+Epoch 4: 0/50000 (0%)
+Epoch 4: 12480/50000 (25%)
+Epoch 4: 24960/50000 (50%)
+Epoch 4: 37440/50000 (75%)
+Epoch 4: 49920/50000 (100%)
+Epoch: 4, Loss: 0.327387, Accuracy: 83.80%
+Epoch training time (s): 187.1684606075287
+Defense: isogn
+Epoch 5: 0/50000 (0%)
+Epoch 5: 12480/50000 (25%)
+Epoch 5: 24960/50000 (50%)
+Epoch 5: 37440/50000 (75%)
+Epoch 5: 49920/50000 (100%)
+Epoch: 5, Loss: 0.290253, Accuracy: 85.71%
+Epoch training time (s): 187.20576453208923
+Defense: isogn
+Epoch 6: 0/50000 (0%)
+Epoch 6: 12480/50000 (25%)
+Epoch 6: 24960/50000 (50%)
+Epoch 6: 37440/50000 (75%)
+Epoch 6: 49920/50000 (100%)
+Epoch: 6, Loss: 0.263176, Accuracy: 88.02%
+Epoch training time (s): 188.17850828170776
+Defense: isogn
+Epoch 7: 0/50000 (0%)
+Epoch 7: 12480/50000 (25%)
+Epoch 7: 24960/50000 (50%)
+Epoch 7: 37440/50000 (75%)
+Epoch 7: 49920/50000 (100%)
+Epoch: 7, Loss: 0.242733, Accuracy: 87.97%
+Epoch training time (s): 187.93799710273743
+Defense: isogn
+Epoch 8: 0/50000 (0%)
+Epoch 8: 12480/50000 (25%)
+Epoch 8: 24960/50000 (50%)
+Epoch 8: 37440/50000 (75%)
+Epoch 8: 49920/50000 (100%)
+Epoch: 8, Loss: 0.227627, Accuracy: 87.61%
+Epoch training time (s): 184.46713495254517
+Defense: isogn
+Epoch 9: 0/50000 (0%)
+Epoch 9: 12480/50000 (25%)
+Epoch 9: 24960/50000 (50%)
+Epoch 9: 37440/50000 (75%)
+Epoch 9: 49920/50000 (100%)
+Epoch: 9, Loss: 0.214662, Accuracy: 89.54%
+Epoch training time (s): 186.42398834228516
+Defense: isogn
+Epoch 10: 0/50000 (0%)
+Epoch 10: 12480/50000 (25%)
+Epoch 10: 24960/50000 (50%)
+Epoch 10: 37440/50000 (75%)
+Epoch 10: 49920/50000 (100%)
+Epoch: 10, Loss: 0.199441, Accuracy: 89.52%
+Epoch training time (s): 184.9857337474823
+Defense: isogn
+Epoch 11: 0/50000 (0%)
+Epoch 11: 12480/50000 (25%)
+Epoch 11: 24960/50000 (50%)
+Epoch 11: 37440/50000 (75%)
+Epoch 11: 49920/50000 (100%)
+Epoch: 11, Loss: 0.190190, Accuracy: 90.09%
+Epoch training time (s): 187.0375998020172
+Defense: isogn
+Epoch 12: 0/50000 (0%)
+Epoch 12: 12480/50000 (25%)
+Epoch 12: 24960/50000 (50%)
+Epoch 12: 37440/50000 (75%)
+Epoch 12: 49920/50000 (100%)
+Epoch: 12, Loss: 0.178963, Accuracy: 89.84%
+Epoch training time (s): 185.78065824508667
+Defense: isogn
+Epoch 13: 0/50000 (0%)
+Epoch 13: 12480/50000 (25%)
+Epoch 13: 24960/50000 (50%)
+Epoch 13: 37440/50000 (75%)
+Epoch 13: 49920/50000 (100%)
+Epoch: 13, Loss: 0.170127, Accuracy: 90.98%
+Epoch training time (s): 184.7214434146881
+Defense: isogn
+Epoch 14: 0/50000 (0%)
+Epoch 14: 12480/50000 (25%)
+Epoch 14: 24960/50000 (50%)
+Epoch 14: 37440/50000 (75%)
+Epoch 14: 49920/50000 (100%)
+Epoch: 14, Loss: 0.160762, Accuracy: 90.84%
+Epoch training time (s): 182.43454766273499
+Defense: isogn
+Epoch 15: 0/50000 (0%)
+Epoch 15: 12480/50000 (25%)
+Epoch 15: 24960/50000 (50%)
+Epoch 15: 37440/50000 (75%)
+Epoch 15: 49920/50000 (100%)
+Epoch: 15, Loss: 0.157517, Accuracy: 91.63%
+Epoch training time (s): 180.24008321762085
+Defense: isogn
+Epoch 16: 0/50000 (0%)
+Epoch 16: 12480/50000 (25%)
+Epoch 16: 24960/50000 (50%)
+Epoch 16: 37440/50000 (75%)
+Epoch 16: 49920/50000 (100%)
+Epoch: 16, Loss: 0.148170, Accuracy: 92.19%
+Epoch training time (s): 182.19316625595093
+Defense: isogn
+Epoch 17: 0/50000 (0%)
+Epoch 17: 12480/50000 (25%)
+Epoch 17: 24960/50000 (50%)
+Epoch 17: 37440/50000 (75%)
+Epoch 17: 49920/50000 (100%)
+Epoch: 17, Loss: 0.143087, Accuracy: 91.74%
+Epoch training time (s): 180.3962094783783
+Defense: isogn
+Epoch 18: 0/50000 (0%)
+Epoch 18: 12480/50000 (25%)
+Epoch 18: 24960/50000 (50%)
+Epoch 18: 37440/50000 (75%)
+Epoch 18: 49920/50000 (100%)
+Epoch: 18, Loss: 0.137655, Accuracy: 92.00%
+Epoch training time (s): 182.22819876670837
+Defense: isogn
+Epoch 19: 0/50000 (0%)
+Epoch 19: 12480/50000 (25%)
+Epoch 19: 24960/50000 (50%)
+Epoch 19: 37440/50000 (75%)
+Epoch 19: 49920/50000 (100%)
+Epoch: 19, Loss: 0.131131, Accuracy: 92.04%
+Epoch training time (s): 179.26880168914795
+Defense: isogn
+Epoch 20: 0/50000 (0%)
+Epoch 20: 12480/50000 (25%)
+Epoch 20: 24960/50000 (50%)
+Epoch 20: 37440/50000 (75%)
+Epoch 20: 49920/50000 (100%)
+Epoch: 20, Loss: 0.124362, Accuracy: 91.76%
+Epoch training time (s): 177.35183930397034
+Defense: isogn
+Epoch 21: 0/50000 (0%)
+Epoch 21: 12480/50000 (25%)
+Epoch 21: 24960/50000 (50%)
+Epoch 21: 37440/50000 (75%)
+Epoch 21: 49920/50000 (100%)
+Epoch: 21, Loss: 0.120933, Accuracy: 91.69%
+Epoch training time (s): 179.44238305091858
+Defense: isogn
+Epoch 22: 0/50000 (0%)
+Epoch 22: 12480/50000 (25%)
+Epoch 22: 24960/50000 (50%)
+Epoch 22: 37440/50000 (75%)
+Epoch 22: 49920/50000 (100%)
+Epoch: 22, Loss: 0.115908, Accuracy: 92.26%
+Epoch training time (s): 178.8703968524933
+Defense: isogn
+Epoch 23: 0/50000 (0%)
+Epoch 23: 12480/50000 (25%)
+Epoch 23: 24960/50000 (50%)
+Epoch 23: 37440/50000 (75%)
+Epoch 23: 49920/50000 (100%)
+Epoch: 23, Loss: 0.111269, Accuracy: 91.98%
+Epoch training time (s): 178.92366361618042
+Defense: isogn
+Epoch 24: 0/50000 (0%)
+Epoch 24: 12480/50000 (25%)
+Epoch 24: 24960/50000 (50%)
+Epoch 24: 37440/50000 (75%)
+Epoch 24: 49920/50000 (100%)
+Epoch: 24, Loss: 0.108617, Accuracy: 91.70%
+Epoch training time (s): 180.675119638443
+Defense: isogn
+Epoch 25: 0/50000 (0%)
+Epoch 25: 12480/50000 (25%)
+Epoch 25: 24960/50000 (50%)
+Epoch 25: 37440/50000 (75%)
+Epoch 25: 49920/50000 (100%)
+Epoch: 25, Loss: 0.103385, Accuracy: 91.64%
+Epoch training time (s): 180.62444710731506
+Defense: isogn
+Epoch 26: 0/50000 (0%)
+Epoch 26: 12480/50000 (25%)
+Epoch 26: 24960/50000 (50%)
+Epoch 26: 37440/50000 (75%)
+Epoch 26: 49920/50000 (100%)
+Epoch: 26, Loss: 0.100680, Accuracy: 93.02%
+Epoch training time (s): 181.7986454963684
+Defense: isogn
+Epoch 27: 0/50000 (0%)
+Epoch 27: 12480/50000 (25%)
+Epoch 27: 24960/50000 (50%)
+Epoch 27: 37440/50000 (75%)
+Epoch 27: 49920/50000 (100%)
+Epoch: 27, Loss: 0.095286, Accuracy: 92.44%
+Epoch training time (s): 178.49518990516663
+Defense: isogn
+Epoch 28: 0/50000 (0%)
+Epoch 28: 12480/50000 (25%)
+Epoch 28: 24960/50000 (50%)
+Epoch 28: 37440/50000 (75%)
+Epoch 28: 49920/50000 (100%)
+Epoch: 28, Loss: 0.092747, Accuracy: 91.91%
+Epoch training time (s): 178.1141176223755
+Defense: isogn
+Epoch 29: 0/50000 (0%)
+Epoch 29: 12480/50000 (25%)
+Epoch 29: 24960/50000 (50%)
+Epoch 29: 37440/50000 (75%)
+Epoch 29: 49920/50000 (100%)
+Epoch: 29, Loss: 0.087217, Accuracy: 92.98%
+Epoch training time (s): 180.37751984596252
+Defense: isogn
+Epoch 30: 0/50000 (0%)
+Epoch 30: 12480/50000 (25%)
+Epoch 30: 24960/50000 (50%)
+Epoch 30: 37440/50000 (75%)
+Epoch 30: 49920/50000 (100%)
+Epoch: 30, Loss: 0.087695, Accuracy: 92.91%
+Epoch training time (s): 178.26258778572083
+Defense: isogn
+Epoch 31: 0/50000 (0%)
+Epoch 31: 12480/50000 (25%)
+Epoch 31: 24960/50000 (50%)
+Epoch 31: 37440/50000 (75%)
+Epoch 31: 49920/50000 (100%)
+Epoch: 31, Loss: 0.082018, Accuracy: 92.86%
+Epoch training time (s): 179.9565315246582
+Defense: isogn
+Epoch 32: 0/50000 (0%)
+Epoch 32: 12480/50000 (25%)
+Epoch 32: 24960/50000 (50%)
+Epoch 32: 37440/50000 (75%)
+Epoch 32: 49920/50000 (100%)
+Epoch: 32, Loss: 0.080315, Accuracy: 92.54%
+Epoch training time (s): 179.67404341697693
+Defense: isogn
+Epoch 33: 0/50000 (0%)
+Epoch 33: 12480/50000 (25%)
+Epoch 33: 24960/50000 (50%)
+Epoch 33: 37440/50000 (75%)
+Epoch 33: 49920/50000 (100%)
+Epoch: 33, Loss: 0.077817, Accuracy: 93.10%
+Epoch training time (s): 181.7153115272522
+Defense: isogn
+Epoch 34: 0/50000 (0%)
+Epoch 34: 12480/50000 (25%)
+Epoch 34: 24960/50000 (50%)
+Epoch 34: 37440/50000 (75%)
+Epoch 34: 49920/50000 (100%)
+Epoch: 34, Loss: 0.074856, Accuracy: 93.17%
+Epoch training time (s): 181.44710087776184
+Defense: isogn
+Epoch 35: 0/50000 (0%)
+Epoch 35: 12480/50000 (25%)
+Epoch 35: 24960/50000 (50%)
+Epoch 35: 37440/50000 (75%)
+Epoch 35: 49920/50000 (100%)
+Epoch: 35, Loss: 0.071512, Accuracy: 93.05%
+Epoch training time (s): 182.97977781295776
+Defense: isogn
+Epoch 36: 0/50000 (0%)
+Epoch 36: 12480/50000 (25%)
+Epoch 36: 24960/50000 (50%)
+Epoch 36: 37440/50000 (75%)
+Epoch 36: 49920/50000 (100%)
+Epoch: 36, Loss: 0.069685, Accuracy: 93.41%
+Epoch training time (s): 179.92821836471558
+Defense: isogn
+Epoch 37: 0/50000 (0%)
+Epoch 37: 12480/50000 (25%)
+Epoch 37: 24960/50000 (50%)
+Epoch 37: 37440/50000 (75%)
+Epoch 37: 49920/50000 (100%)
+Epoch: 37, Loss: 0.064706, Accuracy: 93.00%
+Epoch training time (s): 182.61220383644104
+Defense: isogn
+Epoch 38: 0/50000 (0%)
+Epoch 38: 12480/50000 (25%)
+Epoch 38: 24960/50000 (50%)
+Epoch 38: 37440/50000 (75%)
+Epoch 38: 49920/50000 (100%)
+Epoch: 38, Loss: 0.064488, Accuracy: 93.94%
+Epoch training time (s): 181.07815647125244
+Defense: isogn
+Epoch 39: 0/50000 (0%)
+Epoch 39: 12480/50000 (25%)
+Epoch 39: 24960/50000 (50%)
+Epoch 39: 37440/50000 (75%)
+Epoch 39: 49920/50000 (100%)
+Epoch: 39, Loss: 0.063198, Accuracy: 93.35%
+Epoch training time (s): 178.6326892375946
+Defense: isogn
+Epoch 40: 0/50000 (0%)
+Epoch 40: 12480/50000 (25%)
+Epoch 40: 24960/50000 (50%)
+Epoch 40: 37440/50000 (75%)
+Epoch 40: 49920/50000 (100%)
+Epoch: 40, Loss: 0.061285, Accuracy: 93.01%
+Epoch training time (s): 181.79643940925598
+Defense: isogn
+Epoch 41: 0/50000 (0%)
+Epoch 41: 12480/50000 (25%)
+Epoch 41: 24960/50000 (50%)
+Epoch 41: 37440/50000 (75%)
+Epoch 41: 49920/50000 (100%)
+Epoch: 41, Loss: 0.058237, Accuracy: 93.40%
+Epoch training time (s): 180.9051525592804
+Defense: isogn
+Epoch 42: 0/50000 (0%)
+Epoch 42: 12480/50000 (25%)
+Epoch 42: 24960/50000 (50%)
+Epoch 42: 37440/50000 (75%)
+Epoch 42: 49920/50000 (100%)
+Epoch: 42, Loss: 0.055067, Accuracy: 93.25%
+Epoch training time (s): 182.63305020332336
+Defense: isogn
+Epoch 43: 0/50000 (0%)
+Epoch 43: 12480/50000 (25%)
+Epoch 43: 24960/50000 (50%)
+Epoch 43: 37440/50000 (75%)
+Epoch 43: 49920/50000 (100%)
+Epoch: 43, Loss: 0.054644, Accuracy: 93.88%
+Epoch training time (s): 181.74420046806335
+Defense: isogn
+Epoch 44: 0/50000 (0%)
+Epoch 44: 12480/50000 (25%)
+Epoch 44: 24960/50000 (50%)
+Epoch 44: 37440/50000 (75%)
+Epoch 44: 49920/50000 (100%)
+Epoch: 44, Loss: 0.053389, Accuracy: 93.07%
+Epoch training time (s): 178.59491229057312
+Defense: isogn
+Epoch 45: 0/50000 (0%)
+Epoch 45: 12480/50000 (25%)
+Epoch 45: 24960/50000 (50%)
+Epoch 45: 37440/50000 (75%)
+Epoch 45: 49920/50000 (100%)
+Epoch: 45, Loss: 0.049610, Accuracy: 93.12%
+Epoch training time (s): 179.20559692382812
+Defense: isogn
+Epoch 46: 0/50000 (0%)
+Epoch 46: 12480/50000 (25%)
+Epoch 46: 24960/50000 (50%)
+Epoch 46: 37440/50000 (75%)
+Epoch 46: 49920/50000 (100%)
+Epoch: 46, Loss: 0.049649, Accuracy: 93.52%
+Epoch training time (s): 181.29278683662415
+Defense: isogn
+Epoch 47: 0/50000 (0%)
+Epoch 47: 12480/50000 (25%)
+Epoch 47: 24960/50000 (50%)
+Epoch 47: 37440/50000 (75%)
+Epoch 47: 49920/50000 (100%)
+Epoch: 47, Loss: 0.048186, Accuracy: 93.97%
+Epoch training time (s): 182.11724662780762
+Defense: isogn
+Epoch 48: 0/50000 (0%)
+Epoch 48: 12480/50000 (25%)
+Epoch 48: 24960/50000 (50%)
+Epoch 48: 37440/50000 (75%)
+Epoch 48: 49920/50000 (100%)
+Epoch: 48, Loss: 0.047934, Accuracy: 93.50%
+Epoch training time (s): 178.7220196723938
+Defense: isogn
+Epoch 49: 0/50000 (0%)
+Epoch 49: 12480/50000 (25%)
+Epoch 49: 24960/50000 (50%)
+Epoch 49: 37440/50000 (75%)
+Epoch 49: 49920/50000 (100%)
+Epoch: 49, Loss: 0.044628, Accuracy: 92.67%
+Epoch training time (s): 179.66071772575378
+Defense: isogn
+Epoch 50: 0/50000 (0%)
+Epoch 50: 12480/50000 (25%)
+Epoch 50: 24960/50000 (50%)
+Epoch 50: 37440/50000 (75%)
+Epoch 50: 49920/50000 (100%)
+Epoch: 50, Loss: 0.041272, Accuracy: 93.52%
+Epoch training time (s): 180.5456097126007
+Defense: isogn
+Epoch 51: 0/50000 (0%)
+Epoch 51: 12480/50000 (25%)
+Epoch 51: 24960/50000 (50%)
+Epoch 51: 37440/50000 (75%)
+Epoch 51: 49920/50000 (100%)
+Epoch: 51, Loss: 0.042652, Accuracy: 93.16%
+Epoch training time (s): 180.4956500530243
+Training time (s): 9205.316214323044
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_2
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 2
+gpu_number: 2
+load: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 2936.0/10000 (29.36%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_3
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 3
+gpu_number: 2
+load: False
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 12480/50000 (25%)
+Epoch 1: 24960/50000 (50%)
+Epoch 1: 37440/50000 (75%)
+Epoch 1: 49920/50000 (100%)
+Epoch: 1, Loss: 1.098353, Accuracy: 83.39%
+Epoch training time (s): 102.7384603023529
+Defense: isogn
+Epoch 2: 0/50000 (0%)
+Epoch 2: 12480/50000 (25%)
+Epoch 2: 24960/50000 (50%)
+Epoch 2: 37440/50000 (75%)
+Epoch 2: 49920/50000 (100%)
+Epoch: 2, Loss: 0.535285, Accuracy: 79.43%
+Epoch training time (s): 180.3913402557373
+Defense: isogn
+Epoch 3: 0/50000 (0%)
+Epoch 3: 12480/50000 (25%)
+Epoch 3: 24960/50000 (50%)
+Epoch 3: 37440/50000 (75%)
+Epoch 3: 49920/50000 (100%)
+Epoch: 3, Loss: 0.377008, Accuracy: 81.51%
+Epoch training time (s): 183.22920417785645
+Defense: isogn
+Epoch 4: 0/50000 (0%)
+Epoch 4: 12480/50000 (25%)
+Epoch 4: 24960/50000 (50%)
+Epoch 4: 37440/50000 (75%)
+Epoch 4: 49920/50000 (100%)
+Epoch: 4, Loss: 0.317508, Accuracy: 85.60%
+Epoch training time (s): 179.37983322143555
+Defense: isogn
+Epoch 5: 0/50000 (0%)
+Epoch 5: 12480/50000 (25%)
+Epoch 5: 24960/50000 (50%)
+Epoch 5: 37440/50000 (75%)
+Epoch 5: 49920/50000 (100%)
+Epoch: 5, Loss: 0.285600, Accuracy: 86.73%
+Epoch training time (s): 182.04387712478638
+Defense: isogn
+Epoch 6: 0/50000 (0%)
+Epoch 6: 12480/50000 (25%)
+Epoch 6: 24960/50000 (50%)
+Epoch 6: 37440/50000 (75%)
+Epoch 6: 49920/50000 (100%)
+Epoch: 6, Loss: 0.258964, Accuracy: 86.65%
+Epoch training time (s): 179.47558856010437
+Defense: isogn
+Epoch 7: 0/50000 (0%)
+Epoch 7: 12480/50000 (25%)
+Epoch 7: 24960/50000 (50%)
+Epoch 7: 37440/50000 (75%)
+Epoch 7: 49920/50000 (100%)
+Epoch: 7, Loss: 0.238742, Accuracy: 88.36%
+Epoch training time (s): 178.50806379318237
+Defense: isogn
+Epoch 8: 0/50000 (0%)
+Epoch 8: 12480/50000 (25%)
+Epoch 8: 24960/50000 (50%)
+Epoch 8: 37440/50000 (75%)
+Epoch 8: 49920/50000 (100%)
+Epoch: 8, Loss: 0.225049, Accuracy: 88.88%
+Epoch training time (s): 181.05556082725525
+Defense: isogn
+Epoch 9: 0/50000 (0%)
+Epoch 9: 12480/50000 (25%)
+Epoch 9: 24960/50000 (50%)
+Epoch 9: 37440/50000 (75%)
+Epoch 9: 49920/50000 (100%)
+Epoch: 9, Loss: 0.209370, Accuracy: 88.62%
+Epoch training time (s): 181.49407029151917
+Defense: isogn
+Epoch 10: 0/50000 (0%)
+Epoch 10: 12480/50000 (25%)
+Epoch 10: 24960/50000 (50%)
+Epoch 10: 37440/50000 (75%)
+Epoch 10: 49920/50000 (100%)
+Epoch: 10, Loss: 0.199173, Accuracy: 89.87%
+Epoch training time (s): 178.8742332458496
+Defense: isogn
+Epoch 11: 0/50000 (0%)
+Epoch 11: 12480/50000 (25%)
+Epoch 11: 24960/50000 (50%)
+Epoch 11: 37440/50000 (75%)
+Epoch 11: 49920/50000 (100%)
+Epoch: 11, Loss: 0.185084, Accuracy: 89.64%
+Epoch training time (s): 179.80419659614563
+Defense: isogn
+Epoch 12: 0/50000 (0%)
+Epoch 12: 12480/50000 (25%)
+Epoch 12: 24960/50000 (50%)
+Epoch 12: 37440/50000 (75%)
+Epoch 12: 49920/50000 (100%)
+Epoch: 12, Loss: 0.174923, Accuracy: 90.29%
+Epoch training time (s): 181.50174975395203
+Defense: isogn
+Epoch 13: 0/50000 (0%)
+Epoch 13: 12480/50000 (25%)
+Epoch 13: 24960/50000 (50%)
+Epoch 13: 37440/50000 (75%)
+Epoch 13: 49920/50000 (100%)
+Epoch: 13, Loss: 0.168876, Accuracy: 90.60%
+Epoch training time (s): 180.44634985923767
+Defense: isogn
+Epoch 14: 0/50000 (0%)
+Epoch 14: 12480/50000 (25%)
+Epoch 14: 24960/50000 (50%)
+Epoch 14: 37440/50000 (75%)
+Epoch 14: 49920/50000 (100%)
+Epoch: 14, Loss: 0.162617, Accuracy: 90.80%
+Epoch training time (s): 181.08495330810547
+Defense: isogn
+Epoch 15: 0/50000 (0%)
+Epoch 15: 12480/50000 (25%)
+Epoch 15: 24960/50000 (50%)
+Epoch 15: 37440/50000 (75%)
+Epoch 15: 49920/50000 (100%)
+Epoch: 15, Loss: 0.152284, Accuracy: 90.55%
+Epoch training time (s): 179.58775305747986
+Defense: isogn
+Epoch 16: 0/50000 (0%)
+Epoch 16: 12480/50000 (25%)
+Epoch 16: 24960/50000 (50%)
+Epoch 16: 37440/50000 (75%)
+Epoch 16: 49920/50000 (100%)
+Epoch: 16, Loss: 0.148382, Accuracy: 90.30%
+Epoch training time (s): 177.80915546417236
+Defense: isogn
+Epoch 17: 0/50000 (0%)
+Epoch 17: 12480/50000 (25%)
+Epoch 17: 24960/50000 (50%)
+Epoch 17: 37440/50000 (75%)
+Epoch 17: 49920/50000 (100%)
+Epoch: 17, Loss: 0.138447, Accuracy: 88.79%
+Epoch training time (s): 177.66394639015198
+Defense: isogn
+Epoch 18: 0/50000 (0%)
+Epoch 18: 12480/50000 (25%)
+Epoch 18: 24960/50000 (50%)
+Epoch 18: 37440/50000 (75%)
+Epoch 18: 49920/50000 (100%)
+Epoch: 18, Loss: 0.136510, Accuracy: 91.12%
+Epoch training time (s): 178.90280318260193
+Defense: isogn
+Epoch 19: 0/50000 (0%)
+Epoch 19: 12480/50000 (25%)
+Epoch 19: 24960/50000 (50%)
+Epoch 19: 37440/50000 (75%)
+Epoch 19: 49920/50000 (100%)
+Epoch: 19, Loss: 0.128866, Accuracy: 92.15%
+Epoch training time (s): 180.46025323867798
+Defense: isogn
+Epoch 20: 0/50000 (0%)
+Epoch 20: 12480/50000 (25%)
+Epoch 20: 24960/50000 (50%)
+Epoch 20: 37440/50000 (75%)
+Epoch 20: 49920/50000 (100%)
+Epoch: 20, Loss: 0.122316, Accuracy: 91.26%
+Epoch training time (s): 180.5501561164856
+Defense: isogn
+Epoch 21: 0/50000 (0%)
+Epoch 21: 12480/50000 (25%)
+Epoch 21: 24960/50000 (50%)
+Epoch 21: 37440/50000 (75%)
+Epoch 21: 49920/50000 (100%)
+Epoch: 21, Loss: 0.119797, Accuracy: 90.68%
+Epoch training time (s): 180.61909198760986
+Defense: isogn
+Epoch 22: 0/50000 (0%)
+Epoch 22: 12480/50000 (25%)
+Epoch 22: 24960/50000 (50%)
+Epoch 22: 37440/50000 (75%)
+Epoch 22: 49920/50000 (100%)
+Epoch: 22, Loss: 0.115685, Accuracy: 90.87%
+Epoch training time (s): 180.75648045539856
+Defense: isogn
+Epoch 23: 0/50000 (0%)
+Epoch 23: 12480/50000 (25%)
+Epoch 23: 24960/50000 (50%)
+Epoch 23: 37440/50000 (75%)
+Epoch 23: 49920/50000 (100%)
+Epoch: 23, Loss: 0.111509, Accuracy: 91.92%
+Epoch training time (s): 178.16740155220032
+Defense: isogn
+Epoch 24: 0/50000 (0%)
+Epoch 24: 12480/50000 (25%)
+Epoch 24: 24960/50000 (50%)
+Epoch 24: 37440/50000 (75%)
+Epoch 24: 49920/50000 (100%)
+Epoch: 24, Loss: 0.108315, Accuracy: 91.35%
+Epoch training time (s): 182.60680198669434
+Defense: isogn
+Epoch 25: 0/50000 (0%)
+Epoch 25: 12480/50000 (25%)
+Epoch 25: 24960/50000 (50%)
+Epoch 25: 37440/50000 (75%)
+Epoch 25: 49920/50000 (100%)
+Epoch: 25, Loss: 0.101039, Accuracy: 91.74%
+Epoch training time (s): 190.23554134368896
+Defense: isogn
+Epoch 26: 0/50000 (0%)
+Epoch 26: 12480/50000 (25%)
+Epoch 26: 24960/50000 (50%)
+Epoch 26: 37440/50000 (75%)
+Epoch 26: 49920/50000 (100%)
+Epoch: 26, Loss: 0.098662, Accuracy: 93.09%
+Epoch training time (s): 189.2883517742157
+Defense: isogn
+Epoch 27: 0/50000 (0%)
+Epoch 27: 12480/50000 (25%)
+Epoch 27: 24960/50000 (50%)
+Epoch 27: 37440/50000 (75%)
+Epoch 27: 49920/50000 (100%)
+Epoch: 27, Loss: 0.094270, Accuracy: 91.90%
+Epoch training time (s): 189.88404393196106
+Defense: isogn
+Epoch 28: 0/50000 (0%)
+Epoch 28: 12480/50000 (25%)
+Epoch 28: 24960/50000 (50%)
+Epoch 28: 37440/50000 (75%)
+Epoch 28: 49920/50000 (100%)
+Epoch: 28, Loss: 0.090431, Accuracy: 91.78%
+Epoch training time (s): 189.41887712478638
+Defense: isogn
+Epoch 29: 0/50000 (0%)
+Epoch 29: 12480/50000 (25%)
+Epoch 29: 24960/50000 (50%)
+Epoch 29: 37440/50000 (75%)
+Epoch 29: 49920/50000 (100%)
+Epoch: 29, Loss: 0.088098, Accuracy: 92.77%
+Epoch training time (s): 188.8980610370636
+Defense: isogn
+Epoch 30: 0/50000 (0%)
+Epoch 30: 12480/50000 (25%)
+Epoch 30: 24960/50000 (50%)
+Epoch 30: 37440/50000 (75%)
+Epoch 30: 49920/50000 (100%)
+Epoch: 30, Loss: 0.084008, Accuracy: 92.10%
+Epoch training time (s): 189.36326622962952
+Defense: isogn
+Epoch 31: 0/50000 (0%)
+Epoch 31: 12480/50000 (25%)
+Epoch 31: 24960/50000 (50%)
+Epoch 31: 37440/50000 (75%)
+Epoch 31: 49920/50000 (100%)
+Epoch: 31, Loss: 0.081044, Accuracy: 92.97%
+Epoch training time (s): 189.19023966789246
+Defense: isogn
+Epoch 32: 0/50000 (0%)
+Epoch 32: 12480/50000 (25%)
+Epoch 32: 24960/50000 (50%)
+Epoch 32: 37440/50000 (75%)
+Epoch 32: 49920/50000 (100%)
+Epoch: 32, Loss: 0.080427, Accuracy: 92.03%
+Epoch training time (s): 187.3523097038269
+Defense: isogn
+Epoch 33: 0/50000 (0%)
+Epoch 33: 12480/50000 (25%)
+Epoch 33: 24960/50000 (50%)
+Epoch 33: 37440/50000 (75%)
+Epoch 33: 49920/50000 (100%)
+Epoch: 33, Loss: 0.076522, Accuracy: 92.07%
+Epoch training time (s): 184.0631582736969
+Defense: isogn
+Epoch 34: 0/50000 (0%)
+Epoch 34: 12480/50000 (25%)
+Epoch 34: 24960/50000 (50%)
+Epoch 34: 37440/50000 (75%)
+Epoch 34: 49920/50000 (100%)
+Epoch: 34, Loss: 0.074587, Accuracy: 93.37%
+Epoch training time (s): 181.90815925598145
+Defense: isogn
+Epoch 35: 0/50000 (0%)
+Epoch 35: 12480/50000 (25%)
+Epoch 35: 24960/50000 (50%)
+Epoch 35: 37440/50000 (75%)
+Epoch 35: 49920/50000 (100%)
+Epoch: 35, Loss: 0.069770, Accuracy: 93.46%
+Epoch training time (s): 180.46288800239563
+Defense: isogn
+Epoch 36: 0/50000 (0%)
+Epoch 36: 12480/50000 (25%)
+Epoch 36: 24960/50000 (50%)
+Epoch 36: 37440/50000 (75%)
+Epoch 36: 49920/50000 (100%)
+Epoch: 36, Loss: 0.066933, Accuracy: 93.29%
+Epoch training time (s): 183.38916873931885
+Defense: isogn
+Epoch 37: 0/50000 (0%)
+Epoch 37: 12480/50000 (25%)
+Epoch 37: 24960/50000 (50%)
+Epoch 37: 37440/50000 (75%)
+Epoch 37: 49920/50000 (100%)
+Epoch: 37, Loss: 0.067258, Accuracy: 92.87%
+Epoch training time (s): 182.6149001121521
+Defense: isogn
+Epoch 38: 0/50000 (0%)
+Epoch 38: 12480/50000 (25%)
+Epoch 38: 24960/50000 (50%)
+Epoch 38: 37440/50000 (75%)
+Epoch 38: 49920/50000 (100%)
+Epoch: 38, Loss: 0.064664, Accuracy: 92.99%
+Epoch training time (s): 181.97260165214539
+Defense: isogn
+Epoch 39: 0/50000 (0%)
+Epoch 39: 12480/50000 (25%)
+Epoch 39: 24960/50000 (50%)
+Epoch 39: 37440/50000 (75%)
+Epoch 39: 49920/50000 (100%)
+Epoch: 39, Loss: 0.062313, Accuracy: 93.54%
+Epoch training time (s): 183.15953826904297
+Defense: isogn
+Epoch 40: 0/50000 (0%)
+Epoch 40: 12480/50000 (25%)
+Epoch 40: 24960/50000 (50%)
+Epoch 40: 37440/50000 (75%)
+Epoch 40: 49920/50000 (100%)
+Epoch: 40, Loss: 0.058047, Accuracy: 93.35%
+Epoch training time (s): 182.352520942688
+Defense: isogn
+Epoch 41: 0/50000 (0%)
+Epoch 41: 12480/50000 (25%)
+Epoch 41: 24960/50000 (50%)
+Epoch 41: 37440/50000 (75%)
+Epoch 41: 49920/50000 (100%)
+Epoch: 41, Loss: 0.059729, Accuracy: 93.49%
+Epoch training time (s): 182.53857684135437
+Defense: isogn
+Epoch 42: 0/50000 (0%)
+Epoch 42: 12480/50000 (25%)
+Epoch 42: 24960/50000 (50%)
+Epoch 42: 37440/50000 (75%)
+Epoch 42: 49920/50000 (100%)
+Epoch: 42, Loss: 0.055766, Accuracy: 93.45%
+Epoch training time (s): 183.20054411888123
+Defense: isogn
+Epoch 43: 0/50000 (0%)
+Epoch 43: 12480/50000 (25%)
+Epoch 43: 24960/50000 (50%)
+Epoch 43: 37440/50000 (75%)
+Epoch 43: 49920/50000 (100%)
+Epoch: 43, Loss: 0.052950, Accuracy: 93.74%
+Epoch training time (s): 182.14414048194885
+Defense: isogn
+Epoch 44: 0/50000 (0%)
+Epoch 44: 12480/50000 (25%)
+Epoch 44: 24960/50000 (50%)
+Epoch 44: 37440/50000 (75%)
+Epoch 44: 49920/50000 (100%)
+Epoch: 44, Loss: 0.053933, Accuracy: 93.58%
+Epoch training time (s): 181.35582780838013
+Defense: isogn
+Epoch 45: 0/50000 (0%)
+Epoch 45: 12480/50000 (25%)
+Epoch 45: 24960/50000 (50%)
+Epoch 45: 37440/50000 (75%)
+Epoch 45: 49920/50000 (100%)
+Epoch: 45, Loss: 0.052970, Accuracy: 93.74%
+Epoch training time (s): 182.95704984664917
+Defense: isogn
+Epoch 46: 0/50000 (0%)
+Epoch 46: 12480/50000 (25%)
+Epoch 46: 24960/50000 (50%)
+Epoch 46: 37440/50000 (75%)
+Epoch 46: 49920/50000 (100%)
+Epoch: 46, Loss: 0.048748, Accuracy: 93.79%
+Epoch training time (s): 181.66862225532532
+Defense: isogn
+Epoch 47: 0/50000 (0%)
+Epoch 47: 12480/50000 (25%)
+Epoch 47: 24960/50000 (50%)
+Epoch 47: 37440/50000 (75%)
+Epoch 47: 49920/50000 (100%)
+Epoch: 47, Loss: 0.048978, Accuracy: 93.58%
+Epoch training time (s): 181.03156042099
+Defense: isogn
+Epoch 48: 0/50000 (0%)
+Epoch 48: 12480/50000 (25%)
+Epoch 48: 24960/50000 (50%)
+Epoch 48: 37440/50000 (75%)
+Epoch 48: 49920/50000 (100%)
+Epoch: 48, Loss: 0.046260, Accuracy: 93.75%
+Epoch training time (s): 183.45770573616028
+Defense: isogn
+Epoch 49: 0/50000 (0%)
+Epoch 49: 12480/50000 (25%)
+Epoch 49: 24960/50000 (50%)
+Epoch 49: 37440/50000 (75%)
+Epoch 49: 49920/50000 (100%)
+Epoch: 49, Loss: 0.045631, Accuracy: 93.69%
+Epoch training time (s): 182.16777229309082
+Defense: isogn
+Epoch 50: 0/50000 (0%)
+Epoch 50: 12480/50000 (25%)
+Epoch 50: 24960/50000 (50%)
+Epoch 50: 37440/50000 (75%)
+Epoch 50: 49920/50000 (100%)
+Epoch: 50, Loss: 0.042491, Accuracy: 93.88%
+Epoch training time (s): 181.20291304588318
+Defense: isogn
+Epoch 51: 0/50000 (0%)
+Epoch 51: 12480/50000 (25%)
+Epoch 51: 24960/50000 (50%)
+Epoch 51: 37440/50000 (75%)
+Epoch 51: 49920/50000 (100%)
+Epoch: 51, Loss: 0.041636, Accuracy: 93.63%
+Epoch training time (s): 183.95376086235046
+Training time (s): 9231.126729011536
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_3
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 3
+gpu_number: 2
+load: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 2796.0/10000 (27.96%)
+=====================================================================================================
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_4
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 4
+gpu_number: 2
+load: False
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/50000 (0%)
+Epoch 1: 12480/50000 (25%)
+Epoch 1: 24960/50000 (50%)
+Epoch 1: 37440/50000 (75%)
+Epoch 1: 49920/50000 (100%)
+Epoch: 1, Loss: 1.083862, Accuracy: 84.10%
+Epoch training time (s): 103.07136940956116
+Defense: isogn
+Epoch 2: 0/50000 (0%)
+Epoch 2: 12480/50000 (25%)
+Epoch 2: 24960/50000 (50%)
+Epoch 2: 37440/50000 (75%)
+Epoch 2: 49920/50000 (100%)
+Epoch: 2, Loss: 0.539895, Accuracy: 79.13%
+Epoch training time (s): 181.66997718811035
+Defense: isogn
+Epoch 3: 0/50000 (0%)
+Epoch 3: 12480/50000 (25%)
+Epoch 3: 24960/50000 (50%)
+Epoch 3: 37440/50000 (75%)
+Epoch 3: 49920/50000 (100%)
+Epoch: 3, Loss: 0.376951, Accuracy: 79.24%
+Epoch training time (s): 183.84696793556213
+Defense: isogn
+Epoch 4: 0/50000 (0%)
+Epoch 4: 12480/50000 (25%)
+Epoch 4: 24960/50000 (50%)
+Epoch 4: 37440/50000 (75%)
+Epoch 4: 49920/50000 (100%)
+Epoch: 4, Loss: 0.321647, Accuracy: 84.81%
+Epoch training time (s): 181.38148498535156
+Defense: isogn
+Epoch 5: 0/50000 (0%)
+Epoch 5: 12480/50000 (25%)
+Epoch 5: 24960/50000 (50%)
+Epoch 5: 37440/50000 (75%)
+Epoch 5: 49920/50000 (100%)
+Epoch: 5, Loss: 0.287902, Accuracy: 82.30%
+Epoch training time (s): 183.16073298454285
+Defense: isogn
+Epoch 6: 0/50000 (0%)
+Epoch 6: 12480/50000 (25%)
+Epoch 6: 24960/50000 (50%)
+Epoch 6: 37440/50000 (75%)
+Epoch 6: 49920/50000 (100%)
+Epoch: 6, Loss: 0.260766, Accuracy: 84.50%
+Epoch training time (s): 185.66096019744873
+Defense: isogn
+Epoch 7: 0/50000 (0%)
+Epoch 7: 12480/50000 (25%)
+Epoch 7: 24960/50000 (50%)
+Epoch 7: 37440/50000 (75%)
+Epoch 7: 49920/50000 (100%)
+Epoch: 7, Loss: 0.242857, Accuracy: 84.55%
+Epoch training time (s): 182.8473494052887
+Defense: isogn
+Epoch 8: 0/50000 (0%)
+Epoch 8: 12480/50000 (25%)
+Epoch 8: 24960/50000 (50%)
+Epoch 8: 37440/50000 (75%)
+Epoch 8: 49920/50000 (100%)
+Epoch: 8, Loss: 0.227617, Accuracy: 88.74%
+Epoch training time (s): 184.25866866111755
+Defense: isogn
+Epoch 9: 0/50000 (0%)
+Epoch 9: 12480/50000 (25%)
+Epoch 9: 24960/50000 (50%)
+Epoch 9: 37440/50000 (75%)
+Epoch 9: 49920/50000 (100%)
+Epoch: 9, Loss: 0.210679, Accuracy: 88.85%
+Epoch training time (s): 182.5818386077881
+Defense: isogn
+Epoch 10: 0/50000 (0%)
+Epoch 10: 12480/50000 (25%)
+Epoch 10: 24960/50000 (50%)
+Epoch 10: 37440/50000 (75%)
+Epoch 10: 49920/50000 (100%)
+Epoch: 10, Loss: 0.200325, Accuracy: 89.67%
+Epoch training time (s): 182.6902449131012
+Defense: isogn
+Epoch 11: 0/50000 (0%)
+Epoch 11: 12480/50000 (25%)
+Epoch 11: 24960/50000 (50%)
+Epoch 11: 37440/50000 (75%)
+Epoch 11: 49920/50000 (100%)
+Epoch: 11, Loss: 0.188611, Accuracy: 89.95%
+Epoch training time (s): 183.22861456871033
+Defense: isogn
+Epoch 12: 0/50000 (0%)
+Epoch 12: 12480/50000 (25%)
+Epoch 12: 24960/50000 (50%)
+Epoch 12: 37440/50000 (75%)
+Epoch 12: 49920/50000 (100%)
+Epoch: 12, Loss: 0.180913, Accuracy: 89.71%
+Epoch training time (s): 183.8374650478363
+Defense: isogn
+Epoch 13: 0/50000 (0%)
+Epoch 13: 12480/50000 (25%)
+Epoch 13: 24960/50000 (50%)
+Epoch 13: 37440/50000 (75%)
+Epoch 13: 49920/50000 (100%)
+Epoch: 13, Loss: 0.172580, Accuracy: 90.33%
+Epoch training time (s): 183.7828733921051
+Defense: isogn
+Epoch 14: 0/50000 (0%)
+Epoch 14: 12480/50000 (25%)
+Epoch 14: 24960/50000 (50%)
+Epoch 14: 37440/50000 (75%)
+Epoch 14: 49920/50000 (100%)
+Epoch: 14, Loss: 0.163644, Accuracy: 89.54%
+Epoch training time (s): 187.50275540351868
+Defense: isogn
+Epoch 15: 0/50000 (0%)
+Epoch 15: 12480/50000 (25%)
+Epoch 15: 24960/50000 (50%)
+Epoch 15: 37440/50000 (75%)
+Epoch 15: 49920/50000 (100%)
+Epoch: 15, Loss: 0.155852, Accuracy: 90.35%
+Epoch training time (s): 186.45924830436707
+Defense: isogn
+Epoch 16: 0/50000 (0%)
+Epoch 16: 12480/50000 (25%)
+Epoch 16: 24960/50000 (50%)
+Epoch 16: 37440/50000 (75%)
+Epoch 16: 49920/50000 (100%)
+Epoch: 16, Loss: 0.148917, Accuracy: 90.87%
+Epoch training time (s): 187.16101145744324
+Defense: isogn
+Epoch 17: 0/50000 (0%)
+Epoch 17: 12480/50000 (25%)
+Epoch 17: 24960/50000 (50%)
+Epoch 17: 37440/50000 (75%)
+Epoch 17: 49920/50000 (100%)
+Epoch: 17, Loss: 0.143508, Accuracy: 90.29%
+Epoch training time (s): 187.03461027145386
+Defense: isogn
+Epoch 18: 0/50000 (0%)
+Epoch 18: 12480/50000 (25%)
+Epoch 18: 24960/50000 (50%)
+Epoch 18: 37440/50000 (75%)
+Epoch 18: 49920/50000 (100%)
+Epoch: 18, Loss: 0.138354, Accuracy: 91.27%
+Epoch training time (s): 186.31713008880615
+Defense: isogn
+Epoch 19: 0/50000 (0%)
+Epoch 19: 12480/50000 (25%)
+Epoch 19: 24960/50000 (50%)
+Epoch 19: 37440/50000 (75%)
+Epoch 19: 49920/50000 (100%)
+Epoch: 19, Loss: 0.132118, Accuracy: 90.87%
+Epoch training time (s): 186.4738667011261
+Defense: isogn
+Epoch 20: 0/50000 (0%)
+Epoch 20: 12480/50000 (25%)
+Epoch 20: 24960/50000 (50%)
+Epoch 20: 37440/50000 (75%)
+Epoch 20: 49920/50000 (100%)
+Epoch: 20, Loss: 0.126375, Accuracy: 89.26%
+Epoch training time (s): 187.26021718978882
+Defense: isogn
+Epoch 21: 0/50000 (0%)
+Epoch 21: 12480/50000 (25%)
+Epoch 21: 24960/50000 (50%)
+Epoch 21: 37440/50000 (75%)
+Epoch 21: 49920/50000 (100%)
+Epoch: 21, Loss: 0.120326, Accuracy: 91.82%
+Epoch training time (s): 186.08652472496033
+Defense: isogn
+Epoch 22: 0/50000 (0%)
+Epoch 22: 12480/50000 (25%)
+Epoch 22: 24960/50000 (50%)
+Epoch 22: 37440/50000 (75%)
+Epoch 22: 49920/50000 (100%)
+Epoch: 22, Loss: 0.117874, Accuracy: 92.58%
+Epoch training time (s): 187.05017948150635
+Defense: isogn
+Epoch 23: 0/50000 (0%)
+Epoch 23: 12480/50000 (25%)
+Epoch 23: 24960/50000 (50%)
+Epoch 23: 37440/50000 (75%)
+Epoch 23: 49920/50000 (100%)
+Epoch: 23, Loss: 0.112827, Accuracy: 92.29%
+Epoch training time (s): 187.24382257461548
+Defense: isogn
+Epoch 24: 0/50000 (0%)
+Epoch 24: 12480/50000 (25%)
+Epoch 24: 24960/50000 (50%)
+Epoch 24: 37440/50000 (75%)
+Epoch 24: 49920/50000 (100%)
+Epoch: 24, Loss: 0.106810, Accuracy: 91.91%
+Epoch training time (s): 186.52217435836792
+Defense: isogn
+Epoch 25: 0/50000 (0%)
+Epoch 25: 12480/50000 (25%)
+Epoch 25: 24960/50000 (50%)
+Epoch 25: 37440/50000 (75%)
+Epoch 25: 49920/50000 (100%)
+Epoch: 25, Loss: 0.104691, Accuracy: 92.76%
+Epoch training time (s): 187.67341804504395
+Defense: isogn
+Epoch 26: 0/50000 (0%)
+Epoch 26: 12480/50000 (25%)
+Epoch 26: 24960/50000 (50%)
+Epoch 26: 37440/50000 (75%)
+Epoch 26: 49920/50000 (100%)
+Epoch: 26, Loss: 0.099479, Accuracy: 92.75%
+Epoch training time (s): 186.49127674102783
+Defense: isogn
+Epoch 27: 0/50000 (0%)
+Epoch 27: 12480/50000 (25%)
+Epoch 27: 24960/50000 (50%)
+Epoch 27: 37440/50000 (75%)
+Epoch 27: 49920/50000 (100%)
+Epoch: 27, Loss: 0.098480, Accuracy: 92.75%
+Epoch training time (s): 187.12523293495178
+Defense: isogn
+Epoch 28: 0/50000 (0%)
+Epoch 28: 12480/50000 (25%)
+Epoch 28: 24960/50000 (50%)
+Epoch 28: 37440/50000 (75%)
+Epoch 28: 49920/50000 (100%)
+Epoch: 28, Loss: 0.091958, Accuracy: 92.72%
+Epoch training time (s): 187.97274541854858
+Defense: isogn
+Epoch 29: 0/50000 (0%)
+Epoch 29: 12480/50000 (25%)
+Epoch 29: 24960/50000 (50%)
+Epoch 29: 37440/50000 (75%)
+Epoch 29: 49920/50000 (100%)
+Epoch: 29, Loss: 0.088835, Accuracy: 93.13%
+Epoch training time (s): 186.76924538612366
+Defense: isogn
+Epoch 30: 0/50000 (0%)
+Epoch 30: 12480/50000 (25%)
+Epoch 30: 24960/50000 (50%)
+Epoch 30: 37440/50000 (75%)
+Epoch 30: 49920/50000 (100%)
+Epoch: 30, Loss: 0.088030, Accuracy: 92.66%
+Epoch training time (s): 187.27339053153992
+Defense: isogn
+Epoch 31: 0/50000 (0%)
+Epoch 31: 12480/50000 (25%)
+Epoch 31: 24960/50000 (50%)
+Epoch 31: 37440/50000 (75%)
+Epoch 31: 49920/50000 (100%)
+Epoch: 31, Loss: 0.082213, Accuracy: 92.58%
+Epoch training time (s): 186.588773727417
+Defense: isogn
+Epoch 32: 0/50000 (0%)
+Epoch 32: 12480/50000 (25%)
+Epoch 32: 24960/50000 (50%)
+Epoch 32: 37440/50000 (75%)
+Epoch 32: 49920/50000 (100%)
+Epoch: 32, Loss: 0.080955, Accuracy: 92.53%
+Epoch training time (s): 186.79409885406494
+Defense: isogn
+Epoch 33: 0/50000 (0%)
+Epoch 33: 12480/50000 (25%)
+Epoch 33: 24960/50000 (50%)
+Epoch 33: 37440/50000 (75%)
+Epoch 33: 49920/50000 (100%)
+Epoch: 33, Loss: 0.078055, Accuracy: 92.23%
+Epoch training time (s): 187.3275055885315
+Defense: isogn
+Epoch 34: 0/50000 (0%)
+Epoch 34: 12480/50000 (25%)
+Epoch 34: 24960/50000 (50%)
+Epoch 34: 37440/50000 (75%)
+Epoch 34: 49920/50000 (100%)
+Epoch: 34, Loss: 0.073770, Accuracy: 92.03%
+Epoch training time (s): 186.3036069869995
+Defense: isogn
+Epoch 35: 0/50000 (0%)
+Epoch 35: 12480/50000 (25%)
+Epoch 35: 24960/50000 (50%)
+Epoch 35: 37440/50000 (75%)
+Epoch 35: 49920/50000 (100%)
+Epoch: 35, Loss: 0.071501, Accuracy: 92.35%
+Epoch training time (s): 186.9454584121704
+Defense: isogn
+Epoch 36: 0/50000 (0%)
+Epoch 36: 12480/50000 (25%)
+Epoch 36: 24960/50000 (50%)
+Epoch 36: 37440/50000 (75%)
+Epoch 36: 49920/50000 (100%)
+Epoch: 36, Loss: 0.068782, Accuracy: 92.72%
+Epoch training time (s): 186.57173871994019
+Defense: isogn
+Epoch 37: 0/50000 (0%)
+Epoch 37: 12480/50000 (25%)
+Epoch 37: 24960/50000 (50%)
+Epoch 37: 37440/50000 (75%)
+Epoch 37: 49920/50000 (100%)
+Epoch: 37, Loss: 0.067451, Accuracy: 93.26%
+Epoch training time (s): 187.45237708091736
+Defense: isogn
+Epoch 38: 0/50000 (0%)
+Epoch 38: 12480/50000 (25%)
+Epoch 38: 24960/50000 (50%)
+Epoch 38: 37440/50000 (75%)
+Epoch 38: 49920/50000 (100%)
+Epoch: 38, Loss: 0.064784, Accuracy: 93.19%
+Epoch training time (s): 186.9511227607727
+Defense: isogn
+Epoch 39: 0/50000 (0%)
+Epoch 39: 12480/50000 (25%)
+Epoch 39: 24960/50000 (50%)
+Epoch 39: 37440/50000 (75%)
+Epoch 39: 49920/50000 (100%)
+Epoch: 39, Loss: 0.062386, Accuracy: 93.54%
+Epoch training time (s): 187.8339400291443
+Defense: isogn
+Epoch 40: 0/50000 (0%)
+Epoch 40: 12480/50000 (25%)
+Epoch 40: 24960/50000 (50%)
+Epoch 40: 37440/50000 (75%)
+Epoch 40: 49920/50000 (100%)
+Epoch: 40, Loss: 0.060009, Accuracy: 92.43%
+Epoch training time (s): 187.0352554321289
+Defense: isogn
+Epoch 41: 0/50000 (0%)
+Epoch 41: 12480/50000 (25%)
+Epoch 41: 24960/50000 (50%)
+Epoch 41: 37440/50000 (75%)
+Epoch 41: 49920/50000 (100%)
+Epoch: 41, Loss: 0.059380, Accuracy: 92.65%
+Epoch training time (s): 188.0312225818634
+Defense: isogn
+Epoch 42: 0/50000 (0%)
+Epoch 42: 12480/50000 (25%)
+Epoch 42: 24960/50000 (50%)
+Epoch 42: 37440/50000 (75%)
+Epoch 42: 49920/50000 (100%)
+Epoch: 42, Loss: 0.057059, Accuracy: 93.36%
+Epoch training time (s): 187.58522939682007
+Defense: isogn
+Epoch 43: 0/50000 (0%)
+Epoch 43: 12480/50000 (25%)
+Epoch 43: 24960/50000 (50%)
+Epoch 43: 37440/50000 (75%)
+Epoch 43: 49920/50000 (100%)
+Epoch: 43, Loss: 0.054994, Accuracy: 93.27%
+Epoch training time (s): 187.14608812332153
+Defense: isogn
+Epoch 44: 0/50000 (0%)
+Epoch 44: 12480/50000 (25%)
+Epoch 44: 24960/50000 (50%)
+Epoch 44: 37440/50000 (75%)
+Epoch 44: 49920/50000 (100%)
+Epoch: 44, Loss: 0.053640, Accuracy: 93.24%
+Epoch training time (s): 188.69181108474731
+Defense: isogn
+Epoch 45: 0/50000 (0%)
+Epoch 45: 12480/50000 (25%)
+Epoch 45: 24960/50000 (50%)
+Epoch 45: 37440/50000 (75%)
+Epoch 45: 49920/50000 (100%)
+Epoch: 45, Loss: 0.052817, Accuracy: 93.17%
+Epoch training time (s): 189.1632285118103
+Defense: isogn
+Epoch 46: 0/50000 (0%)
+Epoch 46: 12480/50000 (25%)
+Epoch 46: 24960/50000 (50%)
+Epoch 46: 37440/50000 (75%)
+Epoch 46: 49920/50000 (100%)
+Epoch: 46, Loss: 0.048322, Accuracy: 93.32%
+Epoch training time (s): 188.57569432258606
+Defense: isogn
+Epoch 47: 0/50000 (0%)
+Epoch 47: 12480/50000 (25%)
+Epoch 47: 24960/50000 (50%)
+Epoch 47: 37440/50000 (75%)
+Epoch 47: 49920/50000 (100%)
+Epoch: 47, Loss: 0.048490, Accuracy: 93.51%
+Epoch training time (s): 187.7230784893036
+Defense: isogn
+Epoch 48: 0/50000 (0%)
+Epoch 48: 12480/50000 (25%)
+Epoch 48: 24960/50000 (50%)
+Epoch 48: 37440/50000 (75%)
+Epoch 48: 49920/50000 (100%)
+Epoch: 48, Loss: 0.047911, Accuracy: 93.49%
+Epoch training time (s): 189.36599016189575
+Defense: isogn
+Epoch 49: 0/50000 (0%)
+Epoch 49: 12480/50000 (25%)
+Epoch 49: 24960/50000 (50%)
+Epoch 49: 37440/50000 (75%)
+Epoch 49: 49920/50000 (100%)
+Epoch: 49, Loss: 0.045359, Accuracy: 93.85%
+Epoch training time (s): 188.90223455429077
+Defense: isogn
+Epoch 50: 0/50000 (0%)
+Epoch 50: 12480/50000 (25%)
+Epoch 50: 24960/50000 (50%)
+Epoch 50: 37440/50000 (75%)
+Epoch 50: 49920/50000 (100%)
+Epoch: 50, Loss: 0.046618, Accuracy: 93.76%
+Epoch training time (s): 189.28803944587708
+Defense: isogn
+Epoch 51: 0/50000 (0%)
+Epoch 51: 12480/50000 (25%)
+Epoch 51: 24960/50000 (50%)
+Epoch 51: 37440/50000 (75%)
+Epoch 51: 49920/50000 (100%)
+Epoch: 51, Loss: 0.041821, Accuracy: 93.37%
+Epoch training time (s): 188.78246140480042
+Training time (s): 9428.204916238785
+-----------------------------------------------------------------------------------------------------
+Test
+Files already downloaded and verified
+name: cifar_resnet_isogn/seed_4
+model: epoch_51.pt
+dataset: cifar
+defense: isogn
+seed: 4
+gpu_number: 2
+load: True
+archi: resnet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.005
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: fgsm
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 2898.0/10000 (28.98%)
