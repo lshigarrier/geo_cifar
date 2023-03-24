@@ -1,0 +1,2937 @@
+=====================================================================================================
+name: fashion_lenet_teacher/seed_-5
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -5
+gpu_number: 4
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: teacher
+Epoch 1: 0/60000 (0%), Loss: 2.3029, Entropy: 2.3117, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.3023, Entropy: 2.2994, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 2.3022, Entropy: 2.2973, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 2.3021, Entropy: 2.2952, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 2.3020, Entropy: 2.2931, Reg: 0.0000
+Epoch: 1, Loss: 2.301981, Accuracy: 15.36%
+Epoch training time (s): 18.179096221923828
+Defense: teacher
+Epoch 2: 0/60000 (0%), Loss: 2.3020, Entropy: 2.2933, Reg: 0.0000
+Epoch 2: 14976/60000 (25%), Loss: 2.3014, Entropy: 2.2828, Reg: 0.0000
+Epoch 2: 29952/60000 (50%), Loss: 2.3013, Entropy: 2.2812, Reg: 0.0000
+Epoch 2: 44928/60000 (75%), Loss: 2.3012, Entropy: 2.2793, Reg: 0.0000
+Epoch 2: 59904/60000 (100%), Loss: 2.3011, Entropy: 2.2772, Reg: 0.0000
+Epoch: 2, Loss: 2.301115, Accuracy: 13.64%
+Epoch training time (s): 14.6969473361969
+Defense: teacher
+Epoch 3: 0/60000 (0%), Loss: 2.3010, Entropy: 2.2761, Reg: 0.0000
+Epoch 3: 14976/60000 (25%), Loss: 2.3005, Entropy: 2.2666, Reg: 0.0000
+Epoch 3: 29952/60000 (50%), Loss: 2.3004, Entropy: 2.2649, Reg: 0.0000
+Epoch 3: 44928/60000 (75%), Loss: 2.3003, Entropy: 2.2624, Reg: 0.0000
+Epoch 3: 59904/60000 (100%), Loss: 2.3001, Entropy: 2.2599, Reg: 0.0000
+Epoch: 3, Loss: 2.300141, Accuracy: 12.67%
+Epoch training time (s): 15.2610604763031
+Defense: teacher
+Epoch 4: 0/60000 (0%), Loss: 2.2999, Entropy: 2.2562, Reg: 0.0000
+Epoch 4: 14976/60000 (25%), Loss: 2.2994, Entropy: 2.2472, Reg: 0.0000
+Epoch 4: 29952/60000 (50%), Loss: 2.2993, Entropy: 2.2450, Reg: 0.0000
+Epoch 4: 44928/60000 (75%), Loss: 2.2991, Entropy: 2.2418, Reg: 0.0000
+Epoch 4: 59904/60000 (100%), Loss: 2.2989, Entropy: 2.2385, Reg: 0.0000
+Epoch: 4, Loss: 2.298884, Accuracy: 12.37%
+Epoch training time (s): 15.963332176208496
+Defense: teacher
+Epoch 5: 0/60000 (0%), Loss: 2.2983, Entropy: 2.2305, Reg: 0.0000
+Epoch 5: 14976/60000 (25%), Loss: 2.2979, Entropy: 2.2223, Reg: 0.0000
+Epoch 5: 29952/60000 (50%), Loss: 2.2977, Entropy: 2.2195, Reg: 0.0000
+Epoch 5: 44928/60000 (75%), Loss: 2.2974, Entropy: 2.2153, Reg: 0.0000
+Epoch 5: 59904/60000 (100%), Loss: 2.2972, Entropy: 2.2110, Reg: 0.0000
+Epoch: 5, Loss: 2.297162, Accuracy: 12.31%
+Epoch training time (s): 16.249142169952393
+Defense: teacher
+Epoch 6: 0/60000 (0%), Loss: 2.2962, Entropy: 2.1977, Reg: 0.0000
+Epoch 6: 14976/60000 (25%), Loss: 2.2958, Entropy: 2.1900, Reg: 0.0000
+Epoch 6: 29952/60000 (50%), Loss: 2.2955, Entropy: 2.1865, Reg: 0.0000
+Epoch 6: 44928/60000 (75%), Loss: 2.2951, Entropy: 2.1807, Reg: 0.0000
+Epoch 6: 59904/60000 (100%), Loss: 2.2947, Entropy: 2.1750, Reg: 0.0000
+Epoch: 6, Loss: 2.294676, Accuracy: 12.17%
+Epoch training time (s): 16.039180755615234
+Defense: teacher
+Epoch 7: 0/60000 (0%), Loss: 2.2929, Entropy: 2.1547, Reg: 0.0000
+Epoch 7: 14976/60000 (25%), Loss: 2.2926, Entropy: 2.1478, Reg: 0.0000
+Epoch 7: 29952/60000 (50%), Loss: 2.2921, Entropy: 2.1434, Reg: 0.0000
+Epoch 7: 44928/60000 (75%), Loss: 2.2915, Entropy: 2.1358, Reg: 0.0000
+Epoch 7: 59904/60000 (100%), Loss: 2.2909, Entropy: 2.1285, Reg: 0.0000
+Epoch: 7, Loss: 2.290860, Accuracy: 12.22%
+Epoch training time (s): 16.312082290649414
+Defense: teacher
+Epoch 8: 0/60000 (0%), Loss: 2.2879, Entropy: 2.1006, Reg: 0.0000
+Epoch 8: 14976/60000 (25%), Loss: 2.2875, Entropy: 2.0950, Reg: 0.0000
+Epoch 8: 29952/60000 (50%), Loss: 2.2868, Entropy: 2.0901, Reg: 0.0000
+Epoch 8: 44928/60000 (75%), Loss: 2.2857, Entropy: 2.0808, Reg: 0.0000
+Epoch 8: 59904/60000 (100%), Loss: 2.2846, Entropy: 2.0727, Reg: 0.0000
+Epoch: 8, Loss: 2.284567, Accuracy: 12.02%
+Epoch training time (s): 16.11468267440796
+Defense: teacher
+Epoch 9: 0/60000 (0%), Loss: 2.2791, Entropy: 2.0413, Reg: 0.0000
+Epoch 9: 14976/60000 (25%), Loss: 2.2786, Entropy: 2.0394, Reg: 0.0000
+Epoch 9: 29952/60000 (50%), Loss: 2.2772, Entropy: 2.0369, Reg: 0.0000
+Epoch 9: 44928/60000 (75%), Loss: 2.2753, Entropy: 2.0288, Reg: 0.0000
+Epoch 9: 59904/60000 (100%), Loss: 2.2731, Entropy: 2.0245, Reg: 0.0000
+Epoch: 9, Loss: 2.273114, Accuracy: 12.64%
+Epoch training time (s): 16.282846212387085
+Defense: teacher
+Epoch 10: 0/60000 (0%), Loss: 2.2624, Entropy: 2.0152, Reg: 0.0000
+Epoch 10: 14976/60000 (25%), Loss: 2.2614, Entropy: 2.0232, Reg: 0.0000
+Epoch 10: 29952/60000 (50%), Loss: 2.2585, Entropy: 2.0336, Reg: 0.0000
+Epoch 10: 44928/60000 (75%), Loss: 2.2543, Entropy: 2.0370, Reg: 0.0000
+Epoch 10: 59904/60000 (100%), Loss: 2.2496, Entropy: 2.0510, Reg: 0.0000
+Epoch: 10, Loss: 2.249595, Accuracy: 14.29%
+Epoch training time (s): 16.00212335586548
+Defense: teacher
+Epoch 11: 0/60000 (0%), Loss: 2.2261, Entropy: 2.1314, Reg: 0.0000
+Epoch 11: 14976/60000 (25%), Loss: 2.2230, Entropy: 2.1643, Reg: 0.0000
+Epoch 11: 29952/60000 (50%), Loss: 2.2157, Entropy: 2.2003, Reg: 0.0000
+Epoch 11: 44928/60000 (75%), Loss: 2.2055, Entropy: 2.2165, Reg: 0.0000
+Epoch 11: 59904/60000 (100%), Loss: 2.1934, Entropy: 2.2458, Reg: 0.0000
+Epoch: 11, Loss: 2.193341, Accuracy: 23.47%
+Epoch training time (s): 15.74432635307312
+Defense: teacher
+Epoch 12: 0/60000 (0%), Loss: 2.1349, Entropy: 2.3460, Reg: 0.0000
+Epoch 12: 14976/60000 (25%), Loss: 2.1212, Entropy: 2.3885, Reg: 0.0000
+Epoch 12: 29952/60000 (50%), Loss: 2.0987, Entropy: 2.3840, Reg: 0.0000
+Epoch 12: 44928/60000 (75%), Loss: 2.0671, Entropy: 2.3478, Reg: 0.0000
+Epoch 12: 59904/60000 (100%), Loss: 2.0282, Entropy: 2.3539, Reg: 0.0000
+Epoch: 12, Loss: 2.028043, Accuracy: 47.82%
+Epoch training time (s): 16.531856060028076
+Defense: teacher
+Epoch 13: 0/60000 (0%), Loss: 1.8625, Entropy: 2.3606, Reg: 0.0000
+Epoch 13: 14976/60000 (25%), Loss: 1.7901, Entropy: 2.5704, Reg: 0.0000
+Epoch 13: 29952/60000 (50%), Loss: 1.7244, Entropy: 2.7230, Reg: 0.0000
+Epoch 13: 44928/60000 (75%), Loss: 1.6498, Entropy: 2.8487, Reg: 0.0000
+Epoch 13: 59904/60000 (100%), Loss: 1.5792, Entropy: 3.0075, Reg: 0.0000
+Epoch: 13, Loss: 1.578926, Accuracy: 61.74%
+Epoch training time (s): 16.689226150512695
+Defense: teacher
+Epoch 14: 0/60000 (0%), Loss: 1.3490, Entropy: 3.7629, Reg: 0.0000
+Epoch 14: 14976/60000 (25%), Loss: 1.2569, Entropy: 3.6628, Reg: 0.0000
+Epoch 14: 29952/60000 (50%), Loss: 1.2203, Entropy: 3.8420, Reg: 0.0000
+Epoch 14: 44928/60000 (75%), Loss: 1.1802, Entropy: 3.9562, Reg: 0.0000
+Epoch 14: 59904/60000 (100%), Loss: 1.1462, Entropy: 4.0963, Reg: 0.0000
+Epoch: 14, Loss: 1.146068, Accuracy: 63.38%
+Epoch training time (s): 16.639936923980713
+Defense: teacher
+Epoch 15: 0/60000 (0%), Loss: 1.0273, Entropy: 4.5298, Reg: 0.0000
+Epoch 15: 14976/60000 (25%), Loss: 1.0089, Entropy: 4.7256, Reg: 0.0000
+Epoch 15: 29952/60000 (50%), Loss: 0.9992, Entropy: 4.9238, Reg: 0.0000
+Epoch 15: 44928/60000 (75%), Loss: 0.9804, Entropy: 4.9973, Reg: 0.0000
+Epoch 15: 59904/60000 (100%), Loss: 0.9642, Entropy: 5.0727, Reg: 0.0000
+Epoch: 15, Loss: 0.964161, Accuracy: 65.07%
+Epoch training time (s): 16.90018129348755
+Defense: teacher
+Epoch 16: 0/60000 (0%), Loss: 0.8824, Entropy: 4.8808, Reg: 0.0000
+Epoch 16: 14976/60000 (25%), Loss: 0.9034, Entropy: 5.4195, Reg: 0.0000
+Epoch 16: 29952/60000 (50%), Loss: 0.9012, Entropy: 5.5533, Reg: 0.0000
+Epoch 16: 44928/60000 (75%), Loss: 0.8884, Entropy: 5.5513, Reg: 0.0000
+Epoch 16: 59904/60000 (100%), Loss: 0.8773, Entropy: 5.5586, Reg: 0.0000
+Epoch: 16, Loss: 0.877289, Accuracy: 67.20%
+Epoch training time (s): 16.95622992515564
+Defense: teacher
+Epoch 17: 0/60000 (0%), Loss: 0.7911, Entropy: 4.5935, Reg: 0.0000
+Epoch 17: 14976/60000 (25%), Loss: 0.8394, Entropy: 5.6438, Reg: 0.0000
+Epoch 17: 29952/60000 (50%), Loss: 0.8400, Entropy: 5.7562, Reg: 0.0000
+Epoch 17: 44928/60000 (75%), Loss: 0.8295, Entropy: 5.7202, Reg: 0.0000
+Epoch 17: 59904/60000 (100%), Loss: 0.8208, Entropy: 5.7015, Reg: 0.0000
+Epoch: 17, Loss: 0.820799, Accuracy: 69.50%
+Epoch training time (s): 16.726550102233887
+Defense: teacher
+Epoch 18: 0/60000 (0%), Loss: 0.7204, Entropy: 4.3173, Reg: 0.0000
+Epoch 18: 14976/60000 (25%), Loss: 0.7929, Entropy: 5.6834, Reg: 0.0000
+Epoch 18: 29952/60000 (50%), Loss: 0.7952, Entropy: 5.7970, Reg: 0.0000
+Epoch 18: 44928/60000 (75%), Loss: 0.7861, Entropy: 5.7514, Reg: 0.0000
+Epoch 18: 59904/60000 (100%), Loss: 0.7789, Entropy: 5.7245, Reg: 0.0000
+Epoch: 18, Loss: 0.778932, Accuracy: 71.01%
+Epoch training time (s): 16.284212350845337
+Defense: teacher
+Epoch 19: 0/60000 (0%), Loss: 0.6631, Entropy: 4.1723, Reg: 0.0000
+Epoch 19: 14976/60000 (25%), Loss: 0.7570, Entropy: 5.6736, Reg: 0.0000
+Epoch 19: 29952/60000 (50%), Loss: 0.7607, Entropy: 5.7878, Reg: 0.0000
+Epoch 19: 44928/60000 (75%), Loss: 0.7526, Entropy: 5.7371, Reg: 0.0000
+Epoch 19: 59904/60000 (100%), Loss: 0.7465, Entropy: 5.7059, Reg: 0.0000
+Epoch: 19, Loss: 0.746491, Accuracy: 72.07%
+Epoch training time (s): 16.240818738937378
+Defense: teacher
+Epoch 20: 0/60000 (0%), Loss: 0.6168, Entropy: 4.1207, Reg: 0.0000
+Epoch 20: 14976/60000 (25%), Loss: 0.7286, Entropy: 5.6401, Reg: 0.0000
+Epoch 20: 29952/60000 (50%), Loss: 0.7332, Entropy: 5.7548, Reg: 0.0000
+Epoch 20: 44928/60000 (75%), Loss: 0.7258, Entropy: 5.7005, Reg: 0.0000
+Epoch 20: 59904/60000 (100%), Loss: 0.7206, Entropy: 5.6669, Reg: 0.0000
+Epoch: 20, Loss: 0.720553, Accuracy: 73.12%
+Epoch training time (s): 16.45878791809082
+Defense: teacher
+Epoch 21: 0/60000 (0%), Loss: 0.5805, Entropy: 4.0588, Reg: 0.0000
+Epoch 21: 14976/60000 (25%), Loss: 0.7055, Entropy: 5.5941, Reg: 0.0000
+Epoch 21: 29952/60000 (50%), Loss: 0.7109, Entropy: 5.7105, Reg: 0.0000
+Epoch 21: 44928/60000 (75%), Loss: 0.7039, Entropy: 5.6551, Reg: 0.0000
+Epoch 21: 59904/60000 (100%), Loss: 0.6994, Entropy: 5.6223, Reg: 0.0000
+Epoch: 21, Loss: 0.699367, Accuracy: 73.67%
+Epoch training time (s): 16.023631811141968
+Defense: teacher
+Epoch 22: 0/60000 (0%), Loss: 0.5511, Entropy: 3.9868, Reg: 0.0000
+Epoch 22: 14976/60000 (25%), Loss: 0.6864, Entropy: 5.5434, Reg: 0.0000
+Epoch 22: 29952/60000 (50%), Loss: 0.6923, Entropy: 5.6602, Reg: 0.0000
+Epoch 22: 44928/60000 (75%), Loss: 0.6857, Entropy: 5.6048, Reg: 0.0000
+Epoch 22: 59904/60000 (100%), Loss: 0.6817, Entropy: 5.5728, Reg: 0.0000
+Epoch: 22, Loss: 0.681645, Accuracy: 74.20%
+Epoch training time (s): 15.925402164459229
+Defense: teacher
+Epoch 23: 0/60000 (0%), Loss: 0.5273, Entropy: 3.9204, Reg: 0.0000
+Epoch 23: 14976/60000 (25%), Loss: 0.6702, Entropy: 5.4890, Reg: 0.0000
+Epoch 23: 29952/60000 (50%), Loss: 0.6764, Entropy: 5.6076, Reg: 0.0000
+Epoch 23: 44928/60000 (75%), Loss: 0.6701, Entropy: 5.5529, Reg: 0.0000
+Epoch 23: 59904/60000 (100%), Loss: 0.6665, Entropy: 5.5230, Reg: 0.0000
+Epoch: 23, Loss: 0.666470, Accuracy: 74.46%
+Epoch training time (s): 16.189263582229614
+Defense: teacher
+Epoch 24: 0/60000 (0%), Loss: 0.5080, Entropy: 3.8696, Reg: 0.0000
+Epoch 24: 14976/60000 (25%), Loss: 0.6561, Entropy: 5.4376, Reg: 0.0000
+Epoch 24: 29952/60000 (50%), Loss: 0.6626, Entropy: 5.5565, Reg: 0.0000
+Epoch 24: 44928/60000 (75%), Loss: 0.6566, Entropy: 5.5025, Reg: 0.0000
+Epoch 24: 59904/60000 (100%), Loss: 0.6533, Entropy: 5.4739, Reg: 0.0000
+Epoch: 24, Loss: 0.653236, Accuracy: 74.81%
+Epoch training time (s): 16.319607257843018
+Defense: teacher
+Epoch 25: 0/60000 (0%), Loss: 0.4924, Entropy: 3.8303, Reg: 0.0000
+Epoch 25: 14976/60000 (25%), Loss: 0.6438, Entropy: 5.3872, Reg: 0.0000
+Epoch 25: 29952/60000 (50%), Loss: 0.6504, Entropy: 5.5054, Reg: 0.0000
+Epoch 25: 44928/60000 (75%), Loss: 0.6445, Entropy: 5.4517, Reg: 0.0000
+Epoch 25: 59904/60000 (100%), Loss: 0.6415, Entropy: 5.4242, Reg: 0.0000
+Epoch: 25, Loss: 0.641509, Accuracy: 75.16%
+Epoch training time (s): 16.69149398803711
+Defense: teacher
+Epoch 26: 0/60000 (0%), Loss: 0.4800, Entropy: 3.7970, Reg: 0.0000
+Epoch 26: 14976/60000 (25%), Loss: 0.6327, Entropy: 5.3364, Reg: 0.0000
+Epoch 26: 29952/60000 (50%), Loss: 0.6395, Entropy: 5.4542, Reg: 0.0000
+Epoch 26: 44928/60000 (75%), Loss: 0.6338, Entropy: 5.4008, Reg: 0.0000
+Epoch 26: 59904/60000 (100%), Loss: 0.6310, Entropy: 5.3735, Reg: 0.0000
+Epoch: 26, Loss: 0.630983, Accuracy: 75.61%
+Epoch training time (s): 16.130104541778564
+Defense: teacher
+Epoch 27: 0/60000 (0%), Loss: 0.4696, Entropy: 3.7622, Reg: 0.0000
+Epoch 27: 14976/60000 (25%), Loss: 0.6227, Entropy: 5.2837, Reg: 0.0000
+Epoch 27: 29952/60000 (50%), Loss: 0.6296, Entropy: 5.4014, Reg: 0.0000
+Epoch 27: 44928/60000 (75%), Loss: 0.6240, Entropy: 5.3493, Reg: 0.0000
+Epoch 27: 59904/60000 (100%), Loss: 0.6215, Entropy: 5.3234, Reg: 0.0000
+Epoch: 27, Loss: 0.621455, Accuracy: 75.93%
+Epoch training time (s): 15.88225531578064
+Defense: teacher
+Epoch 28: 0/60000 (0%), Loss: 0.4606, Entropy: 3.7341, Reg: 0.0000
+Epoch 28: 14976/60000 (25%), Loss: 0.6136, Entropy: 5.2401, Reg: 0.0000
+Epoch 28: 29952/60000 (50%), Loss: 0.6206, Entropy: 5.3589, Reg: 0.0000
+Epoch 28: 44928/60000 (75%), Loss: 0.6152, Entropy: 5.3072, Reg: 0.0000
+Epoch 28: 59904/60000 (100%), Loss: 0.6128, Entropy: 5.2818, Reg: 0.0000
+Epoch: 28, Loss: 0.612816, Accuracy: 76.36%
+Epoch training time (s): 16.25544285774231
+Defense: teacher
+Epoch 29: 0/60000 (0%), Loss: 0.4531, Entropy: 3.7021, Reg: 0.0000
+Epoch 29: 14976/60000 (25%), Loss: 0.6054, Entropy: 5.1999, Reg: 0.0000
+Epoch 29: 29952/60000 (50%), Loss: 0.6124, Entropy: 5.3185, Reg: 0.0000
+Epoch 29: 44928/60000 (75%), Loss: 0.6071, Entropy: 5.2687, Reg: 0.0000
+Epoch 29: 59904/60000 (100%), Loss: 0.6050, Entropy: 5.2441, Reg: 0.0000
+Epoch: 29, Loss: 0.604926, Accuracy: 76.62%
+Epoch training time (s): 16.28378701210022
+Defense: teacher
+Epoch 30: 0/60000 (0%), Loss: 0.4467, Entropy: 3.6753, Reg: 0.0000
+Epoch 30: 14976/60000 (25%), Loss: 0.5978, Entropy: 5.1648, Reg: 0.0000
+Epoch 30: 29952/60000 (50%), Loss: 0.6049, Entropy: 5.2817, Reg: 0.0000
+Epoch 30: 44928/60000 (75%), Loss: 0.5997, Entropy: 5.2332, Reg: 0.0000
+Epoch 30: 59904/60000 (100%), Loss: 0.5977, Entropy: 5.2089, Reg: 0.0000
+Epoch: 30, Loss: 0.597678, Accuracy: 76.90%
+Epoch training time (s): 16.26588487625122
+Defense: teacher
+Epoch 31: 0/60000 (0%), Loss: 0.4414, Entropy: 3.6537, Reg: 0.0000
+Epoch 31: 14976/60000 (25%), Loss: 0.5908, Entropy: 5.1308, Reg: 0.0000
+Epoch 31: 29952/60000 (50%), Loss: 0.5979, Entropy: 5.2472, Reg: 0.0000
+Epoch 31: 44928/60000 (75%), Loss: 0.5928, Entropy: 5.1994, Reg: 0.0000
+Epoch 31: 59904/60000 (100%), Loss: 0.5910, Entropy: 5.1750, Reg: 0.0000
+Epoch: 31, Loss: 0.590963, Accuracy: 77.25%
+Epoch training time (s): 15.901883840560913
+Defense: teacher
+Epoch 32: 0/60000 (0%), Loss: 0.4372, Entropy: 3.6390, Reg: 0.0000
+Epoch 32: 14976/60000 (25%), Loss: 0.5844, Entropy: 5.0963, Reg: 0.0000
+Epoch 32: 29952/60000 (50%), Loss: 0.5914, Entropy: 5.2119, Reg: 0.0000
+Epoch 32: 44928/60000 (75%), Loss: 0.5864, Entropy: 5.1655, Reg: 0.0000
+Epoch 32: 59904/60000 (100%), Loss: 0.5847, Entropy: 5.1412, Reg: 0.0000
+Epoch: 32, Loss: 0.584682, Accuracy: 77.47%
+Epoch training time (s): 16.763690948486328
+Defense: teacher
+Epoch 33: 0/60000 (0%), Loss: 0.4338, Entropy: 3.6442, Reg: 0.0000
+Epoch 33: 14976/60000 (25%), Loss: 0.5783, Entropy: 5.0623, Reg: 0.0000
+Epoch 33: 29952/60000 (50%), Loss: 0.5853, Entropy: 5.1771, Reg: 0.0000
+Epoch 33: 44928/60000 (75%), Loss: 0.5803, Entropy: 5.1316, Reg: 0.0000
+Epoch 33: 59904/60000 (100%), Loss: 0.5788, Entropy: 5.1074, Reg: 0.0000
+Epoch: 33, Loss: 0.578757, Accuracy: 77.75%
+Epoch training time (s): 16.990261793136597
+Defense: teacher
+Epoch 34: 0/60000 (0%), Loss: 0.4309, Entropy: 3.6594, Reg: 0.0000
+Epoch 34: 14976/60000 (25%), Loss: 0.5725, Entropy: 5.0283, Reg: 0.0000
+Epoch 34: 29952/60000 (50%), Loss: 0.5795, Entropy: 5.1418, Reg: 0.0000
+Epoch 34: 44928/60000 (75%), Loss: 0.5746, Entropy: 5.0969, Reg: 0.0000
+Epoch 34: 59904/60000 (100%), Loss: 0.5731, Entropy: 5.0720, Reg: 0.0000
+Epoch: 34, Loss: 0.573134, Accuracy: 78.01%
+Epoch training time (s): 16.885685682296753
+Defense: teacher
+Epoch 35: 0/60000 (0%), Loss: 0.4288, Entropy: 3.6834, Reg: 0.0000
+Epoch 35: 14976/60000 (25%), Loss: 0.5670, Entropy: 4.9882, Reg: 0.0000
+Epoch 35: 29952/60000 (50%), Loss: 0.5739, Entropy: 5.1017, Reg: 0.0000
+Epoch 35: 44928/60000 (75%), Loss: 0.5691, Entropy: 5.0583, Reg: 0.0000
+Epoch 35: 59904/60000 (100%), Loss: 0.5677, Entropy: 5.0347, Reg: 0.0000
+Epoch: 35, Loss: 0.567727, Accuracy: 78.22%
+Epoch training time (s): 16.62786102294922
+Defense: teacher
+Epoch 36: 0/60000 (0%), Loss: 0.4271, Entropy: 3.7053, Reg: 0.0000
+Epoch 36: 14976/60000 (25%), Loss: 0.5617, Entropy: 4.9563, Reg: 0.0000
+Epoch 36: 29952/60000 (50%), Loss: 0.5686, Entropy: 5.0687, Reg: 0.0000
+Epoch 36: 44928/60000 (75%), Loss: 0.5638, Entropy: 5.0267, Reg: 0.0000
+Epoch 36: 59904/60000 (100%), Loss: 0.5626, Entropy: 5.0039, Reg: 0.0000
+Epoch: 36, Loss: 0.562552, Accuracy: 78.54%
+Epoch training time (s): 16.456871032714844
+Defense: teacher
+Epoch 37: 0/60000 (0%), Loss: 0.4266, Entropy: 3.7468, Reg: 0.0000
+Epoch 37: 14976/60000 (25%), Loss: 0.5566, Entropy: 4.9244, Reg: 0.0000
+Epoch 37: 29952/60000 (50%), Loss: 0.5634, Entropy: 5.0364, Reg: 0.0000
+Epoch 37: 44928/60000 (75%), Loss: 0.5587, Entropy: 4.9944, Reg: 0.0000
+Epoch 37: 59904/60000 (100%), Loss: 0.5576, Entropy: 4.9710, Reg: 0.0000
+Epoch: 37, Loss: 0.557587, Accuracy: 78.85%
+Epoch training time (s): 16.920392751693726
+Defense: teacher
+Epoch 38: 0/60000 (0%), Loss: 0.4269, Entropy: 3.7879, Reg: 0.0000
+Epoch 38: 14976/60000 (25%), Loss: 0.5517, Entropy: 4.8860, Reg: 0.0000
+Epoch 38: 29952/60000 (50%), Loss: 0.5585, Entropy: 4.9986, Reg: 0.0000
+Epoch 38: 44928/60000 (75%), Loss: 0.5538, Entropy: 4.9581, Reg: 0.0000
+Epoch 38: 59904/60000 (100%), Loss: 0.5528, Entropy: 4.9361, Reg: 0.0000
+Epoch: 38, Loss: 0.552784, Accuracy: 79.03%
+Epoch training time (s): 16.38363265991211
+Defense: teacher
+Epoch 39: 0/60000 (0%), Loss: 0.4278, Entropy: 3.8411, Reg: 0.0000
+Epoch 39: 14976/60000 (25%), Loss: 0.5470, Entropy: 4.8527, Reg: 0.0000
+Epoch 39: 29952/60000 (50%), Loss: 0.5537, Entropy: 4.9644, Reg: 0.0000
+Epoch 39: 44928/60000 (75%), Loss: 0.5491, Entropy: 4.9251, Reg: 0.0000
+Epoch 39: 59904/60000 (100%), Loss: 0.5482, Entropy: 4.9042, Reg: 0.0000
+Epoch: 39, Loss: 0.548151, Accuracy: 79.35%
+Epoch training time (s): 16.30930185317993
+Defense: teacher
+Epoch 40: 0/60000 (0%), Loss: 0.4282, Entropy: 3.8863, Reg: 0.0000
+Epoch 40: 14976/60000 (25%), Loss: 0.5424, Entropy: 4.8228, Reg: 0.0000
+Epoch 40: 29952/60000 (50%), Loss: 0.5490, Entropy: 4.9329, Reg: 0.0000
+Epoch 40: 44928/60000 (75%), Loss: 0.5445, Entropy: 4.8950, Reg: 0.0000
+Epoch 40: 59904/60000 (100%), Loss: 0.5436, Entropy: 4.8754, Reg: 0.0000
+Epoch: 40, Loss: 0.543648, Accuracy: 79.56%
+Epoch training time (s): 16.235761880874634
+Defense: teacher
+Epoch 41: 0/60000 (0%), Loss: 0.4288, Entropy: 3.9243, Reg: 0.0000
+Epoch 41: 14976/60000 (25%), Loss: 0.5380, Entropy: 4.7936, Reg: 0.0000
+Epoch 41: 29952/60000 (50%), Loss: 0.5445, Entropy: 4.9026, Reg: 0.0000
+Epoch 41: 44928/60000 (75%), Loss: 0.5401, Entropy: 4.8663, Reg: 0.0000
+Epoch 41: 59904/60000 (100%), Loss: 0.5393, Entropy: 4.8480, Reg: 0.0000
+Epoch: 41, Loss: 0.539307, Accuracy: 79.77%
+Epoch training time (s): 16.292513847351074
+Defense: teacher
+Epoch 42: 0/60000 (0%), Loss: 0.4285, Entropy: 3.9368, Reg: 0.0000
+Epoch 42: 14976/60000 (25%), Loss: 0.5337, Entropy: 4.7655, Reg: 0.0000
+Epoch 42: 29952/60000 (50%), Loss: 0.5402, Entropy: 4.8738, Reg: 0.0000
+Epoch 42: 44928/60000 (75%), Loss: 0.5359, Entropy: 4.8386, Reg: 0.0000
+Epoch 42: 59904/60000 (100%), Loss: 0.5351, Entropy: 4.8213, Reg: 0.0000
+Epoch: 42, Loss: 0.535117, Accuracy: 79.99%
+Epoch training time (s): 16.025087594985962
+Defense: teacher
+Epoch 43: 0/60000 (0%), Loss: 0.4278, Entropy: 3.9409, Reg: 0.0000
+Epoch 43: 14976/60000 (25%), Loss: 0.5295, Entropy: 4.7391, Reg: 0.0000
+Epoch 43: 29952/60000 (50%), Loss: 0.5359, Entropy: 4.8456, Reg: 0.0000
+Epoch 43: 44928/60000 (75%), Loss: 0.5317, Entropy: 4.8120, Reg: 0.0000
+Epoch 43: 59904/60000 (100%), Loss: 0.5310, Entropy: 4.7954, Reg: 0.0000
+Epoch: 43, Loss: 0.531048, Accuracy: 80.29%
+Epoch training time (s): 16.270998239517212
+Defense: teacher
+Epoch 44: 0/60000 (0%), Loss: 0.4271, Entropy: 3.9409, Reg: 0.0000
+Epoch 44: 14976/60000 (25%), Loss: 0.5255, Entropy: 4.7158, Reg: 0.0000
+Epoch 44: 29952/60000 (50%), Loss: 0.5318, Entropy: 4.8204, Reg: 0.0000
+Epoch 44: 44928/60000 (75%), Loss: 0.5277, Entropy: 4.7882, Reg: 0.0000
+Epoch 44: 59904/60000 (100%), Loss: 0.5271, Entropy: 4.7719, Reg: 0.0000
+Epoch: 44, Loss: 0.527109, Accuracy: 80.43%
+Epoch training time (s): 16.181049585342407
+Defense: teacher
+Epoch 45: 0/60000 (0%), Loss: 0.4266, Entropy: 3.9572, Reg: 0.0000
+Epoch 45: 14976/60000 (25%), Loss: 0.5216, Entropy: 4.6885, Reg: 0.0000
+Epoch 45: 29952/60000 (50%), Loss: 0.5278, Entropy: 4.7917, Reg: 0.0000
+Epoch 45: 44928/60000 (75%), Loss: 0.5238, Entropy: 4.7614, Reg: 0.0000
+Epoch 45: 59904/60000 (100%), Loss: 0.5233, Entropy: 4.7467, Reg: 0.0000
+Epoch: 45, Loss: 0.523271, Accuracy: 80.49%
+Epoch training time (s): 16.268649339675903
+Defense: teacher
+Epoch 46: 0/60000 (0%), Loss: 0.4264, Entropy: 3.9493, Reg: 0.0000
+Epoch 46: 14976/60000 (25%), Loss: 0.5177, Entropy: 4.6637, Reg: 0.0000
+Epoch 46: 29952/60000 (50%), Loss: 0.5239, Entropy: 4.7656, Reg: 0.0000
+Epoch 46: 44928/60000 (75%), Loss: 0.5200, Entropy: 4.7378, Reg: 0.0000
+Epoch 46: 59904/60000 (100%), Loss: 0.5195, Entropy: 4.7242, Reg: 0.0000
+Epoch: 46, Loss: 0.519534, Accuracy: 80.66%
+Epoch training time (s): 16.20244574546814
+Defense: teacher
+Epoch 47: 0/60000 (0%), Loss: 0.4265, Entropy: 3.9497, Reg: 0.0000
+Epoch 47: 14976/60000 (25%), Loss: 0.5140, Entropy: 4.6414, Reg: 0.0000
+Epoch 47: 29952/60000 (50%), Loss: 0.5201, Entropy: 4.7407, Reg: 0.0000
+Epoch 47: 44928/60000 (75%), Loss: 0.5163, Entropy: 4.7145, Reg: 0.0000
+Epoch 47: 59904/60000 (100%), Loss: 0.5159, Entropy: 4.7018, Reg: 0.0000
+Epoch: 47, Loss: 0.515900, Accuracy: 80.75%
+Epoch training time (s): 16.239336729049683
+Defense: teacher
+Epoch 48: 0/60000 (0%), Loss: 0.4267, Entropy: 3.9497, Reg: 0.0000
+Epoch 48: 14976/60000 (25%), Loss: 0.5103, Entropy: 4.6173, Reg: 0.0000
+Epoch 48: 29952/60000 (50%), Loss: 0.5164, Entropy: 4.7168, Reg: 0.0000
+Epoch 48: 44928/60000 (75%), Loss: 0.5126, Entropy: 4.6932, Reg: 0.0000
+Epoch 48: 59904/60000 (100%), Loss: 0.5123, Entropy: 4.6813, Reg: 0.0000
+Epoch: 48, Loss: 0.512357, Accuracy: 80.93%
+Epoch training time (s): 16.307642221450806
+Defense: teacher
+Epoch 49: 0/60000 (0%), Loss: 0.4278, Entropy: 3.9677, Reg: 0.0000
+Epoch 49: 14976/60000 (25%), Loss: 0.5068, Entropy: 4.5961, Reg: 0.0000
+Epoch 49: 29952/60000 (50%), Loss: 0.5128, Entropy: 4.6934, Reg: 0.0000
+Epoch 49: 44928/60000 (75%), Loss: 0.5091, Entropy: 4.6707, Reg: 0.0000
+Epoch 49: 59904/60000 (100%), Loss: 0.5089, Entropy: 4.6590, Reg: 0.0000
+Epoch: 49, Loss: 0.508917, Accuracy: 81.06%
+Epoch training time (s): 16.225089073181152
+Defense: teacher
+Epoch 50: 0/60000 (0%), Loss: 0.4296, Entropy: 3.9909, Reg: 0.0000
+Epoch 50: 14976/60000 (25%), Loss: 0.5033, Entropy: 4.5722, Reg: 0.0000
+Epoch 50: 29952/60000 (50%), Loss: 0.5092, Entropy: 4.6685, Reg: 0.0000
+Epoch 50: 44928/60000 (75%), Loss: 0.5057, Entropy: 4.6475, Reg: 0.0000
+Epoch 50: 59904/60000 (100%), Loss: 0.5055, Entropy: 4.6373, Reg: 0.0000
+Epoch: 50, Loss: 0.505523, Accuracy: 81.15%
+Epoch training time (s): 16.042038679122925
+Defense: teacher
+Epoch 51: 0/60000 (0%), Loss: 0.4309, Entropy: 4.0186, Reg: 0.0000
+Epoch 51: 14976/60000 (25%), Loss: 0.4999, Entropy: 4.5487, Reg: 0.0000
+Epoch 51: 29952/60000 (50%), Loss: 0.5057, Entropy: 4.6417, Reg: 0.0000
+Epoch 51: 44928/60000 (75%), Loss: 0.5023, Entropy: 4.6201, Reg: 0.0000
+Epoch 51: 59904/60000 (100%), Loss: 0.5022, Entropy: 4.6102, Reg: 0.0000
+Epoch: 51, Loss: 0.502194, Accuracy: 81.36%
+Epoch training time (s): 16.034130096435547
+Training time (s): 832.4590785503387
+/home/loic/iso_defense/utils/mnist_utils.py:21: RuntimeWarning: divide by zero encountered in log
+  geo_mean = np.exp(np.log(array[i: i + window_size]).mean())
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_teacher/seed_-5
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -5
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 7502.0/10000 (75.02%)
+name: fashion_lenet_teacher/seed_-5
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -5
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6666.0/10000 (66.66%)
+name: fashion_lenet_teacher/seed_-5
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -5
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 4977.0/10000 (49.77%)
+name: fashion_lenet_teacher/seed_-5
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -5
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 3401.0/10000 (34.01%)
+=====================================================================================================
+name: fashion_lenet_teacher/seed_-4
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -4
+gpu_number: 4
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: teacher
+Epoch 1: 0/60000 (0%), Loss: 2.3028, Entropy: 2.3087, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.3020, Entropy: 2.2926, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 2.3018, Entropy: 2.2890, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 2.3016, Entropy: 2.2850, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 2.3014, Entropy: 2.2810, Reg: 0.0000
+Epoch: 1, Loss: 2.301441, Accuracy: 21.74%
+Epoch training time (s): 16.500860929489136
+Defense: teacher
+Epoch 2: 0/60000 (0%), Loss: 2.3012, Entropy: 2.2763, Reg: 0.0000
+Epoch 2: 14976/60000 (25%), Loss: 2.3004, Entropy: 2.2603, Reg: 0.0000
+Epoch 2: 29952/60000 (50%), Loss: 2.3002, Entropy: 2.2570, Reg: 0.0000
+Epoch 2: 44928/60000 (75%), Loss: 2.3000, Entropy: 2.2525, Reg: 0.0000
+Epoch 2: 59904/60000 (100%), Loss: 2.2997, Entropy: 2.2477, Reg: 0.0000
+Epoch: 2, Loss: 2.299708, Accuracy: 40.56%
+Epoch training time (s): 16.481278657913208
+Defense: teacher
+Epoch 3: 0/60000 (0%), Loss: 2.2992, Entropy: 2.2398, Reg: 0.0000
+Epoch 3: 14976/60000 (25%), Loss: 2.2983, Entropy: 2.2221, Reg: 0.0000
+Epoch 3: 29952/60000 (50%), Loss: 2.2981, Entropy: 2.2176, Reg: 0.0000
+Epoch 3: 44928/60000 (75%), Loss: 2.2977, Entropy: 2.2109, Reg: 0.0000
+Epoch 3: 59904/60000 (100%), Loss: 2.2973, Entropy: 2.2038, Reg: 0.0000
+Epoch: 3, Loss: 2.297326, Accuracy: 40.09%
+Epoch training time (s): 16.072593212127686
+Defense: teacher
+Epoch 4: 0/60000 (0%), Loss: 2.2962, Entropy: 2.1854, Reg: 0.0000
+Epoch 4: 14976/60000 (25%), Loss: 2.2952, Entropy: 2.1661, Reg: 0.0000
+Epoch 4: 29952/60000 (50%), Loss: 2.2948, Entropy: 2.1594, Reg: 0.0000
+Epoch 4: 44928/60000 (75%), Loss: 2.2941, Entropy: 2.1490, Reg: 0.0000
+Epoch 4: 59904/60000 (100%), Loss: 2.2935, Entropy: 2.1380, Reg: 0.0000
+Epoch: 4, Loss: 2.293471, Accuracy: 38.91%
+Epoch training time (s): 16.191282749176025
+Defense: teacher
+Epoch 5: 0/60000 (0%), Loss: 2.2911, Entropy: 2.1032, Reg: 0.0000
+Epoch 5: 14976/60000 (25%), Loss: 2.2898, Entropy: 2.0804, Reg: 0.0000
+Epoch 5: 29952/60000 (50%), Loss: 2.2890, Entropy: 2.0699, Reg: 0.0000
+Epoch 5: 44928/60000 (75%), Loss: 2.2879, Entropy: 2.0535, Reg: 0.0000
+Epoch 5: 59904/60000 (100%), Loss: 2.2866, Entropy: 2.0367, Reg: 0.0000
+Epoch: 5, Loss: 2.286582, Accuracy: 37.71%
+Epoch training time (s): 16.212824821472168
+Defense: teacher
+Epoch 6: 0/60000 (0%), Loss: 2.2815, Entropy: 1.9786, Reg: 0.0000
+Epoch 6: 14976/60000 (25%), Loss: 2.2795, Entropy: 1.9508, Reg: 0.0000
+Epoch 6: 29952/60000 (50%), Loss: 2.2779, Entropy: 1.9365, Reg: 0.0000
+Epoch 6: 44928/60000 (75%), Loss: 2.2754, Entropy: 1.9133, Reg: 0.0000
+Epoch 6: 59904/60000 (100%), Loss: 2.2727, Entropy: 1.8917, Reg: 0.0000
+Epoch: 6, Loss: 2.272664, Accuracy: 35.72%
+Epoch training time (s): 16.256776094436646
+Defense: teacher
+Epoch 7: 0/60000 (0%), Loss: 2.2609, Entropy: 1.8213, Reg: 0.0000
+Epoch 7: 14976/60000 (25%), Loss: 2.2568, Entropy: 1.7953, Reg: 0.0000
+Epoch 7: 29952/60000 (50%), Loss: 2.2527, Entropy: 1.7891, Reg: 0.0000
+Epoch 7: 44928/60000 (75%), Loss: 2.2467, Entropy: 1.7733, Reg: 0.0000
+Epoch 7: 59904/60000 (100%), Loss: 2.2395, Entropy: 1.7700, Reg: 0.0000
+Epoch: 7, Loss: 2.239484, Accuracy: 34.59%
+Epoch training time (s): 16.08164095878601
+Defense: teacher
+Epoch 8: 0/60000 (0%), Loss: 2.2079, Entropy: 1.7788, Reg: 0.0000
+Epoch 8: 14976/60000 (25%), Loss: 2.1966, Entropy: 1.8196, Reg: 0.0000
+Epoch 8: 29952/60000 (50%), Loss: 2.1837, Entropy: 1.8642, Reg: 0.0000
+Epoch 8: 44928/60000 (75%), Loss: 2.1652, Entropy: 1.8940, Reg: 0.0000
+Epoch 8: 59904/60000 (100%), Loss: 2.1420, Entropy: 1.9465, Reg: 0.0000
+Epoch: 8, Loss: 2.141939, Accuracy: 40.81%
+Epoch training time (s): 16.2021005153656
+Defense: teacher
+Epoch 9: 0/60000 (0%), Loss: 2.0409, Entropy: 1.9920, Reg: 0.0000
+Epoch 9: 14976/60000 (25%), Loss: 1.9963, Entropy: 2.2861, Reg: 0.0000
+Epoch 9: 29952/60000 (50%), Loss: 1.9496, Entropy: 2.3737, Reg: 0.0000
+Epoch 9: 44928/60000 (75%), Loss: 1.8886, Entropy: 2.4444, Reg: 0.0000
+Epoch 9: 59904/60000 (100%), Loss: 1.8221, Entropy: 2.5865, Reg: 0.0000
+Epoch: 9, Loss: 1.821883, Accuracy: 56.60%
+Epoch training time (s): 15.986514568328857
+Defense: teacher
+Epoch 10: 0/60000 (0%), Loss: 1.5767, Entropy: 3.1193, Reg: 0.0000
+Epoch 10: 14976/60000 (25%), Loss: 1.4804, Entropy: 3.3414, Reg: 0.0000
+Epoch 10: 29952/60000 (50%), Loss: 1.4242, Entropy: 3.4820, Reg: 0.0000
+Epoch 10: 44928/60000 (75%), Loss: 1.3660, Entropy: 3.5788, Reg: 0.0000
+Epoch 10: 59904/60000 (100%), Loss: 1.3150, Entropy: 3.7186, Reg: 0.0000
+Epoch: 10, Loss: 1.314884, Accuracy: 60.98%
+Epoch training time (s): 16.13608980178833
+Defense: teacher
+Epoch 11: 0/60000 (0%), Loss: 1.1383, Entropy: 4.0354, Reg: 0.0000
+Epoch 11: 14976/60000 (25%), Loss: 1.1018, Entropy: 4.3310, Reg: 0.0000
+Epoch 11: 29952/60000 (50%), Loss: 1.0834, Entropy: 4.5298, Reg: 0.0000
+Epoch 11: 44928/60000 (75%), Loss: 1.0579, Entropy: 4.6284, Reg: 0.0000
+Epoch 11: 59904/60000 (100%), Loss: 1.0356, Entropy: 4.7286, Reg: 0.0000
+Epoch: 11, Loss: 1.035551, Accuracy: 63.94%
+Epoch training time (s): 16.16698694229126
+Defense: teacher
+Epoch 12: 0/60000 (0%), Loss: 0.9363, Entropy: 4.6856, Reg: 0.0000
+Epoch 12: 14976/60000 (25%), Loss: 0.9487, Entropy: 5.1834, Reg: 0.0000
+Epoch 12: 29952/60000 (50%), Loss: 0.9435, Entropy: 5.3343, Reg: 0.0000
+Epoch 12: 44928/60000 (75%), Loss: 0.9283, Entropy: 5.3565, Reg: 0.0000
+Epoch 12: 59904/60000 (100%), Loss: 0.9147, Entropy: 5.3790, Reg: 0.0000
+Epoch: 12, Loss: 0.914738, Accuracy: 66.33%
+Epoch training time (s): 16.34354305267334
+Defense: teacher
+Epoch 13: 0/60000 (0%), Loss: 0.8243, Entropy: 4.5742, Reg: 0.0000
+Epoch 13: 14976/60000 (25%), Loss: 0.8661, Entropy: 5.5401, Reg: 0.0000
+Epoch 13: 29952/60000 (50%), Loss: 0.8652, Entropy: 5.6592, Reg: 0.0000
+Epoch 13: 44928/60000 (75%), Loss: 0.8536, Entropy: 5.6394, Reg: 0.0000
+Epoch 13: 59904/60000 (100%), Loss: 0.8435, Entropy: 5.6272, Reg: 0.0000
+Epoch: 13, Loss: 0.843458, Accuracy: 68.90%
+Epoch training time (s): 16.363790273666382
+Defense: teacher
+Epoch 14: 0/60000 (0%), Loss: 0.7439, Entropy: 4.4158, Reg: 0.0000
+Epoch 14: 14976/60000 (25%), Loss: 0.8100, Entropy: 5.6592, Reg: 0.0000
+Epoch 14: 29952/60000 (50%), Loss: 0.8114, Entropy: 5.7737, Reg: 0.0000
+Epoch 14: 44928/60000 (75%), Loss: 0.8018, Entropy: 5.7363, Reg: 0.0000
+Epoch 14: 59904/60000 (100%), Loss: 0.7938, Entropy: 5.7101, Reg: 0.0000
+Epoch: 14, Loss: 0.793738, Accuracy: 70.67%
+Epoch training time (s): 15.92736005783081
+Defense: teacher
+Epoch 15: 0/60000 (0%), Loss: 0.6820, Entropy: 4.2644, Reg: 0.0000
+Epoch 15: 14976/60000 (25%), Loss: 0.7688, Entropy: 5.6819, Reg: 0.0000
+Epoch 15: 29952/60000 (50%), Loss: 0.7718, Entropy: 5.7928, Reg: 0.0000
+Epoch 15: 44928/60000 (75%), Loss: 0.7634, Entropy: 5.7452, Reg: 0.0000
+Epoch 15: 59904/60000 (100%), Loss: 0.7568, Entropy: 5.7114, Reg: 0.0000
+Epoch: 15, Loss: 0.756744, Accuracy: 71.76%
+Epoch training time (s): 16.026045322418213
+Defense: teacher
+Epoch 16: 0/60000 (0%), Loss: 0.6332, Entropy: 4.2766, Reg: 0.0000
+Epoch 16: 14976/60000 (25%), Loss: 0.7369, Entropy: 5.6460, Reg: 0.0000
+Epoch 16: 29952/60000 (50%), Loss: 0.7410, Entropy: 5.7496, Reg: 0.0000
+Epoch 16: 44928/60000 (75%), Loss: 0.7335, Entropy: 5.6970, Reg: 0.0000
+Epoch 16: 59904/60000 (100%), Loss: 0.7280, Entropy: 5.6621, Reg: 0.0000
+Epoch: 16, Loss: 0.727976, Accuracy: 72.65%
+Epoch training time (s): 16.277711868286133
+Defense: teacher
+Epoch 17: 0/60000 (0%), Loss: 0.5953, Entropy: 4.2356, Reg: 0.0000
+Epoch 17: 14976/60000 (25%), Loss: 0.7117, Entropy: 5.5917, Reg: 0.0000
+Epoch 17: 29952/60000 (50%), Loss: 0.7168, Entropy: 5.7005, Reg: 0.0000
+Epoch 17: 44928/60000 (75%), Loss: 0.7099, Entropy: 5.6502, Reg: 0.0000
+Epoch 17: 59904/60000 (100%), Loss: 0.7053, Entropy: 5.6190, Reg: 0.0000
+Epoch: 17, Loss: 0.705217, Accuracy: 73.55%
+Epoch training time (s): 16.022297382354736
+Defense: teacher
+Epoch 18: 0/60000 (0%), Loss: 0.5636, Entropy: 4.1688, Reg: 0.0000
+Epoch 18: 14976/60000 (25%), Loss: 0.6915, Entropy: 5.5495, Reg: 0.0000
+Epoch 18: 29952/60000 (50%), Loss: 0.6972, Entropy: 5.6595, Reg: 0.0000
+Epoch 18: 44928/60000 (75%), Loss: 0.6907, Entropy: 5.6087, Reg: 0.0000
+Epoch 18: 59904/60000 (100%), Loss: 0.6866, Entropy: 5.5786, Reg: 0.0000
+Epoch: 18, Loss: 0.686582, Accuracy: 73.92%
+Epoch training time (s): 16.161263465881348
+Defense: teacher
+Epoch 19: 0/60000 (0%), Loss: 0.5376, Entropy: 4.1092, Reg: 0.0000
+Epoch 19: 14976/60000 (25%), Loss: 0.6744, Entropy: 5.4980, Reg: 0.0000
+Epoch 19: 29952/60000 (50%), Loss: 0.6806, Entropy: 5.6102, Reg: 0.0000
+Epoch 19: 44928/60000 (75%), Loss: 0.6744, Entropy: 5.5593, Reg: 0.0000
+Epoch 19: 59904/60000 (100%), Loss: 0.6708, Entropy: 5.5308, Reg: 0.0000
+Epoch: 19, Loss: 0.670780, Accuracy: 74.25%
+Epoch training time (s): 16.160102128982544
+Defense: teacher
+Epoch 20: 0/60000 (0%), Loss: 0.5168, Entropy: 4.0545, Reg: 0.0000
+Epoch 20: 14976/60000 (25%), Loss: 0.6599, Entropy: 5.4430, Reg: 0.0000
+Epoch 20: 29952/60000 (50%), Loss: 0.6664, Entropy: 5.5568, Reg: 0.0000
+Epoch 20: 44928/60000 (75%), Loss: 0.6604, Entropy: 5.5065, Reg: 0.0000
+Epoch 20: 59904/60000 (100%), Loss: 0.6572, Entropy: 5.4800, Reg: 0.0000
+Epoch: 20, Loss: 0.657117, Accuracy: 74.51%
+Epoch training time (s): 16.148245096206665
+Defense: teacher
+Epoch 21: 0/60000 (0%), Loss: 0.5001, Entropy: 4.0200, Reg: 0.0000
+Epoch 21: 14976/60000 (25%), Loss: 0.6471, Entropy: 5.3917, Reg: 0.0000
+Epoch 21: 29952/60000 (50%), Loss: 0.6539, Entropy: 5.5062, Reg: 0.0000
+Epoch 21: 44928/60000 (75%), Loss: 0.6481, Entropy: 5.4564, Reg: 0.0000
+Epoch 21: 59904/60000 (100%), Loss: 0.6452, Entropy: 5.4316, Reg: 0.0000
+Epoch: 21, Loss: 0.645150, Accuracy: 74.86%
+Epoch training time (s): 15.912221193313599
+Defense: teacher
+Epoch 22: 0/60000 (0%), Loss: 0.4863, Entropy: 3.9864, Reg: 0.0000
+Epoch 22: 14976/60000 (25%), Loss: 0.6359, Entropy: 5.3441, Reg: 0.0000
+Epoch 22: 29952/60000 (50%), Loss: 0.6429, Entropy: 5.4599, Reg: 0.0000
+Epoch 22: 44928/60000 (75%), Loss: 0.6372, Entropy: 5.4100, Reg: 0.0000
+Epoch 22: 59904/60000 (100%), Loss: 0.6346, Entropy: 5.3857, Reg: 0.0000
+Epoch: 22, Loss: 0.634540, Accuracy: 75.31%
+Epoch training time (s): 16.634648084640503
+Defense: teacher
+Epoch 23: 0/60000 (0%), Loss: 0.4751, Entropy: 3.9578, Reg: 0.0000
+Epoch 23: 14976/60000 (25%), Loss: 0.6259, Entropy: 5.2993, Reg: 0.0000
+Epoch 23: 29952/60000 (50%), Loss: 0.6330, Entropy: 5.4153, Reg: 0.0000
+Epoch 23: 44928/60000 (75%), Loss: 0.6275, Entropy: 5.3650, Reg: 0.0000
+Epoch 23: 59904/60000 (100%), Loss: 0.6250, Entropy: 5.3413, Reg: 0.0000
+Epoch: 23, Loss: 0.625016, Accuracy: 75.63%
+Epoch training time (s): 16.575825691223145
+Defense: teacher
+Epoch 24: 0/60000 (0%), Loss: 0.4659, Entropy: 3.9335, Reg: 0.0000
+Epoch 24: 14976/60000 (25%), Loss: 0.6169, Entropy: 5.2582, Reg: 0.0000
+Epoch 24: 29952/60000 (50%), Loss: 0.6241, Entropy: 5.3739, Reg: 0.0000
+Epoch 24: 44928/60000 (75%), Loss: 0.6186, Entropy: 5.3226, Reg: 0.0000
+Epoch 24: 59904/60000 (100%), Loss: 0.6164, Entropy: 5.2994, Reg: 0.0000
+Epoch: 24, Loss: 0.616388, Accuracy: 75.87%
+Epoch training time (s): 17.20635724067688
+Defense: teacher
+Epoch 25: 0/60000 (0%), Loss: 0.4582, Entropy: 3.9025, Reg: 0.0000
+Epoch 25: 14976/60000 (25%), Loss: 0.6087, Entropy: 5.2190, Reg: 0.0000
+Epoch 25: 29952/60000 (50%), Loss: 0.6159, Entropy: 5.3350, Reg: 0.0000
+Epoch 25: 44928/60000 (75%), Loss: 0.6106, Entropy: 5.2836, Reg: 0.0000
+Epoch 25: 59904/60000 (100%), Loss: 0.6086, Entropy: 5.2612, Reg: 0.0000
+Epoch: 25, Loss: 0.608531, Accuracy: 76.27%
+Epoch training time (s): 17.17103385925293
+Defense: teacher
+Epoch 26: 0/60000 (0%), Loss: 0.4516, Entropy: 3.8631, Reg: 0.0000
+Epoch 26: 14976/60000 (25%), Loss: 0.6011, Entropy: 5.1815, Reg: 0.0000
+Epoch 26: 29952/60000 (50%), Loss: 0.6084, Entropy: 5.2979, Reg: 0.0000
+Epoch 26: 44928/60000 (75%), Loss: 0.6032, Entropy: 5.2469, Reg: 0.0000
+Epoch 26: 59904/60000 (100%), Loss: 0.6013, Entropy: 5.2258, Reg: 0.0000
+Epoch: 26, Loss: 0.601316, Accuracy: 76.61%
+Epoch training time (s): 17.248480319976807
+Defense: teacher
+Epoch 27: 0/60000 (0%), Loss: 0.4456, Entropy: 3.8240, Reg: 0.0000
+Epoch 27: 14976/60000 (25%), Loss: 0.5942, Entropy: 5.1472, Reg: 0.0000
+Epoch 27: 29952/60000 (50%), Loss: 0.6015, Entropy: 5.2642, Reg: 0.0000
+Epoch 27: 44928/60000 (75%), Loss: 0.5963, Entropy: 5.2143, Reg: 0.0000
+Epoch 27: 59904/60000 (100%), Loss: 0.5947, Entropy: 5.1942, Reg: 0.0000
+Epoch: 27, Loss: 0.594659, Accuracy: 76.89%
+Epoch training time (s): 17.17041039466858
+Defense: teacher
+Epoch 28: 0/60000 (0%), Loss: 0.4406, Entropy: 3.7843, Reg: 0.0000
+Epoch 28: 14976/60000 (25%), Loss: 0.5878, Entropy: 5.1161, Reg: 0.0000
+Epoch 28: 29952/60000 (50%), Loss: 0.5951, Entropy: 5.2338, Reg: 0.0000
+Epoch 28: 44928/60000 (75%), Loss: 0.5900, Entropy: 5.1844, Reg: 0.0000
+Epoch 28: 59904/60000 (100%), Loss: 0.5885, Entropy: 5.1646, Reg: 0.0000
+Epoch: 28, Loss: 0.588459, Accuracy: 77.11%
+Epoch training time (s): 17.134197473526
+Defense: teacher
+Epoch 29: 0/60000 (0%), Loss: 0.4369, Entropy: 3.7521, Reg: 0.0000
+Epoch 29: 14976/60000 (25%), Loss: 0.5818, Entropy: 5.0821, Reg: 0.0000
+Epoch 29: 29952/60000 (50%), Loss: 0.5891, Entropy: 5.1994, Reg: 0.0000
+Epoch 29: 44928/60000 (75%), Loss: 0.5840, Entropy: 5.1511, Reg: 0.0000
+Epoch 29: 59904/60000 (100%), Loss: 0.5826, Entropy: 5.1323, Reg: 0.0000
+Epoch: 29, Loss: 0.582612, Accuracy: 77.49%
+Epoch training time (s): 17.348859310150146
+Defense: teacher
+Epoch 30: 0/60000 (0%), Loss: 0.4336, Entropy: 3.7146, Reg: 0.0000
+Epoch 30: 14976/60000 (25%), Loss: 0.5760, Entropy: 5.0455, Reg: 0.0000
+Epoch 30: 29952/60000 (50%), Loss: 0.5833, Entropy: 5.1618, Reg: 0.0000
+Epoch 30: 44928/60000 (75%), Loss: 0.5782, Entropy: 5.1149, Reg: 0.0000
+Epoch 30: 59904/60000 (100%), Loss: 0.5770, Entropy: 5.0972, Reg: 0.0000
+Epoch: 30, Loss: 0.577014, Accuracy: 77.73%
+Epoch training time (s): 16.596169233322144
+Defense: teacher
+Epoch 31: 0/60000 (0%), Loss: 0.4313, Entropy: 3.7034, Reg: 0.0000
+Epoch 31: 14976/60000 (25%), Loss: 0.5706, Entropy: 5.0100, Reg: 0.0000
+Epoch 31: 29952/60000 (50%), Loss: 0.5777, Entropy: 5.1255, Reg: 0.0000
+Epoch 31: 44928/60000 (75%), Loss: 0.5728, Entropy: 5.0800, Reg: 0.0000
+Epoch 31: 59904/60000 (100%), Loss: 0.5717, Entropy: 5.0641, Reg: 0.0000
+Epoch: 31, Loss: 0.571680, Accuracy: 77.93%
+Epoch training time (s): 16.327484369277954
+Defense: teacher
+Epoch 32: 0/60000 (0%), Loss: 0.4298, Entropy: 3.6989, Reg: 0.0000
+Epoch 32: 14976/60000 (25%), Loss: 0.5653, Entropy: 4.9730, Reg: 0.0000
+Epoch 32: 29952/60000 (50%), Loss: 0.5724, Entropy: 5.0885, Reg: 0.0000
+Epoch 32: 44928/60000 (75%), Loss: 0.5675, Entropy: 5.0445, Reg: 0.0000
+Epoch 32: 59904/60000 (100%), Loss: 0.5666, Entropy: 5.0303, Reg: 0.0000
+Epoch: 32, Loss: 0.566548, Accuracy: 78.21%
+Epoch training time (s): 16.41186499595642
+Defense: teacher
+Epoch 33: 0/60000 (0%), Loss: 0.4270, Entropy: 3.6719, Reg: 0.0000
+Epoch 33: 14976/60000 (25%), Loss: 0.5602, Entropy: 4.9378, Reg: 0.0000
+Epoch 33: 29952/60000 (50%), Loss: 0.5673, Entropy: 5.0552, Reg: 0.0000
+Epoch 33: 44928/60000 (75%), Loss: 0.5624, Entropy: 5.0127, Reg: 0.0000
+Epoch 33: 59904/60000 (100%), Loss: 0.5616, Entropy: 4.9998, Reg: 0.0000
+Epoch: 33, Loss: 0.561611, Accuracy: 78.48%
+Epoch training time (s): 15.870546340942383
+Defense: teacher
+Epoch 34: 0/60000 (0%), Loss: 0.4252, Entropy: 3.6603, Reg: 0.0000
+Epoch 34: 14976/60000 (25%), Loss: 0.5553, Entropy: 4.9035, Reg: 0.0000
+Epoch 34: 29952/60000 (50%), Loss: 0.5624, Entropy: 5.0226, Reg: 0.0000
+Epoch 34: 44928/60000 (75%), Loss: 0.5575, Entropy: 4.9816, Reg: 0.0000
+Epoch 34: 59904/60000 (100%), Loss: 0.5569, Entropy: 4.9700, Reg: 0.0000
+Epoch: 34, Loss: 0.556852, Accuracy: 78.75%
+Epoch training time (s): 16.123250484466553
+Defense: teacher
+Epoch 35: 0/60000 (0%), Loss: 0.4237, Entropy: 3.6446, Reg: 0.0000
+Epoch 35: 14976/60000 (25%), Loss: 0.5506, Entropy: 4.8721, Reg: 0.0000
+Epoch 35: 29952/60000 (50%), Loss: 0.5576, Entropy: 4.9910, Reg: 0.0000
+Epoch 35: 44928/60000 (75%), Loss: 0.5528, Entropy: 4.9502, Reg: 0.0000
+Epoch 35: 59904/60000 (100%), Loss: 0.5522, Entropy: 4.9392, Reg: 0.0000
+Epoch: 35, Loss: 0.552225, Accuracy: 78.93%
+Epoch training time (s): 16.20025134086609
+Defense: teacher
+Epoch 36: 0/60000 (0%), Loss: 0.4231, Entropy: 3.6337, Reg: 0.0000
+Epoch 36: 14976/60000 (25%), Loss: 0.5461, Entropy: 4.8422, Reg: 0.0000
+Epoch 36: 29952/60000 (50%), Loss: 0.5530, Entropy: 4.9595, Reg: 0.0000
+Epoch 36: 44928/60000 (75%), Loss: 0.5482, Entropy: 4.9198, Reg: 0.0000
+Epoch 36: 59904/60000 (100%), Loss: 0.5478, Entropy: 4.9092, Reg: 0.0000
+Epoch: 36, Loss: 0.547766, Accuracy: 79.18%
+Epoch training time (s): 16.064225435256958
+Defense: teacher
+Epoch 37: 0/60000 (0%), Loss: 0.4223, Entropy: 3.6238, Reg: 0.0000
+Epoch 37: 14976/60000 (25%), Loss: 0.5417, Entropy: 4.8104, Reg: 0.0000
+Epoch 37: 29952/60000 (50%), Loss: 0.5485, Entropy: 4.9267, Reg: 0.0000
+Epoch 37: 44928/60000 (75%), Loss: 0.5438, Entropy: 4.8869, Reg: 0.0000
+Epoch 37: 59904/60000 (100%), Loss: 0.5434, Entropy: 4.8738, Reg: 0.0000
+Epoch: 37, Loss: 0.543394, Accuracy: 79.45%
+Epoch training time (s): 16.223411798477173
+Defense: teacher
+Epoch 38: 0/60000 (0%), Loss: 0.4225, Entropy: 3.6544, Reg: 0.0000
+Epoch 38: 14976/60000 (25%), Loss: 0.5373, Entropy: 4.7665, Reg: 0.0000
+Epoch 38: 29952/60000 (50%), Loss: 0.5440, Entropy: 4.8853, Reg: 0.0000
+Epoch 38: 44928/60000 (75%), Loss: 0.5394, Entropy: 4.8491, Reg: 0.0000
+Epoch 38: 59904/60000 (100%), Loss: 0.5390, Entropy: 4.8376, Reg: 0.0000
+Epoch: 38, Loss: 0.539028, Accuracy: 79.58%
+Epoch training time (s): 16.124145984649658
+Defense: teacher
+Epoch 39: 0/60000 (0%), Loss: 0.4219, Entropy: 3.6710, Reg: 0.0000
+Epoch 39: 14976/60000 (25%), Loss: 0.5330, Entropy: 4.7372, Reg: 0.0000
+Epoch 39: 29952/60000 (50%), Loss: 0.5396, Entropy: 4.8570, Reg: 0.0000
+Epoch 39: 44928/60000 (75%), Loss: 0.5351, Entropy: 4.8224, Reg: 0.0000
+Epoch 39: 59904/60000 (100%), Loss: 0.5348, Entropy: 4.8118, Reg: 0.0000
+Epoch: 39, Loss: 0.534844, Accuracy: 79.83%
+Epoch training time (s): 16.39799666404724
+Defense: teacher
+Epoch 40: 0/60000 (0%), Loss: 0.4219, Entropy: 3.7021, Reg: 0.0000
+Epoch 40: 14976/60000 (25%), Loss: 0.5288, Entropy: 4.7110, Reg: 0.0000
+Epoch 40: 29952/60000 (50%), Loss: 0.5354, Entropy: 4.8300, Reg: 0.0000
+Epoch 40: 44928/60000 (75%), Loss: 0.5310, Entropy: 4.7968, Reg: 0.0000
+Epoch 40: 59904/60000 (100%), Loss: 0.5308, Entropy: 4.7869, Reg: 0.0000
+Epoch: 40, Loss: 0.530808, Accuracy: 80.04%
+Epoch training time (s): 16.079622983932495
+Defense: teacher
+Epoch 41: 0/60000 (0%), Loss: 0.4213, Entropy: 3.7179, Reg: 0.0000
+Epoch 41: 14976/60000 (25%), Loss: 0.5249, Entropy: 4.6873, Reg: 0.0000
+Epoch 41: 29952/60000 (50%), Loss: 0.5314, Entropy: 4.8048, Reg: 0.0000
+Epoch 41: 44928/60000 (75%), Loss: 0.5270, Entropy: 4.7728, Reg: 0.0000
+Epoch 41: 59904/60000 (100%), Loss: 0.5269, Entropy: 4.7633, Reg: 0.0000
+Epoch: 41, Loss: 0.526901, Accuracy: 80.16%
+Epoch training time (s): 16.086400985717773
+Defense: teacher
+Epoch 42: 0/60000 (0%), Loss: 0.4211, Entropy: 3.7281, Reg: 0.0000
+Epoch 42: 14976/60000 (25%), Loss: 0.5210, Entropy: 4.6644, Reg: 0.0000
+Epoch 42: 29952/60000 (50%), Loss: 0.5274, Entropy: 4.7809, Reg: 0.0000
+Epoch 42: 44928/60000 (75%), Loss: 0.5231, Entropy: 4.7501, Reg: 0.0000
+Epoch 42: 59904/60000 (100%), Loss: 0.5231, Entropy: 4.7408, Reg: 0.0000
+Epoch: 42, Loss: 0.523101, Accuracy: 80.28%
+Epoch training time (s): 16.386656284332275
+Defense: teacher
+Epoch 43: 0/60000 (0%), Loss: 0.4210, Entropy: 3.7357, Reg: 0.0000
+Epoch 43: 14976/60000 (25%), Loss: 0.5172, Entropy: 4.6407, Reg: 0.0000
+Epoch 43: 29952/60000 (50%), Loss: 0.5236, Entropy: 4.7556, Reg: 0.0000
+Epoch 43: 44928/60000 (75%), Loss: 0.5193, Entropy: 4.7250, Reg: 0.0000
+Epoch 43: 59904/60000 (100%), Loss: 0.5194, Entropy: 4.7164, Reg: 0.0000
+Epoch: 43, Loss: 0.519395, Accuracy: 80.51%
+Epoch training time (s): 15.807786703109741
+Defense: teacher
+Epoch 44: 0/60000 (0%), Loss: 0.4203, Entropy: 3.7280, Reg: 0.0000
+Epoch 44: 14976/60000 (25%), Loss: 0.5134, Entropy: 4.6139, Reg: 0.0000
+Epoch 44: 29952/60000 (50%), Loss: 0.5198, Entropy: 4.7295, Reg: 0.0000
+Epoch 44: 44928/60000 (75%), Loss: 0.5156, Entropy: 4.7003, Reg: 0.0000
+Epoch 44: 59904/60000 (100%), Loss: 0.5157, Entropy: 4.6924, Reg: 0.0000
+Epoch: 44, Loss: 0.515763, Accuracy: 80.68%
+Epoch training time (s): 17.366998434066772
+Defense: teacher
+Epoch 45: 0/60000 (0%), Loss: 0.4199, Entropy: 3.7281, Reg: 0.0000
+Epoch 45: 14976/60000 (25%), Loss: 0.5098, Entropy: 4.5911, Reg: 0.0000
+Epoch 45: 29952/60000 (50%), Loss: 0.5161, Entropy: 4.7043, Reg: 0.0000
+Epoch 45: 44928/60000 (75%), Loss: 0.5120, Entropy: 4.6763, Reg: 0.0000
+Epoch 45: 59904/60000 (100%), Loss: 0.5122, Entropy: 4.6694, Reg: 0.0000
+Epoch: 45, Loss: 0.512212, Accuracy: 80.93%
+Epoch training time (s): 16.824846267700195
+Defense: teacher
+Epoch 46: 0/60000 (0%), Loss: 0.4199, Entropy: 3.7302, Reg: 0.0000
+Epoch 46: 14976/60000 (25%), Loss: 0.5062, Entropy: 4.5649, Reg: 0.0000
+Epoch 46: 29952/60000 (50%), Loss: 0.5124, Entropy: 4.6742, Reg: 0.0000
+Epoch 46: 44928/60000 (75%), Loss: 0.5084, Entropy: 4.6490, Reg: 0.0000
+Epoch 46: 59904/60000 (100%), Loss: 0.5086, Entropy: 4.6427, Reg: 0.0000
+Epoch: 46, Loss: 0.508616, Accuracy: 80.97%
+Epoch training time (s): 16.627002954483032
+Defense: teacher
+Epoch 47: 0/60000 (0%), Loss: 0.4202, Entropy: 3.7446, Reg: 0.0000
+Epoch 47: 14976/60000 (25%), Loss: 0.5026, Entropy: 4.5377, Reg: 0.0000
+Epoch 47: 29952/60000 (50%), Loss: 0.5087, Entropy: 4.6484, Reg: 0.0000
+Epoch 47: 44928/60000 (75%), Loss: 0.5048, Entropy: 4.6255, Reg: 0.0000
+Epoch 47: 59904/60000 (100%), Loss: 0.5051, Entropy: 4.6211, Reg: 0.0000
+Epoch: 47, Loss: 0.505138, Accuracy: 81.19%
+Epoch training time (s): 16.684886932373047
+Defense: teacher
+Epoch 48: 0/60000 (0%), Loss: 0.4203, Entropy: 3.7439, Reg: 0.0000
+Epoch 48: 14976/60000 (25%), Loss: 0.4991, Entropy: 4.5166, Reg: 0.0000
+Epoch 48: 29952/60000 (50%), Loss: 0.5052, Entropy: 4.6256, Reg: 0.0000
+Epoch 48: 44928/60000 (75%), Loss: 0.5015, Entropy: 4.6044, Reg: 0.0000
+Epoch 48: 59904/60000 (100%), Loss: 0.5018, Entropy: 4.6006, Reg: 0.0000
+Epoch: 48, Loss: 0.501788, Accuracy: 81.31%
+Epoch training time (s): 16.50485920906067
+Defense: teacher
+Epoch 49: 0/60000 (0%), Loss: 0.4207, Entropy: 3.7371, Reg: 0.0000
+Epoch 49: 14976/60000 (25%), Loss: 0.4958, Entropy: 4.4952, Reg: 0.0000
+Epoch 49: 29952/60000 (50%), Loss: 0.5018, Entropy: 4.6041, Reg: 0.0000
+Epoch 49: 44928/60000 (75%), Loss: 0.4981, Entropy: 4.5851, Reg: 0.0000
+Epoch 49: 59904/60000 (100%), Loss: 0.4985, Entropy: 4.5819, Reg: 0.0000
+Epoch: 49, Loss: 0.498500, Accuracy: 81.42%
+Epoch training time (s): 17.006543159484863
+Defense: teacher
+Epoch 50: 0/60000 (0%), Loss: 0.4202, Entropy: 3.7198, Reg: 0.0000
+Epoch 50: 14976/60000 (25%), Loss: 0.4925, Entropy: 4.4784, Reg: 0.0000
+Epoch 50: 29952/60000 (50%), Loss: 0.4985, Entropy: 4.5840, Reg: 0.0000
+Epoch 50: 44928/60000 (75%), Loss: 0.4949, Entropy: 4.5666, Reg: 0.0000
+Epoch 50: 59904/60000 (100%), Loss: 0.4953, Entropy: 4.5634, Reg: 0.0000
+Epoch: 50, Loss: 0.495312, Accuracy: 81.51%
+Epoch training time (s): 16.737956762313843
+Defense: teacher
+Epoch 51: 0/60000 (0%), Loss: 0.4205, Entropy: 3.7095, Reg: 0.0000
+Epoch 51: 14976/60000 (25%), Loss: 0.4894, Entropy: 4.4599, Reg: 0.0000
+Epoch 51: 29952/60000 (50%), Loss: 0.4952, Entropy: 4.5623, Reg: 0.0000
+Epoch 51: 44928/60000 (75%), Loss: 0.4917, Entropy: 4.5460, Reg: 0.0000
+Epoch 51: 59904/60000 (100%), Loss: 0.4922, Entropy: 4.5432, Reg: 0.0000
+Epoch: 51, Loss: 0.492178, Accuracy: 81.68%
+Epoch training time (s): 16.72737979888916
+Training time (s): 837.8802461624146
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_teacher/seed_-4
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -4
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 7492.0/10000 (74.92%)
+name: fashion_lenet_teacher/seed_-4
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -4
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6592.0/10000 (65.92%)
+name: fashion_lenet_teacher/seed_-4
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -4
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 4841.0/10000 (48.41%)
+name: fashion_lenet_teacher/seed_-4
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -4
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 3244.0/10000 (32.44%)
+=====================================================================================================
+name: fashion_lenet_teacher/seed_-3
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -3
+gpu_number: 4
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: teacher
+Epoch 1: 0/60000 (0%), Loss: 2.3032, Entropy: 2.3159, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.3028, Entropy: 2.3078, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 2.3027, Entropy: 2.3061, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 2.3026, Entropy: 2.3046, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 2.3025, Entropy: 2.3032, Reg: 0.0000
+Epoch: 1, Loss: 2.302533, Accuracy: 10.14%
+Epoch training time (s): 16.055273294448853
+Defense: teacher
+Epoch 2: 0/60000 (0%), Loss: 2.3026, Entropy: 2.3050, Reg: 0.0000
+Epoch 2: 14976/60000 (25%), Loss: 2.3022, Entropy: 2.2965, Reg: 0.0000
+Epoch 2: 29952/60000 (50%), Loss: 2.3021, Entropy: 2.2954, Reg: 0.0000
+Epoch 2: 44928/60000 (75%), Loss: 2.3021, Entropy: 2.2944, Reg: 0.0000
+Epoch 2: 59904/60000 (100%), Loss: 2.3020, Entropy: 2.2934, Reg: 0.0000
+Epoch: 2, Loss: 2.302036, Accuracy: 10.08%
+Epoch training time (s): 15.905425071716309
+Defense: teacher
+Epoch 3: 0/60000 (0%), Loss: 2.3023, Entropy: 2.2980, Reg: 0.0000
+Epoch 3: 14976/60000 (25%), Loss: 2.3018, Entropy: 2.2878, Reg: 0.0000
+Epoch 3: 29952/60000 (50%), Loss: 2.3017, Entropy: 2.2867, Reg: 0.0000
+Epoch 3: 44928/60000 (75%), Loss: 2.3017, Entropy: 2.2857, Reg: 0.0000
+Epoch 3: 59904/60000 (100%), Loss: 2.3016, Entropy: 2.2845, Reg: 0.0000
+Epoch: 3, Loss: 2.301591, Accuracy: 10.07%
+Epoch training time (s): 16.00585174560547
+Defense: teacher
+Epoch 4: 0/60000 (0%), Loss: 2.3019, Entropy: 2.2905, Reg: 0.0000
+Epoch 4: 14976/60000 (25%), Loss: 2.3013, Entropy: 2.2782, Reg: 0.0000
+Epoch 4: 29952/60000 (50%), Loss: 2.3012, Entropy: 2.2771, Reg: 0.0000
+Epoch 4: 44928/60000 (75%), Loss: 2.3011, Entropy: 2.2758, Reg: 0.0000
+Epoch 4: 59904/60000 (100%), Loss: 2.3011, Entropy: 2.2743, Reg: 0.0000
+Epoch: 4, Loss: 2.301066, Accuracy: 14.35%
+Epoch training time (s): 15.925907611846924
+Defense: teacher
+Epoch 5: 0/60000 (0%), Loss: 2.3014, Entropy: 2.2816, Reg: 0.0000
+Epoch 5: 14976/60000 (25%), Loss: 2.3006, Entropy: 2.2659, Reg: 0.0000
+Epoch 5: 29952/60000 (50%), Loss: 2.3006, Entropy: 2.2644, Reg: 0.0000
+Epoch 5: 44928/60000 (75%), Loss: 2.3005, Entropy: 2.2626, Reg: 0.0000
+Epoch 5: 59904/60000 (100%), Loss: 2.3004, Entropy: 2.2607, Reg: 0.0000
+Epoch: 5, Loss: 2.300363, Accuracy: 18.01%
+Epoch training time (s): 15.696069240570068
+Defense: teacher
+Epoch 6: 0/60000 (0%), Loss: 2.3008, Entropy: 2.2705, Reg: 0.0000
+Epoch 6: 14976/60000 (25%), Loss: 2.2998, Entropy: 2.2499, Reg: 0.0000
+Epoch 6: 29952/60000 (50%), Loss: 2.2997, Entropy: 2.2482, Reg: 0.0000
+Epoch 6: 44928/60000 (75%), Loss: 2.2996, Entropy: 2.2460, Reg: 0.0000
+Epoch 6: 59904/60000 (100%), Loss: 2.2995, Entropy: 2.2435, Reg: 0.0000
+Epoch: 6, Loss: 2.299459, Accuracy: 19.19%
+Epoch training time (s): 16.029245376586914
+Defense: teacher
+Epoch 7: 0/60000 (0%), Loss: 2.3001, Entropy: 2.2563, Reg: 0.0000
+Epoch 7: 14976/60000 (25%), Loss: 2.2987, Entropy: 2.2295, Reg: 0.0000
+Epoch 7: 29952/60000 (50%), Loss: 2.2986, Entropy: 2.2274, Reg: 0.0000
+Epoch 7: 44928/60000 (75%), Loss: 2.2984, Entropy: 2.2244, Reg: 0.0000
+Epoch 7: 59904/60000 (100%), Loss: 2.2983, Entropy: 2.2210, Reg: 0.0000
+Epoch: 7, Loss: 2.298260, Accuracy: 19.65%
+Epoch training time (s): 16.004165172576904
+Defense: teacher
+Epoch 8: 0/60000 (0%), Loss: 2.2990, Entropy: 2.2373, Reg: 0.0000
+Epoch 8: 14976/60000 (25%), Loss: 2.2972, Entropy: 2.2023, Reg: 0.0000
+Epoch 8: 29952/60000 (50%), Loss: 2.2971, Entropy: 2.1995, Reg: 0.0000
+Epoch 8: 44928/60000 (75%), Loss: 2.2968, Entropy: 2.1952, Reg: 0.0000
+Epoch 8: 59904/60000 (100%), Loss: 2.2966, Entropy: 2.1905, Reg: 0.0000
+Epoch: 8, Loss: 2.296581, Accuracy: 22.59%
+Epoch training time (s): 16.119710206985474
+Defense: teacher
+Epoch 9: 0/60000 (0%), Loss: 2.2975, Entropy: 2.2108, Reg: 0.0000
+Epoch 9: 14976/60000 (25%), Loss: 2.2951, Entropy: 2.1643, Reg: 0.0000
+Epoch 9: 29952/60000 (50%), Loss: 2.2949, Entropy: 2.1604, Reg: 0.0000
+Epoch 9: 44928/60000 (75%), Loss: 2.2945, Entropy: 2.1544, Reg: 0.0000
+Epoch 9: 59904/60000 (100%), Loss: 2.2941, Entropy: 2.1478, Reg: 0.0000
+Epoch: 9, Loss: 2.294122, Accuracy: 29.45%
+Epoch training time (s): 16.09781289100647
+Defense: teacher
+Epoch 10: 0/60000 (0%), Loss: 2.2951, Entropy: 2.1734, Reg: 0.0000
+Epoch 10: 14976/60000 (25%), Loss: 2.2919, Entropy: 2.1106, Reg: 0.0000
+Epoch 10: 29952/60000 (50%), Loss: 2.2915, Entropy: 2.1050, Reg: 0.0000
+Epoch 10: 44928/60000 (75%), Loss: 2.2910, Entropy: 2.0962, Reg: 0.0000
+Epoch 10: 59904/60000 (100%), Loss: 2.2903, Entropy: 2.0865, Reg: 0.0000
+Epoch: 10, Loss: 2.290331, Accuracy: 36.19%
+Epoch training time (s): 15.850772380828857
+Defense: teacher
+Epoch 11: 0/60000 (0%), Loss: 2.2913, Entropy: 2.1193, Reg: 0.0000
+Epoch 11: 14976/60000 (25%), Loss: 2.2867, Entropy: 2.0323, Reg: 0.0000
+Epoch 11: 29952/60000 (50%), Loss: 2.2861, Entropy: 2.0242, Reg: 0.0000
+Epoch 11: 44928/60000 (75%), Loss: 2.2851, Entropy: 2.0110, Reg: 0.0000
+Epoch 11: 59904/60000 (100%), Loss: 2.2840, Entropy: 1.9968, Reg: 0.0000
+Epoch: 11, Loss: 2.284016, Accuracy: 39.52%
+Epoch training time (s): 16.140446662902832
+Defense: teacher
+Epoch 12: 0/60000 (0%), Loss: 2.2844, Entropy: 2.0419, Reg: 0.0000
+Epoch 12: 14976/60000 (25%), Loss: 2.2777, Entropy: 1.9174, Reg: 0.0000
+Epoch 12: 29952/60000 (50%), Loss: 2.2764, Entropy: 1.9058, Reg: 0.0000
+Epoch 12: 44928/60000 (75%), Loss: 2.2745, Entropy: 1.8866, Reg: 0.0000
+Epoch 12: 59904/60000 (100%), Loss: 2.2723, Entropy: 1.8664, Reg: 0.0000
+Epoch: 12, Loss: 2.272265, Accuracy: 40.16%
+Epoch training time (s): 16.16653275489807
+Defense: teacher
+Epoch 13: 0/60000 (0%), Loss: 2.2703, Entropy: 1.9419, Reg: 0.0000
+Epoch 13: 14976/60000 (25%), Loss: 2.2593, Entropy: 1.7564, Reg: 0.0000
+Epoch 13: 29952/60000 (50%), Loss: 2.2563, Entropy: 1.7439, Reg: 0.0000
+Epoch 13: 44928/60000 (75%), Loss: 2.2520, Entropy: 1.7202, Reg: 0.0000
+Epoch 13: 59904/60000 (100%), Loss: 2.2469, Entropy: 1.6986, Reg: 0.0000
+Epoch: 13, Loss: 2.246909, Accuracy: 39.91%
+Epoch training time (s): 16.314817428588867
+Defense: teacher
+Epoch 14: 0/60000 (0%), Loss: 2.2364, Entropy: 1.8592, Reg: 0.0000
+Epoch 14: 14976/60000 (25%), Loss: 2.2159, Entropy: 1.5955, Reg: 0.0000
+Epoch 14: 29952/60000 (50%), Loss: 2.2073, Entropy: 1.6010, Reg: 0.0000
+Epoch 14: 44928/60000 (75%), Loss: 2.1952, Entropy: 1.5907, Reg: 0.0000
+Epoch 14: 59904/60000 (100%), Loss: 2.1802, Entropy: 1.5956, Reg: 0.0000
+Epoch: 14, Loss: 2.180154, Accuracy: 41.21%
+Epoch training time (s): 16.419522285461426
+Defense: teacher
+Epoch 15: 0/60000 (0%), Loss: 2.1332, Entropy: 1.9289, Reg: 0.0000
+Epoch 15: 14976/60000 (25%), Loss: 2.0848, Entropy: 1.6968, Reg: 0.0000
+Epoch 15: 29952/60000 (50%), Loss: 2.0542, Entropy: 1.7801, Reg: 0.0000
+Epoch 15: 44928/60000 (75%), Loss: 2.0121, Entropy: 1.8459, Reg: 0.0000
+Epoch 15: 59904/60000 (100%), Loss: 1.9613, Entropy: 1.9757, Reg: 0.0000
+Epoch: 15, Loss: 1.961130, Accuracy: 53.15%
+Epoch training time (s): 16.428234100341797
+Defense: teacher
+Epoch 16: 0/60000 (0%), Loss: 1.7817, Entropy: 2.7749, Reg: 0.0000
+Epoch 16: 14976/60000 (25%), Loss: 1.6688, Entropy: 2.7286, Reg: 0.0000
+Epoch 16: 29952/60000 (50%), Loss: 1.6044, Entropy: 2.8500, Reg: 0.0000
+Epoch 16: 44928/60000 (75%), Loss: 1.5357, Entropy: 2.9382, Reg: 0.0000
+Epoch 16: 59904/60000 (100%), Loss: 1.4728, Entropy: 3.0754, Reg: 0.0000
+Epoch: 16, Loss: 1.472565, Accuracy: 59.27%
+Epoch training time (s): 16.128327131271362
+Defense: teacher
+Epoch 17: 0/60000 (0%), Loss: 1.2743, Entropy: 3.4425, Reg: 0.0000
+Epoch 17: 14976/60000 (25%), Loss: 1.1959, Entropy: 3.6732, Reg: 0.0000
+Epoch 17: 29952/60000 (50%), Loss: 1.1667, Entropy: 3.8572, Reg: 0.0000
+Epoch 17: 44928/60000 (75%), Loss: 1.1332, Entropy: 3.9768, Reg: 0.0000
+Epoch 17: 59904/60000 (100%), Loss: 1.1041, Entropy: 4.1063, Reg: 0.0000
+Epoch: 17, Loss: 1.103999, Accuracy: 62.92%
+Epoch training time (s): 16.242704153060913
+Defense: teacher
+Epoch 18: 0/60000 (0%), Loss: 1.0007, Entropy: 4.1887, Reg: 0.0000
+Epoch 18: 14976/60000 (25%), Loss: 0.9873, Entropy: 4.7015, Reg: 0.0000
+Epoch 18: 29952/60000 (50%), Loss: 0.9788, Entropy: 4.8755, Reg: 0.0000
+Epoch 18: 44928/60000 (75%), Loss: 0.9615, Entropy: 4.9330, Reg: 0.0000
+Epoch 18: 59904/60000 (100%), Loss: 0.9460, Entropy: 4.9876, Reg: 0.0000
+Epoch: 18, Loss: 0.945965, Accuracy: 65.72%
+Epoch training time (s): 15.60084867477417
+Defense: teacher
+Epoch 19: 0/60000 (0%), Loss: 0.8644, Entropy: 4.3706, Reg: 0.0000
+Epoch 19: 14976/60000 (25%), Loss: 0.8889, Entropy: 5.3023, Reg: 0.0000
+Epoch 19: 29952/60000 (50%), Loss: 0.8867, Entropy: 5.4339, Reg: 0.0000
+Epoch 19: 44928/60000 (75%), Loss: 0.8742, Entropy: 5.4302, Reg: 0.0000
+Epoch 19: 59904/60000 (100%), Loss: 0.8631, Entropy: 5.4332, Reg: 0.0000
+Epoch: 19, Loss: 0.863127, Accuracy: 68.57%
+Epoch training time (s): 15.998714208602905
+Defense: teacher
+Epoch 20: 0/60000 (0%), Loss: 0.7748, Entropy: 4.3711, Reg: 0.0000
+Epoch 20: 14976/60000 (25%), Loss: 0.8262, Entropy: 5.5560, Reg: 0.0000
+Epoch 20: 29952/60000 (50%), Loss: 0.8266, Entropy: 5.6684, Reg: 0.0000
+Epoch 20: 44928/60000 (75%), Loss: 0.8163, Entropy: 5.6337, Reg: 0.0000
+Epoch 20: 59904/60000 (100%), Loss: 0.8076, Entropy: 5.6134, Reg: 0.0000
+Epoch: 20, Loss: 0.807552, Accuracy: 70.49%
+Epoch training time (s): 15.991066455841064
+Defense: teacher
+Epoch 21: 0/60000 (0%), Loss: 0.7074, Entropy: 4.3768, Reg: 0.0000
+Epoch 21: 14976/60000 (25%), Loss: 0.7806, Entropy: 5.6325, Reg: 0.0000
+Epoch 21: 29952/60000 (50%), Loss: 0.7827, Entropy: 5.7350, Reg: 0.0000
+Epoch 21: 44928/60000 (75%), Loss: 0.7738, Entropy: 5.6875, Reg: 0.0000
+Epoch 21: 59904/60000 (100%), Loss: 0.7666, Entropy: 5.6572, Reg: 0.0000
+Epoch: 21, Loss: 0.766545, Accuracy: 71.63%
+Epoch training time (s): 15.955681562423706
+Defense: teacher
+Epoch 22: 0/60000 (0%), Loss: 0.6540, Entropy: 4.3744, Reg: 0.0000
+Epoch 22: 14976/60000 (25%), Loss: 0.7457, Entropy: 5.6295, Reg: 0.0000
+Epoch 22: 29952/60000 (50%), Loss: 0.7491, Entropy: 5.7267, Reg: 0.0000
+Epoch 22: 44928/60000 (75%), Loss: 0.7410, Entropy: 5.6720, Reg: 0.0000
+Epoch 22: 59904/60000 (100%), Loss: 0.7350, Entropy: 5.6370, Reg: 0.0000
+Epoch: 22, Loss: 0.734949, Accuracy: 72.62%
+Epoch training time (s): 17.05427837371826
+Defense: teacher
+Epoch 23: 0/60000 (0%), Loss: 0.6109, Entropy: 4.3198, Reg: 0.0000
+Epoch 23: 14976/60000 (25%), Loss: 0.7180, Entropy: 5.5839, Reg: 0.0000
+Epoch 23: 29952/60000 (50%), Loss: 0.7222, Entropy: 5.6766, Reg: 0.0000
+Epoch 23: 44928/60000 (75%), Loss: 0.7149, Entropy: 5.6194, Reg: 0.0000
+Epoch 23: 59904/60000 (100%), Loss: 0.7097, Entropy: 5.5829, Reg: 0.0000
+Epoch: 23, Loss: 0.709651, Accuracy: 73.33%
+Epoch training time (s): 16.63870859146118
+Defense: teacher
+Epoch 24: 0/60000 (0%), Loss: 0.5772, Entropy: 4.2375, Reg: 0.0000
+Epoch 24: 14976/60000 (25%), Loss: 0.6953, Entropy: 5.5135, Reg: 0.0000
+Epoch 24: 29952/60000 (50%), Loss: 0.7003, Entropy: 5.6115, Reg: 0.0000
+Epoch 24: 44928/60000 (75%), Loss: 0.6935, Entropy: 5.5589, Reg: 0.0000
+Epoch 24: 59904/60000 (100%), Loss: 0.6890, Entropy: 5.5262, Reg: 0.0000
+Epoch: 24, Loss: 0.688999, Accuracy: 73.95%
+Epoch training time (s): 16.847036838531494
+Defense: teacher
+Epoch 25: 0/60000 (0%), Loss: 0.5483, Entropy: 4.1321, Reg: 0.0000
+Epoch 25: 14976/60000 (25%), Loss: 0.6768, Entropy: 5.4602, Reg: 0.0000
+Epoch 25: 29952/60000 (50%), Loss: 0.6823, Entropy: 5.5617, Reg: 0.0000
+Epoch 25: 44928/60000 (75%), Loss: 0.6759, Entropy: 5.5106, Reg: 0.0000
+Epoch 25: 59904/60000 (100%), Loss: 0.6719, Entropy: 5.4795, Reg: 0.0000
+Epoch: 25, Loss: 0.671889, Accuracy: 74.45%
+Epoch training time (s): 16.958900451660156
+Defense: teacher
+Epoch 26: 0/60000 (0%), Loss: 0.5251, Entropy: 4.0510, Reg: 0.0000
+Epoch 26: 14976/60000 (25%), Loss: 0.6611, Entropy: 5.4068, Reg: 0.0000
+Epoch 26: 29952/60000 (50%), Loss: 0.6670, Entropy: 5.5104, Reg: 0.0000
+Epoch 26: 44928/60000 (75%), Loss: 0.6609, Entropy: 5.4594, Reg: 0.0000
+Epoch 26: 59904/60000 (100%), Loss: 0.6573, Entropy: 5.4294, Reg: 0.0000
+Epoch: 26, Loss: 0.657232, Accuracy: 74.69%
+Epoch training time (s): 16.593475341796875
+Defense: teacher
+Epoch 27: 0/60000 (0%), Loss: 0.5060, Entropy: 3.9825, Reg: 0.0000
+Epoch 27: 14976/60000 (25%), Loss: 0.6475, Entropy: 5.3527, Reg: 0.0000
+Epoch 27: 29952/60000 (50%), Loss: 0.6536, Entropy: 5.4584, Reg: 0.0000
+Epoch 27: 44928/60000 (75%), Loss: 0.6477, Entropy: 5.4092, Reg: 0.0000
+Epoch 27: 59904/60000 (100%), Loss: 0.6445, Entropy: 5.3815, Reg: 0.0000
+Epoch: 27, Loss: 0.644436, Accuracy: 75.03%
+Epoch training time (s): 17.70832896232605
+Defense: teacher
+Epoch 28: 0/60000 (0%), Loss: 0.4905, Entropy: 3.9371, Reg: 0.0000
+Epoch 28: 14976/60000 (25%), Loss: 0.6355, Entropy: 5.3058, Reg: 0.0000
+Epoch 28: 29952/60000 (50%), Loss: 0.6419, Entropy: 5.4105, Reg: 0.0000
+Epoch 28: 44928/60000 (75%), Loss: 0.6361, Entropy: 5.3617, Reg: 0.0000
+Epoch 28: 59904/60000 (100%), Loss: 0.6332, Entropy: 5.3353, Reg: 0.0000
+Epoch: 28, Loss: 0.633118, Accuracy: 75.41%
+Epoch training time (s): 16.77749490737915
+Defense: teacher
+Epoch 29: 0/60000 (0%), Loss: 0.4777, Entropy: 3.8968, Reg: 0.0000
+Epoch 29: 14976/60000 (25%), Loss: 0.6249, Entropy: 5.2590, Reg: 0.0000
+Epoch 29: 29952/60000 (50%), Loss: 0.6313, Entropy: 5.3592, Reg: 0.0000
+Epoch 29: 44928/60000 (75%), Loss: 0.6257, Entropy: 5.3070, Reg: 0.0000
+Epoch 29: 59904/60000 (100%), Loss: 0.6229, Entropy: 5.2802, Reg: 0.0000
+Epoch: 29, Loss: 0.622871, Accuracy: 75.80%
+Epoch training time (s): 18.034496307373047
+Defense: teacher
+Epoch 30: 0/60000 (0%), Loss: 0.4674, Entropy: 3.8665, Reg: 0.0000
+Epoch 30: 14976/60000 (25%), Loss: 0.6150, Entropy: 5.1966, Reg: 0.0000
+Epoch 30: 29952/60000 (50%), Loss: 0.6214, Entropy: 5.2917, Reg: 0.0000
+Epoch 30: 44928/60000 (75%), Loss: 0.6159, Entropy: 5.2395, Reg: 0.0000
+Epoch 30: 59904/60000 (100%), Loss: 0.6134, Entropy: 5.2120, Reg: 0.0000
+Epoch: 30, Loss: 0.613347, Accuracy: 76.20%
+Epoch training time (s): 17.59303116798401
+Defense: teacher
+Epoch 31: 0/60000 (0%), Loss: 0.4584, Entropy: 3.8245, Reg: 0.0000
+Epoch 31: 14976/60000 (25%), Loss: 0.6056, Entropy: 5.1193, Reg: 0.0000
+Epoch 31: 29952/60000 (50%), Loss: 0.6122, Entropy: 5.2256, Reg: 0.0000
+Epoch 31: 44928/60000 (75%), Loss: 0.6068, Entropy: 5.1809, Reg: 0.0000
+Epoch 31: 59904/60000 (100%), Loss: 0.6045, Entropy: 5.1591, Reg: 0.0000
+Epoch: 31, Loss: 0.604492, Accuracy: 76.58%
+Epoch training time (s): 15.725714206695557
+Defense: teacher
+Epoch 32: 0/60000 (0%), Loss: 0.4499, Entropy: 3.7804, Reg: 0.0000
+Epoch 32: 14976/60000 (25%), Loss: 0.5973, Entropy: 5.0809, Reg: 0.0000
+Epoch 32: 29952/60000 (50%), Loss: 0.6039, Entropy: 5.1881, Reg: 0.0000
+Epoch 32: 44928/60000 (75%), Loss: 0.5986, Entropy: 5.1430, Reg: 0.0000
+Epoch 32: 59904/60000 (100%), Loss: 0.5965, Entropy: 5.1222, Reg: 0.0000
+Epoch: 32, Loss: 0.596462, Accuracy: 76.89%
+Epoch training time (s): 16.079169034957886
+Defense: teacher
+Epoch 33: 0/60000 (0%), Loss: 0.4429, Entropy: 3.7414, Reg: 0.0000
+Epoch 33: 14976/60000 (25%), Loss: 0.5896, Entropy: 5.0445, Reg: 0.0000
+Epoch 33: 29952/60000 (50%), Loss: 0.5962, Entropy: 5.1523, Reg: 0.0000
+Epoch 33: 44928/60000 (75%), Loss: 0.5910, Entropy: 5.1071, Reg: 0.0000
+Epoch 33: 59904/60000 (100%), Loss: 0.5891, Entropy: 5.0870, Reg: 0.0000
+Epoch: 33, Loss: 0.589064, Accuracy: 77.18%
+Epoch training time (s): 16.196120977401733
+Defense: teacher
+Epoch 34: 0/60000 (0%), Loss: 0.4371, Entropy: 3.7146, Reg: 0.0000
+Epoch 34: 14976/60000 (25%), Loss: 0.5825, Entropy: 5.0080, Reg: 0.0000
+Epoch 34: 29952/60000 (50%), Loss: 0.5891, Entropy: 5.1150, Reg: 0.0000
+Epoch 34: 44928/60000 (75%), Loss: 0.5839, Entropy: 5.0705, Reg: 0.0000
+Epoch 34: 59904/60000 (100%), Loss: 0.5822, Entropy: 5.0510, Reg: 0.0000
+Epoch: 34, Loss: 0.582173, Accuracy: 77.61%
+Epoch training time (s): 16.3694269657135
+Defense: teacher
+Epoch 35: 0/60000 (0%), Loss: 0.4324, Entropy: 3.7081, Reg: 0.0000
+Epoch 35: 14976/60000 (25%), Loss: 0.5758, Entropy: 4.9699, Reg: 0.0000
+Epoch 35: 29952/60000 (50%), Loss: 0.5823, Entropy: 5.0772, Reg: 0.0000
+Epoch 35: 44928/60000 (75%), Loss: 0.5773, Entropy: 5.0338, Reg: 0.0000
+Epoch 35: 59904/60000 (100%), Loss: 0.5757, Entropy: 5.0147, Reg: 0.0000
+Epoch: 35, Loss: 0.575676, Accuracy: 77.80%
+Epoch training time (s): 16.087651252746582
+Defense: teacher
+Epoch 36: 0/60000 (0%), Loss: 0.4284, Entropy: 3.7185, Reg: 0.0000
+Epoch 36: 14976/60000 (25%), Loss: 0.5694, Entropy: 4.9320, Reg: 0.0000
+Epoch 36: 29952/60000 (50%), Loss: 0.5759, Entropy: 5.0374, Reg: 0.0000
+Epoch 36: 44928/60000 (75%), Loss: 0.5710, Entropy: 4.9943, Reg: 0.0000
+Epoch 36: 59904/60000 (100%), Loss: 0.5695, Entropy: 4.9746, Reg: 0.0000
+Epoch: 36, Loss: 0.569471, Accuracy: 78.08%
+Epoch training time (s): 15.93774962425232
+Defense: teacher
+Epoch 37: 0/60000 (0%), Loss: 0.4258, Entropy: 3.7414, Reg: 0.0000
+Epoch 37: 14976/60000 (25%), Loss: 0.5633, Entropy: 4.8871, Reg: 0.0000
+Epoch 37: 29952/60000 (50%), Loss: 0.5697, Entropy: 4.9947, Reg: 0.0000
+Epoch 37: 44928/60000 (75%), Loss: 0.5649, Entropy: 4.9546, Reg: 0.0000
+Epoch 37: 59904/60000 (100%), Loss: 0.5635, Entropy: 4.9367, Reg: 0.0000
+Epoch: 37, Loss: 0.563535, Accuracy: 78.37%
+Epoch training time (s): 16.06067657470703
+Defense: teacher
+Epoch 38: 0/60000 (0%), Loss: 0.4224, Entropy: 3.7520, Reg: 0.0000
+Epoch 38: 14976/60000 (25%), Loss: 0.5574, Entropy: 4.8488, Reg: 0.0000
+Epoch 38: 29952/60000 (50%), Loss: 0.5639, Entropy: 4.9569, Reg: 0.0000
+Epoch 38: 44928/60000 (75%), Loss: 0.5591, Entropy: 4.9181, Reg: 0.0000
+Epoch 38: 59904/60000 (100%), Loss: 0.5579, Entropy: 4.9009, Reg: 0.0000
+Epoch: 38, Loss: 0.557871, Accuracy: 78.61%
+Epoch training time (s): 16.157817125320435
+Defense: teacher
+Epoch 39: 0/60000 (0%), Loss: 0.4198, Entropy: 3.7631, Reg: 0.0000
+Epoch 39: 14976/60000 (25%), Loss: 0.5518, Entropy: 4.8115, Reg: 0.0000
+Epoch 39: 29952/60000 (50%), Loss: 0.5582, Entropy: 4.9202, Reg: 0.0000
+Epoch 39: 44928/60000 (75%), Loss: 0.5535, Entropy: 4.8829, Reg: 0.0000
+Epoch 39: 59904/60000 (100%), Loss: 0.5525, Entropy: 4.8667, Reg: 0.0000
+Epoch: 39, Loss: 0.552458, Accuracy: 78.92%
+Epoch training time (s): 15.739733934402466
+Defense: teacher
+Epoch 40: 0/60000 (0%), Loss: 0.4176, Entropy: 3.7639, Reg: 0.0000
+Epoch 40: 14976/60000 (25%), Loss: 0.5465, Entropy: 4.7739, Reg: 0.0000
+Epoch 40: 29952/60000 (50%), Loss: 0.5528, Entropy: 4.8831, Reg: 0.0000
+Epoch 40: 44928/60000 (75%), Loss: 0.5482, Entropy: 4.8474, Reg: 0.0000
+Epoch 40: 59904/60000 (100%), Loss: 0.5473, Entropy: 4.8329, Reg: 0.0000
+Epoch: 40, Loss: 0.547255, Accuracy: 79.20%
+Epoch training time (s): 16.62011694908142
+Defense: teacher
+Epoch 41: 0/60000 (0%), Loss: 0.4162, Entropy: 3.7753, Reg: 0.0000
+Epoch 41: 14976/60000 (25%), Loss: 0.5413, Entropy: 4.7375, Reg: 0.0000
+Epoch 41: 29952/60000 (50%), Loss: 0.5476, Entropy: 4.8462, Reg: 0.0000
+Epoch 41: 44928/60000 (75%), Loss: 0.5431, Entropy: 4.8124, Reg: 0.0000
+Epoch 41: 59904/60000 (100%), Loss: 0.5422, Entropy: 4.7998, Reg: 0.0000
+Epoch: 41, Loss: 0.542242, Accuracy: 79.46%
+Epoch training time (s): 16.341297149658203
+Defense: teacher
+Epoch 42: 0/60000 (0%), Loss: 0.4154, Entropy: 3.7930, Reg: 0.0000
+Epoch 42: 14976/60000 (25%), Loss: 0.5363, Entropy: 4.7002, Reg: 0.0000
+Epoch 42: 29952/60000 (50%), Loss: 0.5425, Entropy: 4.8094, Reg: 0.0000
+Epoch 42: 44928/60000 (75%), Loss: 0.5381, Entropy: 4.7781, Reg: 0.0000
+Epoch 42: 59904/60000 (100%), Loss: 0.5374, Entropy: 4.7672, Reg: 0.0000
+Epoch: 42, Loss: 0.537386, Accuracy: 79.78%
+Epoch training time (s): 16.051384687423706
+Defense: teacher
+Epoch 43: 0/60000 (0%), Loss: 0.4152, Entropy: 3.8030, Reg: 0.0000
+Epoch 43: 14976/60000 (25%), Loss: 0.5314, Entropy: 4.6618, Reg: 0.0000
+Epoch 43: 29952/60000 (50%), Loss: 0.5376, Entropy: 4.7728, Reg: 0.0000
+Epoch 43: 44928/60000 (75%), Loss: 0.5333, Entropy: 4.7430, Reg: 0.0000
+Epoch 43: 59904/60000 (100%), Loss: 0.5327, Entropy: 4.7335, Reg: 0.0000
+Epoch: 43, Loss: 0.532670, Accuracy: 79.90%
+Epoch training time (s): 16.315353393554688
+Defense: teacher
+Epoch 44: 0/60000 (0%), Loss: 0.4150, Entropy: 3.8076, Reg: 0.0000
+Epoch 44: 14976/60000 (25%), Loss: 0.5266, Entropy: 4.6261, Reg: 0.0000
+Epoch 44: 29952/60000 (50%), Loss: 0.5329, Entropy: 4.7392, Reg: 0.0000
+Epoch 44: 44928/60000 (75%), Loss: 0.5286, Entropy: 4.7111, Reg: 0.0000
+Epoch 44: 59904/60000 (100%), Loss: 0.5281, Entropy: 4.7033, Reg: 0.0000
+Epoch: 44, Loss: 0.528148, Accuracy: 80.13%
+Epoch training time (s): 16.38936948776245
+Defense: teacher
+Epoch 45: 0/60000 (0%), Loss: 0.4149, Entropy: 3.8124, Reg: 0.0000
+Epoch 45: 14976/60000 (25%), Loss: 0.5221, Entropy: 4.5964, Reg: 0.0000
+Epoch 45: 29952/60000 (50%), Loss: 0.5283, Entropy: 4.7100, Reg: 0.0000
+Epoch 45: 44928/60000 (75%), Loss: 0.5242, Entropy: 4.6827, Reg: 0.0000
+Epoch 45: 59904/60000 (100%), Loss: 0.5238, Entropy: 4.6753, Reg: 0.0000
+Epoch: 45, Loss: 0.523808, Accuracy: 80.39%
+Epoch training time (s): 16.501972436904907
+Defense: teacher
+Epoch 46: 0/60000 (0%), Loss: 0.4147, Entropy: 3.8179, Reg: 0.0000
+Epoch 46: 14976/60000 (25%), Loss: 0.5178, Entropy: 4.5670, Reg: 0.0000
+Epoch 46: 29952/60000 (50%), Loss: 0.5239, Entropy: 4.6799, Reg: 0.0000
+Epoch 46: 44928/60000 (75%), Loss: 0.5199, Entropy: 4.6534, Reg: 0.0000
+Epoch 46: 59904/60000 (100%), Loss: 0.5196, Entropy: 4.6482, Reg: 0.0000
+Epoch: 46, Loss: 0.519628, Accuracy: 80.50%
+Epoch training time (s): 16.195836782455444
+Defense: teacher
+Epoch 47: 0/60000 (0%), Loss: 0.4145, Entropy: 3.8086, Reg: 0.0000
+Epoch 47: 14976/60000 (25%), Loss: 0.5136, Entropy: 4.5420, Reg: 0.0000
+Epoch 47: 29952/60000 (50%), Loss: 0.5197, Entropy: 4.6540, Reg: 0.0000
+Epoch 47: 44928/60000 (75%), Loss: 0.5158, Entropy: 4.6285, Reg: 0.0000
+Epoch 47: 59904/60000 (100%), Loss: 0.5156, Entropy: 4.6245, Reg: 0.0000
+Epoch: 47, Loss: 0.515620, Accuracy: 80.67%
+Epoch training time (s): 16.269948720932007
+Defense: teacher
+Epoch 48: 0/60000 (0%), Loss: 0.4145, Entropy: 3.8053, Reg: 0.0000
+Epoch 48: 14976/60000 (25%), Loss: 0.5096, Entropy: 4.5179, Reg: 0.0000
+Epoch 48: 29952/60000 (50%), Loss: 0.5157, Entropy: 4.6298, Reg: 0.0000
+Epoch 48: 44928/60000 (75%), Loss: 0.5118, Entropy: 4.6056, Reg: 0.0000
+Epoch 48: 59904/60000 (100%), Loss: 0.5118, Entropy: 4.6035, Reg: 0.0000
+Epoch: 48, Loss: 0.511786, Accuracy: 80.94%
+Epoch training time (s): 15.986078262329102
+Defense: teacher
+Epoch 49: 0/60000 (0%), Loss: 0.4149, Entropy: 3.8057, Reg: 0.0000
+Epoch 49: 14976/60000 (25%), Loss: 0.5058, Entropy: 4.4953, Reg: 0.0000
+Epoch 49: 29952/60000 (50%), Loss: 0.5117, Entropy: 4.6080, Reg: 0.0000
+Epoch 49: 44928/60000 (75%), Loss: 0.5080, Entropy: 4.5846, Reg: 0.0000
+Epoch 49: 59904/60000 (100%), Loss: 0.5081, Entropy: 4.5835, Reg: 0.0000
+Epoch: 49, Loss: 0.508087, Accuracy: 81.05%
+Epoch training time (s): 16.16506314277649
+Defense: teacher
+Epoch 50: 0/60000 (0%), Loss: 0.4158, Entropy: 3.8224, Reg: 0.0000
+Epoch 50: 14976/60000 (25%), Loss: 0.5020, Entropy: 4.4728, Reg: 0.0000
+Epoch 50: 29952/60000 (50%), Loss: 0.5080, Entropy: 4.5850, Reg: 0.0000
+Epoch 50: 44928/60000 (75%), Loss: 0.5044, Entropy: 4.5626, Reg: 0.0000
+Epoch 50: 59904/60000 (100%), Loss: 0.5045, Entropy: 4.5635, Reg: 0.0000
+Epoch: 50, Loss: 0.504521, Accuracy: 81.19%
+Epoch training time (s): 16.297879219055176
+Defense: teacher
+Epoch 51: 0/60000 (0%), Loss: 0.4158, Entropy: 3.8229, Reg: 0.0000
+Epoch 51: 14976/60000 (25%), Loss: 0.4985, Entropy: 4.4549, Reg: 0.0000
+Epoch 51: 29952/60000 (50%), Loss: 0.5044, Entropy: 4.5666, Reg: 0.0000
+Epoch 51: 44928/60000 (75%), Loss: 0.5009, Entropy: 4.5449, Reg: 0.0000
+Epoch 51: 59904/60000 (100%), Loss: 0.5011, Entropy: 4.5464, Reg: 0.0000
+Epoch: 51, Loss: 0.501096, Accuracy: 81.30%
+Epoch training time (s): 16.07816243171692
+Training time (s): 831.4614591598511
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_teacher/seed_-3
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -3
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 7520.0/10000 (75.20%)
+name: fashion_lenet_teacher/seed_-3
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -3
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6800.0/10000 (68.00%)
+name: fashion_lenet_teacher/seed_-3
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -3
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 5305.0/10000 (53.05%)
+name: fashion_lenet_teacher/seed_-3
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -3
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 3763.0/10000 (37.63%)
+=====================================================================================================
+name: fashion_lenet_teacher/seed_-2
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -2
+gpu_number: 4
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: teacher
+Epoch 1: 0/60000 (0%), Loss: 2.3022, Entropy: 2.2964, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.3025, Entropy: 2.3017, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 2.3024, Entropy: 2.3001, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 2.3023, Entropy: 2.2984, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 2.3022, Entropy: 2.2965, Reg: 0.0000
+Epoch: 1, Loss: 2.302244, Accuracy: 14.23%
+Epoch training time (s): 16.179587364196777
+Defense: teacher
+Epoch 2: 0/60000 (0%), Loss: 2.3014, Entropy: 2.2792, Reg: 0.0000
+Epoch 2: 14976/60000 (25%), Loss: 2.3018, Entropy: 2.2883, Reg: 0.0000
+Epoch 2: 29952/60000 (50%), Loss: 2.3018, Entropy: 2.2870, Reg: 0.0000
+Epoch 2: 44928/60000 (75%), Loss: 2.3017, Entropy: 2.2852, Reg: 0.0000
+Epoch 2: 59904/60000 (100%), Loss: 2.3016, Entropy: 2.2834, Reg: 0.0000
+Epoch: 2, Loss: 2.301568, Accuracy: 20.28%
+Epoch training time (s): 16.321391582489014
+Defense: teacher
+Epoch 3: 0/60000 (0%), Loss: 2.3005, Entropy: 2.2632, Reg: 0.0000
+Epoch 3: 14976/60000 (25%), Loss: 2.3011, Entropy: 2.2748, Reg: 0.0000
+Epoch 3: 29952/60000 (50%), Loss: 2.3010, Entropy: 2.2734, Reg: 0.0000
+Epoch 3: 44928/60000 (75%), Loss: 2.3009, Entropy: 2.2713, Reg: 0.0000
+Epoch 3: 59904/60000 (100%), Loss: 2.3008, Entropy: 2.2691, Reg: 0.0000
+Epoch: 3, Loss: 2.300822, Accuracy: 20.80%
+Epoch training time (s): 16.468165636062622
+Defense: teacher
+Epoch 4: 0/60000 (0%), Loss: 2.2996, Entropy: 2.2458, Reg: 0.0000
+Epoch 4: 14976/60000 (25%), Loss: 2.3003, Entropy: 2.2588, Reg: 0.0000
+Epoch 4: 29952/60000 (50%), Loss: 2.3002, Entropy: 2.2572, Reg: 0.0000
+Epoch 4: 44928/60000 (75%), Loss: 2.3000, Entropy: 2.2545, Reg: 0.0000
+Epoch 4: 59904/60000 (100%), Loss: 2.2999, Entropy: 2.2517, Reg: 0.0000
+Epoch: 4, Loss: 2.299889, Accuracy: 20.17%
+Epoch training time (s): 15.834393739700317
+Defense: teacher
+Epoch 5: 0/60000 (0%), Loss: 2.2984, Entropy: 2.2238, Reg: 0.0000
+Epoch 5: 14976/60000 (25%), Loss: 2.2992, Entropy: 2.2386, Reg: 0.0000
+Epoch 5: 29952/60000 (50%), Loss: 2.2990, Entropy: 2.2364, Reg: 0.0000
+Epoch 5: 44928/60000 (75%), Loss: 2.2988, Entropy: 2.2327, Reg: 0.0000
+Epoch 5: 59904/60000 (100%), Loss: 2.2986, Entropy: 2.2290, Reg: 0.0000
+Epoch: 5, Loss: 2.298637, Accuracy: 22.73%
+Epoch training time (s): 16.424303770065308
+Defense: teacher
+Epoch 6: 0/60000 (0%), Loss: 2.2968, Entropy: 2.1944, Reg: 0.0000
+Epoch 6: 14976/60000 (25%), Loss: 2.2976, Entropy: 2.2114, Reg: 0.0000
+Epoch 6: 29952/60000 (50%), Loss: 2.2975, Entropy: 2.2086, Reg: 0.0000
+Epoch 6: 44928/60000 (75%), Loss: 2.2972, Entropy: 2.2036, Reg: 0.0000
+Epoch 6: 59904/60000 (100%), Loss: 2.2969, Entropy: 2.1987, Reg: 0.0000
+Epoch: 6, Loss: 2.296895, Accuracy: 25.46%
+Epoch training time (s): 16.123821258544922
+Defense: teacher
+Epoch 7: 0/60000 (0%), Loss: 2.2944, Entropy: 2.1546, Reg: 0.0000
+Epoch 7: 14976/60000 (25%), Loss: 2.2954, Entropy: 2.1746, Reg: 0.0000
+Epoch 7: 29952/60000 (50%), Loss: 2.2952, Entropy: 2.1706, Reg: 0.0000
+Epoch 7: 44928/60000 (75%), Loss: 2.2948, Entropy: 2.1636, Reg: 0.0000
+Epoch 7: 59904/60000 (100%), Loss: 2.2943, Entropy: 2.1567, Reg: 0.0000
+Epoch: 7, Loss: 2.294326, Accuracy: 27.59%
+Epoch training time (s): 16.707123517990112
+Defense: teacher
+Epoch 8: 0/60000 (0%), Loss: 2.2910, Entropy: 2.0995, Reg: 0.0000
+Epoch 8: 14976/60000 (25%), Loss: 2.2921, Entropy: 2.1233, Reg: 0.0000
+Epoch 8: 29952/60000 (50%), Loss: 2.2917, Entropy: 2.1177, Reg: 0.0000
+Epoch 8: 44928/60000 (75%), Loss: 2.2910, Entropy: 2.1077, Reg: 0.0000
+Epoch 8: 59904/60000 (100%), Loss: 2.2903, Entropy: 2.0980, Reg: 0.0000
+Epoch: 8, Loss: 2.290318, Accuracy: 28.97%
+Epoch training time (s): 16.26046586036682
+Defense: teacher
+Epoch 9: 0/60000 (0%), Loss: 2.2853, Entropy: 2.0214, Reg: 0.0000
+Epoch 9: 14976/60000 (25%), Loss: 2.2867, Entropy: 2.0507, Reg: 0.0000
+Epoch 9: 29952/60000 (50%), Loss: 2.2859, Entropy: 2.0425, Reg: 0.0000
+Epoch 9: 44928/60000 (75%), Loss: 2.2847, Entropy: 2.0281, Reg: 0.0000
+Epoch 9: 59904/60000 (100%), Loss: 2.2834, Entropy: 2.0143, Reg: 0.0000
+Epoch: 9, Loss: 2.283438, Accuracy: 29.39%
+Epoch training time (s): 16.396631002426147
+Defense: teacher
+Epoch 10: 0/60000 (0%), Loss: 2.2752, Entropy: 1.9125, Reg: 0.0000
+Epoch 10: 14976/60000 (25%), Loss: 2.2766, Entropy: 1.9487, Reg: 0.0000
+Epoch 10: 29952/60000 (50%), Loss: 2.2751, Entropy: 1.9382, Reg: 0.0000
+Epoch 10: 44928/60000 (75%), Loss: 2.2728, Entropy: 1.9189, Reg: 0.0000
+Epoch 10: 59904/60000 (100%), Loss: 2.2702, Entropy: 1.9022, Reg: 0.0000
+Epoch: 10, Loss: 2.270191, Accuracy: 29.43%
+Epoch training time (s): 16.15743327140808
+Defense: teacher
+Epoch 11: 0/60000 (0%), Loss: 2.2550, Entropy: 1.7806, Reg: 0.0000
+Epoch 11: 14976/60000 (25%), Loss: 2.2558, Entropy: 1.8308, Reg: 0.0000
+Epoch 11: 29952/60000 (50%), Loss: 2.2521, Entropy: 1.8238, Reg: 0.0000
+Epoch 11: 44928/60000 (75%), Loss: 2.2468, Entropy: 1.8051, Reg: 0.0000
+Epoch 11: 59904/60000 (100%), Loss: 2.2405, Entropy: 1.7955, Reg: 0.0000
+Epoch: 11, Loss: 2.240500, Accuracy: 31.79%
+Epoch training time (s): 15.79378056526184
+Defense: teacher
+Epoch 12: 0/60000 (0%), Loss: 2.2070, Entropy: 1.6922, Reg: 0.0000
+Epoch 12: 14976/60000 (25%), Loss: 2.2037, Entropy: 1.7861, Reg: 0.0000
+Epoch 12: 29952/60000 (50%), Loss: 2.1926, Entropy: 1.8009, Reg: 0.0000
+Epoch 12: 44928/60000 (75%), Loss: 2.1769, Entropy: 1.7984, Reg: 0.0000
+Epoch 12: 59904/60000 (100%), Loss: 2.1577, Entropy: 1.8167, Reg: 0.0000
+Epoch: 12, Loss: 2.157584, Accuracy: 43.60%
+Epoch training time (s): 15.847209215164185
+Defense: teacher
+Epoch 13: 0/60000 (0%), Loss: 2.0660, Entropy: 1.7307, Reg: 0.0000
+Epoch 13: 14976/60000 (25%), Loss: 2.0368, Entropy: 1.9939, Reg: 0.0000
+Epoch 13: 29952/60000 (50%), Loss: 1.9973, Entropy: 2.0713, Reg: 0.0000
+Epoch 13: 44928/60000 (75%), Loss: 1.9449, Entropy: 2.1339, Reg: 0.0000
+Epoch 13: 59904/60000 (100%), Loss: 1.8862, Entropy: 2.2510, Reg: 0.0000
+Epoch: 13, Loss: 1.885956, Accuracy: 54.98%
+Epoch training time (s): 17.44215440750122
+Defense: teacher
+Epoch 14: 0/60000 (0%), Loss: 1.6654, Entropy: 2.6645, Reg: 0.0000
+Epoch 14: 14976/60000 (25%), Loss: 1.5708, Entropy: 2.8855, Reg: 0.0000
+Epoch 14: 29952/60000 (50%), Loss: 1.5122, Entropy: 2.9859, Reg: 0.0000
+Epoch 14: 44928/60000 (75%), Loss: 1.4505, Entropy: 3.0615, Reg: 0.0000
+Epoch 14: 59904/60000 (100%), Loss: 1.3957, Entropy: 3.1803, Reg: 0.0000
+Epoch: 14, Loss: 1.395543, Accuracy: 61.06%
+Epoch training time (s): 16.767514944076538
+Defense: teacher
+Epoch 15: 0/60000 (0%), Loss: 1.2146, Entropy: 3.3006, Reg: 0.0000
+Epoch 15: 14976/60000 (25%), Loss: 1.1562, Entropy: 3.7183, Reg: 0.0000
+Epoch 15: 29952/60000 (50%), Loss: 1.1324, Entropy: 3.9292, Reg: 0.0000
+Epoch 15: 44928/60000 (75%), Loss: 1.1022, Entropy: 4.0503, Reg: 0.0000
+Epoch 15: 59904/60000 (100%), Loss: 1.0762, Entropy: 4.1780, Reg: 0.0000
+Epoch: 15, Loss: 1.076164, Accuracy: 64.18%
+Epoch training time (s): 17.47942566871643
+Defense: teacher
+Epoch 16: 0/60000 (0%), Loss: 0.9709, Entropy: 3.9200, Reg: 0.0000
+Epoch 16: 14976/60000 (25%), Loss: 0.9702, Entropy: 4.7237, Reg: 0.0000
+Epoch 16: 29952/60000 (50%), Loss: 0.9627, Entropy: 4.9036, Reg: 0.0000
+Epoch 16: 44928/60000 (75%), Loss: 0.9454, Entropy: 4.9564, Reg: 0.0000
+Epoch 16: 59904/60000 (100%), Loss: 0.9307, Entropy: 5.0156, Reg: 0.0000
+Epoch: 16, Loss: 0.930690, Accuracy: 66.76%
+Epoch training time (s): 17.144611120224
+Defense: teacher
+Epoch 17: 0/60000 (0%), Loss: 0.8378, Entropy: 3.9661, Reg: 0.0000
+Epoch 17: 14976/60000 (25%), Loss: 0.8752, Entropy: 5.3012, Reg: 0.0000
+Epoch 17: 29952/60000 (50%), Loss: 0.8734, Entropy: 5.4406, Reg: 0.0000
+Epoch 17: 44928/60000 (75%), Loss: 0.8609, Entropy: 5.4379, Reg: 0.0000
+Epoch 17: 59904/60000 (100%), Loss: 0.8507, Entropy: 5.4507, Reg: 0.0000
+Epoch: 17, Loss: 0.850662, Accuracy: 69.10%
+Epoch training time (s): 17.154114246368408
+Defense: teacher
+Epoch 18: 0/60000 (0%), Loss: 0.7492, Entropy: 3.9998, Reg: 0.0000
+Epoch 18: 14976/60000 (25%), Loss: 0.8150, Entropy: 5.5612, Reg: 0.0000
+Epoch 18: 29952/60000 (50%), Loss: 0.8161, Entropy: 5.6803, Reg: 0.0000
+Epoch 18: 44928/60000 (75%), Loss: 0.8060, Entropy: 5.6480, Reg: 0.0000
+Epoch 18: 59904/60000 (100%), Loss: 0.7982, Entropy: 5.6386, Reg: 0.0000
+Epoch: 18, Loss: 0.798180, Accuracy: 70.67%
+Epoch training time (s): 17.14734935760498
+Defense: teacher
+Epoch 19: 0/60000 (0%), Loss: 0.6835, Entropy: 4.0558, Reg: 0.0000
+Epoch 19: 14976/60000 (25%), Loss: 0.7727, Entropy: 5.6624, Reg: 0.0000
+Epoch 19: 29952/60000 (50%), Loss: 0.7756, Entropy: 5.7735, Reg: 0.0000
+Epoch 19: 44928/60000 (75%), Loss: 0.7670, Entropy: 5.7282, Reg: 0.0000
+Epoch 19: 59904/60000 (100%), Loss: 0.7608, Entropy: 5.7096, Reg: 0.0000
+Epoch: 19, Loss: 0.760734, Accuracy: 71.77%
+Epoch training time (s): 16.522931575775146
+Defense: teacher
+Epoch 20: 0/60000 (0%), Loss: 0.6325, Entropy: 4.0905, Reg: 0.0000
+Epoch 20: 14976/60000 (25%), Loss: 0.7413, Entropy: 5.6919, Reg: 0.0000
+Epoch 20: 29952/60000 (50%), Loss: 0.7454, Entropy: 5.8003, Reg: 0.0000
+Epoch 20: 44928/60000 (75%), Loss: 0.7377, Entropy: 5.7482, Reg: 0.0000
+Epoch 20: 59904/60000 (100%), Loss: 0.7325, Entropy: 5.7251, Reg: 0.0000
+Epoch: 20, Loss: 0.732513, Accuracy: 72.73%
+Epoch training time (s): 16.71769666671753
+Defense: teacher
+Epoch 21: 0/60000 (0%), Loss: 0.5923, Entropy: 4.0470, Reg: 0.0000
+Epoch 21: 14976/60000 (25%), Loss: 0.7167, Entropy: 5.6785, Reg: 0.0000
+Epoch 21: 29952/60000 (50%), Loss: 0.7217, Entropy: 5.7866, Reg: 0.0000
+Epoch 21: 44928/60000 (75%), Loss: 0.7146, Entropy: 5.7316, Reg: 0.0000
+Epoch 21: 59904/60000 (100%), Loss: 0.7102, Entropy: 5.7083, Reg: 0.0000
+Epoch: 21, Loss: 0.710195, Accuracy: 73.33%
+Epoch training time (s): 15.955765962600708
+Defense: teacher
+Epoch 22: 0/60000 (0%), Loss: 0.5605, Entropy: 3.9908, Reg: 0.0000
+Epoch 22: 14976/60000 (25%), Loss: 0.6967, Entropy: 5.6426, Reg: 0.0000
+Epoch 22: 29952/60000 (50%), Loss: 0.7023, Entropy: 5.7518, Reg: 0.0000
+Epoch 22: 44928/60000 (75%), Loss: 0.6956, Entropy: 5.6954, Reg: 0.0000
+Epoch 22: 59904/60000 (100%), Loss: 0.6918, Entropy: 5.6726, Reg: 0.0000
+Epoch: 22, Loss: 0.691792, Accuracy: 73.74%
+Epoch training time (s): 16.193835258483887
+Defense: teacher
+Epoch 23: 0/60000 (0%), Loss: 0.5355, Entropy: 3.9479, Reg: 0.0000
+Epoch 23: 14976/60000 (25%), Loss: 0.6798, Entropy: 5.5928, Reg: 0.0000
+Epoch 23: 29952/60000 (50%), Loss: 0.6859, Entropy: 5.7042, Reg: 0.0000
+Epoch 23: 44928/60000 (75%), Loss: 0.6794, Entropy: 5.6469, Reg: 0.0000
+Epoch 23: 59904/60000 (100%), Loss: 0.6761, Entropy: 5.6255, Reg: 0.0000
+Epoch: 23, Loss: 0.676087, Accuracy: 74.23%
+Epoch training time (s): 16.121193885803223
+Defense: teacher
+Epoch 24: 0/60000 (0%), Loss: 0.5155, Entropy: 3.9197, Reg: 0.0000
+Epoch 24: 14976/60000 (25%), Loss: 0.6652, Entropy: 5.5385, Reg: 0.0000
+Epoch 24: 29952/60000 (50%), Loss: 0.6716, Entropy: 5.6517, Reg: 0.0000
+Epoch 24: 44928/60000 (75%), Loss: 0.6654, Entropy: 5.5940, Reg: 0.0000
+Epoch 24: 59904/60000 (100%), Loss: 0.6624, Entropy: 5.5738, Reg: 0.0000
+Epoch: 24, Loss: 0.662402, Accuracy: 74.59%
+Epoch training time (s): 15.769313335418701
+Defense: teacher
+Epoch 25: 0/60000 (0%), Loss: 0.4996, Entropy: 3.8965, Reg: 0.0000
+Epoch 25: 14976/60000 (25%), Loss: 0.6523, Entropy: 5.4837, Reg: 0.0000
+Epoch 25: 29952/60000 (50%), Loss: 0.6591, Entropy: 5.5986, Reg: 0.0000
+Epoch 25: 44928/60000 (75%), Loss: 0.6530, Entropy: 5.5413, Reg: 0.0000
+Epoch 25: 59904/60000 (100%), Loss: 0.6504, Entropy: 5.5230, Reg: 0.0000
+Epoch: 25, Loss: 0.650316, Accuracy: 74.95%
+Epoch training time (s): 15.499237060546875
+Defense: teacher
+Epoch 26: 0/60000 (0%), Loss: 0.4865, Entropy: 3.8770, Reg: 0.0000
+Epoch 26: 14976/60000 (25%), Loss: 0.6409, Entropy: 5.4327, Reg: 0.0000
+Epoch 26: 29952/60000 (50%), Loss: 0.6479, Entropy: 5.5492, Reg: 0.0000
+Epoch 26: 44928/60000 (75%), Loss: 0.6419, Entropy: 5.4917, Reg: 0.0000
+Epoch 26: 59904/60000 (100%), Loss: 0.6396, Entropy: 5.4748, Reg: 0.0000
+Epoch: 26, Loss: 0.639563, Accuracy: 75.37%
+Epoch training time (s): 16.06337881088257
+Defense: teacher
+Epoch 27: 0/60000 (0%), Loss: 0.4761, Entropy: 3.8599, Reg: 0.0000
+Epoch 27: 14976/60000 (25%), Loss: 0.6307, Entropy: 5.3813, Reg: 0.0000
+Epoch 27: 29952/60000 (50%), Loss: 0.6378, Entropy: 5.4966, Reg: 0.0000
+Epoch 27: 44928/60000 (75%), Loss: 0.6320, Entropy: 5.4374, Reg: 0.0000
+Epoch 27: 59904/60000 (100%), Loss: 0.6298, Entropy: 5.4186, Reg: 0.0000
+Epoch: 27, Loss: 0.629790, Accuracy: 75.64%
+Epoch training time (s): 16.090240716934204
+Defense: teacher
+Epoch 28: 0/60000 (0%), Loss: 0.4693, Entropy: 3.8628, Reg: 0.0000
+Epoch 28: 14976/60000 (25%), Loss: 0.6212, Entropy: 5.3105, Reg: 0.0000
+Epoch 28: 29952/60000 (50%), Loss: 0.6284, Entropy: 5.4336, Reg: 0.0000
+Epoch 28: 44928/60000 (75%), Loss: 0.6227, Entropy: 5.3798, Reg: 0.0000
+Epoch 28: 59904/60000 (100%), Loss: 0.6208, Entropy: 5.3648, Reg: 0.0000
+Epoch: 28, Loss: 0.620784, Accuracy: 76.00%
+Epoch training time (s): 16.450217723846436
+Defense: teacher
+Epoch 29: 0/60000 (0%), Loss: 0.4623, Entropy: 3.8488, Reg: 0.0000
+Epoch 29: 14976/60000 (25%), Loss: 0.6127, Entropy: 5.2659, Reg: 0.0000
+Epoch 29: 29952/60000 (50%), Loss: 0.6200, Entropy: 5.3912, Reg: 0.0000
+Epoch 29: 44928/60000 (75%), Loss: 0.6144, Entropy: 5.3385, Reg: 0.0000
+Epoch 29: 59904/60000 (100%), Loss: 0.6127, Entropy: 5.3251, Reg: 0.0000
+Epoch: 29, Loss: 0.612668, Accuracy: 76.30%
+Epoch training time (s): 15.967940330505371
+Defense: teacher
+Epoch 30: 0/60000 (0%), Loss: 0.4557, Entropy: 3.8188, Reg: 0.0000
+Epoch 30: 14976/60000 (25%), Loss: 0.6050, Entropy: 5.2322, Reg: 0.0000
+Epoch 30: 29952/60000 (50%), Loss: 0.6124, Entropy: 5.3590, Reg: 0.0000
+Epoch 30: 44928/60000 (75%), Loss: 0.6069, Entropy: 5.3058, Reg: 0.0000
+Epoch 30: 59904/60000 (100%), Loss: 0.6053, Entropy: 5.2933, Reg: 0.0000
+Epoch: 30, Loss: 0.605290, Accuracy: 76.63%
+Epoch training time (s): 16.06396794319153
+Defense: teacher
+Epoch 31: 0/60000 (0%), Loss: 0.4502, Entropy: 3.7921, Reg: 0.0000
+Epoch 31: 14976/60000 (25%), Loss: 0.5980, Entropy: 5.2021, Reg: 0.0000
+Epoch 31: 29952/60000 (50%), Loss: 0.6054, Entropy: 5.3285, Reg: 0.0000
+Epoch 31: 44928/60000 (75%), Loss: 0.5999, Entropy: 5.2754, Reg: 0.0000
+Epoch 31: 59904/60000 (100%), Loss: 0.5985, Entropy: 5.2628, Reg: 0.0000
+Epoch: 31, Loss: 0.598510, Accuracy: 76.94%
+Epoch training time (s): 16.26815938949585
+Defense: teacher
+Epoch 32: 0/60000 (0%), Loss: 0.4457, Entropy: 3.7802, Reg: 0.0000
+Epoch 32: 14976/60000 (25%), Loss: 0.5916, Entropy: 5.1731, Reg: 0.0000
+Epoch 32: 29952/60000 (50%), Loss: 0.5989, Entropy: 5.2980, Reg: 0.0000
+Epoch 32: 44928/60000 (75%), Loss: 0.5935, Entropy: 5.2451, Reg: 0.0000
+Epoch 32: 59904/60000 (100%), Loss: 0.5922, Entropy: 5.2326, Reg: 0.0000
+Epoch: 32, Loss: 0.592205, Accuracy: 77.13%
+Epoch training time (s): 16.15261721611023
+Defense: teacher
+Epoch 33: 0/60000 (0%), Loss: 0.4419, Entropy: 3.7882, Reg: 0.0000
+Epoch 33: 14976/60000 (25%), Loss: 0.5855, Entropy: 5.1430, Reg: 0.0000
+Epoch 33: 29952/60000 (50%), Loss: 0.5928, Entropy: 5.2662, Reg: 0.0000
+Epoch 33: 44928/60000 (75%), Loss: 0.5875, Entropy: 5.2142, Reg: 0.0000
+Epoch 33: 59904/60000 (100%), Loss: 0.5863, Entropy: 5.2016, Reg: 0.0000
+Epoch: 33, Loss: 0.586297, Accuracy: 77.32%
+Epoch training time (s): 16.103243589401245
+Defense: teacher
+Epoch 34: 0/60000 (0%), Loss: 0.4390, Entropy: 3.8180, Reg: 0.0000
+Epoch 34: 14976/60000 (25%), Loss: 0.5798, Entropy: 5.1121, Reg: 0.0000
+Epoch 34: 29952/60000 (50%), Loss: 0.5870, Entropy: 5.2337, Reg: 0.0000
+Epoch 34: 44928/60000 (75%), Loss: 0.5818, Entropy: 5.1834, Reg: 0.0000
+Epoch 34: 59904/60000 (100%), Loss: 0.5807, Entropy: 5.1712, Reg: 0.0000
+Epoch: 34, Loss: 0.580723, Accuracy: 77.64%
+Epoch training time (s): 16.330302953720093
+Defense: teacher
+Epoch 35: 0/60000 (0%), Loss: 0.4372, Entropy: 3.8515, Reg: 0.0000
+Epoch 35: 14976/60000 (25%), Loss: 0.5744, Entropy: 5.0799, Reg: 0.0000
+Epoch 35: 29952/60000 (50%), Loss: 0.5815, Entropy: 5.2000, Reg: 0.0000
+Epoch 35: 44928/60000 (75%), Loss: 0.5763, Entropy: 5.1510, Reg: 0.0000
+Epoch 35: 59904/60000 (100%), Loss: 0.5754, Entropy: 5.1392, Reg: 0.0000
+Epoch: 35, Loss: 0.575402, Accuracy: 77.88%
+Epoch training time (s): 15.60502290725708
+Defense: teacher
+Epoch 36: 0/60000 (0%), Loss: 0.4350, Entropy: 3.8576, Reg: 0.0000
+Epoch 36: 14976/60000 (25%), Loss: 0.5692, Entropy: 5.0477, Reg: 0.0000
+Epoch 36: 29952/60000 (50%), Loss: 0.5762, Entropy: 5.1672, Reg: 0.0000
+Epoch 36: 44928/60000 (75%), Loss: 0.5712, Entropy: 5.1200, Reg: 0.0000
+Epoch 36: 59904/60000 (100%), Loss: 0.5703, Entropy: 5.1090, Reg: 0.0000
+Epoch: 36, Loss: 0.570317, Accuracy: 78.16%
+Epoch training time (s): 15.455631732940674
+Defense: teacher
+Epoch 37: 0/60000 (0%), Loss: 0.4335, Entropy: 3.8720, Reg: 0.0000
+Epoch 37: 14976/60000 (25%), Loss: 0.5643, Entropy: 5.0147, Reg: 0.0000
+Epoch 37: 29952/60000 (50%), Loss: 0.5712, Entropy: 5.1333, Reg: 0.0000
+Epoch 37: 44928/60000 (75%), Loss: 0.5662, Entropy: 5.0884, Reg: 0.0000
+Epoch 37: 59904/60000 (100%), Loss: 0.5654, Entropy: 5.0781, Reg: 0.0000
+Epoch: 37, Loss: 0.565438, Accuracy: 78.43%
+Epoch training time (s): 15.486824750900269
+Defense: teacher
+Epoch 38: 0/60000 (0%), Loss: 0.4323, Entropy: 3.8829, Reg: 0.0000
+Epoch 38: 14976/60000 (25%), Loss: 0.5595, Entropy: 4.9817, Reg: 0.0000
+Epoch 38: 29952/60000 (50%), Loss: 0.5663, Entropy: 5.0994, Reg: 0.0000
+Epoch 38: 44928/60000 (75%), Loss: 0.5614, Entropy: 5.0568, Reg: 0.0000
+Epoch 38: 59904/60000 (100%), Loss: 0.5607, Entropy: 5.0471, Reg: 0.0000
+Epoch: 38, Loss: 0.560727, Accuracy: 78.71%
+Epoch training time (s): 15.335940837860107
+Defense: teacher
+Epoch 39: 0/60000 (0%), Loss: 0.4311, Entropy: 3.8781, Reg: 0.0000
+Epoch 39: 14976/60000 (25%), Loss: 0.5548, Entropy: 4.9493, Reg: 0.0000
+Epoch 39: 29952/60000 (50%), Loss: 0.5616, Entropy: 5.0661, Reg: 0.0000
+Epoch 39: 44928/60000 (75%), Loss: 0.5568, Entropy: 5.0256, Reg: 0.0000
+Epoch 39: 59904/60000 (100%), Loss: 0.5562, Entropy: 5.0167, Reg: 0.0000
+Epoch: 39, Loss: 0.556192, Accuracy: 78.83%
+Epoch training time (s): 15.7770094871521
+Defense: teacher
+Epoch 40: 0/60000 (0%), Loss: 0.4308, Entropy: 3.8905, Reg: 0.0000
+Epoch 40: 14976/60000 (25%), Loss: 0.5504, Entropy: 4.9171, Reg: 0.0000
+Epoch 40: 29952/60000 (50%), Loss: 0.5570, Entropy: 5.0331, Reg: 0.0000
+Epoch 40: 44928/60000 (75%), Loss: 0.5523, Entropy: 4.9952, Reg: 0.0000
+Epoch 40: 59904/60000 (100%), Loss: 0.5518, Entropy: 4.9871, Reg: 0.0000
+Epoch: 40, Loss: 0.551820, Accuracy: 78.98%
+Epoch training time (s): 15.51944351196289
+Defense: teacher
+Epoch 41: 0/60000 (0%), Loss: 0.4303, Entropy: 3.8934, Reg: 0.0000
+Epoch 41: 14976/60000 (25%), Loss: 0.5460, Entropy: 4.8875, Reg: 0.0000
+Epoch 41: 29952/60000 (50%), Loss: 0.5526, Entropy: 5.0007, Reg: 0.0000
+Epoch 41: 44928/60000 (75%), Loss: 0.5480, Entropy: 4.9641, Reg: 0.0000
+Epoch 41: 59904/60000 (100%), Loss: 0.5476, Entropy: 4.9572, Reg: 0.0000
+Epoch: 41, Loss: 0.547563, Accuracy: 79.18%
+Epoch training time (s): 15.588468074798584
+Defense: teacher
+Epoch 42: 0/60000 (0%), Loss: 0.4298, Entropy: 3.8931, Reg: 0.0000
+Epoch 42: 14976/60000 (25%), Loss: 0.5418, Entropy: 4.8579, Reg: 0.0000
+Epoch 42: 29952/60000 (50%), Loss: 0.5483, Entropy: 4.9701, Reg: 0.0000
+Epoch 42: 44928/60000 (75%), Loss: 0.5438, Entropy: 4.9351, Reg: 0.0000
+Epoch 42: 59904/60000 (100%), Loss: 0.5434, Entropy: 4.9283, Reg: 0.0000
+Epoch: 42, Loss: 0.543444, Accuracy: 79.50%
+Epoch training time (s): 15.81555986404419
+Defense: teacher
+Epoch 43: 0/60000 (0%), Loss: 0.4290, Entropy: 3.8843, Reg: 0.0000
+Epoch 43: 14976/60000 (25%), Loss: 0.5377, Entropy: 4.8294, Reg: 0.0000
+Epoch 43: 29952/60000 (50%), Loss: 0.5441, Entropy: 4.9393, Reg: 0.0000
+Epoch 43: 44928/60000 (75%), Loss: 0.5397, Entropy: 4.9067, Reg: 0.0000
+Epoch 43: 59904/60000 (100%), Loss: 0.5394, Entropy: 4.9002, Reg: 0.0000
+Epoch: 43, Loss: 0.539444, Accuracy: 79.71%
+Epoch training time (s): 15.635812520980835
+Defense: teacher
+Epoch 44: 0/60000 (0%), Loss: 0.4295, Entropy: 3.9094, Reg: 0.0000
+Epoch 44: 14976/60000 (25%), Loss: 0.5337, Entropy: 4.8023, Reg: 0.0000
+Epoch 44: 29952/60000 (50%), Loss: 0.5400, Entropy: 4.9104, Reg: 0.0000
+Epoch 44: 44928/60000 (75%), Loss: 0.5358, Entropy: 4.8796, Reg: 0.0000
+Epoch 44: 59904/60000 (100%), Loss: 0.5356, Entropy: 4.8739, Reg: 0.0000
+Epoch: 44, Loss: 0.535568, Accuracy: 79.97%
+Epoch training time (s): 16.315890789031982
+Defense: teacher
+Epoch 45: 0/60000 (0%), Loss: 0.4292, Entropy: 3.9131, Reg: 0.0000
+Epoch 45: 14976/60000 (25%), Loss: 0.5299, Entropy: 4.7765, Reg: 0.0000
+Epoch 45: 29952/60000 (50%), Loss: 0.5361, Entropy: 4.8827, Reg: 0.0000
+Epoch 45: 44928/60000 (75%), Loss: 0.5319, Entropy: 4.8540, Reg: 0.0000
+Epoch 45: 59904/60000 (100%), Loss: 0.5318, Entropy: 4.8487, Reg: 0.0000
+Epoch: 45, Loss: 0.531810, Accuracy: 80.16%
+Epoch training time (s): 16.261481046676636
+Defense: teacher
+Epoch 46: 0/60000 (0%), Loss: 0.4294, Entropy: 3.9256, Reg: 0.0000
+Epoch 46: 14976/60000 (25%), Loss: 0.5261, Entropy: 4.7479, Reg: 0.0000
+Epoch 46: 29952/60000 (50%), Loss: 0.5322, Entropy: 4.8522, Reg: 0.0000
+Epoch 46: 44928/60000 (75%), Loss: 0.5282, Entropy: 4.8258, Reg: 0.0000
+Epoch 46: 59904/60000 (100%), Loss: 0.5281, Entropy: 4.8207, Reg: 0.0000
+Epoch: 46, Loss: 0.528100, Accuracy: 80.35%
+Epoch training time (s): 16.223064422607422
+Defense: teacher
+Epoch 47: 0/60000 (0%), Loss: 0.4300, Entropy: 3.9270, Reg: 0.0000
+Epoch 47: 14976/60000 (25%), Loss: 0.5224, Entropy: 4.7185, Reg: 0.0000
+Epoch 47: 29952/60000 (50%), Loss: 0.5284, Entropy: 4.8211, Reg: 0.0000
+Epoch 47: 44928/60000 (75%), Loss: 0.5245, Entropy: 4.7978, Reg: 0.0000
+Epoch 47: 59904/60000 (100%), Loss: 0.5244, Entropy: 4.7924, Reg: 0.0000
+Epoch: 47, Loss: 0.524440, Accuracy: 80.45%
+Epoch training time (s): 16.18464493751526
+Defense: teacher
+Epoch 48: 0/60000 (0%), Loss: 0.4312, Entropy: 3.9258, Reg: 0.0000
+Epoch 48: 14976/60000 (25%), Loss: 0.5187, Entropy: 4.6853, Reg: 0.0000
+Epoch 48: 29952/60000 (50%), Loss: 0.5246, Entropy: 4.7859, Reg: 0.0000
+Epoch 48: 44928/60000 (75%), Loss: 0.5208, Entropy: 4.7659, Reg: 0.0000
+Epoch 48: 59904/60000 (100%), Loss: 0.5208, Entropy: 4.7626, Reg: 0.0000
+Epoch: 48, Loss: 0.520828, Accuracy: 80.57%
+Epoch training time (s): 16.849873065948486
+Defense: teacher
+Epoch 49: 0/60000 (0%), Loss: 0.4300, Entropy: 3.9072, Reg: 0.0000
+Epoch 49: 14976/60000 (25%), Loss: 0.5152, Entropy: 4.6663, Reg: 0.0000
+Epoch 49: 29952/60000 (50%), Loss: 0.5210, Entropy: 4.7656, Reg: 0.0000
+Epoch 49: 44928/60000 (75%), Loss: 0.5173, Entropy: 4.7466, Reg: 0.0000
+Epoch 49: 59904/60000 (100%), Loss: 0.5174, Entropy: 4.7443, Reg: 0.0000
+Epoch: 49, Loss: 0.517430, Accuracy: 80.80%
+Epoch training time (s): 17.012186765670776
+Defense: teacher
+Epoch 50: 0/60000 (0%), Loss: 0.4295, Entropy: 3.9085, Reg: 0.0000
+Epoch 50: 14976/60000 (25%), Loss: 0.5117, Entropy: 4.6455, Reg: 0.0000
+Epoch 50: 29952/60000 (50%), Loss: 0.5175, Entropy: 4.7434, Reg: 0.0000
+Epoch 50: 44928/60000 (75%), Loss: 0.5139, Entropy: 4.7259, Reg: 0.0000
+Epoch 50: 59904/60000 (100%), Loss: 0.5141, Entropy: 4.7240, Reg: 0.0000
+Epoch: 50, Loss: 0.514104, Accuracy: 80.91%
+Epoch training time (s): 18.72814917564392
+Defense: teacher
+Epoch 51: 0/60000 (0%), Loss: 0.4288, Entropy: 3.8936, Reg: 0.0000
+Epoch 51: 14976/60000 (25%), Loss: 0.5084, Entropy: 4.6228, Reg: 0.0000
+Epoch 51: 29952/60000 (50%), Loss: 0.5141, Entropy: 4.7178, Reg: 0.0000
+Epoch 51: 44928/60000 (75%), Loss: 0.5106, Entropy: 4.7007, Reg: 0.0000
+Epoch 51: 59904/60000 (100%), Loss: 0.5108, Entropy: 4.6979, Reg: 0.0000
+Epoch: 51, Loss: 0.510812, Accuracy: 81.09%
+Epoch training time (s): 19.38939118385315
+Training time (s): 833.6969020366669
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_teacher/seed_-2
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -2
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 7467.0/10000 (74.67%)
+name: fashion_lenet_teacher/seed_-2
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -2
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6692.0/10000 (66.92%)
+name: fashion_lenet_teacher/seed_-2
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -2
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 5103.0/10000 (51.03%)
+name: fashion_lenet_teacher/seed_-2
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -2
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 3564.0/10000 (35.64%)
+=====================================================================================================
+name: fashion_lenet_teacher/seed_-1
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -1
+gpu_number: 4
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: teacher
+Epoch 1: 0/60000 (0%), Loss: 2.3025, Entropy: 2.3028, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.3025, Entropy: 2.3017, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 2.3024, Entropy: 2.2993, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 2.3023, Entropy: 2.2974, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 2.3022, Entropy: 2.2955, Reg: 0.0000
+Epoch: 1, Loss: 2.302165, Accuracy: 10.31%
+Epoch training time (s): 17.05627751350403
+Defense: teacher
+Epoch 2: 0/60000 (0%), Loss: 2.3017, Entropy: 2.2857, Reg: 0.0000
+Epoch 2: 14976/60000 (25%), Loss: 2.3017, Entropy: 2.2858, Reg: 0.0000
+Epoch 2: 29952/60000 (50%), Loss: 2.3016, Entropy: 2.2836, Reg: 0.0000
+Epoch 2: 44928/60000 (75%), Loss: 2.3015, Entropy: 2.2817, Reg: 0.0000
+Epoch 2: 59904/60000 (100%), Loss: 2.3014, Entropy: 2.2797, Reg: 0.0000
+Epoch: 2, Loss: 2.301387, Accuracy: 21.98%
+Epoch training time (s): 16.721332550048828
+Defense: teacher
+Epoch 3: 0/60000 (0%), Loss: 2.3009, Entropy: 2.2701, Reg: 0.0000
+Epoch 3: 14976/60000 (25%), Loss: 2.3009, Entropy: 2.2700, Reg: 0.0000
+Epoch 3: 29952/60000 (50%), Loss: 2.3008, Entropy: 2.2678, Reg: 0.0000
+Epoch 3: 44928/60000 (75%), Loss: 2.3007, Entropy: 2.2656, Reg: 0.0000
+Epoch 3: 59904/60000 (100%), Loss: 2.3006, Entropy: 2.2634, Reg: 0.0000
+Epoch: 3, Loss: 2.300553, Accuracy: 36.79%
+Epoch training time (s): 17.247771978378296
+Defense: teacher
+Epoch 4: 0/60000 (0%), Loss: 2.3000, Entropy: 2.2532, Reg: 0.0000
+Epoch 4: 14976/60000 (25%), Loss: 2.3000, Entropy: 2.2521, Reg: 0.0000
+Epoch 4: 29952/60000 (50%), Loss: 2.2998, Entropy: 2.2495, Reg: 0.0000
+Epoch 4: 44928/60000 (75%), Loss: 2.2997, Entropy: 2.2467, Reg: 0.0000
+Epoch 4: 59904/60000 (100%), Loss: 2.2995, Entropy: 2.2440, Reg: 0.0000
+Epoch: 4, Loss: 2.299538, Accuracy: 37.15%
+Epoch training time (s): 16.595876216888428
+Defense: teacher
+Epoch 5: 0/60000 (0%), Loss: 2.2989, Entropy: 2.2325, Reg: 0.0000
+Epoch 5: 14976/60000 (25%), Loss: 2.2988, Entropy: 2.2300, Reg: 0.0000
+Epoch 5: 29952/60000 (50%), Loss: 2.2986, Entropy: 2.2270, Reg: 0.0000
+Epoch 5: 44928/60000 (75%), Loss: 2.2984, Entropy: 2.2233, Reg: 0.0000
+Epoch 5: 59904/60000 (100%), Loss: 2.2982, Entropy: 2.2197, Reg: 0.0000
+Epoch: 5, Loss: 2.298230, Accuracy: 36.94%
+Epoch training time (s): 16.082529544830322
+Defense: teacher
+Epoch 6: 0/60000 (0%), Loss: 2.2975, Entropy: 2.2068, Reg: 0.0000
+Epoch 6: 14976/60000 (25%), Loss: 2.2972, Entropy: 2.2013, Reg: 0.0000
+Epoch 6: 29952/60000 (50%), Loss: 2.2970, Entropy: 2.1974, Reg: 0.0000
+Epoch 6: 44928/60000 (75%), Loss: 2.2967, Entropy: 2.1924, Reg: 0.0000
+Epoch 6: 59904/60000 (100%), Loss: 2.2964, Entropy: 2.1876, Reg: 0.0000
+Epoch: 6, Loss: 2.296425, Accuracy: 37.93%
+Epoch training time (s): 16.463558673858643
+Defense: teacher
+Epoch 7: 0/60000 (0%), Loss: 2.2955, Entropy: 2.1729, Reg: 0.0000
+Epoch 7: 14976/60000 (25%), Loss: 2.2950, Entropy: 2.1628, Reg: 0.0000
+Epoch 7: 29952/60000 (50%), Loss: 2.2946, Entropy: 2.1576, Reg: 0.0000
+Epoch 7: 44928/60000 (75%), Loss: 2.2942, Entropy: 2.1507, Reg: 0.0000
+Epoch 7: 59904/60000 (100%), Loss: 2.2938, Entropy: 2.1440, Reg: 0.0000
+Epoch: 7, Loss: 2.293809, Accuracy: 38.81%
+Epoch training time (s): 15.975567102432251
+Defense: teacher
+Epoch 8: 0/60000 (0%), Loss: 2.2925, Entropy: 2.1265, Reg: 0.0000
+Epoch 8: 14976/60000 (25%), Loss: 2.2916, Entropy: 2.1091, Reg: 0.0000
+Epoch 8: 29952/60000 (50%), Loss: 2.2911, Entropy: 2.1019, Reg: 0.0000
+Epoch 8: 44928/60000 (75%), Loss: 2.2904, Entropy: 2.0920, Reg: 0.0000
+Epoch 8: 59904/60000 (100%), Loss: 2.2897, Entropy: 2.0825, Reg: 0.0000
+Epoch: 8, Loss: 2.289745, Accuracy: 40.13%
+Epoch training time (s): 16.196288108825684
+Defense: teacher
+Epoch 9: 0/60000 (0%), Loss: 2.2877, Entropy: 2.0609, Reg: 0.0000
+Epoch 9: 14976/60000 (25%), Loss: 2.2861, Entropy: 2.0326, Reg: 0.0000
+Epoch 9: 29952/60000 (50%), Loss: 2.2852, Entropy: 2.0225, Reg: 0.0000
+Epoch 9: 44928/60000 (75%), Loss: 2.2841, Entropy: 2.0083, Reg: 0.0000
+Epoch 9: 59904/60000 (100%), Loss: 2.2829, Entropy: 1.9949, Reg: 0.0000
+Epoch: 9, Loss: 2.282904, Accuracy: 42.20%
+Epoch training time (s): 16.020092248916626
+Defense: teacher
+Epoch 10: 0/60000 (0%), Loss: 2.2791, Entropy: 1.9699, Reg: 0.0000
+Epoch 10: 14976/60000 (25%), Loss: 2.2764, Entropy: 1.9257, Reg: 0.0000
+Epoch 10: 29952/60000 (50%), Loss: 2.2748, Entropy: 1.9129, Reg: 0.0000
+Epoch 10: 44928/60000 (75%), Loss: 2.2726, Entropy: 1.8937, Reg: 0.0000
+Epoch 10: 59904/60000 (100%), Loss: 2.2703, Entropy: 1.8767, Reg: 0.0000
+Epoch: 10, Loss: 2.270277, Accuracy: 44.79%
+Epoch training time (s): 16.124839782714844
+Defense: teacher
+Epoch 11: 0/60000 (0%), Loss: 2.2622, Entropy: 1.8605, Reg: 0.0000
+Epoch 11: 14976/60000 (25%), Loss: 2.2571, Entropy: 1.7914, Reg: 0.0000
+Epoch 11: 29952/60000 (50%), Loss: 2.2536, Entropy: 1.7790, Reg: 0.0000
+Epoch 11: 44928/60000 (75%), Loss: 2.2488, Entropy: 1.7573, Reg: 0.0000
+Epoch 11: 59904/60000 (100%), Loss: 2.2434, Entropy: 1.7414, Reg: 0.0000
+Epoch: 11, Loss: 2.243356, Accuracy: 45.79%
+Epoch training time (s): 16.084632873535156
+Defense: teacher
+Epoch 12: 0/60000 (0%), Loss: 2.2232, Entropy: 1.7720, Reg: 0.0000
+Epoch 12: 14976/60000 (25%), Loss: 2.2114, Entropy: 1.6739, Reg: 0.0000
+Epoch 12: 29952/60000 (50%), Loss: 2.2020, Entropy: 1.6759, Reg: 0.0000
+Epoch 12: 44928/60000 (75%), Loss: 2.1890, Entropy: 1.6634, Reg: 0.0000
+Epoch 12: 59904/60000 (100%), Loss: 2.1734, Entropy: 1.6658, Reg: 0.0000
+Epoch: 12, Loss: 2.173295, Accuracy: 46.47%
+Epoch training time (s): 16.764331817626953
+Defense: teacher
+Epoch 13: 0/60000 (0%), Loss: 2.1114, Entropy: 1.8091, Reg: 0.0000
+Epoch 13: 14976/60000 (25%), Loss: 2.0762, Entropy: 1.7192, Reg: 0.0000
+Epoch 13: 29952/60000 (50%), Loss: 2.0440, Entropy: 1.7600, Reg: 0.0000
+Epoch 13: 44928/60000 (75%), Loss: 2.0004, Entropy: 1.7812, Reg: 0.0000
+Epoch 13: 59904/60000 (100%), Loss: 1.9483, Entropy: 1.8591, Reg: 0.0000
+Epoch: 13, Loss: 1.948112, Accuracy: 58.56%
+Epoch training time (s): 16.61401081085205
+Defense: teacher
+Epoch 14: 0/60000 (0%), Loss: 1.7453, Entropy: 2.2473, Reg: 0.0000
+Epoch 14: 14976/60000 (25%), Loss: 1.6500, Entropy: 2.4545, Reg: 0.0000
+Epoch 14: 29952/60000 (50%), Loss: 1.5838, Entropy: 2.6674, Reg: 0.0000
+Epoch 14: 44928/60000 (75%), Loss: 1.5146, Entropy: 2.8146, Reg: 0.0000
+Epoch 14: 59904/60000 (100%), Loss: 1.4523, Entropy: 3.0008, Reg: 0.0000
+Epoch: 14, Loss: 1.452074, Accuracy: 59.56%
+Epoch training time (s): 16.971776723861694
+Defense: teacher
+Epoch 15: 0/60000 (0%), Loss: 1.2392, Entropy: 3.5550, Reg: 0.0000
+Epoch 15: 14976/60000 (25%), Loss: 1.1813, Entropy: 3.7789, Reg: 0.0000
+Epoch 15: 29952/60000 (50%), Loss: 1.1542, Entropy: 3.9789, Reg: 0.0000
+Epoch 15: 44928/60000 (75%), Loss: 1.1219, Entropy: 4.0898, Reg: 0.0000
+Epoch 15: 59904/60000 (100%), Loss: 1.0942, Entropy: 4.2182, Reg: 0.0000
+Epoch: 15, Loss: 1.094184, Accuracy: 63.16%
+Epoch training time (s): 16.78193473815918
+Defense: teacher
+Epoch 16: 0/60000 (0%), Loss: 0.9841, Entropy: 4.2821, Reg: 0.0000
+Epoch 16: 14976/60000 (25%), Loss: 0.9837, Entropy: 4.7840, Reg: 0.0000
+Epoch 16: 29952/60000 (50%), Loss: 0.9760, Entropy: 4.9559, Reg: 0.0000
+Epoch 16: 44928/60000 (75%), Loss: 0.9587, Entropy: 4.9991, Reg: 0.0000
+Epoch 16: 59904/60000 (100%), Loss: 0.9437, Entropy: 5.0501, Reg: 0.0000
+Epoch: 16, Loss: 0.943730, Accuracy: 65.58%
+Epoch training time (s): 16.870769739151
+Defense: teacher
+Epoch 17: 0/60000 (0%), Loss: 0.8549, Entropy: 4.3817, Reg: 0.0000
+Epoch 17: 14976/60000 (25%), Loss: 0.8879, Entropy: 5.3165, Reg: 0.0000
+Epoch 17: 29952/60000 (50%), Loss: 0.8860, Entropy: 5.4469, Reg: 0.0000
+Epoch 17: 44928/60000 (75%), Loss: 0.8734, Entropy: 5.4390, Reg: 0.0000
+Epoch 17: 59904/60000 (100%), Loss: 0.8627, Entropy: 5.4441, Reg: 0.0000
+Epoch: 17, Loss: 0.862701, Accuracy: 68.27%
+Epoch training time (s): 17.760234117507935
+Defense: teacher
+Epoch 18: 0/60000 (0%), Loss: 0.7678, Entropy: 4.3548, Reg: 0.0000
+Epoch 18: 14976/60000 (25%), Loss: 0.8257, Entropy: 5.5291, Reg: 0.0000
+Epoch 18: 29952/60000 (50%), Loss: 0.8265, Entropy: 5.6469, Reg: 0.0000
+Epoch 18: 44928/60000 (75%), Loss: 0.8163, Entropy: 5.6161, Reg: 0.0000
+Epoch 18: 59904/60000 (100%), Loss: 0.8080, Entropy: 5.6022, Reg: 0.0000
+Epoch: 18, Loss: 0.807986, Accuracy: 70.12%
+Epoch training time (s): 23.434226989746094
+Defense: teacher
+Epoch 19: 0/60000 (0%), Loss: 0.7022, Entropy: 4.2204, Reg: 0.0000
+Epoch 19: 14976/60000 (25%), Loss: 0.7807, Entropy: 5.5983, Reg: 0.0000
+Epoch 19: 29952/60000 (50%), Loss: 0.7834, Entropy: 5.7140, Reg: 0.0000
+Epoch 19: 44928/60000 (75%), Loss: 0.7747, Entropy: 5.6738, Reg: 0.0000
+Epoch 19: 59904/60000 (100%), Loss: 0.7681, Entropy: 5.6537, Reg: 0.0000
+Epoch: 19, Loss: 0.768058, Accuracy: 71.50%
+Epoch training time (s): 17.205199003219604
+Defense: teacher
+Epoch 20: 0/60000 (0%), Loss: 0.6512, Entropy: 4.2204, Reg: 0.0000
+Epoch 20: 14976/60000 (25%), Loss: 0.7469, Entropy: 5.6116, Reg: 0.0000
+Epoch 20: 29952/60000 (50%), Loss: 0.7509, Entropy: 5.7248, Reg: 0.0000
+Epoch 20: 44928/60000 (75%), Loss: 0.7432, Entropy: 5.6799, Reg: 0.0000
+Epoch 20: 59904/60000 (100%), Loss: 0.7378, Entropy: 5.6574, Reg: 0.0000
+Epoch: 20, Loss: 0.737775, Accuracy: 72.28%
+Epoch training time (s): 16.798980951309204
+Defense: teacher
+Epoch 21: 0/60000 (0%), Loss: 0.6102, Entropy: 4.1987, Reg: 0.0000
+Epoch 21: 14976/60000 (25%), Loss: 0.7206, Entropy: 5.5999, Reg: 0.0000
+Epoch 21: 29952/60000 (50%), Loss: 0.7256, Entropy: 5.7128, Reg: 0.0000
+Epoch 21: 44928/60000 (75%), Loss: 0.7186, Entropy: 5.6646, Reg: 0.0000
+Epoch 21: 59904/60000 (100%), Loss: 0.7141, Entropy: 5.6418, Reg: 0.0000
+Epoch: 21, Loss: 0.714032, Accuracy: 73.15%
+Epoch training time (s): 16.486158847808838
+Defense: teacher
+Epoch 22: 0/60000 (0%), Loss: 0.5764, Entropy: 4.1316, Reg: 0.0000
+Epoch 22: 14976/60000 (25%), Loss: 0.6995, Entropy: 5.5719, Reg: 0.0000
+Epoch 22: 29952/60000 (50%), Loss: 0.7052, Entropy: 5.6838, Reg: 0.0000
+Epoch 22: 44928/60000 (75%), Loss: 0.6986, Entropy: 5.6328, Reg: 0.0000
+Epoch 22: 59904/60000 (100%), Loss: 0.6947, Entropy: 5.6107, Reg: 0.0000
+Epoch: 22, Loss: 0.694669, Accuracy: 73.85%
+Epoch training time (s): 16.261954069137573
+Defense: teacher
+Epoch 23: 0/60000 (0%), Loss: 0.5490, Entropy: 4.0629, Reg: 0.0000
+Epoch 23: 14976/60000 (25%), Loss: 0.6819, Entropy: 5.5303, Reg: 0.0000
+Epoch 23: 29952/60000 (50%), Loss: 0.6880, Entropy: 5.6423, Reg: 0.0000
+Epoch 23: 44928/60000 (75%), Loss: 0.6817, Entropy: 5.5890, Reg: 0.0000
+Epoch 23: 59904/60000 (100%), Loss: 0.6784, Entropy: 5.5685, Reg: 0.0000
+Epoch: 23, Loss: 0.678323, Accuracy: 74.14%
+Epoch training time (s): 16.659708738327026
+Defense: teacher
+Epoch 24: 0/60000 (0%), Loss: 0.5269, Entropy: 4.0086, Reg: 0.0000
+Epoch 24: 14976/60000 (25%), Loss: 0.6668, Entropy: 5.4823, Reg: 0.0000
+Epoch 24: 29952/60000 (50%), Loss: 0.6733, Entropy: 5.5946, Reg: 0.0000
+Epoch 24: 44928/60000 (75%), Loss: 0.6672, Entropy: 5.5395, Reg: 0.0000
+Epoch 24: 59904/60000 (100%), Loss: 0.6642, Entropy: 5.5207, Reg: 0.0000
+Epoch: 24, Loss: 0.664167, Accuracy: 74.36%
+Epoch training time (s): 16.51918625831604
+Defense: teacher
+Epoch 25: 0/60000 (0%), Loss: 0.5091, Entropy: 3.9682, Reg: 0.0000
+Epoch 25: 14976/60000 (25%), Loss: 0.6536, Entropy: 5.4291, Reg: 0.0000
+Epoch 25: 29952/60000 (50%), Loss: 0.6603, Entropy: 5.5430, Reg: 0.0000
+Epoch 25: 44928/60000 (75%), Loss: 0.6544, Entropy: 5.4880, Reg: 0.0000
+Epoch 25: 59904/60000 (100%), Loss: 0.6517, Entropy: 5.4710, Reg: 0.0000
+Epoch: 25, Loss: 0.651691, Accuracy: 74.77%
+Epoch training time (s): 16.742539644241333
+Defense: teacher
+Epoch 26: 0/60000 (0%), Loss: 0.4944, Entropy: 3.9371, Reg: 0.0000
+Epoch 26: 14976/60000 (25%), Loss: 0.6418, Entropy: 5.3783, Reg: 0.0000
+Epoch 26: 29952/60000 (50%), Loss: 0.6488, Entropy: 5.4934, Reg: 0.0000
+Epoch 26: 44928/60000 (75%), Loss: 0.6430, Entropy: 5.4365, Reg: 0.0000
+Epoch 26: 59904/60000 (100%), Loss: 0.6406, Entropy: 5.4197, Reg: 0.0000
+Epoch: 26, Loss: 0.640535, Accuracy: 75.09%
+Epoch training time (s): 16.322134256362915
+Defense: teacher
+Epoch 27: 0/60000 (0%), Loss: 0.4827, Entropy: 3.9070, Reg: 0.0000
+Epoch 27: 14976/60000 (25%), Loss: 0.6312, Entropy: 5.3246, Reg: 0.0000
+Epoch 27: 29952/60000 (50%), Loss: 0.6383, Entropy: 5.4406, Reg: 0.0000
+Epoch 27: 44928/60000 (75%), Loss: 0.6326, Entropy: 5.3850, Reg: 0.0000
+Epoch 27: 59904/60000 (100%), Loss: 0.6305, Entropy: 5.3704, Reg: 0.0000
+Epoch: 27, Loss: 0.630433, Accuracy: 75.47%
+Epoch training time (s): 16.557705879211426
+Defense: teacher
+Epoch 28: 0/60000 (0%), Loss: 0.4727, Entropy: 3.8767, Reg: 0.0000
+Epoch 28: 14976/60000 (25%), Loss: 0.6216, Entropy: 5.2803, Reg: 0.0000
+Epoch 28: 29952/60000 (50%), Loss: 0.6289, Entropy: 5.3980, Reg: 0.0000
+Epoch 28: 44928/60000 (75%), Loss: 0.6232, Entropy: 5.3419, Reg: 0.0000
+Epoch 28: 59904/60000 (100%), Loss: 0.6213, Entropy: 5.3279, Reg: 0.0000
+Epoch: 28, Loss: 0.621253, Accuracy: 75.87%
+Epoch training time (s): 16.41895341873169
+Defense: teacher
+Epoch 29: 0/60000 (0%), Loss: 0.4645, Entropy: 3.8464, Reg: 0.0000
+Epoch 29: 14976/60000 (25%), Loss: 0.6128, Entropy: 5.2384, Reg: 0.0000
+Epoch 29: 29952/60000 (50%), Loss: 0.6202, Entropy: 5.3582, Reg: 0.0000
+Epoch 29: 44928/60000 (75%), Loss: 0.6146, Entropy: 5.3016, Reg: 0.0000
+Epoch 29: 59904/60000 (100%), Loss: 0.6129, Entropy: 5.2882, Reg: 0.0000
+Epoch: 29, Loss: 0.612850, Accuracy: 76.26%
+Epoch training time (s): 16.493509531021118
+Defense: teacher
+Epoch 30: 0/60000 (0%), Loss: 0.4575, Entropy: 3.8146, Reg: 0.0000
+Epoch 30: 14976/60000 (25%), Loss: 0.6048, Entropy: 5.1976, Reg: 0.0000
+Epoch 30: 29952/60000 (50%), Loss: 0.6122, Entropy: 5.3179, Reg: 0.0000
+Epoch 30: 44928/60000 (75%), Loss: 0.6067, Entropy: 5.2613, Reg: 0.0000
+Epoch 30: 59904/60000 (100%), Loss: 0.6051, Entropy: 5.2490, Reg: 0.0000
+Epoch: 30, Loss: 0.605111, Accuracy: 76.56%
+Epoch training time (s): 16.19901132583618
+Defense: teacher
+Epoch 31: 0/60000 (0%), Loss: 0.4518, Entropy: 3.7813, Reg: 0.0000
+Epoch 31: 14976/60000 (25%), Loss: 0.5974, Entropy: 5.1594, Reg: 0.0000
+Epoch 31: 29952/60000 (50%), Loss: 0.6048, Entropy: 5.2799, Reg: 0.0000
+Epoch 31: 44928/60000 (75%), Loss: 0.5993, Entropy: 5.2239, Reg: 0.0000
+Epoch 31: 59904/60000 (100%), Loss: 0.5980, Entropy: 5.2125, Reg: 0.0000
+Epoch: 31, Loss: 0.597954, Accuracy: 76.93%
+Epoch training time (s): 15.678913116455078
+Defense: teacher
+Epoch 32: 0/60000 (0%), Loss: 0.4471, Entropy: 3.7678, Reg: 0.0000
+Epoch 32: 14976/60000 (25%), Loss: 0.5905, Entropy: 5.1206, Reg: 0.0000
+Epoch 32: 29952/60000 (50%), Loss: 0.5979, Entropy: 5.2400, Reg: 0.0000
+Epoch 32: 44928/60000 (75%), Loss: 0.5925, Entropy: 5.1849, Reg: 0.0000
+Epoch 32: 59904/60000 (100%), Loss: 0.5913, Entropy: 5.1740, Reg: 0.0000
+Epoch: 32, Loss: 0.591285, Accuracy: 77.26%
+Epoch training time (s): 16.517868280410767
+Defense: teacher
+Epoch 33: 0/60000 (0%), Loss: 0.4432, Entropy: 3.7739, Reg: 0.0000
+Epoch 33: 14976/60000 (25%), Loss: 0.5840, Entropy: 5.0816, Reg: 0.0000
+Epoch 33: 29952/60000 (50%), Loss: 0.5914, Entropy: 5.2010, Reg: 0.0000
+Epoch 33: 44928/60000 (75%), Loss: 0.5861, Entropy: 5.1478, Reg: 0.0000
+Epoch 33: 59904/60000 (100%), Loss: 0.5850, Entropy: 5.1383, Reg: 0.0000
+Epoch: 33, Loss: 0.585001, Accuracy: 77.49%
+Epoch training time (s): 16.500722646713257
+Defense: teacher
+Epoch 34: 0/60000 (0%), Loss: 0.4398, Entropy: 3.7951, Reg: 0.0000
+Epoch 34: 14976/60000 (25%), Loss: 0.5778, Entropy: 5.0430, Reg: 0.0000
+Epoch 34: 29952/60000 (50%), Loss: 0.5852, Entropy: 5.1605, Reg: 0.0000
+Epoch 34: 44928/60000 (75%), Loss: 0.5800, Entropy: 5.1092, Reg: 0.0000
+Epoch 34: 59904/60000 (100%), Loss: 0.5790, Entropy: 5.1006, Reg: 0.0000
+Epoch: 34, Loss: 0.579040, Accuracy: 77.71%
+Epoch training time (s): 16.114909172058105
+Defense: teacher
+Epoch 35: 0/60000 (0%), Loss: 0.4370, Entropy: 3.8102, Reg: 0.0000
+Epoch 35: 14976/60000 (25%), Loss: 0.5718, Entropy: 5.0006, Reg: 0.0000
+Epoch 35: 29952/60000 (50%), Loss: 0.5792, Entropy: 5.1123, Reg: 0.0000
+Epoch 35: 44928/60000 (75%), Loss: 0.5741, Entropy: 5.0592, Reg: 0.0000
+Epoch 35: 59904/60000 (100%), Loss: 0.5732, Entropy: 5.0494, Reg: 0.0000
+Epoch: 35, Loss: 0.573220, Accuracy: 77.95%
+Epoch training time (s): 16.492061614990234
+Defense: teacher
+Epoch 36: 0/60000 (0%), Loss: 0.4347, Entropy: 3.8053, Reg: 0.0000
+Epoch 36: 14976/60000 (25%), Loss: 0.5660, Entropy: 4.9382, Reg: 0.0000
+Epoch 36: 29952/60000 (50%), Loss: 0.5733, Entropy: 5.0563, Reg: 0.0000
+Epoch 36: 44928/60000 (75%), Loss: 0.5683, Entropy: 5.0101, Reg: 0.0000
+Epoch 36: 59904/60000 (100%), Loss: 0.5676, Entropy: 5.0053, Reg: 0.0000
+Epoch: 36, Loss: 0.567553, Accuracy: 78.26%
+Epoch training time (s): 16.007169008255005
+Defense: teacher
+Epoch 37: 0/60000 (0%), Loss: 0.4330, Entropy: 3.8390, Reg: 0.0000
+Epoch 37: 14976/60000 (25%), Loss: 0.5605, Entropy: 4.9053, Reg: 0.0000
+Epoch 37: 29952/60000 (50%), Loss: 0.5678, Entropy: 5.0229, Reg: 0.0000
+Epoch 37: 44928/60000 (75%), Loss: 0.5628, Entropy: 4.9778, Reg: 0.0000
+Epoch 37: 59904/60000 (100%), Loss: 0.5622, Entropy: 4.9740, Reg: 0.0000
+Epoch: 37, Loss: 0.562228, Accuracy: 78.44%
+Epoch training time (s): 16.353431224822998
+Defense: teacher
+Epoch 38: 0/60000 (0%), Loss: 0.4317, Entropy: 3.8728, Reg: 0.0000
+Epoch 38: 14976/60000 (25%), Loss: 0.5553, Entropy: 4.8707, Reg: 0.0000
+Epoch 38: 29952/60000 (50%), Loss: 0.5625, Entropy: 4.9880, Reg: 0.0000
+Epoch 38: 44928/60000 (75%), Loss: 0.5576, Entropy: 4.9445, Reg: 0.0000
+Epoch 38: 59904/60000 (100%), Loss: 0.5571, Entropy: 4.9416, Reg: 0.0000
+Epoch: 38, Loss: 0.557111, Accuracy: 78.73%
+Epoch training time (s): 17.475346088409424
+Defense: teacher
+Epoch 39: 0/60000 (0%), Loss: 0.4322, Entropy: 3.9335, Reg: 0.0000
+Epoch 39: 14976/60000 (25%), Loss: 0.5502, Entropy: 4.8363, Reg: 0.0000
+Epoch 39: 29952/60000 (50%), Loss: 0.5574, Entropy: 4.9533, Reg: 0.0000
+Epoch 39: 44928/60000 (75%), Loss: 0.5526, Entropy: 4.9103, Reg: 0.0000
+Epoch 39: 59904/60000 (100%), Loss: 0.5522, Entropy: 4.9082, Reg: 0.0000
+Epoch: 39, Loss: 0.552173, Accuracy: 78.99%
+Epoch training time (s): 16.598228454589844
+Defense: teacher
+Epoch 40: 0/60000 (0%), Loss: 0.4315, Entropy: 3.9617, Reg: 0.0000
+Epoch 40: 14976/60000 (25%), Loss: 0.5453, Entropy: 4.8004, Reg: 0.0000
+Epoch 40: 29952/60000 (50%), Loss: 0.5524, Entropy: 4.9176, Reg: 0.0000
+Epoch 40: 44928/60000 (75%), Loss: 0.5476, Entropy: 4.8755, Reg: 0.0000
+Epoch 40: 59904/60000 (100%), Loss: 0.5473, Entropy: 4.8736, Reg: 0.0000
+Epoch: 40, Loss: 0.547351, Accuracy: 79.23%
+Epoch training time (s): 16.8117892742157
+Defense: teacher
+Epoch 41: 0/60000 (0%), Loss: 0.4308, Entropy: 3.9838, Reg: 0.0000
+Epoch 41: 14976/60000 (25%), Loss: 0.5406, Entropy: 4.7666, Reg: 0.0000
+Epoch 41: 29952/60000 (50%), Loss: 0.5476, Entropy: 4.8835, Reg: 0.0000
+Epoch 41: 44928/60000 (75%), Loss: 0.5429, Entropy: 4.8429, Reg: 0.0000
+Epoch 41: 59904/60000 (100%), Loss: 0.5427, Entropy: 4.8416, Reg: 0.0000
+Epoch: 41, Loss: 0.542685, Accuracy: 79.49%
+Epoch training time (s): 16.309996128082275
+Defense: teacher
+Epoch 42: 0/60000 (0%), Loss: 0.4314, Entropy: 4.0213, Reg: 0.0000
+Epoch 42: 14976/60000 (25%), Loss: 0.5359, Entropy: 4.7328, Reg: 0.0000
+Epoch 42: 29952/60000 (50%), Loss: 0.5429, Entropy: 4.8496, Reg: 0.0000
+Epoch 42: 44928/60000 (75%), Loss: 0.5383, Entropy: 4.8109, Reg: 0.0000
+Epoch 42: 59904/60000 (100%), Loss: 0.5381, Entropy: 4.8106, Reg: 0.0000
+Epoch: 42, Loss: 0.538159, Accuracy: 79.69%
+Epoch training time (s): 16.262378215789795
+Defense: teacher
+Epoch 43: 0/60000 (0%), Loss: 0.4311, Entropy: 4.0289, Reg: 0.0000
+Epoch 43: 14976/60000 (25%), Loss: 0.5315, Entropy: 4.7035, Reg: 0.0000
+Epoch 43: 29952/60000 (50%), Loss: 0.5383, Entropy: 4.8180, Reg: 0.0000
+Epoch 43: 44928/60000 (75%), Loss: 0.5338, Entropy: 4.7805, Reg: 0.0000
+Epoch 43: 59904/60000 (100%), Loss: 0.5337, Entropy: 4.7806, Reg: 0.0000
+Epoch: 43, Loss: 0.533758, Accuracy: 79.97%
+Epoch training time (s): 16.612964153289795
+Defense: teacher
+Epoch 44: 0/60000 (0%), Loss: 0.4314, Entropy: 4.0487, Reg: 0.0000
+Epoch 44: 14976/60000 (25%), Loss: 0.5271, Entropy: 4.6735, Reg: 0.0000
+Epoch 44: 29952/60000 (50%), Loss: 0.5339, Entropy: 4.7871, Reg: 0.0000
+Epoch 44: 44928/60000 (75%), Loss: 0.5294, Entropy: 4.7516, Reg: 0.0000
+Epoch 44: 59904/60000 (100%), Loss: 0.5295, Entropy: 4.7520, Reg: 0.0000
+Epoch: 44, Loss: 0.529481, Accuracy: 80.20%
+Epoch training time (s): 16.288244485855103
+Defense: teacher
+Epoch 45: 0/60000 (0%), Loss: 0.4315, Entropy: 4.0533, Reg: 0.0000
+Epoch 45: 14976/60000 (25%), Loss: 0.5228, Entropy: 4.6457, Reg: 0.0000
+Epoch 45: 29952/60000 (50%), Loss: 0.5295, Entropy: 4.7577, Reg: 0.0000
+Epoch 45: 44928/60000 (75%), Loss: 0.5252, Entropy: 4.7233, Reg: 0.0000
+Epoch 45: 59904/60000 (100%), Loss: 0.5253, Entropy: 4.7244, Reg: 0.0000
+Epoch: 45, Loss: 0.525318, Accuracy: 80.42%
+Epoch training time (s): 16.845080852508545
+Defense: teacher
+Epoch 46: 0/60000 (0%), Loss: 0.4326, Entropy: 4.0711, Reg: 0.0000
+Epoch 46: 14976/60000 (25%), Loss: 0.5187, Entropy: 4.6177, Reg: 0.0000
+Epoch 46: 29952/60000 (50%), Loss: 0.5253, Entropy: 4.7299, Reg: 0.0000
+Epoch 46: 44928/60000 (75%), Loss: 0.5211, Entropy: 4.6971, Reg: 0.0000
+Epoch 46: 59904/60000 (100%), Loss: 0.5212, Entropy: 4.6991, Reg: 0.0000
+Epoch: 46, Loss: 0.521264, Accuracy: 80.54%
+Epoch training time (s): 16.269327878952026
+Defense: teacher
+Epoch 47: 0/60000 (0%), Loss: 0.4337, Entropy: 4.1012, Reg: 0.0000
+Epoch 47: 14976/60000 (25%), Loss: 0.5146, Entropy: 4.5906, Reg: 0.0000
+Epoch 47: 29952/60000 (50%), Loss: 0.5212, Entropy: 4.7018, Reg: 0.0000
+Epoch 47: 44928/60000 (75%), Loss: 0.5171, Entropy: 4.6713, Reg: 0.0000
+Epoch 47: 59904/60000 (100%), Loss: 0.5173, Entropy: 4.6742, Reg: 0.0000
+Epoch: 47, Loss: 0.517328, Accuracy: 80.66%
+Epoch training time (s): 16.68565845489502
+Defense: teacher
+Epoch 48: 0/60000 (0%), Loss: 0.4340, Entropy: 4.1085, Reg: 0.0000
+Epoch 48: 14976/60000 (25%), Loss: 0.5107, Entropy: 4.5646, Reg: 0.0000
+Epoch 48: 29952/60000 (50%), Loss: 0.5172, Entropy: 4.6752, Reg: 0.0000
+Epoch 48: 44928/60000 (75%), Loss: 0.5132, Entropy: 4.6468, Reg: 0.0000
+Epoch 48: 59904/60000 (100%), Loss: 0.5135, Entropy: 4.6506, Reg: 0.0000
+Epoch: 48, Loss: 0.513500, Accuracy: 80.76%
+Epoch training time (s): 16.66875648498535
+Defense: teacher
+Epoch 49: 0/60000 (0%), Loss: 0.4344, Entropy: 4.1117, Reg: 0.0000
+Epoch 49: 14976/60000 (25%), Loss: 0.5068, Entropy: 4.5386, Reg: 0.0000
+Epoch 49: 29952/60000 (50%), Loss: 0.5133, Entropy: 4.6490, Reg: 0.0000
+Epoch 49: 44928/60000 (75%), Loss: 0.5094, Entropy: 4.6230, Reg: 0.0000
+Epoch 49: 59904/60000 (100%), Loss: 0.5098, Entropy: 4.6278, Reg: 0.0000
+Epoch: 49, Loss: 0.509789, Accuracy: 80.92%
+Epoch training time (s): 16.97939705848694
+Defense: teacher
+Epoch 50: 0/60000 (0%), Loss: 0.4357, Entropy: 4.1410, Reg: 0.0000
+Epoch 50: 14976/60000 (25%), Loss: 0.5031, Entropy: 4.5131, Reg: 0.0000
+Epoch 50: 29952/60000 (50%), Loss: 0.5095, Entropy: 4.6226, Reg: 0.0000
+Epoch 50: 44928/60000 (75%), Loss: 0.5057, Entropy: 4.5991, Reg: 0.0000
+Epoch 50: 59904/60000 (100%), Loss: 0.5062, Entropy: 4.6050, Reg: 0.0000
+Epoch: 50, Loss: 0.506181, Accuracy: 81.10%
+Epoch training time (s): 16.37402629852295
+Defense: teacher
+Epoch 51: 0/60000 (0%), Loss: 0.4373, Entropy: 4.1832, Reg: 0.0000
+Epoch 51: 14976/60000 (25%), Loss: 0.4995, Entropy: 4.4882, Reg: 0.0000
+Epoch 51: 29952/60000 (50%), Loss: 0.5058, Entropy: 4.5964, Reg: 0.0000
+Epoch 51: 44928/60000 (75%), Loss: 0.5022, Entropy: 4.5753, Reg: 0.0000
+Epoch 51: 59904/60000 (100%), Loss: 0.5026, Entropy: 4.5825, Reg: 0.0000
+Epoch: 51, Loss: 0.502670, Accuracy: 81.23%
+Epoch training time (s): 15.174039363861084
+Training time (s): 850.051985502243
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_teacher/seed_-1
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -1
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 7522.0/10000 (75.22%)
+name: fashion_lenet_teacher/seed_-1
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -1
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6712.0/10000 (67.12%)
+name: fashion_lenet_teacher/seed_-1
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -1
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 5145.0/10000 (51.45%)
+name: fashion_lenet_teacher/seed_-1
+model: epoch_51.pt
+dataset: fashion
+defense: teacher
+seed: -1
+gpu_number: 4
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 1
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 0.2
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: False
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 3582.0/10000 (35.82%)

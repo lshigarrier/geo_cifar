@@ -1,0 +1,2937 @@
+=====================================================================================================
+name: fashion_lenet_isoreg/seed_0
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 0
+gpu_number: 3
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/60000 (0%), Loss: 2.2978, Entropy: 2.2978, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.2766, Entropy: 2.2766, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 2.2193, Entropy: 2.2193, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 2.0498, Entropy: 2.0498, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 1.8076, Entropy: 1.8076, Reg: 0.0000
+Epoch: 1, Loss: 1.806651, Accuracy: 67.97%
+Epoch training time (s): 17.41804027557373
+Defense: isometry
+Epoch 2: 0/60000 (0%), Loss: 0.9157, Entropy: 0.8713, Reg: 0.0443
+Epoch 2: 14976/60000 (25%), Loss: 0.8904, Entropy: 0.8649, Reg: 0.0255
+Epoch 2: 29952/60000 (50%), Loss: 0.8568, Entropy: 0.8295, Reg: 0.0273
+Epoch 2: 44928/60000 (75%), Loss: 0.8275, Entropy: 0.7954, Reg: 0.0320
+Epoch 2: 59904/60000 (100%), Loss: 0.8060, Entropy: 0.7700, Reg: 0.0360
+Epoch: 2, Loss: 0.805857, Accuracy: 75.18%
+Epoch training time (s): 74.03438973426819
+Defense: isometry
+Epoch 3: 0/60000 (0%), Loss: 0.6042, Entropy: 0.5517, Reg: 0.0524
+Epoch 3: 14976/60000 (25%), Loss: 0.7247, Entropy: 0.6727, Reg: 0.0520
+Epoch 3: 29952/60000 (50%), Loss: 0.7222, Entropy: 0.6698, Reg: 0.0525
+Epoch 3: 44928/60000 (75%), Loss: 0.7137, Entropy: 0.6576, Reg: 0.0561
+Epoch 3: 59904/60000 (100%), Loss: 0.7096, Entropy: 0.6486, Reg: 0.0611
+Epoch: 3, Loss: 0.709515, Accuracy: 77.40%
+Epoch training time (s): 73.90075492858887
+Defense: isometry
+Epoch 4: 0/60000 (0%), Loss: 0.5649, Entropy: 0.4861, Reg: 0.0788
+Epoch 4: 14976/60000 (25%), Loss: 0.6933, Entropy: 0.6100, Reg: 0.0834
+Epoch 4: 29952/60000 (50%), Loss: 0.6998, Entropy: 0.6125, Reg: 0.0873
+Epoch 4: 44928/60000 (75%), Loss: 0.7010, Entropy: 0.6047, Reg: 0.0963
+Epoch 4: 59904/60000 (100%), Loss: 0.7016, Entropy: 0.6002, Reg: 0.1014
+Epoch: 4, Loss: 0.701485, Accuracy: 78.35%
+Epoch training time (s): 74.97513246536255
+Defense: isometry
+Epoch 5: 0/60000 (0%), Loss: 0.5520, Entropy: 0.4721, Reg: 0.0799
+Epoch 5: 14976/60000 (25%), Loss: 0.7003, Entropy: 0.5772, Reg: 0.1231
+Epoch 5: 29952/60000 (50%), Loss: 0.7064, Entropy: 0.5821, Reg: 0.1243
+Epoch 5: 44928/60000 (75%), Loss: 0.7062, Entropy: 0.5764, Reg: 0.1298
+Epoch 5: 59904/60000 (100%), Loss: 0.7063, Entropy: 0.5738, Reg: 0.1325
+Epoch: 5, Loss: 0.706179, Accuracy: 79.14%
+Epoch training time (s): 76.11373591423035
+Defense: isometry
+Epoch 6: 0/60000 (0%), Loss: 0.5608, Entropy: 0.4714, Reg: 0.0893
+Epoch 6: 14976/60000 (25%), Loss: 0.6960, Entropy: 0.5569, Reg: 0.1391
+Epoch 6: 29952/60000 (50%), Loss: 0.7049, Entropy: 0.5623, Reg: 0.1425
+Epoch 6: 44928/60000 (75%), Loss: 0.7032, Entropy: 0.5576, Reg: 0.1456
+Epoch 6: 59904/60000 (100%), Loss: 0.7019, Entropy: 0.5560, Reg: 0.1459
+Epoch: 6, Loss: 0.701726, Accuracy: 79.99%
+Epoch training time (s): 73.93806624412537
+Defense: isometry
+Epoch 7: 0/60000 (0%), Loss: 0.5469, Entropy: 0.4584, Reg: 0.0885
+Epoch 7: 14976/60000 (25%), Loss: 0.6847, Entropy: 0.5414, Reg: 0.1433
+Epoch 7: 29952/60000 (50%), Loss: 0.6923, Entropy: 0.5467, Reg: 0.1457
+Epoch 7: 44928/60000 (75%), Loss: 0.6918, Entropy: 0.5422, Reg: 0.1496
+Epoch 7: 59904/60000 (100%), Loss: 0.6914, Entropy: 0.5411, Reg: 0.1504
+Epoch: 7, Loss: 0.691322, Accuracy: 80.53%
+Epoch training time (s): 76.57367038726807
+Defense: isometry
+Epoch 8: 0/60000 (0%), Loss: 0.5446, Entropy: 0.4562, Reg: 0.0884
+Epoch 8: 14976/60000 (25%), Loss: 0.6751, Entropy: 0.5277, Reg: 0.1473
+Epoch 8: 29952/60000 (50%), Loss: 0.6828, Entropy: 0.5328, Reg: 0.1499
+Epoch 8: 44928/60000 (75%), Loss: 0.6818, Entropy: 0.5290, Reg: 0.1528
+Epoch 8: 59904/60000 (100%), Loss: 0.6810, Entropy: 0.5283, Reg: 0.1527
+Epoch: 8, Loss: 0.680862, Accuracy: 81.07%
+Epoch training time (s): 76.21285939216614
+Defense: isometry
+Epoch 9: 0/60000 (0%), Loss: 0.5376, Entropy: 0.4548, Reg: 0.0828
+Epoch 9: 14976/60000 (25%), Loss: 0.6611, Entropy: 0.5160, Reg: 0.1451
+Epoch 9: 29952/60000 (50%), Loss: 0.6748, Entropy: 0.5214, Reg: 0.1533
+Epoch 9: 44928/60000 (75%), Loss: 0.6704, Entropy: 0.5181, Reg: 0.1523
+Epoch 9: 59904/60000 (100%), Loss: 0.6703, Entropy: 0.5176, Reg: 0.1527
+Epoch: 9, Loss: 0.670212, Accuracy: 81.45%
+Epoch training time (s): 77.34854054450989
+Defense: isometry
+Epoch 10: 0/60000 (0%), Loss: 0.5418, Entropy: 0.4573, Reg: 0.0845
+Epoch 10: 14976/60000 (25%), Loss: 0.6514, Entropy: 0.5055, Reg: 0.1459
+Epoch 10: 29952/60000 (50%), Loss: 0.6649, Entropy: 0.5106, Reg: 0.1543
+Epoch 10: 44928/60000 (75%), Loss: 0.6631, Entropy: 0.5071, Reg: 0.1560
+Epoch 10: 59904/60000 (100%), Loss: 0.6649, Entropy: 0.5072, Reg: 0.1577
+Epoch: 10, Loss: 0.664759, Accuracy: 81.87%
+Epoch training time (s): 77.66937899589539
+Defense: isometry
+Epoch 11: 0/60000 (0%), Loss: 0.5288, Entropy: 0.4527, Reg: 0.0761
+Epoch 11: 14976/60000 (25%), Loss: 0.6472, Entropy: 0.4966, Reg: 0.1505
+Epoch 11: 29952/60000 (50%), Loss: 0.6638, Entropy: 0.5011, Reg: 0.1627
+Epoch 11: 44928/60000 (75%), Loss: 0.6616, Entropy: 0.4978, Reg: 0.1638
+Epoch 11: 59904/60000 (100%), Loss: 0.6657, Entropy: 0.4981, Reg: 0.1676
+Epoch: 11, Loss: 0.665587, Accuracy: 82.15%
+Epoch training time (s): 77.45519638061523
+Defense: isometry
+Epoch 12: 0/60000 (0%), Loss: 0.5336, Entropy: 0.4517, Reg: 0.0818
+Epoch 12: 14976/60000 (25%), Loss: 0.6558, Entropy: 0.4875, Reg: 0.1683
+Epoch 12: 29952/60000 (50%), Loss: 0.6645, Entropy: 0.4920, Reg: 0.1724
+Epoch 12: 44928/60000 (75%), Loss: 0.6607, Entropy: 0.4889, Reg: 0.1717
+Epoch 12: 59904/60000 (100%), Loss: 0.6659, Entropy: 0.4895, Reg: 0.1764
+Epoch: 12, Loss: 0.665798, Accuracy: 82.54%
+Epoch training time (s): 81.33396482467651
+Defense: isometry
+Epoch 13: 0/60000 (0%), Loss: 0.5263, Entropy: 0.4460, Reg: 0.0803
+Epoch 13: 14976/60000 (25%), Loss: 0.6508, Entropy: 0.4795, Reg: 0.1713
+Epoch 13: 29952/60000 (50%), Loss: 0.6651, Entropy: 0.4838, Reg: 0.1813
+Epoch 13: 44928/60000 (75%), Loss: 0.6651, Entropy: 0.4809, Reg: 0.1842
+Epoch 13: 59904/60000 (100%), Loss: 0.6688, Entropy: 0.4816, Reg: 0.1872
+Epoch: 13, Loss: 0.668702, Accuracy: 82.63%
+Epoch training time (s): 80.72643685340881
+Defense: isometry
+Epoch 14: 0/60000 (0%), Loss: 0.5244, Entropy: 0.4255, Reg: 0.0989
+Epoch 14: 14976/60000 (25%), Loss: 0.6555, Entropy: 0.4710, Reg: 0.1846
+Epoch 14: 29952/60000 (50%), Loss: 0.6700, Entropy: 0.4759, Reg: 0.1941
+Epoch 14: 44928/60000 (75%), Loss: 0.6655, Entropy: 0.4734, Reg: 0.1922
+Epoch 14: 59904/60000 (100%), Loss: 0.6669, Entropy: 0.4742, Reg: 0.1928
+Epoch: 14, Loss: 0.666837, Accuracy: 82.98%
+Epoch training time (s): 79.85433340072632
+Defense: isometry
+Epoch 15: 0/60000 (0%), Loss: 0.5602, Entropy: 0.4260, Reg: 0.1342
+Epoch 15: 14976/60000 (25%), Loss: 0.6481, Entropy: 0.4639, Reg: 0.1842
+Epoch 15: 29952/60000 (50%), Loss: 0.6643, Entropy: 0.4683, Reg: 0.1961
+Epoch 15: 44928/60000 (75%), Loss: 0.6609, Entropy: 0.4659, Reg: 0.1950
+Epoch 15: 59904/60000 (100%), Loss: 0.6678, Entropy: 0.4669, Reg: 0.2009
+Epoch: 15, Loss: 0.667684, Accuracy: 83.14%
+Epoch training time (s): 79.65193963050842
+Defense: isometry
+Epoch 16: 0/60000 (0%), Loss: 0.5322, Entropy: 0.4463, Reg: 0.0859
+Epoch 16: 14976/60000 (25%), Loss: 0.6580, Entropy: 0.4575, Reg: 0.2005
+Epoch 16: 29952/60000 (50%), Loss: 0.6745, Entropy: 0.4614, Reg: 0.2131
+Epoch 16: 44928/60000 (75%), Loss: 0.6729, Entropy: 0.4593, Reg: 0.2136
+Epoch 16: 59904/60000 (100%), Loss: 0.6764, Entropy: 0.4602, Reg: 0.2161
+Epoch: 16, Loss: 0.676243, Accuracy: 83.55%
+Epoch training time (s): 80.1894109249115
+Defense: isometry
+Epoch 17: 0/60000 (0%), Loss: 0.5197, Entropy: 0.4292, Reg: 0.0905
+Epoch 17: 14976/60000 (25%), Loss: 0.6603, Entropy: 0.4513, Reg: 0.2089
+Epoch 17: 29952/60000 (50%), Loss: 0.6750, Entropy: 0.4546, Reg: 0.2204
+Epoch 17: 44928/60000 (75%), Loss: 0.6716, Entropy: 0.4528, Reg: 0.2187
+Epoch 17: 59904/60000 (100%), Loss: 0.6752, Entropy: 0.4540, Reg: 0.2212
+Epoch: 17, Loss: 0.675053, Accuracy: 83.86%
+Epoch training time (s): 78.40120220184326
+Defense: isometry
+Epoch 18: 0/60000 (0%), Loss: 0.5281, Entropy: 0.4294, Reg: 0.0987
+Epoch 18: 14976/60000 (25%), Loss: 0.6602, Entropy: 0.4457, Reg: 0.2145
+Epoch 18: 29952/60000 (50%), Loss: 0.6706, Entropy: 0.4491, Reg: 0.2215
+Epoch 18: 44928/60000 (75%), Loss: 0.6708, Entropy: 0.4472, Reg: 0.2236
+Epoch 18: 59904/60000 (100%), Loss: 0.6782, Entropy: 0.4483, Reg: 0.2299
+Epoch: 18, Loss: 0.678084, Accuracy: 83.98%
+Epoch training time (s): 77.65166974067688
+Defense: isometry
+Epoch 19: 0/60000 (0%), Loss: 0.5227, Entropy: 0.4261, Reg: 0.0967
+Epoch 19: 14976/60000 (25%), Loss: 0.6657, Entropy: 0.4408, Reg: 0.2249
+Epoch 19: 29952/60000 (50%), Loss: 0.6757, Entropy: 0.4443, Reg: 0.2314
+Epoch 19: 44928/60000 (75%), Loss: 0.6739, Entropy: 0.4425, Reg: 0.2314
+Epoch 19: 59904/60000 (100%), Loss: 0.6796, Entropy: 0.4436, Reg: 0.2360
+Epoch: 19, Loss: 0.679457, Accuracy: 84.46%
+Epoch training time (s): 79.95295763015747
+Defense: isometry
+Epoch 20: 0/60000 (0%), Loss: 0.5109, Entropy: 0.4310, Reg: 0.0799
+Epoch 20: 14976/60000 (25%), Loss: 0.6643, Entropy: 0.4356, Reg: 0.2287
+Epoch 20: 29952/60000 (50%), Loss: 0.6800, Entropy: 0.4391, Reg: 0.2409
+Epoch 20: 44928/60000 (75%), Loss: 0.6765, Entropy: 0.4370, Reg: 0.2394
+Epoch 20: 59904/60000 (100%), Loss: 0.6838, Entropy: 0.4379, Reg: 0.2458
+Epoch: 20, Loss: 0.683600, Accuracy: 84.34%
+Epoch training time (s): 80.31612014770508
+Defense: isometry
+Epoch 21: 0/60000 (0%), Loss: 0.5126, Entropy: 0.4302, Reg: 0.0824
+Epoch 21: 14976/60000 (25%), Loss: 0.6601, Entropy: 0.4311, Reg: 0.2289
+Epoch 21: 29952/60000 (50%), Loss: 0.6824, Entropy: 0.4350, Reg: 0.2474
+Epoch 21: 44928/60000 (75%), Loss: 0.6827, Entropy: 0.4329, Reg: 0.2498
+Epoch 21: 59904/60000 (100%), Loss: 0.6911, Entropy: 0.4341, Reg: 0.2570
+Epoch: 21, Loss: 0.690934, Accuracy: 84.63%
+Epoch training time (s): 81.71745944023132
+Defense: isometry
+Epoch 22: 0/60000 (0%), Loss: 0.5050, Entropy: 0.4125, Reg: 0.0925
+Epoch 22: 14976/60000 (25%), Loss: 0.6640, Entropy: 0.4260, Reg: 0.2379
+Epoch 22: 29952/60000 (50%), Loss: 0.6872, Entropy: 0.4305, Reg: 0.2567
+Epoch 22: 44928/60000 (75%), Loss: 0.6868, Entropy: 0.4286, Reg: 0.2582
+Epoch 22: 59904/60000 (100%), Loss: 0.6878, Entropy: 0.4294, Reg: 0.2585
+Epoch: 22, Loss: 0.687687, Accuracy: 84.90%
+Epoch training time (s): 78.625967502594
+Defense: isometry
+Epoch 23: 0/60000 (0%), Loss: 0.5032, Entropy: 0.4147, Reg: 0.0884
+Epoch 23: 14976/60000 (25%), Loss: 0.6620, Entropy: 0.4220, Reg: 0.2400
+Epoch 23: 29952/60000 (50%), Loss: 0.6770, Entropy: 0.4256, Reg: 0.2514
+Epoch 23: 44928/60000 (75%), Loss: 0.6781, Entropy: 0.4232, Reg: 0.2549
+Epoch 23: 59904/60000 (100%), Loss: 0.6785, Entropy: 0.4236, Reg: 0.2549
+Epoch: 23, Loss: 0.678353, Accuracy: 84.86%
+Epoch training time (s): 78.73485803604126
+Defense: isometry
+Epoch 24: 0/60000 (0%), Loss: 0.4904, Entropy: 0.4121, Reg: 0.0783
+Epoch 24: 14976/60000 (25%), Loss: 0.6617, Entropy: 0.4170, Reg: 0.2447
+Epoch 24: 29952/60000 (50%), Loss: 0.6867, Entropy: 0.4211, Reg: 0.2657
+Epoch 24: 44928/60000 (75%), Loss: 0.6813, Entropy: 0.4191, Reg: 0.2622
+Epoch 24: 59904/60000 (100%), Loss: 0.6796, Entropy: 0.4196, Reg: 0.2599
+Epoch: 24, Loss: 0.679473, Accuracy: 85.02%
+Epoch training time (s): 78.73121666908264
+Defense: isometry
+Epoch 25: 0/60000 (0%), Loss: 0.5005, Entropy: 0.4031, Reg: 0.0974
+Epoch 25: 14976/60000 (25%), Loss: 0.6702, Entropy: 0.4136, Reg: 0.2566
+Epoch 25: 29952/60000 (50%), Loss: 0.6949, Entropy: 0.4168, Reg: 0.2782
+Epoch 25: 44928/60000 (75%), Loss: 0.6842, Entropy: 0.4150, Reg: 0.2692
+Epoch 25: 59904/60000 (100%), Loss: 0.6862, Entropy: 0.4156, Reg: 0.2706
+Epoch: 25, Loss: 0.686114, Accuracy: 84.87%
+Epoch training time (s): 80.54901623725891
+Defense: isometry
+Epoch 26: 0/60000 (0%), Loss: 0.4795, Entropy: 0.3963, Reg: 0.0832
+Epoch 26: 14976/60000 (25%), Loss: 0.6636, Entropy: 0.4095, Reg: 0.2541
+Epoch 26: 29952/60000 (50%), Loss: 0.6788, Entropy: 0.4122, Reg: 0.2666
+Epoch 26: 44928/60000 (75%), Loss: 0.6699, Entropy: 0.4099, Reg: 0.2600
+Epoch 26: 59904/60000 (100%), Loss: 0.6813, Entropy: 0.4113, Reg: 0.2700
+Epoch: 26, Loss: 0.681104, Accuracy: 85.33%
+Epoch training time (s): 82.24934458732605
+Defense: isometry
+Epoch 27: 0/60000 (0%), Loss: 0.4695, Entropy: 0.3920, Reg: 0.0775
+Epoch 27: 14976/60000 (25%), Loss: 0.6521, Entropy: 0.4051, Reg: 0.2469
+Epoch 27: 29952/60000 (50%), Loss: 0.6707, Entropy: 0.4073, Reg: 0.2634
+Epoch 27: 44928/60000 (75%), Loss: 0.6655, Entropy: 0.4059, Reg: 0.2595
+Epoch 27: 59904/60000 (100%), Loss: 0.6816, Entropy: 0.4075, Reg: 0.2742
+Epoch: 27, Loss: 0.681500, Accuracy: 85.25%
+Epoch training time (s): 81.05051970481873
+Defense: isometry
+Epoch 28: 0/60000 (0%), Loss: 0.4691, Entropy: 0.3928, Reg: 0.0762
+Epoch 28: 14976/60000 (25%), Loss: 0.6497, Entropy: 0.4016, Reg: 0.2481
+Epoch 28: 29952/60000 (50%), Loss: 0.6786, Entropy: 0.4034, Reg: 0.2752
+Epoch 28: 44928/60000 (75%), Loss: 0.6859, Entropy: 0.4024, Reg: 0.2835
+Epoch 28: 59904/60000 (100%), Loss: 0.6910, Entropy: 0.4033, Reg: 0.2877
+Epoch: 28, Loss: 0.690809, Accuracy: 85.35%
+Epoch training time (s): 80.79771137237549
+Defense: isometry
+Epoch 29: 0/60000 (0%), Loss: 0.4756, Entropy: 0.3976, Reg: 0.0779
+Epoch 29: 14976/60000 (25%), Loss: 0.6530, Entropy: 0.3978, Reg: 0.2552
+Epoch 29: 29952/60000 (50%), Loss: 0.6666, Entropy: 0.3985, Reg: 0.2681
+Epoch 29: 44928/60000 (75%), Loss: 0.6566, Entropy: 0.3967, Reg: 0.2599
+Epoch 29: 59904/60000 (100%), Loss: 0.6610, Entropy: 0.3977, Reg: 0.2633
+Epoch: 29, Loss: 0.660881, Accuracy: 85.82%
+Epoch training time (s): 79.77320766448975
+Defense: isometry
+Epoch 30: 0/60000 (0%), Loss: 0.4612, Entropy: 0.3864, Reg: 0.0748
+Epoch 30: 14976/60000 (25%), Loss: 0.6333, Entropy: 0.3931, Reg: 0.2402
+Epoch 30: 29952/60000 (50%), Loss: 0.6652, Entropy: 0.3943, Reg: 0.2709
+Epoch 30: 44928/60000 (75%), Loss: 0.6649, Entropy: 0.3928, Reg: 0.2721
+Epoch 30: 59904/60000 (100%), Loss: 0.6717, Entropy: 0.3941, Reg: 0.2776
+Epoch: 30, Loss: 0.671536, Accuracy: 86.06%
+Epoch training time (s): 80.68183398246765
+Defense: isometry
+Epoch 31: 0/60000 (0%), Loss: 0.4643, Entropy: 0.3688, Reg: 0.0956
+Epoch 31: 14976/60000 (25%), Loss: 0.6724, Entropy: 0.3907, Reg: 0.2817
+Epoch 31: 29952/60000 (50%), Loss: 0.7087, Entropy: 0.3924, Reg: 0.3164
+Epoch 31: 44928/60000 (75%), Loss: 0.6978, Entropy: 0.3909, Reg: 0.3069
+Epoch 31: 59904/60000 (100%), Loss: 0.7062, Entropy: 0.3922, Reg: 0.3140
+Epoch: 31, Loss: 0.705985, Accuracy: 85.95%
+Epoch training time (s): 80.61229991912842
+Defense: isometry
+Epoch 32: 0/60000 (0%), Loss: 0.4484, Entropy: 0.3719, Reg: 0.0765
+Epoch 32: 14976/60000 (25%), Loss: 0.6854, Entropy: 0.3891, Reg: 0.2963
+Epoch 32: 29952/60000 (50%), Loss: 0.7202, Entropy: 0.3901, Reg: 0.3301
+Epoch 32: 44928/60000 (75%), Loss: 0.7049, Entropy: 0.3879, Reg: 0.3170
+Epoch 32: 59904/60000 (100%), Loss: 0.7088, Entropy: 0.3889, Reg: 0.3199
+Epoch: 32, Loss: 0.708614, Accuracy: 86.20%
+Epoch training time (s): 78.76309108734131
+Defense: isometry
+Epoch 33: 0/60000 (0%), Loss: 0.4444, Entropy: 0.3593, Reg: 0.0850
+Epoch 33: 14976/60000 (25%), Loss: 0.7126, Entropy: 0.3863, Reg: 0.3263
+Epoch 33: 29952/60000 (50%), Loss: 0.7458, Entropy: 0.3889, Reg: 0.3569
+Epoch 33: 44928/60000 (75%), Loss: 0.7314, Entropy: 0.3870, Reg: 0.3444
+Epoch 33: 59904/60000 (100%), Loss: 0.7300, Entropy: 0.3878, Reg: 0.3422
+Epoch: 33, Loss: 0.729728, Accuracy: 86.06%
+Epoch training time (s): 78.69525575637817
+Defense: isometry
+Epoch 34: 0/60000 (0%), Loss: 0.4370, Entropy: 0.3512, Reg: 0.0858
+Epoch 34: 14976/60000 (25%), Loss: 0.7037, Entropy: 0.3844, Reg: 0.3193
+Epoch 34: 29952/60000 (50%), Loss: 0.7584, Entropy: 0.3879, Reg: 0.3705
+Epoch 34: 44928/60000 (75%), Loss: 0.7547, Entropy: 0.3860, Reg: 0.3687
+Epoch 34: 59904/60000 (100%), Loss: 0.7510, Entropy: 0.3866, Reg: 0.3644
+Epoch: 34, Loss: 0.750723, Accuracy: 86.08%
+Epoch training time (s): 80.09158158302307
+Defense: isometry
+Epoch 35: 0/60000 (0%), Loss: 0.4352, Entropy: 0.3476, Reg: 0.0876
+Epoch 35: 14976/60000 (25%), Loss: 0.7217, Entropy: 0.3817, Reg: 0.3400
+Epoch 35: 29952/60000 (50%), Loss: 0.7830, Entropy: 0.3867, Reg: 0.3963
+Epoch 35: 44928/60000 (75%), Loss: 0.7806, Entropy: 0.3851, Reg: 0.3955
+Epoch 35: 59904/60000 (100%), Loss: 0.7790, Entropy: 0.3861, Reg: 0.3929
+Epoch: 35, Loss: 0.778706, Accuracy: 86.06%
+Epoch training time (s): 82.40029382705688
+Defense: isometry
+Epoch 36: 0/60000 (0%), Loss: 0.4329, Entropy: 0.3534, Reg: 0.0795
+Epoch 36: 14976/60000 (25%), Loss: 0.6983, Entropy: 0.3813, Reg: 0.3170
+Epoch 36: 29952/60000 (50%), Loss: 0.7935, Entropy: 0.3855, Reg: 0.4081
+Epoch 36: 44928/60000 (75%), Loss: 0.7896, Entropy: 0.3841, Reg: 0.4054
+Epoch 36: 59904/60000 (100%), Loss: 0.7928, Entropy: 0.3847, Reg: 0.4081
+Epoch: 36, Loss: 0.792549, Accuracy: 86.03%
+Epoch training time (s): 81.55727005004883
+Defense: isometry
+Epoch 37: 0/60000 (0%), Loss: 0.4238, Entropy: 0.3440, Reg: 0.0798
+Epoch 37: 14976/60000 (25%), Loss: 0.7337, Entropy: 0.3810, Reg: 0.3527
+Epoch 37: 29952/60000 (50%), Loss: 0.7902, Entropy: 0.3832, Reg: 0.4070
+Epoch 37: 44928/60000 (75%), Loss: 0.7890, Entropy: 0.3814, Reg: 0.4076
+Epoch 37: 59904/60000 (100%), Loss: 0.7891, Entropy: 0.3819, Reg: 0.4072
+Epoch: 37, Loss: 0.788802, Accuracy: 86.13%
+Epoch training time (s): 77.50373101234436
+Defense: isometry
+Epoch 38: 0/60000 (0%), Loss: 0.4119, Entropy: 0.3301, Reg: 0.0818
+Epoch 38: 14976/60000 (25%), Loss: 0.7840, Entropy: 0.3822, Reg: 0.4017
+Epoch 38: 29952/60000 (50%), Loss: 0.8610, Entropy: 0.3848, Reg: 0.4763
+Epoch 38: 44928/60000 (75%), Loss: 0.8582, Entropy: 0.3843, Reg: 0.4739
+Epoch 38: 59904/60000 (100%), Loss: 0.8854, Entropy: 0.3865, Reg: 0.4988
+Epoch: 38, Loss: 0.885111, Accuracy: 85.62%
+Epoch training time (s): 80.140554189682
+Defense: isometry
+Epoch 39: 0/60000 (0%), Loss: 0.4204, Entropy: 0.3463, Reg: 0.0741
+Epoch 39: 14976/60000 (25%), Loss: 0.8295, Entropy: 0.3826, Reg: 0.4469
+Epoch 39: 29952/60000 (50%), Loss: 0.8874, Entropy: 0.3839, Reg: 0.5035
+Epoch 39: 44928/60000 (75%), Loss: 0.8666, Entropy: 0.3819, Reg: 0.4846
+Epoch 39: 59904/60000 (100%), Loss: 0.8846, Entropy: 0.3825, Reg: 0.5021
+Epoch: 39, Loss: 0.884235, Accuracy: 85.79%
+Epoch training time (s): 72.35750555992126
+Defense: isometry
+Epoch 40: 0/60000 (0%), Loss: 0.3908, Entropy: 0.3210, Reg: 0.0698
+Epoch 40: 14976/60000 (25%), Loss: 0.8608, Entropy: 0.3796, Reg: 0.4812
+Epoch 40: 29952/60000 (50%), Loss: 0.9542, Entropy: 0.3825, Reg: 0.5717
+Epoch 40: 44928/60000 (75%), Loss: 0.9361, Entropy: 0.3814, Reg: 0.5547
+Epoch 40: 59904/60000 (100%), Loss: 0.9756, Entropy: 0.3840, Reg: 0.5916
+Epoch: 40, Loss: 0.975159, Accuracy: 85.28%
+Epoch training time (s): 72.48724627494812
+Defense: isometry
+Epoch 41: 0/60000 (0%), Loss: 0.4186, Entropy: 0.3186, Reg: 0.0999
+Epoch 41: 14976/60000 (25%), Loss: 0.8962, Entropy: 0.3800, Reg: 0.5163
+Epoch 41: 29952/60000 (50%), Loss: 0.9701, Entropy: 0.3838, Reg: 0.5863
+Epoch 41: 44928/60000 (75%), Loss: 1.0031, Entropy: 0.3871, Reg: 0.6160
+Epoch 41: 59904/60000 (100%), Loss: 1.2792, Entropy: 0.4126, Reg: 0.8666
+Epoch: 41, Loss: 1.282527, Accuracy: 81.99%
+Epoch training time (s): 79.71712565422058
+Defense: isometry
+Epoch 42: 0/60000 (0%), Loss: 0.6987, Entropy: 0.3509, Reg: 0.3478
+Epoch 42: 14976/60000 (25%), Loss: 3.0262, Entropy: 0.6227, Reg: 2.4035
+Epoch 42: 29952/60000 (50%), Loss: 3.4167, Entropy: 0.6909, Reg: 2.7258
+Epoch 42: 44928/60000 (75%), Loss: 3.9125, Entropy: 0.7850, Reg: 3.1275
+Epoch 42: 59904/60000 (100%), Loss: 4.0513, Entropy: 0.8602, Reg: 3.1911
+Epoch: 42, Loss: 4.049507, Accuracy: 68.09%
+Epoch training time (s): 81.79795932769775
+Defense: isometry
+Epoch 43: 0/60000 (0%), Loss: 3.7191, Entropy: 1.0752, Reg: 2.6439
+Epoch 43: 14976/60000 (25%), Loss: 3.1066, Entropy: 1.0094, Reg: 2.0972
+Epoch 43: 29952/60000 (50%), Loss: 2.8100, Entropy: 0.9836, Reg: 1.8264
+Epoch 43: 44928/60000 (75%), Loss: 2.6039, Entropy: 0.9497, Reg: 1.6542
+Epoch 43: 59904/60000 (100%), Loss: 2.4832, Entropy: 0.9343, Reg: 1.5489
+Epoch: 43, Loss: 2.482212, Accuracy: 68.51%
+Epoch training time (s): 81.17157483100891
+Defense: isometry
+Epoch 44: 0/60000 (0%), Loss: 2.4195, Entropy: 0.9820, Reg: 1.4375
+Epoch 44: 14976/60000 (25%), Loss: 1.9835, Entropy: 0.8589, Reg: 1.1246
+Epoch 44: 29952/60000 (50%), Loss: 1.9145, Entropy: 0.8588, Reg: 1.0557
+Epoch 44: 44928/60000 (75%), Loss: 1.8459, Entropy: 0.8458, Reg: 1.0001
+Epoch 44: 59904/60000 (100%), Loss: 1.8161, Entropy: 0.8394, Reg: 0.9767
+Epoch: 44, Loss: 1.815685, Accuracy: 68.50%
+Epoch training time (s): 81.24219965934753
+Defense: isometry
+Epoch 45: 0/60000 (0%), Loss: 1.8317, Entropy: 0.8769, Reg: 0.9548
+Epoch 45: 14976/60000 (25%), Loss: 1.6272, Entropy: 0.8050, Reg: 0.8222
+Epoch 45: 29952/60000 (50%), Loss: 1.6127, Entropy: 0.8103, Reg: 0.8024
+Epoch 45: 44928/60000 (75%), Loss: 1.5981, Entropy: 0.8033, Reg: 0.7948
+Epoch 45: 59904/60000 (100%), Loss: 1.5772, Entropy: 0.7991, Reg: 0.7781
+Epoch: 45, Loss: 1.576757, Accuracy: 68.56%
+Epoch training time (s): 81.95769548416138
+Defense: isometry
+Epoch 46: 0/60000 (0%), Loss: 1.4850, Entropy: 0.7844, Reg: 0.7006
+Epoch 46: 14976/60000 (25%), Loss: 1.4871, Entropy: 0.7621, Reg: 0.7250
+Epoch 46: 29952/60000 (50%), Loss: 1.5022, Entropy: 0.7717, Reg: 0.7305
+Epoch 46: 44928/60000 (75%), Loss: 1.4949, Entropy: 0.7679, Reg: 0.7271
+Epoch 46: 59904/60000 (100%), Loss: 1.4949, Entropy: 0.7663, Reg: 0.7286
+Epoch: 46, Loss: 1.494415, Accuracy: 69.47%
+Epoch training time (s): 82.23161816596985
+Defense: isometry
+Epoch 47: 0/60000 (0%), Loss: 1.5790, Entropy: 0.7671, Reg: 0.8118
+Epoch 47: 14976/60000 (25%), Loss: 1.4894, Entropy: 0.7479, Reg: 0.7415
+Epoch 47: 29952/60000 (50%), Loss: 1.4591, Entropy: 0.7459, Reg: 0.7132
+Epoch 47: 44928/60000 (75%), Loss: 1.4583, Entropy: 0.7300, Reg: 0.7283
+Epoch 47: 59904/60000 (100%), Loss: 1.4645, Entropy: 0.7295, Reg: 0.7350
+Epoch: 47, Loss: 1.464124, Accuracy: 70.25%
+Epoch training time (s): 82.30285096168518
+Defense: isometry
+Epoch 48: 0/60000 (0%), Loss: 1.5266, Entropy: 0.7337, Reg: 0.7929
+Epoch 48: 14976/60000 (25%), Loss: 1.4453, Entropy: 0.7252, Reg: 0.7201
+Epoch 48: 29952/60000 (50%), Loss: 1.4168, Entropy: 0.7204, Reg: 0.6963
+Epoch 48: 44928/60000 (75%), Loss: 1.4104, Entropy: 0.7071, Reg: 0.7033
+Epoch 48: 59904/60000 (100%), Loss: 1.4241, Entropy: 0.7035, Reg: 0.7206
+Epoch: 48, Loss: 1.423711, Accuracy: 71.56%
+Epoch training time (s): 82.33413624763489
+Defense: isometry
+Epoch 49: 0/60000 (0%), Loss: 1.2871, Entropy: 0.6336, Reg: 0.6535
+Epoch 49: 14976/60000 (25%), Loss: 1.4529, Entropy: 0.6734, Reg: 0.7796
+Epoch 49: 29952/60000 (50%), Loss: 1.5114, Entropy: 0.6777, Reg: 0.8337
+Epoch 49: 44928/60000 (75%), Loss: 1.5044, Entropy: 0.6758, Reg: 0.8287
+Epoch 49: 59904/60000 (100%), Loss: 1.5090, Entropy: 0.6881, Reg: 0.8209
+Epoch: 49, Loss: 1.508421, Accuracy: 71.25%
+Epoch training time (s): 82.14518332481384
+Defense: isometry
+Epoch 50: 0/60000 (0%), Loss: 1.2250, Entropy: 0.6897, Reg: 0.5353
+Epoch 50: 14976/60000 (25%), Loss: 1.3590, Entropy: 0.6627, Reg: 0.6963
+Epoch 50: 29952/60000 (50%), Loss: 1.4489, Entropy: 0.6782, Reg: 0.7706
+Epoch 50: 44928/60000 (75%), Loss: 1.4193, Entropy: 0.6796, Reg: 0.7397
+Epoch 50: 59904/60000 (100%), Loss: 1.4388, Entropy: 0.6838, Reg: 0.7550
+Epoch: 50, Loss: 1.438304, Accuracy: 71.45%
+Epoch training time (s): 81.20534467697144
+Defense: isometry
+Epoch 51: 0/60000 (0%), Loss: 1.3241, Entropy: 0.6783, Reg: 0.6459
+Epoch 51: 14976/60000 (25%), Loss: 1.3548, Entropy: 0.6694, Reg: 0.6854
+Epoch 51: 29952/60000 (50%), Loss: 1.4205, Entropy: 0.6758, Reg: 0.7448
+Epoch 51: 44928/60000 (75%), Loss: 1.4209, Entropy: 0.6656, Reg: 0.7553
+Epoch 51: 59904/60000 (100%), Loss: 1.4583, Entropy: 0.6743, Reg: 0.7841
+Epoch: 51, Loss: 1.457856, Accuracy: 71.24%
+Epoch training time (s): 82.63856554031372
+Training time (s): 3980.8003084659576
+/home/loic/iso_defense/utils/mnist_utils.py:21: RuntimeWarning: divide by zero encountered in log
+  geo_mean = np.exp(np.log(array[i: i + window_size]).mean())
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_isoreg/seed_0
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 0
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6359.0/10000 (63.59%)
+name: fashion_lenet_isoreg/seed_0
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 0
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 5385.0/10000 (53.85%)
+name: fashion_lenet_isoreg/seed_0
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 0
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 3897.0/10000 (38.97%)
+name: fashion_lenet_isoreg/seed_0
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 0
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 2944.0/10000 (29.44%)
+=====================================================================================================
+name: fashion_lenet_isoreg/seed_1
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 1
+gpu_number: 3
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/60000 (0%), Loss: 2.3143, Entropy: 2.3143, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.2142, Entropy: 2.2142, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 1.9746, Entropy: 1.9746, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 1.6668, Entropy: 1.6668, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 1.4576, Entropy: 1.4576, Reg: 0.0000
+Epoch: 1, Loss: 1.456880, Accuracy: 71.70%
+Epoch training time (s): 13.973737478256226
+Defense: isometry
+Epoch 2: 0/60000 (0%), Loss: 0.8574, Entropy: 0.7031, Reg: 0.1543
+Epoch 2: 14976/60000 (25%), Loss: 0.8264, Entropy: 0.7701, Reg: 0.0563
+Epoch 2: 29952/60000 (50%), Loss: 0.8057, Entropy: 0.7541, Reg: 0.0517
+Epoch 2: 44928/60000 (75%), Loss: 0.7827, Entropy: 0.7317, Reg: 0.0510
+Epoch 2: 59904/60000 (100%), Loss: 0.7675, Entropy: 0.7145, Reg: 0.0529
+Epoch: 2, Loss: 0.767333, Accuracy: 76.44%
+Epoch training time (s): 82.58000135421753
+Defense: isometry
+Epoch 3: 0/60000 (0%), Loss: 0.5919, Entropy: 0.5372, Reg: 0.0546
+Epoch 3: 14976/60000 (25%), Loss: 0.7165, Entropy: 0.6460, Reg: 0.0704
+Epoch 3: 29952/60000 (50%), Loss: 0.7224, Entropy: 0.6450, Reg: 0.0775
+Epoch 3: 44928/60000 (75%), Loss: 0.7232, Entropy: 0.6342, Reg: 0.0890
+Epoch 3: 59904/60000 (100%), Loss: 0.7277, Entropy: 0.6274, Reg: 0.1003
+Epoch: 3, Loss: 0.727577, Accuracy: 77.76%
+Epoch training time (s): 82.76505374908447
+Defense: isometry
+Epoch 4: 0/60000 (0%), Loss: 0.5926, Entropy: 0.5016, Reg: 0.0911
+Epoch 4: 14976/60000 (25%), Loss: 0.7499, Entropy: 0.5972, Reg: 0.1528
+Epoch 4: 29952/60000 (50%), Loss: 0.7592, Entropy: 0.6003, Reg: 0.1589
+Epoch 4: 44928/60000 (75%), Loss: 0.7589, Entropy: 0.5938, Reg: 0.1651
+Epoch 4: 59904/60000 (100%), Loss: 0.7579, Entropy: 0.5904, Reg: 0.1675
+Epoch: 4, Loss: 0.757761, Accuracy: 78.78%
+Epoch training time (s): 80.53885388374329
+Defense: isometry
+Epoch 5: 0/60000 (0%), Loss: 0.5881, Entropy: 0.4872, Reg: 0.1009
+Epoch 5: 14976/60000 (25%), Loss: 0.7652, Entropy: 0.5719, Reg: 0.1933
+Epoch 5: 29952/60000 (50%), Loss: 0.7649, Entropy: 0.5769, Reg: 0.1880
+Epoch 5: 44928/60000 (75%), Loss: 0.7627, Entropy: 0.5716, Reg: 0.1911
+Epoch 5: 59904/60000 (100%), Loss: 0.7626, Entropy: 0.5699, Reg: 0.1927
+Epoch: 5, Loss: 0.762450, Accuracy: 79.51%
+Epoch training time (s): 80.7917640209198
+Defense: isometry
+Epoch 6: 0/60000 (0%), Loss: 0.5926, Entropy: 0.4817, Reg: 0.1108
+Epoch 6: 14976/60000 (25%), Loss: 0.7562, Entropy: 0.5560, Reg: 0.2002
+Epoch 6: 29952/60000 (50%), Loss: 0.7584, Entropy: 0.5614, Reg: 0.1970
+Epoch 6: 44928/60000 (75%), Loss: 0.7529, Entropy: 0.5569, Reg: 0.1960
+Epoch 6: 59904/60000 (100%), Loss: 0.7514, Entropy: 0.5556, Reg: 0.1958
+Epoch: 6, Loss: 0.751214, Accuracy: 79.95%
+Epoch training time (s): 81.11016964912415
+Defense: isometry
+Epoch 7: 0/60000 (0%), Loss: 0.5867, Entropy: 0.4723, Reg: 0.1143
+Epoch 7: 14976/60000 (25%), Loss: 0.7165, Entropy: 0.5440, Reg: 0.1725
+Epoch 7: 29952/60000 (50%), Loss: 0.7264, Entropy: 0.5488, Reg: 0.1775
+Epoch 7: 44928/60000 (75%), Loss: 0.7211, Entropy: 0.5441, Reg: 0.1771
+Epoch 7: 59904/60000 (100%), Loss: 0.7206, Entropy: 0.5431, Reg: 0.1775
+Epoch: 7, Loss: 0.720438, Accuracy: 80.56%
+Epoch training time (s): 82.19809699058533
+Defense: isometry
+Epoch 8: 0/60000 (0%), Loss: 0.5763, Entropy: 0.4668, Reg: 0.1094
+Epoch 8: 14976/60000 (25%), Loss: 0.7064, Entropy: 0.5318, Reg: 0.1746
+Epoch 8: 29952/60000 (50%), Loss: 0.7153, Entropy: 0.5364, Reg: 0.1789
+Epoch 8: 44928/60000 (75%), Loss: 0.7122, Entropy: 0.5320, Reg: 0.1801
+Epoch 8: 59904/60000 (100%), Loss: 0.7113, Entropy: 0.5314, Reg: 0.1798
+Epoch: 8, Loss: 0.711122, Accuracy: 81.01%
+Epoch training time (s): 82.07627320289612
+Defense: isometry
+Epoch 9: 0/60000 (0%), Loss: 0.5531, Entropy: 0.4585, Reg: 0.0945
+Epoch 9: 14976/60000 (25%), Loss: 0.6976, Entropy: 0.5216, Reg: 0.1759
+Epoch 9: 29952/60000 (50%), Loss: 0.7069, Entropy: 0.5267, Reg: 0.1802
+Epoch 9: 44928/60000 (75%), Loss: 0.7029, Entropy: 0.5222, Reg: 0.1807
+Epoch 9: 59904/60000 (100%), Loss: 0.7034, Entropy: 0.5218, Reg: 0.1816
+Epoch: 9, Loss: 0.703264, Accuracy: 81.56%
+Epoch training time (s): 81.3898777961731
+Defense: isometry
+Epoch 10: 0/60000 (0%), Loss: 0.5437, Entropy: 0.4538, Reg: 0.0899
+Epoch 10: 14976/60000 (25%), Loss: 0.6940, Entropy: 0.5114, Reg: 0.1826
+Epoch 10: 29952/60000 (50%), Loss: 0.7087, Entropy: 0.5171, Reg: 0.1916
+Epoch 10: 44928/60000 (75%), Loss: 0.7041, Entropy: 0.5131, Reg: 0.1910
+Epoch 10: 59904/60000 (100%), Loss: 0.7060, Entropy: 0.5129, Reg: 0.1931
+Epoch: 10, Loss: 0.705838, Accuracy: 82.10%
+Epoch training time (s): 82.68019223213196
+Defense: isometry
+Epoch 11: 0/60000 (0%), Loss: 0.5527, Entropy: 0.4621, Reg: 0.0907
+Epoch 11: 14976/60000 (25%), Loss: 0.6938, Entropy: 0.5021, Reg: 0.1917
+Epoch 11: 29952/60000 (50%), Loss: 0.7042, Entropy: 0.5067, Reg: 0.1976
+Epoch 11: 44928/60000 (75%), Loss: 0.6981, Entropy: 0.5030, Reg: 0.1952
+Epoch 11: 59904/60000 (100%), Loss: 0.7008, Entropy: 0.5033, Reg: 0.1976
+Epoch: 11, Loss: 0.700693, Accuracy: 82.16%
+Epoch training time (s): 83.94778800010681
+Defense: isometry
+Epoch 12: 0/60000 (0%), Loss: 0.5476, Entropy: 0.4498, Reg: 0.0978
+Epoch 12: 14976/60000 (25%), Loss: 0.6869, Entropy: 0.4936, Reg: 0.1933
+Epoch 12: 29952/60000 (50%), Loss: 0.7013, Entropy: 0.4983, Reg: 0.2030
+Epoch 12: 44928/60000 (75%), Loss: 0.6993, Entropy: 0.4952, Reg: 0.2041
+Epoch 12: 59904/60000 (100%), Loss: 0.7049, Entropy: 0.4957, Reg: 0.2092
+Epoch: 12, Loss: 0.704721, Accuracy: 82.40%
+Epoch training time (s): 79.80164194107056
+Defense: isometry
+Epoch 13: 0/60000 (0%), Loss: 0.5582, Entropy: 0.4421, Reg: 0.1161
+Epoch 13: 14976/60000 (25%), Loss: 0.6982, Entropy: 0.4867, Reg: 0.2115
+Epoch 13: 29952/60000 (50%), Loss: 0.7142, Entropy: 0.4918, Reg: 0.2224
+Epoch 13: 44928/60000 (75%), Loss: 0.7079, Entropy: 0.4885, Reg: 0.2194
+Epoch 13: 59904/60000 (100%), Loss: 0.7120, Entropy: 0.4889, Reg: 0.2231
+Epoch: 13, Loss: 0.711839, Accuracy: 82.64%
+Epoch training time (s): 79.69897699356079
+Defense: isometry
+Epoch 14: 0/60000 (0%), Loss: 0.5436, Entropy: 0.4479, Reg: 0.0957
+Epoch 14: 14976/60000 (25%), Loss: 0.6873, Entropy: 0.4799, Reg: 0.2074
+Epoch 14: 29952/60000 (50%), Loss: 0.7061, Entropy: 0.4840, Reg: 0.2221
+Epoch 14: 44928/60000 (75%), Loss: 0.7028, Entropy: 0.4810, Reg: 0.2218
+Epoch 14: 59904/60000 (100%), Loss: 0.7042, Entropy: 0.4815, Reg: 0.2226
+Epoch: 14, Loss: 0.704055, Accuracy: 82.60%
+Epoch training time (s): 80.03068685531616
+Defense: isometry
+Epoch 15: 0/60000 (0%), Loss: 0.5759, Entropy: 0.4326, Reg: 0.1433
+Epoch 15: 14976/60000 (25%), Loss: 0.6912, Entropy: 0.4723, Reg: 0.2189
+Epoch 15: 29952/60000 (50%), Loss: 0.7080, Entropy: 0.4774, Reg: 0.2306
+Epoch 15: 44928/60000 (75%), Loss: 0.7106, Entropy: 0.4748, Reg: 0.2358
+Epoch 15: 59904/60000 (100%), Loss: 0.7148, Entropy: 0.4751, Reg: 0.2397
+Epoch: 15, Loss: 0.714652, Accuracy: 83.10%
+Epoch training time (s): 81.24346446990967
+Defense: isometry
+Epoch 16: 0/60000 (0%), Loss: 0.5645, Entropy: 0.4246, Reg: 0.1399
+Epoch 16: 14976/60000 (25%), Loss: 0.6921, Entropy: 0.4662, Reg: 0.2259
+Epoch 16: 29952/60000 (50%), Loss: 0.7096, Entropy: 0.4700, Reg: 0.2396
+Epoch 16: 44928/60000 (75%), Loss: 0.7127, Entropy: 0.4677, Reg: 0.2450
+Epoch 16: 59904/60000 (100%), Loss: 0.7143, Entropy: 0.4684, Reg: 0.2459
+Epoch: 16, Loss: 0.714103, Accuracy: 83.37%
+Epoch training time (s): 80.77311491966248
+Defense: isometry
+Epoch 17: 0/60000 (0%), Loss: 0.5478, Entropy: 0.4272, Reg: 0.1206
+Epoch 17: 14976/60000 (25%), Loss: 0.6883, Entropy: 0.4601, Reg: 0.2282
+Epoch 17: 29952/60000 (50%), Loss: 0.7009, Entropy: 0.4642, Reg: 0.2368
+Epoch 17: 44928/60000 (75%), Loss: 0.7038, Entropy: 0.4618, Reg: 0.2420
+Epoch 17: 59904/60000 (100%), Loss: 0.7061, Entropy: 0.4622, Reg: 0.2439
+Epoch: 17, Loss: 0.705946, Accuracy: 83.69%
+Epoch training time (s): 81.23932242393494
+Defense: isometry
+Epoch 18: 0/60000 (0%), Loss: 0.5264, Entropy: 0.4222, Reg: 0.1042
+Epoch 18: 14976/60000 (25%), Loss: 0.6954, Entropy: 0.4546, Reg: 0.2408
+Epoch 18: 29952/60000 (50%), Loss: 0.7055, Entropy: 0.4588, Reg: 0.2468
+Epoch 18: 44928/60000 (75%), Loss: 0.7026, Entropy: 0.4565, Reg: 0.2460
+Epoch 18: 59904/60000 (100%), Loss: 0.7088, Entropy: 0.4571, Reg: 0.2517
+Epoch: 18, Loss: 0.708687, Accuracy: 83.83%
+Epoch training time (s): 81.12374210357666
+Defense: isometry
+Epoch 19: 0/60000 (0%), Loss: 0.5259, Entropy: 0.4013, Reg: 0.1247
+Epoch 19: 14976/60000 (25%), Loss: 0.6861, Entropy: 0.4490, Reg: 0.2371
+Epoch 19: 29952/60000 (50%), Loss: 0.6961, Entropy: 0.4528, Reg: 0.2433
+Epoch 19: 44928/60000 (75%), Loss: 0.6952, Entropy: 0.4509, Reg: 0.2443
+Epoch 19: 59904/60000 (100%), Loss: 0.6966, Entropy: 0.4512, Reg: 0.2454
+Epoch: 19, Loss: 0.696491, Accuracy: 84.15%
+Epoch training time (s): 82.21765685081482
+Defense: isometry
+Epoch 20: 0/60000 (0%), Loss: 0.5043, Entropy: 0.4055, Reg: 0.0987
+Epoch 20: 14976/60000 (25%), Loss: 0.6840, Entropy: 0.4450, Reg: 0.2390
+Epoch 20: 29952/60000 (50%), Loss: 0.7017, Entropy: 0.4480, Reg: 0.2538
+Epoch 20: 44928/60000 (75%), Loss: 0.7039, Entropy: 0.4464, Reg: 0.2575
+Epoch 20: 59904/60000 (100%), Loss: 0.7048, Entropy: 0.4469, Reg: 0.2579
+Epoch: 20, Loss: 0.704707, Accuracy: 84.29%
+Epoch training time (s): 82.5030448436737
+Defense: isometry
+Epoch 21: 0/60000 (0%), Loss: 0.4983, Entropy: 0.3842, Reg: 0.1141
+Epoch 21: 14976/60000 (25%), Loss: 0.6759, Entropy: 0.4389, Reg: 0.2370
+Epoch 21: 29952/60000 (50%), Loss: 0.6984, Entropy: 0.4421, Reg: 0.2563
+Epoch 21: 44928/60000 (75%), Loss: 0.7001, Entropy: 0.4404, Reg: 0.2597
+Epoch 21: 59904/60000 (100%), Loss: 0.7021, Entropy: 0.4414, Reg: 0.2607
+Epoch: 21, Loss: 0.701975, Accuracy: 84.49%
+Epoch training time (s): 83.12934708595276
+Defense: isometry
+Epoch 22: 0/60000 (0%), Loss: 0.4750, Entropy: 0.3837, Reg: 0.0913
+Epoch 22: 14976/60000 (25%), Loss: 0.6652, Entropy: 0.4354, Reg: 0.2299
+Epoch 22: 29952/60000 (50%), Loss: 0.6925, Entropy: 0.4375, Reg: 0.2550
+Epoch 22: 44928/60000 (75%), Loss: 0.7000, Entropy: 0.4364, Reg: 0.2636
+Epoch 22: 59904/60000 (100%), Loss: 0.6974, Entropy: 0.4367, Reg: 0.2607
+Epoch: 22, Loss: 0.697295, Accuracy: 84.76%
+Epoch training time (s): 82.62470293045044
+Defense: isometry
+Epoch 23: 0/60000 (0%), Loss: 0.4713, Entropy: 0.3831, Reg: 0.0882
+Epoch 23: 14976/60000 (25%), Loss: 0.6569, Entropy: 0.4298, Reg: 0.2271
+Epoch 23: 29952/60000 (50%), Loss: 0.6933, Entropy: 0.4324, Reg: 0.2610
+Epoch 23: 44928/60000 (75%), Loss: 0.7001, Entropy: 0.4313, Reg: 0.2689
+Epoch 23: 59904/60000 (100%), Loss: 0.7004, Entropy: 0.4317, Reg: 0.2687
+Epoch: 23, Loss: 0.700223, Accuracy: 84.78%
+Epoch training time (s): 79.9069275856018
+Defense: isometry
+Epoch 24: 0/60000 (0%), Loss: 0.4633, Entropy: 0.3711, Reg: 0.0921
+Epoch 24: 14976/60000 (25%), Loss: 0.6649, Entropy: 0.4262, Reg: 0.2388
+Epoch 24: 29952/60000 (50%), Loss: 0.6904, Entropy: 0.4278, Reg: 0.2625
+Epoch 24: 44928/60000 (75%), Loss: 0.7049, Entropy: 0.4270, Reg: 0.2779
+Epoch 24: 59904/60000 (100%), Loss: 0.7079, Entropy: 0.4277, Reg: 0.2802
+Epoch: 24, Loss: 0.707742, Accuracy: 84.85%
+Epoch training time (s): 80.51490259170532
+Defense: isometry
+Epoch 25: 0/60000 (0%), Loss: 0.4525, Entropy: 0.3625, Reg: 0.0899
+Epoch 25: 14976/60000 (25%), Loss: 0.6680, Entropy: 0.4205, Reg: 0.2475
+Epoch 25: 29952/60000 (50%), Loss: 0.7005, Entropy: 0.4233, Reg: 0.2772
+Epoch 25: 44928/60000 (75%), Loss: 0.7025, Entropy: 0.4220, Reg: 0.2804
+Epoch 25: 59904/60000 (100%), Loss: 0.7012, Entropy: 0.4227, Reg: 0.2785
+Epoch: 25, Loss: 0.701009, Accuracy: 84.96%
+Epoch training time (s): 82.92539572715759
+Defense: isometry
+Epoch 26: 0/60000 (0%), Loss: 0.4490, Entropy: 0.3697, Reg: 0.0793
+Epoch 26: 14976/60000 (25%), Loss: 0.6749, Entropy: 0.4178, Reg: 0.2571
+Epoch 26: 29952/60000 (50%), Loss: 0.7076, Entropy: 0.4197, Reg: 0.2879
+Epoch 26: 44928/60000 (75%), Loss: 0.7052, Entropy: 0.4186, Reg: 0.2866
+Epoch 26: 59904/60000 (100%), Loss: 0.7056, Entropy: 0.4191, Reg: 0.2865
+Epoch: 26, Loss: 0.705428, Accuracy: 85.08%
+Epoch training time (s): 81.85383868217468
+Defense: isometry
+Epoch 27: 0/60000 (0%), Loss: 0.4453, Entropy: 0.3512, Reg: 0.0941
+Epoch 27: 14976/60000 (25%), Loss: 0.6632, Entropy: 0.4127, Reg: 0.2505
+Epoch 27: 29952/60000 (50%), Loss: 0.7045, Entropy: 0.4156, Reg: 0.2889
+Epoch 27: 44928/60000 (75%), Loss: 0.7066, Entropy: 0.4143, Reg: 0.2923
+Epoch 27: 59904/60000 (100%), Loss: 0.7020, Entropy: 0.4144, Reg: 0.2876
+Epoch: 27, Loss: 0.701767, Accuracy: 85.43%
+Epoch training time (s): 79.19601035118103
+Defense: isometry
+Epoch 28: 0/60000 (0%), Loss: 0.4271, Entropy: 0.3468, Reg: 0.0802
+Epoch 28: 14976/60000 (25%), Loss: 0.6557, Entropy: 0.4079, Reg: 0.2478
+Epoch 28: 29952/60000 (50%), Loss: 0.6906, Entropy: 0.4105, Reg: 0.2802
+Epoch 28: 44928/60000 (75%), Loss: 0.6950, Entropy: 0.4096, Reg: 0.2855
+Epoch 28: 59904/60000 (100%), Loss: 0.6966, Entropy: 0.4103, Reg: 0.2863
+Epoch: 28, Loss: 0.696414, Accuracy: 85.45%
+Epoch training time (s): 79.79425311088562
+Defense: isometry
+Epoch 29: 0/60000 (0%), Loss: 0.4312, Entropy: 0.3394, Reg: 0.0918
+Epoch 29: 14976/60000 (25%), Loss: 0.6605, Entropy: 0.4039, Reg: 0.2566
+Epoch 29: 29952/60000 (50%), Loss: 0.7045, Entropy: 0.4073, Reg: 0.2972
+Epoch 29: 44928/60000 (75%), Loss: 0.7018, Entropy: 0.4060, Reg: 0.2959
+Epoch 29: 59904/60000 (100%), Loss: 0.7050, Entropy: 0.4067, Reg: 0.2983
+Epoch: 29, Loss: 0.704846, Accuracy: 85.53%
+Epoch training time (s): 82.68739318847656
+Defense: isometry
+Epoch 30: 0/60000 (0%), Loss: 0.4248, Entropy: 0.3319, Reg: 0.0929
+Epoch 30: 14976/60000 (25%), Loss: 0.6772, Entropy: 0.3998, Reg: 0.2774
+Epoch 30: 29952/60000 (50%), Loss: 0.7048, Entropy: 0.4030, Reg: 0.3018
+Epoch 30: 44928/60000 (75%), Loss: 0.7035, Entropy: 0.4018, Reg: 0.3016
+Epoch 30: 59904/60000 (100%), Loss: 0.7074, Entropy: 0.4028, Reg: 0.3046
+Epoch: 30, Loss: 0.707231, Accuracy: 85.69%
+Epoch training time (s): 84.2145721912384
+Defense: isometry
+Epoch 31: 0/60000 (0%), Loss: 0.4233, Entropy: 0.3210, Reg: 0.1022
+Epoch 31: 14976/60000 (25%), Loss: 0.6568, Entropy: 0.3957, Reg: 0.2612
+Epoch 31: 29952/60000 (50%), Loss: 0.7081, Entropy: 0.3996, Reg: 0.3085
+Epoch 31: 44928/60000 (75%), Loss: 0.7124, Entropy: 0.3990, Reg: 0.3134
+Epoch 31: 59904/60000 (100%), Loss: 0.7082, Entropy: 0.3992, Reg: 0.3090
+Epoch: 31, Loss: 0.707968, Accuracy: 85.75%
+Epoch training time (s): 82.19170832633972
+Defense: isometry
+Epoch 32: 0/60000 (0%), Loss: 0.4163, Entropy: 0.3399, Reg: 0.0765
+Epoch 32: 14976/60000 (25%), Loss: 0.6778, Entropy: 0.3933, Reg: 0.2846
+Epoch 32: 29952/60000 (50%), Loss: 0.7214, Entropy: 0.3963, Reg: 0.3251
+Epoch 32: 44928/60000 (75%), Loss: 0.7248, Entropy: 0.3954, Reg: 0.3294
+Epoch 32: 59904/60000 (100%), Loss: 0.7207, Entropy: 0.3961, Reg: 0.3246
+Epoch: 32, Loss: 0.720477, Accuracy: 86.10%
+Epoch training time (s): 81.78176188468933
+Defense: isometry
+Epoch 33: 0/60000 (0%), Loss: 0.4078, Entropy: 0.3320, Reg: 0.0759
+Epoch 33: 14976/60000 (25%), Loss: 0.6668, Entropy: 0.3906, Reg: 0.2761
+Epoch 33: 29952/60000 (50%), Loss: 0.7011, Entropy: 0.3927, Reg: 0.3083
+Epoch 33: 44928/60000 (75%), Loss: 0.7017, Entropy: 0.3914, Reg: 0.3103
+Epoch 33: 59904/60000 (100%), Loss: 0.7055, Entropy: 0.3923, Reg: 0.3132
+Epoch: 33, Loss: 0.705379, Accuracy: 85.85%
+Epoch training time (s): 83.407550573349
+Defense: isometry
+Epoch 34: 0/60000 (0%), Loss: 0.4048, Entropy: 0.3202, Reg: 0.0846
+Epoch 34: 14976/60000 (25%), Loss: 0.6656, Entropy: 0.3864, Reg: 0.2792
+Epoch 34: 29952/60000 (50%), Loss: 0.7084, Entropy: 0.3890, Reg: 0.3193
+Epoch 34: 44928/60000 (75%), Loss: 0.7082, Entropy: 0.3881, Reg: 0.3202
+Epoch 34: 59904/60000 (100%), Loss: 0.7007, Entropy: 0.3884, Reg: 0.3123
+Epoch: 34, Loss: 0.700441, Accuracy: 86.19%
+Epoch training time (s): 82.83756303787231
+Defense: isometry
+Epoch 35: 0/60000 (0%), Loss: 0.4055, Entropy: 0.3299, Reg: 0.0755
+Epoch 35: 14976/60000 (25%), Loss: 0.6507, Entropy: 0.3816, Reg: 0.2691
+Epoch 35: 29952/60000 (50%), Loss: 0.6788, Entropy: 0.3831, Reg: 0.2956
+Epoch 35: 44928/60000 (75%), Loss: 0.6930, Entropy: 0.3829, Reg: 0.3101
+Epoch 35: 59904/60000 (100%), Loss: 0.6982, Entropy: 0.3838, Reg: 0.3144
+Epoch: 35, Loss: 0.698043, Accuracy: 86.39%
+Epoch training time (s): 78.40034794807434
+Defense: isometry
+Epoch 36: 0/60000 (0%), Loss: 0.3995, Entropy: 0.3141, Reg: 0.0854
+Epoch 36: 14976/60000 (25%), Loss: 0.6818, Entropy: 0.3805, Reg: 0.3013
+Epoch 36: 29952/60000 (50%), Loss: 0.7065, Entropy: 0.3827, Reg: 0.3238
+Epoch 36: 44928/60000 (75%), Loss: 0.7089, Entropy: 0.3815, Reg: 0.3274
+Epoch 36: 59904/60000 (100%), Loss: 0.7005, Entropy: 0.3817, Reg: 0.3189
+Epoch: 36, Loss: 0.700299, Accuracy: 86.49%
+Epoch training time (s): 79.38134407997131
+Defense: isometry
+Epoch 37: 0/60000 (0%), Loss: 0.3894, Entropy: 0.3142, Reg: 0.0752
+Epoch 37: 14976/60000 (25%), Loss: 0.6612, Entropy: 0.3763, Reg: 0.2849
+Epoch 37: 29952/60000 (50%), Loss: 0.6969, Entropy: 0.3789, Reg: 0.3180
+Epoch 37: 44928/60000 (75%), Loss: 0.6974, Entropy: 0.3773, Reg: 0.3201
+Epoch 37: 59904/60000 (100%), Loss: 0.6955, Entropy: 0.3779, Reg: 0.3176
+Epoch: 37, Loss: 0.695320, Accuracy: 86.38%
+Epoch training time (s): 80.32521033287048
+Defense: isometry
+Epoch 38: 0/60000 (0%), Loss: 0.3854, Entropy: 0.2991, Reg: 0.0863
+Epoch 38: 14976/60000 (25%), Loss: 0.6465, Entropy: 0.3729, Reg: 0.2736
+Epoch 38: 29952/60000 (50%), Loss: 0.6954, Entropy: 0.3749, Reg: 0.3205
+Epoch 38: 44928/60000 (75%), Loss: 0.7007, Entropy: 0.3739, Reg: 0.3268
+Epoch 38: 59904/60000 (100%), Loss: 0.6957, Entropy: 0.3742, Reg: 0.3214
+Epoch: 38, Loss: 0.695446, Accuracy: 86.55%
+Epoch training time (s): 83.17492341995239
+Defense: isometry
+Epoch 39: 0/60000 (0%), Loss: 0.3756, Entropy: 0.2982, Reg: 0.0774
+Epoch 39: 14976/60000 (25%), Loss: 0.6498, Entropy: 0.3698, Reg: 0.2799
+Epoch 39: 29952/60000 (50%), Loss: 0.7065, Entropy: 0.3725, Reg: 0.3340
+Epoch 39: 44928/60000 (75%), Loss: 0.7172, Entropy: 0.3717, Reg: 0.3455
+Epoch 39: 59904/60000 (100%), Loss: 0.7109, Entropy: 0.3718, Reg: 0.3391
+Epoch: 39, Loss: 0.710680, Accuracy: 86.70%
+Epoch training time (s): 80.90885734558105
+Defense: isometry
+Epoch 40: 0/60000 (0%), Loss: 0.3714, Entropy: 0.2939, Reg: 0.0775
+Epoch 40: 14976/60000 (25%), Loss: 0.7023, Entropy: 0.3691, Reg: 0.3332
+Epoch 40: 29952/60000 (50%), Loss: 0.7262, Entropy: 0.3702, Reg: 0.3560
+Epoch 40: 44928/60000 (75%), Loss: 0.7317, Entropy: 0.3691, Reg: 0.3626
+Epoch 40: 59904/60000 (100%), Loss: 0.7154, Entropy: 0.3689, Reg: 0.3464
+Epoch: 40, Loss: 0.715078, Accuracy: 86.84%
+Epoch training time (s): 81.168044090271
+Defense: isometry
+Epoch 41: 0/60000 (0%), Loss: 0.3601, Entropy: 0.2864, Reg: 0.0737
+Epoch 41: 14976/60000 (25%), Loss: 0.6681, Entropy: 0.3638, Reg: 0.3043
+Epoch 41: 29952/60000 (50%), Loss: 0.6801, Entropy: 0.3648, Reg: 0.3154
+Epoch 41: 44928/60000 (75%), Loss: 0.6886, Entropy: 0.3637, Reg: 0.3249
+Epoch 41: 59904/60000 (100%), Loss: 0.6879, Entropy: 0.3644, Reg: 0.3234
+Epoch: 41, Loss: 0.687635, Accuracy: 86.89%
+Epoch training time (s): 82.96399068832397
+Defense: isometry
+Epoch 42: 0/60000 (0%), Loss: 0.3510, Entropy: 0.2791, Reg: 0.0719
+Epoch 42: 14976/60000 (25%), Loss: 0.6500, Entropy: 0.3620, Reg: 0.2880
+Epoch 42: 29952/60000 (50%), Loss: 0.7033, Entropy: 0.3632, Reg: 0.3401
+Epoch 42: 44928/60000 (75%), Loss: 0.6960, Entropy: 0.3614, Reg: 0.3346
+Epoch 42: 59904/60000 (100%), Loss: 0.6977, Entropy: 0.3617, Reg: 0.3361
+Epoch: 42, Loss: 0.697466, Accuracy: 87.00%
+Epoch training time (s): 81.1801381111145
+Defense: isometry
+Epoch 43: 0/60000 (0%), Loss: 0.3498, Entropy: 0.2737, Reg: 0.0761
+Epoch 43: 14976/60000 (25%), Loss: 0.6930, Entropy: 0.3603, Reg: 0.3328
+Epoch 43: 29952/60000 (50%), Loss: 0.7180, Entropy: 0.3610, Reg: 0.3570
+Epoch 43: 44928/60000 (75%), Loss: 0.7124, Entropy: 0.3591, Reg: 0.3534
+Epoch 43: 59904/60000 (100%), Loss: 0.7104, Entropy: 0.3595, Reg: 0.3509
+Epoch: 43, Loss: 0.710130, Accuracy: 87.13%
+Epoch training time (s): 81.22786855697632
+Defense: isometry
+Epoch 44: 0/60000 (0%), Loss: 0.3474, Entropy: 0.2789, Reg: 0.0686
+Epoch 44: 14976/60000 (25%), Loss: 0.6919, Entropy: 0.3570, Reg: 0.3350
+Epoch 44: 29952/60000 (50%), Loss: 0.7290, Entropy: 0.3589, Reg: 0.3701
+Epoch 44: 44928/60000 (75%), Loss: 0.7212, Entropy: 0.3567, Reg: 0.3645
+Epoch 44: 59904/60000 (100%), Loss: 0.7228, Entropy: 0.3569, Reg: 0.3659
+Epoch: 44, Loss: 0.722533, Accuracy: 87.10%
+Epoch training time (s): 79.71234035491943
+Defense: isometry
+Epoch 45: 0/60000 (0%), Loss: 0.3477, Entropy: 0.2744, Reg: 0.0733
+Epoch 45: 14976/60000 (25%), Loss: 0.6827, Entropy: 0.3553, Reg: 0.3274
+Epoch 45: 29952/60000 (50%), Loss: 0.7270, Entropy: 0.3568, Reg: 0.3703
+Epoch 45: 44928/60000 (75%), Loss: 0.7304, Entropy: 0.3555, Reg: 0.3749
+Epoch 45: 59904/60000 (100%), Loss: 0.7403, Entropy: 0.3560, Reg: 0.3843
+Epoch: 45, Loss: 0.740008, Accuracy: 87.39%
+Epoch training time (s): 80.14602470397949
+Defense: isometry
+Epoch 46: 0/60000 (0%), Loss: 0.3420, Entropy: 0.2646, Reg: 0.0774
+Epoch 46: 14976/60000 (25%), Loss: 0.6890, Entropy: 0.3522, Reg: 0.3369
+Epoch 46: 29952/60000 (50%), Loss: 0.7323, Entropy: 0.3540, Reg: 0.3783
+Epoch 46: 44928/60000 (75%), Loss: 0.7363, Entropy: 0.3525, Reg: 0.3839
+Epoch 46: 59904/60000 (100%), Loss: 0.7480, Entropy: 0.3535, Reg: 0.3945
+Epoch: 46, Loss: 0.747725, Accuracy: 87.35%
+Epoch training time (s): 80.29712200164795
+Defense: isometry
+Epoch 47: 0/60000 (0%), Loss: 0.3369, Entropy: 0.2613, Reg: 0.0756
+Epoch 47: 14976/60000 (25%), Loss: 0.7117, Entropy: 0.3507, Reg: 0.3610
+Epoch 47: 29952/60000 (50%), Loss: 0.7451, Entropy: 0.3512, Reg: 0.3939
+Epoch 47: 44928/60000 (75%), Loss: 0.7630, Entropy: 0.3508, Reg: 0.4122
+Epoch 47: 59904/60000 (100%), Loss: 0.7734, Entropy: 0.3521, Reg: 0.4213
+Epoch: 47, Loss: 0.773062, Accuracy: 87.31%
+Epoch training time (s): 78.33953332901001
+Defense: isometry
+Epoch 48: 0/60000 (0%), Loss: 0.3379, Entropy: 0.2585, Reg: 0.0794
+Epoch 48: 14976/60000 (25%), Loss: 0.7091, Entropy: 0.3483, Reg: 0.3608
+Epoch 48: 29952/60000 (50%), Loss: 0.7548, Entropy: 0.3530, Reg: 0.4018
+Epoch 48: 44928/60000 (75%), Loss: 0.7431, Entropy: 0.3500, Reg: 0.3931
+Epoch 48: 59904/60000 (100%), Loss: 0.7683, Entropy: 0.3512, Reg: 0.4170
+Epoch: 48, Loss: 0.767965, Accuracy: 87.48%
+Epoch training time (s): 79.82260394096375
+Defense: isometry
+Epoch 49: 0/60000 (0%), Loss: 0.3337, Entropy: 0.2607, Reg: 0.0730
+Epoch 49: 14976/60000 (25%), Loss: 0.7073, Entropy: 0.3451, Reg: 0.3621
+Epoch 49: 29952/60000 (50%), Loss: 0.7392, Entropy: 0.3486, Reg: 0.3906
+Epoch 49: 44928/60000 (75%), Loss: 0.7403, Entropy: 0.3468, Reg: 0.3935
+Epoch 49: 59904/60000 (100%), Loss: 0.7663, Entropy: 0.3482, Reg: 0.4181
+Epoch: 49, Loss: 0.765979, Accuracy: 87.33%
+Epoch training time (s): 79.96476078033447
+Defense: isometry
+Epoch 50: 0/60000 (0%), Loss: 0.3288, Entropy: 0.2543, Reg: 0.0745
+Epoch 50: 14976/60000 (25%), Loss: 0.7388, Entropy: 0.3450, Reg: 0.3938
+Epoch 50: 29952/60000 (50%), Loss: 0.7704, Entropy: 0.3479, Reg: 0.4224
+Epoch 50: 44928/60000 (75%), Loss: 0.7614, Entropy: 0.3454, Reg: 0.4160
+Epoch 50: 59904/60000 (100%), Loss: 0.7850, Entropy: 0.3463, Reg: 0.4387
+Epoch: 50, Loss: 0.784691, Accuracy: 87.52%
+Epoch training time (s): 81.01549959182739
+Defense: isometry
+Epoch 51: 0/60000 (0%), Loss: 0.3274, Entropy: 0.2436, Reg: 0.0838
+Epoch 51: 14976/60000 (25%), Loss: 0.7593, Entropy: 0.3438, Reg: 0.4156
+Epoch 51: 29952/60000 (50%), Loss: 0.8125, Entropy: 0.3482, Reg: 0.4643
+Epoch 51: 44928/60000 (75%), Loss: 0.7851, Entropy: 0.3447, Reg: 0.4403
+Epoch 51: 59904/60000 (100%), Loss: 0.7993, Entropy: 0.3456, Reg: 0.4537
+Epoch: 51, Loss: 0.798985, Accuracy: 87.54%
+Epoch training time (s): 79.53614401817322
+Training time (s): 4078.1221227645874
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_isoreg/seed_1
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 1
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 7804.0/10000 (78.04%)
+name: fashion_lenet_isoreg/seed_1
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 1
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6477.0/10000 (64.77%)
+name: fashion_lenet_isoreg/seed_1
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 1
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 4188.0/10000 (41.88%)
+name: fashion_lenet_isoreg/seed_1
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 1
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 2658.0/10000 (26.58%)
+=====================================================================================================
+name: fashion_lenet_isoreg/seed_2
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 2
+gpu_number: 3
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/60000 (0%), Loss: 2.3077, Entropy: 2.3077, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.2770, Entropy: 2.2770, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 2.2291, Entropy: 2.2291, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 2.0940, Entropy: 2.0940, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 1.8655, Entropy: 1.8655, Reg: 0.0000
+Epoch: 1, Loss: 1.864611, Accuracy: 67.67%
+Epoch training time (s): 13.382614135742188
+Defense: isometry
+Epoch 2: 0/60000 (0%), Loss: 0.9439, Entropy: 0.9140, Reg: 0.0300
+Epoch 2: 14976/60000 (25%), Loss: 0.9294, Entropy: 0.9057, Reg: 0.0237
+Epoch 2: 29952/60000 (50%), Loss: 0.8863, Entropy: 0.8620, Reg: 0.0243
+Epoch 2: 44928/60000 (75%), Loss: 0.8493, Entropy: 0.8232, Reg: 0.0262
+Epoch 2: 59904/60000 (100%), Loss: 0.8224, Entropy: 0.7946, Reg: 0.0279
+Epoch: 2, Loss: 0.822327, Accuracy: 74.25%
+Epoch training time (s): 80.08019971847534
+Defense: isometry
+Epoch 3: 0/60000 (0%), Loss: 0.6164, Entropy: 0.5626, Reg: 0.0538
+Epoch 3: 14976/60000 (25%), Loss: 0.7191, Entropy: 0.6823, Reg: 0.0368
+Epoch 3: 29952/60000 (50%), Loss: 0.7167, Entropy: 0.6792, Reg: 0.0375
+Epoch 3: 44928/60000 (75%), Loss: 0.7066, Entropy: 0.6667, Reg: 0.0399
+Epoch 3: 59904/60000 (100%), Loss: 0.6998, Entropy: 0.6574, Reg: 0.0424
+Epoch: 3, Loss: 0.699715, Accuracy: 77.02%
+Epoch training time (s): 79.53292322158813
+Defense: isometry
+Epoch 4: 0/60000 (0%), Loss: 0.5336, Entropy: 0.4907, Reg: 0.0429
+Epoch 4: 14976/60000 (25%), Loss: 0.6699, Entropy: 0.6154, Reg: 0.0545
+Epoch 4: 29952/60000 (50%), Loss: 0.6747, Entropy: 0.6173, Reg: 0.0574
+Epoch 4: 44928/60000 (75%), Loss: 0.6710, Entropy: 0.6096, Reg: 0.0614
+Epoch 4: 59904/60000 (100%), Loss: 0.6695, Entropy: 0.6045, Reg: 0.0650
+Epoch: 4, Loss: 0.669428, Accuracy: 78.19%
+Epoch training time (s): 80.2880585193634
+Defense: isometry
+Epoch 5: 0/60000 (0%), Loss: 0.5197, Entropy: 0.4687, Reg: 0.0510
+Epoch 5: 14976/60000 (25%), Loss: 0.6582, Entropy: 0.5791, Reg: 0.0791
+Epoch 5: 29952/60000 (50%), Loss: 0.6642, Entropy: 0.5829, Reg: 0.0814
+Epoch 5: 44928/60000 (75%), Loss: 0.6621, Entropy: 0.5769, Reg: 0.0851
+Epoch 5: 59904/60000 (100%), Loss: 0.6624, Entropy: 0.5737, Reg: 0.0887
+Epoch: 5, Loss: 0.662317, Accuracy: 79.42%
+Epoch training time (s): 80.69515800476074
+Defense: isometry
+Epoch 6: 0/60000 (0%), Loss: 0.5136, Entropy: 0.4516, Reg: 0.0619
+Epoch 6: 14976/60000 (25%), Loss: 0.6541, Entropy: 0.5547, Reg: 0.0994
+Epoch 6: 29952/60000 (50%), Loss: 0.6601, Entropy: 0.5595, Reg: 0.1006
+Epoch 6: 44928/60000 (75%), Loss: 0.6591, Entropy: 0.5548, Reg: 0.1043
+Epoch 6: 59904/60000 (100%), Loss: 0.6592, Entropy: 0.5526, Reg: 0.1066
+Epoch: 6, Loss: 0.659064, Accuracy: 80.28%
+Epoch training time (s): 79.44681096076965
+Defense: isometry
+Epoch 7: 0/60000 (0%), Loss: 0.5083, Entropy: 0.4411, Reg: 0.0672
+Epoch 7: 14976/60000 (25%), Loss: 0.6523, Entropy: 0.5372, Reg: 0.1151
+Epoch 7: 29952/60000 (50%), Loss: 0.6552, Entropy: 0.5420, Reg: 0.1132
+Epoch 7: 44928/60000 (75%), Loss: 0.6529, Entropy: 0.5380, Reg: 0.1149
+Epoch 7: 59904/60000 (100%), Loss: 0.6525, Entropy: 0.5363, Reg: 0.1162
+Epoch: 7, Loss: 0.652377, Accuracy: 80.91%
+Epoch training time (s): 77.69392085075378
+Defense: isometry
+Epoch 8: 0/60000 (0%), Loss: 0.5013, Entropy: 0.4320, Reg: 0.0694
+Epoch 8: 14976/60000 (25%), Loss: 0.6395, Entropy: 0.5227, Reg: 0.1168
+Epoch 8: 29952/60000 (50%), Loss: 0.6467, Entropy: 0.5270, Reg: 0.1197
+Epoch 8: 44928/60000 (75%), Loss: 0.6447, Entropy: 0.5233, Reg: 0.1214
+Epoch 8: 59904/60000 (100%), Loss: 0.6443, Entropy: 0.5223, Reg: 0.1220
+Epoch: 8, Loss: 0.644227, Accuracy: 81.27%
+Epoch training time (s): 79.66036605834961
+Defense: isometry
+Epoch 9: 0/60000 (0%), Loss: 0.5015, Entropy: 0.4223, Reg: 0.0792
+Epoch 9: 14976/60000 (25%), Loss: 0.6330, Entropy: 0.5107, Reg: 0.1224
+Epoch 9: 29952/60000 (50%), Loss: 0.6391, Entropy: 0.5149, Reg: 0.1241
+Epoch 9: 44928/60000 (75%), Loss: 0.6375, Entropy: 0.5113, Reg: 0.1262
+Epoch 9: 59904/60000 (100%), Loss: 0.6382, Entropy: 0.5105, Reg: 0.1277
+Epoch: 9, Loss: 0.638098, Accuracy: 81.64%
+Epoch training time (s): 79.5797917842865
+Defense: isometry
+Epoch 10: 0/60000 (0%), Loss: 0.4997, Entropy: 0.4093, Reg: 0.0903
+Epoch 10: 14976/60000 (25%), Loss: 0.6281, Entropy: 0.4997, Reg: 0.1284
+Epoch 10: 29952/60000 (50%), Loss: 0.6342, Entropy: 0.5033, Reg: 0.1308
+Epoch 10: 44928/60000 (75%), Loss: 0.6323, Entropy: 0.4999, Reg: 0.1323
+Epoch 10: 59904/60000 (100%), Loss: 0.6339, Entropy: 0.4995, Reg: 0.1345
+Epoch: 10, Loss: 0.633832, Accuracy: 82.04%
+Epoch training time (s): 79.82397389411926
+Defense: isometry
+Epoch 11: 0/60000 (0%), Loss: 0.4887, Entropy: 0.4175, Reg: 0.0712
+Epoch 11: 14976/60000 (25%), Loss: 0.6282, Entropy: 0.4902, Reg: 0.1380
+Epoch 11: 29952/60000 (50%), Loss: 0.6344, Entropy: 0.4931, Reg: 0.1413
+Epoch 11: 44928/60000 (75%), Loss: 0.6331, Entropy: 0.4899, Reg: 0.1432
+Epoch 11: 59904/60000 (100%), Loss: 0.6344, Entropy: 0.4897, Reg: 0.1447
+Epoch: 11, Loss: 0.634314, Accuracy: 82.62%
+Epoch training time (s): 79.88525581359863
+Defense: isometry
+Epoch 12: 0/60000 (0%), Loss: 0.4822, Entropy: 0.4135, Reg: 0.0687
+Epoch 12: 14976/60000 (25%), Loss: 0.6280, Entropy: 0.4821, Reg: 0.1459
+Epoch 12: 29952/60000 (50%), Loss: 0.6320, Entropy: 0.4844, Reg: 0.1475
+Epoch 12: 44928/60000 (75%), Loss: 0.6293, Entropy: 0.4814, Reg: 0.1479
+Epoch 12: 59904/60000 (100%), Loss: 0.6301, Entropy: 0.4813, Reg: 0.1488
+Epoch: 12, Loss: 0.630054, Accuracy: 82.91%
+Epoch training time (s): 80.357102394104
+Defense: isometry
+Epoch 13: 0/60000 (0%), Loss: 0.4800, Entropy: 0.4075, Reg: 0.0725
+Epoch 13: 14976/60000 (25%), Loss: 0.6266, Entropy: 0.4735, Reg: 0.1531
+Epoch 13: 29952/60000 (50%), Loss: 0.6322, Entropy: 0.4757, Reg: 0.1565
+Epoch 13: 44928/60000 (75%), Loss: 0.6294, Entropy: 0.4731, Reg: 0.1563
+Epoch 13: 59904/60000 (100%), Loss: 0.6300, Entropy: 0.4731, Reg: 0.1569
+Epoch: 13, Loss: 0.629927, Accuracy: 83.05%
+Epoch training time (s): 80.45808863639832
+Defense: isometry
+Epoch 14: 0/60000 (0%), Loss: 0.4771, Entropy: 0.4025, Reg: 0.0746
+Epoch 14: 14976/60000 (25%), Loss: 0.6286, Entropy: 0.4660, Reg: 0.1626
+Epoch 14: 29952/60000 (50%), Loss: 0.6345, Entropy: 0.4684, Reg: 0.1661
+Epoch 14: 44928/60000 (75%), Loss: 0.6309, Entropy: 0.4659, Reg: 0.1650
+Epoch 14: 59904/60000 (100%), Loss: 0.6333, Entropy: 0.4659, Reg: 0.1673
+Epoch: 14, Loss: 0.633133, Accuracy: 83.33%
+Epoch training time (s): 79.86129975318909
+Defense: isometry
+Epoch 15: 0/60000 (0%), Loss: 0.4706, Entropy: 0.4018, Reg: 0.0689
+Epoch 15: 14976/60000 (25%), Loss: 0.6254, Entropy: 0.4602, Reg: 0.1652
+Epoch 15: 29952/60000 (50%), Loss: 0.6353, Entropy: 0.4620, Reg: 0.1733
+Epoch 15: 44928/60000 (75%), Loss: 0.6321, Entropy: 0.4592, Reg: 0.1729
+Epoch 15: 59904/60000 (100%), Loss: 0.6364, Entropy: 0.4595, Reg: 0.1768
+Epoch: 15, Loss: 0.636238, Accuracy: 83.55%
+Epoch training time (s): 77.58793902397156
+Defense: isometry
+Epoch 16: 0/60000 (0%), Loss: 0.4733, Entropy: 0.4035, Reg: 0.0698
+Epoch 16: 14976/60000 (25%), Loss: 0.6315, Entropy: 0.4536, Reg: 0.1779
+Epoch 16: 29952/60000 (50%), Loss: 0.6394, Entropy: 0.4550, Reg: 0.1845
+Epoch 16: 44928/60000 (75%), Loss: 0.6371, Entropy: 0.4526, Reg: 0.1845
+Epoch 16: 59904/60000 (100%), Loss: 0.6456, Entropy: 0.4535, Reg: 0.1921
+Epoch: 16, Loss: 0.645523, Accuracy: 83.77%
+Epoch training time (s): 78.83035564422607
+Defense: isometry
+Epoch 17: 0/60000 (0%), Loss: 0.4665, Entropy: 0.3905, Reg: 0.0761
+Epoch 17: 14976/60000 (25%), Loss: 0.6505, Entropy: 0.4492, Reg: 0.2014
+Epoch 17: 29952/60000 (50%), Loss: 0.6544, Entropy: 0.4502, Reg: 0.2042
+Epoch 17: 44928/60000 (75%), Loss: 0.6519, Entropy: 0.4482, Reg: 0.2037
+Epoch 17: 59904/60000 (100%), Loss: 0.6572, Entropy: 0.4487, Reg: 0.2085
+Epoch: 17, Loss: 0.657083, Accuracy: 83.72%
+Epoch training time (s): 80.81069564819336
+Defense: isometry
+Epoch 18: 0/60000 (0%), Loss: 0.4635, Entropy: 0.3756, Reg: 0.0879
+Epoch 18: 14976/60000 (25%), Loss: 0.6435, Entropy: 0.4427, Reg: 0.2009
+Epoch 18: 29952/60000 (50%), Loss: 0.6552, Entropy: 0.4439, Reg: 0.2113
+Epoch 18: 44928/60000 (75%), Loss: 0.6548, Entropy: 0.4425, Reg: 0.2122
+Epoch 18: 59904/60000 (100%), Loss: 0.6633, Entropy: 0.4435, Reg: 0.2198
+Epoch: 18, Loss: 0.663197, Accuracy: 84.11%
+Epoch training time (s): 80.14709639549255
+Defense: isometry
+Epoch 19: 0/60000 (0%), Loss: 0.4468, Entropy: 0.3724, Reg: 0.0744
+Epoch 19: 14976/60000 (25%), Loss: 0.6577, Entropy: 0.4384, Reg: 0.2193
+Epoch 19: 29952/60000 (50%), Loss: 0.6672, Entropy: 0.4405, Reg: 0.2268
+Epoch 19: 44928/60000 (75%), Loss: 0.6656, Entropy: 0.4389, Reg: 0.2267
+Epoch 19: 59904/60000 (100%), Loss: 0.6708, Entropy: 0.4396, Reg: 0.2312
+Epoch: 19, Loss: 0.670661, Accuracy: 84.07%
+Epoch training time (s): 79.61575388908386
+Defense: isometry
+Epoch 20: 0/60000 (0%), Loss: 0.4493, Entropy: 0.3712, Reg: 0.0781
+Epoch 20: 14976/60000 (25%), Loss: 0.6536, Entropy: 0.4332, Reg: 0.2204
+Epoch 20: 29952/60000 (50%), Loss: 0.6724, Entropy: 0.4364, Reg: 0.2361
+Epoch 20: 44928/60000 (75%), Loss: 0.6787, Entropy: 0.4353, Reg: 0.2434
+Epoch 20: 59904/60000 (100%), Loss: 0.6832, Entropy: 0.4356, Reg: 0.2475
+Epoch: 20, Loss: 0.683004, Accuracy: 84.19%
+Epoch training time (s): 79.51904058456421
+Defense: isometry
+Epoch 21: 0/60000 (0%), Loss: 0.4527, Entropy: 0.3844, Reg: 0.0683
+Epoch 21: 14976/60000 (25%), Loss: 0.6507, Entropy: 0.4297, Reg: 0.2210
+Epoch 21: 29952/60000 (50%), Loss: 0.6771, Entropy: 0.4339, Reg: 0.2431
+Epoch 21: 44928/60000 (75%), Loss: 0.6816, Entropy: 0.4323, Reg: 0.2494
+Epoch 21: 59904/60000 (100%), Loss: 0.6888, Entropy: 0.4328, Reg: 0.2560
+Epoch: 21, Loss: 0.688610, Accuracy: 84.48%
+Epoch training time (s): 79.42821025848389
+Defense: isometry
+Epoch 22: 0/60000 (0%), Loss: 0.4499, Entropy: 0.3765, Reg: 0.0734
+Epoch 22: 14976/60000 (25%), Loss: 0.6719, Entropy: 0.4265, Reg: 0.2454
+Epoch 22: 29952/60000 (50%), Loss: 0.6957, Entropy: 0.4293, Reg: 0.2664
+Epoch 22: 44928/60000 (75%), Loss: 0.7037, Entropy: 0.4281, Reg: 0.2757
+Epoch 22: 59904/60000 (100%), Loss: 0.7290, Entropy: 0.4320, Reg: 0.2970
+Epoch: 22, Loss: 0.728751, Accuracy: 84.48%
+Epoch training time (s): 78.40535044670105
+Defense: isometry
+Epoch 23: 0/60000 (0%), Loss: 0.4450, Entropy: 0.3749, Reg: 0.0701
+Epoch 23: 14976/60000 (25%), Loss: 0.6835, Entropy: 0.4248, Reg: 0.2587
+Epoch 23: 29952/60000 (50%), Loss: 0.7287, Entropy: 0.4299, Reg: 0.2988
+Epoch 23: 44928/60000 (75%), Loss: 0.7327, Entropy: 0.4286, Reg: 0.3041
+Epoch 23: 59904/60000 (100%), Loss: 0.7635, Entropy: 0.4334, Reg: 0.3300
+Epoch: 23, Loss: 0.763267, Accuracy: 84.83%
+Epoch training time (s): 78.67941212654114
+Defense: isometry
+Epoch 24: 0/60000 (0%), Loss: 0.4490, Entropy: 0.3689, Reg: 0.0802
+Epoch 24: 14976/60000 (25%), Loss: 0.7188, Entropy: 0.4219, Reg: 0.2970
+Epoch 24: 29952/60000 (50%), Loss: 0.7726, Entropy: 0.4291, Reg: 0.3435
+Epoch 24: 44928/60000 (75%), Loss: 0.7704, Entropy: 0.4278, Reg: 0.3426
+Epoch 24: 59904/60000 (100%), Loss: 0.7812, Entropy: 0.4287, Reg: 0.3525
+Epoch: 24, Loss: 0.780921, Accuracy: 84.60%
+Epoch training time (s): 80.49451923370361
+Defense: isometry
+Epoch 25: 0/60000 (0%), Loss: 0.4474, Entropy: 0.3631, Reg: 0.0843
+Epoch 25: 14976/60000 (25%), Loss: 0.7106, Entropy: 0.4165, Reg: 0.2942
+Epoch 25: 29952/60000 (50%), Loss: 0.7764, Entropy: 0.4228, Reg: 0.3535
+Epoch 25: 44928/60000 (75%), Loss: 0.7874, Entropy: 0.4236, Reg: 0.3638
+Epoch 25: 59904/60000 (100%), Loss: 0.7951, Entropy: 0.4251, Reg: 0.3700
+Epoch: 25, Loss: 0.794807, Accuracy: 85.09%
+Epoch training time (s): 80.2048270702362
+Defense: isometry
+Epoch 26: 0/60000 (0%), Loss: 0.4370, Entropy: 0.3574, Reg: 0.0796
+Epoch 26: 14976/60000 (25%), Loss: 0.7371, Entropy: 0.4133, Reg: 0.3238
+Epoch 26: 29952/60000 (50%), Loss: 0.8165, Entropy: 0.4230, Reg: 0.3935
+Epoch 26: 44928/60000 (75%), Loss: 0.8360, Entropy: 0.4225, Reg: 0.4135
+Epoch 26: 59904/60000 (100%), Loss: 0.8919, Entropy: 0.4308, Reg: 0.4612
+Epoch: 26, Loss: 0.891503, Accuracy: 83.88%
+Epoch training time (s): 79.98829412460327
+Defense: isometry
+Epoch 27: 0/60000 (0%), Loss: 0.4269, Entropy: 0.3482, Reg: 0.0787
+Epoch 27: 14976/60000 (25%), Loss: 1.6216, Entropy: 0.5268, Reg: 1.0948
+Epoch 27: 29952/60000 (50%), Loss: 2.0669, Entropy: 0.6232, Reg: 1.4437
+Epoch 27: 44928/60000 (75%), Loss: 2.3793, Entropy: 0.6712, Reg: 1.7081
+Epoch 27: 59904/60000 (100%), Loss: 2.7531, Entropy: 0.7278, Reg: 2.0253
+Epoch: 27, Loss: 2.755614, Accuracy: 67.65%
+Epoch training time (s): 80.37844491004944
+Defense: isometry
+Epoch 28: 0/60000 (0%), Loss: 4.8796, Entropy: 0.8977, Reg: 3.9819
+Epoch 28: 14976/60000 (25%), Loss: 3.5177, Entropy: 1.0360, Reg: 2.4817
+Epoch 28: 29952/60000 (50%), Loss: 3.1707, Entropy: 1.0259, Reg: 2.1448
+Epoch 28: 44928/60000 (75%), Loss: 2.8626, Entropy: 0.9957, Reg: 1.8669
+Epoch 28: 59904/60000 (100%), Loss: 2.6356, Entropy: 0.9721, Reg: 1.6635
+Epoch: 28, Loss: 2.634309, Accuracy: 67.17%
+Epoch training time (s): 79.72678303718567
+Defense: isometry
+Epoch 29: 0/60000 (0%), Loss: 1.9829, Entropy: 0.8964, Reg: 1.0865
+Epoch 29: 14976/60000 (25%), Loss: 1.8103, Entropy: 0.8740, Reg: 0.9364
+Epoch 29: 29952/60000 (50%), Loss: 1.7802, Entropy: 0.8751, Reg: 0.9051
+Epoch 29: 44928/60000 (75%), Loss: 1.7287, Entropy: 0.8625, Reg: 0.8663
+Epoch 29: 59904/60000 (100%), Loss: 1.6990, Entropy: 0.8572, Reg: 0.8419
+Epoch: 29, Loss: 1.698552, Accuracy: 67.63%
+Epoch training time (s): 77.84513568878174
+Defense: isometry
+Epoch 30: 0/60000 (0%), Loss: 1.6681, Entropy: 0.8380, Reg: 0.8301
+Epoch 30: 14976/60000 (25%), Loss: 1.5491, Entropy: 0.8212, Reg: 0.7279
+Epoch 30: 29952/60000 (50%), Loss: 1.5397, Entropy: 0.8242, Reg: 0.7155
+Epoch 30: 44928/60000 (75%), Loss: 1.5276, Entropy: 0.8151, Reg: 0.7126
+Epoch 30: 59904/60000 (100%), Loss: 1.5277, Entropy: 0.8113, Reg: 0.7164
+Epoch: 30, Loss: 1.527184, Accuracy: 68.45%
+Epoch training time (s): 80.6016583442688
+Defense: isometry
+Epoch 31: 0/60000 (0%), Loss: 1.6537, Entropy: 0.8176, Reg: 0.8361
+Epoch 31: 14976/60000 (25%), Loss: 1.5541, Entropy: 0.7901, Reg: 0.7640
+Epoch 31: 29952/60000 (50%), Loss: 1.5657, Entropy: 0.8007, Reg: 0.7650
+Epoch 31: 44928/60000 (75%), Loss: 1.5251, Entropy: 0.7914, Reg: 0.7338
+Epoch 31: 59904/60000 (100%), Loss: 1.4839, Entropy: 0.7840, Reg: 0.6999
+Epoch: 31, Loss: 1.483258, Accuracy: 69.99%
+Epoch training time (s): 78.55789971351624
+Defense: isometry
+Epoch 32: 0/60000 (0%), Loss: 1.2280, Entropy: 0.7355, Reg: 0.4925
+Epoch 32: 14976/60000 (25%), Loss: 1.3358, Entropy: 0.7162, Reg: 0.6196
+Epoch 32: 29952/60000 (50%), Loss: 1.3950, Entropy: 0.7389, Reg: 0.6562
+Epoch 32: 44928/60000 (75%), Loss: 1.3891, Entropy: 0.7350, Reg: 0.6541
+Epoch 32: 59904/60000 (100%), Loss: 1.4048, Entropy: 0.7348, Reg: 0.6700
+Epoch: 32, Loss: 1.404480, Accuracy: 70.77%
+Epoch training time (s): 80.28039503097534
+Defense: isometry
+Epoch 33: 0/60000 (0%), Loss: 1.3360, Entropy: 0.7274, Reg: 0.6086
+Epoch 33: 14976/60000 (25%), Loss: 1.3560, Entropy: 0.6975, Reg: 0.6585
+Epoch 33: 29952/60000 (50%), Loss: 1.4437, Entropy: 0.7079, Reg: 0.7359
+Epoch 33: 44928/60000 (75%), Loss: 1.4281, Entropy: 0.7068, Reg: 0.7213
+Epoch 33: 59904/60000 (100%), Loss: 1.4553, Entropy: 0.7168, Reg: 0.7385
+Epoch: 33, Loss: 1.454887, Accuracy: 70.38%
+Epoch training time (s): 76.08627796173096
+Defense: isometry
+Epoch 34: 0/60000 (0%), Loss: 1.3846, Entropy: 0.7424, Reg: 0.6423
+Epoch 34: 14976/60000 (25%), Loss: 1.4069, Entropy: 0.7511, Reg: 0.6558
+Epoch 34: 29952/60000 (50%), Loss: 1.4129, Entropy: 0.7555, Reg: 0.6575
+Epoch 34: 44928/60000 (75%), Loss: 1.3813, Entropy: 0.7389, Reg: 0.6425
+Epoch 34: 59904/60000 (100%), Loss: 1.3888, Entropy: 0.7299, Reg: 0.6589
+Epoch: 34, Loss: 1.388360, Accuracy: 70.82%
+Epoch training time (s): 71.53762888908386
+Defense: isometry
+Epoch 35: 0/60000 (0%), Loss: 1.3331, Entropy: 0.6784, Reg: 0.6548
+Epoch 35: 14976/60000 (25%), Loss: 1.3778, Entropy: 0.6836, Reg: 0.6942
+Epoch 35: 29952/60000 (50%), Loss: 1.4422, Entropy: 0.6882, Reg: 0.7540
+Epoch 35: 44928/60000 (75%), Loss: 1.4281, Entropy: 0.6868, Reg: 0.7413
+Epoch 35: 59904/60000 (100%), Loss: 1.4377, Entropy: 0.6969, Reg: 0.7408
+Epoch: 35, Loss: 1.437180, Accuracy: 71.79%
+Epoch training time (s): 70.98116707801819
+Defense: isometry
+Epoch 36: 0/60000 (0%), Loss: 1.2162, Entropy: 0.6726, Reg: 0.5436
+Epoch 36: 14976/60000 (25%), Loss: 1.4099, Entropy: 0.6661, Reg: 0.7438
+Epoch 36: 29952/60000 (50%), Loss: 1.5144, Entropy: 0.7117, Reg: 0.8027
+Epoch 36: 44928/60000 (75%), Loss: 1.4670, Entropy: 0.6974, Reg: 0.7696
+Epoch 36: 59904/60000 (100%), Loss: 1.4656, Entropy: 0.6942, Reg: 0.7714
+Epoch: 36, Loss: 1.464986, Accuracy: 72.38%
+Epoch training time (s): 70.39227437973022
+Defense: isometry
+Epoch 37: 0/60000 (0%), Loss: 1.3829, Entropy: 0.6532, Reg: 0.7297
+Epoch 37: 14976/60000 (25%), Loss: 1.5001, Entropy: 0.7241, Reg: 0.7760
+Epoch 37: 29952/60000 (50%), Loss: 1.4795, Entropy: 0.7363, Reg: 0.7431
+Epoch 37: 44928/60000 (75%), Loss: 1.4408, Entropy: 0.7121, Reg: 0.7286
+Epoch 37: 59904/60000 (100%), Loss: 1.4592, Entropy: 0.7128, Reg: 0.7464
+Epoch: 37, Loss: 1.458626, Accuracy: 71.02%
+Epoch training time (s): 72.03112697601318
+Defense: isometry
+Epoch 38: 0/60000 (0%), Loss: 1.3748, Entropy: 0.7022, Reg: 0.6726
+Epoch 38: 14976/60000 (25%), Loss: 1.3792, Entropy: 0.7034, Reg: 0.6758
+Epoch 38: 29952/60000 (50%), Loss: 1.3995, Entropy: 0.6974, Reg: 0.7022
+Epoch 38: 44928/60000 (75%), Loss: 1.3890, Entropy: 0.6819, Reg: 0.7071
+Epoch 38: 59904/60000 (100%), Loss: 1.4117, Entropy: 0.6841, Reg: 0.7277
+Epoch: 38, Loss: 1.411190, Accuracy: 73.66%
+Epoch training time (s): 71.33599042892456
+Defense: isometry
+Epoch 39: 0/60000 (0%), Loss: 1.1863, Entropy: 0.6133, Reg: 0.5730
+Epoch 39: 14976/60000 (25%), Loss: 1.3680, Entropy: 0.6349, Reg: 0.7330
+Epoch 39: 29952/60000 (50%), Loss: 1.4116, Entropy: 0.6528, Reg: 0.7589
+Epoch 39: 44928/60000 (75%), Loss: 1.4097, Entropy: 0.6460, Reg: 0.7637
+Epoch 39: 59904/60000 (100%), Loss: 1.4218, Entropy: 0.6481, Reg: 0.7737
+Epoch: 39, Loss: 1.421506, Accuracy: 73.87%
+Epoch training time (s): 70.56284832954407
+Defense: isometry
+Epoch 40: 0/60000 (0%), Loss: 1.3076, Entropy: 0.5966, Reg: 0.7110
+Epoch 40: 14976/60000 (25%), Loss: 1.4177, Entropy: 0.6321, Reg: 0.7856
+Epoch 40: 29952/60000 (50%), Loss: 1.4278, Entropy: 0.6429, Reg: 0.7849
+Epoch 40: 44928/60000 (75%), Loss: 1.4139, Entropy: 0.6352, Reg: 0.7787
+Epoch 40: 59904/60000 (100%), Loss: 1.4169, Entropy: 0.6358, Reg: 0.7811
+Epoch: 40, Loss: 1.416368, Accuracy: 74.90%
+Epoch training time (s): 70.6272988319397
+Defense: isometry
+Epoch 41: 0/60000 (0%), Loss: 1.2177, Entropy: 0.5585, Reg: 0.6592
+Epoch 41: 14976/60000 (25%), Loss: 1.4272, Entropy: 0.6212, Reg: 0.8059
+Epoch 41: 29952/60000 (50%), Loss: 1.4324, Entropy: 0.6295, Reg: 0.8029
+Epoch 41: 44928/60000 (75%), Loss: 1.4047, Entropy: 0.6216, Reg: 0.7832
+Epoch 41: 59904/60000 (100%), Loss: 1.4010, Entropy: 0.6214, Reg: 0.7796
+Epoch: 41, Loss: 1.400501, Accuracy: 76.23%
+Epoch training time (s): 70.3490641117096
+Defense: isometry
+Epoch 42: 0/60000 (0%), Loss: 1.0987, Entropy: 0.5376, Reg: 0.5611
+Epoch 42: 14976/60000 (25%), Loss: 1.3248, Entropy: 0.5978, Reg: 0.7270
+Epoch 42: 29952/60000 (50%), Loss: 1.3514, Entropy: 0.6066, Reg: 0.7448
+Epoch 42: 44928/60000 (75%), Loss: 1.3516, Entropy: 0.6039, Reg: 0.7478
+Epoch 42: 59904/60000 (100%), Loss: 1.3604, Entropy: 0.6063, Reg: 0.7542
+Epoch: 42, Loss: 1.360148, Accuracy: 76.61%
+Epoch training time (s): 70.46831440925598
+Defense: isometry
+Epoch 43: 0/60000 (0%), Loss: 1.1320, Entropy: 0.5470, Reg: 0.5851
+Epoch 43: 14976/60000 (25%), Loss: 1.3194, Entropy: 0.5923, Reg: 0.7271
+Epoch 43: 29952/60000 (50%), Loss: 1.3409, Entropy: 0.5989, Reg: 0.7420
+Epoch 43: 44928/60000 (75%), Loss: 1.3348, Entropy: 0.5955, Reg: 0.7393
+Epoch 43: 59904/60000 (100%), Loss: 1.3489, Entropy: 0.5978, Reg: 0.7511
+Epoch: 43, Loss: 1.348657, Accuracy: 77.06%
+Epoch training time (s): 69.90268158912659
+Defense: isometry
+Epoch 44: 0/60000 (0%), Loss: 1.0404, Entropy: 0.5178, Reg: 0.5225
+Epoch 44: 14976/60000 (25%), Loss: 1.3340, Entropy: 0.5874, Reg: 0.7465
+Epoch 44: 29952/60000 (50%), Loss: 1.3634, Entropy: 0.5950, Reg: 0.7684
+Epoch 44: 44928/60000 (75%), Loss: 1.3516, Entropy: 0.5900, Reg: 0.7617
+Epoch 44: 59904/60000 (100%), Loss: 1.3533, Entropy: 0.5902, Reg: 0.7631
+Epoch: 44, Loss: 1.352993, Accuracy: 77.88%
+Epoch training time (s): 70.60892534255981
+Defense: isometry
+Epoch 45: 0/60000 (0%), Loss: 0.9988, Entropy: 0.5364, Reg: 0.4625
+Epoch 45: 14976/60000 (25%), Loss: 1.2747, Entropy: 0.5674, Reg: 0.7073
+Epoch 45: 29952/60000 (50%), Loss: 1.3110, Entropy: 0.5767, Reg: 0.7343
+Epoch 45: 44928/60000 (75%), Loss: 1.3042, Entropy: 0.5722, Reg: 0.7321
+Epoch 45: 59904/60000 (100%), Loss: 1.3138, Entropy: 0.5733, Reg: 0.7405
+Epoch: 45, Loss: 1.313648, Accuracy: 77.98%
+Epoch training time (s): 71.693035364151
+Defense: isometry
+Epoch 46: 0/60000 (0%), Loss: 0.8881, Entropy: 0.5139, Reg: 0.3742
+Epoch 46: 14976/60000 (25%), Loss: 1.3110, Entropy: 0.5636, Reg: 0.7474
+Epoch 46: 29952/60000 (50%), Loss: 1.3255, Entropy: 0.5677, Reg: 0.7578
+Epoch 46: 44928/60000 (75%), Loss: 1.3219, Entropy: 0.5626, Reg: 0.7593
+Epoch 46: 59904/60000 (100%), Loss: 1.3336, Entropy: 0.5666, Reg: 0.7670
+Epoch: 46, Loss: 1.333269, Accuracy: 78.23%
+Epoch training time (s): 70.17189288139343
+Defense: isometry
+Epoch 47: 0/60000 (0%), Loss: 0.8526, Entropy: 0.4902, Reg: 0.3624
+Epoch 47: 14976/60000 (25%), Loss: 1.3219, Entropy: 0.5615, Reg: 0.7604
+Epoch 47: 29952/60000 (50%), Loss: 1.3346, Entropy: 0.5641, Reg: 0.7705
+Epoch 47: 44928/60000 (75%), Loss: 1.3185, Entropy: 0.5558, Reg: 0.7627
+Epoch 47: 59904/60000 (100%), Loss: 1.3284, Entropy: 0.5565, Reg: 0.7719
+Epoch: 47, Loss: 1.327976, Accuracy: 78.42%
+Epoch training time (s): 69.76051115989685
+Defense: isometry
+Epoch 48: 0/60000 (0%), Loss: 0.8574, Entropy: 0.5053, Reg: 0.3521
+Epoch 48: 14976/60000 (25%), Loss: 1.3223, Entropy: 0.5532, Reg: 0.7692
+Epoch 48: 29952/60000 (50%), Loss: 1.3252, Entropy: 0.5549, Reg: 0.7703
+Epoch 48: 44928/60000 (75%), Loss: 1.2970, Entropy: 0.5385, Reg: 0.7585
+Epoch 48: 59904/60000 (100%), Loss: 1.2378, Entropy: 0.5153, Reg: 0.7225
+Epoch: 48, Loss: 1.237262, Accuracy: 84.47%
+Epoch training time (s): 70.12143850326538
+Defense: isometry
+Epoch 49: 0/60000 (0%), Loss: 0.7749, Entropy: 0.3476, Reg: 0.4273
+Epoch 49: 14976/60000 (25%), Loss: 0.8737, Entropy: 0.4034, Reg: 0.4704
+Epoch 49: 29952/60000 (50%), Loss: 0.8677, Entropy: 0.4040, Reg: 0.4638
+Epoch 49: 44928/60000 (75%), Loss: 0.8399, Entropy: 0.3957, Reg: 0.4442
+Epoch 49: 59904/60000 (100%), Loss: 0.8295, Entropy: 0.3935, Reg: 0.4360
+Epoch: 49, Loss: 0.829289, Accuracy: 85.97%
+Epoch training time (s): 69.56153893470764
+Defense: isometry
+Epoch 50: 0/60000 (0%), Loss: 0.4465, Entropy: 0.2909, Reg: 0.1557
+Epoch 50: 14976/60000 (25%), Loss: 0.7132, Entropy: 0.3735, Reg: 0.3397
+Epoch 50: 29952/60000 (50%), Loss: 0.7204, Entropy: 0.3755, Reg: 0.3448
+Epoch 50: 44928/60000 (75%), Loss: 0.7101, Entropy: 0.3706, Reg: 0.3394
+Epoch 50: 59904/60000 (100%), Loss: 0.7062, Entropy: 0.3704, Reg: 0.3358
+Epoch: 50, Loss: 0.705956, Accuracy: 86.33%
+Epoch training time (s): 70.19165682792664
+Defense: isometry
+Epoch 51: 0/60000 (0%), Loss: 0.3991, Entropy: 0.2810, Reg: 0.1181
+Epoch 51: 14976/60000 (25%), Loss: 0.6649, Entropy: 0.3624, Reg: 0.3025
+Epoch 51: 29952/60000 (50%), Loss: 0.6755, Entropy: 0.3628, Reg: 0.3127
+Epoch 51: 44928/60000 (75%), Loss: 0.6569, Entropy: 0.3579, Reg: 0.2990
+Epoch 51: 59904/60000 (100%), Loss: 0.6686, Entropy: 0.3591, Reg: 0.3095
+Epoch: 51, Loss: 0.668388, Accuracy: 86.49%
+Epoch training time (s): 69.09661889076233
+Training time (s): 3828.209276199341
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_isoreg/seed_2
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 2
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 7830.0/10000 (78.30%)
+name: fashion_lenet_isoreg/seed_2
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 2
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6710.0/10000 (67.10%)
+name: fashion_lenet_isoreg/seed_2
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 2
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 4730.0/10000 (47.30%)
+name: fashion_lenet_isoreg/seed_2
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 2
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 3097.0/10000 (30.97%)
+=====================================================================================================
+name: fashion_lenet_isoreg/seed_3
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 3
+gpu_number: 3
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/60000 (0%), Loss: 2.2847, Entropy: 2.2847, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.2654, Entropy: 2.2654, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 2.1835, Entropy: 2.1835, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 1.9620, Entropy: 1.9620, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 1.7141, Entropy: 1.7141, Reg: 0.0000
+Epoch: 1, Loss: 1.713208, Accuracy: 69.34%
+Epoch training time (s): 12.923948287963867
+Defense: isometry
+Epoch 2: 0/60000 (0%), Loss: 0.8267, Entropy: 0.7694, Reg: 0.0573
+Epoch 2: 14976/60000 (25%), Loss: 0.8483, Entropy: 0.8224, Reg: 0.0259
+Epoch 2: 29952/60000 (50%), Loss: 0.8240, Entropy: 0.7952, Reg: 0.0288
+Epoch 2: 44928/60000 (75%), Loss: 0.7998, Entropy: 0.7670, Reg: 0.0329
+Epoch 2: 59904/60000 (100%), Loss: 0.7813, Entropy: 0.7452, Reg: 0.0361
+Epoch: 2, Loss: 0.781179, Accuracy: 75.07%
+Epoch training time (s): 70.04731154441833
+Defense: isometry
+Epoch 3: 0/60000 (0%), Loss: 0.5850, Entropy: 0.5326, Reg: 0.0524
+Epoch 3: 14976/60000 (25%), Loss: 0.7099, Entropy: 0.6614, Reg: 0.0485
+Epoch 3: 29952/60000 (50%), Loss: 0.7083, Entropy: 0.6585, Reg: 0.0498
+Epoch 3: 44928/60000 (75%), Loss: 0.7009, Entropy: 0.6471, Reg: 0.0537
+Epoch 3: 59904/60000 (100%), Loss: 0.6963, Entropy: 0.6384, Reg: 0.0579
+Epoch: 3, Loss: 0.696228, Accuracy: 77.28%
+Epoch training time (s): 69.56770062446594
+Defense: isometry
+Epoch 4: 0/60000 (0%), Loss: 0.5378, Entropy: 0.4767, Reg: 0.0611
+Epoch 4: 14976/60000 (25%), Loss: 0.6817, Entropy: 0.6029, Reg: 0.0788
+Epoch 4: 29952/60000 (50%), Loss: 0.6873, Entropy: 0.6043, Reg: 0.0830
+Epoch 4: 44928/60000 (75%), Loss: 0.6852, Entropy: 0.5968, Reg: 0.0884
+Epoch 4: 59904/60000 (100%), Loss: 0.6852, Entropy: 0.5922, Reg: 0.0930
+Epoch: 4, Loss: 0.685094, Accuracy: 78.29%
+Epoch training time (s): 69.95625066757202
+Defense: isometry
+Epoch 5: 0/60000 (0%), Loss: 0.5486, Entropy: 0.4499, Reg: 0.0987
+Epoch 5: 14976/60000 (25%), Loss: 0.6856, Entropy: 0.5717, Reg: 0.1139
+Epoch 5: 29952/60000 (50%), Loss: 0.6881, Entropy: 0.5753, Reg: 0.1128
+Epoch 5: 44928/60000 (75%), Loss: 0.6836, Entropy: 0.5697, Reg: 0.1139
+Epoch 5: 59904/60000 (100%), Loss: 0.6831, Entropy: 0.5669, Reg: 0.1162
+Epoch: 5, Loss: 0.682980, Accuracy: 79.43%
+Epoch training time (s): 70.40163516998291
+Defense: isometry
+Epoch 6: 0/60000 (0%), Loss: 0.5259, Entropy: 0.4370, Reg: 0.0889
+Epoch 6: 14976/60000 (25%), Loss: 0.6733, Entropy: 0.5512, Reg: 0.1221
+Epoch 6: 29952/60000 (50%), Loss: 0.6816, Entropy: 0.5554, Reg: 0.1261
+Epoch 6: 44928/60000 (75%), Loss: 0.6786, Entropy: 0.5506, Reg: 0.1280
+Epoch 6: 59904/60000 (100%), Loss: 0.6776, Entropy: 0.5486, Reg: 0.1290
+Epoch: 6, Loss: 0.677480, Accuracy: 80.15%
+Epoch training time (s): 70.04199695587158
+Defense: isometry
+Epoch 7: 0/60000 (0%), Loss: 0.5175, Entropy: 0.4272, Reg: 0.0903
+Epoch 7: 14976/60000 (25%), Loss: 0.6650, Entropy: 0.5363, Reg: 0.1288
+Epoch 7: 29952/60000 (50%), Loss: 0.6705, Entropy: 0.5403, Reg: 0.1302
+Epoch 7: 44928/60000 (75%), Loss: 0.6669, Entropy: 0.5357, Reg: 0.1312
+Epoch 7: 59904/60000 (100%), Loss: 0.6670, Entropy: 0.5341, Reg: 0.1329
+Epoch: 7, Loss: 0.666933, Accuracy: 80.79%
+Epoch training time (s): 70.46855306625366
+Defense: isometry
+Epoch 8: 0/60000 (0%), Loss: 0.5110, Entropy: 0.4235, Reg: 0.0875
+Epoch 8: 14976/60000 (25%), Loss: 0.6545, Entropy: 0.5230, Reg: 0.1315
+Epoch 8: 29952/60000 (50%), Loss: 0.6614, Entropy: 0.5268, Reg: 0.1346
+Epoch 8: 44928/60000 (75%), Loss: 0.6591, Entropy: 0.5223, Reg: 0.1369
+Epoch 8: 59904/60000 (100%), Loss: 0.6597, Entropy: 0.5211, Reg: 0.1386
+Epoch: 8, Loss: 0.659631, Accuracy: 81.44%
+Epoch training time (s): 70.89815139770508
+Defense: isometry
+Epoch 9: 0/60000 (0%), Loss: 0.5101, Entropy: 0.4255, Reg: 0.0846
+Epoch 9: 14976/60000 (25%), Loss: 0.6569, Entropy: 0.5108, Reg: 0.1461
+Epoch 9: 29952/60000 (50%), Loss: 0.6619, Entropy: 0.5147, Reg: 0.1472
+Epoch 9: 44928/60000 (75%), Loss: 0.6573, Entropy: 0.5106, Reg: 0.1467
+Epoch 9: 59904/60000 (100%), Loss: 0.6579, Entropy: 0.5097, Reg: 0.1482
+Epoch: 9, Loss: 0.657769, Accuracy: 81.86%
+Epoch training time (s): 71.02787923812866
+Defense: isometry
+Epoch 10: 0/60000 (0%), Loss: 0.4990, Entropy: 0.4202, Reg: 0.0787
+Epoch 10: 14976/60000 (25%), Loss: 0.6495, Entropy: 0.5005, Reg: 0.1489
+Epoch 10: 29952/60000 (50%), Loss: 0.6584, Entropy: 0.5043, Reg: 0.1541
+Epoch 10: 44928/60000 (75%), Loss: 0.6544, Entropy: 0.5003, Reg: 0.1541
+Epoch 10: 59904/60000 (100%), Loss: 0.6543, Entropy: 0.4996, Reg: 0.1547
+Epoch: 10, Loss: 0.654185, Accuracy: 82.24%
+Epoch training time (s): 65.70398259162903
+Defense: isometry
+Epoch 11: 0/60000 (0%), Loss: 0.5019, Entropy: 0.4180, Reg: 0.0839
+Epoch 11: 14976/60000 (25%), Loss: 0.6422, Entropy: 0.4921, Reg: 0.1502
+Epoch 11: 29952/60000 (50%), Loss: 0.6509, Entropy: 0.4950, Reg: 0.1559
+Epoch 11: 44928/60000 (75%), Loss: 0.6496, Entropy: 0.4910, Reg: 0.1587
+Epoch 11: 59904/60000 (100%), Loss: 0.6524, Entropy: 0.4905, Reg: 0.1618
+Epoch: 11, Loss: 0.652309, Accuracy: 82.39%
+Epoch training time (s): 65.89087653160095
+Defense: isometry
+Epoch 12: 0/60000 (0%), Loss: 0.5550, Entropy: 0.3900, Reg: 0.1651
+Epoch 12: 14976/60000 (25%), Loss: 0.6460, Entropy: 0.4835, Reg: 0.1626
+Epoch 12: 29952/60000 (50%), Loss: 0.6520, Entropy: 0.4858, Reg: 0.1662
+Epoch 12: 44928/60000 (75%), Loss: 0.6498, Entropy: 0.4822, Reg: 0.1676
+Epoch 12: 59904/60000 (100%), Loss: 0.6512, Entropy: 0.4817, Reg: 0.1695
+Epoch: 12, Loss: 0.651136, Accuracy: 82.86%
+Epoch training time (s): 66.9016683101654
+Defense: isometry
+Epoch 13: 0/60000 (0%), Loss: 0.4928, Entropy: 0.4042, Reg: 0.0886
+Epoch 13: 14976/60000 (25%), Loss: 0.6492, Entropy: 0.4743, Reg: 0.1749
+Epoch 13: 29952/60000 (50%), Loss: 0.6564, Entropy: 0.4772, Reg: 0.1792
+Epoch 13: 44928/60000 (75%), Loss: 0.6509, Entropy: 0.4734, Reg: 0.1774
+Epoch 13: 59904/60000 (100%), Loss: 0.6547, Entropy: 0.4731, Reg: 0.1816
+Epoch: 13, Loss: 0.654678, Accuracy: 82.78%
+Epoch training time (s): 66.85931777954102
+Defense: isometry
+Epoch 14: 0/60000 (0%), Loss: 0.5750, Entropy: 0.3801, Reg: 0.1949
+Epoch 14: 14976/60000 (25%), Loss: 0.6399, Entropy: 0.4677, Reg: 0.1723
+Epoch 14: 29952/60000 (50%), Loss: 0.6507, Entropy: 0.4696, Reg: 0.1812
+Epoch 14: 44928/60000 (75%), Loss: 0.6482, Entropy: 0.4660, Reg: 0.1822
+Epoch 14: 59904/60000 (100%), Loss: 0.6505, Entropy: 0.4657, Reg: 0.1848
+Epoch: 14, Loss: 0.650433, Accuracy: 83.49%
+Epoch training time (s): 66.76999640464783
+Defense: isometry
+Epoch 15: 0/60000 (0%), Loss: 0.4820, Entropy: 0.3989, Reg: 0.0832
+Epoch 15: 14976/60000 (25%), Loss: 0.6418, Entropy: 0.4583, Reg: 0.1834
+Epoch 15: 29952/60000 (50%), Loss: 0.6509, Entropy: 0.4603, Reg: 0.1907
+Epoch 15: 44928/60000 (75%), Loss: 0.6499, Entropy: 0.4574, Reg: 0.1925
+Epoch 15: 59904/60000 (100%), Loss: 0.6523, Entropy: 0.4577, Reg: 0.1946
+Epoch: 15, Loss: 0.652188, Accuracy: 83.66%
+Epoch training time (s): 67.1807279586792
+Defense: isometry
+Epoch 16: 0/60000 (0%), Loss: 0.4963, Entropy: 0.3861, Reg: 0.1101
+Epoch 16: 14976/60000 (25%), Loss: 0.6494, Entropy: 0.4524, Reg: 0.1969
+Epoch 16: 29952/60000 (50%), Loss: 0.6602, Entropy: 0.4541, Reg: 0.2061
+Epoch 16: 44928/60000 (75%), Loss: 0.6537, Entropy: 0.4509, Reg: 0.2028
+Epoch 16: 59904/60000 (100%), Loss: 0.6572, Entropy: 0.4511, Reg: 0.2062
+Epoch: 16, Loss: 0.657123, Accuracy: 84.06%
+Epoch training time (s): 66.41460704803467
+Defense: isometry
+Epoch 17: 0/60000 (0%), Loss: 0.4655, Entropy: 0.3789, Reg: 0.0866
+Epoch 17: 14976/60000 (25%), Loss: 0.6507, Entropy: 0.4466, Reg: 0.2040
+Epoch 17: 29952/60000 (50%), Loss: 0.6588, Entropy: 0.4482, Reg: 0.2106
+Epoch 17: 44928/60000 (75%), Loss: 0.6595, Entropy: 0.4454, Reg: 0.2142
+Epoch 17: 59904/60000 (100%), Loss: 0.6635, Entropy: 0.4455, Reg: 0.2180
+Epoch: 17, Loss: 0.663314, Accuracy: 84.16%
+Epoch training time (s): 66.77836966514587
+Defense: isometry
+Epoch 18: 0/60000 (0%), Loss: 0.4621, Entropy: 0.3898, Reg: 0.0723
+Epoch 18: 14976/60000 (25%), Loss: 0.6427, Entropy: 0.4401, Reg: 0.2026
+Epoch 18: 29952/60000 (50%), Loss: 0.6567, Entropy: 0.4421, Reg: 0.2146
+Epoch 18: 44928/60000 (75%), Loss: 0.6593, Entropy: 0.4397, Reg: 0.2196
+Epoch 18: 59904/60000 (100%), Loss: 0.6612, Entropy: 0.4398, Reg: 0.2214
+Epoch: 18, Loss: 0.661080, Accuracy: 84.42%
+Epoch training time (s): 66.9240653514862
+Defense: isometry
+Epoch 19: 0/60000 (0%), Loss: 0.4559, Entropy: 0.3820, Reg: 0.0739
+Epoch 19: 14976/60000 (25%), Loss: 0.6419, Entropy: 0.4351, Reg: 0.2068
+Epoch 19: 29952/60000 (50%), Loss: 0.6538, Entropy: 0.4367, Reg: 0.2171
+Epoch 19: 44928/60000 (75%), Loss: 0.6580, Entropy: 0.4345, Reg: 0.2235
+Epoch 19: 59904/60000 (100%), Loss: 0.6647, Entropy: 0.4346, Reg: 0.2301
+Epoch: 19, Loss: 0.664578, Accuracy: 84.61%
+Epoch training time (s): 67.12727403640747
+Defense: isometry
+Epoch 20: 0/60000 (0%), Loss: 0.4409, Entropy: 0.3737, Reg: 0.0672
+Epoch 20: 14976/60000 (25%), Loss: 0.6491, Entropy: 0.4294, Reg: 0.2197
+Epoch 20: 29952/60000 (50%), Loss: 0.6587, Entropy: 0.4310, Reg: 0.2277
+Epoch 20: 44928/60000 (75%), Loss: 0.6607, Entropy: 0.4292, Reg: 0.2315
+Epoch 20: 59904/60000 (100%), Loss: 0.6664, Entropy: 0.4293, Reg: 0.2371
+Epoch: 20, Loss: 0.666277, Accuracy: 84.51%
+Epoch training time (s): 67.50199842453003
+Defense: isometry
+Epoch 21: 0/60000 (0%), Loss: 0.4437, Entropy: 0.3724, Reg: 0.0713
+Epoch 21: 14976/60000 (25%), Loss: 0.6545, Entropy: 0.4254, Reg: 0.2290
+Epoch 21: 29952/60000 (50%), Loss: 0.6638, Entropy: 0.4264, Reg: 0.2373
+Epoch 21: 44928/60000 (75%), Loss: 0.6672, Entropy: 0.4245, Reg: 0.2427
+Epoch 21: 59904/60000 (100%), Loss: 0.6680, Entropy: 0.4245, Reg: 0.2436
+Epoch: 21, Loss: 0.667867, Accuracy: 84.78%
+Epoch training time (s): 66.65733456611633
+Defense: isometry
+Epoch 22: 0/60000 (0%), Loss: 0.4380, Entropy: 0.3679, Reg: 0.0701
+Epoch 22: 14976/60000 (25%), Loss: 0.6608, Entropy: 0.4205, Reg: 0.2402
+Epoch 22: 29952/60000 (50%), Loss: 0.6721, Entropy: 0.4222, Reg: 0.2498
+Epoch 22: 44928/60000 (75%), Loss: 0.6717, Entropy: 0.4205, Reg: 0.2512
+Epoch 22: 59904/60000 (100%), Loss: 0.6716, Entropy: 0.4202, Reg: 0.2514
+Epoch: 22, Loss: 0.671491, Accuracy: 84.98%
+Epoch training time (s): 67.2323944568634
+Defense: isometry
+Epoch 23: 0/60000 (0%), Loss: 0.4240, Entropy: 0.3475, Reg: 0.0765
+Epoch 23: 14976/60000 (25%), Loss: 0.6705, Entropy: 0.4173, Reg: 0.2531
+Epoch 23: 29952/60000 (50%), Loss: 0.6773, Entropy: 0.4200, Reg: 0.2573
+Epoch 23: 44928/60000 (75%), Loss: 0.6841, Entropy: 0.4179, Reg: 0.2662
+Epoch 23: 59904/60000 (100%), Loss: 0.6840, Entropy: 0.4174, Reg: 0.2666
+Epoch: 23, Loss: 0.683760, Accuracy: 85.11%
+Epoch training time (s): 65.93199706077576
+Defense: isometry
+Epoch 24: 0/60000 (0%), Loss: 0.4182, Entropy: 0.3481, Reg: 0.0701
+Epoch 24: 14976/60000 (25%), Loss: 0.6834, Entropy: 0.4131, Reg: 0.2704
+Epoch 24: 29952/60000 (50%), Loss: 0.7031, Entropy: 0.4172, Reg: 0.2858
+Epoch 24: 44928/60000 (75%), Loss: 0.7136, Entropy: 0.4156, Reg: 0.2980
+Epoch 24: 59904/60000 (100%), Loss: 0.7152, Entropy: 0.4150, Reg: 0.3002
+Epoch: 24, Loss: 0.714971, Accuracy: 85.21%
+Epoch training time (s): 65.99186325073242
+Defense: isometry
+Epoch 25: 0/60000 (0%), Loss: 0.4234, Entropy: 0.3515, Reg: 0.0718
+Epoch 25: 14976/60000 (25%), Loss: 0.7006, Entropy: 0.4116, Reg: 0.2890
+Epoch 25: 29952/60000 (50%), Loss: 0.7245, Entropy: 0.4167, Reg: 0.3078
+Epoch 25: 44928/60000 (75%), Loss: 0.7248, Entropy: 0.4149, Reg: 0.3098
+Epoch 25: 59904/60000 (100%), Loss: 0.7268, Entropy: 0.4139, Reg: 0.3129
+Epoch: 25, Loss: 0.726602, Accuracy: 85.06%
+Epoch training time (s): 67.04561614990234
+Defense: isometry
+Epoch 26: 0/60000 (0%), Loss: 0.4144, Entropy: 0.3323, Reg: 0.0821
+Epoch 26: 14976/60000 (25%), Loss: 0.7014, Entropy: 0.4082, Reg: 0.2932
+Epoch 26: 29952/60000 (50%), Loss: 0.7754, Entropy: 0.4165, Reg: 0.3589
+Epoch 26: 44928/60000 (75%), Loss: 0.7806, Entropy: 0.4168, Reg: 0.3638
+Epoch 26: 59904/60000 (100%), Loss: 0.8025, Entropy: 0.4201, Reg: 0.3824
+Epoch: 26, Loss: 0.802249, Accuracy: 85.10%
+Epoch training time (s): 67.63548755645752
+Defense: isometry
+Epoch 27: 0/60000 (0%), Loss: 0.4008, Entropy: 0.3345, Reg: 0.0662
+Epoch 27: 14976/60000 (25%), Loss: 0.7258, Entropy: 0.4073, Reg: 0.3185
+Epoch 27: 29952/60000 (50%), Loss: 0.7784, Entropy: 0.4123, Reg: 0.3661
+Epoch 27: 44928/60000 (75%), Loss: 0.7838, Entropy: 0.4106, Reg: 0.3733
+Epoch 27: 59904/60000 (100%), Loss: 0.7856, Entropy: 0.4099, Reg: 0.3757
+Epoch: 27, Loss: 0.785419, Accuracy: 85.23%
+Epoch training time (s): 67.09087204933167
+Defense: isometry
+Epoch 28: 0/60000 (0%), Loss: 0.4115, Entropy: 0.3268, Reg: 0.0847
+Epoch 28: 14976/60000 (25%), Loss: 0.7227, Entropy: 0.4034, Reg: 0.3193
+Epoch 28: 29952/60000 (50%), Loss: 0.7901, Entropy: 0.4093, Reg: 0.3808
+Epoch 28: 44928/60000 (75%), Loss: 0.8025, Entropy: 0.4089, Reg: 0.3937
+Epoch 28: 59904/60000 (100%), Loss: 0.8463, Entropy: 0.4140, Reg: 0.4322
+Epoch: 28, Loss: 0.845933, Accuracy: 84.97%
+Epoch training time (s): 65.98387217521667
+Defense: isometry
+Epoch 29: 0/60000 (0%), Loss: 0.3871, Entropy: 0.3133, Reg: 0.0738
+Epoch 29: 14976/60000 (25%), Loss: 0.7716, Entropy: 0.4033, Reg: 0.3683
+Epoch 29: 29952/60000 (50%), Loss: 0.8171, Entropy: 0.4067, Reg: 0.4103
+Epoch 29: 44928/60000 (75%), Loss: 0.8236, Entropy: 0.4055, Reg: 0.4181
+Epoch 29: 59904/60000 (100%), Loss: 0.9079, Entropy: 0.4132, Reg: 0.4948
+Epoch: 29, Loss: 0.907610, Accuracy: 83.04%
+Epoch training time (s): 65.77689623832703
+Defense: isometry
+Epoch 30: 0/60000 (0%), Loss: 0.4114, Entropy: 0.3350, Reg: 0.0764
+Epoch 30: 14976/60000 (25%), Loss: 2.2562, Entropy: 0.5581, Reg: 1.6981
+Epoch 30: 29952/60000 (50%), Loss: 1.5776, Entropy: 0.4888, Reg: 1.0888
+Epoch 30: 44928/60000 (75%), Loss: 1.4296, Entropy: 0.4666, Reg: 0.9630
+Epoch 30: 59904/60000 (100%), Loss: 1.5373, Entropy: 0.4725, Reg: 1.0648
+Epoch: 30, Loss: 1.540168, Accuracy: 76.30%
+Epoch training time (s): 66.73235893249512
+Defense: isometry
+Epoch 31: 0/60000 (0%), Loss: 3.4754, Entropy: 0.5107, Reg: 2.9646
+Epoch 31: 14976/60000 (25%), Loss: 4.8180, Entropy: 0.9905, Reg: 3.8276
+Epoch 31: 29952/60000 (50%), Loss: 4.3050, Entropy: 1.0221, Reg: 3.2828
+Epoch 31: 44928/60000 (75%), Loss: 3.7236, Entropy: 1.0044, Reg: 2.7192
+Epoch 31: 59904/60000 (100%), Loss: 3.3124, Entropy: 0.9826, Reg: 2.3298
+Epoch: 31, Loss: 3.310802, Accuracy: 67.46%
+Epoch training time (s): 67.43825602531433
+Defense: isometry
+Epoch 32: 0/60000 (0%), Loss: 2.1406, Entropy: 0.9290, Reg: 1.2117
+Epoch 32: 14976/60000 (25%), Loss: 1.8823, Entropy: 0.8634, Reg: 1.0189
+Epoch 32: 29952/60000 (50%), Loss: 1.8142, Entropy: 0.8583, Reg: 0.9559
+Epoch 32: 44928/60000 (75%), Loss: 1.7677, Entropy: 0.8443, Reg: 0.9235
+Epoch 32: 59904/60000 (100%), Loss: 1.7380, Entropy: 0.8397, Reg: 0.8983
+Epoch: 32, Loss: 1.737438, Accuracy: 67.98%
+Epoch training time (s): 67.02280259132385
+Defense: isometry
+Epoch 33: 0/60000 (0%), Loss: 1.7199, Entropy: 0.8449, Reg: 0.8749
+Epoch 33: 14976/60000 (25%), Loss: 1.5602, Entropy: 0.8062, Reg: 0.7541
+Epoch 33: 29952/60000 (50%), Loss: 1.5582, Entropy: 0.8083, Reg: 0.7500
+Epoch 33: 44928/60000 (75%), Loss: 1.5735, Entropy: 0.8002, Reg: 0.7733
+Epoch 33: 59904/60000 (100%), Loss: 1.5833, Entropy: 0.8035, Reg: 0.7798
+Epoch: 33, Loss: 1.582798, Accuracy: 68.35%
+Epoch training time (s): 68.07545375823975
+Defense: isometry
+Epoch 34: 0/60000 (0%), Loss: 1.4244, Entropy: 0.7718, Reg: 0.6526
+Epoch 34: 14976/60000 (25%), Loss: 1.5421, Entropy: 0.7980, Reg: 0.7441
+Epoch 34: 29952/60000 (50%), Loss: 1.5479, Entropy: 0.8022, Reg: 0.7457
+Epoch 34: 44928/60000 (75%), Loss: 1.5483, Entropy: 0.7923, Reg: 0.7559
+Epoch 34: 59904/60000 (100%), Loss: 1.5597, Entropy: 0.7917, Reg: 0.7680
+Epoch: 34, Loss: 1.559197, Accuracy: 69.09%
+Epoch training time (s): 69.04187059402466
+Defense: isometry
+Epoch 35: 0/60000 (0%), Loss: 1.5085, Entropy: 0.7584, Reg: 0.7501
+Epoch 35: 14976/60000 (25%), Loss: 1.5144, Entropy: 0.7658, Reg: 0.7486
+Epoch 35: 29952/60000 (50%), Loss: 1.5315, Entropy: 0.7636, Reg: 0.7679
+Epoch 35: 44928/60000 (75%), Loss: 1.5350, Entropy: 0.7512, Reg: 0.7839
+Epoch 35: 59904/60000 (100%), Loss: 1.5307, Entropy: 0.7390, Reg: 0.7917
+Epoch: 35, Loss: 1.530178, Accuracy: 71.55%
+Epoch training time (s): 68.66534495353699
+Defense: isometry
+Epoch 36: 0/60000 (0%), Loss: 1.4296, Entropy: 0.6715, Reg: 0.7581
+Epoch 36: 14976/60000 (25%), Loss: 1.5163, Entropy: 0.6959, Reg: 0.8204
+Epoch 36: 29952/60000 (50%), Loss: 1.4642, Entropy: 0.6833, Reg: 0.7809
+Epoch 36: 44928/60000 (75%), Loss: 1.4661, Entropy: 0.6763, Reg: 0.7897
+Epoch 36: 59904/60000 (100%), Loss: 1.4687, Entropy: 0.6717, Reg: 0.7970
+Epoch: 36, Loss: 1.468350, Accuracy: 72.86%
+Epoch training time (s): 66.69489407539368
+Defense: isometry
+Epoch 37: 0/60000 (0%), Loss: 1.4601, Entropy: 0.6428, Reg: 0.8173
+Epoch 37: 14976/60000 (25%), Loss: 1.4697, Entropy: 0.6498, Reg: 0.8199
+Epoch 37: 29952/60000 (50%), Loss: 1.5025, Entropy: 0.6724, Reg: 0.8301
+Epoch 37: 44928/60000 (75%), Loss: 1.4810, Entropy: 0.6669, Reg: 0.8141
+Epoch 37: 59904/60000 (100%), Loss: 1.4816, Entropy: 0.6658, Reg: 0.8158
+Epoch: 37, Loss: 1.480969, Accuracy: 73.71%
+Epoch training time (s): 67.78311824798584
+Defense: isometry
+Epoch 38: 0/60000 (0%), Loss: 1.2325, Entropy: 0.6170, Reg: 0.6155
+Epoch 38: 14976/60000 (25%), Loss: 1.4709, Entropy: 0.6658, Reg: 0.8050
+Epoch 38: 29952/60000 (50%), Loss: 1.5034, Entropy: 0.6750, Reg: 0.8284
+Epoch 38: 44928/60000 (75%), Loss: 1.4798, Entropy: 0.6651, Reg: 0.8147
+Epoch 38: 59904/60000 (100%), Loss: 1.4771, Entropy: 0.6615, Reg: 0.8156
+Epoch: 38, Loss: 1.476501, Accuracy: 75.07%
+Epoch training time (s): 67.37362670898438
+Defense: isometry
+Epoch 39: 0/60000 (0%), Loss: 1.2709, Entropy: 0.5847, Reg: 0.6862
+Epoch 39: 14976/60000 (25%), Loss: 1.3912, Entropy: 0.6256, Reg: 0.7657
+Epoch 39: 29952/60000 (50%), Loss: 1.3882, Entropy: 0.6311, Reg: 0.7571
+Epoch 39: 44928/60000 (75%), Loss: 1.3665, Entropy: 0.6215, Reg: 0.7450
+Epoch 39: 59904/60000 (100%), Loss: 1.3769, Entropy: 0.6226, Reg: 0.7543
+Epoch: 39, Loss: 1.376521, Accuracy: 75.24%
+Epoch training time (s): 67.28227400779724
+Defense: isometry
+Epoch 40: 0/60000 (0%), Loss: 1.2246, Entropy: 0.5968, Reg: 0.6278
+Epoch 40: 14976/60000 (25%), Loss: 1.3748, Entropy: 0.6150, Reg: 0.7598
+Epoch 40: 29952/60000 (50%), Loss: 1.3511, Entropy: 0.6173, Reg: 0.7338
+Epoch 40: 44928/60000 (75%), Loss: 1.3250, Entropy: 0.6019, Reg: 0.7231
+Epoch 40: 59904/60000 (100%), Loss: 1.3247, Entropy: 0.6003, Reg: 0.7244
+Epoch: 40, Loss: 1.324318, Accuracy: 77.97%
+Epoch training time (s): 67.66899228096008
+Defense: isometry
+Epoch 41: 0/60000 (0%), Loss: 1.0155, Entropy: 0.5259, Reg: 0.4897
+Epoch 41: 14976/60000 (25%), Loss: 1.2782, Entropy: 0.5778, Reg: 0.7004
+Epoch 41: 29952/60000 (50%), Loss: 1.2954, Entropy: 0.5899, Reg: 0.7055
+Epoch 41: 44928/60000 (75%), Loss: 1.2663, Entropy: 0.5753, Reg: 0.6910
+Epoch 41: 59904/60000 (100%), Loss: 1.2814, Entropy: 0.5764, Reg: 0.7050
+Epoch: 41, Loss: 1.281117, Accuracy: 78.06%
+Epoch training time (s): 68.17032170295715
+Defense: isometry
+Epoch 42: 0/60000 (0%), Loss: 0.9479, Entropy: 0.5203, Reg: 0.4275
+Epoch 42: 14976/60000 (25%), Loss: 1.2736, Entropy: 0.5792, Reg: 0.6944
+Epoch 42: 29952/60000 (50%), Loss: 1.2571, Entropy: 0.5750, Reg: 0.6821
+Epoch 42: 44928/60000 (75%), Loss: 1.2210, Entropy: 0.5565, Reg: 0.6646
+Epoch 42: 59904/60000 (100%), Loss: 1.2316, Entropy: 0.5553, Reg: 0.6763
+Epoch: 42, Loss: 1.231210, Accuracy: 79.39%
+Epoch training time (s): 68.30131101608276
+Defense: isometry
+Epoch 43: 0/60000 (0%), Loss: 1.3224, Entropy: 0.4586, Reg: 0.8638
+Epoch 43: 14976/60000 (25%), Loss: 1.1960, Entropy: 0.5363, Reg: 0.6597
+Epoch 43: 29952/60000 (50%), Loss: 1.1993, Entropy: 0.5306, Reg: 0.6687
+Epoch 43: 44928/60000 (75%), Loss: 1.1955, Entropy: 0.5252, Reg: 0.6703
+Epoch 43: 59904/60000 (100%), Loss: 1.2016, Entropy: 0.5240, Reg: 0.6776
+Epoch: 43, Loss: 1.201265, Accuracy: 80.08%
+Epoch training time (s): 68.56024217605591
+Defense: isometry
+Epoch 44: 0/60000 (0%), Loss: 1.1878, Entropy: 0.4348, Reg: 0.7530
+Epoch 44: 14976/60000 (25%), Loss: 1.2035, Entropy: 0.5063, Reg: 0.6973
+Epoch 44: 29952/60000 (50%), Loss: 1.1901, Entropy: 0.5057, Reg: 0.6844
+Epoch 44: 44928/60000 (75%), Loss: 1.1752, Entropy: 0.5012, Reg: 0.6740
+Epoch 44: 59904/60000 (100%), Loss: 1.1533, Entropy: 0.4971, Reg: 0.6562
+Epoch: 44, Loss: 1.152758, Accuracy: 82.07%
+Epoch training time (s): 68.17373132705688
+Defense: isometry
+Epoch 45: 0/60000 (0%), Loss: 0.6310, Entropy: 0.3676, Reg: 0.2634
+Epoch 45: 14976/60000 (25%), Loss: 1.0661, Entropy: 0.4734, Reg: 0.5927
+Epoch 45: 29952/60000 (50%), Loss: 1.0770, Entropy: 0.4822, Reg: 0.5948
+Epoch 45: 44928/60000 (75%), Loss: 1.1032, Entropy: 0.4862, Reg: 0.6169
+Epoch 45: 59904/60000 (100%), Loss: 1.1142, Entropy: 0.4874, Reg: 0.6268
+Epoch: 45, Loss: 1.114095, Accuracy: 82.04%
+Epoch training time (s): 67.26885509490967
+Defense: isometry
+Epoch 46: 0/60000 (0%), Loss: 0.5937, Entropy: 0.3749, Reg: 0.2188
+Epoch 46: 14976/60000 (25%), Loss: 1.0685, Entropy: 0.4769, Reg: 0.5916
+Epoch 46: 29952/60000 (50%), Loss: 1.0743, Entropy: 0.4692, Reg: 0.6051
+Epoch 46: 44928/60000 (75%), Loss: 1.0913, Entropy: 0.4690, Reg: 0.6223
+Epoch 46: 59904/60000 (100%), Loss: 1.1111, Entropy: 0.4722, Reg: 0.6389
+Epoch: 46, Loss: 1.110964, Accuracy: 81.75%
+Epoch training time (s): 66.34977602958679
+Defense: isometry
+Epoch 47: 0/60000 (0%), Loss: 0.7309, Entropy: 0.3595, Reg: 0.3714
+Epoch 47: 14976/60000 (25%), Loss: 1.1120, Entropy: 0.4692, Reg: 0.6428
+Epoch 47: 29952/60000 (50%), Loss: 1.1100, Entropy: 0.4708, Reg: 0.6393
+Epoch 47: 44928/60000 (75%), Loss: 1.1080, Entropy: 0.4639, Reg: 0.6441
+Epoch 47: 59904/60000 (100%), Loss: 1.1163, Entropy: 0.4664, Reg: 0.6499
+Epoch: 47, Loss: 1.115960, Accuracy: 82.69%
+Epoch training time (s): 66.38640189170837
+Defense: isometry
+Epoch 48: 0/60000 (0%), Loss: 0.5908, Entropy: 0.3188, Reg: 0.2720
+Epoch 48: 14976/60000 (25%), Loss: 1.0922, Entropy: 0.4539, Reg: 0.6384
+Epoch 48: 29952/60000 (50%), Loss: 1.1011, Entropy: 0.4570, Reg: 0.6441
+Epoch 48: 44928/60000 (75%), Loss: 1.0926, Entropy: 0.4533, Reg: 0.6393
+Epoch 48: 59904/60000 (100%), Loss: 1.1196, Entropy: 0.4594, Reg: 0.6602
+Epoch: 48, Loss: 1.119342, Accuracy: 82.35%
+Epoch training time (s): 66.24961972236633
+Defense: isometry
+Epoch 49: 0/60000 (0%), Loss: 0.6621, Entropy: 0.3277, Reg: 0.3343
+Epoch 49: 14976/60000 (25%), Loss: 1.1626, Entropy: 0.4656, Reg: 0.6971
+Epoch 49: 29952/60000 (50%), Loss: 1.1847, Entropy: 0.4747, Reg: 0.7100
+Epoch 49: 44928/60000 (75%), Loss: 1.1681, Entropy: 0.4708, Reg: 0.6974
+Epoch 49: 59904/60000 (100%), Loss: 1.1934, Entropy: 0.4737, Reg: 0.7197
+Epoch: 49, Loss: 1.193274, Accuracy: 82.02%
+Epoch training time (s): 65.15378069877625
+Defense: isometry
+Epoch 50: 0/60000 (0%), Loss: 0.6055, Entropy: 0.2849, Reg: 0.3205
+Epoch 50: 14976/60000 (25%), Loss: 1.2289, Entropy: 0.4769, Reg: 0.7521
+Epoch 50: 29952/60000 (50%), Loss: 1.2147, Entropy: 0.4761, Reg: 0.7386
+Epoch 50: 44928/60000 (75%), Loss: 1.1639, Entropy: 0.4653, Reg: 0.6985
+Epoch 50: 59904/60000 (100%), Loss: 1.1632, Entropy: 0.4662, Reg: 0.6970
+Epoch: 50, Loss: 1.162918, Accuracy: 82.50%
+Epoch training time (s): 65.74977231025696
+Defense: isometry
+Epoch 51: 0/60000 (0%), Loss: 0.5595, Entropy: 0.2881, Reg: 0.2715
+Epoch 51: 14976/60000 (25%), Loss: 1.0811, Entropy: 0.4475, Reg: 0.6336
+Epoch 51: 29952/60000 (50%), Loss: 1.0968, Entropy: 0.4511, Reg: 0.6457
+Epoch 51: 44928/60000 (75%), Loss: 1.0664, Entropy: 0.4413, Reg: 0.6251
+Epoch 51: 59904/60000 (100%), Loss: 1.0629, Entropy: 0.4407, Reg: 0.6222
+Epoch: 51, Loss: 1.062880, Accuracy: 83.10%
+Epoch training time (s): 65.36178779602051
+Training time (s): 3389.1604928970337
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_isoreg/seed_3
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 3
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 7534.0/10000 (75.34%)
+name: fashion_lenet_isoreg/seed_3
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 3
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6425.0/10000 (64.25%)
+name: fashion_lenet_isoreg/seed_3
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 3
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 4621.0/10000 (46.21%)
+name: fashion_lenet_isoreg/seed_3
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 3
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 3260.0/10000 (32.60%)
+=====================================================================================================
+name: fashion_lenet_isoreg/seed_4
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 4
+gpu_number: 3
+load: False
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: gn
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Start training
+Defense: None
+Epoch 1: 0/60000 (0%), Loss: 2.3150, Entropy: 2.3150, Reg: 0.0000
+Epoch 1: 14976/60000 (25%), Loss: 2.2400, Entropy: 2.2400, Reg: 0.0000
+Epoch 1: 29952/60000 (50%), Loss: 2.0966, Entropy: 2.0966, Reg: 0.0000
+Epoch 1: 44928/60000 (75%), Loss: 1.8166, Entropy: 1.8166, Reg: 0.0000
+Epoch 1: 59904/60000 (100%), Loss: 1.5834, Entropy: 1.5834, Reg: 0.0000
+Epoch: 1, Loss: 1.582618, Accuracy: 71.15%
+Epoch training time (s): 13.970194339752197
+Defense: isometry
+Epoch 2: 0/60000 (0%), Loss: 0.8002, Entropy: 0.7310, Reg: 0.0692
+Epoch 2: 14976/60000 (25%), Loss: 0.8264, Entropy: 0.7915, Reg: 0.0349
+Epoch 2: 29952/60000 (50%), Loss: 0.8066, Entropy: 0.7709, Reg: 0.0357
+Epoch 2: 44928/60000 (75%), Loss: 0.7858, Entropy: 0.7464, Reg: 0.0394
+Epoch 2: 59904/60000 (100%), Loss: 0.7711, Entropy: 0.7277, Reg: 0.0434
+Epoch: 2, Loss: 0.770990, Accuracy: 75.98%
+Epoch training time (s): 65.60566687583923
+Defense: isometry
+Epoch 3: 0/60000 (0%), Loss: 0.5942, Entropy: 0.5467, Reg: 0.0475
+Epoch 3: 14976/60000 (25%), Loss: 0.7172, Entropy: 0.6522, Reg: 0.0650
+Epoch 3: 29952/60000 (50%), Loss: 0.7206, Entropy: 0.6506, Reg: 0.0700
+Epoch 3: 44928/60000 (75%), Loss: 0.7194, Entropy: 0.6401, Reg: 0.0793
+Epoch 3: 59904/60000 (100%), Loss: 0.7192, Entropy: 0.6331, Reg: 0.0861
+Epoch: 3, Loss: 0.719142, Accuracy: 77.41%
+Epoch training time (s): 66.24899125099182
+Defense: isometry
+Epoch 4: 0/60000 (0%), Loss: 0.5802, Entropy: 0.4800, Reg: 0.1002
+Epoch 4: 14976/60000 (25%), Loss: 0.7206, Entropy: 0.6005, Reg: 0.1202
+Epoch 4: 29952/60000 (50%), Loss: 0.7256, Entropy: 0.6040, Reg: 0.1215
+Epoch 4: 44928/60000 (75%), Loss: 0.7253, Entropy: 0.5975, Reg: 0.1278
+Epoch 4: 59904/60000 (100%), Loss: 0.7241, Entropy: 0.5939, Reg: 0.1302
+Epoch: 4, Loss: 0.723959, Accuracy: 78.51%
+Epoch training time (s): 65.48727774620056
+Defense: isometry
+Epoch 5: 0/60000 (0%), Loss: 0.5589, Entropy: 0.4749, Reg: 0.0840
+Epoch 5: 14976/60000 (25%), Loss: 0.7168, Entropy: 0.5739, Reg: 0.1429
+Epoch 5: 29952/60000 (50%), Loss: 0.7240, Entropy: 0.5781, Reg: 0.1459
+Epoch 5: 44928/60000 (75%), Loss: 0.7229, Entropy: 0.5721, Reg: 0.1508
+Epoch 5: 59904/60000 (100%), Loss: 0.7219, Entropy: 0.5698, Reg: 0.1521
+Epoch: 5, Loss: 0.721800, Accuracy: 79.45%
+Epoch training time (s): 64.4921886920929
+Defense: isometry
+Epoch 6: 0/60000 (0%), Loss: 0.5591, Entropy: 0.4703, Reg: 0.0888
+Epoch 6: 14976/60000 (25%), Loss: 0.7113, Entropy: 0.5532, Reg: 0.1581
+Epoch 6: 29952/60000 (50%), Loss: 0.7151, Entropy: 0.5586, Reg: 0.1565
+Epoch 6: 44928/60000 (75%), Loss: 0.7117, Entropy: 0.5537, Reg: 0.1580
+Epoch 6: 59904/60000 (100%), Loss: 0.7110, Entropy: 0.5522, Reg: 0.1588
+Epoch: 6, Loss: 0.710895, Accuracy: 80.06%
+Epoch training time (s): 65.96504640579224
+Defense: isometry
+Epoch 7: 0/60000 (0%), Loss: 0.5456, Entropy: 0.4553, Reg: 0.0903
+Epoch 7: 14976/60000 (25%), Loss: 0.6939, Entropy: 0.5372, Reg: 0.1567
+Epoch 7: 29952/60000 (50%), Loss: 0.7011, Entropy: 0.5430, Reg: 0.1581
+Epoch 7: 44928/60000 (75%), Loss: 0.6970, Entropy: 0.5382, Reg: 0.1588
+Epoch 7: 59904/60000 (100%), Loss: 0.6971, Entropy: 0.5372, Reg: 0.1598
+Epoch: 7, Loss: 0.696963, Accuracy: 80.60%
+Epoch training time (s): 66.00892233848572
+Defense: isometry
+Epoch 8: 0/60000 (0%), Loss: 0.5385, Entropy: 0.4432, Reg: 0.0953
+Epoch 8: 14976/60000 (25%), Loss: 0.6854, Entropy: 0.5239, Reg: 0.1615
+Epoch 8: 29952/60000 (50%), Loss: 0.6969, Entropy: 0.5296, Reg: 0.1673
+Epoch 8: 44928/60000 (75%), Loss: 0.6950, Entropy: 0.5253, Reg: 0.1697
+Epoch 8: 59904/60000 (100%), Loss: 0.6948, Entropy: 0.5248, Reg: 0.1700
+Epoch: 8, Loss: 0.694678, Accuracy: 81.20%
+Epoch training time (s): 64.82249402999878
+Defense: isometry
+Epoch 9: 0/60000 (0%), Loss: 0.5316, Entropy: 0.4481, Reg: 0.0834
+Epoch 9: 14976/60000 (25%), Loss: 0.6807, Entropy: 0.5127, Reg: 0.1680
+Epoch 9: 29952/60000 (50%), Loss: 0.6932, Entropy: 0.5180, Reg: 0.1753
+Epoch 9: 44928/60000 (75%), Loss: 0.6923, Entropy: 0.5138, Reg: 0.1785
+Epoch 9: 59904/60000 (100%), Loss: 0.6938, Entropy: 0.5135, Reg: 0.1802
+Epoch: 9, Loss: 0.693630, Accuracy: 81.56%
+Epoch training time (s): 65.8133430480957
+Defense: isometry
+Epoch 10: 0/60000 (0%), Loss: 0.5332, Entropy: 0.4315, Reg: 0.1017
+Epoch 10: 14976/60000 (25%), Loss: 0.6916, Entropy: 0.5016, Reg: 0.1900
+Epoch 10: 29952/60000 (50%), Loss: 0.7030, Entropy: 0.5067, Reg: 0.1963
+Epoch 10: 44928/60000 (75%), Loss: 0.7011, Entropy: 0.5029, Reg: 0.1982
+Epoch 10: 59904/60000 (100%), Loss: 0.7022, Entropy: 0.5030, Reg: 0.1992
+Epoch: 10, Loss: 0.702061, Accuracy: 82.04%
+Epoch training time (s): 65.5647644996643
+Defense: isometry
+Epoch 11: 0/60000 (0%), Loss: 0.5310, Entropy: 0.4315, Reg: 0.0995
+Epoch 11: 14976/60000 (25%), Loss: 0.6979, Entropy: 0.4929, Reg: 0.2050
+Epoch 11: 29952/60000 (50%), Loss: 0.7066, Entropy: 0.4983, Reg: 0.2083
+Epoch 11: 44928/60000 (75%), Loss: 0.7030, Entropy: 0.4944, Reg: 0.2086
+Epoch 11: 59904/60000 (100%), Loss: 0.7061, Entropy: 0.4946, Reg: 0.2115
+Epoch: 11, Loss: 0.705943, Accuracy: 82.33%
+Epoch training time (s): 64.67363667488098
+Defense: isometry
+Epoch 12: 0/60000 (0%), Loss: 0.5264, Entropy: 0.4313, Reg: 0.0951
+Epoch 12: 14976/60000 (25%), Loss: 0.6866, Entropy: 0.4833, Reg: 0.2033
+Epoch 12: 29952/60000 (50%), Loss: 0.6994, Entropy: 0.4884, Reg: 0.2110
+Epoch 12: 44928/60000 (75%), Loss: 0.7031, Entropy: 0.4852, Reg: 0.2179
+Epoch 12: 59904/60000 (100%), Loss: 0.7088, Entropy: 0.4857, Reg: 0.2231
+Epoch: 12, Loss: 0.708607, Accuracy: 82.57%
+Epoch training time (s): 66.88367938995361
+Defense: isometry
+Epoch 13: 0/60000 (0%), Loss: 0.5265, Entropy: 0.4279, Reg: 0.0987
+Epoch 13: 14976/60000 (25%), Loss: 0.7076, Entropy: 0.4772, Reg: 0.2305
+Epoch 13: 29952/60000 (50%), Loss: 0.7161, Entropy: 0.4818, Reg: 0.2342
+Epoch 13: 44928/60000 (75%), Loss: 0.7129, Entropy: 0.4784, Reg: 0.2345
+Epoch 13: 59904/60000 (100%), Loss: 0.7183, Entropy: 0.4788, Reg: 0.2395
+Epoch: 13, Loss: 0.718157, Accuracy: 82.79%
+Epoch training time (s): 67.24732804298401
+Defense: isometry
+Epoch 14: 0/60000 (0%), Loss: 0.5262, Entropy: 0.4265, Reg: 0.0997
+Epoch 14: 14976/60000 (25%), Loss: 0.7018, Entropy: 0.4696, Reg: 0.2322
+Epoch 14: 29952/60000 (50%), Loss: 0.7103, Entropy: 0.4744, Reg: 0.2359
+Epoch 14: 44928/60000 (75%), Loss: 0.7138, Entropy: 0.4714, Reg: 0.2424
+Epoch 14: 59904/60000 (100%), Loss: 0.7224, Entropy: 0.4722, Reg: 0.2502
+Epoch: 14, Loss: 0.722227, Accuracy: 83.09%
+Epoch training time (s): 68.98022556304932
+Defense: isometry
+Epoch 15: 0/60000 (0%), Loss: 0.5091, Entropy: 0.4159, Reg: 0.0932
+Epoch 15: 14976/60000 (25%), Loss: 0.7153, Entropy: 0.4645, Reg: 0.2508
+Epoch 15: 29952/60000 (50%), Loss: 0.7211, Entropy: 0.4698, Reg: 0.2513
+Epoch 15: 44928/60000 (75%), Loss: 0.7167, Entropy: 0.4663, Reg: 0.2504
+Epoch 15: 59904/60000 (100%), Loss: 0.7252, Entropy: 0.4669, Reg: 0.2583
+Epoch: 15, Loss: 0.725030, Accuracy: 83.31%
+Epoch training time (s): 65.99156904220581
+Defense: isometry
+Epoch 16: 0/60000 (0%), Loss: 0.4946, Entropy: 0.4095, Reg: 0.0852
+Epoch 16: 14976/60000 (25%), Loss: 0.7089, Entropy: 0.4587, Reg: 0.2502
+Epoch 16: 29952/60000 (50%), Loss: 0.7307, Entropy: 0.4648, Reg: 0.2658
+Epoch 16: 44928/60000 (75%), Loss: 0.7304, Entropy: 0.4617, Reg: 0.2687
+Epoch 16: 59904/60000 (100%), Loss: 0.7410, Entropy: 0.4626, Reg: 0.2784
+Epoch: 16, Loss: 0.740811, Accuracy: 83.52%
+Epoch training time (s): 65.49679946899414
+Defense: isometry
+Epoch 17: 0/60000 (0%), Loss: 0.4942, Entropy: 0.3945, Reg: 0.0997
+Epoch 17: 14976/60000 (25%), Loss: 0.7241, Entropy: 0.4551, Reg: 0.2690
+Epoch 17: 29952/60000 (50%), Loss: 0.7468, Entropy: 0.4607, Reg: 0.2861
+Epoch 17: 44928/60000 (75%), Loss: 0.7477, Entropy: 0.4578, Reg: 0.2899
+Epoch 17: 59904/60000 (100%), Loss: 0.7507, Entropy: 0.4582, Reg: 0.2925
+Epoch: 17, Loss: 0.750520, Accuracy: 83.24%
+Epoch training time (s): 65.03500533103943
+Defense: isometry
+Epoch 18: 0/60000 (0%), Loss: 0.4725, Entropy: 0.3788, Reg: 0.0937
+Epoch 18: 14976/60000 (25%), Loss: 0.7279, Entropy: 0.4504, Reg: 0.2776
+Epoch 18: 29952/60000 (50%), Loss: 0.7451, Entropy: 0.4556, Reg: 0.2894
+Epoch 18: 44928/60000 (75%), Loss: 0.7477, Entropy: 0.4532, Reg: 0.2946
+Epoch 18: 59904/60000 (100%), Loss: 0.7534, Entropy: 0.4538, Reg: 0.2997
+Epoch: 18, Loss: 0.753222, Accuracy: 82.98%
+Epoch training time (s): 67.14308071136475
+Defense: isometry
+Epoch 19: 0/60000 (0%), Loss: 0.4742, Entropy: 0.3806, Reg: 0.0937
+Epoch 19: 14976/60000 (25%), Loss: 0.7627, Entropy: 0.4496, Reg: 0.3131
+Epoch 19: 29952/60000 (50%), Loss: 0.7777, Entropy: 0.4536, Reg: 0.3242
+Epoch 19: 44928/60000 (75%), Loss: 0.7636, Entropy: 0.4492, Reg: 0.3144
+Epoch 19: 59904/60000 (100%), Loss: 0.7624, Entropy: 0.4491, Reg: 0.3133
+Epoch: 19, Loss: 0.762186, Accuracy: 82.94%
+Epoch training time (s): 65.74597525596619
+Defense: isometry
+Epoch 20: 0/60000 (0%), Loss: 0.4579, Entropy: 0.3714, Reg: 0.0865
+Epoch 20: 14976/60000 (25%), Loss: 0.7515, Entropy: 0.4452, Reg: 0.3063
+Epoch 20: 29952/60000 (50%), Loss: 0.7575, Entropy: 0.4470, Reg: 0.3105
+Epoch 20: 44928/60000 (75%), Loss: 0.7591, Entropy: 0.4444, Reg: 0.3146
+Epoch 20: 59904/60000 (100%), Loss: 0.7623, Entropy: 0.4445, Reg: 0.3177
+Epoch: 20, Loss: 0.762014, Accuracy: 83.03%
+Epoch training time (s): 65.5759916305542
+Defense: isometry
+Epoch 21: 0/60000 (0%), Loss: 0.4582, Entropy: 0.3727, Reg: 0.0855
+Epoch 21: 14976/60000 (25%), Loss: 0.7549, Entropy: 0.4398, Reg: 0.3151
+Epoch 21: 29952/60000 (50%), Loss: 0.7692, Entropy: 0.4420, Reg: 0.3272
+Epoch 21: 44928/60000 (75%), Loss: 0.7668, Entropy: 0.4392, Reg: 0.3276
+Epoch 21: 59904/60000 (100%), Loss: 0.7674, Entropy: 0.4394, Reg: 0.3280
+Epoch: 21, Loss: 0.767218, Accuracy: 83.38%
+Epoch training time (s): 65.76855564117432
+Defense: isometry
+Epoch 22: 0/60000 (0%), Loss: 0.4407, Entropy: 0.3509, Reg: 0.0898
+Epoch 22: 14976/60000 (25%), Loss: 0.7421, Entropy: 0.4354, Reg: 0.3067
+Epoch 22: 29952/60000 (50%), Loss: 0.7813, Entropy: 0.4397, Reg: 0.3416
+Epoch 22: 44928/60000 (75%), Loss: 0.7845, Entropy: 0.4374, Reg: 0.3471
+Epoch 22: 59904/60000 (100%), Loss: 0.7744, Entropy: 0.4368, Reg: 0.3377
+Epoch: 22, Loss: 0.774176, Accuracy: 83.45%
+Epoch training time (s): 65.87446403503418
+Defense: isometry
+Epoch 23: 0/60000 (0%), Loss: 0.4272, Entropy: 0.3526, Reg: 0.0746
+Epoch 23: 14976/60000 (25%), Loss: 0.7673, Entropy: 0.4318, Reg: 0.3355
+Epoch 23: 29952/60000 (50%), Loss: 0.7884, Entropy: 0.4348, Reg: 0.3536
+Epoch 23: 44928/60000 (75%), Loss: 0.7798, Entropy: 0.4322, Reg: 0.3476
+Epoch 23: 59904/60000 (100%), Loss: 0.7748, Entropy: 0.4325, Reg: 0.3423
+Epoch: 23, Loss: 0.774551, Accuracy: 83.84%
+Epoch training time (s): 65.87542390823364
+Defense: isometry
+Epoch 24: 0/60000 (0%), Loss: 0.4302, Entropy: 0.3494, Reg: 0.0807
+Epoch 24: 14976/60000 (25%), Loss: 0.7587, Entropy: 0.4250, Reg: 0.3337
+Epoch 24: 29952/60000 (50%), Loss: 0.8122, Entropy: 0.4334, Reg: 0.3788
+Epoch 24: 44928/60000 (75%), Loss: 0.7825, Entropy: 0.4282, Reg: 0.3542
+Epoch 24: 59904/60000 (100%), Loss: 0.7669, Entropy: 0.4274, Reg: 0.3395
+Epoch: 24, Loss: 0.766673, Accuracy: 84.88%
+Epoch training time (s): 65.41503930091858
+Defense: isometry
+Epoch 25: 0/60000 (0%), Loss: 0.4490, Entropy: 0.3361, Reg: 0.1128
+Epoch 25: 14976/60000 (25%), Loss: 0.7190, Entropy: 0.4171, Reg: 0.3019
+Epoch 25: 29952/60000 (50%), Loss: 0.7907, Entropy: 0.4253, Reg: 0.3653
+Epoch 25: 44928/60000 (75%), Loss: 0.7677, Entropy: 0.4215, Reg: 0.3462
+Epoch 25: 59904/60000 (100%), Loss: 0.7726, Entropy: 0.4220, Reg: 0.3507
+Epoch: 25, Loss: 0.772437, Accuracy: 84.25%
+Epoch training time (s): 65.7467589378357
+Defense: isometry
+Epoch 26: 0/60000 (0%), Loss: 0.4213, Entropy: 0.3174, Reg: 0.1039
+Epoch 26: 14976/60000 (25%), Loss: 0.7886, Entropy: 0.4177, Reg: 0.3709
+Epoch 26: 29952/60000 (50%), Loss: 0.8415, Entropy: 0.4238, Reg: 0.4177
+Epoch 26: 44928/60000 (75%), Loss: 0.8311, Entropy: 0.4216, Reg: 0.4095
+Epoch 26: 59904/60000 (100%), Loss: 0.8209, Entropy: 0.4209, Reg: 0.4000
+Epoch: 26, Loss: 0.820564, Accuracy: 84.69%
+Epoch training time (s): 65.44524836540222
+Defense: isometry
+Epoch 27: 0/60000 (0%), Loss: 0.4080, Entropy: 0.3343, Reg: 0.0737
+Epoch 27: 14976/60000 (25%), Loss: 0.7695, Entropy: 0.4114, Reg: 0.3581
+Epoch 27: 29952/60000 (50%), Loss: 0.8431, Entropy: 0.4203, Reg: 0.4227
+Epoch 27: 44928/60000 (75%), Loss: 0.8227, Entropy: 0.4167, Reg: 0.4059
+Epoch 27: 59904/60000 (100%), Loss: 0.8148, Entropy: 0.4164, Reg: 0.3984
+Epoch: 27, Loss: 0.814420, Accuracy: 85.01%
+Epoch training time (s): 66.14331865310669
+Defense: isometry
+Epoch 28: 0/60000 (0%), Loss: 0.3943, Entropy: 0.3238, Reg: 0.0705
+Epoch 28: 14976/60000 (25%), Loss: 0.7965, Entropy: 0.4102, Reg: 0.3863
+Epoch 28: 29952/60000 (50%), Loss: 0.8577, Entropy: 0.4180, Reg: 0.4397
+Epoch 28: 44928/60000 (75%), Loss: 0.8434, Entropy: 0.4141, Reg: 0.4293
+Epoch 28: 59904/60000 (100%), Loss: 0.8232, Entropy: 0.4137, Reg: 0.4095
+Epoch: 28, Loss: 0.822901, Accuracy: 84.98%
+Epoch training time (s): 65.74607586860657
+Defense: isometry
+Epoch 29: 0/60000 (0%), Loss: 0.4011, Entropy: 0.3229, Reg: 0.0782
+Epoch 29: 14976/60000 (25%), Loss: 0.8062, Entropy: 0.4084, Reg: 0.3978
+Epoch 29: 29952/60000 (50%), Loss: 0.9037, Entropy: 0.4173, Reg: 0.4864
+Epoch 29: 44928/60000 (75%), Loss: 0.8806, Entropy: 0.4143, Reg: 0.4663
+Epoch 29: 59904/60000 (100%), Loss: 0.8710, Entropy: 0.4141, Reg: 0.4569
+Epoch: 29, Loss: 0.870577, Accuracy: 85.70%
+Epoch training time (s): 65.52074956893921
+Defense: isometry
+Epoch 30: 0/60000 (0%), Loss: 0.4007, Entropy: 0.3163, Reg: 0.0843
+Epoch 30: 14976/60000 (25%), Loss: 0.8453, Entropy: 0.4046, Reg: 0.4407
+Epoch 30: 29952/60000 (50%), Loss: 0.8785, Entropy: 0.4110, Reg: 0.4675
+Epoch 30: 44928/60000 (75%), Loss: 0.8555, Entropy: 0.4077, Reg: 0.4478
+Epoch 30: 59904/60000 (100%), Loss: 0.8637, Entropy: 0.4094, Reg: 0.4543
+Epoch: 30, Loss: 0.863398, Accuracy: 85.33%
+Epoch training time (s): 65.58882522583008
+Defense: isometry
+Epoch 31: 0/60000 (0%), Loss: 0.3860, Entropy: 0.3192, Reg: 0.0668
+Epoch 31: 14976/60000 (25%), Loss: 0.8324, Entropy: 0.4009, Reg: 0.4315
+Epoch 31: 29952/60000 (50%), Loss: 0.9181, Entropy: 0.4086, Reg: 0.5095
+Epoch 31: 44928/60000 (75%), Loss: 0.8973, Entropy: 0.4066, Reg: 0.4906
+Epoch 31: 59904/60000 (100%), Loss: 0.9016, Entropy: 0.4083, Reg: 0.4933
+Epoch: 31, Loss: 0.901223, Accuracy: 84.83%
+Epoch training time (s): 65.6242322921753
+Defense: isometry
+Epoch 32: 0/60000 (0%), Loss: 0.3845, Entropy: 0.3115, Reg: 0.0729
+Epoch 32: 14976/60000 (25%), Loss: 0.8427, Entropy: 0.4004, Reg: 0.4423
+Epoch 32: 29952/60000 (50%), Loss: 0.9518, Entropy: 0.4090, Reg: 0.5427
+Epoch 32: 44928/60000 (75%), Loss: 0.9211, Entropy: 0.4065, Reg: 0.5146
+Epoch 32: 59904/60000 (100%), Loss: 0.9523, Entropy: 0.4096, Reg: 0.5427
+Epoch: 32, Loss: 0.951863, Accuracy: 84.37%
+Epoch training time (s): 65.40231847763062
+Defense: isometry
+Epoch 33: 0/60000 (0%), Loss: 0.3837, Entropy: 0.3028, Reg: 0.0808
+Epoch 33: 14976/60000 (25%), Loss: 0.8979, Entropy: 0.4058, Reg: 0.4921
+Epoch 33: 29952/60000 (50%), Loss: 1.0797, Entropy: 0.4223, Reg: 0.6575
+Epoch 33: 44928/60000 (75%), Loss: 1.0695, Entropy: 0.4205, Reg: 0.6490
+Epoch 33: 59904/60000 (100%), Loss: 1.0959, Entropy: 0.4221, Reg: 0.6738
+Epoch: 33, Loss: 1.095293, Accuracy: 84.11%
+Epoch training time (s): 65.706307888031
+Defense: isometry
+Epoch 34: 0/60000 (0%), Loss: 0.3863, Entropy: 0.3150, Reg: 0.0712
+Epoch 34: 14976/60000 (25%), Loss: 1.3341, Entropy: 0.4360, Reg: 0.8981
+Epoch 34: 29952/60000 (50%), Loss: 1.4171, Entropy: 0.4422, Reg: 0.9749
+Epoch 34: 44928/60000 (75%), Loss: 1.5508, Entropy: 0.4636, Reg: 1.0872
+Epoch 34: 59904/60000 (100%), Loss: 1.9471, Entropy: 0.5357, Reg: 1.4114
+Epoch: 34, Loss: 1.952673, Accuracy: 73.12%
+Epoch training time (s): 65.66708040237427
+Defense: isometry
+Epoch 35: 0/60000 (0%), Loss: 5.3400, Entropy: 0.9838, Reg: 4.3562
+Epoch 35: 14976/60000 (25%), Loss: 3.9046, Entropy: 0.9906, Reg: 2.9140
+Epoch 35: 29952/60000 (50%), Loss: 3.4536, Entropy: 0.9795, Reg: 2.4741
+Epoch 35: 44928/60000 (75%), Loss: 3.0403, Entropy: 0.9525, Reg: 2.0878
+Epoch 35: 59904/60000 (100%), Loss: 2.7801, Entropy: 0.9345, Reg: 1.8456
+Epoch: 35, Loss: 2.778636, Accuracy: 68.06%
+Epoch training time (s): 65.74033451080322
+Defense: isometry
+Epoch 36: 0/60000 (0%), Loss: 2.1971, Entropy: 0.8882, Reg: 1.3089
+Epoch 36: 14976/60000 (25%), Loss: 1.7878, Entropy: 0.8355, Reg: 0.9522
+Epoch 36: 29952/60000 (50%), Loss: 1.7676, Entropy: 0.8387, Reg: 0.9289
+Epoch 36: 44928/60000 (75%), Loss: 1.7645, Entropy: 0.8341, Reg: 0.9305
+Epoch 36: 59904/60000 (100%), Loss: 1.7355, Entropy: 0.8316, Reg: 0.9040
+Epoch: 36, Loss: 1.734935, Accuracy: 68.17%
+Epoch training time (s): 65.66875433921814
+Defense: isometry
+Epoch 37: 0/60000 (0%), Loss: 1.6680, Entropy: 0.8043, Reg: 0.8637
+Epoch 37: 14976/60000 (25%), Loss: 1.5705, Entropy: 0.8019, Reg: 0.7686
+Epoch 37: 29952/60000 (50%), Loss: 1.5645, Entropy: 0.8031, Reg: 0.7614
+Epoch 37: 44928/60000 (75%), Loss: 1.5620, Entropy: 0.7954, Reg: 0.7666
+Epoch 37: 59904/60000 (100%), Loss: 1.5615, Entropy: 0.7965, Reg: 0.7650
+Epoch: 37, Loss: 1.561001, Accuracy: 68.52%
+Epoch training time (s): 65.6164653301239
+Defense: isometry
+Epoch 38: 0/60000 (0%), Loss: 1.5880, Entropy: 0.7734, Reg: 0.8146
+Epoch 38: 14976/60000 (25%), Loss: 1.5378, Entropy: 0.8032, Reg: 0.7346
+Epoch 38: 29952/60000 (50%), Loss: 1.5216, Entropy: 0.8057, Reg: 0.7160
+Epoch 38: 44928/60000 (75%), Loss: 1.5091, Entropy: 0.7997, Reg: 0.7094
+Epoch 38: 59904/60000 (100%), Loss: 1.4981, Entropy: 0.7975, Reg: 0.7006
+Epoch: 38, Loss: 1.497633, Accuracy: 68.78%
+Epoch training time (s): 65.49106693267822
+Defense: isometry
+Epoch 39: 0/60000 (0%), Loss: 1.4744, Entropy: 0.7562, Reg: 0.7182
+Epoch 39: 14976/60000 (25%), Loss: 1.4361, Entropy: 0.7737, Reg: 0.6624
+Epoch 39: 29952/60000 (50%), Loss: 1.4469, Entropy: 0.7771, Reg: 0.6698
+Epoch 39: 44928/60000 (75%), Loss: 1.4469, Entropy: 0.7669, Reg: 0.6800
+Epoch 39: 59904/60000 (100%), Loss: 1.4531, Entropy: 0.7662, Reg: 0.6869
+Epoch: 39, Loss: 1.452598, Accuracy: 70.10%
+Epoch training time (s): 65.50060486793518
+Defense: isometry
+Epoch 40: 0/60000 (0%), Loss: 1.3120, Entropy: 0.6955, Reg: 0.6165
+Epoch 40: 14976/60000 (25%), Loss: 1.3849, Entropy: 0.7397, Reg: 0.6452
+Epoch 40: 29952/60000 (50%), Loss: 1.4067, Entropy: 0.7407, Reg: 0.6659
+Epoch 40: 44928/60000 (75%), Loss: 1.4065, Entropy: 0.7382, Reg: 0.6684
+Epoch 40: 59904/60000 (100%), Loss: 1.4104, Entropy: 0.7395, Reg: 0.6709
+Epoch: 40, Loss: 1.410034, Accuracy: 70.73%
+Epoch training time (s): 65.5963568687439
+Defense: isometry
+Epoch 41: 0/60000 (0%), Loss: 1.4091, Entropy: 0.7012, Reg: 0.7079
+Epoch 41: 14976/60000 (25%), Loss: 1.3533, Entropy: 0.7124, Reg: 0.6409
+Epoch 41: 29952/60000 (50%), Loss: 1.3891, Entropy: 0.7028, Reg: 0.6863
+Epoch 41: 44928/60000 (75%), Loss: 1.3991, Entropy: 0.6966, Reg: 0.7025
+Epoch 41: 59904/60000 (100%), Loss: 1.4116, Entropy: 0.6919, Reg: 0.7197
+Epoch: 41, Loss: 1.411375, Accuracy: 71.68%
+Epoch training time (s): 66.00144815444946
+Defense: isometry
+Epoch 42: 0/60000 (0%), Loss: 1.3240, Entropy: 0.6298, Reg: 0.6941
+Epoch 42: 14976/60000 (25%), Loss: 1.4280, Entropy: 0.6595, Reg: 0.7686
+Epoch 42: 29952/60000 (50%), Loss: 1.4705, Entropy: 0.6705, Reg: 0.8000
+Epoch 42: 44928/60000 (75%), Loss: 1.4716, Entropy: 0.6687, Reg: 0.8029
+Epoch 42: 59904/60000 (100%), Loss: 1.4790, Entropy: 0.6690, Reg: 0.8100
+Epoch: 42, Loss: 1.478684, Accuracy: 74.50%
+Epoch training time (s): 65.73412990570068
+Defense: isometry
+Epoch 43: 0/60000 (0%), Loss: 1.3455, Entropy: 0.5794, Reg: 0.7661
+Epoch 43: 14976/60000 (25%), Loss: 1.4300, Entropy: 0.6483, Reg: 0.7817
+Epoch 43: 29952/60000 (50%), Loss: 1.5079, Entropy: 0.6725, Reg: 0.8354
+Epoch 43: 44928/60000 (75%), Loss: 1.4871, Entropy: 0.6725, Reg: 0.8146
+Epoch 43: 59904/60000 (100%), Loss: 1.4750, Entropy: 0.6723, Reg: 0.8027
+Epoch: 43, Loss: 1.474561, Accuracy: 73.32%
+Epoch training time (s): 65.38317465782166
+Defense: isometry
+Epoch 44: 0/60000 (0%), Loss: 1.3042, Entropy: 0.5900, Reg: 0.7142
+Epoch 44: 14976/60000 (25%), Loss: 1.4313, Entropy: 0.6591, Reg: 0.7721
+Epoch 44: 29952/60000 (50%), Loss: 1.4548, Entropy: 0.6681, Reg: 0.7867
+Epoch 44: 44928/60000 (75%), Loss: 1.4328, Entropy: 0.6606, Reg: 0.7722
+Epoch 44: 59904/60000 (100%), Loss: 1.4390, Entropy: 0.6607, Reg: 0.7783
+Epoch: 44, Loss: 1.438510, Accuracy: 74.16%
+Epoch training time (s): 66.01490044593811
+Defense: isometry
+Epoch 45: 0/60000 (0%), Loss: 1.4027, Entropy: 0.6147, Reg: 0.7880
+Epoch 45: 14976/60000 (25%), Loss: 1.3824, Entropy: 0.6308, Reg: 0.7516
+Epoch 45: 29952/60000 (50%), Loss: 1.3962, Entropy: 0.6399, Reg: 0.7563
+Epoch 45: 44928/60000 (75%), Loss: 1.4007, Entropy: 0.6349, Reg: 0.7658
+Epoch 45: 59904/60000 (100%), Loss: 1.3904, Entropy: 0.6333, Reg: 0.7571
+Epoch: 45, Loss: 1.390129, Accuracy: 76.27%
+Epoch training time (s): 65.82427954673767
+Defense: isometry
+Epoch 46: 0/60000 (0%), Loss: 1.1138, Entropy: 0.5309, Reg: 0.5829
+Epoch 46: 14976/60000 (25%), Loss: 1.2711, Entropy: 0.5910, Reg: 0.6801
+Epoch 46: 29952/60000 (50%), Loss: 1.2795, Entropy: 0.5897, Reg: 0.6898
+Epoch 46: 44928/60000 (75%), Loss: 1.2666, Entropy: 0.5740, Reg: 0.6925
+Epoch 46: 59904/60000 (100%), Loss: 1.2612, Entropy: 0.5668, Reg: 0.6943
+Epoch: 46, Loss: 1.260831, Accuracy: 80.88%
+Epoch training time (s): 65.27142763137817
+Defense: isometry
+Epoch 47: 0/60000 (0%), Loss: 0.8990, Entropy: 0.3827, Reg: 0.5163
+Epoch 47: 14976/60000 (25%), Loss: 1.1701, Entropy: 0.5135, Reg: 0.6566
+Epoch 47: 29952/60000 (50%), Loss: 1.1561, Entropy: 0.5050, Reg: 0.6511
+Epoch 47: 44928/60000 (75%), Loss: 1.1486, Entropy: 0.4978, Reg: 0.6508
+Epoch 47: 59904/60000 (100%), Loss: 1.1657, Entropy: 0.5052, Reg: 0.6605
+Epoch: 47, Loss: 1.165448, Accuracy: 81.19%
+Epoch training time (s): 66.21289229393005
+Defense: isometry
+Epoch 48: 0/60000 (0%), Loss: 0.6775, Entropy: 0.3416, Reg: 0.3359
+Epoch 48: 14976/60000 (25%), Loss: 1.1241, Entropy: 0.5014, Reg: 0.6227
+Epoch 48: 29952/60000 (50%), Loss: 1.1123, Entropy: 0.4983, Reg: 0.6140
+Epoch 48: 44928/60000 (75%), Loss: 1.0951, Entropy: 0.4926, Reg: 0.6025
+Epoch 48: 59904/60000 (100%), Loss: 1.1055, Entropy: 0.4950, Reg: 0.6105
+Epoch: 48, Loss: 1.105284, Accuracy: 81.79%
+Epoch training time (s): 65.62208437919617
+Defense: isometry
+Epoch 49: 0/60000 (0%), Loss: 0.5332, Entropy: 0.2892, Reg: 0.2440
+Epoch 49: 14976/60000 (25%), Loss: 1.0855, Entropy: 0.4941, Reg: 0.5914
+Epoch 49: 29952/60000 (50%), Loss: 1.0902, Entropy: 0.4901, Reg: 0.6001
+Epoch 49: 44928/60000 (75%), Loss: 1.0739, Entropy: 0.4801, Reg: 0.5939
+Epoch 49: 59904/60000 (100%), Loss: 1.0784, Entropy: 0.4818, Reg: 0.5967
+Epoch: 49, Loss: 1.078351, Accuracy: 82.19%
+Epoch training time (s): 66.34948396682739
+Defense: isometry
+Epoch 50: 0/60000 (0%), Loss: 0.4963, Entropy: 0.2876, Reg: 0.2087
+Epoch 50: 14976/60000 (25%), Loss: 1.0725, Entropy: 0.4775, Reg: 0.5950
+Epoch 50: 29952/60000 (50%), Loss: 1.0695, Entropy: 0.4765, Reg: 0.5930
+Epoch 50: 44928/60000 (75%), Loss: 1.0574, Entropy: 0.4703, Reg: 0.5871
+Epoch 50: 59904/60000 (100%), Loss: 1.0528, Entropy: 0.4714, Reg: 0.5814
+Epoch: 50, Loss: 1.052829, Accuracy: 82.56%
+Epoch training time (s): 65.45704579353333
+Defense: isometry
+Epoch 51: 0/60000 (0%), Loss: 0.4410, Entropy: 0.2798, Reg: 0.1612
+Epoch 51: 14976/60000 (25%), Loss: 1.0227, Entropy: 0.4650, Reg: 0.5577
+Epoch 51: 29952/60000 (50%), Loss: 1.0201, Entropy: 0.4602, Reg: 0.5600
+Epoch 51: 44928/60000 (75%), Loss: 1.0234, Entropy: 0.4529, Reg: 0.5705
+Epoch 51: 59904/60000 (100%), Loss: 1.0359, Entropy: 0.4564, Reg: 0.5795
+Epoch: 51, Loss: 1.036166, Accuracy: 82.87%
+Epoch training time (s): 65.77042770385742
+Training time (s): 3304.421677350998
+-----------------------------------------------------------------------------------------------------
+Test
+name: fashion_lenet_isoreg/seed_4
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 4
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.01568627450980392
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 7465.0/10000 (74.65%)
+name: fashion_lenet_isoreg/seed_4
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 4
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.03137254901960784
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 6453.0/10000 (64.53%)
+name: fashion_lenet_isoreg/seed_4
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 4
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.06274509803921569
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 4788.0/10000 (47.88%)
+name: fashion_lenet_isoreg/seed_4
+model: epoch_51.pt
+dataset: fashion
+defense: isometry
+seed: 4
+gpu_number: 3
+load: True
+archi: lenet
+channels1: 32
+channels2: 64
+hidden: 128
+batch_size: 32
+learning_rate: 0.001
+epochs: 51
+epoch_thr: 2
+generate: False
+clean: False
+beta: 0.0001
+epsilon: 3.5
+lambda: 3
+norm: holder
+dist_temp: 20
+teacher: teacher.pt
+save_plot: True
+attack: pgd
+budget: 0.12549019607843137
+perturbation: linf
+alpha: 0.01
+max_iter: 10
+random_start: True
+Test: 0/10000 (0%)
+Test: 2496/10000 (25%)
+Test: 4992/10000 (50%)
+Test: 7488/10000 (75%)
+Test: 4992/10000 (100%)
+Accuracy: 3455.0/10000 (34.55%)

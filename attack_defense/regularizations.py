@@ -238,7 +238,7 @@ class EigenBound(nn.Module):
 
         # Compute regularization term
         jac_id = jac - identity
-        reg = jac_id.diagonal(dim1=-1, dim2=-2).sum(-1)
+        reg = F.relu(jac_id.diagonal(dim1=-1, dim2=-2).sum(-1))
 
         # Return
         return reg.mean()/m

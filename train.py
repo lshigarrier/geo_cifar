@@ -51,18 +51,14 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
         elif param['defense'] == 'isometry'\
                 or param['defense'] == 'isorandom'\
                 or param['defense'] == 'isonoback'\
-                or param['defense'] == 'isolayer'\
-                or param['defense'] == 'isogn':
-            reg  = reg_model(x, logits, device)
-            loss = entropy + param['lambda']*reg
-
-        elif param['defense'] == 'eigenbound':
+                or param['defense'] == 'isogn'\
+                or param['defense'] == 'eigenbound':
             reg  = reg_model(x, logits, device)
             loss = entropy + param['lambda']*reg
 
         elif param['defense'] == 'jacreg':
             reg  = reg_model(x, logits, device)
-            loss = entropy + param['lambda']*reg
+            loss = (1 - param['lambda'])*entropy + param['lambda']*reg
 
         elif param['defense'] == 'temperature':
             temp       = reg_model(x, logits, device).detach()  # or not detach()
@@ -76,12 +72,15 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             reg   = torch.sum(1/probs, dim=1).mean()
             loss  = entropy + param['lambda']*reg
 
-        elif param['defense'] == 'isoapprox':
+        elif param['defense'] == 'isoapprox' or param['defense'] == 'isolayer':
             # loss = entropy + param['lambda']*isometry_reg_approx(model, device, x.shape[1:])
             raise NotImplementedError
 
-        else:
+        elif param['defense'] is None:
             loss = entropy
+
+        else:
+            raise NotImplementedError
 
         # Store cross entropy and regularization values
         entropy_val.append(entropy.item())
@@ -135,9 +134,8 @@ def training(param, device, trainset, testset, model, reg_model, teacher, attack
         entropy_list += entropy_val
         reg_list += reg_val
         print(f'Epoch training time (s): {time.time() - tic}')
-        checkpoint = {'state_dict': model.state_dict(),
-                      'optimizer': optimizer.state_dict()}
-        torch.save(checkpoint, f'models/{param["name"]}/epoch_{epoch:02d}.pt')
+    checkpoint = {'state_dict': model.state_dict(), 'optimizer': optimizer.state_dict()}
+    torch.save(checkpoint, f'models/{param["name"]}/epoch_{param["epochs"]:02d}.pt')
     print(f'Training time (s): {time.time() - tac}')
     return entropy_list, reg_list
 
@@ -223,28 +221,28 @@ def main():
     torch.autograd.set_detect_anomaly(True)
 
     from test import one_test_run
-    param = load_yaml('baseline_cifar')
-    attack_type = param['attack']
-    # attack_budget = param['budget']
-    name = param['name']
+    param         = load_yaml('baseline_cifar')
+    name          = param['name']
+    attack_type   = param['attack']
+    attack_budget = param['budget']
+    start_seed    = param['seed']
+    budgets       = [4 / 255, 8 / 255, 16 / 255, 32 / 255]
 
     # one_run(param)
     # import sys
     # sys.exit(0)
 
-    budgets = [4/255, 8/255, 16/255, 32/255]
-
-    for seed in range(5):
+    for seed in range(start_seed, start_seed+5):
         print('=' * 101)
         param['seed'] = seed
         param['name'] = name + '/seed_' + str(seed)
-        param['attack'] = 'gn'
-        param['budget'] = 16/255
+        param['attack'] = attack_type
+        param['budget'] = attack_budget
         param['load'] = False
         one_run(param)
         print('-' * 101)
         print('Test')
-        param['attack'] = attack_type
+        param['attack'] = 'fgsm' if param['dataset'] == 'cifar' else 'pgd'
         param['load'] = True
         for budget in budgets:
             param['budget'] = budget

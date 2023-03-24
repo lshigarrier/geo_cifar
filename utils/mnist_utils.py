@@ -131,7 +131,8 @@ def initialize_mnist(param, device):
     if param['defense'] == 'distillation':
         # Initalize network class
         teacher_model = Lenet(param).to(device)
-        teacher_model.load_state_dict(torch.load(f'models/{param["name"]}/{param["teacher"]}', map_location='cpu'))
+        checkpoint = torch.load(f'models/{param["name"]}/{param["teacher"]}', map_location='cpu')
+        teacher_model.load_state_dict(checkpoint['state_dict'])
 
         # Make model deterministic and turn off gradient computations
         teacher_model.eval()

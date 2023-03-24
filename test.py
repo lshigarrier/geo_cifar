@@ -226,6 +226,7 @@ def main():
         'pgd'
     ]
     # 'fgsm'
+    # 'pgd'
     # 'deep_fool'
 
     if param['generate']:
