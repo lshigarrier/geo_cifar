@@ -62,7 +62,8 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
 
         elif param['defense'] == 'temperature':
             temp       = reg_model(x, logits, device).detach()  # or not detach()
-            new_logits = temp*F.softmax(logits)
+            # new_logits = temp*logits
+            new_logits = temp*F.softmax(logits, dim=1)
             loss       = F.cross_entropy(new_logits, label)
 
         elif param['defense'] == 'fir':
@@ -107,11 +108,11 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
         tot_corr = 0
         tot_num = 0
         for x, label in testset:
-            x, label = x.to(device), label.to(device)
-            logits = model(x)
-            pred = logits.argmax(dim=1)
+            x, label  = x.to(device), label.to(device)
+            logits    = model(x)
+            pred      = logits.argmax(dim=1)
             tot_corr += torch.eq(pred, label).float().sum().item()
-            tot_num += x.size(0)
+            tot_num  += x.size(0)
         acc = 100 * tot_corr / tot_num
         print('Epoch: {}, Loss: {:.6f}, Accuracy: {:.2f}%'.format(epoch, np.mean(loss_list), acc))
     return entropy_val, reg_val

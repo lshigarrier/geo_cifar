@@ -333,7 +333,7 @@ class AdaptiveTemp(nn.Module):
         jac_norm_holder = torch.sqrt(norm_1 * norm_inf)
 
         # Compute temperature
-        temp = delta.unsqueeze(-1)/(self.epsilon*jac_norm_holder + self.num_stab)
+        temp = delta/(self.epsilon*jac_norm_holder + self.num_stab)
         return temp
 
 

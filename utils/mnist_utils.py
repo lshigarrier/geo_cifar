@@ -1,10 +1,12 @@
 import torch
+import torch.nn as nn
 import torch.optim as optim
 import yaml
 import argparse
 import numpy as np
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
+from torchvision.models import resnet18
 from utils.mnist_model import Lenet
 from attack_defense.parseval import JacSoftmax, JacCoordChange
 from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop
@@ -40,14 +42,25 @@ def load_yaml(file_name=None):
 
 
 def initialize_mnist(param, device):
-    ## Load dataset from torchvision
+    ## Create model and load dataset from torchvision
     # -------------------------------------------------------------- #
+    if param['archi'] == 'lenet':
+        model = Lenet(param)
+        transform = transforms.ToTensor()
+    elif param['archi'] == 'resnet':
+        model = resnet18(weights='DEFAULT')
+        model.fc = nn.Linear(512, 10)
+        transform = transforms.Compose([transforms.Resize((224, 224)),
+                                        transforms.ToTensor(),
+                                        transforms.Lambda(lambda x: x.repeat(3,1,1))])
+    else:
+        raise NotImplementedError
     if param['dataset'] == 'mnist':
-        trainset = datasets.MNIST('./data/mnist', train=True, download=True, transform=transforms.ToTensor())
-        testset  = datasets.MNIST('./data/mnist', train=False, transform=transforms.ToTensor())
+        trainset = datasets.MNIST('./data/mnist', train=True, download=True, transform=transform)
+        testset  = datasets.MNIST('./data/mnist', train=False, transform=transform)
     elif param['dataset'] == 'fashion':
-        trainset = datasets.FashionMNIST('./data/fashion', train=True, download=True, transform=transforms.ToTensor())
-        testset = datasets.FashionMNIST('./data/fashion', train=False, transform=transforms.ToTensor())
+        trainset = datasets.FashionMNIST('./data/fashion', train=True, download=True, transform=transform)
+        testset = datasets.FashionMNIST('./data/fashion', train=False, transform=transform)
     else:
         raise NotImplementedError
 
@@ -64,7 +77,6 @@ def initialize_mnist(param, device):
 
     ## Load model
     # -------------------------------------------------------------- #
-    model = Lenet(param)
     if param['load']:
         checkpoint = torch.load(f'models/{param["name"]}/{param["model"]}', map_location='cpu')
         model.load_state_dict(checkpoint['state_dict'])
