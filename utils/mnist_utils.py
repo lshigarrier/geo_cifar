@@ -4,6 +4,7 @@ import torch.optim as optim
 import yaml
 import argparse
 import numpy as np
+import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 from torchvision.models import resnet18
@@ -39,6 +40,40 @@ def load_yaml(file_name=None):
     with open(yaml_file) as file:
         param = yaml.load(file, Loader=yaml.FullLoader)
     return param
+
+
+def fisher_distance(probs1, probs2):
+    """
+    :param probs1: torch.Tensor (batch size x nb of classes)
+    :param probs2: torch.Tensor (batch size x nb of classes)
+    :return: torch.Tensor (batch size)
+    """
+    dist = (torch.sqrt(probs1)*torch.sqrt(probs2)).sum(-1)
+    return 2 * torch.acos(dist)
+
+
+def softmax_stable(logits, num_stab):
+    c = logits.shape[-1]
+    return F.softmax(logits, dim=1)*(1 - c*num_stab) + num_stab
+
+
+def coord_change(probs):
+    m = probs.shape[-1]
+    new_coord = torch.sqrt(probs)
+    return 2*new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
+
+
+def inv_change(tau):
+    """
+    :param tau: torch.Tensor (batch size x m)
+    :return: torch.Tensor (batch size x (m+1))
+    """
+    m = tau.shape[-1]
+    theta = torch.zeros(tau.shape[0], m+1)
+    tau_2 = torch.linalg.norm(tau/2, dim=1)**2
+    theta[:, m] = ((tau_2 - 1)/(tau_2 + 1))**2
+    theta[:, :m] = (tau/(1 + tau_2.unsqueeze(-1)))**2
+    return theta
 
 
 def initialize_mnist(param, device):

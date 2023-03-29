@@ -21,14 +21,6 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
         optimizer.zero_grad()
         x, label = x.to(device), label.to(device)
 
-        if param['defense'] == 'adv_train' or param['defense'] == 'isogn':
-            # Update attacker
-            attack.model = model
-            attack.set_attacker()
-
-            # Generate attacks
-            x = attack.perturb(x, label)
-
         # Ensure grad is on
         x.requires_grad = True
 
@@ -39,8 +31,21 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
         entropy = F.cross_entropy(logits, label)
         reg     = torch.tensor(0)
 
+        if param['defense'] == 'adv_train' or param['defense'] == 'isogn':
+            # Update attacker
+            attack.model = model
+            attack.set_attacker()
+
+            # Generate attacks
+            x_adv = attack.perturb(x, label)
+            x_adv.require_grad = True
+
+            # Compute loss
+            logits_adv = model(x_adv)
+            loss = (1 - param['lambda'])*entropy + param['lambda']*F.cross_entropy(logits_adv, label)
+
         # Train teacher model for distillation
-        if param['defense'] == 'teacher':
+        elif param['defense'] == 'teacher':
             loss = F.cross_entropy(logits / param['dist_temp'], label)
 
         # Train distilled model
@@ -61,17 +66,15 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             loss = (1 - param['lambda'])*entropy + param['lambda']*reg
 
         elif param['defense'] == 'temperature':
-            temp       = reg_model(x, logits, device).detach()  # or not detach()
-            # new_logits = temp*logits
-            new_logits = temp*F.softmax(logits, dim=1)
-            loss       = F.cross_entropy(new_logits, label)
+            probs = reg_model(x, logits, device, model)
+            loss  = F.nll_loss(torch.log(probs), label)
 
         elif param['defense'] == 'fir':
             # Compute regularization term and cross entropy loss
             c     = logits.shape[1]
             probs = F.softmax(logits, dim=1) * (1 - c * 1e-6) + 1e-6  # for numerical stability
             reg   = torch.sum(1/probs, dim=1).mean()
-            loss  = entropy + param['lambda']*reg
+            loss  = (1 - param['lambda'])*entropy + param['lambda']*reg
 
         elif param['defense'] == 'isoapprox' or param['defense'] == 'isolayer':
             # loss = entropy + param['lambda']*isometry_reg_approx(model, device, x.shape[1:])

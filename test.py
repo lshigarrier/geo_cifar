@@ -200,7 +200,7 @@ def test_loop(param, models, attacks, budgets, budgets_l2):
 
 def auto_attack_loop(param):
     name = param['name']
-    for seed in range(5):
+    for seed in range(param['seed'], param['seed'] + 5):
         print('=' * 101)
         param['seed'] = -seed
         param['name'] = name + '/seed_' + str(seed)

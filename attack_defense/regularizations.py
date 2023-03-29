@@ -2,7 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import timeit
+import random
 from attack_defense.parseval import JacSoftmax, JacCoordChange
+from utils.mnist_utils import fisher_distance, softmax_stable, coord_change, inv_change
 
 
 ###################################### Isometry Regularization & variants ##############################################
@@ -118,7 +120,7 @@ class IsometryRegRandom(nn.Module):
 
 class IsometryRegNoBackprop(nn.Module):
     """
-    Not updated
+    Not maintained
     """
 
     def __init__(self, epsilon, num_stab=1e-7):
@@ -297,44 +299,47 @@ class AdaptiveTemp(nn.Module):
         self.epsilon = epsilon
         self.num_stab = num_stab
 
-    def forward(self, data, logits, device):
-        # Number of classes
+    def forward(self, data, logits, device, model):
+        # Dimensions
+        batch = data.shape[0]
+        d = data.shape[1]*data.shape[2]*data.shape[3]
         c = logits.shape[1]
         m = c - 1
 
         # Numerical stability
-        probs = F.softmax(logits, dim=1)*(1 - c*self.num_stab) + self.num_stab
+        probs = softmax_stable(logits, self.num_stab)
+
+        # Sample m orthogonal directions and compute the vector with largest distance
+        dirs = random.sample(range(d), m)
+        vectors = torch.zeros(batch, c).to(device)
+        distances = torch.zeros(batch).to(device)
+        perturb = torch.zeros(batch, d).to(device)
+        for i in range(m):
+            perturb.zero_()
+            perturb[:, dirs[i]] = 1
+            data_eps = data + self.epsilon*perturb
+            probs_eps = softmax_stable(model(data_eps), self.num_stab)
+            distances = (fisher_distance(probs, probs_eps) > distances)
+            vectors[distances] = (probs_eps - probs)[distances]
 
         # Coordinate change
-        new_coord = torch.sqrt(probs)
-        new_coord = 2 * new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(1).repeat(1, m))
+        new_coord = coord_change(probs)
+        new_vectors = coord_change(vectors)
 
-        # Compute Jacobian matrix
-        jac = torch.zeros(m, *data.shape).to(device)
-        grad_output = torch.zeros(*new_coord.shape).to(device)
-        for i in range(m):
-            grad_output.zero_()
-            grad_output[:, i] = 1
-            jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
-        jac = torch.transpose(jac, dim0=0, dim1=1)
-        jac = jac.contiguous().view(jac.shape[0], m, -1)
-        jac = torch.bmm(jac, torch.transpose(jac, dim0=1, dim1=2))
+        # Estimate largest singular value
+        new_vectors /= (torch.linalg.norm(new_vectors, dim=1).unsqueeze(-1) + self.num_stab)
+        grad = torch.autograd.grad(new_coord, data, grad_outputs=new_vectors, retain_graph=True)[0]
+        grad = grad.contiguous().view(batch, -1)
+        coeff = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1)
+        grad_norm = coeff*torch.linalg.norm(grad, dim=-1)
 
         # Compute delta and coeff
-        delta = torch.sqrt(probs/c + self.num_stab).sum(dim=1)
+        delta = torch.sqrt(probs/c).sum(dim=1)
         delta = 2*torch.acos(delta).unsqueeze(-1)
-        coeff = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1).unsqueeze(-1)
-        jac = coeff*jac
-
-        # Holder inequality
-        abs_jac = torch.abs(jac)
-        norm_1 = torch.max(abs_jac.sum(dim=1, keepdim=True), dim=2)[0]
-        norm_inf = torch.max(abs_jac.sum(dim=2, keepdim=True), dim=1)[0]
-        jac_norm_holder = torch.sqrt(norm_1 * norm_inf)
 
         # Compute temperature
-        temp = delta/(self.epsilon*jac_norm_holder + self.num_stab)
-        return temp
+        temp = delta/(self.epsilon*grad_norm + self.num_stab)
+        return inv_change(temp.detach()*new_coord)
 
 
 ################################ Product of weights matrices (not maintained) ##########################################
