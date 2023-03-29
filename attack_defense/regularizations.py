@@ -4,7 +4,52 @@ import torch.nn.functional as F
 import timeit
 import random
 from attack_defense.parseval import JacSoftmax, JacCoordChange
-from utils.mnist_utils import fisher_distance, softmax_stable, coord_change, inv_change
+
+
+###################################################### Utils ###########################################################
+
+
+def fisher_distance(probs1, probs2):
+    """
+    :param probs1: torch.Tensor (batch size x nb of classes)
+    :param probs2: torch.Tensor (batch size x nb of classes)
+    :return: torch.Tensor (batch size)
+    """
+    dist = (torch.sqrt(probs1)*torch.sqrt(probs2)).sum(-1)
+    return 2 * torch.acos(dist)
+
+
+def softmax_stable(logits, num_stab):
+    c = logits.shape[-1]
+    return F.softmax(logits, dim=1)*(1 - c*num_stab) + num_stab
+
+
+def coord_change(probs):
+    m = probs.shape[-1] - 1
+    new_coord = torch.sqrt(probs)
+    return 2*new_coord[:, :m] / (1 - new_coord[:, m].unsqueeze(-1))
+
+
+def diff_coord_change(probs, tau, device):
+    m    = tau.shape[-1]
+    jac  = torch.eye(m).unsqueeze(0).repeat(tau.shape[0], 1, 1).to(device)
+    jac /= probs[:, :m].unsqueeze(-1)
+    jac -= tau.unsqueeze(-1)/(2*torch.sqrt(probs[:, :m].unsqueeze(-1)*probs[:, m].unsqueeze(-1).unsqueeze(-1)))
+    return tau.unsqueeze(-1)*jac/2
+
+
+def inv_change(tau, device):
+    """
+    :param tau: torch.Tensor (batch size x m)
+    :param device:
+    :return: torch.Tensor (batch size x (m+1))
+    """
+    m = tau.shape[-1]
+    theta = torch.zeros(tau.shape[0], m+1).to(device)
+    tau_2 = torch.linalg.norm(tau/2, dim=1)**2
+    theta[:, m] = ((tau_2 - 1)/(tau_2 + 1))**2
+    theta[:, :m] = (tau/(1 + tau_2.unsqueeze(-1)))**2
+    return theta
 
 
 ###################################### Isometry Regularization & variants ##############################################
@@ -314,32 +359,33 @@ class AdaptiveTemp(nn.Module):
         vectors = torch.zeros(batch, c).to(device)
         distances = torch.zeros(batch).to(device)
         perturb = torch.zeros(batch, d).to(device)
-        for i in range(m):
-            perturb.zero_()
-            perturb[:, dirs[i]] = 1
-            data_eps = data + self.epsilon*perturb
-            probs_eps = softmax_stable(model(data_eps), self.num_stab)
-            distances = (fisher_distance(probs, probs_eps) > distances)
-            vectors[distances] = (probs_eps - probs)[distances]
+        with torch.no_grad():
+            for i in range(m):
+                perturb.zero_()
+                perturb[:, dirs[i]] = 1
+                data_eps = data + self.epsilon*perturb.view_as(data)
+                probs_eps = softmax_stable(model(data_eps), self.num_stab)
+                distances = (fisher_distance(probs, probs_eps) > distances)
+                vectors[distances] = (probs_eps - probs)[distances]
 
         # Coordinate change
         new_coord = coord_change(probs)
-        new_vectors = coord_change(vectors)
+        new_vectors = torch.bmm(diff_coord_change(probs, new_coord, device), vectors[:, :m].unsqueeze(-1)).squeeze()
 
         # Estimate largest singular value
         new_vectors /= (torch.linalg.norm(new_vectors, dim=1).unsqueeze(-1) + self.num_stab)
         grad = torch.autograd.grad(new_coord, data, grad_outputs=new_vectors, retain_graph=True)[0]
         grad = grad.contiguous().view(batch, -1)
-        coeff = ((1 - torch.sqrt(probs[:, m]))**2).unsqueeze(-1)
+        coeff = (1 - torch.sqrt(probs[:, m]))**2
         grad_norm = coeff*torch.linalg.norm(grad, dim=-1)
 
         # Compute delta and coeff
         delta = torch.sqrt(probs/c).sum(dim=1)
-        delta = 2*torch.acos(delta).unsqueeze(-1)
+        delta = 2*torch.acos(delta)
 
         # Compute temperature
-        temp = delta/(self.epsilon*grad_norm + self.num_stab)
-        return inv_change(temp.detach()*new_coord)
+        temp = (delta/(self.epsilon*grad_norm + self.num_stab)).unsqueeze(-1)
+        return inv_change(temp.detach()*new_coord, device)
 
 
 ################################ Product of weights matrices (not maintained) ##########################################
