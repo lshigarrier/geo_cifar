@@ -205,7 +205,7 @@ def cifar_train_loop():
 
 def cifar_trace_plot_loop():
     from test import one_test_run
-    param = load_yaml('train_conf')
+    param = load_yaml('fashion/temp_fashion')
     lambdas = np.linspace(5e-6, 6e-6, 11)
 
     for idx in range(len(lambdas)):

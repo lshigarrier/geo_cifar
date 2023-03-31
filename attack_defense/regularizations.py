@@ -371,11 +371,12 @@ class AdaptiveTemp(nn.Module):
         # Coordinate change
         new_coord = coord_change(probs)
         new_vectors = torch.bmm(diff_coord_change(probs, new_coord, device), vectors[:, :m].unsqueeze(-1)).squeeze()
+        new_vectors = new_vectors.detach()
 
         # Estimate largest singular value
         new_vectors /= (torch.linalg.norm(new_vectors, dim=1).unsqueeze(-1) + self.num_stab)
-        grad = torch.autograd.grad(new_coord, data, grad_outputs=new_vectors, retain_graph=True)[0]
-        grad = grad.contiguous().view(batch, -1)
+        grad = torch.autograd.grad(new_coord, data, grad_outputs=new_vectors, create_graph=True)[0]
+        grad = grad.detach().contiguous().view(batch, -1)
         coeff = (1 - torch.sqrt(probs[:, m]))**2
         grad_norm = coeff*torch.linalg.norm(grad, dim=-1)
 
@@ -385,7 +386,7 @@ class AdaptiveTemp(nn.Module):
 
         # Compute temperature
         temp = (delta/(self.epsilon*grad_norm + self.num_stab)).unsqueeze(-1)
-        return inv_change(temp.detach()*new_coord, device)
+        return inv_change(temp*new_coord, device)
 
 
 ################################ Product of weights matrices (not maintained) ##########################################

@@ -153,8 +153,12 @@ def initialize_mnist(param, device):
         teacher_model = None
 
     # Set optimizer
-    optimizer = optim.SGD(model.parameters(), lr=param['learning_rate'])
-    # optimizer = optim.Adam(model.parameters(), lr=param['learning_rate'])
+    if param['optimizer'] == 'sgd':
+        optimizer = optim.SGD(model.parameters(), lr=param['learning_rate'])
+    elif param['optimizer'] == 'adam':
+        optimizer = optim.Adam(model.parameters(), lr=param['learning_rate'])
+    else:
+        raise NotImplementedError
 
     for key in param:
         print(f'{key}: {param[key]}')

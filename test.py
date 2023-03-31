@@ -211,7 +211,7 @@ def main():
     # Detect anomaly in autograd
     torch.autograd.set_detect_anomaly(True)
 
-    param = load_yaml('generate_cifar')
+    param = load_yaml('cifar/test_cifar')
     models = [
         'baseline'
     ]
