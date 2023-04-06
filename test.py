@@ -7,14 +7,20 @@ from utils.mnist_utils import load_yaml, initialize_mnist
 from autoattack import AutoAttack
 
 
-def test(device, testset, model):
+def test(param, device, testset, model, reg_model):
     with torch.no_grad():
         tot_corr = 0
-        tot_num = 0
+        tot_num  = 0
         for idx, (x, label) in enumerate(testset):
             # Push to device
             x, label = x.to(device), label.to(device)
-            logits = model(x)
+            if param['defense'] == 'randomtemp':
+                with torch.enable_grad():
+                    x.requires_grad = True
+                    logits = model(x)
+                    logits = reg_model(x, logits, device, model)
+            else:
+                logits = model(x)
             pred = logits.argmax(dim=1)
             tot_corr += torch.eq(pred, label).float().sum().item()
             tot_num += x.size(0)
@@ -91,12 +97,12 @@ def one_test_run(param):
         generate_adv(param, device, testset, attack)
     else:
         if param['clean']:
-            test(device, testset, model)
+            test(param, device, testset, model, reg_model)
         else:
             attackset = AttackDataset(param)
             attackset = DataLoader(attackset, batch_size=param['batch_size'],
                                    shuffle=False, pin_memory=True, num_workers=1)
-            test(device, attackset, model)
+            test(param, device, attackset, model, reg_model)
 
 
 def one_auto_attack(param):

@@ -66,6 +66,10 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             loss = (1 - param['lambda'])*entropy + param['lambda']*reg
 
         elif param['defense'] == 'temperature':
+            new_logits= reg_model(x, logits, device)
+            loss  = F.cross_entropy(new_logits, label)
+
+        elif param['defense'] == 'randomtemp':
             probs = reg_model(x, logits, device, model)
             loss  = F.nll_loss(torch.log(probs), label)
 
@@ -80,7 +84,7 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             # loss = entropy + param['lambda']*isometry_reg_approx(model, device, x.shape[1:])
             raise NotImplementedError
 
-        elif param['defense'] is None:
+        elif param['defense'] == 'None':
             loss = entropy
 
         else:
@@ -109,10 +113,16 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
     model.eval()
     with torch.no_grad():
         tot_corr = 0
-        tot_num = 0
+        tot_num  = 0
         for x, label in testset:
-            x, label  = x.to(device), label.to(device)
-            logits    = model(x)
+            x, label = x.to(device), label.to(device)
+            if param['defense'] == 'randomtemp':
+                with torch.enable_grad():
+                    x.requires_grad = True
+                    logits = model(x)
+                    logits = reg_model(x, logits, device, model)
+            else:
+                logits = model(x)
             pred      = logits.argmax(dim=1)
             tot_corr += torch.eq(pred, label).float().sum().item()
             tot_num  += x.size(0)
@@ -125,7 +135,7 @@ def training(param, device, trainset, testset, model, reg_model, teacher, attack
     print(f'Start training')
     tac = time.time()
     defense = param['defense']
-    param['defense'] = None
+    param['defense'] = 'None'
     entropy_list = []
     reg_list = []
     for epoch in range(1, param['epochs'] + 1):

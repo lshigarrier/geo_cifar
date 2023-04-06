@@ -38,10 +38,11 @@ def diff_coord_change(probs, tau, device):
     return tau.unsqueeze(-1)*jac/2
 
 
-def inv_change(tau, device):
+def inv_change(tau, device, num_stab):
     """
     :param tau: torch.Tensor (batch size x m)
     :param device:
+    :param num_stab:
     :return: torch.Tensor (batch size x (m+1))
     """
     m = tau.shape[-1]
@@ -49,7 +50,7 @@ def inv_change(tau, device):
     tau_2 = torch.linalg.norm(tau/2, dim=1)**2
     theta[:, m] = ((tau_2 - 1)/(tau_2 + 1))**2
     theta[:, :m] = (tau/(1 + tau_2.unsqueeze(-1)))**2
-    return theta
+    return theta*(1 - (m+1)*num_stab) + num_stab
 
 
 ###################################### Isometry Regularization & variants ##############################################
@@ -344,6 +345,55 @@ class AdaptiveTemp(nn.Module):
         self.epsilon = epsilon
         self.num_stab = num_stab
 
+    def forward(self, data, logits, device):
+        # Dimensions
+        batch = data.shape[0]
+        # d = data.shape[1]*data.shape[2]*data.shape[3]
+        c = logits.shape[1]
+        m = c - 1
+
+        # Numerical stability
+        probs = softmax_stable(logits, self.num_stab)
+
+        # Coordinate change
+        new_coord = coord_change(probs)
+
+        # Compute Jacobian matrix
+        jac = torch.zeros(m, *data.shape).to(device)
+        grad_output = torch.zeros(*new_coord.shape).to(device)
+        for i in range(m):
+            grad_output.zero_()
+            grad_output[:, i] = 1
+            jac[i] = torch.autograd.grad(new_coord, data, grad_outputs=grad_output, retain_graph=True)[0]
+        jac = torch.transpose(jac, dim0=0, dim1=1)
+        jac = jac.contiguous().view(batch, m, -1)
+        coeff = (1 - torch.sqrt(probs[:, m])).unsqueeze(-1).unsqueeze(-1)
+        jac = coeff*jac
+
+        # Compute delta and coeff
+        delta = torch.sqrt(probs/c).sum(dim=1)
+        delta = 2*torch.acos(delta)
+
+        # Holder inequality
+        abs_jac = torch.abs(jac)
+        norm_1 = torch.max(abs_jac.sum(dim=1, keepdim=True), dim=2)[0]
+        norm_inf = torch.max(abs_jac.sum(dim=2, keepdim=True), dim=1)[0]
+        jac_norm_holder = torch.sqrt(norm_1 * norm_inf).squeeze()
+
+        # Compute temperature
+        temp = (delta/(self.epsilon*jac_norm_holder + self.num_stab)).unsqueeze(-1)
+        # temp = torch.maximum(delta/(self.epsilon*jac_norm_holder + self.num_stab), 4/torch.linalg.norm(new_coord, dim=-1)).unsqueeze(-1)
+        # return inv_change(temp*new_coord, device, self.num_stab)
+        return temp*probs
+
+
+class RandomAdaptiveTemp(nn.Module):
+
+    def __init__(self, epsilon, num_stab=1e-7):
+        super(RandomAdaptiveTemp, self).__init__()
+        self.epsilon = epsilon
+        self.num_stab = num_stab
+
     def forward(self, data, logits, device, model):
         # Dimensions
         batch = data.shape[0]
@@ -385,8 +435,10 @@ class AdaptiveTemp(nn.Module):
         delta = 2*torch.acos(delta)
 
         # Compute temperature
-        temp = (delta/(self.epsilon*grad_norm + self.num_stab)).unsqueeze(-1)
-        return inv_change(temp*new_coord, device)
+        # temp = (delta/(self.epsilon*grad_norm + self.num_stab)).unsqueeze(-1)
+        temp = torch.maximum(delta/(self.epsilon*grad_norm + self.num_stab),
+                             4/torch.linalg.norm(new_coord, dim=-1)).unsqueeze(-1)
+        return inv_change(temp*new_coord, device, self.num_stab)
 
 
 ################################ Product of weights matrices (not maintained) ##########################################

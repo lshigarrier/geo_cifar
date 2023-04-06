@@ -6,7 +6,7 @@ from torchvision.models import densenet121, resnet18
 from torch.utils.data import DataLoader
 from attack_defense.parseval import JacSoftmax, JacCoordChange
 from attack_defense.regularizations import IsometryReg, IsometryRegRandom, IsometryRegNoBackprop
-from attack_defense.regularizations import JacobianReg, EigenBound, RandomBound, AdaptiveTemp
+from attack_defense.regularizations import JacobianReg, EigenBound, RandomBound, AdaptiveTemp, RandomAdaptiveTemp
 from attack_defense.attacks import TorchAttackGaussianNoise, TorchAttackFGSM
 from attack_defense.attacks import TorchAttackPGD, TorchAttackPGDL2, TorchAttackDeepFool, TorchAttackCWL2
 
@@ -71,6 +71,8 @@ def initialize_cifar(param, device):
         reg_model = RandomBound(param['epsilon'])
     elif param['defense'] == 'temperature':
         reg_model = AdaptiveTemp(param['epsilon'])
+    elif param['defense'] == 'randomtemp':
+        reg_model = RandomAdaptiveTemp(param['epsilon'])
 
     # Initialize attack
     attack = None
