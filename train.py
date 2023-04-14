@@ -66,8 +66,9 @@ def train(param, device, trainset, testset, model, reg_model, teacher, attack, o
             loss = (1 - param['lambda'])*entropy + param['lambda']*reg
 
         elif param['defense'] == 'temperature':
-            new_logits= reg_model(x, logits, device)
-            loss  = F.cross_entropy(new_logits, label)
+            new_probs= reg_model(x, logits, device)
+            # loss  = F.cross_entropy(new_logits, label)
+            loss = F.nll_loss(torch.log(new_probs + 1e-6), label)
 
         elif param['defense'] == 'randomtemp':
             probs = reg_model(x, logits, device, model)

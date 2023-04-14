@@ -381,10 +381,13 @@ class AdaptiveTemp(nn.Module):
         jac_norm_holder = torch.sqrt(norm_1 * norm_inf).squeeze()
 
         # Compute temperature
-        temp = (delta/(self.epsilon*jac_norm_holder + self.num_stab)).unsqueeze(-1)
+        temp = torch.minimum((delta**2/(self.epsilon**2*jac_norm_holder**2 + self.num_stab)).unsqueeze(-1),
+                             1/probs[:, :m].max(dim=1, keepdim=True)[0])
         # temp = torch.maximum(delta/(self.epsilon*jac_norm_holder + self.num_stab), 4/torch.linalg.norm(new_coord, dim=-1)).unsqueeze(-1)
         # return inv_change(temp*new_coord, device, self.num_stab)
-        return temp*probs
+        new_probs = temp*probs
+        new_probs[:, m] = 1 - new_probs[:, :m].sum(dim=1)
+        return new_probs
 
 
 class RandomAdaptiveTemp(nn.Module):
