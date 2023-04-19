@@ -27,8 +27,8 @@ def initialize_cifar(param, device):
                                    transforms.Resize((224, 224)),  # original: 32 x 32
                                    transforms.ToTensor()
                                ]))
-    trainset = DataLoader(trainset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
-    testset = DataLoader(testset, batch_size=param['batch_size'], shuffle=False, pin_memory=True, num_workers=1)
+    trainset = DataLoader(trainset, batch_size=param['batch_size'], shuffle=True, pin_memory=True, num_workers=1)
+    testset = DataLoader(testset, batch_size=param['batch_size'], shuffle=True, pin_memory=True, num_workers=1)
 
     # Create model
     if param['archi'] == 'densenet':

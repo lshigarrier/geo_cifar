@@ -101,7 +101,7 @@ def one_test_run(param):
         else:
             attackset = AttackDataset(param)
             attackset = DataLoader(attackset, batch_size=param['batch_size'],
-                                   shuffle=False, pin_memory=True, num_workers=1)
+                                   shuffle=True, pin_memory=True, num_workers=1)
             test(param, device, attackset, model, reg_model)
 
 
